@@ -28,6 +28,14 @@ const Navbar = () => {
   const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
 
   useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY < 100) setActiveLink('');
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
