@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "about": "O nas",
+    "services": "Usługi",
+    "pricing": "Cennik",
+    "ourWork": "Portfolio",
+    "faq": "FAQ",
+    "contactUs": "Kontakt"
+  },
+  "hero": {
+    "eyebrow": "Agencja Webdesign & Automatyzacji",
+    "headline": "Strony internetowe stworzone by przyciągać klientów i rozwijać Twój biznes",
+    "highlightWord": "przyciągać",
+    "subtitle": "Tworzymy piękne, wydajne strony internetowe i automatyzujemy Twoje procesy, abyś mógł skupić się na tym, co najważniejsze.",
+    "cta": "Umów darmową konsultację →"
+  },
+  "features": {
+    "eyebrow": "Co oferujemy",
+    "title": "Wszystko, czego potrzebuje Twój biznes.",
+    "titleAccent": "Strona & więcej.",
+    "items": [
+      { "title": "10+ lat doświadczenia", "desc": "Dekada doświadczenia w tworzeniu stron internetowych, które przynoszą rezultaty firmom każdej wielkości." },
+      { "title": "Optymalizacja AI, Google & szybkości", "desc": "Każda strona jest budowana z najnowocześniejszą optymalizacją pod kątem wyszukiwarek AI, rankingów Google i błyskawicznego ładowania." },
+      { "title": "5 godzin utrzymania", "desc": "Miesięczne godziny utrzymania w cenie, aby Twoja strona była bezpieczna, aktualna i wydajna." },
+      { "title": "Bezpośrednia współpraca", "desc": "Bez pośredników. Pracujesz bezpośrednio z założycielkami, które projektują i budują Twoją stronę." },
+      { "title": "Oszczędność czasu 24/7", "desc": "Rozwiązania automatyzacji, które działają przez całą dobę, oszczędzając niezliczone godziny pracy ręcznej." },
+      { "title": "Łatwe aktualizacje", "desc": "Zarządzaj treścią bez wysiłku dzięki przyjaznemu CMS wbudowanemu w każdy projekt." }
+    ]
+  },
+  "services": {
+    "eyebrow": "Usługi",
+    "title": "Praktyczne rozwiązania, które",
+    "titleAccent": "rozwijają Twój biznes",
+    "items": [
+      {
+        "badge": "Design",
+        "title": "Projektowanie stron",
+        "desc": "Projektujemy i budujemy responsywne, zoptymalizowane pod kątem SEO strony internetowe dopasowane do Twoich celów biznesowych. Od brandingu po uruchomienie, zajmujemy się wszystkim. W cenie: indywidualny CMS, SSL, wsparcie hostingowe i 5 godzin miesięcznego utrzymania."
+      },
+      {
+        "badge": "Automatyzacja",
+        "title": "Automatyzacja procesów",
+        "desc": "Budujemy inteligentne automatyzacje za pomocą narzędzi takich jak n8n, Make i Zapier, aby zaoszczędzić Ci godzin ręcznej pracy każdego tygodnia. Od pozyskiwania leadów po fakturowanie — łączymy Twoje narzędzia i usprawniamy procesy."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "O nas",
+    "title": "2 Założycielki, 1 Wizja",
+    "stories": [
+      {
+        "title": "Nasza historia",
+        "text": "Poznałyśmy się dzięki wspólnej pasji do tworzenia znaczących doświadczeń cyfrowych. Po latach niezależnej pracy w webdesignie i automatyzacji połączyłyśmy siły, aby oferować kompleksowe rozwiązania dla małych firm chcących rozwijać się online."
+      },
+      {
+        "title": "Dlaczego duo?",
+        "text": "Pracując z nami, otrzymujesz uwagę i troskę butikowej agencji z doświadczeniem profesjonalistek. Żadnych warstw zarządzania, żadnego outsourcingu — tylko dwie zaangażowane założycielki, którym zależy na Twoim sukcesie."
+      },
+      {
+        "title": "Działalność społeczna",
+        "text": "Za każdy płatny projekt tworzymy darmową lub mocno przecenioną stronę dla organizacji charytatywnej, non-profit lub inicjatywy społecznej."
+      }
+    ],
+    "teamTitle": "Twarze za naszą pracą",
+    "team": [
+      { "name": "Monika Mähli", "role": "Współzałożycielka & Web Designerka" },
+      { "name": "Nikky Pyra", "role": "Współzałożycielka & Specjalistka ds. Automatyzacji" }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Cennik",
+    "title": "Dwie usługi, jeden cel:",
+    "titleAccent": "Rozwój Twojego biznesu.",
+    "tabs": {
+      "webDesign": "Projektowanie stron",
+      "automation": "Automatyzacja"
+    },
+    "getStarted": "Rozpocznij",
+    "custom": {
+      "title": "Potrzebujesz czegoś bardziej indywidualnego?",
+      "desc": "Każdy biznes jest wyjątkowy. Jeśli nasze pakiety nie pasują idealnie, stworzymy rozwiązanie szyte na miarę Twoich potrzeb i budżetu."
+    },
+    "plans": {
+      "webDesign": [
+        {
+          "name": "Starter",
+          "price": "~ CHF3'500",
+          "features": ["Do 5 stron", "Responsywny design", "Podstawowe SEO", "Formularz kontaktowy", "Integracja CMS", "2 rundy poprawek"]
+        },
+        {
+          "name": "Advanced",
+          "price": "~ CHF6'000",
+          "features": ["Do 10 stron", "Indywidualne animacje", "Zaawansowane SEO", "Konfiguracja bloga", "Integracja analityki", "CMS ze szkoleniem", "3 rundy poprawek", "5h miesięcznego utrzymania"]
+        },
+        {
+          "name": "Premium",
+          "price": "~ CHF9'000",
+          "features": ["Nielimitowane strony", "Gotowość na e-commerce", "Pełny pakiet brandingowy", "Priorytetowe wsparcie", "Zaawansowane integracje", "Przeglądy kwartalne"]
+        }
+      ],
+      "automation": [
+        {
+          "name": "Starter",
+          "price": "~ CHF1'500",
+          "features": ["Do 3 automatyzacji", "Podstawowe integracje", "Powiadomienia e-mail", "Konfiguracja i testy"]
+        },
+        {
+          "name": "Advanced",
+          "price": "~ CHF3'000",
+          "features": ["Do 8 automatyzacji", "Złożone workflow", "Integracja CRM", "Indywidualne dashboardy", "Sesja szkoleniowa", "Miesięczna optymalizacja"]
+        },
+        {
+          "name": "Premium",
+          "price": "~ CHF5'000",
+          "features": ["Nielimitowane automatyzacje", "Workflow z AI", "Pełny audyt systemu", "Dedykowane wsparcie", "Przeglądy kwartalne"]
+        }
+      ]
+    }
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Nasze prace",
+    "categories": ["Wszystkie", "Webdesign", "Automatyzacja", "Branding", "E-Com", "Indywidualne"],
+    "projects": [
+      {
+        "title": "Snip Squad",
+        "category": "Webdesign",
+        "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt."
+      },
+      {
+        "title": "SystemicAlly",
+        "category": "Webdesign",
+        "desc": "Platforma rozwoju przywództwa korporacyjnego z czystym, profesjonalnym designem podkreślającym zaufanie i ekspertyzę."
+      },
+      {
+        "title": "Towarowa 41",
+        "category": "Webdesign",
+        "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "items": [
+      { "q": "Jak długo trwa budowa strony?", "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji." },
+      { "q": "Czy muszę dostarczyć treści?", "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem." },
+      { "q": "Na jakiej platformie budujecie?", "a": "Korzystamy głównie z nowoczesnych frameworków jak React i Next.js oraz rozwiązań headless CMS. Wybieramy najlepszy stack dla Twoich potrzeb." },
+      { "q": "Czy mogę sam aktualizować stronę?", "a": "Oczywiście! Każda strona ma przyjazny CMS. Zapewniamy również szkolenie, abyś czuł się pewnie wprowadzając zmiany." },
+      { "q": "Czy oferujecie bieżące wsparcie?", "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia." },
+      { "q": "Co jeśli potrzebuję zmian po uruchomieniu?", "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno." }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Porozmawiajmy",
+    "title": "Zainteresowany współpracą?",
+    "button": "Umów konsultację"
+  },
+  "contact": {
+    "title": "Skontaktuj się",
+    "name": "Imię",
+    "namePlaceholder": "Twoje imię",
+    "email": "E-mail",
+    "emailPlaceholder": "twoj@email.com",
+    "message": "Wiadomość",
+    "messagePlaceholder": "Opowiedz nam o swoim projekcie...",
+    "send": "Wyślij wiadomość"
+  },
+  "footer": {
+    "tagline": "Strony internetowe stworzone, by przyciągać klientów i rozwijać Twój biznes.",
+    "navigation": "Nawigacja",
+    "connect": "Kontakt",
+    "copyright": "© 2025 Moniré. Wszelkie prawa zastrzeżone."
+  }
+}

@@ -1,6 +1,17 @@
+import { useTranslation } from 'react-i18next';
 import logo from '@/assets/monire_logo.png';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
+  const navItems = [
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.services'), href: '#services' },
+    { label: t('nav.pricing'), href: '#pricing' },
+    { label: t('nav.ourWork'), href: '#portfolio' },
+    { label: t('nav.faq'), href: '#faq' },
+  ];
+
   return (
     <footer className="dark-teal-surface relative pt-16 pb-8 px-6">
       <div className="absolute -top-px left-0 right-0 wave-mask-dark rotate-180">
@@ -14,25 +25,25 @@ const Footer = () => {
           <div>
             <img src={logo} alt="Moniré" className="h-6 mb-4" />
             <p className="text-off-white/50 text-sm font-body max-w-xs">
-              Websites built to attract clients and grow with your business.
+              {t('footer.tagline')}
             </p>
           </div>
 
           <div className="flex gap-16">
             <div>
-              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">Navigation</p>
+              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.navigation')}</p>
               <ul className="space-y-2">
-                {['About', 'Services', 'Pricing', 'Our Work', 'FAQ'].map((l) => (
-                  <li key={l}>
-                    <a href={`#${l.toLowerCase().replace(/\s+/g, '')}`} className="text-off-white/60 text-sm font-body hover:text-gold-text transition-colors">
-                      {l}
+                {navItems.map((item) => (
+                  <li key={item.href}>
+                    <a href={item.href} className="text-off-white/60 text-sm font-body hover:text-gold-text transition-colors">
+                      {item.label}
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">Connect</p>
+              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.connect')}</p>
               <ul className="space-y-2">
                 {['LinkedIn', 'Instagram', 'Email'].map((l) => (
                   <li key={l}>
@@ -47,7 +58,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-off-white/10 pt-6 text-center">
-          <p className="text-off-white/40 text-xs font-body">© 2025 Moniré. All rights reserved.</p>
+          <p className="text-off-white/40 text-xs font-body">{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

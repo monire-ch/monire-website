@@ -1,34 +1,41 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown, Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import ContactModal from './ContactModal';
 
-const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Our Work', href: '#portfolio' },
-  { label: 'FAQ', href: '#faq' },
-];
-
 const languages = [
-  { code: 'EN', label: 'English' },
-  { code: 'DE', label: 'Deutsch' },
-  { code: 'PL', label: 'Polski' },
+  { code: 'en', label: 'English', display: 'EN' },
+  { code: 'de', label: 'Deutsch', display: 'DE' },
+  { code: 'pl', label: 'Polski', display: 'PL' },
 ];
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [activeLang, setActiveLang] = useState('EN');
   const [activeLink, setActiveLink] = useState('');
 
-  // Lock body scroll when mobile menu is open
+  const navLinks = [
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.services'), href: '#services' },
+    { label: t('nav.pricing'), href: '#pricing' },
+    { label: t('nav.ourWork'), href: '#portfolio' },
+    { label: t('nav.faq'), href: '#faq' },
+  ];
+
+  const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
+
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
+
+  const switchLang = (code: string) => {
+    i18n.changeLanguage(code);
+    setLangOpen(false);
+  };
 
   return (
     <>
@@ -44,96 +51,87 @@ const Navbar = () => {
             boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
           }}
         >
-          {/* Logo */}
           <a href="#" className="flex-shrink-0 pl-2">
             <img src={logo} alt="Moniré" className="h-5" />
           </a>
 
-          {/* Nav links */}
           <div className="flex items-center gap-1">
             {navLinks.map((link) => (
               <a
-                key={link.label}
+                key={link.href}
                 href={link.href}
                 onClick={() => setActiveLink(link.href)}
-                className={`
-                  relative px-4 py-1.5 rounded-full text-sm font-body tracking-wide transition-all duration-200
-                  ${activeLink === link.href
+                className={`relative px-4 py-1.5 rounded-full text-sm font-body tracking-wide transition-all duration-200 ${
+                  activeLink === link.href
                     ? 'bg-focus-teal/40 text-off-white'
                     : 'text-off-white/80 hover:text-gold-hover'
-                  }
-                `}
-                style={{
-                  ...(activeLink === link.href
-                    ? { boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.15)' }
-                    : {}),
-                }}
+                }`}
+                style={activeLink === link.href ? { boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.15)' } : {}}
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Right group */}
           <div className="flex items-center gap-3">
-          {/* Language switcher */}
-          <div className="relative">
+            {/* Language switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px] text-off-white/70 font-body transition-colors duration-200 hover:text-off-white/90"
+                style={{ background: 'rgba(248,245,241,0.06)' }}
+              >
+                <Globe size={13} strokeWidth={1.5} />
+                <span>{currentLang.display}</span>
+                <ChevronDown size={12} strokeWidth={1.5} className={`transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {langOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
+                  <div
+                    className="absolute top-full right-0 mt-2 rounded-xl py-1.5 min-w-[130px] z-50 border border-off-white/[0.07]"
+                    style={{
+                      background: 'linear-gradient(145deg, rgba(8,47,58,0.95) 0%, rgba(5,34,44,0.98) 100%)',
+                      backdropFilter: 'blur(20px)',
+                      boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
+                    }}
+                  >
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => switchLang(lang.code)}
+                        className={`w-full text-left px-4 py-2 text-[13px] font-body transition-colors duration-150 ${
+                          i18n.language === lang.code
+                            ? 'text-gold-text'
+                            : 'text-off-white/70 hover:text-off-white hover:bg-off-white/[0.05]'
+                        }`}
+                      >
+                        {lang.label}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* CTA */}
             <button
-              onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px] text-off-white/70 font-body transition-colors duration-200 hover:text-off-white/90"
-              style={{ background: 'rgba(248,245,241,0.06)' }}
+              onClick={() => setContactOpen(true)}
+              className="flex-shrink-0 ml-1 px-5 py-2 rounded-full text-[13px] font-body font-semibold uppercase tracking-widest transition-all duration-200 text-off-white"
+              style={{
+                background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
+                boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3), 0 2px 8px rgba(0,0,0,0.15)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 0 0 0 1px rgba(207,169,71,0.55), 0 2px 12px rgba(207,169,71,0.12)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = 'inset 0 0 0 1px rgba(207,169,71,0.3), 0 2px 8px rgba(0,0,0,0.15)';
+              }}
             >
-              <Globe size={13} strokeWidth={1.5} />
-              <span>{activeLang}</span>
-              <ChevronDown size={12} strokeWidth={1.5} className={`transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
+              {t('nav.contactUs')}
             </button>
-
-            {langOpen && (
-              <>
-                <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
-                <div
-                  className="absolute top-full right-0 mt-2 rounded-xl py-1.5 min-w-[130px] z-50 border border-off-white/[0.07]"
-                  style={{
-                    background: 'linear-gradient(145deg, rgba(8,47,58,0.95) 0%, rgba(5,34,44,0.98) 100%)',
-                    backdropFilter: 'blur(20px)',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-                  }}
-                >
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => { setActiveLang(lang.code); setLangOpen(false); }}
-                      className={`w-full text-left px-4 py-2 text-[13px] font-body transition-colors duration-150 ${
-                        activeLang === lang.code
-                          ? 'text-gold-text'
-                          : 'text-off-white/70 hover:text-off-white hover:bg-off-white/[0.05]'
-                      }`}
-                    >
-                      {lang.label}
-                    </button>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
-
-          {/* CTA */}
-          <button
-            onClick={() => setContactOpen(true)}
-            className="flex-shrink-0 ml-1 px-5 py-2 rounded-full text-[13px] font-body font-semibold uppercase tracking-widest transition-all duration-200 text-off-white"
-            style={{
-              background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
-              boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3), 0 2px 8px rgba(0,0,0,0.15)',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = 'inset 0 0 0 1px rgba(207,169,71,0.55), 0 2px 12px rgba(207,169,71,0.12)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = 'inset 0 0 0 1px rgba(207,169,71,0.3), 0 2px 8px rgba(0,0,0,0.15)';
-            }}
-          >
-            Contact Us
-          </button>
           </div>
         </nav>
       </header>
@@ -155,21 +153,18 @@ const Navbar = () => {
       {/* ─── Mobile Full-Screen Overlay ─── */}
       {mobileOpen && (
         <div className="fixed inset-0 z-[90] md:hidden">
-          {/* Backdrop */}
           <div
             className="absolute inset-0 animate-fade-in"
             style={{ background: 'rgba(1,27,34,0.6)', backdropFilter: 'blur(4px)' }}
             onClick={() => setMobileOpen(false)}
           />
 
-          {/* Menu panel */}
           <div
             className="absolute inset-0 flex flex-col animate-fade-in"
             style={{
               background: 'linear-gradient(180deg, rgba(1,20,28,0.98) 0%, rgba(8,47,58,0.96) 60%, rgba(15,75,90,0.92) 100%)',
             }}
           >
-            {/* Mobile header */}
             <div className="flex items-center justify-between px-6 py-5">
               <img src={logo} alt="Moniré" className="h-5" />
               <button
@@ -181,11 +176,10 @@ const Navbar = () => {
               </button>
             </div>
 
-            {/* Nav items */}
             <nav className="flex-1 flex flex-col px-6 pt-8">
               {navLinks.map((link, i) => (
                 <a
-                  key={link.label}
+                  key={link.href}
                   href={link.href}
                   onClick={() => { setActiveLink(link.href); setMobileOpen(false); }}
                   className="group block py-5 border-b border-off-white/[0.07] transition-colors duration-200"
@@ -197,7 +191,6 @@ const Navbar = () => {
                 </a>
               ))}
 
-              {/* Language in mobile */}
               <div className="py-5 border-b border-off-white/[0.07]">
                 <div className="flex items-center gap-3">
                   <Globe size={16} className="text-off-white/50" strokeWidth={1.5} />
@@ -205,12 +198,12 @@ const Navbar = () => {
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
-                        onClick={() => setActiveLang(lang.code)}
+                        onClick={() => switchLang(lang.code)}
                         className={`text-sm font-body transition-colors duration-200 ${
-                          activeLang === lang.code ? 'text-gold-text' : 'text-off-white/50 hover:text-off-white/80'
+                          i18n.language === lang.code ? 'text-gold-text' : 'text-off-white/50 hover:text-off-white/80'
                         }`}
                       >
-                        {lang.code}
+                        {lang.display}
                       </button>
                     ))}
                   </div>
@@ -218,7 +211,6 @@ const Navbar = () => {
               </div>
             </nav>
 
-            {/* Mobile CTA */}
             <div className="px-6 pb-10 pt-4">
               <button
                 onClick={() => { setContactOpen(true); setMobileOpen(false); }}
@@ -228,7 +220,7 @@ const Navbar = () => {
                   boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3)',
                 }}
               >
-                Contact Us
+                {t('nav.contactUs')}
               </button>
             </div>
           </div>
