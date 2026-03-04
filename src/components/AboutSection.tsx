@@ -54,7 +54,7 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {team.map((person, i) => (
               <div key={person.name} className="flex items-center gap-5">
-                <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-lg overflow-hidden shrink-0 border border-white/10">
+                <div className="relative w-44 h-56 md:w-[300px] md:h-[375px] rounded-lg overflow-hidden shrink-0 border border-white/10">
                   <img src={teamImages[i]} alt={person.name} className="w-full h-full object-cover" />
                   <a
                     href={teamLinkedIn[i]}
