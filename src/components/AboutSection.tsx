@@ -10,6 +10,32 @@ const teamLinkedIn = [
   'https://www.linkedin.com/in/monika-malecka/',
   'https://www.linkedin.com/in/nicole-pyra/',
 ];
+const teamDetails = [
+  {
+    name: 'Monika Märki',
+    origin: 'Polish-born, based in Switzerland',
+    languages: 'Languages: Polish, English, German',
+    flag: (
+      <svg className="w-4 h-3 inline-block" viewBox="0 0 640 480" aria-label="Polish flag">
+        <rect width="640" height="240" fill="#fff" />
+        <rect y="240" width="640" height="240" fill="#dc143c" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Nikky Pyra',
+    origin: 'Canadian-born, based in Switzerland',
+    languages: 'Languages: English, German',
+    flag: (
+      <svg className="w-4 h-3 inline-block" viewBox="0 0 640 480" aria-label="Canadian flag">
+        <rect width="640" height="480" fill="#fff" />
+        <rect width="160" height="480" fill="#d52b1e" />
+        <rect x="480" width="160" height="480" fill="#d52b1e" />
+        <path d="M320 80l-20 60-60-10 40 50-40 50 60-10 20 60 20-60 60 10-40-50 40-50-60 10z" fill="#d52b1e" />
+      </svg>
+    ),
+  },
+];
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -52,7 +78,7 @@ const AboutSection = () => {
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">Meet the Duo</span>
           <h3 className="font-body text-2xl text-off-white mb-8">{t('about.teamTitle')}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {team.map((person, i) => (
+            {teamDetails.map((person, i) => (
               <div key={person.name} className="flex items-center gap-5">
                 <div className="relative w-44 h-56 md:w-[300px] md:h-[375px] rounded-lg overflow-hidden shrink-0 border border-white/10">
                   <img src={teamImages[i]} alt={person.name} className="w-full h-full object-cover" />
@@ -68,7 +94,10 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <p className="font-display text-base md:text-lg text-off-white font-medium">{person.name}</p>
-                  <p className="text-sm text-off-white/60 font-body">{person.role}</p>
+                  <p className="text-sm text-off-white/60 font-body mt-1.5 flex items-center gap-1.5">
+                    {person.flag} {person.origin}
+                  </p>
+                  <p className="text-xs text-off-white/45 font-body mt-1">{person.languages}</p>
                 </div>
               </div>
             ))}
