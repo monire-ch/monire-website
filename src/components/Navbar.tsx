@@ -74,9 +74,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Separator */}
-          <div className="w-px h-5 bg-off-white/10 flex-shrink-0" />
-
+          {/* Right group */}
+          <div className="flex items-center gap-3">
           {/* Language switcher */}
           <div className="relative">
             <button
