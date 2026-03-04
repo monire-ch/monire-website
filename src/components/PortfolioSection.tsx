@@ -34,7 +34,7 @@ const PortfolioSection = () => {
     <section id="portfolio" className="py-20 md:py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-12">
-          <p className="text-gold text-sm tracking-widest uppercase font-body mb-3">{t('portfolio.eyebrow')}</p>
+          <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('portfolio.title')}</h2>
         </ScrollReveal>
 
