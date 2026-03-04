@@ -20,12 +20,30 @@
     "title": "Everything your business needs.",
     "titleAccent": "Nothing it doesn't.",
     "items": [
-      { "title": "10+ Years of Excellence", "desc": "A decade of experience creating websites that deliver results for businesses of all sizes." },
-      { "title": "AI, Google & Speed Optimized", "desc": "Every website is built with cutting-edge optimization for AI search, Google rankings, and blazing-fast load times." },
-      { "title": "5 Hours of Maintenance", "desc": "Included monthly maintenance hours to keep your site secure, updated, and performing at its best." },
-      { "title": "Direct Collaboration", "desc": "No middlemen. Work directly with the founders who design and build your website." },
-      { "title": "24/7 Time Savings", "desc": "Automation solutions that work around the clock, saving you countless hours of manual work." },
-      { "title": "Easy Updates", "desc": "Manage your content effortlessly with user-friendly CMS solutions built into every project." }
+      {
+        "title": "10+ Years of Excellence",
+        "desc": "Together, we bring over a decade of hands-on experience as software developers at top Swiss companies — combining technical expertise with design clarity."
+      },
+      {
+        "title": "AI, Google & Speed Optimized",
+        "desc": "Built for accessibility, reliability, and visibility across search engines and AI platforms so your business gets found everywhere clients look."
+      },
+      {
+        "title": "5 Hours of Maintenance",
+        "desc": "Your Webflow website runs smoothly with automatic updates and no plugins to manage, so you can focus on your business."
+      },
+      {
+        "title": "Direct Collaboration",
+        "desc": "Work directly with the founders for clear communication and consistent quality."
+      },
+      {
+        "title": "24/7 Time Savings",
+        "desc": "Intelligent AI automations handle repetitive tasks around the clock, freeing you to focus on what really matters."
+      },
+      {
+        "title": "Easy Updates",
+        "desc": "Once your site is live, you’ll have full control. Editing content is simple and intuitive."
+      }
     ]
   },
   "services": {
@@ -86,17 +104,40 @@
         {
           "name": "Starter",
           "price": "~ CHF3'500",
-          "features": ["Up to 5 pages", "Responsive design", "Basic SEO setup", "Contact form", "CMS integration", "2 revision rounds"]
+          "features": [
+            "Up to 5 pages",
+            "Responsive design",
+            "Basic SEO setup",
+            "Contact form",
+            "CMS integration",
+            "2 revision rounds"
+          ]
         },
         {
           "name": "Advanced",
           "price": "~ CHF6'000",
-          "features": ["Up to 10 pages", "Custom animations", "Advanced SEO", "Blog setup", "Analytics integration", "CMS with training", "3 revision rounds", "5h monthly maintenance"]
+          "features": [
+            "Up to 10 pages",
+            "Custom animations",
+            "Advanced SEO",
+            "Blog setup",
+            "Analytics integration",
+            "CMS with training",
+            "3 revision rounds",
+            "5h monthly maintenance"
+          ]
         },
         {
           "name": "Premium",
           "price": "~ CHF9'000",
-          "features": ["Unlimited pages", "E-commerce ready", "Full branding package", "Priority support", "Advanced integrations", "Quarterly reviews"]
+          "features": [
+            "Unlimited pages",
+            "E-commerce ready",
+            "Full branding package",
+            "Priority support",
+            "Advanced integrations",
+            "Quarterly reviews"
+          ]
         }
       ],
       "automation": [
@@ -108,12 +149,25 @@
         {
           "name": "Advanced",
           "price": "~ CHF3'000",
-          "features": ["Up to 8 automations", "Complex workflows", "CRM integration", "Custom dashboards", "Training session", "Monthly optimization"]
+          "features": [
+            "Up to 8 automations",
+            "Complex workflows",
+            "CRM integration",
+            "Custom dashboards",
+            "Training session",
+            "Monthly optimization"
+          ]
         },
         {
           "name": "Premium",
           "price": "~ CHF5'000",
-          "features": ["Unlimited automations", "AI-powered workflows", "Full system audit", "Dedicated support", "Quarterly reviews"]
+          "features": [
+            "Unlimited automations",
+            "AI-powered workflows",
+            "Full system audit",
+            "Dedicated support",
+            "Quarterly reviews"
+          ]
         }
       ]
     }
@@ -143,12 +197,30 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "items": [
-      { "q": "How long does it take to build a website?", "a": "Typically 4–8 weeks depending on the project scope. We'll give you a clear timeline during our discovery call." },
-      { "q": "Do I need to provide content?", "a": "It helps if you have content ready, but we can guide you through the process and help with copywriting if needed." },
-      { "q": "What platform do you build on?", "a": "We primarily use modern frameworks like React and Next.js, along with headless CMS solutions. We choose the best stack for your specific needs." },
-      { "q": "Can I update the website myself?", "a": "Absolutely! Every website comes with a user-friendly CMS. We also provide training so you feel confident making updates." },
-      { "q": "Do you offer ongoing support?", "a": "Yes, our Advanced and Premium plans include monthly maintenance hours. We also offer standalone support packages." },
-      { "q": "What if I need changes after launch?", "a": "We offer flexible support options. Small changes are often covered by maintenance hours, and larger updates can be quoted separately." }
+      {
+        "q": "How long does it take to build a website?",
+        "a": "Typically 4–8 weeks depending on the project scope. We'll give you a clear timeline during our discovery call."
+      },
+      {
+        "q": "Do I need to provide content?",
+        "a": "It helps if you have content ready, but we can guide you through the process and help with copywriting if needed."
+      },
+      {
+        "q": "What platform do you build on?",
+        "a": "We primarily use modern frameworks like React and Next.js, along with headless CMS solutions. We choose the best stack for your specific needs."
+      },
+      {
+        "q": "Can I update the website myself?",
+        "a": "Absolutely! Every website comes with a user-friendly CMS. We also provide training so you feel confident making updates."
+      },
+      {
+        "q": "Do you offer ongoing support?",
+        "a": "Yes, our Advanced and Premium plans include monthly maintenance hours. We also offer standalone support packages."
+      },
+      {
+        "q": "What if I need changes after launch?",
+        "a": "We offer flexible support options. Small changes are often covered by maintenance hours, and larger updates can be quoted separately."
+      }
     ]
   },
   "cta": {
