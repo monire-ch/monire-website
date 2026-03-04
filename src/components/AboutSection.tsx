@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import monika from '@/assets/monika.jpg';
 import nicole from '@/assets/nicole.jpg';
+import linkedinIcon from '@/assets/linkedin.svg';
 
 const teamImages = [monika, nicole];
+const teamLinkedIn = [
+  'https://www.linkedin.com/in/monika/',
+  'https://www.linkedin.com/in/nicole/',
+];
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -49,8 +54,17 @@ const AboutSection = () => {
           <div className="flex flex-wrap gap-8 justify-start">
             {team.map((person, i) => (
               <div key={person.name} className="flex flex-col items-center w-44">
-                <div className="w-36 h-36 rounded-lg overflow-hidden mb-3 border border-white/10">
+                <div className="relative w-36 h-36 rounded-lg overflow-hidden mb-3 border border-white/10">
                   <img src={teamImages[i]} alt={person.name} className="w-full h-full object-cover" />
+                  <a
+                    href={teamLinkedIn[i]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${person.name}'s LinkedIn`}
+                    className="absolute bottom-2.5 right-2.5 z-10 flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-white/15 bg-[#0a3440cc] backdrop-blur-sm transition-all duration-200 hover:bg-[#0f4b5aee] hover:border-[#cfa947]/50 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+                  >
+                    <img src={linkedinIcon} alt="" className="w-4 h-4" />
+                  </a>
                 </div>
                 <p className="font-display text-sm text-off-white font-medium">{person.name}</p>
                 <p className="text-xs text-off-white/60 font-body text-center">{person.role}</p>
