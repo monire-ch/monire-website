@@ -51,10 +51,10 @@ const AboutSection = () => {
         <ScrollReveal>
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">Meet the Duo</span>
           <h3 className="font-body text-2xl text-off-white mb-8">{t('about.teamTitle')}</h3>
-          <div className="flex flex-wrap gap-8 justify-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {team.map((person, i) => (
-              <div key={person.name} className="flex flex-col items-center w-44">
-                <div className="relative w-36 h-36 rounded-lg overflow-hidden mb-3 border border-white/10">
+              <div key={person.name} className="flex items-center gap-5">
+                <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-lg overflow-hidden shrink-0 border border-white/10">
                   <img src={teamImages[i]} alt={person.name} className="w-full h-full object-cover" />
                   <a
                     href={teamLinkedIn[i]}
@@ -66,8 +66,10 @@ const AboutSection = () => {
                     <img src={linkedinIcon} alt="" className="w-4 h-4" />
                   </a>
                 </div>
-                <p className="font-display text-sm text-off-white font-medium">{person.name}</p>
-                <p className="text-xs text-off-white/60 font-body text-center">{person.role}</p>
+                <div>
+                  <p className="font-display text-base md:text-lg text-off-white font-medium">{person.name}</p>
+                  <p className="text-sm text-off-white/60 font-body">{person.role}</p>
+                </div>
               </div>
             ))}
           </div>
