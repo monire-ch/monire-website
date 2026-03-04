@@ -20,12 +20,30 @@
     "title": "Wszystko, czego potrzebuje Twój biznes.",
     "titleAccent": "Strona & więcej.",
     "items": [
-      { "title": "10+ lat doświadczenia", "desc": "Dekada doświadczenia w tworzeniu stron internetowych, które przynoszą rezultaty firmom każdej wielkości." },
-      { "title": "Optymalizacja AI, Google & szybkości", "desc": "Każda strona jest budowana z najnowocześniejszą optymalizacją pod kątem wyszukiwarek AI, rankingów Google i błyskawicznego ładowania." },
-      { "title": "5 godzin utrzymania", "desc": "Miesięczne godziny utrzymania w cenie, aby Twoja strona była bezpieczna, aktualna i wydajna." },
-      { "title": "Bezpośrednia współpraca", "desc": "Bez pośredników. Pracujesz bezpośrednio z założycielkami, które projektują i budują Twoją stronę." },
-      { "title": "Oszczędność czasu 24/7", "desc": "Rozwiązania automatyzacji, które działają przez całą dobę, oszczędzając niezliczone godziny pracy ręcznej." },
-      { "title": "Łatwe aktualizacje", "desc": "Zarządzaj treścią bez wysiłku dzięki przyjaznemu CMS wbudowanemu w każdy projekt." }
+      {
+        "title": "10+ lat doświadczenia",
+        "desc": "Dekada doświadczenia w tworzeniu stron internetowych, które przynoszą rezultaty firmom każdej wielkości."
+      },
+      {
+        "title": "Optymalizacja AI, Google & szybkości",
+        "desc": "Każda strona jest budowana z najnowocześniejszą optymalizacją pod kątem wyszukiwarek AI, rankingów Google i błyskawicznego ładowania."
+      },
+      {
+        "title": "5 godzin utrzymania",
+        "desc": "Miesięczne godziny utrzymania w cenie, aby Twoja strona była bezpieczna, aktualna i wydajna."
+      },
+      {
+        "title": "Bezpośrednia współpraca",
+        "desc": "Bez pośredników. Pracujesz bezpośrednio z założycielkami, które projektują i budują Twoją stronę."
+      },
+      {
+        "title": "Oszczędność czasu 24/7",
+        "desc": "Rozwiązania automatyzacji, które działają przez całą dobę, oszczędzając niezliczone godziny pracy ręcznej."
+      },
+      {
+        "title": "Łatwe aktualizacje",
+        "desc": "Zarządzaj treścią bez wysiłku dzięki przyjaznemu CMS wbudowanemu w każdy projekt."
+      }
     ]
   },
   "services": {
@@ -64,7 +82,7 @@
     ],
     "teamTitle": "Twarze za naszą pracą",
     "team": [
-      { "name": "Monika Mähli", "role": "Współzałożycielka & Web Designerka" },
+      { "name": "Monika Märki", "role": "Współzałożycielka & Web Designerka" },
       { "name": "Nikky Pyra", "role": "Współzałożycielka & Specjalistka ds. Automatyzacji" }
     ]
   },
@@ -86,17 +104,40 @@
         {
           "name": "Starter",
           "price": "~ CHF3'500",
-          "features": ["Do 5 stron", "Responsywny design", "Podstawowe SEO", "Formularz kontaktowy", "Integracja CMS", "2 rundy poprawek"]
+          "features": [
+            "Do 5 stron",
+            "Responsywny design",
+            "Podstawowe SEO",
+            "Formularz kontaktowy",
+            "Integracja CMS",
+            "2 rundy poprawek"
+          ]
         },
         {
           "name": "Advanced",
           "price": "~ CHF6'000",
-          "features": ["Do 10 stron", "Indywidualne animacje", "Zaawansowane SEO", "Konfiguracja bloga", "Integracja analityki", "CMS ze szkoleniem", "3 rundy poprawek", "5h miesięcznego utrzymania"]
+          "features": [
+            "Do 10 stron",
+            "Indywidualne animacje",
+            "Zaawansowane SEO",
+            "Konfiguracja bloga",
+            "Integracja analityki",
+            "CMS ze szkoleniem",
+            "3 rundy poprawek",
+            "5h miesięcznego utrzymania"
+          ]
         },
         {
           "name": "Premium",
           "price": "~ CHF9'000",
-          "features": ["Nielimitowane strony", "Gotowość na e-commerce", "Pełny pakiet brandingowy", "Priorytetowe wsparcie", "Zaawansowane integracje", "Przeglądy kwartalne"]
+          "features": [
+            "Nielimitowane strony",
+            "Gotowość na e-commerce",
+            "Pełny pakiet brandingowy",
+            "Priorytetowe wsparcie",
+            "Zaawansowane integracje",
+            "Przeglądy kwartalne"
+          ]
         }
       ],
       "automation": [
@@ -108,12 +149,25 @@
         {
           "name": "Advanced",
           "price": "~ CHF3'000",
-          "features": ["Do 8 automatyzacji", "Złożone workflow", "Integracja CRM", "Indywidualne dashboardy", "Sesja szkoleniowa", "Miesięczna optymalizacja"]
+          "features": [
+            "Do 8 automatyzacji",
+            "Złożone workflow",
+            "Integracja CRM",
+            "Indywidualne dashboardy",
+            "Sesja szkoleniowa",
+            "Miesięczna optymalizacja"
+          ]
         },
         {
           "name": "Premium",
           "price": "~ CHF5'000",
-          "features": ["Nielimitowane automatyzacje", "Workflow z AI", "Pełny audyt systemu", "Dedykowane wsparcie", "Przeglądy kwartalne"]
+          "features": [
+            "Nielimitowane automatyzacje",
+            "Workflow z AI",
+            "Pełny audyt systemu",
+            "Dedykowane wsparcie",
+            "Przeglądy kwartalne"
+          ]
         }
       ]
     }
@@ -143,12 +197,30 @@
   "faq": {
     "title": "Często zadawane pytania",
     "items": [
-      { "q": "Jak długo trwa budowa strony?", "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji." },
-      { "q": "Czy muszę dostarczyć treści?", "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem." },
-      { "q": "Na jakiej platformie budujecie?", "a": "Korzystamy głównie z nowoczesnych frameworków jak React i Next.js oraz rozwiązań headless CMS. Wybieramy najlepszy stack dla Twoich potrzeb." },
-      { "q": "Czy mogę sam aktualizować stronę?", "a": "Oczywiście! Każda strona ma przyjazny CMS. Zapewniamy również szkolenie, abyś czuł się pewnie wprowadzając zmiany." },
-      { "q": "Czy oferujecie bieżące wsparcie?", "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia." },
-      { "q": "Co jeśli potrzebuję zmian po uruchomieniu?", "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno." }
+      {
+        "q": "Jak długo trwa budowa strony?",
+        "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji."
+      },
+      {
+        "q": "Czy muszę dostarczyć treści?",
+        "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem."
+      },
+      {
+        "q": "Na jakiej platformie budujecie?",
+        "a": "Korzystamy głównie z nowoczesnych frameworków jak React i Next.js oraz rozwiązań headless CMS. Wybieramy najlepszy stack dla Twoich potrzeb."
+      },
+      {
+        "q": "Czy mogę sam aktualizować stronę?",
+        "a": "Oczywiście! Każda strona ma przyjazny CMS. Zapewniamy również szkolenie, abyś czuł się pewnie wprowadzając zmiany."
+      },
+      {
+        "q": "Czy oferujecie bieżące wsparcie?",
+        "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia."
+      },
+      {
+        "q": "Co jeśli potrzebuję zmian po uruchomieniu?",
+        "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno."
+      }
     ]
   },
   "cta": {
