@@ -21,13 +21,6 @@ const teamDetails = [
     origin: 'Canadian-born, based in Switzerland',
     languages: 'Languages: English, German',
   },
-  {
-    name: 'Nikky Pyra',
-    origin: 'Canadian-born, based in Switzerland',
-    languages: 'Languages: English, German',
-  },
-];
-  },
 ];
 
 const AboutSection = () => {
