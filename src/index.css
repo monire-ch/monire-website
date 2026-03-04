@@ -108,18 +108,6 @@
   pointer-events: none;
 }
 
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgb(78 196 224 / 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(78 196 224 / 0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-  mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 0.3) 30%, rgb(0 0 0 / 0.5) 60%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 0.3) 30%, rgb(0 0 0 / 0.5) 60%, transparent 100%);
-}
 
 /* Dark teal surface */
 .dark-teal-surface {
