@@ -11,8 +11,11 @@ const AboutSection = () => {
   const team = t('about.team', { returnObjects: true }) as Array<{ name: string; role: string }>;
 
   return (
-    <section id="about" className="py-20 md:py-28 px-6">
-      <div className="max-w-5xl mx-auto">
+    <div className="about-flow relative overflow-hidden">
+      <div className="about-orb about-orb-1" />
+      <div className="about-orb about-orb-2" />
+      <section id="about" className="relative py-20 md:py-28 px-6">
+        <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('about.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('about.title')}</h2>
