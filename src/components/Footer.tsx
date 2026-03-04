@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import logo from '@/assets/monire_logo.png';
 
-const Footer = () => {
+const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const { t } = useTranslation();
 
   const navItems = [
