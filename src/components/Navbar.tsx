@@ -52,7 +52,7 @@ const Navbar = () => {
           }}
         >
           <a href="#" className="flex-shrink-0 pl-2">
-            <img src={logo} alt="Moniré" className="h-5" />
+            <img src={logo} alt="Moniré" className="h-7" />
           </a>
 
           <div className="flex items-center gap-1">
