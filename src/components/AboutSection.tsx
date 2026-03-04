@@ -46,8 +46,9 @@ const AboutSection = () => {
             ))}
           </div>
         </ScrollReveal>
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 };
 
