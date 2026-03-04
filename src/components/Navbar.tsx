@@ -166,7 +166,7 @@ const Navbar = () => {
             }}
           >
             <div className="flex items-center justify-between px-6 py-5">
-              <img src={logo} alt="Moniré" className="h-5" />
+              <img src={logo} alt="Moniré" className="h-7" />
               <button
                 onClick={() => setMobileOpen(false)}
                 className="text-off-white/70 hover:text-off-white transition-colors"
