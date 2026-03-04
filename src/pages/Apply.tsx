@@ -95,7 +95,7 @@ const Apply = () => {
       </section>
 
       <div className="relative">
-        <div className="absolute -top-[1px] left-0 right-0 rotate-180">
+        <div className="absolute left-0 right-0 -top-[119px] z-10">
           <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" fill="none" className="w-full block">
             <path fill="#f8f5f1" d="M0,48 C190,100 405,102 720,68 C1018,36 1240,32 1440,74 L1440,120 L0,120 Z" />
           </svg>
