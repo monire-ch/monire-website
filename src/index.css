@@ -88,11 +88,11 @@
 .hero-bg {
   background:
     linear-gradient(180deg,
-      rgb(0 24 33 / 0.98) 0%,
-      rgb(1 33 45 / 0.94) 25%,
-      rgb(3 43 56 / 0.84) 50%,
-      rgb(6 76 93 / 0.62) 75%,
-      rgb(11 114 135 / 0.5) 100%
+      rgb(0 18 25 / 0.99) 0%,
+      rgb(1 27 36 / 0.97) 25%,
+      rgb(3 38 50 / 0.93) 50%,
+      rgb(5 56 70 / 0.82) 75%,
+      rgb(8 80 98 / 0.7) 100%
     );
   position: relative;
 }
@@ -102,9 +102,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 50% 60%, rgb(104 224 250 / 0.34) 0%, rgb(104 224 250 / 0.22) 30%, rgb(104 224 250 / 0.10) 60%, transparent 80%),
-    radial-gradient(ellipse 40% 40% at 20% 80%, rgb(93 208 238 / 0.16) 0%, rgb(93 208 238 / 0.08) 50%, transparent 80%),
-    radial-gradient(ellipse 40% 40% at 80% 80%, rgb(93 208 238 / 0.16) 0%, rgb(93 208 238 / 0.08) 50%, transparent 80%);
+    radial-gradient(ellipse 60% 50% at 50% 70%, rgb(104 224 250 / 0.12) 0%, rgb(104 224 250 / 0.06) 30%, rgb(104 224 250 / 0.02) 60%, transparent 80%),
+    radial-gradient(ellipse 40% 40% at 20% 85%, rgb(93 208 238 / 0.06) 0%, rgb(93 208 238 / 0.03) 50%, transparent 80%),
+    radial-gradient(ellipse 40% 40% at 80% 85%, rgb(93 208 238 / 0.06) 0%, rgb(93 208 238 / 0.03) 50%, transparent 80%);
   pointer-events: none;
 }
 
