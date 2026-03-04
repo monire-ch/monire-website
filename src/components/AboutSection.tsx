@@ -61,6 +61,7 @@ const AboutSection = () => {
         </div>
 
         <ScrollReveal>
+          <span className="eyebrow-pill eyebrow-pill-dark mb-3">Meet the Duo</span>
           <h3 className="font-body text-2xl text-off-white mb-8">{t('about.teamTitle')}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {teamDetails.map((person, i) => (
