@@ -243,7 +243,9 @@
   border: 1px solid #cfa947b3;
   font-family: var(--font-body);
   font-weight: 500;
-  padding: 0.75rem 2rem;
+  font-size: 0.9375rem;
+  padding: 0.875rem 2.25rem;
+  letter-spacing: 0.02em;
   border-radius: 9999px;
   transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
