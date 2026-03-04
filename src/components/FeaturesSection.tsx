@@ -10,7 +10,7 @@ const FeaturesSection = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('features.eyebrow')}</span>
-          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">
+          <h2 className="font-body text-3xl md:text-4xl text-main-teal">
             {t('features.title')}
             <span className="block mt-2 italic font-tertiary text-main-teal">{t('features.titleAccent')}</span>
           </h2>
@@ -29,8 +29,8 @@ const FeaturesSection = () => {
                   }`}
                   style={isDark ? { background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' } : undefined}
                 >
-                  <h3 className={`font-display text-xl md:text-2xl mb-2 ${isDark ? 'text-off-white' : 'text-deep-ink'}`}>{f.title}</h3>
-                  <p className={`text-base font-body leading-relaxed ${isDark ? 'text-off-white/70' : 'text-deep-ink/70'}`}>{f.desc}</p>
+                  <h3 className={`font-display text-xl md:text-2xl mb-2 ${isDark ? 'text-off-white' : 'text-main-teal'}`}>{f.title}</h3>
+                  <p className={`text-base font-body leading-relaxed ${isDark ? 'text-off-white/70' : 'text-main-teal/70'}`}>{f.desc}</p>
                 </div>
               </ScrollReveal>
             );

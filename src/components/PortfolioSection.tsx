@@ -35,7 +35,7 @@ const PortfolioSection = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
-          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('portfolio.title')}</h2>
+          <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('portfolio.title')}</h2>
         </ScrollReveal>
 
         <ScrollReveal className="flex flex-wrap justify-center gap-2 mb-10">
@@ -46,7 +46,7 @@ const PortfolioSection = () => {
               className={`px-4 py-1.5 rounded-full text-xs font-body transition-all duration-200 border ${
                 catFilter === idx
                   ? 'bg-main-teal text-off-white border-main-teal'
-                  : 'border-neutral-border text-deep-ink/60 hover:border-main-teal hover:text-main-teal'
+                  : 'border-neutral-border text-main-teal/60 hover:border-main-teal hover:text-main-teal'
               }`}
             >
               {cat}
@@ -63,8 +63,8 @@ const PortfolioSection = () => {
                     <span key={tag} className="text-xs px-2 py-0.5 rounded bg-main-teal/10 text-main-teal font-body">{tag}</span>
                   ))}
                 </div>
-                <h3 className="font-body text-xl text-deep-ink">{current.title}</h3>
-                <p className="text-[15px] text-deep-ink/60 font-body leading-relaxed">{current.desc}</p>
+                <h3 className="font-body text-xl text-main-teal">{current.title}</h3>
+                <p className="text-[15px] text-main-teal/60 font-body leading-relaxed">{current.desc}</p>
               </div>
 
               <div className="relative overflow-hidden rounded-xl border border-neutral-border bg-neutral-card">
