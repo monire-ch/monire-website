@@ -32,22 +32,21 @@ const HeroSection = () => {
           <span className="hidden sm:block w-12 h-px bg-off-white/30" />
         </div>
 
-        <h1
-          className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-6"
-          style={{
-            backgroundImage: `url(${goldFill})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-        >
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
           {words.map((word, i) => (
             <span
               key={i}
               className={`hero-word ${animate ? 'visible' : ''}`}
-              style={{ transitionDelay: `${60 * i}ms` }}
+              style={{
+                transitionDelay: `${60 * i}ms`,
+                backgroundImage: `url(${goldFill})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                color: 'transparent',
+              }}
             >
               {word === highlightWord ? (
                 <em className="italic">{word}</em>
