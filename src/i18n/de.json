@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "services": "Leistungen",
+    "pricing": "Preise",
+    "ourWork": "Portfolio",
+    "faq": "FAQ",
+    "contactUs": "Kontakt"
+  },
+  "hero": {
+    "eyebrow": "Webdesign & Automatisierungs-Agentur",
+    "headline": "Websites die Kunden anziehen und mit Ihrem Unternehmen wachsen",
+    "highlightWord": "anziehen",
+    "subtitle": "Wir erstellen schöne, leistungsstarke Websites und automatisieren Ihre Arbeitsabläufe, damit Sie sich auf das Wesentliche konzentrieren können.",
+    "cta": "Kostenloses Erstgespräch buchen →"
+  },
+  "features": {
+    "eyebrow": "Unser Angebot",
+    "title": "Alles, was Ihr Unternehmen braucht.",
+    "titleAccent": "Website & mehr.",
+    "items": [
+      { "title": "10+ Jahre Erfahrung", "desc": "Ein Jahrzehnt Erfahrung in der Erstellung von Websites, die für Unternehmen jeder Grösse Ergebnisse liefern." },
+      { "title": "KI, Google & Speed-optimiert", "desc": "Jede Website wird mit modernster Optimierung für KI-Suche, Google-Rankings und blitzschnelle Ladezeiten erstellt." },
+      { "title": "5 Stunden Wartung", "desc": "Monatliche Wartungsstunden inklusive, um Ihre Website sicher, aktuell und leistungsstark zu halten." },
+      { "title": "Direkte Zusammenarbeit", "desc": "Keine Zwischenhändler. Arbeiten Sie direkt mit den Gründerinnen, die Ihre Website gestalten und entwickeln." },
+      { "title": "24/7 Zeitersparnis", "desc": "Automatisierungslösungen, die rund um die Uhr arbeiten und Ihnen unzählige Stunden manueller Arbeit ersparen." },
+      { "title": "Einfache Aktualisierungen", "desc": "Verwalten Sie Ihre Inhalte mühelos mit benutzerfreundlichen CMS-Lösungen, die in jedes Projekt integriert sind." }
+    ]
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "title": "Praktische Lösungen, die Ihr",
+    "titleAccent": "Unternehmen voranbringen",
+    "items": [
+      {
+        "badge": "Design",
+        "title": "Webdesign",
+        "desc": "Wir gestalten und entwickeln responsive, SEO-optimierte Websites, die auf Ihre Geschäftsziele zugeschnitten sind. Von Branding bis Launch kümmern wir uns um alles, damit Sie sich auf Ihr Geschäft konzentrieren können. Inklusive individuellem CMS, SSL, Hosting-Support und 5 Stunden monatlicher Wartung."
+      },
+      {
+        "badge": "Automatisierung",
+        "title": "Workflow-Automatisierung",
+        "desc": "Wir entwickeln intelligente Automatisierungen mit Tools wie n8n, Make und Zapier, um Ihnen jede Woche Stunden manueller Arbeit zu ersparen. Von der Lead-Erfassung bis zur Rechnungsstellung verbinden wir Ihre Tools und optimieren Ihre Prozesse."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "2 Gründerinnen, 1 Vision",
+    "stories": [
+      {
+        "title": "Unsere Geschichte",
+        "text": "Wir haben uns durch unsere gemeinsame Leidenschaft für die Schaffung bedeutungsvoller digitaler Erlebnisse kennengelernt. Nach Jahren unabhängiger Arbeit in Webdesign und Automatisierung haben wir unsere Kräfte gebündelt, um kleinen Unternehmen eine Komplettlösung für ihr Online-Wachstum anzubieten."
+      },
+      {
+        "title": "Warum ein Duo wählen?",
+        "text": "Wenn Sie mit uns arbeiten, erhalten Sie die Aufmerksamkeit und Sorgfalt einer Boutique-Agentur mit der Expertise erfahrener Profis. Keine Management-Ebenen, kein Outsourcing — nur zwei engagierte Gründerinnen, die in Ihren Erfolg investiert sind."
+      },
+      {
+        "title": "Soziales Engagement",
+        "text": "Für jedes bezahlte Projekt erstellen wir eine kostenlose oder stark vergünstigte Website für eine Wohltätigkeitsorganisation, gemeinnützige Organisation oder Gemeinschaftsinitiative."
+      }
+    ],
+    "teamTitle": "Die Gesichter hinter der Arbeit",
+    "team": [
+      { "name": "Monika Mähli", "role": "Mitgründerin & Webdesignerin" },
+      { "name": "Nikky Pyra", "role": "Mitgründerin & Automatisierungsspezialistin" }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Preise",
+    "title": "Zwei Leistungen, ein Ziel:",
+    "titleAccent": "Ihr Unternehmen wachsen lassen.",
+    "tabs": {
+      "webDesign": "Webdesign",
+      "automation": "Automatisierung"
+    },
+    "getStarted": "Loslegen",
+    "custom": {
+      "title": "Brauchen Sie etwas Individuelleres?",
+      "desc": "Jedes Unternehmen ist einzigartig. Wenn unsere Pakete nicht ganz passen, erstellen wir eine massgeschneiderte Lösung für Ihre spezifischen Bedürfnisse und Ihr Budget."
+    },
+    "plans": {
+      "webDesign": [
+        {
+          "name": "Starter",
+          "price": "~ CHF3'500",
+          "features": ["Bis zu 5 Seiten", "Responsives Design", "Basis-SEO-Setup", "Kontaktformular", "CMS-Integration", "2 Revisionsrunden"]
+        },
+        {
+          "name": "Advanced",
+          "price": "~ CHF6'000",
+          "features": ["Bis zu 10 Seiten", "Individuelle Animationen", "Erweitertes SEO", "Blog-Einrichtung", "Analytics-Integration", "CMS mit Schulung", "3 Revisionsrunden", "5h monatliche Wartung"]
+        },
+        {
+          "name": "Premium",
+          "price": "~ CHF9'000",
+          "features": ["Unbegrenzte Seiten", "E-Commerce-fähig", "Komplettes Branding-Paket", "Prioritäts-Support", "Erweiterte Integrationen", "Quartalsweise Reviews"]
+        }
+      ],
+      "automation": [
+        {
+          "name": "Starter",
+          "price": "~ CHF1'500",
+          "features": ["Bis zu 3 Automatisierungen", "Basis-Integrationen", "E-Mail-Benachrichtigungen", "Setup & Testing"]
+        },
+        {
+          "name": "Advanced",
+          "price": "~ CHF3'000",
+          "features": ["Bis zu 8 Automatisierungen", "Komplexe Workflows", "CRM-Integration", "Individuelle Dashboards", "Schulungssitzung", "Monatliche Optimierung"]
+        },
+        {
+          "name": "Premium",
+          "price": "~ CHF5'000",
+          "features": ["Unbegrenzte Automatisierungen", "KI-gestützte Workflows", "Komplettes System-Audit", "Dedizierter Support", "Quartalsweise Reviews"]
+        }
+      ]
+    }
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Unsere Arbeiten",
+    "categories": ["Alle", "Webdesign", "Automatisierung", "Branding", "E-Com", "Individuell"],
+    "projects": [
+      {
+        "title": "Snip Squad",
+        "category": "Webdesign",
+        "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde."
+      },
+      {
+        "title": "SystemicAlly",
+        "category": "Webdesign",
+        "desc": "Plattform für Führungskräfteentwicklung mit einem sauberen, professionellen Design, das Vertrauen und Expertise betont."
+      },
+      {
+        "title": "Towarowa 41",
+        "category": "Webdesign",
+        "desc": "Ein elegantes Luxus-Apartment-Listing mit redaktioneller Fotografie und edler Typografie."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": [
+      { "q": "Wie lange dauert es, eine Website zu erstellen?", "a": "In der Regel 4–8 Wochen, je nach Projektumfang. Wir geben Ihnen einen klaren Zeitplan während unseres Erstgesprächs." },
+      { "q": "Muss ich Inhalte bereitstellen?", "a": "Es hilft, wenn Sie Inhalte bereit haben, aber wir können Sie durch den Prozess begleiten und bei Bedarf beim Texten helfen." },
+      { "q": "Auf welcher Plattform bauen Sie?", "a": "Wir verwenden hauptsächlich moderne Frameworks wie React und Next.js sowie Headless-CMS-Lösungen. Wir wählen den besten Stack für Ihre spezifischen Anforderungen." },
+      { "q": "Kann ich die Website selbst aktualisieren?", "a": "Absolut! Jede Website verfügt über ein benutzerfreundliches CMS. Wir bieten auch eine Schulung an, damit Sie sich bei Änderungen sicher fühlen." },
+      { "q": "Bieten Sie laufenden Support an?", "a": "Ja, unsere Advanced- und Premium-Pläne beinhalten monatliche Wartungsstunden. Wir bieten auch eigenständige Support-Pakete an." },
+      { "q": "Was, wenn ich nach dem Launch Änderungen brauche?", "a": "Wir bieten flexible Support-Optionen. Kleine Änderungen werden oft von den Wartungsstunden abgedeckt, grössere Updates können separat angeboten werden." }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Kontakt",
+    "title": "Interesse an einer Zusammenarbeit?",
+    "button": "Erstgespräch buchen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "email": "E-Mail",
+    "emailPlaceholder": "ihre@email.com",
+    "message": "Nachricht",
+    "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt...",
+    "send": "Nachricht senden"
+  },
+  "footer": {
+    "tagline": "Websites, die Kunden anziehen und mit Ihrem Unternehmen wachsen.",
+    "navigation": "Navigation",
+    "connect": "Kontakt",
+    "copyright": "© 2025 Moniré. Alle Rechte vorbehalten."
+  }
+}

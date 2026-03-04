@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "pricing": "Pricing",
+    "ourWork": "Our Work",
+    "faq": "FAQ",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "eyebrow": "Web Design & Automation Agency",
+    "headline": "Websites built to attract clients and grow with your business",
+    "highlightWord": "attract",
+    "subtitle": "We build beautiful, high-performing websites and automate your workflows so you can focus on what matters most.",
+    "cta": "Book a free discovery call →"
+  },
+  "features": {
+    "eyebrow": "What We Offer",
+    "title": "Everything your business needs.",
+    "titleAccent": "Website & more.",
+    "items": [
+      { "title": "10+ Years of Excellence", "desc": "A decade of experience creating websites that deliver results for businesses of all sizes." },
+      { "title": "AI, Google & Speed Optimized", "desc": "Every website is built with cutting-edge optimization for AI search, Google rankings, and blazing-fast load times." },
+      { "title": "5 Hours of Maintenance", "desc": "Included monthly maintenance hours to keep your site secure, updated, and performing at its best." },
+      { "title": "Direct Collaboration", "desc": "No middlemen. Work directly with the founders who design and build your website." },
+      { "title": "24/7 Time Savings", "desc": "Automation solutions that work around the clock, saving you countless hours of manual work." },
+      { "title": "Easy Updates", "desc": "Manage your content effortlessly with user-friendly CMS solutions built into every project." }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Practical Solutions That Move",
+    "titleAccent": "Your Business Forward",
+    "items": [
+      {
+        "badge": "Design",
+        "title": "Web Design",
+        "desc": "We design and build responsive, SEO-optimized websites tailored to your business goals. From branding to launch, we handle everything so you can focus on running your business. Includes a custom CMS, SSL, hosting support, and 5 hours of monthly maintenance."
+      },
+      {
+        "badge": "Automation",
+        "title": "Workflow Automation",
+        "desc": "We build smart automations using tools like n8n, Make, and Zapier to save you hours of manual work each week. From lead capture to invoicing, we connect your tools and streamline your processes so your business runs smoothly in the background."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "2 Founders, 1 Vision",
+    "stories": [
+      {
+        "title": "Our Story",
+        "text": "We met through our shared passion for creating meaningful digital experiences. After years of working in web design and automation independently, we joined forces to offer a complete solution for small businesses looking to grow online. Our complementary skills allow us to handle everything from stunning web design to powerful workflow automation."
+      },
+      {
+        "title": "Why Choose A Duo?",
+        "text": "When you work with us, you get the attention and care of a boutique agency with the expertise of seasoned professionals. No layers of management, no outsourcing — just two dedicated founders who are invested in your success. We believe the best results come from close collaboration and genuine partnership."
+      },
+      {
+        "title": "Giving Back",
+        "text": "For every paid project, we build a free or heavily discounted website for a charity, nonprofit, or community initiative. We believe in using our skills to make a positive impact beyond business."
+      }
+    ],
+    "teamTitle": "The Faces Behind The Work",
+    "team": [
+      { "name": "Monika Mähli", "role": "Co-Founder & Web Designer" },
+      { "name": "Nikky Pyra", "role": "Co-Founder & Automation Specialist" }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Two Services, One Goal:",
+    "titleAccent": "Helping Your Business Grow.",
+    "tabs": {
+      "webDesign": "Web Design",
+      "automation": "Automation"
+    },
+    "getStarted": "Get Started",
+    "custom": {
+      "title": "Need Something More Specific?",
+      "desc": "Every business is unique. If our packages don't quite fit, we'll create a custom solution tailored to your specific needs and budget."
+    },
+    "plans": {
+      "webDesign": [
+        {
+          "name": "Starter",
+          "price": "~ CHF3'500",
+          "features": ["Up to 5 pages", "Responsive design", "Basic SEO setup", "Contact form", "CMS integration", "2 revision rounds"]
+        },
+        {
+          "name": "Advanced",
+          "price": "~ CHF6'000",
+          "features": ["Up to 10 pages", "Custom animations", "Advanced SEO", "Blog setup", "Analytics integration", "CMS with training", "3 revision rounds", "5h monthly maintenance"]
+        },
+        {
+          "name": "Premium",
+          "price": "~ CHF9'000",
+          "features": ["Unlimited pages", "E-commerce ready", "Full branding package", "Priority support", "Advanced integrations", "Quarterly reviews"]
+        }
+      ],
+      "automation": [
+        {
+          "name": "Starter",
+          "price": "~ CHF1'500",
+          "features": ["Up to 3 automations", "Basic integrations", "Email notifications", "Setup & testing"]
+        },
+        {
+          "name": "Advanced",
+          "price": "~ CHF3'000",
+          "features": ["Up to 8 automations", "Complex workflows", "CRM integration", "Custom dashboards", "Training session", "Monthly optimization"]
+        },
+        {
+          "name": "Premium",
+          "price": "~ CHF5'000",
+          "features": ["Unlimited automations", "AI-powered workflows", "Full system audit", "Dedicated support", "Quarterly reviews"]
+        }
+      ]
+    }
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "Our Work",
+    "categories": ["All", "Web Design", "Automation", "Branding", "E-Com", "Custom"],
+    "projects": [
+      {
+        "title": "Snip Squad",
+        "category": "Web Design",
+        "desc": "A vibrant veterinary clinic website designed to be warm, approachable, and easy to navigate for pet owners."
+      },
+      {
+        "title": "SystemicAlly",
+        "category": "Web Design",
+        "desc": "Corporate leadership development platform with a clean, professional design emphasizing trust and expertise."
+      },
+      {
+        "title": "Towarowa 41",
+        "category": "Web Design",
+        "desc": "An elegant luxury apartment listing with editorial photography and refined typography."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "How long does it take to build a website?", "a": "Typically 4–8 weeks depending on the project scope. We'll give you a clear timeline during our discovery call." },
+      { "q": "Do I need to provide content?", "a": "It helps if you have content ready, but we can guide you through the process and help with copywriting if needed." },
+      { "q": "What platform do you build on?", "a": "We primarily use modern frameworks like React and Next.js, along with headless CMS solutions. We choose the best stack for your specific needs." },
+      { "q": "Can I update the website myself?", "a": "Absolutely! Every website comes with a user-friendly CMS. We also provide training so you feel confident making updates." },
+      { "q": "Do you offer ongoing support?", "a": "Yes, our Advanced and Premium plans include monthly maintenance hours. We also offer standalone support packages." },
+      { "q": "What if I need changes after launch?", "a": "We offer flexible support options. Small changes are often covered by maintenance hours, and larger updates can be quoted separately." }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Let's Talk",
+    "title": "Interested In Working With Us?",
+    "button": "Book a discovery call"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your project...",
+    "send": "Send Message"
+  },
+  "footer": {
+    "tagline": "Websites built to attract clients and grow with your business.",
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "copyright": "© 2025 Moniré. All rights reserved."
+  }
+}
