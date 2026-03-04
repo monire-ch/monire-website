@@ -15,12 +15,11 @@ const teamDetails = [
     name: 'Monika Märki',
     origin: 'Polish-born, based in Switzerland',
     languages: 'Languages: Polish, English, German',
-    flag: (
-      <svg className="w-4 h-3 inline-block" viewBox="0 0 640 480" aria-label="Polish flag">
-        <rect width="640" height="240" fill="#fff" />
-        <rect y="240" width="640" height="240" fill="#dc143c" />
-      </svg>
-    ),
+  },
+  {
+    name: 'Nikky Pyra',
+    origin: 'Canadian-born, based in Switzerland',
+    languages: 'Languages: English, German',
   },
   {
     name: 'Nikky Pyra',
