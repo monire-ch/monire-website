@@ -40,7 +40,7 @@ const FAQSection = () => {
     <section id="faq" className="py-20 md:py-28 px-6">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal className="text-center mb-12">
-          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('faq.title')}</h2>
+          <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('faq.title')}</h2>
         </ScrollReveal>
 
         <ScrollReveal>

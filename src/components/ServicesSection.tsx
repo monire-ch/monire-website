@@ -13,7 +13,7 @@ const ServicesSection = () => {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('services.eyebrow')}</span>
-          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">
+          <h2 className="font-body text-3xl md:text-4xl text-main-teal">
             {t('services.title')}<br />
             <span className="italic font-tertiary">{t('services.titleAccent')}</span>
           </h2>

@@ -63,8 +63,8 @@ const PortfolioSection = () => {
                     <span key={tag} className="text-xs px-2 py-0.5 rounded bg-main-teal/10 text-main-teal font-body">{tag}</span>
                   ))}
                 </div>
-                <h3 className="font-body text-xl text-deep-ink">{current.title}</h3>
-                <p className="text-[15px] text-deep-ink/60 font-body leading-relaxed">{current.desc}</p>
+                <h3 className="font-body text-xl text-main-teal">{current.title}</h3>
+                <p className="text-[15px] text-main-teal/60 font-body leading-relaxed">{current.desc}</p>
               </div>
 
               <div className="relative overflow-hidden rounded-xl border border-neutral-border bg-neutral-card">
