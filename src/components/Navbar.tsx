@@ -52,7 +52,7 @@ const Navbar = () => {
           }}
         >
           <a href="#" className="flex-shrink-0 pl-2">
-            <img src={logo} alt="Moniré" className="h-5" />
+            <img src={logo} alt="Moniré" className="h-7" />
           </a>
 
           <div className="flex items-center gap-1">
@@ -139,7 +139,7 @@ const Navbar = () => {
       {/* ─── Mobile Top Bar ─── */}
       <header className="fixed top-0 left-0 right-0 z-50 md:hidden flex items-center justify-between px-5 py-4">
         <a href="#">
-          <img src={logo} alt="Moniré" className="h-5" />
+          <img src={logo} alt="Moniré" className="h-7" />
         </a>
         <button
           onClick={() => setMobileOpen(true)}
@@ -166,7 +166,7 @@ const Navbar = () => {
             }}
           >
             <div className="flex items-center justify-between px-6 py-5">
-              <img src={logo} alt="Moniré" className="h-5" />
+              <img src={logo} alt="Moniré" className="h-7" />
               <button
                 onClick={() => setMobileOpen(false)}
                 className="text-off-white/70 hover:text-off-white transition-colors"
