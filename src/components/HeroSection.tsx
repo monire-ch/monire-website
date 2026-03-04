@@ -20,12 +20,16 @@ const HeroSection = () => {
   return (
     <section className="hero-bg relative min-h-screen flex items-center justify-center text-center px-6 pt-24 pb-32">
       <div className="relative z-10 max-w-3xl mx-auto">
-        <p
-          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-gold-text text-sm tracking-widest uppercase font-body mb-6`}
+        <div
+          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} flex items-center justify-center gap-4 mb-6`}
           style={{ transitionDelay: '220ms' }}
         >
-          {t('hero.eyebrow')}
-        </p>
+          <span className="hidden sm:block w-12 h-px bg-off-white/30" />
+          <p className="text-off-white/70 text-xs sm:text-sm tracking-[0.25em] uppercase font-body">
+            {t('hero.eyebrow')}
+          </p>
+          <span className="hidden sm:block w-12 h-px bg-off-white/30" />
+        </div>
 
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-off-white mb-6">
           {words.map((word, i) => (
