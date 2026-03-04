@@ -7,8 +7,8 @@ import linkedinIcon from '@/assets/linkedin.svg';
 
 const teamImages = [monika, nicole];
 const teamLinkedIn = [
-  'https://www.linkedin.com/in/monika/',
-  'https://www.linkedin.com/in/nicole/',
+  'https://www.linkedin.com/in/monika-malecka/',
+  'https://www.linkedin.com/in/nicole-pyra/',
 ];
 
 const AboutSection = () => {
