@@ -2,95 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@font-face {
+  font-family: 'Degular';
+  src: url('/fonts/Degular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SilkSerif';
+  src: url('/fonts/SilkSerif.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gellix';
+  src: url('/fonts/Gellix.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --background: 40 23% 95%;
+    --foreground: 192 95% 7%;
+    --card: 37 18% 95%;
+    --card-foreground: 192 95% 7%;
+    --popover: 40 23% 95%;
+    --popover-foreground: 192 95% 7%;
+    --primary: 192 71% 21%;
+    --primary-foreground: 40 23% 95%;
+    --secondary: 192 51% 26%;
+    --secondary-foreground: 40 23% 95%;
+    --muted: 37 14% 92%;
+    --muted-foreground: 36 12% 52%;
+    --accent: 42 52% 55%;
+    --accent-foreground: 192 95% 7%;
+    --destructive: 0 100% 71%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 36 16% 80%;
+    --input: 36 16% 80%;
+    --ring: 192 71% 21%;
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Monire custom tokens */
+    --deep-ink: 192 95% 7%;
+    --main-teal: 192 71% 21%;
+    --soft-teal: 192 60% 26%;
+    --focus-teal: 192 55% 37%;
+    --dark-teal-surface: 192 66% 13%;
+    --off-white: 40 23% 95%;
+    --warm-bg-start: 37 18% 94%;
+    --warm-bg-end: 37 12% 91%;
+    --neutral-card: 37 18% 95%;
+    --gold: 42 52% 55%;
+    --gold-text: 42 73% 77%;
+    --gold-hover: 42 88% 86%;
+    --gold-focus: 42 100% 88%;
+    --neutral-border: 36 16% 80%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --font-body: 'Gellix', sans-serif;
+    --font-display: 'Degular', sans-serif;
+    --font-serif: 'SilkSerif', serif;
   }
 }
 
@@ -98,8 +75,218 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    background: linear-gradient(160deg, #F4F1EB 0%, #ECEAE6 100%);
+    color: #011B22;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+}
+
+/* Hero background */
+.hero-bg {
+  background:
+    linear-gradient(180deg,
+      rgb(0 24 33 / 0.98) 0%,
+      rgb(1 33 45 / 0.94) 25%,
+      rgb(3 43 56 / 0.84) 50%,
+      rgb(6 76 93 / 0.62) 75%,
+      rgb(11 114 135 / 0.5) 100%
+    );
+  position: relative;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 60%, rgb(104 224 250 / 0.34) 0%, rgb(104 224 250 / 0.22) 30%, rgb(104 224 250 / 0.10) 60%, transparent 80%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgb(93 208 238 / 0.16) 0%, rgb(93 208 238 / 0.08) 50%, transparent 80%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgb(93 208 238 / 0.16) 0%, rgb(93 208 238 / 0.08) 50%, transparent 80%);
+  pointer-events: none;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(78 196 224 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(78 196 224 / 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 0.3) 30%, rgb(0 0 0 / 0.5) 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 0.3) 30%, rgb(0 0 0 / 0.5) 60%, transparent 100%);
+}
+
+/* Dark teal surface */
+.dark-teal-surface {
+  background: linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%);
+}
+
+.dark-surface-card {
+  background: linear-gradient(145deg, rgba(5, 62, 80, 0.85) 0%, rgba(3, 44, 57, 0.92) 100%);
+}
+
+.featured-teal-card {
+  background: linear-gradient(145deg, #2F6F83 0%, #0F4B5A 100%);
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Hero animations */
+.hero-fade-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.hero-fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 820ms ease-out, transform 820ms ease-out;
+}
+
+.hero-word {
+  opacity: 0;
+  transform: translateY(8px);
+  display: inline-block;
+  transition: opacity 720ms ease-out, transform 720ms ease-out;
+}
+
+.hero-word.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accordion animation */
+.accordion-content {
+  overflow: hidden;
+  transition: height 300ms ease;
+}
+
+.accordion-icon {
+  transition: transform 300ms ease;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Contact modal */
+.contact-overlay {
+  opacity: 0;
+  backdrop-filter: blur(0);
+  transition: opacity 300ms ease, backdrop-filter 300ms ease;
+}
+
+.contact-overlay.open {
+  opacity: 1;
+  backdrop-filter: blur(4px);
+}
+
+.contact-panel {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 420ms cubic-bezier(0.22, 0.9, 0.22, 1), opacity 280ms ease;
+}
+
+.contact-panel.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .hero-fade-enter,
+  .hero-word,
+  .accordion-content,
+  .accordion-icon,
+  .contact-overlay,
+  .contact-panel {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Portfolio card transitions */
+.portfolio-card {
+  transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 400ms ease,
+              filter 400ms ease;
+}
+
+/* Wave mask */
+.wave-mask {
+  color: #F8F5F1;
+}
+
+.wave-mask-dark {
+  color: #011B22;
+}
+
+/* Gold button styles */
+.btn-gold {
+  background-color: #CFA947;
+  color: #011B22;
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  transition: background-color 200ms ease;
+}
+
+.btn-gold:hover {
+  background-color: #FAE7BE;
+}
+
+.btn-outline-gold {
+  border: 1px solid #CFA947;
+  color: #F1D69A;
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: rgba(207, 169, 71, 0.15);
+  color: #FFECC2;
+}
+
+.btn-teal {
+  background-color: #0F4B5A;
+  color: #F8F5F1;
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  transition: background-color 200ms ease;
+}
+
+.btn-teal:hover {
+  background-color: #136175;
 }
