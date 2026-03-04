@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import monika from '@/assets/monika.jpg';
 import nicole from '@/assets/nicole.jpg';
+import linkedinIcon from '@/assets/linkedin.svg';
 
 const teamImages = [monika, nicole];
+const teamLinkedIn = [
+  'https://www.linkedin.com/in/monika/',
+  'https://www.linkedin.com/in/nicole/',
+];
 
 const AboutSection = () => {
   const { t } = useTranslation();
