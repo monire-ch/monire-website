@@ -60,7 +60,7 @@ const PricingSection = () => {
                 }`}
               >
                 <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-1">{plan.name}</p>
-                <p className="font-serif text-2xl text-off-white mb-5">{plan.price}</p>
+                <p className="font-body text-2xl text-off-white mb-5">{plan.price}</p>
                 <ul className="space-y-2 mb-8 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="text-off-white/70 text-[14px] font-body flex items-start gap-2">
