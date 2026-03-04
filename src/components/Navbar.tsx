@@ -84,7 +84,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] text-off-white/70 font-body transition-colors duration-200 hover:text-off-white/90"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px] text-off-white/70 font-body transition-colors duration-200 hover:text-off-white/90"
               style={{ background: 'rgba(248,245,241,0.06)' }}
             >
               <Globe size={13} strokeWidth={1.5} />
