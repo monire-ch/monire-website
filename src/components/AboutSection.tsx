@@ -87,9 +87,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <p className="font-display text-base md:text-lg text-off-white font-medium">{person.name}</p>
-                  <p className="text-sm text-off-white/60 font-body mt-1.5 flex items-center gap-1.5">
-                    {person.flag} {person.origin}
-                  </p>
+                  <p className="text-sm text-off-white/60 font-body mt-1.5">{person.origin}</p>
                   <p className="text-xs text-off-white/45 font-body mt-1">{person.languages}</p>
                 </div>
               </div>
