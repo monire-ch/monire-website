@@ -33,27 +33,24 @@ const Navbar = () => {
   return (
     <>
       {/* ─── Desktop Navbar ─── */}
-      <header className="fixed top-5 left-0 right-0 z-50 hidden md:flex justify-center px-6 pointer-events-none">
+      <header className="fixed top-5 left-0 right-0 z-50 hidden md:flex justify-center px-8 pointer-events-none">
         <nav
-          className="pointer-events-auto flex items-center gap-2 px-3 py-1.5 rounded-full border border-off-white/[0.07]"
+          className="pointer-events-auto flex items-center justify-between w-full max-w-5xl px-5 py-1.5 rounded-full border border-off-white/[0.07]"
           style={{
             background: 'linear-gradient(135deg, rgba(8,47,58,0.88) 0%, rgba(5,34,44,0.92) 100%)',
             backdropFilter: 'blur(18px)',
             WebkitBackdropFilter: 'blur(18px)',
-            height: '4.2rem',
+            height: '4.4rem',
             boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
           }}
         >
           {/* Logo */}
-          <a href="#" className="flex-shrink-0 pl-3 pr-4">
+          <a href="#" className="flex-shrink-0 pl-2">
             <img src={logo} alt="Moniré" className="h-5" />
           </a>
 
-          {/* Separator */}
-          <div className="w-px h-5 bg-off-white/10 flex-shrink-0" />
-
           {/* Nav links */}
-          <div className="flex items-center gap-0.5 px-1">
+          <div className="flex items-center gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.label}
