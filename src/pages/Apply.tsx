@@ -100,7 +100,7 @@ const Apply = () => {
             <path fill="#f8f5f1" d="M0,48 C190,100 405,102 720,68 C1018,36 1240,32 1440,74 L1440,120 L0,120 Z" />
           </svg>
         </div>
-        <Footer />
+        <Footer hideWave />
       </div>
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
