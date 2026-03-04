@@ -15,7 +15,7 @@ const AboutSection = () => {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <p className="text-gold text-sm tracking-widest uppercase font-body mb-3">{t('about.eyebrow')}</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-deep-ink">{t('about.title')}</h2>
+          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('about.title')}</h2>
         </ScrollReveal>
 
         <div className="space-y-12 mb-20">
