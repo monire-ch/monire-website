@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useFontsLoaded } from '@/hooks/useFontsLoaded';
+import goldFill from '@/assets/gold-fill.webp';
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -31,7 +32,17 @@ const HeroSection = () => {
           <span className="hidden sm:block w-12 h-px bg-off-white/30" />
         </div>
 
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-off-white mb-6">
+        <h1
+          className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-6"
+          style={{
+            backgroundImage: `url(${goldFill})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}
+        >
           {words.map((word, i) => (
             <span
               key={i}
@@ -39,7 +50,7 @@ const HeroSection = () => {
               style={{ transitionDelay: `${60 * i}ms` }}
             >
               {word === highlightWord ? (
-                <em className="italic text-gold-text">{word}</em>
+                <em className="italic">{word}</em>
               ) : (
                 word
               )}
