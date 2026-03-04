@@ -29,7 +29,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY < 100) setActiveLink('');
+      if (window.scrollY < 100) setActiveLink('#');
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
