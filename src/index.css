@@ -235,37 +235,8 @@
   color: #011B22;
 }
 
-/* Gold button styles */
-.btn-gold {
-  background-color: color-mix(in srgb, #0f4b5a 88%, white);
-  color: #F8F5F1;
-  border: 1px solid #cfa947b3;
-  font-family: var(--font-body);
-  font-weight: 500;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  transition: background-color 200ms ease;
-}
-
-.btn-gold:hover {
-  background-color: #FAE7BE;
-}
-
-.btn-outline-gold {
-  border: 1px solid #CFA947;
-  color: #F1D69A;
-  font-family: var(--font-body);
-  font-weight: 500;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  transition: background-color 200ms ease, color 200ms ease;
-}
-
-.btn-outline-gold:hover {
-  background-color: rgba(207, 169, 71, 0.15);
-  color: #FFECC2;
-}
-
+/* Unified CTA button styles */
+.btn-gold,
 .btn-teal {
   background-color: color-mix(in srgb, #0f4b5a 88%, white);
   color: #F8F5F1;
@@ -274,9 +245,30 @@
   font-weight: 500;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
-  transition: background-color 200ms ease;
+  transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
 
+.btn-gold:hover,
 .btn-teal:hover {
-  background-color: #136175;
+  background-color: color-mix(in srgb, #0f4b5a 75%, white);
+  border-color: #cfa947;
+  box-shadow: 0 0 12px rgba(207, 169, 71, 0.15);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  border: 1px solid #cfa947b3;
+  color: #F1D69A;
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: rgba(207, 169, 71, 0.1);
+  border-color: #cfa947;
+  color: #FFECC2;
+  box-shadow: 0 0 12px rgba(207, 169, 71, 0.15);
 }

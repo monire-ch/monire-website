@@ -126,17 +126,7 @@ const Navbar = () => {
             {/* CTA */}
             <button
               onClick={() => setContactOpen(true)}
-              className="flex-shrink-0 ml-1 px-5 py-2 rounded-full text-[13px] font-body font-semibold uppercase tracking-widest transition-all duration-200 text-off-white"
-              style={{
-                background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
-                boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3), 0 2px 8px rgba(0,0,0,0.15)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = 'inset 0 0 0 1px rgba(207,169,71,0.55), 0 2px 12px rgba(207,169,71,0.12)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = 'inset 0 0 0 1px rgba(207,169,71,0.3), 0 2px 8px rgba(0,0,0,0.15)';
-              }}
+              className="btn-gold flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold uppercase tracking-widest"
             >
               {t('nav.contactUs')}
             </button>
