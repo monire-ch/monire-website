@@ -17,8 +17,8 @@ const AboutSection = () => {
       <section id="about" className="relative py-20 md:py-28 px-6">
         <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
-          <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('about.eyebrow')}</span>
-          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('about.title')}</h2>
+          <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('about.eyebrow')}</span>
+          <h2 className="font-body text-3xl md:text-4xl text-off-white">{t('about.title')}</h2>
         </ScrollReveal>
 
         <div className="space-y-12 mb-20">
