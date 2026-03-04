@@ -10,6 +10,32 @@ const teamLinkedIn = [
   'https://www.linkedin.com/in/monika-malecka/',
   'https://www.linkedin.com/in/nicole-pyra/',
 ];
+const teamDetails = [
+  {
+    name: 'Monika Märki',
+    origin: 'Polish-born, based in Switzerland',
+    languages: 'Languages: Polish, English, German',
+    flag: (
+      <svg className="w-4 h-3 inline-block" viewBox="0 0 640 480" aria-label="Polish flag">
+        <rect width="640" height="240" fill="#fff" />
+        <rect y="240" width="640" height="240" fill="#dc143c" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Nikky Pyra',
+    origin: 'Canadian-born, based in Switzerland',
+    languages: 'Languages: English, German',
+    flag: (
+      <svg className="w-4 h-3 inline-block" viewBox="0 0 640 480" aria-label="Canadian flag">
+        <rect width="640" height="480" fill="#fff" />
+        <rect width="160" height="480" fill="#d52b1e" />
+        <rect x="480" width="160" height="480" fill="#d52b1e" />
+        <path d="M320 80l-20 60-60-10 40 50-40 50 60-10 20 60 20-60 60 10-40-50 40-50-60 10z" fill="#d52b1e" />
+      </svg>
+    ),
+  },
+];
 
 const AboutSection = () => {
   const { t } = useTranslation();
