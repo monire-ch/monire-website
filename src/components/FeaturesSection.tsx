@@ -10,7 +10,7 @@ const FeaturesSection = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('features.eyebrow')}</span>
-          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">
+          <h2 className="font-body text-3xl md:text-4xl text-main-teal">
             {t('features.title')}
             <span className="block mt-2 italic font-tertiary text-main-teal">{t('features.titleAccent')}</span>
           </h2>
