@@ -153,7 +153,7 @@ const PricingSection = () => {
 
         <ScrollReveal className="text-center mt-14">
           <h3 className="font-serif text-xl text-off-white mb-2">Need Something More Specific?</h3>
-          <p className="text-off-white/60 text-sm font-body max-w-lg mx-auto">
+          <p className="text-off-white/60 text-[15px] font-body max-w-lg mx-auto">
             Every business is unique. If our packages don't quite fit, we'll create a custom solution tailored to your specific needs and budget.
           </p>
         </ScrollReveal>
