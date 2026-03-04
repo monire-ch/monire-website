@@ -15,7 +15,7 @@ const Navbar = () => {
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('');
+  const [activeLink, setActiveLink] = useState('#');
 
   const navLinks = [
     { label: t('nav.home'), href: '#' },
