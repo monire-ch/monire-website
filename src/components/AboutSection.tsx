@@ -15,14 +15,14 @@ const AboutSection = () => {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <p className="text-gold text-sm tracking-widest uppercase font-body mb-3">{t('about.eyebrow')}</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-deep-ink">{t('about.title')}</h2>
+          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('about.title')}</h2>
         </ScrollReveal>
 
         <div className="space-y-12 mb-20">
           {stories.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
               <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 items-start">
-                <h3 className="font-serif text-xl md:text-2xl text-deep-ink">{item.title}</h3>
+                <h3 className="font-body text-xl md:text-2xl text-deep-ink">{item.title}</h3>
                 <p className="text-[15px] text-deep-ink/70 font-body leading-relaxed">{item.text}</p>
               </div>
             </ScrollReveal>
@@ -30,7 +30,7 @@ const AboutSection = () => {
         </div>
 
         <ScrollReveal>
-          <h3 className="font-serif text-2xl text-deep-ink mb-8">{t('about.teamTitle')}</h3>
+          <h3 className="font-body text-2xl text-deep-ink mb-8">{t('about.teamTitle')}</h3>
           <div className="flex flex-wrap gap-8 justify-start">
             {team.map((person, i) => (
               <div key={person.name} className="flex flex-col items-center w-44">

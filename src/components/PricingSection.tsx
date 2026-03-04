@@ -26,7 +26,7 @@ const PricingSection = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal className="text-center mb-12">
           <p className="text-gold-text text-sm tracking-widest uppercase font-body mb-3">{t('pricing.eyebrow')}</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-off-white">
+          <h2 className="font-body text-3xl md:text-4xl text-off-white">
             {t('pricing.title')} <em className="italic font-tertiary text-gold-text">{t('pricing.titleAccent')}</em>
           </h2>
         </ScrollReveal>
@@ -60,7 +60,7 @@ const PricingSection = () => {
                 }`}
               >
                 <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-1">{plan.name}</p>
-                <p className="font-serif text-2xl text-off-white mb-5">{plan.price}</p>
+                <p className="font-body text-2xl text-off-white mb-5">{plan.price}</p>
                 <ul className="space-y-2 mb-8 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="text-off-white/70 text-[14px] font-body flex items-start gap-2">
@@ -78,7 +78,7 @@ const PricingSection = () => {
         </div>
 
         <ScrollReveal className="text-center mt-14">
-          <h3 className="font-serif text-xl text-off-white mb-2">{t('pricing.custom.title')}</h3>
+          <h3 className="font-body text-xl text-off-white mb-2">{t('pricing.custom.title')}</h3>
           <p className="text-off-white/60 text-[15px] font-body max-w-lg mx-auto">
             {t('pricing.custom.desc')}
           </p>

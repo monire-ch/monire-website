@@ -35,7 +35,7 @@ const PortfolioSection = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-12">
           <p className="text-gold text-sm tracking-widest uppercase font-body mb-3">{t('portfolio.eyebrow')}</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-deep-ink">{t('portfolio.title')}</h2>
+          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('portfolio.title')}</h2>
         </ScrollReveal>
 
         <ScrollReveal className="flex flex-wrap justify-center gap-2 mb-10">
@@ -63,7 +63,7 @@ const PortfolioSection = () => {
                     <span key={tag} className="text-xs px-2 py-0.5 rounded bg-main-teal/10 text-main-teal font-body">{tag}</span>
                   ))}
                 </div>
-                <h3 className="font-serif text-xl text-deep-ink">{current.title}</h3>
+                <h3 className="font-body text-xl text-deep-ink">{current.title}</h3>
                 <p className="text-[15px] text-deep-ink/60 font-body leading-relaxed">{current.desc}</p>
               </div>
 
