@@ -36,7 +36,7 @@ const HeroSection = () => {
           {words.map((word, i) => (
             <span
               key={i}
-              className={`hero-word ${animate ? 'visible' : ''}`}
+              className={`hero-word ${animate ? 'visible' : ''} inline-block pb-2`}
               style={{
                 transitionDelay: `${60 * i}ms`,
                 backgroundImage: `url(${goldFill})`,
