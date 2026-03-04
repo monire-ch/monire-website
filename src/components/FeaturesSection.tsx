@@ -20,7 +20,7 @@ const FeaturesSection = () => {
           {items.map((f, i) => {
             const isDark = i % 2 === 1;
             return (
-              <ScrollReveal key={f.title} delay={i * 80}>
+              <ScrollReveal key={f.title} delay={i * 150}>
                 <div
                   className={`rounded-lg p-6 h-full hover:shadow-lg transition-shadow duration-300 ${
                     isDark
