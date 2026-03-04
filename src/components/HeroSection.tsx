@@ -49,7 +49,7 @@ const HeroSection = () => {
               }}
             >
               {word === highlightWord ? (
-                <em className="italic">{word}</em>
+                <em className="italic font-tertiary">{word}</em>
               ) : (
                 word
               )}

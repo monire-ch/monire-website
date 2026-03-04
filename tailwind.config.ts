@@ -17,6 +17,7 @@ export default {
         body: ['Gellix', 'sans-serif'],
         display: ['Degular', 'sans-serif'],
         serif: ['SilkSerif', 'serif'],
+        tertiary: ['Instrument Serif', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
