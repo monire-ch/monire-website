@@ -21,10 +21,11 @@ const AboutSection = () => {
           <h2 className="font-body text-3xl md:text-4xl text-off-white">{t('about.title')}</h2>
         </ScrollReveal>
 
-        <div className="space-y-12 mb-20">
+        <div className="space-y-0 mb-20">
           {stories.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
-              <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 items-start">
+              {i > 0 && <div className="border-t border-white/10 my-0" />}
+              <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 items-start py-10">
                 <h3 className="font-body text-xl md:text-2xl text-off-white">{item.title}</h3>
                 <p className="text-[15px] text-off-white/70 font-body leading-relaxed">{item.text}</p>
               </div>
