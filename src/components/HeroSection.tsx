@@ -32,7 +32,7 @@ const HeroSection = () => {
           <span className="hidden sm:block w-12 h-px bg-off-white/30" />
         </div>
 
-        <h1 className="font-serif text-5xl md:text-[76px] md:leading-[1.12] leading-tight mb-6">
+        <h1 className="font-serif text-5xl md:text-[76px] md:leading-[1.25] leading-[1.3] tracking-wide mb-8">
           {words.map((word, i) => (
             <span
               key={i}
