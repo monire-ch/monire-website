@@ -33,15 +33,15 @@ const AboutSection = () => {
         </div>
 
         <ScrollReveal>
-          <h3 className="font-body text-2xl text-deep-ink mb-8">{t('about.teamTitle')}</h3>
+          <h3 className="font-body text-2xl text-off-white mb-8">{t('about.teamTitle')}</h3>
           <div className="flex flex-wrap gap-8 justify-start">
             {team.map((person, i) => (
               <div key={person.name} className="flex flex-col items-center w-44">
-                <div className="w-36 h-36 rounded-lg overflow-hidden mb-3 border border-neutral-border">
+                <div className="w-36 h-36 rounded-lg overflow-hidden mb-3 border border-white/10">
                   <img src={teamImages[i]} alt={person.name} className="w-full h-full object-cover" />
                 </div>
-                <p className="font-display text-sm text-deep-ink font-medium">{person.name}</p>
-                <p className="text-xs text-deep-ink/60 font-body text-center">{person.role}</p>
+                <p className="font-display text-sm text-off-white font-medium">{person.name}</p>
+                <p className="text-xs text-off-white/60 font-body text-center">{person.role}</p>
               </div>
             ))}
           </div>
