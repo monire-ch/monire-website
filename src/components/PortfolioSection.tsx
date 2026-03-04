@@ -35,7 +35,7 @@ const PortfolioSection = () => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
-          <h2 className="font-body text-3xl md:text-4xl text-deep-ink">{t('portfolio.title')}</h2>
+          <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('portfolio.title')}</h2>
         </ScrollReveal>
 
         <ScrollReveal className="flex flex-wrap justify-center gap-2 mb-10">
