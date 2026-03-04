@@ -46,7 +46,7 @@ const PortfolioSection = () => {
               className={`px-4 py-1.5 rounded-full text-xs font-body transition-all duration-200 border ${
                 catFilter === idx
                   ? 'bg-main-teal text-off-white border-main-teal'
-                  : 'border-neutral-border text-deep-ink/60 hover:border-main-teal hover:text-main-teal'
+                  : 'border-neutral-border text-main-teal/60 hover:border-main-teal hover:text-main-teal'
               }`}
             >
               {cat}
