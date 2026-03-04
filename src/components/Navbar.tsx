@@ -18,11 +18,11 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('');
 
   const navLinks = [
+    { label: t('nav.home'), href: '#' },
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.services'), href: '#services' },
     { label: t('nav.pricing'), href: '#pricing' },
     { label: t('nav.ourWork'), href: '#portfolio' },
-    { label: t('nav.faq'), href: '#faq' },
   ];
 
   const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
