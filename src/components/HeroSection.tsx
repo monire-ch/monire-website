@@ -26,7 +26,7 @@ const HeroSection = () => {
           style={{ transitionDelay: '220ms' }}
         >
           <span className="hidden sm:block w-12 h-px bg-off-white/30" />
-          <p className="text-off-white/70 text-[10px] sm:text-xs tracking-[0.25em] uppercase font-body">
+          <p className="text-off-white/70 text-[8px] sm:text-[10px] tracking-[0.25em] uppercase font-body">
             {t('hero.eyebrow')}
           </p>
           <span className="hidden sm:block w-12 h-px bg-off-white/30" />
