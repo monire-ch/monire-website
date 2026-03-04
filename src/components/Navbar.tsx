@@ -134,6 +134,7 @@ const Navbar = () => {
           >
             Contact Us
           </button>
+          </div>
         </nav>
       </header>
 
