@@ -13,7 +13,8 @@ const teamLinkedIn = [
 const teamDetails = [
   {
     name: 'Monika Märki',
-    origin: 'Polish-born, based in Switzerland',
+    origin: (<>🇵🇱 Polish-born, based in Switzerland</>),
+    originText: 'Polish-born, based in Switzerland',
     languages: 'Languages: Polish, English, German',
     flag: (
       <svg className="w-4 h-3 inline-block" viewBox="0 0 640 480" aria-label="Polish flag">
