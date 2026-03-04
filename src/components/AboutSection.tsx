@@ -30,7 +30,7 @@ const teamDetails = [
 const AboutSection = () => {
   const { t } = useTranslation();
   const stories = t('about.stories', { returnObjects: true }) as Array<{ title: string; text: string }>;
-  const team = t('about.team', { returnObjects: true }) as Array<{ name: string; role: string }>;
+  
 
   return (
     <div className="about-flow relative overflow-hidden">
