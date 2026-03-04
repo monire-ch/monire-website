@@ -25,8 +25,8 @@ const AboutSection = () => {
           {stories.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
               <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 items-start">
-                <h3 className="font-body text-xl md:text-2xl text-deep-ink">{item.title}</h3>
-                <p className="text-[15px] text-deep-ink/70 font-body leading-relaxed">{item.text}</p>
+                <h3 className="font-body text-xl md:text-2xl text-off-white">{item.title}</h3>
+                <p className="text-[15px] text-off-white/70 font-body leading-relaxed">{item.text}</p>
               </div>
             </ScrollReveal>
           ))}
