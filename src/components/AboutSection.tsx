@@ -30,7 +30,7 @@ const AboutSection = () => {
         </div>
 
         <ScrollReveal>
-          <h3 className="font-serif text-2xl text-deep-ink mb-8">{t('about.teamTitle')}</h3>
+          <h3 className="font-body text-2xl text-deep-ink mb-8">{t('about.teamTitle')}</h3>
           <div className="flex flex-wrap gap-8 justify-start">
             {team.map((person, i) => (
               <div key={person.name} className="flex flex-col items-center w-44">

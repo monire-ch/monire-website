@@ -20,7 +20,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
 
       <div className={`absolute top-0 right-0 bottom-0 w-full max-w-md dark-teal-surface contact-panel ${open ? 'open' : ''} p-8 overflow-y-auto`}>
         <div className="flex justify-between items-center mb-8">
-          <h2 className="font-serif text-2xl text-off-white">{t('contact.title')}</h2>
+          <h2 className="font-body text-2xl text-off-white">{t('contact.title')}</h2>
           <button onClick={onClose} className="text-off-white/60 hover:text-off-white transition-colors">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M6 6l12 12M6 18L18 6" />

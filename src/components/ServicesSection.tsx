@@ -31,7 +31,7 @@ const ServicesSection = () => {
                   )}
                   <div className={visuals[i] ? 'md:w-2/3' : 'w-full'}>
                     <span className="text-gold-text text-xs tracking-widest uppercase font-body mb-2 block">{s.badge}</span>
-                    <h3 className="font-serif text-2xl md:text-3xl text-off-white mb-3">{s.title}</h3>
+                    <h3 className="font-body text-2xl md:text-3xl text-off-white mb-3">{s.title}</h3>
                     <p className="text-off-white/70 font-body leading-relaxed text-[15px]">{s.desc}</p>
                   </div>
                 </div>

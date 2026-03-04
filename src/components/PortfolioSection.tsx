@@ -63,7 +63,7 @@ const PortfolioSection = () => {
                     <span key={tag} className="text-xs px-2 py-0.5 rounded bg-main-teal/10 text-main-teal font-body">{tag}</span>
                   ))}
                 </div>
-                <h3 className="font-serif text-xl text-deep-ink">{current.title}</h3>
+                <h3 className="font-body text-xl text-deep-ink">{current.title}</h3>
                 <p className="text-[15px] text-deep-ink/60 font-body leading-relaxed">{current.desc}</p>
               </div>
 
