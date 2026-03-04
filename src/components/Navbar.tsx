@@ -61,7 +61,7 @@ const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 onClick={() => setActiveLink(link.href)}
-                className={`relative px-4 py-1.5 rounded-full text-sm font-body tracking-wide transition-all duration-200 ${
+                className={`relative px-4 py-1.5 rounded-full text-[15px] font-body tracking-wide transition-all duration-200 ${
                   activeLink === link.href
                     ? 'bg-focus-teal/40 text-off-white'
                     : 'text-off-white/80 hover:text-gold-hover'
