@@ -26,7 +26,7 @@ const FeaturesSection = () => {
             <ScrollReveal key={f.title} delay={i * 80}>
               <div className="bg-neutral-card border border-neutral-border rounded-lg p-6 h-full hover:shadow-lg transition-shadow duration-300">
                 <h3 className="font-display text-lg text-deep-ink mb-2">{f.title}</h3>
-                <p className="text-sm text-deep-ink/70 font-body leading-relaxed">{f.desc}</p>
+                <p className="text-[15px] text-deep-ink/70 font-body leading-relaxed">{f.desc}</p>
               </div>
             </ScrollReveal>
           ))}

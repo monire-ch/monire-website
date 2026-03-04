@@ -47,7 +47,7 @@ const HeroSection = () => {
 
         {/* Subtitle */}
         <p
-          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white/70 text-base md:text-lg font-body max-w-xl mx-auto mb-8`}
+          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white/70 text-lg md:text-xl font-body max-w-xl mx-auto mb-8`}
           style={{ transitionDelay: '320ms' }}
         >
           We build beautiful, high-performing websites and automate your workflows so you can focus on what matters most.

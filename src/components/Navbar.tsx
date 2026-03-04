@@ -60,7 +60,7 @@ const Navbar = () => {
                 href={link.href}
                 onClick={() => setActiveLink(link.href)}
                 className={`
-                  relative px-4 py-1.5 rounded-full text-[13px] font-body tracking-wide transition-all duration-200
+                  relative px-4 py-1.5 rounded-full text-sm font-body tracking-wide transition-all duration-200
                   ${activeLink === link.href
                     ? 'bg-focus-teal/40 text-off-white'
                     : 'text-off-white/80 hover:text-gold-hover'
@@ -84,7 +84,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] text-off-white/70 font-body transition-colors duration-200 hover:text-off-white/90"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px] text-off-white/70 font-body transition-colors duration-200 hover:text-off-white/90"
               style={{ background: 'rgba(248,245,241,0.06)' }}
             >
               <Globe size={13} strokeWidth={1.5} />
@@ -124,7 +124,7 @@ const Navbar = () => {
           {/* CTA */}
           <button
             onClick={() => setContactOpen(true)}
-            className="flex-shrink-0 ml-1 px-5 py-2 rounded-full text-[12px] font-body font-semibold uppercase tracking-widest transition-all duration-200 text-off-white"
+            className="flex-shrink-0 ml-1 px-5 py-2 rounded-full text-[13px] font-body font-semibold uppercase tracking-widest transition-all duration-200 text-off-white"
             style={{
               background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
               boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3), 0 2px 8px rgba(0,0,0,0.15)',

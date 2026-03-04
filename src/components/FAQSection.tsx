@@ -26,7 +26,7 @@ const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen:
         onClick={toggle}
         className="w-full flex items-center justify-between py-5 text-left"
       >
-        <span className="font-display text-base text-deep-ink pr-4">{q}</span>
+        <span className="font-display text-[16px] text-deep-ink pr-4">{q}</span>
         <span className={`accordion-icon text-main-teal flex-shrink-0 ${isOpen ? 'open' : ''}`}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 8l5 5 5-5" />
@@ -35,7 +35,7 @@ const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen:
       </button>
       <div className="accordion-content" style={{ height }}>
         <div ref={contentRef} className="pb-5">
-          <p className="text-deep-ink/70 text-sm font-body leading-relaxed">{a}</p>
+          <p className="text-deep-ink/70 text-[15px] font-body leading-relaxed">{a}</p>
         </div>
       </div>
     </div>

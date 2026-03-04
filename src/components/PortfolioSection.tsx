@@ -73,7 +73,7 @@ const PortfolioSection = () => {
                   ))}
                 </div>
                 <h3 className="font-serif text-xl text-deep-ink">{current.title}</h3>
-                <p className="text-sm text-deep-ink/60 font-body">{current.desc}</p>
+                <p className="text-[15px] text-deep-ink/60 font-body leading-relaxed">{current.desc}</p>
               </div>
 
               {/* Image */}

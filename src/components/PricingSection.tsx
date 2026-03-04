@@ -137,7 +137,7 @@ const PricingSection = () => {
                 <p className="font-serif text-2xl text-off-white mb-5">{plan.price}</p>
                 <ul className="space-y-2 mb-8 flex-1">
                   {plan.features.map((f) => (
-                    <li key={f} className="text-off-white/70 text-sm font-body flex items-start gap-2">
+                    <li key={f} className="text-off-white/70 text-[14px] font-body flex items-start gap-2">
                       <span className="text-gold mt-0.5">✓</span>
                       {f}
                     </li>
@@ -153,7 +153,7 @@ const PricingSection = () => {
 
         <ScrollReveal className="text-center mt-14">
           <h3 className="font-serif text-xl text-off-white mb-2">Need Something More Specific?</h3>
-          <p className="text-off-white/60 text-sm font-body max-w-lg mx-auto">
+          <p className="text-off-white/60 text-[15px] font-body max-w-lg mx-auto">
             Every business is unique. If our packages don't quite fit, we'll create a custom solution tailored to your specific needs and budget.
           </p>
         </ScrollReveal>
