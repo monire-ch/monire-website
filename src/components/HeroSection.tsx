@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   return (
     <section className="hero-bg relative min-h-screen flex items-center justify-center text-center px-6 pt-24 pb-32">
-      <div className="relative z-10 max-w-3xl mx-auto">
+      <div className="relative z-10 max-w-5xl mx-auto">
         <div
           className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} flex items-center justify-center gap-4 mb-6`}
           style={{ transitionDelay: '220ms' }}
