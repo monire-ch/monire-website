@@ -78,7 +78,7 @@ const AboutSection = () => {
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">Meet the Duo</span>
           <h3 className="font-body text-2xl text-off-white mb-8">{t('about.teamTitle')}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {team.map((person, i) => (
+            {teamDetails.map((person, i) => (
               <div key={person.name} className="flex items-center gap-5">
                 <div className="relative w-44 h-56 md:w-[300px] md:h-[375px] rounded-lg overflow-hidden shrink-0 border border-white/10">
                   <img src={teamImages[i]} alt={person.name} className="w-full h-full object-cover" />
@@ -94,7 +94,10 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <p className="font-display text-base md:text-lg text-off-white font-medium">{person.name}</p>
-                  <p className="text-sm text-off-white/60 font-body">{person.role}</p>
+                  <p className="text-sm text-off-white/60 font-body mt-1.5 flex items-center gap-1.5">
+                    {person.flag} {person.origin}
+                  </p>
+                  <p className="text-xs text-off-white/45 font-body mt-1">{person.languages}</p>
                 </div>
               </div>
             ))}
