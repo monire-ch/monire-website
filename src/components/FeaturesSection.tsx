@@ -17,14 +17,24 @@ const FeaturesSection = () => {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {items.map((f, i) => (
-            <ScrollReveal key={f.title} delay={i * 80}>
-              <div className="bg-neutral-card border border-neutral-border rounded-lg p-6 h-full hover:shadow-lg transition-shadow duration-300">
-                <h3 className="font-display text-lg text-deep-ink mb-2">{f.title}</h3>
-                <p className="text-[15px] text-deep-ink/70 font-body leading-relaxed">{f.desc}</p>
-              </div>
-            </ScrollReveal>
-          ))}
+          {items.map((f, i) => {
+            const isDark = i % 2 === 1;
+            return (
+              <ScrollReveal key={f.title} delay={i * 80}>
+                <div
+                  className={`rounded-lg p-6 h-full hover:shadow-lg transition-shadow duration-300 ${
+                    isDark
+                      ? 'border border-white/10 text-off-white'
+                      : 'bg-neutral-card border border-neutral-border'
+                  }`}
+                  style={isDark ? { background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' } : undefined}
+                >
+                  <h3 className={`font-display text-lg mb-2 ${isDark ? 'text-off-white' : 'text-deep-ink'}`}>{f.title}</h3>
+                  <p className={`text-[15px] font-body leading-relaxed ${isDark ? 'text-off-white/70' : 'text-deep-ink/70'}`}>{f.desc}</p>
+                </div>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>
