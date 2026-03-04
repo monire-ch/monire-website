@@ -79,9 +79,9 @@ const AboutSection = () => {
                   </a>
                 </div>
                 <div>
-                  <h3 className="font-body text-xl md:text-2xl font-medium" style={{ color: 'oklab(0.999994 0.0000455678 0.0000200868 / 0.9)' }}>{person.name}</h3>
-                  <p className="text-base md:text-lg font-body mt-2" style={{ color: 'oklab(0.999994 0.0000455678 0.0000200868 / 0.55)' }}>{person.origin}</p>
-                  <p className="text-sm md:text-base font-body mt-1.5" style={{ color: 'oklab(0.999994 0.0000455678 0.0000200868 / 0.4)' }}>{person.languages}</p>
+                  <h3 className="font-body text-base md:text-lg text-off-white font-medium">{person.name}</h3>
+                  <p className="text-sm text-off-white/60 font-body mt-1.5">{person.origin}</p>
+                  <p className="text-xs text-off-white/45 font-body mt-1">{person.languages}</p>
                 </div>
               </div>
             ))}
