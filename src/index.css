@@ -110,6 +110,34 @@
 }
 
 
+/* About flow wrapper */
+.about-flow {
+  background: linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%);
+}
+
+.about-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(64px);
+}
+
+.about-orb-1 {
+  width: 420px;
+  height: 420px;
+  top: -80px;
+  right: -60px;
+  background: rgba(46, 212, 199, 0.34);
+}
+
+.about-orb-2 {
+  width: 380px;
+  height: 380px;
+  bottom: -60px;
+  left: -80px;
+  background: rgba(120, 200, 255, 0.18);
+}
+
 /* Dark teal surface */
 .dark-teal-surface {
   background: linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%);
