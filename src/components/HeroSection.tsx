@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useFontsLoaded } from '@/hooks/useFontsLoaded';
+import goldFill from '@/assets/gold-fill.webp';
 
 const HeroSection = () => {
   const { t } = useTranslation();
