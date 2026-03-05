@@ -107,7 +107,7 @@ const PricingSection = () => {
                     <ul className="space-y-2.5 mb-8 flex-1">
                       {plan.features.map((f) => (
                         <li key={f} className={`text-[14px] font-body flex items-start gap-2.5 ${
-                          plan.featured ? 'text-deep-ink/80' : 'text-off-white/70'
+                          plan.featured ? 'text-deep-ink/80' : 'text-off-white'
                         }`}>
                           <span className={`mt-0.5 text-sm ${plan.featured ? 'text-main-teal' : 'text-gold'}`}>✓</span>
                           {f}
