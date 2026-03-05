@@ -29,16 +29,16 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
           <div>
-            <img src={logo} alt="Moniré" className="h-6 mb-4" />
+            <img src={logo} alt="Moniré" className="h-6 mb-4 -ml-1" />
             <p className="text-off-white/50 text-sm font-body max-w-xs">
               {t('footer.tagline')}
             </p>
             <div className="flex items-center gap-3 mt-4">
-              <a href="https://www.instagram.com/hello.monire" target="_blank" rel="noopener noreferrer" className="text-off-white/50 hover:text-gold-text transition-colors">
+              <a href="https://www.instagram.com/hello.monire" target="_blank" rel="noopener noreferrer" className="text-gold-text hover:text-gold-hover transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://www.linkedin.com/monire" target="_blank" rel="noopener noreferrer" className="text-off-white/50 hover:text-gold-text transition-colors">
-                <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity" />
+              <a href="https://www.linkedin.com/monire" target="_blank" rel="noopener noreferrer" className="text-gold-text hover:text-gold-hover transition-colors">
+                <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(83%) sepia(30%) saturate(500%) hue-rotate(5deg) brightness(95%)' }} />
               </a>
             </div>
           </div>
