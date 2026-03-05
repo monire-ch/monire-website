@@ -26,6 +26,7 @@ const CaseStudyTowarowa = () => {
           </ScrollReveal>
 
           <ScrollReveal>
+            <span className="eyebrow-pill eyebrow-pill-light">Web Design & Web Development</span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-12">
               Towarowa
             </h1>
