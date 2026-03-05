@@ -18,13 +18,13 @@ const CaseStudyExpenseReceipt = () => {
         <div className="max-w-5xl mx-auto px-6">
           {/* Back link */}
           <ScrollReveal>
-            <Link
-              to="/#pricing"
+            <a
+              href="/#portfolio"
               className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors mb-8"
             >
               <ArrowLeft size={16} />
               {t('caseStudy.back')}
-            </Link>
+            </a>
           </ScrollReveal>
 
           {/* Eyebrow */}
