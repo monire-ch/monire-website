@@ -183,7 +183,7 @@ const Navbar = () => {
               {navLinks.map((link, i) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={getHref(link.href)}
                   onClick={() => { setActiveLink(link.href); setMobileOpen(false); }}
                   className="group block py-5 border-b border-off-white/[0.07] transition-colors duration-200"
                   style={{ animationDelay: `${i * 40}ms` }}
