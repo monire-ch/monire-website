@@ -55,10 +55,10 @@
     --soft-teal: 192 60% 26%;
     --focus-teal: 192 55% 37%;
     --dark-teal-surface: 192 66% 13%;
-    --off-white: 40 23% 95%;
-    --warm-bg-start: 37 18% 94%;
-    --warm-bg-end: 37 12% 91%;
-    --neutral-card: 37 18% 95%;
+    --off-white: 30 14% 92%;
+    --warm-bg-start: 30 14% 92%;
+    --warm-bg-end: 30 14% 92%;
+    --neutral-card: 30 14% 92%;
     --gold: 42 52% 55%;
     --gold-text: 42 73% 77%;
     --gold-hover: 42 88% 86%;
@@ -78,7 +78,7 @@
   }
   body {
     font-family: var(--font-body);
-    background: linear-gradient(160deg, #F4F1EB 0%, #ECEAE6 100%);
+    background: #EEEBE7;
     color: #011B22;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -257,7 +257,7 @@
 
 /* Wave mask */
 .wave-mask {
-  color: #F4F1EB;
+  color: #EEEBE7;
 }
 
 .wave-mask-dark {
@@ -280,7 +280,7 @@
 
 .eyebrow-pill-light {
   border: 1px solid color-mix(in srgb, #0F4B5A 26%, transparent);
-  background: color-mix(in srgb, #F8F5F1 88%, #0F4B5A);
+  background: color-mix(in srgb, #EEEBE7 88%, #0F4B5A);
   color: #0F4B5A;
 }
 
@@ -294,7 +294,7 @@
 .btn-gold,
 .btn-teal {
   background-color: color-mix(in srgb, #0f4b5a 88%, white);
-  color: #F8F5F1;
+  color: #EEEBE7;
   border: 1px solid #cfa947b3;
   font-family: var(--font-body);
   font-weight: 500;
@@ -326,7 +326,7 @@
 .btn-outline-gold:hover {
   background-color: color-mix(in srgb, #0f4b5a 88%, white);
   border-color: #cfa947;
-  color: #F8F5F1;
+  color: #EEEBE7;
   box-shadow: 0 0 12px rgba(207, 169, 71, 0.15);
 }
 
