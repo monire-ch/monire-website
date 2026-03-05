@@ -9,9 +9,11 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const navItems = [
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.services'), href: '#services' },
-    { label: t('nav.pricing'), href: '#pricing' },
     { label: t('nav.ourWork'), href: '#portfolio' },
+    { label: t('nav.pricing'), href: '#pricing' },
     { label: t('nav.faq'), href: '#faq' },
+    { label: t('nav.contactUs'), href: '#contact' },
+    { label: t('footer.privacyPolicy'), href: '/privacy' },
   ];
 
   return (
