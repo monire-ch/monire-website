@@ -144,6 +144,7 @@ const CaseStudyExpenseReceipt = () => {
                 </div>
               </div>
             </div>
+
           </ScrollReveal>
 
           <div className="h-20" />
