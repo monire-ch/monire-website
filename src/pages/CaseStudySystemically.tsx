@@ -38,7 +38,7 @@ const CaseStudySystemically = () => {
                 <img
                   src={systemically}
                   alt="SystemicAlly website preview"
-                  className="w-full h-auto block"
+                  className="w-auto max-w-full h-auto block mx-auto"
                 />
               </div>
             </ScrollReveal>
