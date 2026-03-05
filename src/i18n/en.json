@@ -204,7 +204,7 @@
       {
         "label": "General",
         "items": [
-          { "q": "What information do you need from me to start?", "a": "We'll need to understand your business goals, target audience, key features or functionality you need, design preferences, timeline, and budget. If you have existing brand assets, content, or websites, those are helpful too. Please feel free to complete our client brief form, so we can better understand your needs and prepare for our first conversation." },
+          { "q": "What information do you need from me to start?", "a": "We'll need to understand your business goals, target audience, key features or functionality you need, design preferences, timeline, and budget. If you have existing brand assets, content, or websites, those are helpful too. Please feel free to complete our <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>client brief form</a>, so we can better understand your needs and prepare for our first conversation." },
           { "q": "Can you help with SEO?", "a": "While our primary focus is on development and AI automation, we build websites with SEO best practices in mind. We can also recommend trusted partners for ongoing SEO services." },
           { "q": "Do you work with international clients?", "a": "Yes! We're based in Switzerland and work remotely with clients worldwide. Communication is async-friendly, and we'll align on meeting windows that work across time zones." }
         ]
