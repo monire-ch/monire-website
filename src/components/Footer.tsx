@@ -77,7 +77,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                   </a>
                 </li>
                 <li>
-                  <span className="text-off-white/60 text-sm font-body">Zürich, Switzerland</span>
+                  <span className="text-off-white text-sm font-body">Zürich, Switzerland</span>
                 </li>
                 <li>
                   <span className="text-off-white/60 text-sm font-body">Serving clients worldwide</span>
