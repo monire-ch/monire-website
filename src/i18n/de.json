@@ -130,7 +130,7 @@
         ]
       },
       {
-        "label": "Support & Wartung",
+        "label": "Wartung",
         "items": [
           { "q": "Bieten Sie laufenden Support an?", "a": "Ja, unsere Advanced- und Premium-Pläne beinhalten monatliche Wartungsstunden. Wir bieten auch eigenständige Support-Pakete an." },
           { "q": "Was, wenn ich nach dem Launch Änderungen brauche?", "a": "Wir bieten flexible Support-Optionen. Kleine Änderungen werden oft von den Wartungsstunden abgedeckt, grössere Updates können separat angeboten werden." }
