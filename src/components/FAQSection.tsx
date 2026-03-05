@@ -13,10 +13,10 @@ const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen:
   }, [isOpen]);
 
   return (
-    <div className="border-b border-neutral-border">
+    <div className="border-b border-white/10">
       <button onClick={toggle} className="w-full flex items-center justify-between py-5 text-left">
-        <span className="font-display text-[16px] text-main-teal pr-4">{q}</span>
-        <span className={`accordion-icon text-main-teal flex-shrink-0 ${isOpen ? 'open' : ''}`}>
+        <span className="font-display text-[16px] text-off-white pr-4">{q}</span>
+        <span className={`accordion-icon text-off-white flex-shrink-0 ${isOpen ? 'open' : ''}`}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 8l5 5 5-5" />
           </svg>
@@ -24,7 +24,7 @@ const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen:
       </button>
       <div className="accordion-content" style={{ height }}>
         <div ref={contentRef} className="pb-5">
-          <p className="text-main-teal/70 text-[15px] font-body leading-relaxed">{a}</p>
+          <p className="text-off-white/70 text-[15px] font-body leading-relaxed">{a}</p>
         </div>
       </div>
     </div>
@@ -37,14 +37,14 @@ const FAQSection = () => {
   const items = t('faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>;
 
   return (
-    <section id="faq" className="py-20 md:py-28 px-6">
+    <section id="faq" className="about-flow py-20 md:py-28 px-6">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal className="text-center mb-12">
-          <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('faq.title')}</h2>
+          <h2 className="font-body text-3xl md:text-4xl text-off-white">{t('faq.title')}</h2>
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="bg-neutral-card rounded-xl border border-neutral-border p-6 md:p-8">
+          <div className="dark-surface-card rounded-xl border border-white/10 p-6 md:p-8">
             {items.map((faq, i) => (
               <AccordionItem
                 key={i}
