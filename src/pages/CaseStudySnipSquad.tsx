@@ -38,7 +38,7 @@ const CaseStudySnipSquad = () => {
                 <img
                   src={snipSquad}
                   alt="Snip Squad website preview"
-                  className="w-full h-auto block"
+                  className="w-auto max-w-full h-auto block mx-auto"
                 />
               </div>
             </ScrollReveal>
