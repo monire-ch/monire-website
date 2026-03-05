@@ -50,7 +50,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="about-flow py-20 md:py-28 px-6">
+    <section id="faq" className="about-flow py-20 md:py-28 px-6 relative">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">FAQ</span>
@@ -97,6 +97,12 @@ const FAQSection = () => {
             </div>
           </div>
         </ScrollReveal>
+      </div>
+
+      <div className="absolute -bottom-px left-0 right-0 wave-mask">
+        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" fill="none" className="w-full block">
+          <path fill="currentColor" d="M0,48 C190,100 405,102 720,68 C1018,36 1240,32 1440,74 L1440,120 L0,120 Z" />
+        </svg>
       </div>
     </section>
   );
