@@ -61,7 +61,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
                 {navItems.map((item) => (
                   <li key={item.href}>
-                    <a href={item.href} className="text-off-white text-sm font-body hover:text-gold-text transition-colors">
+                    <a href={item.href} className="text-off-white text-base font-body hover:text-gold-text transition-colors">
                       {item.label}
                     </a>
                   </li>
@@ -72,15 +72,15 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.contact')}</p>
               <ul className="space-y-2">
                 <li>
-                  <a href="mailto:hello@monire.ch" className="text-gold-text text-sm font-body hover:text-gold-hover transition-colors">
+                  <a href="mailto:hello@monire.ch" className="text-gold-text text-base font-body hover:text-gold-hover transition-colors">
                     hello@monire.ch
                   </a>
                 </li>
                 <li>
-                  <span className="text-off-white text-sm font-body">Zürich, Switzerland</span>
+                  <span className="text-off-white text-base font-body">Zürich, Switzerland</span>
                 </li>
                 <li>
-                  <span className="text-off-white text-sm font-body">Serving clients worldwide</span>
+                  <span className="text-off-white text-base font-body">Serving clients worldwide</span>
                 </li>
               </ul>
             </div>
