@@ -58,11 +58,13 @@ const ServicesSection = () => {
                 <p className="text-off-white/70 font-body leading-relaxed text-[15px] mb-8">
                   {active.desc}
                 </p>
-                <div>
-                  <button className="btn-outline-gold text-sm">
-                    {t("services.cta", "Latest case study")}
-                  </button>
-                </div>
+                {active.badge === "Automation" && (
+                  <div>
+                    <button className="btn-outline-gold text-sm">
+                      {t("services.cta", "Latest case study")}
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
