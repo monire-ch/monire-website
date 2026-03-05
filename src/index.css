@@ -78,7 +78,7 @@
   }
   body {
     font-family: var(--font-body);
-    background: linear-gradient(160deg, #F4F1EB 0%, #ECEAE6 100%);
+    background: #EEEBE7;
     color: #011B22;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
