@@ -98,7 +98,7 @@ const PortfolioSection = () => {
                           <img
                             src={projectImages[i]}
                             alt={project.title}
-                            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02] ${i === 3 ? 'object-center' : 'object-top'}`}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                         </div>
