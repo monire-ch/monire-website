@@ -56,7 +56,7 @@ const PricingSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-end">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
           {plansWithFeatured.map((plan, i) => {
             const { prefix, amount } = splitPrice(plan.price);
             return (
