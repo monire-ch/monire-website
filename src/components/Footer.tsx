@@ -80,7 +80,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                   <span className="text-off-white text-base font-body">Zürich, Switzerland</span>
                 </li>
                 <li>
-                  <span className="text-off-white text-sm font-body">Serving clients worldwide</span>
+                  <span className="text-off-white text-base font-body">Serving clients worldwide</span>
                 </li>
               </ul>
             </div>
