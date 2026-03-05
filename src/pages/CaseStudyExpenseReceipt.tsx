@@ -29,9 +29,8 @@ const CaseStudyExpenseReceipt = () => {
 
           {/* Eyebrow */}
           <ScrollReveal>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 rounded-full bg-gold" />
-              <span className="text-xs font-body font-medium tracking-widest uppercase text-main-teal">
+            <div className="mb-8">
+              <span className="eyebrow-pill">
                 {t('caseStudy.eyebrow')}
               </span>
             </div>
