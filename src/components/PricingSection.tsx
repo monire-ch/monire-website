@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
-import { Sparkles } from 'lucide-react';
+
 
 const tabKeys = ['webDesign', 'automation'] as const;
 
