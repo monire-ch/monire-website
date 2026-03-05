@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import n8nPreview from '@/assets/n8n_preview.webp';
+import n8nPreview from '@/assets/n8n_preview.png';
 
 const CaseStudyExpenseReceipt = () => {
   const { t } = useTranslation();
