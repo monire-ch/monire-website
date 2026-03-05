@@ -66,10 +66,10 @@ const PortfolioSection = () => {
                   <button
                     key={cat}
                     onClick={() => scrollToProject(cat)}
-                    className={`w-full text-left px-4 py-3 rounded-lg font-body text-sm transition-all duration-200 ${
+                    className={`w-full text-left px-4 py-3 font-body text-sm transition-all duration-200 ${
                       isActive
-                        ? 'border border-gold/60 bg-white/5 text-off-white'
-                        : 'border border-transparent text-off-white/50 hover:text-off-white/80'
+                        ? 'rounded-full border border-gold/60 bg-white/5 text-off-white'
+                        : 'rounded-lg border border-transparent text-off-white hover:text-off-white/80'
                     }`}
                   >
                     {cat}
