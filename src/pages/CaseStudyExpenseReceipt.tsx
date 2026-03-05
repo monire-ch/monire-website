@@ -114,7 +114,7 @@ const CaseStudyExpenseReceipt = () => {
 
           {/* Metadata table */}
           <ScrollReveal>
-            <div className="border-t border-border">
+            <div>
               {[
                 { label: t('caseStudy.meta.client'), value: 'Brooksmiller & Partners AG' },
                 { label: t('caseStudy.meta.date'), value: 'August 2025' },
