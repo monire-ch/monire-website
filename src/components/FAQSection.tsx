@@ -50,7 +50,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="about-flow py-20 md:py-28 px-6 relative">
+    <section id="faq" className="about-flow py-20 md:py-36 pb-32 md:pb-44 px-6 relative">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">FAQ</span>
