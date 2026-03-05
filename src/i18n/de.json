@@ -20,30 +20,12 @@
     "title": "Alles, was Ihr Unternehmen braucht.",
     "titleAccent": "Website & mehr.",
     "items": [
-      {
-        "title": "10+ Jahre Erfahrung",
-        "desc": "Ein Jahrzehnt Erfahrung in der Erstellung von Websites, die für Unternehmen jeder Grösse Ergebnisse liefern."
-      },
-      {
-        "title": "KI, Google & Speed-optimiert",
-        "desc": "Jede Website wird mit modernster Optimierung für KI-Suche, Google-Rankings und blitzschnelle Ladezeiten erstellt."
-      },
-      {
-        "title": "5 Stunden Wartung",
-        "desc": "Monatliche Wartungsstunden inklusive, um Ihre Website sicher, aktuell und leistungsstark zu halten."
-      },
-      {
-        "title": "Direkte Zusammenarbeit",
-        "desc": "Keine Zwischenhändler. Arbeiten Sie direkt mit den Gründerinnen, die Ihre Website gestalten und entwickeln."
-      },
-      {
-        "title": "24/7 Zeitersparnis",
-        "desc": "Automatisierungslösungen, die rund um die Uhr arbeiten und Ihnen unzählige Stunden manueller Arbeit ersparen."
-      },
-      {
-        "title": "Einfache Aktualisierungen",
-        "desc": "Verwalten Sie Ihre Inhalte mühelos mit benutzerfreundlichen CMS-Lösungen, die in jedes Projekt integriert sind."
-      }
+      { "title": "10+ Jahre Erfahrung", "desc": "Ein Jahrzehnt Erfahrung in der Erstellung von Websites, die für Unternehmen jeder Grösse Ergebnisse liefern." },
+      { "title": "KI, Google & Speed-optimiert", "desc": "Jede Website wird mit modernster Optimierung für KI-Suche, Google-Rankings und blitzschnelle Ladezeiten erstellt." },
+      { "title": "5 Stunden Wartung", "desc": "Monatliche Wartungsstunden inklusive, um Ihre Website sicher, aktuell und leistungsstark zu halten." },
+      { "title": "Direkte Zusammenarbeit", "desc": "Keine Zwischenhändler. Arbeiten Sie direkt mit den Gründerinnen, die Ihre Website gestalten und entwickeln." },
+      { "title": "24/7 Zeitersparnis", "desc": "Automatisierungslösungen, die rund um die Uhr arbeiten und Ihnen unzählige Stunden manueller Arbeit ersparen." },
+      { "title": "Einfache Aktualisierungen", "desc": "Verwalten Sie Ihre Inhalte mühelos mit benutzerfreundlichen CMS-Lösungen, die in jedes Projekt integriert sind." }
     ]
   },
   "services": {
@@ -51,49 +33,20 @@
     "title": "Praktische Lösungen, die Ihr Unternehmen voranbringen",
     "cta": "Neueste Fallstudie",
     "items": [
-      {
-        "badge": "Design",
-        "title": "Webdesign",
-        "desc": "Wir gestalten Websites, die sich intuitiv und einfach navigieren lassen. Alles hat einen Zweck — nichts wird hinzugefügt, nur weil es \"cool aussieht\". Ihre Besucher sollen sich wohlfühlen und schnell finden, was sie brauchen."
-      },
-      {
-        "badge": "Entwicklung",
-        "title": "Webentwicklung",
-        "desc": "Wir entwickeln schnelle, zuverlässige Websites mit modernen Frameworks. Sauberer Code, responsive Layouts und Performance-Architektur sorgen dafür, dass Ihre Seite auf allen Geräten einwandfrei funktioniert."
-      },
-      {
-        "badge": "Migration",
-        "title": "Website-Migrationen",
-        "desc": "Ein Plattformwechsel muss nicht stressig sein. Wir übernehmen den gesamten Migrationsprozess — von der Inhaltsübertragung bis zur SEO-Erhaltung — damit Sie upgraden können, ohne das Aufgebaute zu verlieren."
-      },
-      {
-        "badge": "SEO",
-        "title": "SEO & Analytics (Grundlagen)",
-        "desc": "Wir richten die Grundlagen ein, damit Ihre Website gefunden wird. Von technischem SEO und Meta-Tags bis zu Google Analytics und Search Console — wir schaffen die Basis für organisches Wachstum."
-      },
-      {
-        "badge": "Automatisierung",
-        "title": "KI-Automatisierungen & Workflows",
-        "desc": "Einfache, praktische Automatisierungen, die repetitive Aufgaben erledigen und Ihre Zeit freisetzen. Wir bauen kleine, zuverlässige Workflows mit Tools wie n8n, um Dokumente zu sortieren, Informationen zu verarbeiten und Daten zu organisieren."
-      }
+      { "badge": "Design", "title": "Webdesign", "desc": "Wir gestalten Websites, die sich intuitiv und einfach navigieren lassen. Alles hat einen Zweck — nichts wird hinzugefügt, nur weil es \"cool aussieht\". Ihre Besucher sollen sich wohlfühlen und schnell finden, was sie brauchen." },
+      { "badge": "Entwicklung", "title": "Webentwicklung", "desc": "Wir entwickeln schnelle, zuverlässige Websites mit modernen Frameworks. Sauberer Code, responsive Layouts und Performance-Architektur sorgen dafür, dass Ihre Seite auf allen Geräten einwandfrei funktioniert." },
+      { "badge": "Migration", "title": "Website-Migrationen", "desc": "Ein Plattformwechsel muss nicht stressig sein. Wir übernehmen den gesamten Migrationsprozess — von der Inhaltsübertragung bis zur SEO-Erhaltung — damit Sie upgraden können, ohne das Aufgebaute zu verlieren." },
+      { "badge": "SEO", "title": "SEO & Analytics (Grundlagen)", "desc": "Wir richten die Grundlagen ein, damit Ihre Website gefunden wird. Von technischem SEO und Meta-Tags bis zu Google Analytics und Search Console — wir schaffen die Basis für organisches Wachstum." },
+      { "badge": "Automatisierung", "title": "KI-Automatisierungen & Workflows", "desc": "Einfache, praktische Automatisierungen, die repetitive Aufgaben erledigen und Ihre Zeit freisetzen. Wir bauen kleine, zuverlässige Workflows mit Tools wie n8n, um Dokumente zu sortieren, Informationen zu verarbeiten und Daten zu organisieren." }
     ]
   },
   "about": {
     "eyebrow": "Über uns",
     "title": "2 Gründerinnen, 1 Vision",
     "stories": [
-      {
-        "title": "Unsere Geschichte",
-        "text": "Wir haben uns durch unsere gemeinsame Leidenschaft für die Schaffung bedeutungsvoller digitaler Erlebnisse kennengelernt. Nach Jahren unabhängiger Arbeit in Webdesign und Automatisierung haben wir unsere Kräfte gebündelt, um kleinen Unternehmen eine Komplettlösung für ihr Online-Wachstum anzubieten."
-      },
-      {
-        "title": "Warum ein Duo wählen?",
-        "text": "Wenn Sie mit uns arbeiten, erhalten Sie die Aufmerksamkeit und Sorgfalt einer Boutique-Agentur mit der Expertise erfahrener Profis. Keine Management-Ebenen, kein Outsourcing — nur zwei engagierte Gründerinnen, die in Ihren Erfolg investiert sind."
-      },
-      {
-        "title": "Soziales Engagement",
-        "text": "Für jedes bezahlte Projekt erstellen wir eine kostenlose oder stark vergünstigte Website für eine Wohltätigkeitsorganisation, gemeinnützige Organisation oder Gemeinschaftsinitiative."
-      }
+      { "title": "Unsere Geschichte", "text": "Wir haben uns durch unsere gemeinsame Leidenschaft für die Schaffung bedeutungsvoller digitaler Erlebnisse kennengelernt. Nach Jahren unabhängiger Arbeit in Webdesign und Automatisierung haben wir unsere Kräfte gebündelt, um kleinen Unternehmen eine Komplettlösung für ihr Online-Wachstum anzubieten." },
+      { "title": "Warum ein Duo wählen?", "text": "Wenn Sie mit uns arbeiten, erhalten Sie die Aufmerksamkeit und Sorgfalt einer Boutique-Agentur mit der Expertise erfahrener Profis. Keine Management-Ebenen, kein Outsourcing — nur zwei engagierte Gründerinnen, die in Ihren Erfolg investiert sind." },
+      { "title": "Soziales Engagement", "text": "Für jedes bezahlte Projekt erstellen wir eine kostenlose oder stark vergünstigte Website für eine Wohltätigkeitsorganisation, gemeinnützige Organisation oder Gemeinschaftsinitiative." }
     ],
     "teamTitle": "Die Gesichter hinter der Arbeit",
     "team": [
@@ -106,10 +59,11 @@
     "title": "Zwei Leistungen, ein Ziel:",
     "titleAccent": "Ihr Unternehmen wachsen lassen.",
     "tabs": {
-      "webDesign": "Webdesign",
-      "automation": "Automatisierung"
+      "webDesign": "Webdesign & Entwicklung",
+      "automation": "KI-Automatisierungen"
     },
     "getStarted": "Loslegen",
+    "mostPopular": "Beliebteste",
     "custom": {
       "title": "Brauchen Sie etwas Individuelleres?",
       "desc": "Jedes Unternehmen ist einzigartig. Wenn unsere Pakete nicht ganz passen, erstellen wir eine massgeschneiderte Lösung für Ihre spezifischen Bedürfnisse und Ihr Budget."
@@ -119,75 +73,40 @@
         {
           "name": "Starter",
           "price": "from CHF3'500",
-          "features": [
-            "Bis zu 5 Seiten",
-            "Responsives Design",
-            "Basis-SEO-Setup",
-            "Kontaktformular",
-            "CMS-Integration",
-            "2 Revisionsrunden"
-          ]
+          "desc": "Ideal für: Neue Unternehmen, Coaches, Freiberufler, kleine Beratungen.",
+          "features": ["Bis zu 5 Seiten", "Sauberer, professioneller visueller Stil", "Mobiloptimiert + schnelles Laden", "Kontaktformular", "Basis-CMS für einfache Text-/Bildaktualisierungen", "Grundlegendes On-Page-SEO (Meta-Tags, Sitemap, suchfreundliche Struktur)"]
         },
         {
           "name": "Advanced",
           "price": "from CHF6'000",
-          "features": [
-            "Bis zu 10 Seiten",
-            "Individuelle Animationen",
-            "Erweitertes SEO",
-            "Blog-Einrichtung",
-            "Analytics-Integration",
-            "CMS mit Schulung",
-            "3 Revisionsrunden",
-            "5h monatliche Wartung"
-          ]
+          "desc": "Ideal für KMUs, Agenturen, Boutique-Firmen, B2B-Dienstleistungen.",
+          "features": ["Bis zu 10 Seiten", "Individuelles visuelles Design** + dezente Animationen", "Flexiblere CMS-Strukturen (Blogs, Fallstudien, Produkt-/Dienstleistungslisten)", "SEO-Optimierung mit Fokus auf Ranking (nicht nur Einrichtung)", "Google Analytics mit Event-Tracking", "Integration von 1-2 Drittanbieter-Tools (Buchungssystem, CRM-Formular usw.)", "Unterstützung für 2 Sprachen"]
         },
         {
           "name": "Premium",
           "price": "from CHF9'000",
-          "features": [
-            "Unbegrenzte Seiten",
-            "E-Commerce-fähig",
-            "Komplettes Branding-Paket",
-            "Prioritäts-Support",
-            "Erweiterte Integrationen",
-            "Quartalsweise Reviews"
-          ]
+          "desc": "Ideal für: wachsende Firmen, etablierte Marken, Unternehmen mit Workflow- & Integrationsbedarf.",
+          "features": ["Unbegrenzte Seiten", "Vollständige UX + UI-Layoutplanung", "Erweitertes CMS", "Integrationen mit Tools wie: Newsletter, Buchung, Kalender, Live-Chat, Kundenportal", "Umfassende SEO-Strategie", "Mehrsprachige Unterstützung"]
         }
       ],
       "automation": [
         {
           "name": "Starter",
           "price": "from CHF1'500",
-          "features": [
-            "Bis zu 3 Automatisierungen",
-            "Basis-Integrationen",
-            "E-Mail-Benachrichtigungen",
-            "Setup & Testing"
-          ]
+          "desc": "Perfekt für: kleine Teams, die bei repetitiven Aufgaben Zeit sparen möchten.",
+          "features": ["Bis zu 3 Automatisierungen", "Basis-Integrationen", "E-Mail-Benachrichtigungen", "Setup & Testing"]
         },
         {
           "name": "Advanced",
           "price": "from CHF3'000",
-          "features": [
-            "Bis zu 8 Automatisierungen",
-            "Komplexe Workflows",
-            "CRM-Integration",
-            "Individuelle Dashboards",
-            "Schulungssitzung",
-            "Monatliche Optimierung"
-          ]
+          "desc": "Ideal für: wachsende Unternehmen, die vernetzte Workflows benötigen.",
+          "features": ["Bis zu 8 Automatisierungen", "Komplexe Workflows", "CRM-Integration", "Individuelle Dashboards", "Schulungssitzung", "Monatliche Optimierung"]
         },
         {
           "name": "Premium",
           "price": "from CHF5'000",
-          "features": [
-            "Unbegrenzte Automatisierungen",
-            "KI-gestützte Workflows",
-            "Komplettes System-Audit",
-            "Dedizierter Support",
-            "Quartalsweise Reviews"
-          ]
+          "desc": "Ideal für: Unternehmen, die Abläufe vollständig automatisieren möchten.",
+          "features": ["Unbegrenzte Automatisierungen", "KI-gestützte Workflows", "Komplettes System-Audit", "Dedizierter Support", "Quartalsweise Reviews"]
         }
       ]
     }
@@ -197,50 +116,20 @@
     "title": "Unsere Arbeiten",
     "categories": ["Alle", "Webdesign", "Automatisierung", "Branding", "E-Com", "Individuell"],
     "projects": [
-      {
-        "title": "Snip Squad",
-        "category": "Webdesign",
-        "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde."
-      },
-      {
-        "title": "SystemicAlly",
-        "category": "Webdesign",
-        "desc": "Plattform für Führungskräfteentwicklung mit einem sauberen, professionellen Design, das Vertrauen und Expertise betont."
-      },
-      {
-        "title": "Towarowa 41",
-        "category": "Webdesign",
-        "desc": "Ein elegantes Luxus-Apartment-Listing mit redaktioneller Fotografie und edler Typografie."
-      }
+      { "title": "Snip Squad", "category": "Webdesign", "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde." },
+      { "title": "SystemicAlly", "category": "Webdesign", "desc": "Plattform für Führungskräfteentwicklung mit einem sauberen, professionellen Design, das Vertrauen und Expertise betont." },
+      { "title": "Towarowa 41", "category": "Webdesign", "desc": "Ein elegantes Luxus-Apartment-Listing mit redaktioneller Fotografie und edler Typografie." }
     ]
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
     "items": [
-      {
-        "q": "Wie lange dauert es, eine Website zu erstellen?",
-        "a": "In der Regel 4–8 Wochen, je nach Projektumfang. Wir geben Ihnen einen klaren Zeitplan während unseres Erstgesprächs."
-      },
-      {
-        "q": "Muss ich Inhalte bereitstellen?",
-        "a": "Es hilft, wenn Sie Inhalte bereit haben, aber wir können Sie durch den Prozess begleiten und bei Bedarf beim Texten helfen."
-      },
-      {
-        "q": "Auf welcher Plattform bauen Sie?",
-        "a": "Wir verwenden hauptsächlich moderne Frameworks wie React und Next.js sowie Headless-CMS-Lösungen. Wir wählen den besten Stack für Ihre spezifischen Anforderungen."
-      },
-      {
-        "q": "Kann ich die Website selbst aktualisieren?",
-        "a": "Absolut! Jede Website verfügt über ein benutzerfreundliches CMS. Wir bieten auch eine Schulung an, damit Sie sich bei Änderungen sicher fühlen."
-      },
-      {
-        "q": "Bieten Sie laufenden Support an?",
-        "a": "Ja, unsere Advanced- und Premium-Pläne beinhalten monatliche Wartungsstunden. Wir bieten auch eigenständige Support-Pakete an."
-      },
-      {
-        "q": "Was, wenn ich nach dem Launch Änderungen brauche?",
-        "a": "Wir bieten flexible Support-Optionen. Kleine Änderungen werden oft von den Wartungsstunden abgedeckt, grössere Updates können separat angeboten werden."
-      }
+      { "q": "Wie lange dauert es, eine Website zu erstellen?", "a": "In der Regel 4–8 Wochen, je nach Projektumfang. Wir geben Ihnen einen klaren Zeitplan während unseres Erstgesprächs." },
+      { "q": "Muss ich Inhalte bereitstellen?", "a": "Es hilft, wenn Sie Inhalte bereit haben, aber wir können Sie durch den Prozess begleiten und bei Bedarf beim Texten helfen." },
+      { "q": "Auf welcher Plattform bauen Sie?", "a": "Wir verwenden hauptsächlich moderne Frameworks wie React und Next.js sowie Headless-CMS-Lösungen. Wir wählen den besten Stack für Ihre spezifischen Anforderungen." },
+      { "q": "Kann ich die Website selbst aktualisieren?", "a": "Absolut! Jede Website verfügt über ein benutzerfreundliches CMS. Wir bieten auch eine Schulung an, damit Sie sich bei Änderungen sicher fühlen." },
+      { "q": "Bieten Sie laufenden Support an?", "a": "Ja, unsere Advanced- und Premium-Pläne beinhalten monatliche Wartungsstunden. Wir bieten auch eigenständige Support-Pakete an." },
+      { "q": "Was, wenn ich nach dem Launch Änderungen brauche?", "a": "Wir bieten flexible Support-Optionen. Kleine Änderungen werden oft von den Wartungsstunden abgedeckt, grössere Updates können separat angeboten werden." }
     ]
   },
   "cta": {

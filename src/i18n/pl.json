@@ -20,30 +20,12 @@
     "title": "Wszystko, czego potrzebuje Twój biznes.",
     "titleAccent": "Strona & więcej.",
     "items": [
-      {
-        "title": "10+ lat doświadczenia",
-        "desc": "Dekada doświadczenia w tworzeniu stron internetowych, które przynoszą rezultaty firmom każdej wielkości."
-      },
-      {
-        "title": "Optymalizacja AI, Google & szybkości",
-        "desc": "Każda strona jest budowana z najnowocześniejszą optymalizacją pod kątem wyszukiwarek AI, rankingów Google i błyskawicznego ładowania."
-      },
-      {
-        "title": "5 godzin utrzymania",
-        "desc": "Miesięczne godziny utrzymania w cenie, aby Twoja strona była bezpieczna, aktualna i wydajna."
-      },
-      {
-        "title": "Bezpośrednia współpraca",
-        "desc": "Bez pośredników. Pracujesz bezpośrednio z założycielkami, które projektują i budują Twoją stronę."
-      },
-      {
-        "title": "Oszczędność czasu 24/7",
-        "desc": "Rozwiązania automatyzacji, które działają przez całą dobę, oszczędzając niezliczone godziny pracy ręcznej."
-      },
-      {
-        "title": "Łatwe aktualizacje",
-        "desc": "Zarządzaj treścią bez wysiłku dzięki przyjaznemu CMS wbudowanemu w każdy projekt."
-      }
+      { "title": "10+ lat doświadczenia", "desc": "Dekada doświadczenia w tworzeniu stron internetowych, które przynoszą rezultaty firmom każdej wielkości." },
+      { "title": "Optymalizacja AI, Google & szybkości", "desc": "Każda strona jest budowana z najnowocześniejszą optymalizacją pod kątem wyszukiwarek AI, rankingów Google i błyskawicznego ładowania." },
+      { "title": "5 godzin utrzymania", "desc": "Miesięczne godziny utrzymania w cenie, aby Twoja strona była bezpieczna, aktualna i wydajna." },
+      { "title": "Bezpośrednia współpraca", "desc": "Bez pośredników. Pracujesz bezpośrednio z założycielkami, które projektują i budują Twoją stronę." },
+      { "title": "Oszczędność czasu 24/7", "desc": "Rozwiązania automatyzacji, które działają przez całą dobę, oszczędzając niezliczone godziny pracy ręcznej." },
+      { "title": "Łatwe aktualizacje", "desc": "Zarządzaj treścią bez wysiłku dzięki przyjaznemu CMS wbudowanemu w każdy projekt." }
     ]
   },
   "services": {
@@ -51,49 +33,20 @@
     "title": "Praktyczne rozwiązania, które rozwijają Twój biznes",
     "cta": "Najnowsze case study",
     "items": [
-      {
-        "badge": "Design",
-        "title": "Projektowanie stron",
-        "desc": "Projektujemy strony, które są intuicyjne i proste w nawigacji. Wszystko ma swój cel — nic nie jest dodawane tylko dlatego, że \"fajnie wygląda\". Chcemy, aby Twoi odwiedzający czuli się swobodnie i szybko znajdowali to, czego potrzebują."
-      },
-      {
-        "badge": "Rozwój",
-        "title": "Tworzenie stron",
-        "desc": "Budujemy szybkie, niezawodne strony z użyciem nowoczesnych frameworków. Czysty kod, responsywne layouty i architektura nastawiona na wydajność zapewniają bezproblemowe działanie na wszystkich urządzeniach."
-      },
-      {
-        "badge": "Migracja",
-        "title": "Migracje stron",
-        "desc": "Zmiana platformy nie musi być stresująca. Zajmujemy się całym procesem migracji — od przeniesienia treści po zachowanie SEO — abyś mógł dokonać aktualizacji bez utraty tego, co zbudowałeś."
-      },
-      {
-        "badge": "SEO",
-        "title": "SEO i analityka (podstawy)",
-        "desc": "Konfigurujemy niezbędne elementy, aby Twoja strona była widoczna. Od technicznego SEO i meta tagów po Google Analytics i Search Console — tworzymy fundament do organicznego wzrostu."
-      },
-      {
-        "badge": "Automatyzacja",
-        "title": "Automatyzacje AI i workflow",
-        "desc": "Proste, praktyczne automatyzacje obsługujące powtarzalne zadania i uwalniające Twój czas. Budujemy małe, niezawodne workflow z użyciem narzędzi jak n8n do sortowania dokumentów, przetwarzania informacji i organizacji danych."
-      }
+      { "badge": "Design", "title": "Projektowanie stron", "desc": "Projektujemy strony, które są intuicyjne i proste w nawigacji. Wszystko ma swój cel — nic nie jest dodawane tylko dlatego, że \"fajnie wygląda\". Chcemy, aby Twoi odwiedzający czuli się swobodnie i szybko znajdowali to, czego potrzebują." },
+      { "badge": "Rozwój", "title": "Tworzenie stron", "desc": "Budujemy szybkie, niezawodne strony z użyciem nowoczesnych frameworków. Czysty kod, responsywne layouty i architektura nastawiona na wydajność zapewniają bezproblemowe działanie na wszystkich urządzeniach." },
+      { "badge": "Migracja", "title": "Migracje stron", "desc": "Zmiana platformy nie musi być stresująca. Zajmujemy się całym procesem migracji — od przeniesienia treści po zachowanie SEO — abyś mógł dokonać aktualizacji bez utraty tego, co zbudowałeś." },
+      { "badge": "SEO", "title": "SEO i analityka (podstawy)", "desc": "Konfigurujemy niezbędne elementy, aby Twoja strona była widoczna. Od technicznego SEO i meta tagów po Google Analytics i Search Console — tworzymy fundament do organicznego wzrostu." },
+      { "badge": "Automatyzacja", "title": "Automatyzacje AI i workflow", "desc": "Proste, praktyczne automatyzacje obsługujące powtarzalne zadania i uwalniające Twój czas. Budujemy małe, niezawodne workflow z użyciem narzędzi jak n8n do sortowania dokumentów, przetwarzania informacji i organizacji danych." }
     ]
   },
   "about": {
     "eyebrow": "O nas",
     "title": "2 Założycielki, 1 Wizja",
     "stories": [
-      {
-        "title": "Nasza historia",
-        "text": "Poznałyśmy się dzięki wspólnej pasji do tworzenia znaczących doświadczeń cyfrowych. Po latach niezależnej pracy w webdesignie i automatyzacji połączyłyśmy siły, aby oferować kompleksowe rozwiązania dla małych firm chcących rozwijać się online."
-      },
-      {
-        "title": "Dlaczego duo?",
-        "text": "Pracując z nami, otrzymujesz uwagę i troskę butikowej agencji z doświadczeniem profesjonalistek. Żadnych warstw zarządzania, żadnego outsourcingu — tylko dwie zaangażowane założycielki, którym zależy na Twoim sukcesie."
-      },
-      {
-        "title": "Działalność społeczna",
-        "text": "Za każdy płatny projekt tworzymy darmową lub mocno przecenioną stronę dla organizacji charytatywnej, non-profit lub inicjatywy społecznej."
-      }
+      { "title": "Nasza historia", "text": "Poznałyśmy się dzięki wspólnej pasji do tworzenia znaczących doświadczeń cyfrowych. Po latach niezależnej pracy w webdesignie i automatyzacji połączyłyśmy siły, aby oferować kompleksowe rozwiązania dla małych firm chcących rozwijać się online." },
+      { "title": "Dlaczego duo?", "text": "Pracując z nami, otrzymujesz uwagę i troskę butikowej agencji z doświadczeniem profesjonalistek. Żadnych warstw zarządzania, żadnego outsourcingu — tylko dwie zaangażowane założycielki, którym zależy na Twoim sukcesie." },
+      { "title": "Działalność społeczna", "text": "Za każdy płatny projekt tworzymy darmową lub mocno przecenioną stronę dla organizacji charytatywnej, non-profit lub inicjatywy społecznej." }
     ],
     "teamTitle": "Twarze za naszą pracą",
     "team": [
@@ -106,10 +59,11 @@
     "title": "Dwie usługi, jeden cel:",
     "titleAccent": "Rozwój Twojego biznesu.",
     "tabs": {
-      "webDesign": "Projektowanie stron",
-      "automation": "Automatyzacja"
+      "webDesign": "Projektowanie i tworzenie stron",
+      "automation": "Automatyzacje AI"
     },
     "getStarted": "Rozpocznij",
+    "mostPopular": "Najpopularniejszy",
     "custom": {
       "title": "Potrzebujesz czegoś bardziej indywidualnego?",
       "desc": "Każdy biznes jest wyjątkowy. Jeśli nasze pakiety nie pasują idealnie, stworzymy rozwiązanie szyte na miarę Twoich potrzeb i budżetu."
@@ -119,70 +73,40 @@
         {
           "name": "Starter",
           "price": "from CHF3'500",
-          "features": [
-            "Do 5 stron",
-            "Responsywny design",
-            "Podstawowe SEO",
-            "Formularz kontaktowy",
-            "Integracja CMS",
-            "2 rundy poprawek"
-          ]
+          "desc": "Idealne dla: nowych firm, coachów, freelancerów, małych konsultingów.",
+          "features": ["Do 5 stron", "Czysty, profesjonalny styl wizualny", "Responsywność + szybkie ładowanie", "Formularz kontaktowy", "Podstawowy CMS do łatwej edycji tekstu/obrazów", "Podstawowe SEO on-page (meta tagi, mapa strony, przyjazna struktura)"]
         },
         {
           "name": "Advanced",
           "price": "from CHF6'000",
-          "features": [
-            "Do 10 stron",
-            "Indywidualne animacje",
-            "Zaawansowane SEO",
-            "Konfiguracja bloga",
-            "Integracja analityki",
-            "CMS ze szkoleniem",
-            "3 rundy poprawek",
-            "5h miesięcznego utrzymania"
-          ]
+          "desc": "Idealne dla MŚP, agencji, firm butikowych, usług B2B.",
+          "features": ["Do 10 stron", "Indywidualny design** + subtelne animacje", "Elastyczne struktury CMS (blogi, case studies, listy produktów/usług)", "Optymalizacja SEO pod ranking (nie tylko konfiguracja)", "Google Analytics z śledzeniem zdarzeń", "Integracja 1-2 narzędzi zewnętrznych (system rezerwacji, formularz CRM itp.)", "Obsługa 2 języków"]
         },
         {
           "name": "Premium",
           "price": "from CHF9'000",
-          "features": [
-            "Nielimitowane strony",
-            "Gotowość na e-commerce",
-            "Pełny pakiet brandingowy",
-            "Priorytetowe wsparcie",
-            "Zaawansowane integracje",
-            "Przeglądy kwartalne"
-          ]
+          "desc": "Idealne dla: rozwijających się firm, uznanych marek, firm potrzebujących workflow i integracji.",
+          "features": ["Nielimitowane strony", "Pełne planowanie UX + UI", "Zaawansowany CMS", "Integracje z narzędziami: Newsletter, rezerwacje, kalendarz, live chat, portal klienta", "Kompleksowa strategia SEO", "Obsługa wielu języków"]
         }
       ],
       "automation": [
         {
           "name": "Starter",
           "price": "from CHF1'500",
+          "desc": "Idealne dla: małych zespołów chcących zaoszczędzić czas na powtarzalnych zadaniach.",
           "features": ["Do 3 automatyzacji", "Podstawowe integracje", "Powiadomienia e-mail", "Konfiguracja i testy"]
         },
         {
           "name": "Advanced",
           "price": "from CHF3'000",
-          "features": [
-            "Do 8 automatyzacji",
-            "Złożone workflow",
-            "Integracja CRM",
-            "Indywidualne dashboardy",
-            "Sesja szkoleniowa",
-            "Miesięczna optymalizacja"
-          ]
+          "desc": "Idealne dla: rozwijających się firm potrzebujących połączonych workflow.",
+          "features": ["Do 8 automatyzacji", "Złożone workflow", "Integracja CRM", "Indywidualne dashboardy", "Sesja szkoleniowa", "Miesięczna optymalizacja"]
         },
         {
           "name": "Premium",
           "price": "from CHF5'000",
-          "features": [
-            "Nielimitowane automatyzacje",
-            "Workflow z AI",
-            "Pełny audyt systemu",
-            "Dedykowane wsparcie",
-            "Przeglądy kwartalne"
-          ]
+          "desc": "Idealne dla: firm gotowych na pełną automatyzację operacji.",
+          "features": ["Nielimitowane automatyzacje", "Workflow z AI", "Pełny audyt systemu", "Dedykowane wsparcie", "Przeglądy kwartalne"]
         }
       ]
     }
@@ -192,50 +116,20 @@
     "title": "Nasze prace",
     "categories": ["Wszystkie", "Webdesign", "Automatyzacja", "Branding", "E-Com", "Indywidualne"],
     "projects": [
-      {
-        "title": "Snip Squad",
-        "category": "Webdesign",
-        "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt."
-      },
-      {
-        "title": "SystemicAlly",
-        "category": "Webdesign",
-        "desc": "Platforma rozwoju przywództwa korporacyjnego z czystym, profesjonalnym designem podkreślającym zaufanie i ekspertyzę."
-      },
-      {
-        "title": "Towarowa 41",
-        "category": "Webdesign",
-        "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią."
-      }
+      { "title": "Snip Squad", "category": "Webdesign", "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt." },
+      { "title": "SystemicAlly", "category": "Webdesign", "desc": "Platforma rozwoju przywództwa korporacyjnego z czystym, profesjonalnym designem podkreślającym zaufanie i ekspertyzę." },
+      { "title": "Towarowa 41", "category": "Webdesign", "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią." }
     ]
   },
   "faq": {
     "title": "Często zadawane pytania",
     "items": [
-      {
-        "q": "Jak długo trwa budowa strony?",
-        "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji."
-      },
-      {
-        "q": "Czy muszę dostarczyć treści?",
-        "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem."
-      },
-      {
-        "q": "Na jakiej platformie budujecie?",
-        "a": "Korzystamy głównie z nowoczesnych frameworków jak React i Next.js oraz rozwiązań headless CMS. Wybieramy najlepszy stack dla Twoich potrzeb."
-      },
-      {
-        "q": "Czy mogę sam aktualizować stronę?",
-        "a": "Oczywiście! Każda strona ma przyjazny CMS. Zapewniamy również szkolenie, abyś czuł się pewnie wprowadzając zmiany."
-      },
-      {
-        "q": "Czy oferujecie bieżące wsparcie?",
-        "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia."
-      },
-      {
-        "q": "Co jeśli potrzebuję zmian po uruchomieniu?",
-        "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno."
-      }
+      { "q": "Jak długo trwa budowa strony?", "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji." },
+      { "q": "Czy muszę dostarczyć treści?", "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem." },
+      { "q": "Na jakiej platformie budujecie?", "a": "Korzystamy głównie z nowoczesnych frameworków jak React i Next.js oraz rozwiązań headless CMS. Wybieramy najlepszy stack dla Twoich potrzeb." },
+      { "q": "Czy mogę sam aktualizować stronę?", "a": "Oczywiście! Każda strona ma przyjazny CMS. Zapewniamy również szkolenie, abyś czuł się pewnie wprowadzając zmiany." },
+      { "q": "Czy oferujecie bieżące wsparcie?", "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia." },
+      { "q": "Co jeśli potrzebuję zmian po uruchomieniu?", "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno." }
     ]
   },
   "cta": {
