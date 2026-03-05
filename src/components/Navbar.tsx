@@ -13,11 +13,22 @@ const languages = [
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('#');
 
+  const getHref = (hash: string) => isHome ? hash : `/${hash}`;
+
+  const navLinks = [
+    { label: t('nav.home'), href: '#' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.services'), href: '#services' },
+    { label: t('nav.pricing'), href: '#pricing' },
+    { label: t('nav.ourWork'), href: '#portfolio' },
+  ];
   const navLinks = [
     { label: t('nav.home'), href: '#' },
     { label: t('nav.about'), href: '#about' },
