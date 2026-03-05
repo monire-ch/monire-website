@@ -27,7 +27,7 @@ const PricingSection = () => {
         <ScrollReveal className="text-center mb-12">
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('pricing.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-off-white">
-            {t('pricing.title')} <em className="italic font-tertiary text-gold-text">{t('pricing.titleAccent')}</em>
+            {t('pricing.title')} <em className="italic font-tertiary text-off-white">{t('pricing.titleAccent')}</em>
           </h2>
         </ScrollReveal>
 
