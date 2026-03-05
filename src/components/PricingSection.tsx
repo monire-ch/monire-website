@@ -95,7 +95,7 @@ const PricingSection = () => {
                       </div>
                     )}
                     <div
-                      className={`rounded-xl p-8 flex flex-col text-center ${
+                      className={`rounded-xl p-8 flex flex-col ${
                         plan.featured
                           ? 'bg-off-white text-deep-ink md:py-12'
                           : 'dark-surface-card border border-off-white/10'
