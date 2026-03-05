@@ -89,26 +89,13 @@
           "features": ["Unbegrenzte Seiten", "Vollständige UX + UI-Layoutplanung", "Erweitertes CMS", "Integrationen mit Tools wie: Newsletter, Buchung, Kalender, Live-Chat, Kundenportal", "Umfassende SEO-Strategie", "Mehrsprachige Unterstützung"]
         }
       ],
-      "automation": [
-        {
-          "name": "Starter",
-          "price": "from CHF1'500",
-          "desc": "Perfekt für: kleine Teams, die bei repetitiven Aufgaben Zeit sparen möchten.",
-          "features": ["Bis zu 3 Automatisierungen", "Basis-Integrationen", "E-Mail-Benachrichtigungen", "Setup & Testing"]
-        },
-        {
-          "name": "Advanced",
-          "price": "from CHF3'000",
-          "desc": "Ideal für: wachsende Unternehmen, die vernetzte Workflows benötigen.",
-          "features": ["Bis zu 8 Automatisierungen", "Komplexe Workflows", "CRM-Integration", "Individuelle Dashboards", "Schulungssitzung", "Monatliche Optimierung"]
-        },
-        {
-          "name": "Premium",
-          "price": "from CHF5'000",
-          "desc": "Ideal für: Unternehmen, die Abläufe vollständig automatisieren möchten.",
-          "features": ["Unbegrenzte Automatisierungen", "KI-gestützte Workflows", "Komplettes System-Audit", "Dedizierter Support", "Quartalsweise Reviews"]
-        }
-      ]
+      "automation": []
+    },
+    "automationBlock": {
+      "title": "KI-Automatisierungen & Workflow-Systeme",
+      "desc": "Wir entwickeln massgeschneiderte Automatisierungssysteme, die manuelle, repetitive Arbeit reduzieren und die Tools, die Sie bereits nutzen, nahtlos verbinden. Die Preisgestaltung wird individuell nach einem kurzen Kennenlerngespräch festgelegt.",
+      "cta": "Loslegen",
+      "caseStudy": "Neueste Fallstudie"
     }
   },
   "portfolio": {
