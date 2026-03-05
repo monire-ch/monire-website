@@ -14,7 +14,7 @@ const CaseStudySnipSquad = () => {
     <>
       <Navbar />
       <main className="bg-background min-h-screen pt-36 md:pt-44 pb-0">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <a
               href="/#portfolio"
