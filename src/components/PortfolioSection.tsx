@@ -19,8 +19,11 @@ const PortfolioSection = () => {
     title: string; category: string; desc: string; link: string;
   }>;
 
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
+    loop: false,
     dragFree: false,
     align: 'center',
   });
@@ -28,6 +31,8 @@ const PortfolioSection = () => {
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   useEffect(() => {
@@ -106,14 +111,18 @@ const PortfolioSection = () => {
               <div className="flex items-center gap-3 mt-6">
                 <button
                   onClick={scrollPrev}
-                  className="w-11 h-11 rounded-full bg-main-teal/10 flex items-center justify-center text-main-teal hover:bg-main-teal hover:text-off-white transition-all duration-200"
+                  disabled={!canScrollPrev}
+                  className="w-11 h-11 rounded-full flex items-center justify-center text-off-white transition-all duration-200 disabled:cursor-not-allowed"
+                  style={{ backgroundColor: canScrollPrev ? '#0b3d4a' : '#8DA2A6' }}
                   aria-label="Previous project"
                 >
                   <ArrowLeft className="w-4 h-4" />
                 </button>
                 <button
                   onClick={scrollNext}
-                  className="w-11 h-11 rounded-full bg-main-teal/10 flex items-center justify-center text-main-teal hover:bg-main-teal hover:text-off-white transition-all duration-200"
+                  disabled={!canScrollNext}
+                  className="w-11 h-11 rounded-full flex items-center justify-center text-off-white transition-all duration-200 disabled:cursor-not-allowed"
+                  style={{ backgroundColor: canScrollNext ? '#0b3d4a' : '#8DA2A6' }}
                   aria-label="Next project"
                 >
                   <ArrowRight className="w-4 h-4" />
