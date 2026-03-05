@@ -170,22 +170,25 @@
   "portfolio": {
     "eyebrow": "Portfolio",
     "title": "Our Work",
-    "categories": ["All", "Web Design", "Automation", "Branding", "E-Com", "Custom"],
+    "categories": ["Veterinary", "Consulting", "Real Estate", "AI Automation"],
     "projects": [
       {
         "title": "Snip Squad",
-        "category": "Web Design",
-        "desc": "A vibrant veterinary clinic website designed to be warm, approachable, and easy to navigate for pet owners."
+        "category": "Veterinary",
+        "desc": "A vibrant veterinary clinic website designed to be warm, approachable, and easy to navigate for pet owners.",
+        "link": "/case-studies/snip-squad"
       },
       {
         "title": "SystemicAlly",
-        "category": "Web Design",
-        "desc": "Corporate leadership development platform with a clean, professional design emphasizing trust and expertise."
+        "category": "Consulting",
+        "desc": "Corporate leadership development platform with a clean, professional design emphasizing trust and expertise.",
+        "link": "/case-studies/systemically"
       },
       {
         "title": "Towarowa 41",
-        "category": "Web Design",
-        "desc": "An elegant luxury apartment listing with editorial photography and refined typography."
+        "category": "Real Estate",
+        "desc": "An elegant luxury apartment listing with editorial photography and refined typography.",
+        "link": "/case-studies/towarowa"
       }
     ]
   },

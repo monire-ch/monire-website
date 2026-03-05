@@ -101,11 +101,11 @@
   "portfolio": {
     "eyebrow": "Portfolio",
     "title": "Unsere Arbeiten",
-    "categories": ["Alle", "Webdesign", "Automatisierung", "Branding", "E-Com", "Individuell"],
+    "categories": ["Veterinär", "Beratung", "Immobilien", "KI-Automatisierung"],
     "projects": [
-      { "title": "Snip Squad", "category": "Webdesign", "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde." },
-      { "title": "SystemicAlly", "category": "Webdesign", "desc": "Plattform für Führungskräfteentwicklung mit einem sauberen, professionellen Design, das Vertrauen und Expertise betont." },
-      { "title": "Towarowa 41", "category": "Webdesign", "desc": "Ein elegantes Luxus-Apartment-Listing mit redaktioneller Fotografie und edler Typografie." }
+      { "title": "Snip Squad", "category": "Veterinär", "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde.", "link": "/case-studies/snip-squad" },
+      { "title": "SystemicAlly", "category": "Beratung", "desc": "Plattform für Führungskräfteentwicklung mit einem sauberen, professionellen Design, das Vertrauen und Expertise betont.", "link": "/case-studies/systemically" },
+      { "title": "Towarowa 41", "category": "Immobilien", "desc": "Ein elegantes Luxus-Apartment-Listing mit redaktioneller Fotografie und edler Typografie.", "link": "/case-studies/towarowa" }
     ]
   },
   "faq": {
