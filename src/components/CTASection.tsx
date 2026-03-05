@@ -5,7 +5,7 @@ const CTASection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section className="py-20 md:py-28 pb-32 md:pb-40 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <ScrollReveal>
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('cta.eyebrow')}</span>
