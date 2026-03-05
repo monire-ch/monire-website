@@ -156,7 +156,8 @@
   "footer": {
     "tagline": "Websites, die Kunden anziehen und mit Ihrem Unternehmen wachsen.",
     "navigation": "Navigation",
-    "connect": "Kontakt",
+    "contact": "Kontakt",
+    "privacyPolicy": "Datenschutzrichtlinie",
     "copyright": "© 2025 Moniré. Alle Rechte vorbehalten."
   },
   "caseStudy": {
