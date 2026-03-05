@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
-import { Sparkles } from 'lucide-react';
+
 
 const tabKeys = ['webDesign', 'automation'] as const;
 
@@ -116,13 +116,12 @@ const PricingSection = () => {
                     </ul>
 
                     {/* Button */}
-                    <button className={`text-sm w-full flex items-center justify-between rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 ${
+                    <button className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 ${
                       plan.featured
                         ? 'bg-main-teal text-off-white hover:bg-soft-teal'
                         : 'btn-outline-gold'
                     }`}>
-                      <span>{t('pricing.getStarted')}</span>
-                      <Sparkles className="w-4 h-4" />
+                      {t('pricing.getStarted')}
                     </button>
                   </div>
                 </div>
