@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
+import { Instagram } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
+import linkedinIcon from '@/assets/linkedin.svg';
 
 const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const { t } = useTranslation();
