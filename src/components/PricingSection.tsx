@@ -56,79 +56,90 @@ const PricingSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
-          {plansWithFeatured.map((plan, i) => {
-            const { prefix, amount } = splitPrice(plan.price);
-            return (
-              <ScrollReveal key={plan.name} delay={i * 100}>
-                <div className="relative">
-                  {/* Most Popular pill */}
-                  {plan.featured && (
-                    <div className="flex justify-center">
-                      <span className="inline-block bg-gold text-main-teal text-xs font-body font-medium tracking-wide uppercase px-4 py-1.5 rounded-t-lg">
-                        {t('pricing.mostPopular')}
-                      </span>
-                    </div>
-                  )}
-                  <div
-                    className={`rounded-xl p-8 flex flex-col ${
-                      plan.featured
-                        ? 'bg-off-white text-deep-ink md:py-12'
-                        : 'dark-surface-card border border-off-white/10'
-                    }`}
-                  >
-                    {/* Plan name */}
-                    <p className={`font-display text-2xl md:text-3xl mb-4 ${
-                      plan.featured ? 'text-deep-ink' : 'text-off-white'
-                    }`}>
-                      {plan.name}
-                    </p>
-
-                    {/* Price */}
-                    <div className="mb-3">
-                      <span className={`text-sm font-body ${plan.featured ? 'text-deep-ink/60' : 'text-off-white'}`}>
-                        {prefix}
-                      </span>
-                      <span className={`font-display text-3xl md:text-4xl ${
-                        plan.featured ? 'text-gold' : 'text-gold-text'
+        {activeTab === 'automation' ? (
+          <ScrollReveal>
+            <div className="rounded-xl dark-surface-card border border-off-white/10 p-10 md:p-14 text-center">
+              <h3 className="font-display text-3xl md:text-4xl text-off-white mb-4">
+                {t('pricing.automationBlock.title')}
+              </h3>
+              <p className="text-off-white text-[15px] font-body leading-relaxed max-w-2xl mx-auto mb-8">
+                {t('pricing.automationBlock.desc')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="btn-gold text-sm">
+                  {t('pricing.automationBlock.cta')}
+                </button>
+                <button className="btn-outline-gold text-sm">
+                  {t('pricing.automationBlock.caseStudy')}
+                </button>
+              </div>
+            </div>
+          </ScrollReveal>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
+            {plansWithFeatured.map((plan, i) => {
+              const { prefix, amount } = splitPrice(plan.price);
+              return (
+                <ScrollReveal key={plan.name} delay={i * 100}>
+                  <div className="relative">
+                    {plan.featured && (
+                      <div className="flex justify-center">
+                        <span className="inline-block bg-gold text-main-teal text-xs font-body font-medium tracking-wide uppercase px-4 py-1.5 rounded-t-lg">
+                          {t('pricing.mostPopular')}
+                        </span>
+                      </div>
+                    )}
+                    <div
+                      className={`rounded-xl p-8 flex flex-col ${
+                        plan.featured
+                          ? 'bg-off-white text-deep-ink md:py-12'
+                          : 'dark-surface-card border border-off-white/10'
+                      }`}
+                    >
+                      <p className={`font-display text-2xl md:text-3xl mb-4 ${
+                        plan.featured ? 'text-deep-ink' : 'text-off-white'
                       }`}>
-                        {amount}
-                      </span>
-                    </div>
-
-                    {/* Description */}
-                    <p className={`text-sm font-body mb-6 leading-relaxed ${
-                      plan.featured ? 'text-deep-ink/70' : 'text-off-white'
-                    }`}>
-                      {plan.desc}
-                    </p>
-
-                    {/* Features */}
-                    <ul className="space-y-2.5 mb-8 flex-1">
-                      {plan.features.map((f) => (
-                        <li key={f} className={`text-[14px] font-body flex items-start gap-2.5 ${
-                          plan.featured ? 'text-deep-ink/80' : 'text-off-white'
+                        {plan.name}
+                      </p>
+                      <div className="mb-3">
+                        <span className={`text-sm font-body ${plan.featured ? 'text-deep-ink/60' : 'text-off-white'}`}>
+                          {prefix}
+                        </span>
+                        <span className={`font-display text-3xl md:text-4xl ${
+                          plan.featured ? 'text-gold' : 'text-gold-text'
                         }`}>
-                          <span className={`mt-0.5 text-sm ${plan.featured ? 'text-main-teal' : 'text-gold'}`}>✓</span>
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Button */}
-                    <button className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 ${
-                      plan.featured
-                        ? 'bg-main-teal text-off-white hover:bg-soft-teal'
-                        : 'btn-outline-gold'
-                    }`}>
-                      {t('pricing.getStarted')}
-                    </button>
+                          {amount}
+                        </span>
+                      </div>
+                      <p className={`text-sm font-body mb-6 leading-relaxed ${
+                        plan.featured ? 'text-deep-ink/70' : 'text-off-white'
+                      }`}>
+                        {plan.desc}
+                      </p>
+                      <ul className="space-y-2.5 mb-8 flex-1">
+                        {plan.features.map((f) => (
+                          <li key={f} className={`text-[14px] font-body flex items-start gap-2.5 ${
+                            plan.featured ? 'text-deep-ink/80' : 'text-off-white'
+                          }`}>
+                            <span className={`mt-0.5 text-sm ${plan.featured ? 'text-main-teal' : 'text-gold'}`}>✓</span>
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                      <button className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 ${
+                        plan.featured
+                          ? 'bg-main-teal text-off-white hover:bg-soft-teal'
+                          : 'btn-outline-gold'
+                      }`}>
+                        {t('pricing.getStarted')}
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </ScrollReveal>
-            );
-          })}
-        </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+        )}
 
         <ScrollReveal className="text-center mt-14">
           <h4 className="font-body text-2xl md:text-[32px] text-off-white mb-4">{t('pricing.custom.title')}</h4>

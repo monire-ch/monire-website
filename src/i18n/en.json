@@ -158,39 +158,13 @@
           ]
         }
       ],
-      "automation": [
-        {
-          "name": "Starter",
-          "price": "from CHF1'500",
-          "desc": "Perfect for: small teams looking to save time on repetitive tasks.",
-          "features": ["Up to 3 automations", "Basic integrations", "Email notifications", "Setup & testing"]
-        },
-        {
-          "name": "Advanced",
-          "price": "from CHF3'000",
-          "desc": "Best for: growing businesses needing connected workflows.",
-          "features": [
-            "Up to 8 automations",
-            "Complex workflows",
-            "CRM integration",
-            "Custom dashboards",
-            "Training session",
-            "Monthly optimization"
-          ]
-        },
-        {
-          "name": "Premium",
-          "price": "from CHF5'000",
-          "desc": "Best for: companies ready to fully automate operations.",
-          "features": [
-            "Unlimited automations",
-            "AI-powered workflows",
-            "Full system audit",
-            "Dedicated support",
-            "Quarterly reviews"
-          ]
-        }
-      ]
+      "automation": []
+    },
+    "automationBlock": {
+      "title": "AI Automations & Workflow Systems",
+      "desc": "We build custom automation systems that reduce manual, repetitive work and seamlessly connect the tools you already use. Pricing is defined individually after a short discovery call.",
+      "cta": "Get Started",
+      "caseStudy": "Latest case study"
     }
   },
   "portfolio": {
