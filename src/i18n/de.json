@@ -139,5 +139,46 @@
     "navigation": "Navigation",
     "connect": "Kontakt",
     "copyright": "© 2025 Moniré. Alle Rechte vorbehalten."
+  },
+  "caseStudy": {
+    "back": "Zurück zu Preise",
+    "eyebrow": "KI-Automatisierung",
+    "title": "Spesenbeleg-\nAutomatisierung",
+    "before": {
+      "title": "Vorher:",
+      "intro": "Ausgaben wurden manuell erfasst. Belege kamen per E-Mail und Post. Das Ergebnis:",
+      "items": [
+        "Belege wurden manuell mit hohem Fehlerrisiko verarbeitet.",
+        "Dateien wurden inkonsistent in verschiedenen Ordnern gespeichert.",
+        "Manuelle Dateneingabe in Excel führte zu fehlenden Belegen und Verzögerungen."
+      ]
+    },
+    "after": {
+      "title": "Nachher:",
+      "intro": "Belege werden jetzt per E-Mail oder Telegram gesendet und automatisch verarbeitet.",
+      "items": [
+        "Bilder/PDFs werden per OCR extrahiert und bereinigt.",
+        "Datum, Betrag, Währung und Anbieter werden mit KI identifiziert.",
+        "Dateien werden umbenannt und im richtigen monatlichen OneDrive-Ordner gespeichert.",
+        "Daten werden in die richtige Excel-Tabelle (EUR oder CHF) eingetragen.",
+        "Alles bleibt organisiert und bereit für die Erstattungsprüfung."
+      ]
+    },
+    "impact": {
+      "title": "Wirkung:",
+      "intro": "Eine chaotische monatliche Aufgabe wurde zu einem sauberen, zuverlässigen Workflow.",
+      "items": [
+        "~70% weniger manueller Verwaltungsaufwand",
+        "Weniger Fehler und fehlende Belege",
+        "Einheitliche Dateibenennung + strukturiertes Archiv",
+        "Schnellere Abläufe mit weniger Frustration"
+      ]
+    },
+    "meta": {
+      "client": "Kunde",
+      "date": "Datum",
+      "category": "Kategorie",
+      "tools": "Tools"
+    }
   }
 }

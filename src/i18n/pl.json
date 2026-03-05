@@ -139,5 +139,46 @@
     "navigation": "Nawigacja",
     "connect": "Kontakt",
     "copyright": "© 2025 Moniré. Wszelkie prawa zastrzeżone."
+  },
+  "caseStudy": {
+    "back": "Powrót do cennika",
+    "eyebrow": "Automatyzacja AI",
+    "title": "Automatyzacja\nparagonów\nwydatków",
+    "before": {
+      "title": "Przed:",
+      "intro": "Wydatki były śledzone ręcznie. Paragony przychodziły e-mailem i pocztą. W rezultacie:",
+      "items": [
+        "Paragony były przetwarzane ręcznie z wysokim ryzykiem błędów.",
+        "Pliki były przechowywane niespójnie w różnych folderach.",
+        "Ręczne wprowadzanie danych do Excela prowadziło do brakujących paragonów i opóźnień."
+      ]
+    },
+    "after": {
+      "title": "Po:",
+      "intro": "Paragony są teraz wysyłane e-mailem lub przez Telegram i przetwarzane automatycznie.",
+      "items": [
+        "Obrazy/PDF-y są wyodrębniane i czyszczone za pomocą OCR.",
+        "Data, kwota, waluta i dostawca są identyfikowane za pomocą AI.",
+        "Pliki są zmieniane nazwy i przechowywane w odpowiednim miesięcznym folderze OneDrive.",
+        "Dane są dodawane do odpowiedniej tabeli Excel (EUR lub CHF).",
+        "Wszystko pozostaje zorganizowane i gotowe do przeglądu zwrotów."
+      ]
+    },
+    "impact": {
+      "title": "Wpływ:",
+      "intro": "Chaotyczne miesięczne zadanie stało się czystym, niezawodnym workflow.",
+      "items": [
+        "~70% mniej ręcznej pracy administracyjnej",
+        "Mniej błędów i brakujących paragonów",
+        "Spójne nazewnictwo plików + uporządkowane archiwum",
+        "Szybsze procesy z mniejszą frustracją"
+      ]
+    },
+    "meta": {
+      "client": "Klient",
+      "date": "Data",
+      "category": "Kategoria",
+      "tools": "Narzędzia"
+    }
   }
 }

@@ -238,5 +238,46 @@
     "navigation": "Navigation",
     "connect": "Connect",
     "copyright": "© 2025 Moniré. All rights reserved."
+  },
+  "caseStudy": {
+    "back": "Back to Pricing",
+    "eyebrow": "AI Automation",
+    "title": "Expense\nReceipt\nAutomation",
+    "before": {
+      "title": "Before:",
+      "intro": "Expenses were tracked manually. Receipts arrived by email and post. As a result:",
+      "items": [
+        "Receipts were processed manually with high risk of errors.",
+        "Files were stored inconsistently across folders.",
+        "Manual data entry into Excel led to missing receipts and delays."
+      ]
+    },
+    "after": {
+      "title": "After:",
+      "intro": "Receipts are now sent via email or Telegram and processed automatically.",
+      "items": [
+        "Images/PDFs are extracted and cleaned via OCR.",
+        "Date, amount, currency, and vendor are identified with AI.",
+        "Files are renamed and stored in the correct OneDrive monthly folder.",
+        "Data is added into the correct Excel table (EUR or CHF).",
+        "Everything stays organized & ready for reimbursement review."
+      ]
+    },
+    "impact": {
+      "title": "Impact:",
+      "intro": "A messy monthly task became a clean, reliable, hands-off workflow.",
+      "items": [
+        "~70% less manual admin time",
+        "Fewer mistakes and missing receipts",
+        "Consistent file naming + structured archive",
+        "Faster workflows with less frustration"
+      ]
+    },
+    "meta": {
+      "client": "Client",
+      "date": "Date",
+      "category": "Category",
+      "tools": "Tools"
+    }
   }
 }
