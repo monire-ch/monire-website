@@ -114,7 +114,7 @@ const CaseStudyExpenseReceipt = () => {
 
           {/* Metadata table */}
           <ScrollReveal>
-            <div className="border-t border-border">
+            <div>
               {[
                 { label: t('caseStudy.meta.client'), value: 'Brooksmiller & Partners AG' },
                 { label: t('caseStudy.meta.date'), value: 'August 2025' },
@@ -130,7 +130,7 @@ const CaseStudyExpenseReceipt = () => {
                   AI Automation
                 </span>
               </div>
-              <div className="flex justify-between items-start py-4 border-b border-border">
+              <div className="flex justify-between items-start py-4">
                 <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.tools')}</span>
                 <div className="flex flex-wrap gap-2 justify-end">
                   {tools.map((tool) => (
@@ -144,6 +144,7 @@ const CaseStudyExpenseReceipt = () => {
                 </div>
               </div>
             </div>
+
           </ScrollReveal>
 
           <div className="h-20" />
