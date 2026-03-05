@@ -86,7 +86,7 @@ const PricingSection = () => {
 
                     {/* Price */}
                     <div className="mb-3">
-                      <span className={`text-sm font-body ${plan.featured ? 'text-deep-ink/60' : 'text-off-white/60'}`}>
+                      <span className={`text-sm font-body ${plan.featured ? 'text-deep-ink/60' : 'text-off-white'}`}>
                         {prefix}
                       </span>
                       <span className={`font-display text-3xl md:text-4xl ${
