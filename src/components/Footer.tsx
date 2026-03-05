@@ -30,7 +30,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
           <div>
             <img src={logo} alt="Moniré" className="h-9 mb-4" style={{ transform: 'translateX(-1.9rem)' }} />
-            <p className="text-off-white/50 text-sm font-body max-w-xs">
+            <p className="text-off-white text-sm font-body max-w-xs">
               {t('footer.tagline')}
             </p>
             <div className="flex items-center gap-3 mt-4">
@@ -61,7 +61,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
                 {navItems.map((item) => (
                   <li key={item.href}>
-                    <a href={item.href} className="text-off-white/60 text-sm font-body hover:text-gold-text transition-colors">
+                    <a href={item.href} className="text-off-white text-sm font-body hover:text-gold-text transition-colors">
                       {item.label}
                     </a>
                   </li>
@@ -77,10 +77,10 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                   </a>
                 </li>
                 <li>
-                  <span className="text-off-white/60 text-sm font-body">Zürich, Switzerland</span>
+                  <span className="text-off-white text-sm font-body">Zürich, Switzerland</span>
                 </li>
                 <li>
-                  <span className="text-off-white/60 text-sm font-body">Serving clients worldwide</span>
+                  <span className="text-off-white text-sm font-body">Serving clients worldwide</span>
                 </li>
               </ul>
             </div>
@@ -88,7 +88,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
         </div>
 
         <div className="border-t border-off-white/10 pt-6 text-center">
-          <p className="text-off-white/40 text-xs font-body">{t('footer.copyright')}</p>
+          <p className="text-off-white text-xs font-body">{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>
