@@ -105,7 +105,8 @@
     "projects": [
       { "title": "Snip Squad", "category": "Weterynaria", "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt.", "link": "/case-studies/snip-squad" },
       { "title": "SystemicAlly", "category": "Doradztwo", "desc": "Platforma rozwoju przywództwa korporacyjnego z czystym, profesjonalnym designem podkreślającym zaufanie i ekspertyzę.", "link": "/case-studies/systemically" },
-      { "title": "Towarowa 41", "category": "Nieruchomości", "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią.", "link": "/case-studies/towarowa" }
+      { "title": "Towarowa 41", "category": "Nieruchomości", "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią.", "link": "/case-studies/towarowa" },
+      { "title": "Automatyzacja paragonów", "category": "Automatyzacja AI", "desc": "Zautomatyzowany przepływ pracy do przetwarzania paragonów za pomocą n8n, eliminujący ręczne wprowadzanie danych.", "link": "/case-studies/expense-receipt-automation" }
     ]
   },
   "faq": {

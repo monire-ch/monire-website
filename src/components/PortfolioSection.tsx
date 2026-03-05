@@ -7,8 +7,9 @@ import ScrollReveal from './ScrollReveal';
 import snipSquad from '@/assets/snip-squad_full.png';
 import systemically from '@/assets/systemically_full.png';
 import towarowa from '@/assets/towarowa_full.png';
+import n8nPreview from '@/assets/n8n_preview.png';
 
-const projectImages = [snipSquad, systemically, towarowa];
+const projectImages = [snipSquad, systemically, towarowa, n8nPreview];
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
