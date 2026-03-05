@@ -26,6 +26,7 @@ const CaseStudySystemically = () => {
           </ScrollReveal>
 
           <ScrollReveal>
+            <span className="eyebrow-pill eyebrow-pill-light">Web Development</span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-12">
               SystemicAlly
             </h1>
