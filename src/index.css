@@ -326,7 +326,7 @@
 .btn-outline-gold:hover {
   background-color: color-mix(in srgb, #0f4b5a 88%, white);
   border-color: #cfa947;
-  color: #F8F5F1;
+  color: #EEEBE7;
   box-shadow: 0 0 12px rgba(207, 169, 71, 0.15);
 }
 
