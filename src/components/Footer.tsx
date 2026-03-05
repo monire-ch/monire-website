@@ -34,11 +34,23 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               {t('footer.tagline')}
             </p>
             <div className="flex items-center gap-3 mt-4">
-              <a href="https://www.instagram.com/hello.monire" target="_blank" rel="noopener noreferrer" className="text-gold-text hover:text-gold-hover transition-colors">
-                <Instagram size={20} />
+              <a
+                href="https://www.instagram.com/hello.monire"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 text-gold-text transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+              >
+                <Instagram size={18} />
               </a>
-              <a href="https://www.linkedin.com/monire" target="_blank" rel="noopener noreferrer" className="text-gold-text hover:text-gold-hover transition-colors">
-                <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(83%) sepia(30%) saturate(500%) hue-rotate(5deg) brightness(95%)' }} />
+              <a
+                href="https://www.linkedin.com/monire"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+              >
+                <img src={linkedinIcon} alt="" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
               </a>
             </div>
           </div>
