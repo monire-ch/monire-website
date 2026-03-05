@@ -95,7 +95,7 @@ const PricingSection = () => {
                       </div>
                     )}
                     <div
-                      className={`rounded-xl p-8 flex flex-col ${
+                      className={`rounded-xl p-8 flex flex-col text-center ${
                         plan.featured
                           ? 'bg-off-white text-deep-ink md:py-12'
                           : 'dark-surface-card border border-off-white/10'
@@ -121,7 +121,7 @@ const PricingSection = () => {
                       }`}>
                         {plan.desc}
                       </p>
-                      <ul className="space-y-2.5 mb-8 flex-1">
+                      <ul className="space-y-2.5 mb-8 flex-1 text-left">
                         {plan.features.map((f) => (
                           <li key={f} className={`text-[14px] font-body flex items-start gap-2.5 ${
                             plan.featured ? 'text-deep-ink/80' : 'text-off-white'
