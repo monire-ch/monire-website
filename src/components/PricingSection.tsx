@@ -9,6 +9,7 @@ const tabKeys = ['webDesign', 'automation'] as const;
 
 const PricingSection = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<typeof tabKeys[number]>('webDesign');
   const [contactOpen, setContactOpen] = useState(false);
 
