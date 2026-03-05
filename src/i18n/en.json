@@ -189,6 +189,12 @@
         "category": "Real Estate",
         "desc": "An elegant luxury apartment listing with editorial photography and refined typography.",
         "link": "/case-studies/towarowa"
+      },
+      {
+        "title": "Expense Receipt Automation",
+        "category": "AI Automation",
+        "desc": "Automated expense receipt processing workflow using n8n, eliminating manual data entry and saving hours of repetitive work.",
+        "link": "/case-studies/expense-receipt-automation"
       }
     ]
   },
