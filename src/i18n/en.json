@@ -272,12 +272,8 @@
         "label": "Maintenance",
         "items": [
           {
-            "q": "Do you offer ongoing support?",
-            "a": "Yes, our Advanced and Premium plans include monthly maintenance hours. We also offer standalone support packages."
-          },
-          {
-            "q": "What if I need changes after launch?",
-            "a": "We offer flexible support options. Small changes are often covered by maintenance hours, and larger updates can be quoted separately."
+            "q": "Do you offer long-term support?",
+            "a": "We offer maintenance packages that include bug fixes, content updates, and technical support. We also offer one-time support for specific needs."
           }
         ]
       }
