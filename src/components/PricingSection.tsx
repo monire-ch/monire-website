@@ -65,7 +65,7 @@ const PricingSection = () => {
                   {/* Most Popular pill */}
                   {plan.featured && (
                     <div className="flex justify-center">
-                      <span className="inline-block bg-off-white text-main-teal text-xs font-body font-medium tracking-wide uppercase px-4 py-1.5 rounded-t-lg">
+                      <span className="inline-block bg-gold text-main-teal text-xs font-body font-medium tracking-wide uppercase px-4 py-1.5 rounded-t-lg">
                         {t('pricing.mostPopular')}
                       </span>
                     </div>
