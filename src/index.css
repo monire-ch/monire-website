@@ -294,7 +294,7 @@
 .btn-gold,
 .btn-teal {
   background-color: color-mix(in srgb, #0f4b5a 88%, white);
-  color: #F8F5F1;
+  color: #EEEBE7;
   border: 1px solid #cfa947b3;
   font-family: var(--font-body);
   font-weight: 500;
