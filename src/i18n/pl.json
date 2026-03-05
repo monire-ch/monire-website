@@ -101,11 +101,11 @@
   "portfolio": {
     "eyebrow": "Portfolio",
     "title": "Nasze prace",
-    "categories": ["Wszystkie", "Webdesign", "Automatyzacja", "Branding", "E-Com", "Indywidualne"],
+    "categories": ["Weterynaria", "Doradztwo", "Nieruchomości", "Automatyzacja AI"],
     "projects": [
-      { "title": "Snip Squad", "category": "Webdesign", "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt." },
-      { "title": "SystemicAlly", "category": "Webdesign", "desc": "Platforma rozwoju przywództwa korporacyjnego z czystym, profesjonalnym designem podkreślającym zaufanie i ekspertyzę." },
-      { "title": "Towarowa 41", "category": "Webdesign", "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią." }
+      { "title": "Snip Squad", "category": "Weterynaria", "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt.", "link": "/case-studies/snip-squad" },
+      { "title": "SystemicAlly", "category": "Doradztwo", "desc": "Platforma rozwoju przywództwa korporacyjnego z czystym, profesjonalnym designem podkreślającym zaufanie i ekspertyzę.", "link": "/case-studies/systemically" },
+      { "title": "Towarowa 41", "category": "Nieruchomości", "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią.", "link": "/case-studies/towarowa" }
     ]
   },
   "faq": {
