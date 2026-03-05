@@ -95,13 +95,13 @@ const PricingSection = () => {
                       </div>
                     )}
                     <div
-                      className={`rounded-xl p-8 flex flex-col text-center ${
+                      className={`rounded-xl p-8 flex flex-col ${
                         plan.featured
                           ? 'bg-off-white text-deep-ink md:py-12'
                           : 'dark-surface-card border border-off-white/10'
                       }`}
                     >
-                      <p className={`font-display text-2xl md:text-3xl mb-4 ${
+                      <p className={`font-display text-2xl md:text-3xl mb-4 text-center ${
                         plan.featured ? 'text-deep-ink' : 'text-off-white'
                       }`}>
                         {plan.name}
@@ -121,7 +121,7 @@ const PricingSection = () => {
                       }`}>
                         {plan.desc}
                       </p>
-                      <ul className="space-y-2.5 mb-8 flex-1 text-left">
+                      <ul className="space-y-2.5 mb-8 flex-1">
                         {plan.features.map((f) => (
                           <li key={f} className={`text-[14px] font-body flex items-start gap-2.5 ${
                             plan.featured ? 'text-deep-ink/80' : 'text-off-white'
