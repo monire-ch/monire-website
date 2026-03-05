@@ -30,7 +30,7 @@ const CaseStudyExpenseReceipt = () => {
           {/* Eyebrow */}
           <ScrollReveal>
             <div className="mb-8">
-              <span className="eyebrow-pill">
+              <span className="eyebrow-pill eyebrow-pill-light">
                 {t('caseStudy.eyebrow')}
               </span>
             </div>
