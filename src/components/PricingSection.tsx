@@ -32,15 +32,15 @@ const PricingSection = () => {
         </ScrollReveal>
 
         <ScrollReveal className="flex justify-center mb-10">
-          <div className="inline-flex bg-deep-ink/40 rounded-lg p-1 gap-1">
+          <div className="inline-flex rounded-full border border-off-white/20 p-1.5 gap-1">
             {tabKeys.map((key) => (
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`px-5 py-2 rounded-md text-sm font-body transition-all duration-200 ${
+                className={`px-8 py-3 rounded-full text-sm font-body transition-all duration-200 ${
                   activeTab === key
-                    ? 'bg-main-teal text-off-white'
-                    : 'text-off-white/60 hover:text-off-white/80'
+                    ? 'bg-main-teal text-off-white border border-gold/50'
+                    : 'text-off-white/60 hover:text-off-white/80 border border-transparent'
                 }`}
               >
                 {t(`pricing.tabs.${key}`)}
