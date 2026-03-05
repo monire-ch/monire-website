@@ -151,6 +151,8 @@ const PricingSection = () => {
         </ScrollReveal>
       </div>
     </section>
+    <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
+    </>
   );
 };
 
