@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+
 import useEmblaCarousel from 'embla-carousel-react';
 import ScrollReveal from './ScrollReveal';
 import snipSquad from '@/assets/snip-squad_full.png';
