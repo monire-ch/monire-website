@@ -112,20 +112,24 @@ const PortfolioSection = () => {
                 <button
                   onClick={scrollPrev}
                   disabled={!canScrollPrev}
-                  className="w-11 h-11 rounded-full flex items-center justify-center text-off-white transition-all duration-200 disabled:cursor-not-allowed"
-                  style={{ backgroundColor: canScrollPrev ? '#0b3d4a' : '#8DA2A6' }}
+                  className="disabled:cursor-not-allowed"
                   aria-label="Previous project"
                 >
-                  <ArrowLeft className="w-4 h-4" />
+                  <svg width="44" height="44" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="44" cy="44" r="44" fill={canScrollPrev ? '#004A5B' : '#8EA3AA'} />
+                    <path d="M49 31L37 43L49 55" stroke="#F4F8FA" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </button>
                 <button
                   onClick={scrollNext}
                   disabled={!canScrollNext}
-                  className="w-11 h-11 rounded-full flex items-center justify-center text-off-white transition-all duration-200 disabled:cursor-not-allowed"
-                  style={{ backgroundColor: canScrollNext ? '#0b3d4a' : '#8DA2A6' }}
+                  className="disabled:cursor-not-allowed"
                   aria-label="Next project"
                 >
-                  <ArrowRight className="w-4 h-4" />
+                  <svg width="44" height="44" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="44" cy="44" r="44" fill={canScrollNext ? '#004A5B' : '#8EA3AA'} />
+                    <path d="M39 31L51 43L39 55" stroke="#F4F8FA" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
