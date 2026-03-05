@@ -101,7 +101,7 @@ const PricingSection = () => {
                           : 'dark-surface-card border border-off-white/10'
                       }`}
                     >
-                      <p className={`font-display text-2xl md:text-3xl mb-4 ${
+                      <p className={`font-display text-2xl md:text-3xl mb-4 text-center ${
                         plan.featured ? 'text-deep-ink' : 'text-off-white'
                       }`}>
                         {plan.name}
