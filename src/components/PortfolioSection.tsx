@@ -97,10 +97,6 @@ const PortfolioSection = () => {
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                         </div>
                       </Link>
-                      <div className="mt-4">
-                        <h3 className="font-body text-lg text-main-teal">{project.title}</h3>
-                        <p className="text-sm text-main-teal/60 font-body mt-1 leading-relaxed">{project.desc}</p>
-                      </div>
                     </div>
                   ))}
                 </div>
