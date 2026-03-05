@@ -80,8 +80,8 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <h3 className="font-body text-base md:text-lg text-off-white font-medium">{person.name}</h3>
-                  <p className="text-sm text-off-white/60 font-body mt-1.5">{person.origin}</p>
-                  <p className="text-xs text-off-white/45 font-body mt-1">{person.languages}</p>
+                  <p className="text-sm font-body mt-1.5" style={{ color: '#f8f5f199' }}>{person.origin}</p>
+                  <p className="text-xs font-body mt-1" style={{ color: '#f8f5f199' }}>{person.languages}</p>
                 </div>
               </div>
             ))}
