@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import snipSquad from '@/assets/snip-squad_full.png';
+import snipSquad from '@/assets/snip-squad_full-hq.png';
 
 const CaseStudySnipSquad = () => {
   const { t } = useTranslation();

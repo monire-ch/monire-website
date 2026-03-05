@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import useEmblaCarousel from 'embla-carousel-react';
 import ScrollReveal from './ScrollReveal';
-import snipSquad from '@/assets/snip-squad_full.png';
+import snipSquad from '@/assets/snip-squad_full-hq.png';
 import systemically from '@/assets/systemically_full.png';
 import towarowa from '@/assets/towarowa_full.png';
 import n8nPreview from '@/assets/n8n_preview.png';
