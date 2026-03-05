@@ -57,19 +57,19 @@ const PortfolioSection = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 items-start">
-            {/* Category sidebar */}
-            <div className="flex md:flex-col gap-2 flex-wrap">
+          <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 items-start">
+            {/* Category sidebar — dark teal card like reference */}
+            <div className="rounded-2xl bg-dark-teal-surface p-5 flex md:flex-col gap-1 flex-wrap">
               {categories.map((cat) => {
                 const isActive = currentProject?.category === cat;
                 return (
                   <button
                     key={cat}
                     onClick={() => scrollToProject(cat)}
-                    className={`px-4 py-2 rounded-full text-xs font-body transition-all duration-200 border text-left whitespace-nowrap ${
+                    className={`w-full text-left px-4 py-3 rounded-lg font-body text-sm transition-all duration-200 ${
                       isActive
-                        ? 'bg-main-teal text-off-white border-main-teal'
-                        : 'border-neutral-border text-main-teal/60 hover:border-main-teal hover:text-main-teal'
+                        ? 'border border-gold/60 bg-white/5 text-off-white'
+                        : 'border border-transparent text-off-white/50 hover:text-off-white/80'
                     }`}
                   >
                     {cat}
@@ -88,13 +88,13 @@ const PortfolioSection = () => {
                       className="min-w-0 shrink-0 grow-0 basis-full px-2"
                     >
                       <Link to={project.link} className="block group">
-                        <div className="relative overflow-hidden rounded-xl border border-neutral-border bg-neutral-card">
+                        <div className="relative overflow-hidden rounded-xl border border-neutral-border bg-neutral-card h-[380px] md:h-[440px]">
                           <img
                             src={projectImages[i]}
                             alt={project.title}
-                            className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                         </div>
                       </Link>
                       <div className="mt-4">
@@ -107,30 +107,17 @@ const PortfolioSection = () => {
               </div>
 
               {/* Arrow buttons */}
-              <div className="flex justify-center gap-3 mt-6">
+              <div className="flex items-center gap-3 mt-6">
                 <button
                   onClick={scrollPrev}
-                  className="w-10 h-10 rounded-full border border-neutral-border bg-neutral-card flex items-center justify-center text-main-teal hover:bg-main-teal hover:text-off-white transition-all duration-200"
+                  className="w-11 h-11 rounded-full bg-main-teal/10 flex items-center justify-center text-main-teal hover:bg-main-teal hover:text-off-white transition-all duration-200"
                   aria-label="Previous project"
                 >
                   <ArrowLeft className="w-4 h-4" />
                 </button>
-
-                {/* Dots */}
-                {projects.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => emblaApi?.scrollTo(i)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 self-center ${
-                      i === selectedIndex ? 'bg-main-teal scale-110' : 'bg-neutral-border'
-                    }`}
-                    aria-label={`Go to slide ${i + 1}`}
-                  />
-                ))}
-
                 <button
                   onClick={scrollNext}
-                  className="w-10 h-10 rounded-full border border-neutral-border bg-neutral-card flex items-center justify-center text-main-teal hover:bg-main-teal hover:text-off-white transition-all duration-200"
+                  className="w-11 h-11 rounded-full bg-main-teal/10 flex items-center justify-center text-main-teal hover:bg-main-teal hover:text-off-white transition-all duration-200"
                   aria-label="Next project"
                 >
                   <ArrowRight className="w-4 h-4" />
