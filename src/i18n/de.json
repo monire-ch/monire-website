@@ -113,7 +113,7 @@
     "title": "Häufig gestellte Fragen",
     "categories": [
       {
-        "label": "Design & Entwicklung",
+        "label": "Allgemeine Informationen",
         "items": [
           { "q": "Welche Informationen brauchen Sie von mir, um zu starten?", "a": "Wir müssen Ihre Geschäftsziele, Zielgruppe, gewünschte Funktionen, Designpräferenzen, Zeitplan und Budget verstehen. Vorhandene Markenassets, Inhalte oder Websites sind ebenfalls hilfreich. Füllen Sie gerne unser Kundenbriefing-Formular aus, damit wir Ihre Bedürfnisse besser verstehen können." },
           { "q": "Können Sie bei SEO helfen?", "a": "Unser Hauptfokus liegt auf Entwicklung und KI-Automatisierung, aber wir bauen Websites mit SEO-Best-Practices. Wir können auch vertrauenswürdige Partner für laufende SEO-Dienstleistungen empfehlen." },
@@ -121,7 +121,7 @@
         ]
       },
       {
-        "label": "KI-Automatisierungen",
+        "label": "Design & Entwicklung",
         "items": [
           { "q": "Wie lange dauert es, eine Website zu erstellen?", "a": "In der Regel 4–8 Wochen, je nach Projektumfang. Wir geben Ihnen einen klaren Zeitplan während unseres Erstgesprächs." },
           { "q": "Muss ich Inhalte bereitstellen?", "a": "Es hilft, wenn Sie Inhalte bereit haben, aber wir können Sie durch den Prozess begleiten und bei Bedarf beim Texten helfen." },
