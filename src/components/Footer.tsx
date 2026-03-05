@@ -45,8 +45,8 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
 
           <div className="flex gap-16">
             <div>
-              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.navigation')}</p>
-              <ul className="space-y-2">
+              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.quickLinks')}</p>
+              <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
                 {navItems.map((item) => (
                   <li key={item.href}>
                     <a href={item.href} className="text-off-white/60 text-sm font-body hover:text-gold-text transition-colors">
@@ -60,7 +60,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.contact')}</p>
               <ul className="space-y-2">
                 <li>
-                  <a href="mailto:hello@monire.ch" className="text-off-white/60 text-sm font-body hover:text-gold-text transition-colors">
+                  <a href="mailto:hello@monire.ch" className="text-gold-text text-sm font-body hover:text-gold-hover transition-colors">
                     hello@monire.ch
                   </a>
                 </li>
