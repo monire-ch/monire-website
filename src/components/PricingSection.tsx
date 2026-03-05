@@ -132,7 +132,7 @@ const PricingSection = () => {
 
         <ScrollReveal className="text-center mt-14">
           <h4 className="font-body text-2xl md:text-[32px] text-off-white mb-2">{t('pricing.custom.title')}</h4>
-          <p className="text-off-white text-[15px] font-body max-w-lg mx-auto">
+          <p className="text-off-white text-[15px] font-body">
             {t('pricing.custom.desc')}
           </p>
         </ScrollReveal>
