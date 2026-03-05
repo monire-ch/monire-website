@@ -222,20 +222,36 @@
         "label": "Design & Development",
         "items": [
           {
-            "q": "How long does it take to build a website?",
-            "a": "Typically 4–8 weeks depending on the project scope. We'll give you a clear timeline during our discovery call."
+            "q": "Do you build custom websites or use templates?",
+            "a": "We primarily build custom websites tailored to your specific needs. However, we can also customize premium templates if you're working with a tighter budget or faster timeline."
           },
           {
-            "q": "Do I need to provide content?",
-            "a": "It helps if you have content ready, but we can guide you through the process and help with copywriting if needed."
+            "q": "Can you redesign my existing website?",
+            "a": "Yes! We offer complete website redesigns, including modernizing outdated designs, improving user experience, and migrating to new platforms if needed."
           },
           {
-            "q": "What platform do you build on?",
-            "a": "We primarily use modern frameworks like React and Next.js, along with headless CMS solutions. We choose the best stack for your specific needs."
+            "q": "What platforms do you develop on?",
+            "a": "We work with various technologies including Webflow, Astro, React, Next.js, n8n and custom solutions. We'll recommend the best platform based on your specific requirements, budget, and long-term goals."
           },
           {
-            "q": "Can I update the website myself?",
-            "a": "Absolutely! Every website comes with a user-friendly CMS. We also provide training so you feel confident making updates."
+            "q": "Will I be able to edit my website myself?",
+            "a": "We use user-friendly content management systems (CMS) so you can update text, images, and blog posts without technical skills. We provide training and documentation to ensure you're comfortable making changes."
+          },
+          {
+            "q": "Who has the ownership of the website?",
+            "a": "Once all invoices are paid, full ownership of the website and all designs we created is transferred to you."
+          },
+          {
+            "q": "I have the design - can you handle development only?",
+            "a": "If you already have the design, we can handle the development only. We'll review your design together during our call and adjust the pricing based on the work needed."
+          },
+          {
+            "q": "How quickly can my website be completed?",
+            "a": "Timelines vary depending on the size and complexity of your site. After our initial discussion, we'll provide a clear estimate for both the design and development phases before we begin."
+          },
+          {
+            "q": "What is Webflow?",
+            "a": "Webflow is a modern website-building platform that lets us create fully custom, high-quality sites quickly, while giving you easy editing, great performance, and hassle-free hosting."
           }
         ]
       },
