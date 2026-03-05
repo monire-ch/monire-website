@@ -1,37 +1,101 @@
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
 import systemically from '@/assets/systemically_full.png';
 
 const CaseStudySystemically = () => {
   const { t } = useTranslation();
 
+  const tools = ['WEBFLOW', 'GOOGLE ANALYTICS'];
+
   return (
-    <div className="min-h-screen">
+    <>
       <Navbar />
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <Link to="/#portfolio" className="inline-flex items-center gap-2 text-main-teal/60 hover:text-main-teal font-body text-sm mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-            {t('caseStudy.back')}
-          </Link>
+      <main className="bg-background min-h-screen pt-36 md:pt-44 pb-0">
+        <div className="max-w-5xl mx-auto px-6">
+          <ScrollReveal>
+            <a
+              href="/#portfolio"
+              className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors mb-8"
+            >
+              <ArrowLeft size={16} />
+              {t('caseStudy.back')}
+            </a>
+          </ScrollReveal>
 
-          <span className="eyebrow-pill eyebrow-pill-light mb-4">Consulting</span>
-          <h1 className="font-display text-4xl md:text-5xl text-main-teal mb-8">SystemicAlly</h1>
+          <ScrollReveal>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-12">
+              SystemicAlly
+            </h1>
+          </ScrollReveal>
 
-          <div className="rounded-xl overflow-hidden border border-neutral-border mb-10">
-            <img src={systemically} alt="SystemicAlly" className="w-full h-auto" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 mb-16">
+            {/* Scrollable website preview */}
+            <ScrollReveal>
+              <div className="rounded-xl overflow-hidden border border-border bg-card h-[500px] md:h-[600px] overflow-y-auto">
+                <img
+                  src={systemically}
+                  alt="SystemicAlly website preview"
+                  className="w-full h-auto"
+                />
+              </div>
+            </ScrollReveal>
+
+            {/* Metadata + description */}
+            <div>
+              <ScrollReveal>
+                <div>
+                  {[
+                    { label: t('caseStudy.meta.client'), value: 'SystemicAlly' },
+                    { label: t('caseStudy.meta.date'), value: 'May 2025' },
+                  ].map((row, i) => (
+                    <div key={i} className="flex justify-between items-center py-4 border-b border-border">
+                      <span className="text-sm font-body text-main-teal">{row.label}</span>
+                      <span className="text-sm font-body text-foreground">{row.value}</span>
+                    </div>
+                  ))}
+                  <div className="flex justify-between items-center py-4 border-b border-border">
+                    <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.category')}</span>
+                    <span className="text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground">
+                      Web Development
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-start py-4 border-b border-border">
+                    <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.tools')}</span>
+                    <div className="flex flex-wrap gap-2 justify-end">
+                      {tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className="text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground uppercase tracking-wide"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center py-4">
+                    <span className="text-sm font-body text-main-teal">Website</span>
+                    <a
+                      href="https://www.systemically.ch"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline"
+                    >
+                      Visit Website
+                    </a>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
 
-          <p className="font-body text-main-teal/70 text-lg leading-relaxed">
-            Corporate leadership development platform with a clean, professional design emphasizing trust and expertise. The website was crafted to communicate authority while remaining accessible and inviting.
-          </p>
+          <div className="h-20" />
         </div>
-      </section>
-      <Footer />
-    </div>
+      </main>
+      <Footer hideWave />
+    </>
   );
 };
 
