@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Apply from "./pages/Apply";
 import CaseStudyExpenseReceipt from "./pages/CaseStudyExpenseReceipt";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/apply" element={<Apply />} />
