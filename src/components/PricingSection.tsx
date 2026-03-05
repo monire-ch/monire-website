@@ -68,7 +68,7 @@ const PricingSection = () => {
                 {t('pricing.automationBlock.desc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-gold text-sm">
+                <button className="btn-gold text-sm" onClick={() => setContactOpen(true)}>
                   {t('pricing.automationBlock.cta')}
                 </button>
                 <button className="btn-outline-gold text-sm">
