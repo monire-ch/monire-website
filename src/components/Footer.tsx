@@ -57,15 +57,19 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               </ul>
             </div>
             <div>
-              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.connect')}</p>
+              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.contact')}</p>
               <ul className="space-y-2">
-                {['LinkedIn', 'Instagram', 'Email'].map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-off-white/60 text-sm font-body hover:text-gold-text transition-colors">
-                      {l}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a href="mailto:hello@monire.ch" className="text-off-white/60 text-sm font-body hover:text-gold-text transition-colors">
+                    hello@monire.ch
+                  </a>
+                </li>
+                <li>
+                  <span className="text-off-white/60 text-sm font-body">Zürich, Switzerland</span>
+                </li>
+                <li>
+                  <span className="text-off-white/60 text-sm font-body">Serving clients worldwide</span>
+                </li>
               </ul>
             </div>
           </div>
