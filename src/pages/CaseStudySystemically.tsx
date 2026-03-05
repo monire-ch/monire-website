@@ -31,7 +31,7 @@ const CaseStudySystemically = () => {
             </h1>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-10 lg:gap-14 mb-16">
             {/* Scrollable website preview */}
             <ScrollReveal>
               <div className="rounded-xl overflow-hidden border border-border bg-card h-[500px] md:h-[600px] overflow-y-auto">
