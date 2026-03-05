@@ -49,16 +49,32 @@
   "services": {
     "eyebrow": "Services",
     "title": "Practical Solutions That Move Your Business Forward",
+    "cta": "Latest case study",
     "items": [
       {
         "badge": "Design",
         "title": "Web Design",
-        "desc": "We design and build responsive, SEO-optimized websites tailored to your business goals. From branding to launch, we handle everything so you can focus on running your business. Includes a custom CMS, SSL, hosting support, and 5 hours of monthly maintenance."
+        "desc": "We design websites that feel intuitive and simple to navigate. Everything has a purpose, nothing gets added just because it \"looks cool.\" We want your visitors to feel at ease — and to find what they need quickly."
+      },
+      {
+        "badge": "Development",
+        "title": "Web Development",
+        "desc": "We build fast, reliable websites using modern frameworks. Clean code, responsive layouts, and performance-first architecture ensure your site works flawlessly across all devices and browsers."
+      },
+      {
+        "badge": "Migration",
+        "title": "Website Migrations",
+        "desc": "Moving platforms doesn't have to be stressful. We handle the entire migration process — from content transfer to SEO preservation — so you can upgrade without losing what you've built."
+      },
+      {
+        "badge": "SEO",
+        "title": "SEO & Analytics (Essentials)",
+        "desc": "We set up the essentials so your website gets found. From technical SEO and meta tags to Google Analytics and Search Console, we make sure you have the foundation to grow organically."
       },
       {
         "badge": "Automation",
-        "title": "Workflow Automation",
-        "desc": "We build smart automations using tools like n8n, Make, and Zapier to save you hours of manual work each week. From lead capture to invoicing, we connect your tools and streamline your processes so your business runs smoothly in the background."
+        "title": "AI Automations & Workflows",
+        "desc": "Simple, practical automations that handle repetitive tasks and free up your time. We build small, reliable workflows using tools like n8n to sort documents, process information, and organize data, so you can focus on what matters."
       }
     ]
   },

@@ -48,18 +48,33 @@
   },
   "services": {
     "eyebrow": "Usługi",
-    "title": "Praktyczne rozwiązania, które",
-    "titleAccent": "rozwijają Twój biznes",
+    "title": "Praktyczne rozwiązania, które rozwijają Twój biznes",
+    "cta": "Najnowsze case study",
     "items": [
       {
         "badge": "Design",
         "title": "Projektowanie stron",
-        "desc": "Projektujemy i budujemy responsywne, zoptymalizowane pod kątem SEO strony internetowe dopasowane do Twoich celów biznesowych. Od brandingu po uruchomienie, zajmujemy się wszystkim. W cenie: indywidualny CMS, SSL, wsparcie hostingowe i 5 godzin miesięcznego utrzymania."
+        "desc": "Projektujemy strony, które są intuicyjne i proste w nawigacji. Wszystko ma swój cel — nic nie jest dodawane tylko dlatego, że \"fajnie wygląda\". Chcemy, aby Twoi odwiedzający czuli się swobodnie i szybko znajdowali to, czego potrzebują."
+      },
+      {
+        "badge": "Rozwój",
+        "title": "Tworzenie stron",
+        "desc": "Budujemy szybkie, niezawodne strony z użyciem nowoczesnych frameworków. Czysty kod, responsywne layouty i architektura nastawiona na wydajność zapewniają bezproblemowe działanie na wszystkich urządzeniach."
+      },
+      {
+        "badge": "Migracja",
+        "title": "Migracje stron",
+        "desc": "Zmiana platformy nie musi być stresująca. Zajmujemy się całym procesem migracji — od przeniesienia treści po zachowanie SEO — abyś mógł dokonać aktualizacji bez utraty tego, co zbudowałeś."
+      },
+      {
+        "badge": "SEO",
+        "title": "SEO i analityka (podstawy)",
+        "desc": "Konfigurujemy niezbędne elementy, aby Twoja strona była widoczna. Od technicznego SEO i meta tagów po Google Analytics i Search Console — tworzymy fundament do organicznego wzrostu."
       },
       {
         "badge": "Automatyzacja",
-        "title": "Automatyzacja procesów",
-        "desc": "Budujemy inteligentne automatyzacje za pomocą narzędzi takich jak n8n, Make i Zapier, aby zaoszczędzić Ci godzin ręcznej pracy każdego tygodnia. Od pozyskiwania leadów po fakturowanie — łączymy Twoje narzędzia i usprawniamy procesy."
+        "title": "Automatyzacje AI i workflow",
+        "desc": "Proste, praktyczne automatyzacje obsługujące powtarzalne zadania i uwalniające Twój czas. Budujemy małe, niezawodne workflow z użyciem narzędzi jak n8n do sortowania dokumentów, przetwarzania informacji i organizacji danych."
       }
     ]
   },

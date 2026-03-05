@@ -48,18 +48,33 @@
   },
   "services": {
     "eyebrow": "Leistungen",
-    "title": "Praktische Lösungen, die Ihr",
-    "titleAccent": "Unternehmen voranbringen",
+    "title": "Praktische Lösungen, die Ihr Unternehmen voranbringen",
+    "cta": "Neueste Fallstudie",
     "items": [
       {
         "badge": "Design",
         "title": "Webdesign",
-        "desc": "Wir gestalten und entwickeln responsive, SEO-optimierte Websites, die auf Ihre Geschäftsziele zugeschnitten sind. Von Branding bis Launch kümmern wir uns um alles, damit Sie sich auf Ihr Geschäft konzentrieren können. Inklusive individuellem CMS, SSL, Hosting-Support und 5 Stunden monatlicher Wartung."
+        "desc": "Wir gestalten Websites, die sich intuitiv und einfach navigieren lassen. Alles hat einen Zweck — nichts wird hinzugefügt, nur weil es \"cool aussieht\". Ihre Besucher sollen sich wohlfühlen und schnell finden, was sie brauchen."
+      },
+      {
+        "badge": "Entwicklung",
+        "title": "Webentwicklung",
+        "desc": "Wir entwickeln schnelle, zuverlässige Websites mit modernen Frameworks. Sauberer Code, responsive Layouts und Performance-Architektur sorgen dafür, dass Ihre Seite auf allen Geräten einwandfrei funktioniert."
+      },
+      {
+        "badge": "Migration",
+        "title": "Website-Migrationen",
+        "desc": "Ein Plattformwechsel muss nicht stressig sein. Wir übernehmen den gesamten Migrationsprozess — von der Inhaltsübertragung bis zur SEO-Erhaltung — damit Sie upgraden können, ohne das Aufgebaute zu verlieren."
+      },
+      {
+        "badge": "SEO",
+        "title": "SEO & Analytics (Grundlagen)",
+        "desc": "Wir richten die Grundlagen ein, damit Ihre Website gefunden wird. Von technischem SEO und Meta-Tags bis zu Google Analytics und Search Console — wir schaffen die Basis für organisches Wachstum."
       },
       {
         "badge": "Automatisierung",
-        "title": "Workflow-Automatisierung",
-        "desc": "Wir entwickeln intelligente Automatisierungen mit Tools wie n8n, Make und Zapier, um Ihnen jede Woche Stunden manueller Arbeit zu ersparen. Von der Lead-Erfassung bis zur Rechnungsstellung verbinden wir Ihre Tools und optimieren Ihre Prozesse."
+        "title": "KI-Automatisierungen & Workflows",
+        "desc": "Einfache, praktische Automatisierungen, die repetitive Aufgaben erledigen und Ihre Zeit freisetzen. Wir bauen kleine, zuverlässige Workflows mit Tools wie n8n, um Dokumente zu sortieren, Informationen zu verarbeiten und Daten zu organisieren."
       }
     ]
   },
