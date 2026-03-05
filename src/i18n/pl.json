@@ -89,26 +89,13 @@
           "features": ["Nielimitowane strony", "Pełne planowanie UX + UI", "Zaawansowany CMS", "Integracje z narzędziami: Newsletter, rezerwacje, kalendarz, live chat, portal klienta", "Kompleksowa strategia SEO", "Obsługa wielu języków"]
         }
       ],
-      "automation": [
-        {
-          "name": "Starter",
-          "price": "from CHF1'500",
-          "desc": "Idealne dla: małych zespołów chcących zaoszczędzić czas na powtarzalnych zadaniach.",
-          "features": ["Do 3 automatyzacji", "Podstawowe integracje", "Powiadomienia e-mail", "Konfiguracja i testy"]
-        },
-        {
-          "name": "Advanced",
-          "price": "from CHF3'000",
-          "desc": "Idealne dla: rozwijających się firm potrzebujących połączonych workflow.",
-          "features": ["Do 8 automatyzacji", "Złożone workflow", "Integracja CRM", "Indywidualne dashboardy", "Sesja szkoleniowa", "Miesięczna optymalizacja"]
-        },
-        {
-          "name": "Premium",
-          "price": "from CHF5'000",
-          "desc": "Idealne dla: firm gotowych na pełną automatyzację operacji.",
-          "features": ["Nielimitowane automatyzacje", "Workflow z AI", "Pełny audyt systemu", "Dedykowane wsparcie", "Przeglądy kwartalne"]
-        }
-      ]
+      "automation": []
+    },
+    "automationBlock": {
+      "title": "Automatyzacje AI i systemy workflow",
+      "desc": "Budujemy niestandardowe systemy automatyzacji, które redukują manualną, powtarzalną pracę i płynnie łączą narzędzia, których już używasz. Ceny ustalane są indywidualnie po krótkiej rozmowie wstępnej.",
+      "cta": "Rozpocznij",
+      "caseStudy": "Najnowsze case study"
     }
   },
   "portfolio": {
