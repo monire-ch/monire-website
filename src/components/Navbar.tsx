@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown, Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
@@ -12,10 +13,14 @@ const languages = [
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('#');
+
+  const getHref = (hash: string) => isHome ? hash : `/${hash}`;
 
   const navLinks = [
     { label: t('nav.home'), href: '#' },
@@ -59,7 +64,7 @@ const Navbar = () => {
             boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
           }}
         >
-          <a href="#" className="flex-shrink-0 pl-2">
+          <a href={getHref('#')} className="flex-shrink-0 pl-2">
             <img src={logo} alt="Moniré" className="h-7" />
           </a>
 
@@ -67,7 +72,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={getHref(link.href)}
                 onClick={() => setActiveLink(link.href)}
                 className={`relative px-4 py-1.5 rounded-full text-[15px] font-body tracking-wide transition-all duration-200 ${
                   activeLink === link.href
@@ -136,7 +141,7 @@ const Navbar = () => {
 
       {/* ─── Mobile Top Bar ─── */}
       <header className="fixed top-0 left-0 right-0 z-50 md:hidden flex items-center justify-between px-5 py-4">
-        <a href="#">
+        <a href={getHref('#')}>
           <img src={logo} alt="Moniré" className="h-7" />
         </a>
         <button
@@ -178,7 +183,7 @@ const Navbar = () => {
               {navLinks.map((link, i) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={getHref(link.href)}
                   onClick={() => { setActiveLink(link.href); setMobileOpen(false); }}
                   className="group block py-5 border-b border-off-white/[0.07] transition-colors duration-200"
                   style={{ animationDelay: `${i * 40}ms` }}
