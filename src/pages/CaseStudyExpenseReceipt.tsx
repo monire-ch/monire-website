@@ -130,7 +130,7 @@ const CaseStudyExpenseReceipt = () => {
                   AI Automation
                 </span>
               </div>
-              <div className="flex justify-between items-start py-4 border-b border-border">
+              <div className="flex justify-between items-start py-4">
                 <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.tools')}</span>
                 <div className="flex flex-wrap gap-2 justify-end">
                   {tools.map((tool) => (
