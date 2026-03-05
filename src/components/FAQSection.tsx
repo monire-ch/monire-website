@@ -24,7 +24,7 @@ const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen:
       </button>
       <div className="accordion-content" style={{ height }}>
         <div ref={contentRef} className="pb-5">
-          <p className="text-main-teal/70 text-[15px] font-body leading-relaxed">{a}</p>
+          <p className="text-off-white/70 text-[15px] font-body leading-relaxed">{a}</p>
         </div>
       </div>
     </div>
