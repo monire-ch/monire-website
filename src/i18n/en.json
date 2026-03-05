@@ -202,7 +202,7 @@
     "title": "Frequently Asked Questions",
     "categories": [
       {
-        "label": "Design & Development",
+        "label": "General Information",
         "items": [
           {
             "q": "What information do you need from me to start?",
@@ -215,6 +215,27 @@
           {
             "q": "Do you work with international clients?",
             "a": "Yes! We're based in Switzerland and work remotely with clients worldwide. Communication is async-friendly, and we'll align on meeting windows that work across time zones."
+          }
+        ]
+      },
+      {
+        "label": "Design & Development",
+        "items": [
+          {
+            "q": "How long does it take to build a website?",
+            "a": "Typically 4–8 weeks depending on the project scope. We'll give you a clear timeline during our discovery call."
+          },
+          {
+            "q": "Do I need to provide content?",
+            "a": "It helps if you have content ready, but we can guide you through the process and help with copywriting if needed."
+          },
+          {
+            "q": "What platform do you build on?",
+            "a": "We primarily use modern frameworks like React and Next.js, along with headless CMS solutions. We choose the best stack for your specific needs."
+          },
+          {
+            "q": "Can I update the website myself?",
+            "a": "Absolutely! Every website comes with a user-friendly CMS. We also provide training so you feel confident making updates."
           }
         ]
       },
