@@ -64,7 +64,7 @@ const Navbar = () => {
             boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
           }}
         >
-          <a href="#" className="flex-shrink-0 pl-2">
+          <a href={getHref('#')} className="flex-shrink-0 pl-2">
             <img src={logo} alt="Moniré" className="h-7" />
           </a>
 
