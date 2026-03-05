@@ -21,7 +21,7 @@ const Index = () => {
       <PortfolioSection />
       <FAQSection />
       <CTASection />
-      <Footer />
+      <Footer hideWave />
     </div>
   );
 };
