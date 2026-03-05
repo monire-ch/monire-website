@@ -14,7 +14,7 @@ const CaseStudyExpenseReceipt = () => {
   return (
     <>
       <Navbar />
-      <main className="bg-background min-h-screen pt-28 md:pt-36 pb-0">
+      <main className="bg-background min-h-screen pt-32 md:pt-40 pb-0">
         <div className="max-w-5xl mx-auto px-6">
           {/* Back link */}
           <ScrollReveal>
