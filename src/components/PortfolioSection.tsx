@@ -59,7 +59,7 @@ const PortfolioSection = () => {
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 items-start">
             {/* Category sidebar — dark teal card like reference */}
-            <div className="rounded-2xl bg-dark-teal-surface p-5 flex md:flex-col gap-1 flex-wrap">
+            <div className="rounded-2xl p-5 flex md:flex-col gap-1 flex-wrap" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
               {categories.map((cat) => {
                 const isActive = currentProject?.category === cat;
                 return (
