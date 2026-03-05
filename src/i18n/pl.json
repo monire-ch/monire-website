@@ -113,7 +113,7 @@
     "title": "Często zadawane pytania",
     "categories": [
       {
-        "label": "Informacje ogólne",
+        "label": "Design i rozwój",
         "items": [
           { "q": "Jakie informacje potrzebujecie, żeby zacząć?", "a": "Musimy zrozumieć Twoje cele biznesowe, grupę docelową, potrzebne funkcje, preferencje designu, harmonogram i budżet. Jeśli masz istniejące materiały marki, treści lub strony, to również pomoże. Wypełnij nasz formularz briefu klienta, abyśmy mogli lepiej zrozumieć Twoje potrzeby." },
           { "q": "Czy możecie pomóc z SEO?", "a": "Nasz główny focus to rozwój i automatyzacja AI, ale budujemy strony z uwzględnieniem najlepszych praktyk SEO. Możemy też polecić zaufanych partnerów do bieżących usług SEO." },
@@ -121,7 +121,7 @@
         ]
       },
       {
-        "label": "Projekt i proces",
+        "label": "Automatyzacje AI",
         "items": [
           { "q": "Jak długo trwa budowa strony?", "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji." },
           { "q": "Czy muszę dostarczyć treści?", "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem." },
@@ -130,7 +130,7 @@
         ]
       },
       {
-        "label": "Wsparcie i utrzymanie",
+        "label": "Utrzymanie",
         "items": [
           { "q": "Czy oferujecie bieżące wsparcie?", "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia." },
           { "q": "Co jeśli potrzebuję zmian po uruchomieniu?", "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno." }

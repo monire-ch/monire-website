@@ -202,7 +202,7 @@
     "title": "Frequently Asked Questions",
     "categories": [
       {
-        "label": "General Information",
+        "label": "Design & Development",
         "items": [
           {
             "q": "What information do you need from me to start?",
@@ -219,7 +219,7 @@
         ]
       },
       {
-        "label": "Project & Process",
+        "label": "AI Automations",
         "items": [
           {
             "q": "How long does it take to build a website?",
@@ -240,7 +240,7 @@
         ]
       },
       {
-        "label": "Support & Maintenance",
+        "label": "Maintenance",
         "items": [
           {
             "q": "Do you offer ongoing support?",
