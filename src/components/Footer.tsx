@@ -88,7 +88,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
         </div>
 
         <div className="border-t border-off-white/10 pt-6 text-center">
-          <p className="text-off-white/40 text-xs font-body">{t('footer.copyright')}</p>
+          <p className="text-off-white text-xs font-body">{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>
