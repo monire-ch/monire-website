@@ -118,7 +118,7 @@
       "webDesign": [
         {
           "name": "Starter",
-          "price": "~ CHF3'500",
+          "price": "from CHF3'500",
           "features": [
             "Up to 5 pages",
             "Responsive design",
@@ -130,7 +130,7 @@
         },
         {
           "name": "Advanced",
-          "price": "~ CHF6'000",
+          "price": "from CHF6'000",
           "features": [
             "Up to 10 pages",
             "Custom animations",
@@ -144,7 +144,7 @@
         },
         {
           "name": "Premium",
-          "price": "~ CHF9'000",
+          "price": "from CHF9'000",
           "features": [
             "Unlimited pages",
             "E-commerce ready",
@@ -158,12 +158,12 @@
       "automation": [
         {
           "name": "Starter",
-          "price": "~ CHF1'500",
+          "price": "from CHF1'500",
           "features": ["Up to 3 automations", "Basic integrations", "Email notifications", "Setup & testing"]
         },
         {
           "name": "Advanced",
-          "price": "~ CHF3'000",
+          "price": "from CHF3'000",
           "features": [
             "Up to 8 automations",
             "Complex workflows",
@@ -175,7 +175,7 @@
         },
         {
           "name": "Premium",
-          "price": "~ CHF5'000",
+          "price": "from CHF5'000",
           "features": [
             "Unlimited automations",
             "AI-powered workflows",
