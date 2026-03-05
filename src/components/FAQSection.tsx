@@ -31,9 +31,28 @@ const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen:
   );
 };
 
+type FaqItem = {
+  q: string;
+  a: string;
+};
+
 type FaqCategory = {
   label: string;
-  items: Array<{ q: string; a: string }>;
+  items: FaqItem[];
+};
+
+const isFaqCategoryArray = (value: unknown): value is FaqCategory[] => {
+  return (
+    Array.isArray(value) &&
+    value.every(
+      (category) =>
+        typeof category === 'object' &&
+        category !== null &&
+        'label' in category &&
+        'items' in category &&
+        Array.isArray((category as FaqCategory).items)
+    )
+  );
 };
 
 const FAQSection = () => {
@@ -41,8 +60,17 @@ const FAQSection = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const categories = t('faq.categories', { returnObjects: true }) as FaqCategory[];
-  const activeCategory = categories[activeTab];
+  const rawCategories = t('faq.categories', { returnObjects: true });
+  const rawItems = t('faq.items', { returnObjects: true });
+
+  const categories: FaqCategory[] = isFaqCategoryArray(rawCategories)
+    ? rawCategories
+    : Array.isArray(rawItems)
+      ? [{ label: t('faq.title'), items: rawItems as FaqItem[] }]
+      : [];
+
+  const safeActiveTab = Math.min(activeTab, Math.max(categories.length - 1, 0));
+  const activeCategory = categories[safeActiveTab];
 
   const handleTabChange = (i: number) => {
     setActiveTab(i);
@@ -84,9 +112,9 @@ const FAQSection = () => {
 
               {/* Right content — accordion */}
               <div className="md:w-3/5 p-8 md:p-10">
-                {activeCategory.items.map((faq, i) => (
+                {(activeCategory?.items ?? []).map((faq, i) => (
                   <AccordionItem
-                    key={`${activeTab}-${i}`}
+                    key={`${safeActiveTab}-${i}`}
                     q={faq.q}
                     a={faq.a}
                     isOpen={openIndex === i}
