@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
+import ContactModal from './ContactModal';
 
 
 const tabKeys = ['webDesign', 'automation'] as const;
@@ -8,6 +9,7 @@ const tabKeys = ['webDesign', 'automation'] as const;
 const PricingSection = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<typeof tabKeys[number]>('webDesign');
+  const [contactOpen, setContactOpen] = useState(false);
 
   const plans = t(`pricing.plans.${activeTab}`, { returnObjects: true }) as Array<{
     name: string; price: string; desc: string; features: string[];
