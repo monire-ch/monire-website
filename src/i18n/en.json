@@ -59,17 +59,17 @@
       {
         "badge": "Development",
         "title": "Web Development",
-        "desc": "We build fast, reliable websites using modern frameworks. Clean code, responsive layouts, and performance-first architecture ensure your site works flawlessly across all devices and browsers."
+        "desc": "Most of the websites we build are made in Webflow, so you can easily update and maintain them yourself. For more custom projects, we choose the right stack together—React, Next.js, or Astro—along with reliable infrastructure for hosting and deployment. The goal is always the same: it should just work."
       },
       {
         "badge": "Migration",
         "title": "Website Migrations",
-        "desc": "Moving platforms doesn't have to be stressful. We handle the entire migration process — from content transfer to SEO preservation — so you can upgrade without losing what you've built."
+        "desc": "If your current setup, whether it's WordPress, Wix, or something more custom, feels heavy, outdated, or hard to manage, we'll help you move to a smoother, easier system without losing anything important along the way."
       },
       {
         "badge": "SEO",
         "title": "SEO & Analytics (Essentials)",
-        "desc": "We set up the essentials so your website gets found. From technical SEO and meta tags to Google Analytics and Search Console, we make sure you have the foundation to grow organically."
+        "desc": "We make your site easy to understand — for both search engines and AI search tools. Clear structure, meaningful content, and simple analytics so you always know what's working."
       },
       {
         "badge": "Automation",
