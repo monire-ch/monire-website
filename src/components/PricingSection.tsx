@@ -74,7 +74,7 @@ const PricingSection = () => {
                 <button className="btn-gold text-sm" onClick={() => setContactOpen(true)}>
                   {t('pricing.automationBlock.cta')}
                 </button>
-                <button className="btn-outline-gold text-sm">
+                <button className="btn-outline-gold text-sm" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
                   {t('pricing.automationBlock.caseStudy')}
                 </button>
               </div>
