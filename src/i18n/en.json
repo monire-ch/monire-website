@@ -200,30 +200,57 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "items": [
+    "categories": [
       {
-        "q": "How long does it take to build a website?",
-        "a": "Typically 4–8 weeks depending on the project scope. We'll give you a clear timeline during our discovery call."
+        "label": "General Information",
+        "items": [
+          {
+            "q": "What information do you need from me to start?",
+            "a": "We'll need to understand your business goals, target audience, key features or functionality you need, design preferences, timeline, and budget. If you have existing brand assets, content, or websites, those are helpful too. Please feel free to complete our client brief form, so we can better understand your needs and prepare for our first conversation."
+          },
+          {
+            "q": "Can you help with SEO?",
+            "a": "While our primary focus is on development and AI automation, we build websites with SEO best practices in mind. We can also recommend trusted partners for ongoing SEO services."
+          },
+          {
+            "q": "Do you work with international clients?",
+            "a": "Yes! We're based in Switzerland and work remotely with clients worldwide. Communication is async-friendly, and we'll align on meeting windows that work across time zones."
+          }
+        ]
       },
       {
-        "q": "Do I need to provide content?",
-        "a": "It helps if you have content ready, but we can guide you through the process and help with copywriting if needed."
+        "label": "Project & Process",
+        "items": [
+          {
+            "q": "How long does it take to build a website?",
+            "a": "Typically 4–8 weeks depending on the project scope. We'll give you a clear timeline during our discovery call."
+          },
+          {
+            "q": "Do I need to provide content?",
+            "a": "It helps if you have content ready, but we can guide you through the process and help with copywriting if needed."
+          },
+          {
+            "q": "What platform do you build on?",
+            "a": "We primarily use modern frameworks like React and Next.js, along with headless CMS solutions. We choose the best stack for your specific needs."
+          },
+          {
+            "q": "Can I update the website myself?",
+            "a": "Absolutely! Every website comes with a user-friendly CMS. We also provide training so you feel confident making updates."
+          }
+        ]
       },
       {
-        "q": "What platform do you build on?",
-        "a": "We primarily use modern frameworks like React and Next.js, along with headless CMS solutions. We choose the best stack for your specific needs."
-      },
-      {
-        "q": "Can I update the website myself?",
-        "a": "Absolutely! Every website comes with a user-friendly CMS. We also provide training so you feel confident making updates."
-      },
-      {
-        "q": "Do you offer ongoing support?",
-        "a": "Yes, our Advanced and Premium plans include monthly maintenance hours. We also offer standalone support packages."
-      },
-      {
-        "q": "What if I need changes after launch?",
-        "a": "We offer flexible support options. Small changes are often covered by maintenance hours, and larger updates can be quoted separately."
+        "label": "Support & Maintenance",
+        "items": [
+          {
+            "q": "Do you offer ongoing support?",
+            "a": "Yes, our Advanced and Premium plans include monthly maintenance hours. We also offer standalone support packages."
+          },
+          {
+            "q": "What if I need changes after launch?",
+            "a": "We offer flexible support options. Small changes are often covered by maintenance hours, and larger updates can be quoted separately."
+          }
+        ]
       }
     ]
   },

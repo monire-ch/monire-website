@@ -111,13 +111,31 @@
   },
   "faq": {
     "title": "Często zadawane pytania",
-    "items": [
-      { "q": "Jak długo trwa budowa strony?", "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji." },
-      { "q": "Czy muszę dostarczyć treści?", "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem." },
-      { "q": "Na jakiej platformie budujecie?", "a": "Korzystamy głównie z nowoczesnych frameworków jak React i Next.js oraz rozwiązań headless CMS. Wybieramy najlepszy stack dla Twoich potrzeb." },
-      { "q": "Czy mogę sam aktualizować stronę?", "a": "Oczywiście! Każda strona ma przyjazny CMS. Zapewniamy również szkolenie, abyś czuł się pewnie wprowadzając zmiany." },
-      { "q": "Czy oferujecie bieżące wsparcie?", "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia." },
-      { "q": "Co jeśli potrzebuję zmian po uruchomieniu?", "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno." }
+    "categories": [
+      {
+        "label": "Informacje ogólne",
+        "items": [
+          { "q": "Jakie informacje potrzebujecie, żeby zacząć?", "a": "Musimy zrozumieć Twoje cele biznesowe, grupę docelową, potrzebne funkcje, preferencje designu, harmonogram i budżet. Jeśli masz istniejące materiały marki, treści lub strony, to również pomoże. Wypełnij nasz formularz briefu klienta, abyśmy mogli lepiej zrozumieć Twoje potrzeby." },
+          { "q": "Czy możecie pomóc z SEO?", "a": "Nasz główny focus to rozwój i automatyzacja AI, ale budujemy strony z uwzględnieniem najlepszych praktyk SEO. Możemy też polecić zaufanych partnerów do bieżących usług SEO." },
+          { "q": "Czy pracujecie z klientami międzynarodowymi?", "a": "Tak! Mamy siedzibę w Szwajcarii i pracujemy zdalnie z klientami na całym świecie. Komunikacja jest przyjazna asynchronicznie, a spotkania dostosowujemy do różnych stref czasowych." }
+        ]
+      },
+      {
+        "label": "Projekt i proces",
+        "items": [
+          { "q": "Jak długo trwa budowa strony?", "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji." },
+          { "q": "Czy muszę dostarczyć treści?", "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem." },
+          { "q": "Na jakiej platformie budujecie?", "a": "Korzystamy głównie z nowoczesnych frameworków jak React i Next.js oraz rozwiązań headless CMS. Wybieramy najlepszy stack dla Twoich potrzeb." },
+          { "q": "Czy mogę sam aktualizować stronę?", "a": "Oczywiście! Każda strona ma przyjazny CMS. Zapewniamy również szkolenie, abyś czuł się pewnie wprowadzając zmiany." }
+        ]
+      },
+      {
+        "label": "Wsparcie i utrzymanie",
+        "items": [
+          { "q": "Czy oferujecie bieżące wsparcie?", "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia." },
+          { "q": "Co jeśli potrzebuję zmian po uruchomieniu?", "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno." }
+        ]
+      }
     ]
   },
   "cta": {

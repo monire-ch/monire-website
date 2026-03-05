@@ -111,13 +111,31 @@
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
-    "items": [
-      { "q": "Wie lange dauert es, eine Website zu erstellen?", "a": "In der Regel 4–8 Wochen, je nach Projektumfang. Wir geben Ihnen einen klaren Zeitplan während unseres Erstgesprächs." },
-      { "q": "Muss ich Inhalte bereitstellen?", "a": "Es hilft, wenn Sie Inhalte bereit haben, aber wir können Sie durch den Prozess begleiten und bei Bedarf beim Texten helfen." },
-      { "q": "Auf welcher Plattform bauen Sie?", "a": "Wir verwenden hauptsächlich moderne Frameworks wie React und Next.js sowie Headless-CMS-Lösungen. Wir wählen den besten Stack für Ihre spezifischen Anforderungen." },
-      { "q": "Kann ich die Website selbst aktualisieren?", "a": "Absolut! Jede Website verfügt über ein benutzerfreundliches CMS. Wir bieten auch eine Schulung an, damit Sie sich bei Änderungen sicher fühlen." },
-      { "q": "Bieten Sie laufenden Support an?", "a": "Ja, unsere Advanced- und Premium-Pläne beinhalten monatliche Wartungsstunden. Wir bieten auch eigenständige Support-Pakete an." },
-      { "q": "Was, wenn ich nach dem Launch Änderungen brauche?", "a": "Wir bieten flexible Support-Optionen. Kleine Änderungen werden oft von den Wartungsstunden abgedeckt, grössere Updates können separat angeboten werden." }
+    "categories": [
+      {
+        "label": "Allgemeine Informationen",
+        "items": [
+          { "q": "Welche Informationen brauchen Sie von mir, um zu starten?", "a": "Wir müssen Ihre Geschäftsziele, Zielgruppe, gewünschte Funktionen, Designpräferenzen, Zeitplan und Budget verstehen. Vorhandene Markenassets, Inhalte oder Websites sind ebenfalls hilfreich. Füllen Sie gerne unser Kundenbriefing-Formular aus, damit wir Ihre Bedürfnisse besser verstehen können." },
+          { "q": "Können Sie bei SEO helfen?", "a": "Unser Hauptfokus liegt auf Entwicklung und KI-Automatisierung, aber wir bauen Websites mit SEO-Best-Practices. Wir können auch vertrauenswürdige Partner für laufende SEO-Dienstleistungen empfehlen." },
+          { "q": "Arbeiten Sie mit internationalen Kunden?", "a": "Ja! Wir sind in der Schweiz ansässig und arbeiten remote mit Kunden weltweit. Die Kommunikation ist asynchron-freundlich, und wir stimmen Meetingzeiten über Zeitzonen hinweg ab." }
+        ]
+      },
+      {
+        "label": "Projekt & Prozess",
+        "items": [
+          { "q": "Wie lange dauert es, eine Website zu erstellen?", "a": "In der Regel 4–8 Wochen, je nach Projektumfang. Wir geben Ihnen einen klaren Zeitplan während unseres Erstgesprächs." },
+          { "q": "Muss ich Inhalte bereitstellen?", "a": "Es hilft, wenn Sie Inhalte bereit haben, aber wir können Sie durch den Prozess begleiten und bei Bedarf beim Texten helfen." },
+          { "q": "Auf welcher Plattform bauen Sie?", "a": "Wir verwenden hauptsächlich moderne Frameworks wie React und Next.js sowie Headless-CMS-Lösungen. Wir wählen den besten Stack für Ihre spezifischen Anforderungen." },
+          { "q": "Kann ich die Website selbst aktualisieren?", "a": "Absolut! Jede Website verfügt über ein benutzerfreundliches CMS. Wir bieten auch eine Schulung an, damit Sie sich bei Änderungen sicher fühlen." }
+        ]
+      },
+      {
+        "label": "Support & Wartung",
+        "items": [
+          { "q": "Bieten Sie laufenden Support an?", "a": "Ja, unsere Advanced- und Premium-Pläne beinhalten monatliche Wartungsstunden. Wir bieten auch eigenständige Support-Pakete an." },
+          { "q": "Was, wenn ich nach dem Launch Änderungen brauche?", "a": "Wir bieten flexible Support-Optionen. Kleine Änderungen werden oft von den Wartungsstunden abgedeckt, grössere Updates können separat angeboten werden." }
+        ]
+      }
     ]
   },
   "cta": {
