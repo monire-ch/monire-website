@@ -42,7 +42,7 @@
       },
       {
         "title": "Easy Updates",
-        "desc": "Once your site is live, you’ll have full control. Editing content is simple and intuitive."
+        "desc": "Once your site is live, you'll have full control. Editing content is simple and intuitive."
       }
     ]
   },
@@ -106,10 +106,11 @@
     "title": "Two Services, One Goal:",
     "titleAccent": "Helping Your Business Grow.",
     "tabs": {
-      "webDesign": "Web Design",
-      "automation": "Automation"
+      "webDesign": "Web Design & Development",
+      "automation": "AI Automations"
     },
-    "getStarted": "Get Started",
+    "getStarted": "Get started",
+    "mostPopular": "Most Popular",
     "custom": {
       "title": "Need Something More Specific?",
       "desc": "Every business is unique. If our packages don't quite fit, we'll create a custom solution tailored to your specific needs and budget."
@@ -119,39 +120,41 @@
         {
           "name": "Starter",
           "price": "from CHF3'500",
+          "desc": "Ideal for: New businesses, coaches, freelancers, small consultancies.",
           "features": [
             "Up to 5 pages",
-            "Responsive design",
-            "Basic SEO setup",
+            "Clean, professional visual style",
+            "Mobile-ready + fast loading",
             "Contact form",
-            "CMS integration",
-            "2 revision rounds"
+            "Basic CMS for easy text/image updates",
+            "Essential on-page SEO (meta tags, sitemap, search-friendly structure)"
           ]
         },
         {
           "name": "Advanced",
           "price": "from CHF6'000",
+          "desc": "Best for SMEs, agencies, boutique firms, B2B services.",
           "features": [
             "Up to 10 pages",
-            "Custom animations",
-            "Advanced SEO",
-            "Blog setup",
-            "Analytics integration",
-            "CMS with training",
-            "3 revision rounds",
-            "5h monthly maintenance"
+            "Custom visual design** + subtle animations",
+            "More flexible CMS structures (blogs, case studies, product/service lists)",
+            "SEO optimization focused on ranking (not just set-up)",
+            "Google Analytics with event tracking",
+            "Integration of 1-2 third-party tools (booking system, CRM form, etc.)",
+            "Support for 2 languages"
           ]
         },
         {
           "name": "Premium",
           "price": "from CHF9'000",
+          "desc": "Best for: growing firms, established brands, companies needing workflows & integrations.",
           "features": [
             "Unlimited pages",
-            "E-commerce ready",
-            "Full branding package",
-            "Priority support",
-            "Advanced integrations",
-            "Quarterly reviews"
+            "Full custom UX + UI layout planning",
+            "Advanced CMS",
+            "Integrations with tools like: Newsletter, booking, calendar, live chat, client portal",
+            "Comprehensive SEO strategy",
+            "Multi-language support"
           ]
         }
       ],
@@ -159,11 +162,13 @@
         {
           "name": "Starter",
           "price": "from CHF1'500",
+          "desc": "Perfect for: small teams looking to save time on repetitive tasks.",
           "features": ["Up to 3 automations", "Basic integrations", "Email notifications", "Setup & testing"]
         },
         {
           "name": "Advanced",
           "price": "from CHF3'000",
+          "desc": "Best for: growing businesses needing connected workflows.",
           "features": [
             "Up to 8 automations",
             "Complex workflows",
@@ -176,6 +181,7 @@
         {
           "name": "Premium",
           "price": "from CHF5'000",
+          "desc": "Best for: companies ready to fully automate operations.",
           "features": [
             "Unlimited automations",
             "AI-powered workflows",
