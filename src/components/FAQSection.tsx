@@ -37,14 +37,14 @@ const FAQSection = () => {
   const items = t('faq.items', { returnObjects: true }) as Array<{ q: string; a: string }>;
 
   return (
-    <section id="faq" className="py-20 md:py-28 px-6">
+    <section id="faq" className="about-flow py-20 md:py-28 px-6">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal className="text-center mb-12">
-          <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('faq.title')}</h2>
+          <h2 className="font-body text-3xl md:text-4xl text-off-white">{t('faq.title')}</h2>
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="bg-neutral-card rounded-xl border border-neutral-border p-6 md:p-8">
+          <div className="dark-surface-card rounded-xl border border-white/10 p-6 md:p-8">
             {items.map((faq, i) => (
               <AccordionItem
                 key={i}
