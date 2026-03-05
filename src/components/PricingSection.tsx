@@ -121,7 +121,7 @@ const PricingSection = () => {
                       }`}>
                         {plan.desc}
                       </p>
-                      <ul className="space-y-2.5 mb-8 flex-1">
+                      <ul className="space-y-2.5 mb-8 flex-1 text-left">
                         {plan.features.map((f) => (
                           <li key={f} className={`text-[14px] font-body flex items-start gap-2.5 ${
                             plan.featured ? 'text-deep-ink/80' : 'text-off-white'
