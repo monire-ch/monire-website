@@ -6,7 +6,7 @@ const FeaturesSection = () => {
   const items = t('features.items', { returnObjects: true }) as Array<{ title: string; desc: string }>;
 
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section className="py-20 md:py-28 pb-28 md:pb-36 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('features.eyebrow')}</span>
