@@ -13,7 +13,7 @@ const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen:
   }, [isOpen]);
 
   return (
-    <div className="border-b border-neutral-border">
+    <div className="border-b border-white/10">
       <button onClick={toggle} className="w-full flex items-center justify-between py-5 text-left">
         <span className="font-display text-[16px] text-main-teal pr-4">{q}</span>
         <span className={`accordion-icon text-main-teal flex-shrink-0 ${isOpen ? 'open' : ''}`}>
