@@ -3,7 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { useFontsLoaded } from '@/hooks/useFontsLoaded';
 import goldFill from '@/assets/gold-fill.webp';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onCtaClick?: () => void;
+}
+
+const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   const { t } = useTranslation();
   const fontsLoaded = useFontsLoaded();
   const [animate, setAnimate] = useState(false);
@@ -69,9 +73,9 @@ const HeroSection = () => {
           className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''}`}
           style={{ transitionDelay: '420ms' }}
         >
-          <a href="#services" className="btn-gold inline-block text-sm">
+          <button onClick={onCtaClick} className="btn-gold inline-block text-sm">
             {t('hero.cta')}
-          </a>
+          </button>
         </div>
       </div>
 
