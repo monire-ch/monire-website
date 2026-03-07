@@ -210,7 +210,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
           <button
             type="submit"
             disabled={!agreed}
-            className="btn-gold text-base disabled:opacity-50 disabled:cursor-not-allowed"
+            className="btn-outline-gold text-base disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {t('contact.send')}
           </button>
