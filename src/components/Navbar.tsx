@@ -140,7 +140,7 @@ const Navbar = () => {
       </header>
 
       {/* ─── Mobile Top Bar ─── */}
-      <header className="fixed top-3 left-3 right-3 z-50 md:hidden flex items-center justify-between px-5 py-3 rounded-full border border-off-white/[0.07]"
+      <header className="fixed top-3 left-3 right-3 z-50 md:hidden flex items-center justify-between px-3 py-3 rounded-full border border-off-white/[0.07]"
         style={{
           background: 'linear-gradient(135deg, rgba(8,47,58,0.88) 0%, rgba(5,34,44,0.92) 100%)',
           backdropFilter: 'blur(18px)',
@@ -149,7 +149,7 @@ const Navbar = () => {
         }}
       >
         <a href={getHref('#')}>
-          <img src={logo} alt="Moniré" className="h-7" />
+          <img src={logo} alt="Moniré" className="h-9" />
         </a>
         <button
           onClick={() => setMobileOpen(true)}
