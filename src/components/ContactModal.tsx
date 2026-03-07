@@ -14,6 +14,7 @@ const SERVICE_OPTIONS = [
   "AI Automations",
   "Website Migration",
   "SEO & Analytics",
+  "Non-profit project application",
   "Other",
 ];
 
