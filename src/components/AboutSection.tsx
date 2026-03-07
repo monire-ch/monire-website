@@ -46,7 +46,7 @@ const AboutSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 items-start py-10">
                 <h3 className="font-body text-xl md:text-2xl text-off-white">{item.title}</h3>
                 <div>
-                  <p className="text-[15px] text-off-white/70 font-body leading-relaxed">{item.text}</p>
+                  <p className="text-base text-off-white/70 font-body leading-relaxed">{item.text}</p>
                   {item.title === 'Giving Back' && (
                     <div className="mt-6 flex items-center gap-6">
                       <Link to="/apply" className="btn-outline-gold text-sm">

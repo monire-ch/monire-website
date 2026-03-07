@@ -116,7 +116,7 @@ const PricingSection = () => {
                           {amount}
                         </span>
                       </div>
-                      <p className={`text-sm font-body mb-6 leading-relaxed ${
+                      <p className={`text-base font-body mb-6 leading-relaxed ${
                         plan.featured ? 'text-deep-ink/70' : 'text-off-white'
                       }`}>
                         {plan.desc}
