@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface ContactModalProps {
@@ -6,10 +6,33 @@ interface ContactModalProps {
   onClose: () => void;
 }
 
+const serviceOptions = [
+  'Web Design',
+  'Web Development',
+  'AI Automations',
+  'Website Migration',
+  'SEO & Analytics',
+  'Other',
+];
+
+const budgetOptions = [
+  '<CHF 5\'000',
+  'CHF 5\'000 – 10\'000',
+  'CHF 10\'000 – 20\'000',
+  'CHF 20\'000+',
+];
+
 const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const { t } = useTranslation();
+  const [agreed, setAgreed] = useState(false);
 
   if (!open) return null;
+
+  const inputClass =
+    'w-full bg-off-white/10 border border-off-white/20 rounded-lg px-5 py-3.5 text-off-white text-base font-body focus:outline-none focus:border-gold transition-colors placeholder:text-off-white/40';
+
+  const selectClass =
+    'w-full bg-off-white/10 border border-off-white/20 rounded-lg px-5 py-3.5 text-off-white text-base font-body focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer';
 
   return (
     <div className="fixed inset-0 z-[100]">
@@ -29,32 +52,136 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
         </div>
 
         <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+          {/* Full Name */}
           <div>
-            <label className="text-off-white/70 text-sm font-body block mb-1.5">{t('contact.name')}</label>
+            <label className="text-off-white text-base font-body block mb-2">
+              {t('contact.fullName')}<span className="text-gold-text">*</span>
+            </label>
             <input
               type="text"
-              className="w-full bg-off-white/10 border border-off-white/20 rounded-md px-4 py-2.5 text-off-white text-sm font-body focus:outline-none focus:border-gold transition-colors"
-              placeholder={t('contact.namePlaceholder')}
+              required
+              className={inputClass}
+              placeholder={t('contact.fullNamePlaceholder')}
             />
           </div>
+
+          {/* Company Name */}
           <div>
-            <label className="text-off-white/70 text-sm font-body block mb-1.5">{t('contact.email')}</label>
+            <label className="text-off-white text-base font-body block mb-2">
+              {t('contact.company')}
+            </label>
+            <input
+              type="text"
+              className={inputClass}
+              placeholder={t('contact.companyPlaceholder')}
+            />
+          </div>
+
+          {/* Email Address */}
+          <div>
+            <label className="text-off-white text-base font-body block mb-2">
+              {t('contact.email')}<span className="text-gold-text">*</span>
+            </label>
             <input
               type="email"
-              className="w-full bg-off-white/10 border border-off-white/20 rounded-md px-4 py-2.5 text-off-white text-sm font-body focus:outline-none focus:border-gold transition-colors"
+              required
+              className={inputClass}
               placeholder={t('contact.emailPlaceholder')}
             />
           </div>
+
+          {/* Current Website */}
           <div>
-            <label className="text-off-white/70 text-sm font-body block mb-1.5">{t('contact.message')}</label>
+            <label className="text-off-white text-base font-body block mb-2">
+              {t('contact.website')}
+            </label>
+            <input
+              type="url"
+              className={inputClass}
+              placeholder={t('contact.websitePlaceholder')}
+            />
+          </div>
+
+          {/* How can we help you? */}
+          <div className="relative">
+            <label className="text-off-white text-base font-body block mb-2">
+              {t('contact.service')}<span className="text-gold-text">*</span>
+            </label>
+            <div className="relative">
+              <select required className={selectClass} defaultValue="">
+                <option value="" disabled className="text-off-white/40">{t('contact.servicePlaceholder')}</option>
+                {serviceOptions.map((opt) => (
+                  <option key={opt} value={opt} className="bg-main-teal text-off-white">{opt}</option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-off-white/50">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M4 6l4 4 4-4" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Budget */}
+          <div className="relative">
+            <label className="text-off-white text-base font-body block mb-2">
+              {t('contact.budget')}
+            </label>
+            <div className="relative">
+              <select className={selectClass} defaultValue="">
+                <option value="" disabled className="text-off-white/40">{t('contact.budgetPlaceholder')}</option>
+                {budgetOptions.map((opt) => (
+                  <option key={opt} value={opt} className="bg-main-teal text-off-white">{opt}</option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-off-white/50">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M4 6l4 4 4-4" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Tell us about your project */}
+          <div>
+            <label className="text-off-white text-base font-body block mb-2">
+              {t('contact.message')}<span className="text-gold-text">*</span>
+            </label>
             <textarea
               rows={5}
-              className="w-full bg-off-white/10 border border-off-white/20 rounded-md px-4 py-2.5 text-off-white text-sm font-body focus:outline-none focus:border-gold transition-colors resize-none"
+              required
+              className={`${inputClass} resize-vertical`}
               placeholder={t('contact.messagePlaceholder')}
             />
           </div>
-          <button type="submit" className="btn-gold w-full text-sm">
+
+          {/* Terms checkbox */}
+          <div className="flex items-start gap-3">
+            <input
+              type="checkbox"
+              checked={agreed}
+              onChange={(e) => setAgreed(e.target.checked)}
+              className="mt-1 w-4 h-4 rounded border-off-white/30 bg-transparent accent-gold cursor-pointer"
+            />
+            <span className="text-off-white text-base font-body">
+              {t('contact.terms')}{' '}
+              <a href="/privacy" className="text-gold-text underline hover:text-gold-hover transition-colors">
+                {t('contact.privacyPolicy')}
+              </a>.
+            </span>
+          </div>
+
+          {/* Submit */}
+          <button
+            type="submit"
+            disabled={!agreed}
+            className="btn-gold inline-flex items-center gap-2 text-base disabled:opacity-50 disabled:cursor-not-allowed"
+          >
             {t('contact.send')}
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="inline-block">
+              <path d="M8 2l.7.7L8 2zm0 0l-.7.7L8 2z" fill="currentColor"/>
+              <path d="M7 4h2v2h2v2h2v2h-2v2h-2v2H7v-2H5v-2H3V8h2V6h2V4z" fill="currentColor" className="opacity-80"/>
+            </svg>
           </button>
         </form>
       </div>
