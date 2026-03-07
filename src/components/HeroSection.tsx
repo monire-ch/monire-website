@@ -3,7 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { useFontsLoaded } from '@/hooks/useFontsLoaded';
 import goldFill from '@/assets/gold-fill.webp';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onCtaClick?: () => void;
+}
+
+const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   const { t } = useTranslation();
   const fontsLoaded = useFontsLoaded();
   const [animate, setAnimate] = useState(false);
