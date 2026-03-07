@@ -32,18 +32,7 @@ const CaseStudySnipSquad = () => {
             </h1>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,608px)_minmax(0,1fr)] gap-10 lg:gap-14 mb-16">
-            {/* Scrollable website preview */}
-            <ScrollReveal>
-              <div className="w-full max-w-[608px] mx-auto lg:mx-0 rounded-xl overflow-hidden border border-border bg-card h-[560px] md:h-[720px] overflow-y-auto">
-                <img
-                  src={snipSquad}
-                  alt="Snip Squad website preview"
-                  className="w-auto max-w-full h-auto block mx-auto"
-                />
-              </div>
-            </ScrollReveal>
-
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,608px)] gap-10 lg:gap-14 mb-16">
             {/* Metadata + description */}
             <div>
               <ScrollReveal>
@@ -90,6 +79,17 @@ const CaseStudySnipSquad = () => {
                 </div>
               </ScrollReveal>
             </div>
+
+            {/* Scrollable website preview */}
+            <ScrollReveal>
+              <div className="w-full max-w-[608px] mx-auto lg:mx-0 rounded-xl overflow-hidden border border-border bg-card h-[560px] md:h-[720px] overflow-y-auto">
+                <img
+                  src={snipSquad}
+                  alt="Snip Squad website preview"
+                  className="w-auto max-w-full h-auto block mx-auto"
+                />
+              </div>
+            </ScrollReveal>
           </div>
 
           <div className="h-20" />
