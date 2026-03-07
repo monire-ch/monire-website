@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Apply from "./pages/Apply";
 import CaseStudyExpenseReceipt from "./pages/CaseStudyExpenseReceipt";
 import CaseStudySnipSquad from "./pages/CaseStudySnipSquad";
@@ -23,6 +24,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/case-studies/expense-receipt-automation" element={<CaseStudyExpenseReceipt />} />
           <Route path="/case-studies/snip-squad" element={<CaseStudySnipSquad />} />
