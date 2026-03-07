@@ -175,13 +175,9 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
           <button
             type="submit"
             disabled={!agreed}
-            className="btn-gold inline-flex items-center gap-2 text-base disabled:opacity-50 disabled:cursor-not-allowed"
+            className="btn-gold text-base disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {t('contact.send')}
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="inline-block">
-              <path d="M8 2l.7.7L8 2zm0 0l-.7.7L8 2z" fill="currentColor"/>
-              <path d="M7 4h2v2h2v2h2v2h-2v2h-2v2H7v-2H5v-2H3V8h2V6h2V4z" fill="currentColor" className="opacity-80"/>
-            </svg>
           </button>
         </form>
       </div>
