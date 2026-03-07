@@ -29,11 +29,6 @@ const PricingSection = () => {
   return (
     <>
     <section id="pricing" className="dark-teal-surface py-20 md:py-28 px-6 relative">
-      <div className="absolute -top-px left-0 right-0 wave-mask-dark rotate-180">
-        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" fill="none" className="w-full block">
-          <path fill="currentColor" d="M0,48 C190,100 405,102 720,68 C1018,36 1240,32 1440,74 L1440,120 L0,120 Z" />
-        </svg>
-      </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal className="text-center mb-12">
