@@ -200,30 +200,40 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "items": [
+    "categories": [
       {
-        "q": "How long does it take to build a website?",
-        "a": "Typically 4–8 weeks depending on the project scope. We'll give you a clear timeline during our discovery call."
+        "label": "General Information",
+        "items": [
+          { "q": "What information do you need from me to get started?", "a": "We need to understand your business goals, target audience, required features, design preferences, timeline, and budget. If you already have brand assets, content, or an existing website, that helps too. You can also fill out our <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>client brief form</a> so we can better understand your needs." },
+          { "q": "Can you help with SEO?", "a": "Our core focus is development and AI automations, but we build every website with SEO best practices in mind. We can also recommend trusted partners for ongoing SEO services." },
+          { "q": "Do you work with international clients?", "a": "Yes. We are based in Switzerland and work remotely with clients worldwide. Our communication process is async-friendly, and we coordinate meetings across time zones." }
+        ]
       },
       {
-        "q": "Do I need to provide content?",
-        "a": "It helps if you have content ready, but we can guide you through the process and help with copywriting if needed."
+        "label": "Design & Development",
+        "items": [
+          { "q": "Do you build custom websites or use templates?", "a": "We mainly build custom websites tailored to your business and goals. If needed, we can also adapt premium templates for smaller budgets or faster timelines." },
+          { "q": "Can you redesign my existing website?", "a": "Yes. We offer full redesigns, including modernizing outdated visuals, improving user experience, and migrating to a better platform when needed." },
+          { "q": "What platforms do you build on?", "a": "We work with Webflow, Astro, React, Next.js, n8n, and custom solutions. We recommend the best option based on your needs, budget, and long-term plans." },
+          { "q": "Can I edit the website myself?", "a": "Absolutely. We use user-friendly CMS setups so you can update text, images, and posts without technical skills. We also provide training and documentation." },
+          { "q": "Who owns the website?", "a": "Once all invoices are paid, full ownership of the website and all project assets we created is transferred to you." },
+          { "q": "I already have a design — can you do development only?", "a": "Yes. If you already have the design, we can handle development only. We’ll review your design together and scope the work accordingly." },
+          { "q": "How quickly can my website be completed?", "a": "Timelines depend on website size and complexity. After our discovery call, we provide a clear estimate for design and development phases." },
+          { "q": "What is Webflow?", "a": "Webflow is a modern website platform that lets us build fully custom, high-quality sites quickly, with easy content editing, strong performance, and reliable hosting." }
+        ]
       },
       {
-        "q": "What platform do you build on?",
-        "a": "We primarily use modern frameworks like React and Next.js, along with headless CMS solutions. We choose the best stack for your specific needs."
+        "label": "AI Automations",
+        "items": [
+          { "q": "What is AI automation and how can it help my business?", "a": "AI automation uses artificial intelligence to handle repetitive tasks, analyze data, and streamline operations. Examples include customer support flows, data entry, email handling, and content workflows — helping you save time and reduce errors." },
+          { "q": "Do I need technical knowledge to use AI automation tools?", "a": "No. We build user-friendly solutions that fit into your existing workflow. We also provide onboarding and documentation so your team can use everything confidently." }
+        ]
       },
       {
-        "q": "Can I update the website myself?",
-        "a": "Absolutely! Every website comes with a user-friendly CMS. We also provide training so you feel confident making updates."
-      },
-      {
-        "q": "Do you offer ongoing support?",
-        "a": "Yes, our Advanced and Premium plans include monthly maintenance hours. We also offer standalone support packages."
-      },
-      {
-        "q": "What if I need changes after launch?",
-        "a": "We offer flexible support options. Small changes are often covered by maintenance hours, and larger updates can be quoted separately."
+        "label": "Maintenance",
+        "items": [
+          { "q": "Do you offer long-term support?", "a": "Yes. We offer maintenance packages that include bug fixes, content updates, and technical support. One-off support is also available for specific needs." }
+        ]
       }
     ]
   },
