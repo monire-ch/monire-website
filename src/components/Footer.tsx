@@ -57,7 +57,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
 
           <div className="flex gap-24">
             <div>
-              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.quickLinks')}</p>
+              <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.quickLinks')}</p>
               <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
                 {navItems.map((item) => (
                   <li key={item.href}>
@@ -69,7 +69,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               </ul>
             </div>
             <div>
-              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.contact')}</p>
+              <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.contact')}</p>
               <ul className="space-y-2">
                 <li>
                   <a href="mailto:hello@monire.ch" className="text-gold-text text-base font-body hover:text-gold-hover transition-colors">
@@ -88,7 +88,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
         </div>
 
         <div className="border-t border-off-white/10 pt-6 text-center">
-          <p className="text-off-white text-xs font-body">{t('footer.copyright')}</p>
+          <p className="text-off-white text-[1rem] font-body">{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>
