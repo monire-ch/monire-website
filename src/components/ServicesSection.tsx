@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 
 const ServicesSection = () => {
@@ -60,9 +61,9 @@ const ServicesSection = () => {
                 </p>
                 {active.badge === "Automation" && (
                   <div>
-                    <button className="btn-outline-gold text-sm">
+                    <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm">
                       {t("services.cta", "Latest case study")}
-                    </button>
+                    </Link>
                   </div>
                 )}
               </div>
