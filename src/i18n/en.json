@@ -244,13 +244,23 @@
   },
   "contact": {
     "title": "Get In Touch",
-    "name": "Name",
-    "namePlaceholder": "Your name",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Your full name",
+    "company": "Company Name",
+    "companyPlaceholder": "Your company name",
     "email": "Email",
     "emailPlaceholder": "your@email.com",
-    "message": "Message",
+    "website": "Current Website (if any)",
+    "websitePlaceholder": "Your current website",
+    "service": "How can we help you?",
+    "servicePlaceholder": "Select a service",
+    "budget": "Your Budget",
+    "budgetPlaceholder": "Select your budget",
+    "message": "Tell us about your project",
     "messagePlaceholder": "Tell us about your project...",
-    "send": "Send Message"
+    "terms": "I agree to the terms and conditions and the",
+    "privacyPolicy": "Privacy Policy",
+    "send": "Let's Talk"
   },
   "footer": {
     "tagline": "Custom website development and AI-powered workflow automation in Switzerland.",
