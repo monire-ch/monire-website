@@ -30,7 +30,7 @@ const FeaturesSection = () => {
                   style={isDark ? { background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' } : undefined}
                 >
                   <h3 className={`font-display text-xl md:text-2xl mb-2 ${isDark ? 'text-off-white' : 'text-main-teal'}`}>{f.title}</h3>
-                  <p className={`text-base font-body leading-relaxed ${isDark ? 'text-off-white' : 'text-main-teal/70'}`}>{f.desc}</p>
+                  <p className={`text-base font-body leading-relaxed ${isDark ? 'text-off-white' : ''}`} style={!isDark ? { color: '#0f4b5ae6' } : undefined}>{f.desc}</p>
                 </div>
               </ScrollReveal>
             );
