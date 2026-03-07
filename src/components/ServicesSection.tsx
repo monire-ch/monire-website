@@ -61,9 +61,9 @@ const ServicesSection = () => {
                 </p>
                 {active.badge === "Automation" && (
                   <div>
-                    <button className="btn-outline-gold text-sm">
+                    <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm">
                       {t("services.cta", "Latest case study")}
-                    </button>
+                    </Link>
                   </div>
                 )}
               </div>
