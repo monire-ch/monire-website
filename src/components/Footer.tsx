@@ -69,7 +69,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               </ul>
             </div>
             <div>
-              <p className="text-gold-text text-xs tracking-widest uppercase font-body mb-3">{t('footer.contact')}</p>
+              <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.contact')}</p>
               <ul className="space-y-2">
                 <li>
                   <a href="mailto:hello@monire.ch" className="text-gold-text text-base font-body hover:text-gold-hover transition-colors">
