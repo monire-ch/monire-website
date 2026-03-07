@@ -102,7 +102,7 @@ const FAQSection = () => {
                     className={`text-left px-5 py-3 rounded-full font-body text-[15px] transition-all duration-200 ${
                       activeTab === i
                         ? 'border border-gold/40 bg-off-white/10 text-off-white'
-                        : 'text-off-white/70 hover:text-off-white border border-transparent'
+                        : 'text-off-white hover:text-off-white border border-transparent'
                     }`}
                   >
                     {cat.label}
