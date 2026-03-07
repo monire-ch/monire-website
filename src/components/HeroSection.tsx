@@ -59,7 +59,7 @@ const HeroSection = () => {
         </h1>
 
         <p
-          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white/70 text-lg md:text-xl font-body max-w-xl mx-auto mb-8`}
+          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white text-lg md:text-xl font-body max-w-xl mx-auto mb-8`}
           style={{ transitionDelay: '320ms' }}
         >
           {t('hero.subtitle')}
