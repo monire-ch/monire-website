@@ -55,7 +55,7 @@ const ServicesSection = () => {
                 <h3 className="font-body text-3xl md:text-4xl text-off-white mb-5">
                   {active.title}
                 </h3>
-                <p className="text-off-white/70 font-body leading-relaxed text-base mb-8">
+                <p className="text-off-white font-body leading-relaxed text-base mb-8">
                   {active.desc}
                 </p>
                 {active.badge === "Automation" && (
