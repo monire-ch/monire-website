@@ -39,7 +39,7 @@ const AboutSection = () => {
           <h2 className="font-body text-4xl md:text-5xl text-off-white">{t('about.title')}</h2>
         </ScrollReveal>
 
-        <div className="space-y-0 mb-20">
+        <div className="space-y-0 mb-10 md:mb-20">
           {stories.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
               {i > 0 && <div className="border-t border-white/10 my-0" />}
@@ -60,7 +60,7 @@ const AboutSection = () => {
           ))}
         </div>
 
-        <div className="border-t border-white/10 mb-12 md:hidden" />
+        <div className="border-t border-white/10 mb-6 md:hidden" />
 
         <ScrollReveal>
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">Meet the Duo</span>
