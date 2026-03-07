@@ -60,6 +60,8 @@ const AboutSection = () => {
           ))}
         </div>
 
+        <div className="border-t border-white/10 mb-12 md:hidden" />
+
         <ScrollReveal>
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">Meet the Duo</span>
           <h3 className="font-body text-2xl text-off-white mb-8">{t('about.teamTitle')}</h3>
