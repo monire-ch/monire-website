@@ -67,7 +67,7 @@ const PricingSection = () => {
               <h3 className="font-display text-3xl md:text-4xl text-off-white mb-4">
                 {t('pricing.automationBlock.title')}
               </h3>
-              <p className="text-off-white text-[15px] font-body leading-relaxed max-w-2xl mx-auto mb-8">
+              <p className="text-off-white text-base font-body leading-relaxed max-w-2xl mx-auto mb-8">
                 {t('pricing.automationBlock.desc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -116,7 +116,7 @@ const PricingSection = () => {
                           {amount}
                         </span>
                       </div>
-                      <p className={`text-sm font-body mb-6 leading-relaxed ${
+                      <p className={`text-base font-body mb-6 leading-relaxed ${
                         plan.featured ? 'text-deep-ink/70' : 'text-off-white'
                       }`}>
                         {plan.desc}
