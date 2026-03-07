@@ -44,7 +44,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://www.linkedin.com/monire"
+                href="https://www.linkedin.com/company/monire"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
