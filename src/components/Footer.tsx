@@ -55,7 +55,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
             </div>
           </div>
 
-          <div className="flex gap-24">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-24">
             <div>
               <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.quickLinks')}</p>
               <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
