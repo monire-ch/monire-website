@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface ContactModalProps {
@@ -22,17 +22,83 @@ const budgetOptions = [
   'CHF 20\'000+',
 ];
 
+interface CustomSelectProps {
+  options: string[];
+  placeholder: string;
+  value: string;
+  onChange: (val: string) => void;
+  required?: boolean;
+}
+
+const CustomSelect: FC<CustomSelectProps> = ({ options, placeholder, value, onChange, required }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setIsOpen(false);
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className={`w-full bg-off-white/10 border rounded-lg px-5 py-3.5 text-base font-body text-left flex items-center justify-between transition-colors ${
+          isOpen ? 'border-gold' : 'border-off-white/20'
+        } ${value ? 'text-off-white' : 'text-off-white/40'}`}
+      >
+        <span>{value || placeholder}</span>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          className={`text-off-white/50 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+        >
+          <path d="M5 7l4 4 4-4" />
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div className="absolute z-10 mt-1.5 w-full rounded-lg border border-off-white/20 bg-[#0a3a4a] overflow-hidden shadow-xl">
+          {options.map((opt) => (
+            <button
+              key={opt}
+              type="button"
+              onClick={() => { onChange(opt); setIsOpen(false); }}
+              className={`w-full text-left px-5 py-3 text-base font-body transition-colors ${
+                value === opt
+                  ? 'text-off-white bg-off-white/10'
+                  : 'text-off-white hover:bg-off-white/[0.06]'
+              }`}
+            >
+              {opt}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {required && <input tabIndex={-1} className="sr-only" value={value} onChange={() => {}} required />}
+    </div>
+  );
+};
+
 const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const { t } = useTranslation();
   const [agreed, setAgreed] = useState(false);
+  const [service, setService] = useState('');
+  const [budget, setBudget] = useState('');
 
   if (!open) return null;
 
   const inputClass =
     'w-full bg-off-white/10 border border-off-white/20 rounded-lg px-5 py-3.5 text-off-white text-base font-body focus:outline-none focus:border-gold transition-colors placeholder:text-off-white/40';
-
-  const selectClass =
-    'w-full bg-off-white/10 border border-off-white/20 rounded-lg px-5 py-3.5 text-off-white text-base font-body focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer';
 
   return (
     <div className="fixed inset-0 z-[100]">
@@ -57,12 +123,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             <label className="text-off-white text-base font-body block mb-2">
               {t('contact.fullName')}<span className="text-gold-text">*</span>
             </label>
-            <input
-              type="text"
-              required
-              className={inputClass}
-              placeholder={t('contact.fullNamePlaceholder')}
-            />
+            <input type="text" required className={inputClass} placeholder={t('contact.fullNamePlaceholder')} />
           </div>
 
           {/* Company Name */}
@@ -70,11 +131,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             <label className="text-off-white text-base font-body block mb-2">
               {t('contact.company')}
             </label>
-            <input
-              type="text"
-              className={inputClass}
-              placeholder={t('contact.companyPlaceholder')}
-            />
+            <input type="text" className={inputClass} placeholder={t('contact.companyPlaceholder')} />
           </div>
 
           {/* Email Address */}
@@ -82,12 +139,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             <label className="text-off-white text-base font-body block mb-2">
               {t('contact.email')}<span className="text-gold-text">*</span>
             </label>
-            <input
-              type="email"
-              required
-              className={inputClass}
-              placeholder={t('contact.emailPlaceholder')}
-            />
+            <input type="email" required className={inputClass} placeholder={t('contact.emailPlaceholder')} />
           </div>
 
           {/* Current Website */}
@@ -95,51 +147,34 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             <label className="text-off-white text-base font-body block mb-2">
               {t('contact.website')}
             </label>
-            <input
-              type="url"
-              className={inputClass}
-              placeholder={t('contact.websitePlaceholder')}
-            />
+            <input type="url" className={inputClass} placeholder={t('contact.websitePlaceholder')} />
           </div>
 
           {/* How can we help you? */}
-          <div className="relative">
+          <div>
             <label className="text-off-white text-base font-body block mb-2">
               {t('contact.service')}<span className="text-gold-text">*</span>
             </label>
-            <div className="relative">
-              <select required className={selectClass} defaultValue="">
-                <option value="" disabled className="text-off-white/40">{t('contact.servicePlaceholder')}</option>
-                {serviceOptions.map((opt) => (
-                  <option key={opt} value={opt} className="bg-main-teal text-off-white">{opt}</option>
-                ))}
-              </select>
-              <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-off-white/50">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M4 6l4 4 4-4" />
-                </svg>
-              </div>
-            </div>
+            <CustomSelect
+              options={serviceOptions}
+              placeholder={t('contact.servicePlaceholder')}
+              value={service}
+              onChange={setService}
+              required
+            />
           </div>
 
           {/* Budget */}
-          <div className="relative">
+          <div>
             <label className="text-off-white text-base font-body block mb-2">
               {t('contact.budget')}
             </label>
-            <div className="relative">
-              <select className={selectClass} defaultValue="">
-                <option value="" disabled className="text-off-white/40">{t('contact.budgetPlaceholder')}</option>
-                {budgetOptions.map((opt) => (
-                  <option key={opt} value={opt} className="bg-main-teal text-off-white">{opt}</option>
-                ))}
-              </select>
-              <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-off-white/50">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M4 6l4 4 4-4" />
-                </svg>
-              </div>
-            </div>
+            <CustomSelect
+              options={budgetOptions}
+              placeholder={t('contact.budgetPlaceholder')}
+              value={budget}
+              onChange={setBudget}
+            />
           </div>
 
           {/* Tell us about your project */}
