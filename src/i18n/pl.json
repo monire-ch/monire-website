@@ -115,7 +115,7 @@
       {
         "label": "Informacje ogólne",
         "items": [
-          { "q": "Jakie informacje potrzebujecie, żeby zacząć?", "a": "Musimy zrozumieć Twoje cele biznesowe, grupę docelową, potrzebne funkcje, preferencje designu, harmonogram i budżet. Jeśli masz istniejące materiały marki, treści lub strony, to również pomoże. Wypełnij nasz formularz briefu klienta, abyśmy mogli lepiej zrozumieć Twoje potrzeby." },
+          { "q": "Jakie informacje potrzebujecie, żeby zacząć?", "a": "Musimy zrozumieć Twoje cele biznesowe, grupę docelową, potrzebne funkcje, preferencje designu, harmonogram i budżet. Jeśli masz istniejące materiały marki, treści lub strony, to również pomoże. Wypełnij nasz <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>formularz briefu klienta</a>, abyśmy mogli lepiej zrozumieć Twoje potrzeby." },
           { "q": "Czy możecie pomóc z SEO?", "a": "Nasz główny focus to rozwój i automatyzacja AI, ale budujemy strony z uwzględnieniem najlepszych praktyk SEO. Możemy też polecić zaufanych partnerów do bieżących usług SEO." },
           { "q": "Czy pracujecie z klientami międzynarodowymi?", "a": "Tak! Mamy siedzibę w Szwajcarii i pracujemy zdalnie z klientami na całym świecie. Komunikacja jest przyjazna asynchronicznie, a spotkania dostosowujemy do różnych stref czasowych." }
         ]
@@ -123,17 +123,27 @@
       {
         "label": "Design i rozwój",
         "items": [
-          { "q": "Jak długo trwa budowa strony?", "a": "Zazwyczaj 4–8 tygodni w zależności od zakresu projektu. Podamy jasny harmonogram podczas naszej konsultacji." },
-          { "q": "Czy muszę dostarczyć treści?", "a": "Pomaga, jeśli masz gotowe treści, ale możemy Cię przeprowadzić przez proces i pomóc z copywritingiem." },
-          { "q": "Na jakiej platformie budujecie?", "a": "Korzystamy głównie z nowoczesnych frameworków jak React i Next.js oraz rozwiązań headless CMS. Wybieramy najlepszy stack dla Twoich potrzeb." },
-          { "q": "Czy mogę sam aktualizować stronę?", "a": "Oczywiście! Każda strona ma przyjazny CMS. Zapewniamy również szkolenie, abyś czuł się pewnie wprowadzając zmiany." }
+          { "q": "Czy budujecie indywidualne strony czy korzystacie z szablonów?", "a": "Budujemy głównie indywidualne strony dostosowane do Twoich potrzeb. Możemy jednak również dostosować premium szablony, jeśli pracujesz z mniejszym budżetem lub krótszym terminem." },
+          { "q": "Czy możecie przeprojektować moją istniejącą stronę?", "a": "Tak! Oferujemy kompletne redesigny stron, w tym modernizację przestarzałych projektów, poprawę doświadczenia użytkownika i migrację na nowe platformy." },
+          { "q": "Na jakich platformach rozwijacie?", "a": "Pracujemy z różnymi technologiami, w tym Webflow, Astro, React, Next.js, n8n i rozwiązaniami na zamówienie. Rekomendujemy najlepszą platformę na podstawie Twoich wymagań, budżetu i celów długoterminowych." },
+          { "q": "Czy mogę sam edytować stronę?", "a": "Używamy przyjaznych systemów zarządzania treścią (CMS), dzięki czemu możesz aktualizować teksty, obrazy i posty na blogu bez umiejętności technicznych. Zapewniamy szkolenie i dokumentację." },
+          { "q": "Kto jest właścicielem strony?", "a": "Po opłaceniu wszystkich faktur, pełne prawa własności do strony i wszystkich stworzonych przez nas projektów są przenoszone na Ciebie." },
+          { "q": "Mam projekt graficzny – czy możecie zająć się tylko programowaniem?", "a": "Jeśli masz już projekt graficzny, możemy zająć się tylko programowaniem. Omówimy Twój projekt wspólnie i dostosujemy wycenę do potrzebnych prac." },
+          { "q": "Jak szybko może być gotowa moja strona?", "a": "Terminy różnią się w zależności od wielkości i złożoności strony. Po wstępnej rozmowie podamy jasne szacunki dla faz projektowania i programowania." },
+          { "q": "Czym jest Webflow?", "a": "Webflow to nowoczesna platforma do budowy stron, która pozwala nam tworzyć w pełni indywidualne, wysokiej jakości strony szybko – z łatwą edycją, świetną wydajnością i bezproblemowym hostingiem." }
+        ]
+      },
+      {
+        "label": "Automatyzacje AI",
+        "items": [
+          { "q": "Czym jest automatyzacja AI i jak może pomóc mojej firmie?", "a": "Automatyzacja AI wykorzystuje sztuczną inteligencję do obsługi powtarzalnych zadań, analizy danych lub usprawniania procesów. Przykłady to chatboty obsługi klienta, wprowadzanie danych, tworzenie odpowiedzi e-mail, generowanie treści i więcej. Celem jest umożliwienie Ci skupienia się na wartościowej pracy i redukcja błędów." },
+          { "q": "Czy potrzebuję wiedzy technicznej, żeby korzystać z narzędzi AI?", "a": "Nie! Projektujemy przyjazne rozwiązania, które płynnie integrują się z Twoimi istniejącymi procesami. Zapewniamy szkolenie i dokumentację, abyś mógł pewnie korzystać z narzędzi." }
         ]
       },
       {
         "label": "Utrzymanie",
         "items": [
-          { "q": "Czy oferujecie bieżące wsparcie?", "a": "Tak, nasze plany Advanced i Premium zawierają miesięczne godziny utrzymania. Oferujemy także niezależne pakiety wsparcia." },
-          { "q": "Co jeśli potrzebuję zmian po uruchomieniu?", "a": "Oferujemy elastyczne opcje wsparcia. Małe zmiany są często pokrywane przez godziny utrzymania, a większe aktualizacje mogą być wycenione osobno." }
+          { "q": "Czy oferujecie długoterminowe wsparcie?", "a": "Oferujemy pakiety utrzymania obejmujące poprawki błędów, aktualizacje treści i wsparcie techniczne. Oferujemy również jednorazowe wsparcie dla konkretnych potrzeb." }
         ]
       }
     ]
