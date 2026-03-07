@@ -140,7 +140,14 @@ const Navbar = () => {
       </header>
 
       {/* ─── Mobile Top Bar ─── */}
-      <header className="fixed top-0 left-0 right-0 z-50 md:hidden flex items-center justify-between px-5 py-4">
+      <header className="fixed top-3 left-3 right-3 z-50 md:hidden flex items-center justify-between px-5 py-3 rounded-full border border-off-white/[0.07]"
+        style={{
+          background: 'linear-gradient(135deg, rgba(8,47,58,0.88) 0%, rgba(5,34,44,0.92) 100%)',
+          backdropFilter: 'blur(18px)',
+          WebkitBackdropFilter: 'blur(18px)',
+          boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
+        }}
+      >
         <a href={getHref('#')}>
           <img src={logo} alt="Moniré" className="h-7" />
         </a>
