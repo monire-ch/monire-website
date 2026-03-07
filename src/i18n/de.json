@@ -115,7 +115,7 @@
       {
         "label": "Allgemeine Informationen",
         "items": [
-          { "q": "Welche Informationen brauchen Sie von mir, um zu starten?", "a": "Wir müssen Ihre Geschäftsziele, Zielgruppe, gewünschte Funktionen, Designpräferenzen, Zeitplan und Budget verstehen. Vorhandene Markenassets, Inhalte oder Websites sind ebenfalls hilfreich. Füllen Sie gerne unser Kundenbriefing-Formular aus, damit wir Ihre Bedürfnisse besser verstehen können." },
+          { "q": "Welche Informationen brauchen Sie von mir, um zu starten?", "a": "Wir müssen Ihre Geschäftsziele, Zielgruppe, gewünschte Funktionen, Designpräferenzen, Zeitplan und Budget verstehen. Vorhandene Markenassets, Inhalte oder Websites sind ebenfalls hilfreich. Füllen Sie gerne unser <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>Kundenbriefing-Formular</a> aus, damit wir Ihre Bedürfnisse besser verstehen können." },
           { "q": "Können Sie bei SEO helfen?", "a": "Unser Hauptfokus liegt auf Entwicklung und KI-Automatisierung, aber wir bauen Websites mit SEO-Best-Practices. Wir können auch vertrauenswürdige Partner für laufende SEO-Dienstleistungen empfehlen." },
           { "q": "Arbeiten Sie mit internationalen Kunden?", "a": "Ja! Wir sind in der Schweiz ansässig und arbeiten remote mit Kunden weltweit. Die Kommunikation ist asynchron-freundlich, und wir stimmen Meetingzeiten über Zeitzonen hinweg ab." }
         ]
@@ -123,17 +123,27 @@
       {
         "label": "Design & Entwicklung",
         "items": [
-          { "q": "Wie lange dauert es, eine Website zu erstellen?", "a": "In der Regel 4–8 Wochen, je nach Projektumfang. Wir geben Ihnen einen klaren Zeitplan während unseres Erstgesprächs." },
-          { "q": "Muss ich Inhalte bereitstellen?", "a": "Es hilft, wenn Sie Inhalte bereit haben, aber wir können Sie durch den Prozess begleiten und bei Bedarf beim Texten helfen." },
-          { "q": "Auf welcher Plattform bauen Sie?", "a": "Wir verwenden hauptsächlich moderne Frameworks wie React und Next.js sowie Headless-CMS-Lösungen. Wir wählen den besten Stack für Ihre spezifischen Anforderungen." },
-          { "q": "Kann ich die Website selbst aktualisieren?", "a": "Absolut! Jede Website verfügt über ein benutzerfreundliches CMS. Wir bieten auch eine Schulung an, damit Sie sich bei Änderungen sicher fühlen." }
+          { "q": "Erstellen Sie individuelle Websites oder verwenden Sie Templates?", "a": "Wir erstellen hauptsächlich individuelle Websites, die auf Ihre spezifischen Bedürfnisse zugeschnitten sind. Wir können auch Premium-Templates anpassen, wenn Sie mit einem kleineren Budget oder schnelleren Zeitrahmen arbeiten." },
+          { "q": "Können Sie meine bestehende Website neu gestalten?", "a": "Ja! Wir bieten komplette Website-Redesigns an, einschliesslich Modernisierung veralteter Designs, Verbesserung der Benutzererfahrung und Migration auf neue Plattformen bei Bedarf." },
+          { "q": "Auf welchen Plattformen entwickeln Sie?", "a": "Wir arbeiten mit verschiedenen Technologien wie Webflow, Astro, React, Next.js, n8n und individuellen Lösungen. Wir empfehlen die beste Plattform basierend auf Ihren Anforderungen, Budget und langfristigen Zielen." },
+          { "q": "Kann ich die Website selbst bearbeiten?", "a": "Wir verwenden benutzerfreundliche Content-Management-Systeme (CMS), damit Sie Texte, Bilder und Blogbeiträge ohne technische Kenntnisse aktualisieren können. Wir bieten Schulungen und Dokumentation an." },
+          { "q": "Wem gehört die Website?", "a": "Sobald alle Rechnungen bezahlt sind, wird das vollständige Eigentum an der Website und allen von uns erstellten Designs an Sie übertragen." },
+          { "q": "Ich habe das Design – können Sie nur die Entwicklung übernehmen?", "a": "Wenn Sie bereits das Design haben, können wir nur die Entwicklung übernehmen. Wir besprechen Ihr Design gemeinsam und passen die Preisgestaltung entsprechend an." },
+          { "q": "Wie schnell kann meine Website fertig sein?", "a": "Die Zeitrahmen variieren je nach Grösse und Komplexität Ihrer Website. Nach unserem Erstgespräch geben wir Ihnen eine klare Schätzung für Design- und Entwicklungsphasen." },
+          { "q": "Was ist Webflow?", "a": "Webflow ist eine moderne Website-Plattform, mit der wir schnell vollständig individuelle, hochwertige Websites erstellen können – mit einfacher Bearbeitung, grossartiger Leistung und problemlosem Hosting." }
+        ]
+      },
+      {
+        "label": "KI-Automatisierungen",
+        "items": [
+          { "q": "Was ist KI-Automatisierung und wie kann sie meinem Unternehmen helfen?", "a": "KI-Automatisierung nutzt künstliche Intelligenz, um repetitive Aufgaben zu erledigen, Daten zu analysieren oder Prozesse zu optimieren. Beispiele sind Kundensupport-Chatbots, Dateneingabe, E-Mail-Antworten, Inhaltserstellung und mehr. Ziel ist es, dass Sie sich auf wertvolle Arbeit konzentrieren und Fehler reduzieren können." },
+          { "q": "Brauche ich technisches Wissen, um KI-Automatisierungstools zu nutzen?", "a": "Nein! Wir entwickeln benutzerfreundliche Lösungen, die sich nahtlos in Ihre bestehenden Arbeitsabläufe integrieren. Wir bieten Schulungen und Dokumentation an, damit Sie die Tools sicher nutzen können." }
         ]
       },
       {
         "label": "Wartung",
         "items": [
-          { "q": "Bieten Sie laufenden Support an?", "a": "Ja, unsere Advanced- und Premium-Pläne beinhalten monatliche Wartungsstunden. Wir bieten auch eigenständige Support-Pakete an." },
-          { "q": "Was, wenn ich nach dem Launch Änderungen brauche?", "a": "Wir bieten flexible Support-Optionen. Kleine Änderungen werden oft von den Wartungsstunden abgedeckt, grössere Updates können separat angeboten werden." }
+          { "q": "Bieten Sie langfristigen Support an?", "a": "Wir bieten Wartungspakete an, die Fehlerbehebungen, Inhaltsaktualisierungen und technischen Support umfassen. Wir bieten auch einmaligen Support für spezifische Bedürfnisse an." }
         ]
       }
     ]
