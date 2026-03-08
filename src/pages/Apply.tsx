@@ -27,7 +27,8 @@ const Apply = () => {
   const [contactOpen, setContactOpen] = useState(false);
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%)' }}>
+    <div className="min-h-screen relative overflow-hidden" style={{ background: 'linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%)' }}>
+      <div className="about-orb about-orb-2" style={{ bottom: '200px', left: '-100px' }} />
       <Navbar />
 
       <section className="pt-32 pb-32 md:pt-40 md:pb-28 px-6">
