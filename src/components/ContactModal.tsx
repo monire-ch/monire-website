@@ -228,11 +228,8 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             </label>
 
             {/* Submit */}
-            <button type="submit" className="btn-gold text-sm inline-flex items-center gap-2">
+            <button type="submit" className="btn-gold text-sm">
               {t("contact.send")}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
             </button>
           </form>
         )}
