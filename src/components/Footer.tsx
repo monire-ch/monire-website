@@ -29,33 +29,35 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
           <div>
-            <img src={logo} alt="Moniré" className="h-7 md:h-9 mb-4 -ml-2 md:ml-0 md:-translate-x-[2.4rem]" />
-            <p className="text-off-white text-base font-body max-w-xs">
-              {t('footer.tagline')}
-            </p>
-            <div className="flex items-center gap-3 mt-4">
-              <a
-                href="https://www.instagram.com/hello.monire"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 text-gold-text transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/monire"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
-              >
-                <img src={linkedinIcon} alt="" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
-              </a>
+            <img src={logo} alt="Moniré" className="h-7 md:h-9 mb-4 md:-translate-x-[2.4rem]" />
+            <div className="ml-5 md:ml-0">
+              <p className="text-off-white text-base font-body max-w-xs">
+                {t('footer.tagline')}
+              </p>
+              <div className="flex items-center gap-3 mt-4">
+                <a
+                  href="https://www.instagram.com/hello.monire"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 text-gold-text transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+                >
+                  <Instagram size={18} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/monire"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+                >
+                  <img src={linkedinIcon} alt="" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
+                </a>
+              </div>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-10 md:gap-24">
+          <div className="ml-5 md:ml-0 flex flex-col md:flex-row gap-10 md:gap-24">
             <div>
               <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.quickLinks')}</p>
               <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
