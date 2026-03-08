@@ -65,9 +65,15 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
                 {navItems.map((item) => (
                   <li key={item.href}>
-                    <a href={item.href} className="text-off-white text-base font-body hover:text-gold-text transition-colors">
-                      {item.label}
-                    </a>
+                    {item.href.startsWith('/') ? (
+                      <button onClick={() => navigate(item.href)} className="text-off-white text-base font-body hover:text-gold-text transition-colors">
+                        {item.label}
+                      </button>
+                    ) : (
+                      <a href={item.href} className="text-off-white text-base font-body hover:text-gold-text transition-colors">
+                        {item.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
