@@ -164,13 +164,6 @@
   transform: translateY(0);
 }
 
-@media (hover: none) and (pointer: coarse) {
-  .scroll-reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
 
 /* Hero animations */
 .hero-fade-enter {
