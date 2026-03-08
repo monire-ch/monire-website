@@ -101,7 +101,6 @@ const Apply = () => {
       </section>
 
       <Footer hideWave />
-      </div>
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
   );
