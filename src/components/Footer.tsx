@@ -32,7 +32,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
           <div>
             <img src={logo} alt="Moniré" className="h-7 md:h-9 mb-4 md:-translate-x-[2.4rem]" />
-            <div className="ml-5 md:ml-0">
+            <div>
               <p className="text-off-white text-base font-body max-w-xs">
                 {t('footer.tagline')}
               </p>
@@ -59,7 +59,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
             </div>
           </div>
 
-          <div className="ml-5 md:ml-0 flex flex-col md:flex-row gap-10 md:gap-24">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-24">
             <div>
               <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.quickLinks')}</p>
               <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
