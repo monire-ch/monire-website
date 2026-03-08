@@ -5,13 +5,6 @@ export function useScrollReveal() {
   const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
-    // Skip on touch devices
-    const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-    if (isTouch) {
-      setRevealed(true);
-      return;
-    }
-
     const el = ref.current;
     if (!el) return;
 
