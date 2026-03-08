@@ -30,7 +30,7 @@ const Apply = () => {
     <div className="min-h-screen" style={{ background: 'linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%)' }}>
       <Navbar />
 
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+      <section className="pt-32 pb-32 md:pt-40 md:pb-28 px-6">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="mb-6">
             <Link to="/#about" className="text-sm text-off-white/50 hover:text-off-white/80 font-body transition-colors">
@@ -100,9 +100,9 @@ const Apply = () => {
       </section>
 
       <div className="relative" style={{ background: '#f8f5f1' }}>
-        <div className="absolute left-0 right-0 -top-[119px] z-10">
-          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" fill="none" className="w-full block">
-            <path fill="#f8f5f1" d="M0,48 C190,100 405,102 720,68 C1018,36 1240,32 1440,74 L1440,120 L0,120 Z" />
+        <div className="absolute left-0 right-0 -top-[179px] z-10">
+          <svg viewBox="0 0 1440 180" xmlns="http://www.w3.org/2000/svg" fill="none" className="w-full block">
+            <path fill="#f8f5f1" d="M0,72 C190,150 405,153 720,102 C1018,54 1240,48 1440,111 L1440,180 L0,180 Z" />
           </svg>
         </div>
         <Footer hideWave />
