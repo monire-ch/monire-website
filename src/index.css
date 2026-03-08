@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Degular';
-  src: url('/fonts/Degular.woff2') format('woff2');
+  font-family: "Degular";
+  src: url("/fonts/Degular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'SilkSerif';
-  src: url('/fonts/SilkSerif.woff2') format('woff2');
+  font-family: "SilkSerif";
+  src: url("/fonts/SilkSerif.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gellix';
-  src: url('/fonts/Gellix.woff2') format('woff2');
+  font-family: "Gellix";
+  src: url("/fonts/Gellix.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -65,10 +65,10 @@
     --gold-focus: 42 100% 88%;
     --neutral-border: 36 16% 80%;
 
-    --font-body: 'Gellix', sans-serif;
-    --font-display: 'Degular', sans-serif;
-    --font-serif: 'SilkSerif', serif;
-    --font-tertiary: 'Instrument Serif', sans-serif;
+    --font-body: "Gellix", sans-serif;
+    --font-display: "Degular", sans-serif;
+    --font-serif: "SilkSerif", serif;
+    --font-tertiary: "Instrument Serif", sans-serif;
   }
 }
 
@@ -79,8 +79,8 @@
   body {
     font-family: var(--font-body);
     font-size: 16px;
-    background: #EEEBE7;
-    color: #011B22;
+    background: #eeebe7;
+    color: #011b22;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -88,28 +88,33 @@
 
 /* Hero background */
 .hero-bg {
-  background:
-    linear-gradient(180deg,
-      rgb(0 18 25 / 0.99) 0%,
-      rgb(1 27 36 / 0.97) 25%,
-      rgb(3 38 50 / 0.93) 50%,
-      rgb(5 56 70 / 0.82) 75%,
-      rgb(8 80 98 / 0.7) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    rgb(0 18 25 / 0.99) 0%,
+    rgb(1 27 36 / 0.97) 25%,
+    rgb(3 38 50 / 0.93) 50%,
+    rgb(5 56 70 / 0.82) 75%,
+    rgb(8 80 98 / 0.7) 100%
+  );
   position: relative;
 }
 
 .hero-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 50% 70%, rgb(104 224 250 / 0.12) 0%, rgb(104 224 250 / 0.06) 30%, rgb(104 224 250 / 0.02) 60%, transparent 80%),
+    radial-gradient(
+      ellipse 60% 50% at 50% 70%,
+      rgb(104 224 250 / 0.12) 0%,
+      rgb(104 224 250 / 0.06) 30%,
+      rgb(104 224 250 / 0.02) 60%,
+      transparent 80%
+    ),
     radial-gradient(ellipse 40% 40% at 20% 85%, rgb(93 208 238 / 0.06) 0%, rgb(93 208 238 / 0.03) 50%, transparent 80%),
     radial-gradient(ellipse 40% 40% at 80% 85%, rgb(93 208 238 / 0.06) 0%, rgb(93 208 238 / 0.03) 50%, transparent 80%);
   pointer-events: none;
 }
-
 
 /* About flow wrapper */
 .about-flow {
@@ -149,21 +154,22 @@
 }
 
 .featured-teal-card {
-  background: linear-gradient(145deg, #2F6F83 0%, #0F4B5A 100%);
+  background: linear-gradient(145deg, #2f6f83 0%, #0f4b5a 100%);
 }
 
 /* Scroll reveal */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 700ms ease-out, transform 700ms ease-out;
+  transition:
+    opacity 700ms ease-out,
+    transform 700ms ease-out;
 }
 
 .scroll-reveal.revealed {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* Hero animations */
 .hero-fade-enter {
@@ -174,14 +180,18 @@
 .hero-fade-visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 820ms ease-out, transform 820ms ease-out;
+  transition:
+    opacity 820ms ease-out,
+    transform 820ms ease-out;
 }
 
 .hero-word {
   opacity: 0;
   transform: translateY(8px);
   display: inline-block;
-  transition: opacity 720ms ease-out, transform 720ms ease-out;
+  transition:
+    opacity 720ms ease-out,
+    transform 720ms ease-out;
 }
 
 .hero-word.visible {
@@ -207,7 +217,9 @@
 .contact-overlay {
   opacity: 0;
   backdrop-filter: blur(0);
-  transition: opacity 300ms ease, backdrop-filter 300ms ease;
+  transition:
+    opacity 300ms ease,
+    backdrop-filter 300ms ease;
 }
 
 .contact-overlay.open {
@@ -218,7 +230,9 @@
 .contact-panel {
   transform: translateX(100%);
   opacity: 0;
-  transition: transform 420ms cubic-bezier(0.22, 0.9, 0.22, 1), opacity 280ms ease;
+  transition:
+    transform 420ms cubic-bezier(0.22, 0.9, 0.22, 1),
+    opacity 280ms ease;
 }
 
 .contact-panel.open {
@@ -244,18 +258,19 @@
 
 /* Portfolio card transitions */
 .portfolio-card {
-  transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1),
-              opacity 400ms ease,
-              filter 400ms ease;
+  transition:
+    transform 550ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 400ms ease,
+    filter 400ms ease;
 }
 
 /* Wave mask */
 .wave-mask {
-  color: #EEEBE7;
+  color: #eeebe7;
 }
 
 .wave-mask-dark {
-  color: #011B22;
+  color: #011b22;
 }
 
 /* Eyebrow pill */
@@ -273,22 +288,22 @@
 }
 
 .eyebrow-pill-light {
-  border: 1px solid color-mix(in srgb, #0F4B5A 26%, transparent);
-  background: color-mix(in srgb, #EEEBE7 88%, #0F4B5A);
-  color: #0F4B5A;
+  border: 1px solid color-mix(in srgb, #0f4b5a 26%, transparent);
+  background: color-mix(in srgb, #eeebe7 88%, #0f4b5a);
+  color: #0f4b5a;
 }
 
 .eyebrow-pill-dark {
   border: 1px solid rgba(207, 169, 71, 0.5);
-  background: color-mix(in srgb, #082F3A 62%, transparent);
-  color: #F1D69A;
+  background: color-mix(in srgb, #082f3a 62%, transparent);
+  color: #f1d69a;
 }
 
 /* Unified CTA button styles */
 .btn-gold,
 .btn-teal {
-  background-color: color-mix(in srgb, #0f4b5a 88%, white);
-  color: #EEEBE7;
+  background-color: color-mix(in srgb, #053743 88%, white);
+  color: #eeebe7;
   border: 1px solid #cfa947b3;
   font-family: var(--font-body);
   font-weight: 500;
@@ -296,7 +311,10 @@
   padding: 0.875rem 2.25rem;
   letter-spacing: 0.02em;
   border-radius: 9999px;
-  transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .btn-gold:hover,
@@ -309,18 +327,22 @@
 .btn-outline-gold {
   background-color: transparent;
   border: 1px solid #cfa947b3;
-  color: #F1D69A;
+  color: #f1d69a;
   font-family: var(--font-body);
   font-weight: 500;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
-  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .btn-outline-gold:hover {
   background-color: color-mix(in srgb, #0f4b5a 88%, white);
   border-color: #cfa947;
-  color: #EEEBE7;
+  color: #eeebe7;
   box-shadow: 0 0 12px rgba(207, 169, 71, 0.15);
 }
 
