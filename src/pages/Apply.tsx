@@ -28,7 +28,7 @@ const Apply = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden" style={{ background: 'linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%)' }}>
-      <div className="about-orb about-orb-2" style={{ bottom: '200px', left: '-100px' }} />
+      <div className="about-orb about-orb-2" style={{ bottom: '120px', left: '-40px', width: '320px', height: '320px', background: 'rgba(120, 200, 255, 0.25)' }} />
       <Navbar />
 
       <section className="pt-32 pb-32 md:pt-40 md:pb-28 px-6">
