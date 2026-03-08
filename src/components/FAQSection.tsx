@@ -94,7 +94,7 @@ const FAQSection = () => {
           >
             <div className="flex flex-col md:flex-row min-h-[340px]">
               {/* Left tab nav */}
-              <div className="md:w-2/5 p-8 md:p-10 flex flex-col gap-1 md:border-r border-off-white/10">
+              <div className="md:w-2/5 p-6 md:p-10 pb-2 md:pb-10 flex flex-col gap-1 md:border-r border-off-white/10">
                 {categories.map((cat, i) => (
                   <button
                     key={cat.label}
@@ -111,7 +111,8 @@ const FAQSection = () => {
               </div>
 
               {/* Right content — accordion */}
-              <div className="md:w-3/5 p-8 md:p-10">
+              <div className="md:w-3/5 p-6 pt-0 md:p-10">
+                <div className="border-t border-white/10 md:border-t-0"></div>
                 {(activeCategory?.items ?? []).map((faq, i) => (
                   <AccordionItem
                     key={`${safeActiveTab}-${i}`}
