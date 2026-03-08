@@ -92,9 +92,9 @@ const FAQSection = () => {
               background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)',
             }}
           >
-            <div className="flex flex-col md:flex-row min-h-[340px]">
-              {/* Left tab nav */}
-              <div className="md:w-2/5 p-6 md:p-10 pb-2 md:pb-10 flex flex-col gap-1 md:border-r border-off-white/10">
+            {/* Desktop layout */}
+            <div className="hidden md:flex flex-row min-h-[340px]">
+              <div className="md:w-2/5 p-10 flex flex-col gap-1 border-r border-off-white/10">
                 {categories.map((cat, i) => (
                   <button
                     key={cat.label}
@@ -109,10 +109,7 @@ const FAQSection = () => {
                   </button>
                 ))}
               </div>
-
-              {/* Right content — accordion */}
-              <div className="md:w-3/5 p-6 pt-0 md:p-10">
-                <div className="border-t border-white/10 md:border-t-0"></div>
+              <div className="md:w-3/5 p-10">
                 {(activeCategory?.items ?? []).map((faq, i) => (
                   <AccordionItem
                     key={`${safeActiveTab}-${i}`}
@@ -123,6 +120,42 @@ const FAQSection = () => {
                   />
                 ))}
               </div>
+            </div>
+
+            {/* Mobile accordion layout */}
+            <div className="md:hidden p-6">
+              {categories.map((cat, catIdx) => {
+                const isCatOpen = activeTab === catIdx;
+                return (
+                  <div key={cat.label} className="border-b border-off-white/10 last:border-b-0">
+                    <button
+                      onClick={() => handleTabChange(catIdx)}
+                      className="w-full flex items-center justify-between py-4 text-left"
+                    >
+                      <span className="font-body text-lg text-off-white">{cat.label}</span>
+                      <span className="text-off-white/60 text-xl">
+                        {isCatOpen ? '−' : '+'}
+                      </span>
+                    </button>
+                    <div
+                      className="overflow-hidden transition-all duration-300"
+                      style={{ maxHeight: isCatOpen ? '2000px' : '0', opacity: isCatOpen ? 1 : 0 }}
+                    >
+                      <div className="pb-2">
+                        {cat.items.map((faq, i) => (
+                          <AccordionItem
+                            key={`${catIdx}-${i}`}
+                            q={faq.q}
+                            a={faq.a}
+                            isOpen={openIndex === i}
+                            toggle={() => setOpenIndex(openIndex === i ? null : i)}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </ScrollReveal>
