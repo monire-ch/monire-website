@@ -29,7 +29,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
           <div>
-            <img src={logo} alt="Moniré" className="h-7 md:h-9 mb-4" style={{ transform: 'translateX(-2.4rem)' }} />
+            <img src={logo} alt="Moniré" className="h-7 md:h-9 mb-4 md:-translate-x-[2.4rem]" />
             <p className="text-off-white text-base font-body max-w-xs">
               {t('footer.tagline')}
             </p>
