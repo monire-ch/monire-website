@@ -100,6 +100,7 @@ const Apply = () => {
         </div>
       </section>
 
+      <div className="border-t border-off-white/10 mx-6" />
       <Footer hideWave />
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
