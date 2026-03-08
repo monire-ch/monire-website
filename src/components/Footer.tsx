@@ -6,6 +6,7 @@ import linkedinIcon from '@/assets/linkedin.svg';
 
 const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const navItems = [
     { label: t('nav.about'), href: '#about' },
