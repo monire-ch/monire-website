@@ -126,7 +126,7 @@ const PricingSection = () => {
                           </li>
                         ))}
                       </ul>
-                      <button className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 ${
+                      <button onClick={() => setContactOpen(true)} className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 ${
                         plan.featured
                           ? 'bg-main-teal text-off-white hover:bg-soft-teal'
                           : 'btn-outline-gold'
