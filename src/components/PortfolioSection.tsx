@@ -94,11 +94,11 @@ const PortfolioSection = () => {
                       className="min-w-0 shrink-0 grow-0 basis-full px-2"
                     >
                       <Link to={project.link} className="block group">
-                        <div className="relative overflow-hidden rounded-xl border border-neutral-border bg-neutral-card h-[380px] md:h-[440px]">
+                        <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${i === 3 ? 'bg-[#0a0a0a]' : 'bg-neutral-card'}`}>
                           <img
                             src={projectImages[i]}
                             alt={project.title}
-                            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02] ${i === 3 ? 'object-center' : 'object-top'}`}
+                            className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${i === 3 ? 'object-contain object-center' : 'object-cover object-top'}`}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                         </div>
