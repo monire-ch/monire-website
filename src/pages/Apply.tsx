@@ -28,7 +28,7 @@ const Apply = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden" style={{ background: 'linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%)' }}>
-      <div className="about-orb about-orb-2" style={{ bottom: '200px', left: '-100px' }} />
+      <div className="about-orb about-orb-2" style={{ bottom: '120px', left: '-40px', width: '320px', height: '320px', background: 'rgba(120, 200, 255, 0.25)' }} />
       <Navbar />
 
       <section className="pt-32 pb-32 md:pt-40 md:pb-28 px-6">
@@ -100,6 +100,7 @@ const Apply = () => {
         </div>
       </section>
 
+      <div className="border-t border-off-white/10 mx-6" />
       <Footer hideWave />
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </div>
