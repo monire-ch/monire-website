@@ -149,7 +149,7 @@ const Navbar = () => {
         }}
       >
         <a href={getHref('#')}>
-          <img src={logo} alt="Moniré" className="h-9" />
+          <img src={logo} alt="Moniré" className="h-7" />
         </a>
         <button
           onClick={() => setMobileOpen(true)}
