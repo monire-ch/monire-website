@@ -49,9 +49,12 @@ const Apply = () => {
           </ScrollReveal>
 
           <ScrollReveal className="mb-20">
-            <p className="text-sm text-gold-text font-body">
+            <p className="text-sm text-gold-text font-body mb-2">
               Our 2026 recipient has been selected. Applications reopen at year-end.
             </p>
+            <a href="https://snipsquad.org/" target="_blank" rel="noopener noreferrer" className="text-sm text-gold-text hover:text-off-white font-body transition-colors underline underline-offset-4">
+              2026 Recipient →
+            </a>
           </ScrollReveal>
 
           <ScrollReveal className="mb-10">
@@ -91,9 +94,6 @@ const Apply = () => {
               <button onClick={() => setContactOpen(true)} className="btn-outline-gold text-sm">
                 Apply now
               </button>
-              <a href="https://snipsquad.org/" target="_blank" rel="noopener noreferrer" className="text-sm text-gold-text hover:text-off-white font-body transition-colors underline underline-offset-4">
-                2026 Recipient →
-              </a>
             </div>
           </ScrollReveal>
         </div>
