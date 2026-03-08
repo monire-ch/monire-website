@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import linkedinIcon from '@/assets/linkedin.svg';
