@@ -30,7 +30,7 @@ const Apply = () => {
     <div className="min-h-screen" style={{ background: 'linear-gradient(rgb(5 40 50) 50%, rgb(3 38 48) 100%)' }}>
       <Navbar />
 
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+      <section className="pt-32 pb-32 md:pt-40 md:pb-28 px-6">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="mb-6">
             <Link to="/#about" className="text-sm text-off-white/50 hover:text-off-white/80 font-body transition-colors">
