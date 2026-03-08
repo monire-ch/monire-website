@@ -65,14 +65,14 @@ const PortfolioSection = () => {
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 items-start">
             {/* Category sidebar — dark teal card like reference */}
-            <div className="rounded-2xl p-5 flex md:flex-col gap-1 flex-wrap" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
+            <div className="rounded-2xl p-5 grid grid-cols-2 md:grid-cols-1 gap-1" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
               {categories.map((cat) => {
                 const isActive = currentProject?.category === cat;
                 return (
                   <button
                     key={cat}
                     onClick={() => scrollToProject(cat)}
-                    className={`w-full text-left px-4 py-3 font-body text-sm transition-all duration-200 ${
+                    className={`text-center md:text-left px-4 py-3 font-body text-sm transition-all duration-200 ${
                       isActive
                         ? 'rounded-full border border-gold/60 bg-white/5 text-off-white'
                         : 'rounded-lg border border-transparent text-off-white hover:text-off-white/80'
