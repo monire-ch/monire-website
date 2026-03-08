@@ -94,9 +94,6 @@ const Apply = () => {
               <button onClick={() => setContactOpen(true)} className="btn-outline-gold text-sm">
                 Apply now
               </button>
-              <a href="https://snipsquad.org/" target="_blank" rel="noopener noreferrer" className="text-sm text-gold-text hover:text-off-white font-body transition-colors underline underline-offset-4">
-                2026 Recipient →
-              </a>
             </div>
           </ScrollReveal>
         </div>
