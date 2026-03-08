@@ -38,7 +38,7 @@ const Apply = () => {
             </Link>
           </ScrollReveal>
 
-          <ScrollReveal className="mb-16">
+          <ScrollReveal className="mb-10">
             <span className="eyebrow-pill eyebrow-pill-dark mb-3">Giving Back</span>
             <h1 className="font-body text-3xl md:text-5xl text-off-white mb-6">
               Complimentary Project Support
@@ -48,7 +48,7 @@ const Apply = () => {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal className="mb-20">
+          <ScrollReveal className="mb-10">
             <p className="text-sm text-gold-text font-body mb-2">
               Our 2026 recipient has been selected. Applications reopen at year-end.
             </p>
@@ -57,7 +57,7 @@ const Apply = () => {
             </a>
           </ScrollReveal>
 
-          <ScrollReveal className="mb-10">
+          <ScrollReveal className="mb-8">
             <h2 className="font-body text-2xl md:text-3xl text-off-white mb-8">How It Works</h2>
           </ScrollReveal>
 
