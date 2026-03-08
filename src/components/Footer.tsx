@@ -70,7 +70,16 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                         {item.label}
                       </button>
                     ) : (
-                      <a href={item.href} className="text-off-white text-base font-body hover:text-gold-text transition-colors">
+                      <a
+                        href={item.href}
+                        onClick={(e) => {
+                          if (window.location.pathname !== '/') {
+                            e.preventDefault();
+                            navigate('/' + item.href);
+                          }
+                        }}
+                        className="text-off-white text-base font-body hover:text-gold-text transition-colors"
+                      >
                         {item.label}
                       </a>
                     )}
