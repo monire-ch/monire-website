@@ -33,9 +33,9 @@ const ServicesSection = () => {
                 "linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)",
             }}
           >
-            <div className="flex flex-col md:flex-row min-h-[340px]">
-              {/* Left tab nav */}
-              <div className="md:w-2/5 p-8 md:p-10 flex flex-col gap-1 md:border-r border-off-white/10">
+            {/* Desktop layout */}
+            <div className="hidden md:flex flex-row min-h-[340px]">
+              <div className="md:w-2/5 p-10 flex flex-col gap-1 border-r border-off-white/10">
                 {items.map((item, i) => (
                   <button
                     key={item.title}
@@ -50,9 +50,7 @@ const ServicesSection = () => {
                   </button>
                 ))}
               </div>
-
-              {/* Right content */}
-              <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+              <div className="md:w-3/5 p-10 flex flex-col justify-center">
                 <h3 className="font-body text-3xl md:text-4xl text-off-white mb-5">
                   {active.title}
                 </h3>
@@ -67,6 +65,41 @@ const ServicesSection = () => {
                   </div>
                 )}
               </div>
+            </div>
+
+            {/* Mobile accordion layout */}
+            <div className="md:hidden p-6">
+              {items.map((item, i) => {
+                const isOpen = activeIndex === i;
+                return (
+                  <div key={item.title} className="border-b border-off-white/10 last:border-b-0">
+                    <button
+                      onClick={() => setActiveIndex(i)}
+                      className="w-full flex items-center justify-between py-4 text-left"
+                    >
+                      <span className="font-body text-lg text-off-white">{item.title}</span>
+                      <span className={`text-off-white/60 text-xl transition-transform duration-200 ${isOpen ? 'rotate-0' : 'rotate-0'}`}>
+                        {isOpen ? '−' : '+'}
+                      </span>
+                    </button>
+                    <div
+                      className="overflow-hidden transition-all duration-300"
+                      style={{ maxHeight: isOpen ? '300px' : '0', opacity: isOpen ? 1 : 0 }}
+                    >
+                      <p className="text-off-white/80 font-body leading-relaxed text-base pb-5">
+                        {item.desc}
+                      </p>
+                      {item.badge === "Automation" && (
+                        <div className="pb-5">
+                          <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm">
+                            {t("services.cta", "Latest case study")}
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </ScrollReveal>
