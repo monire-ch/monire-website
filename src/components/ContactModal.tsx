@@ -185,7 +185,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
     onClose();
     setTimeout(() => {
       setSubmitted(false);
-      setService("");
+      setServices([]);
       setBudget("");
       setAgreed(false);
       setAttempted(false);
