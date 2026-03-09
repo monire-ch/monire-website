@@ -79,12 +79,77 @@ const CustomSelect: FC<CustomSelectProps> = ({ name, label, placeholder, options
   );
 };
 
+interface CustomMultiSelectProps {
+  name: string;
+  label: string;
+  placeholder: string;
+  options: string[];
+  value: string[];
+  onChange: (v: string[]) => void;
+  required?: boolean;
+}
+
+const CustomMultiSelect: FC<CustomMultiSelectProps> = ({ name, label, placeholder, options, value, onChange, required }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setIsOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const toggle = (opt: string) => {
+    onChange(value.includes(opt) ? value.filter(v => v !== opt) : [...value, opt]);
+  };
+
+  return (
+    <div ref={ref} className="relative">
+      <label className="text-off-white/70 text-sm font-body block mb-1.5">
+        {label}{required && "*"}
+      </label>
+      <input type="hidden" name={name} value={value.join(", ")} />
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full bg-off-white/10 border border-off-white/20 rounded-xl px-4 py-3.5 text-left text-sm font-body focus:outline-none focus:border-gold transition-colors flex items-center justify-between min-h-[3rem]"
+      >
+        <span className={value.length ? "text-off-white" : "text-off-white/40"}>
+          {value.length ? value.join(", ") : placeholder}
+        </span>
+        <ChevronDown className={`w-4 h-4 text-off-white/50 transition-transform shrink-0 ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+      {isOpen && (
+        <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg">
+          {options.map((opt) => (
+            <button
+              key={opt}
+              type="button"
+              onClick={() => toggle(opt)}
+              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 transition-colors flex items-center gap-3"
+            >
+              <span className={`w-4 h-4 rounded border shrink-0 flex items-center justify-center ${value.includes(opt) ? "bg-gold border-gold" : "border-off-white/30"}`}>
+                {value.includes(opt) && (
+                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 3L9 1" stroke="#1a1a1a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                )}
+              </span>
+              {opt}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const inputClasses =
   "w-full bg-off-white/10 border border-off-white/20 rounded-xl px-4 py-3.5 text-off-white text-sm font-body focus:outline-none focus:border-gold transition-colors placeholder:text-off-white/40";
 
 const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const { t } = useTranslation();
-  const [service, setService] = useState("");
+  const [services, setServices] = useState<string[]>([]);
   const [budget, setBudget] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -94,7 +159,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const errors = {
     fullName: attempted && !fieldValues.fullName.trim(),
     email: attempted && (!fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValues.email.trim())),
-    service: attempted && !service,
+    service: attempted && services.length === 0,
     message: attempted && !fieldValues.message.trim(),
     agreed: attempted && !agreed,
   };
@@ -102,7 +167,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setAttempted(true);
-    if (!fieldValues.fullName.trim() || !fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValues.email.trim()) || !service || !fieldValues.message.trim() || !agreed) return;
+    if (!fieldValues.fullName.trim() || !fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValues.email.trim()) || services.length === 0 || !fieldValues.message.trim() || !agreed) return;
     const formData = new FormData(e.currentTarget);
     try {
       await fetch("/", {
@@ -120,7 +185,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
     onClose();
     setTimeout(() => {
       setSubmitted(false);
-      setService("");
+      setServices([]);
       setBudget("");
       setAgreed(false);
       setAttempted(false);
@@ -191,18 +256,18 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
               <input type="url" name="website" className={inputClasses} placeholder={t("contact.websitePlaceholder")} />
             </div>
 
-            {/* Service dropdown */}
+            {/* Service multiselect */}
             <div>
-              <CustomSelect
+              <CustomMultiSelect
                 name="service"
                 label={t("contact.service")}
                 placeholder={t("contact.servicePlaceholder")}
                 options={SERVICE_OPTIONS}
-                value={service}
-                onChange={setService}
+                value={services}
+                onChange={setServices}
                 required
               />
-              {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select a service.</p>}
+              {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select at least one service.</p>}
             </div>
 
             {/* Budget dropdown */}
@@ -239,7 +304,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
               />
               <span className={`text-sm font-body ${errors.agreed ? "text-red-400" : "text-off-white/70"}`}>
                 {t("contact.terms")}{" "}
-                <Link to="/privacy-policy" className="text-gold-text underline hover:text-gold transition-colors">
+                <Link to="/privacy" className="text-gold-text underline hover:text-gold transition-colors" onClick={handleClose}>
                   {t("contact.privacyPolicy")}
                 </Link>.
               </span>
