@@ -256,18 +256,18 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
               <input type="url" name="website" className={inputClasses} placeholder={t("contact.websitePlaceholder")} />
             </div>
 
-            {/* Service dropdown */}
+            {/* Service multiselect */}
             <div>
-              <CustomSelect
+              <CustomMultiSelect
                 name="service"
                 label={t("contact.service")}
                 placeholder={t("contact.servicePlaceholder")}
                 options={SERVICE_OPTIONS}
-                value={service}
-                onChange={setService}
+                value={services}
+                onChange={setServices}
                 required
               />
-              {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select a service.</p>}
+              {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select at least one service.</p>}
             </div>
 
             {/* Budget dropdown */}
