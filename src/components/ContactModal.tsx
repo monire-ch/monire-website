@@ -168,7 +168,8 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             {/* Full Name */}
             <div>
               <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.fullName")}*</label>
-              <input type="text" name="fullName" className={inputClasses} placeholder={t("contact.fullNamePlaceholder")} required />
+              <input type="text" name="fullName" className={`${inputClasses} ${errors.fullName ? "!border-red-400" : ""}`} placeholder={t("contact.fullNamePlaceholder")} value={fieldValues.fullName} onChange={e => setFieldValues(v => ({ ...v, fullName: e.target.value }))} />
+              {errors.fullName && <p className="text-red-400 text-xs font-body mt-1">Please enter your full name.</p>}
             </div>
 
             {/* Company */}
@@ -180,7 +181,8 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             {/* Email */}
             <div>
               <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.email")}*</label>
-              <input type="email" name="email" className={inputClasses} placeholder={t("contact.emailPlaceholder")} required />
+              <input type="email" name="email" className={`${inputClasses} ${errors.email ? "!border-red-400" : ""}`} placeholder={t("contact.emailPlaceholder")} value={fieldValues.email} onChange={e => setFieldValues(v => ({ ...v, email: e.target.value }))} />
+              {errors.email && <p className="text-red-400 text-xs font-body mt-1">{!fieldValues.email.trim() ? "Please enter your email." : "Please enter a valid email address."}</p>}
             </div>
 
             {/* Website */}
@@ -190,15 +192,18 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             </div>
 
             {/* Service dropdown */}
-            <CustomSelect
-              name="service"
-              label={t("contact.service")}
-              placeholder={t("contact.servicePlaceholder")}
-              options={SERVICE_OPTIONS}
-              value={service}
-              onChange={setService}
-              required
-            />
+            <div>
+              <CustomSelect
+                name="service"
+                label={t("contact.service")}
+                placeholder={t("contact.servicePlaceholder")}
+                options={SERVICE_OPTIONS}
+                value={service}
+                onChange={setService}
+                required
+              />
+              {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select a service.</p>}
+            </div>
 
             {/* Budget dropdown */}
             <CustomSelect
@@ -216,10 +221,12 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
               <textarea
                 name="message"
                 rows={5}
-                className={`${inputClasses} resize-vertical`}
+                className={`${inputClasses} resize-vertical ${errors.message ? "!border-red-400" : ""}`}
                 placeholder={t("contact.messagePlaceholder")}
-                required
+                value={fieldValues.message}
+                onChange={e => setFieldValues(v => ({ ...v, message: e.target.value }))}
               />
+              {errors.message && <p className="text-red-400 text-xs font-body mt-1">Please enter a message.</p>}
             </div>
 
             {/* Terms checkbox */}
@@ -229,9 +236,8 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
                 className="mt-0.5 w-4 h-4 rounded border-off-white/30 bg-transparent accent-gold"
-                required
               />
-              <span className="text-off-white/70 text-sm font-body">
+              <span className={`text-sm font-body ${errors.agreed ? "text-red-400" : "text-off-white/70"}`}>
                 {t("contact.terms")}{" "}
                 <Link to="/privacy-policy" className="text-gold-text underline hover:text-gold transition-colors">
                   {t("contact.privacyPolicy")}
