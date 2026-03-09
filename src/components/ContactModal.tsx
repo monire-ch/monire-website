@@ -167,7 +167,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setAttempted(true);
-    if (!fieldValues.fullName.trim() || !fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValues.email.trim()) || !service || !fieldValues.message.trim() || !agreed) return;
+    if (!fieldValues.fullName.trim() || !fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValues.email.trim()) || services.length === 0 || !fieldValues.message.trim() || !agreed) return;
     const formData = new FormData(e.currentTarget);
     try {
       await fetch("/", {
