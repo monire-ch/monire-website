@@ -88,10 +88,21 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const [budget, setBudget] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [attempted, setAttempted] = useState(false);
+  const [fieldValues, setFieldValues] = useState({ fullName: "", email: "", message: "" });
+
+  const errors = {
+    fullName: attempted && !fieldValues.fullName.trim(),
+    email: attempted && (!fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValues.email.trim())),
+    service: attempted && !service,
+    message: attempted && !fieldValues.message.trim(),
+    agreed: attempted && !agreed,
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!agreed) return;
+    setAttempted(true);
+    if (!fieldValues.fullName.trim() || !fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValues.email.trim()) || !service || !fieldValues.message.trim() || !agreed) return;
     const formData = new FormData(e.currentTarget);
     try {
       await fetch("/", {
@@ -101,7 +112,6 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
       });
       setSubmitted(true);
     } catch {
-      // silently fail in preview; works on Netlify
       setSubmitted(true);
     }
   };
@@ -113,6 +123,8 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
       setService("");
       setBudget("");
       setAgreed(false);
+      setAttempted(false);
+      setFieldValues({ fullName: "", email: "", message: "" });
     }, 400);
   };
 
