@@ -304,7 +304,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
               />
               <span className={`text-sm font-body ${errors.agreed ? "text-red-400" : "text-off-white/70"}`}>
                 {t("contact.terms")}{" "}
-                <Link to="/privacy-policy" className="text-gold-text underline hover:text-gold transition-colors">
+                <Link to="/privacy" className="text-gold-text underline hover:text-gold transition-colors" onClick={handleClose}>
                   {t("contact.privacyPolicy")}
                 </Link>.
               </span>
