@@ -159,7 +159,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const errors = {
     fullName: attempted && !fieldValues.fullName.trim(),
     email: attempted && (!fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValues.email.trim())),
-    service: attempted && !service,
+    service: attempted && services.length === 0,
     message: attempted && !fieldValues.message.trim(),
     agreed: attempted && !agreed,
   };
