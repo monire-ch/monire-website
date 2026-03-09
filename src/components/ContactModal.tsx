@@ -149,7 +149,7 @@ const inputClasses =
 
 const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
   const { t } = useTranslation();
-  const [service, setService] = useState("");
+  const [services, setServices] = useState<string[]>([]);
   const [budget, setBudget] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
