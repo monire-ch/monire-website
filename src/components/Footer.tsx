@@ -14,7 +14,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
     { label: t('nav.ourWork'), href: '#portfolio' },
     { label: t('nav.pricing'), href: '#pricing' },
     { label: t('nav.faq'), href: '#faq' },
-    { label: t('nav.contactUs'), href: '#contact' },
+    { label: t('nav.contactUs'), href: '/contact' },
     { label: t('footer.privacyPolicy'), href: '/privacy' },
   ];
 
