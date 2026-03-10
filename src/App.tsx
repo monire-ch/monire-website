@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Apply from "./pages/Apply";
+import Contact from "./pages/Contact";
 import CaseStudyExpenseReceipt from "./pages/CaseStudyExpenseReceipt";
 import CaseStudySnipSquad from "./pages/CaseStudySnipSquad";
 import CaseStudySystemically from "./pages/CaseStudySystemically";
