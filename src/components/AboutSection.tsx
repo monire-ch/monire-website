@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
+import StarIcon from './StarIcon';
 import monika from '@/assets/monika.jpg';
 import nicole from '@/assets/nicole.jpg';
 import linkedinIcon from '@/assets/linkedin.svg';
