@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown, Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import ContactModal from './ContactModal';
+import StarIcon from './StarIcon';
 
 const languages = [
   { code: 'en', label: 'English', display: 'EN' },
