@@ -66,12 +66,12 @@ const PricingSection = () => {
               <p className="text-off-white text-base font-body leading-relaxed max-w-2xl mx-auto mb-8">
                 {t('pricing.automationBlock.desc')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-gold text-sm inline-flex items-center gap-2" onClick={() => setContactOpen(true)}>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <button className="btn-gold text-sm inline-flex items-center justify-center gap-2 w-full sm:w-auto !py-2.5" onClick={() => setContactOpen(true)}>
                   {t('pricing.automationBlock.cta')}
                   <StarIcon />
                 </button>
-                <button className="btn-outline-gold text-sm inline-flex items-center gap-2" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
+                <button className="btn-outline-gold text-sm inline-flex items-center justify-center gap-2 w-full sm:w-auto !py-2.5" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
                   {t('pricing.automationBlock.caseStudy')}
                   <StarIcon />
                 </button>
