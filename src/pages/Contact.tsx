@@ -370,7 +370,7 @@ const Contact = () => {
         ]
       }) }} />
 
-      <Footer />
+      <Footer hideWave />
     </>
   );
 };
