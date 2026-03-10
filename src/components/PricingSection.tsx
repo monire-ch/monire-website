@@ -84,7 +84,7 @@ const PricingSection = () => {
                   <div className="relative">
                     {plan.featured && (
                       <div className="flex justify-center">
-                        <span className="inline-block bg-gold text-main-teal text-xs font-body font-medium tracking-wide uppercase px-4 py-1.5 rounded-t-lg">
+                        <span className="inline-block bg-gold text-main-teal text-sm font-body font-semibold tracking-wide px-8 py-2.5 rounded-full shadow-md">
                           {t('pricing.mostPopular')}
                         </span>
                       </div>
