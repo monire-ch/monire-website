@@ -29,80 +29,80 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
       )}
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12 items-start">
+          {/* Brand column */}
           <div>
-            <img src={logo} alt="Moniré" className="h-7 md:h-9 mb-4 -translate-x-[1rem] md:-translate-x-[2.4rem]" />
-            <div>
-              <p className="text-off-white text-base font-body max-w-xs">
-                {t('footer.tagline')}
-              </p>
-              <div className="flex items-center gap-3 mt-4">
-                <a
-                  href="https://www.instagram.com/hello.monire"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 text-gold-text transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
-                >
-                  <Instagram size={18} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/monire"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
-                >
-                  <img src={linkedinIcon} alt="" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
-                </a>
-              </div>
+            <img src={logo} alt="Moniré" className="h-7 lg:h-9 mb-4 -translate-x-[1rem] lg:-translate-x-[2.4rem]" />
+            <p className="text-off-white text-base font-body max-w-xs">
+              {t('footer.tagline')}
+            </p>
+            <div className="flex items-center gap-3 mt-4">
+              <a
+                href="https://www.instagram.com/hello.monire"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 text-gold-text transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/monire"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+              >
+                <img src={linkedinIcon} alt="" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
+              </a>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-10 md:gap-24">
-            <div>
-              <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.quickLinks')}</p>
-              <ul className="grid grid-cols-2 gap-x-10 gap-y-2">
-                {navItems.map((item) => (
-                  <li key={item.href}>
-                    {item.href.startsWith('/') ? (
-                      <button onClick={() => navigate(item.href)} className="text-off-white text-base font-body hover:text-gold-text transition-colors">
-                        {item.label}
-                      </button>
-                    ) : (
-                      <a
-                        href={item.href}
-                        onClick={(e) => {
-                          if (window.location.pathname !== '/') {
-                            e.preventDefault();
-                            navigate('/' + item.href);
-                          }
-                        }}
-                        className="text-off-white text-base font-body hover:text-gold-text transition-colors"
-                      >
-                        {item.label}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.contact')}</p>
-              <ul className="space-y-2">
-                <li>
-                  <a href="mailto:hello@monire.ch" className="text-gold-text text-base font-body hover:text-gold-hover transition-colors">
-                    hello@monire.ch
-                  </a>
+          {/* Quick Links column */}
+          <div>
+            <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.quickLinks')}</p>
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-2">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  {item.href.startsWith('/') ? (
+                    <button onClick={() => navigate(item.href)} className="text-off-white text-base font-body hover:text-gold-text transition-colors text-left">
+                      {item.label}
+                    </button>
+                  ) : (
+                    <a
+                      href={item.href}
+                      onClick={(e) => {
+                        if (window.location.pathname !== '/') {
+                          e.preventDefault();
+                          navigate('/' + item.href);
+                        }
+                      }}
+                      className="text-off-white text-base font-body hover:text-gold-text transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  )}
                 </li>
-                <li>
-                  <span className="text-off-white text-base font-body">Zürich, Switzerland</span>
-                </li>
-                <li>
-                  <span className="text-off-white text-base font-body">Serving clients worldwide</span>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact column */}
+          <div>
+            <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.contact')}</p>
+            <ul className="space-y-2">
+              <li>
+                <a href="mailto:hello@monire.ch" className="text-gold-text text-base font-body hover:text-gold-hover transition-colors">
+                  hello@monire.ch
+                </a>
+              </li>
+              <li>
+                <span className="text-off-white text-base font-body">Zürich, Switzerland</span>
+              </li>
+              <li>
+                <span className="text-off-white text-base font-body">Serving clients worldwide</span>
+              </li>
+            </ul>
           </div>
         </div>
 

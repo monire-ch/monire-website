@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       {/* ─── Desktop Navbar ─── */}
-      <header className="fixed top-5 left-0 right-0 z-50 hidden md:flex justify-center px-8 pointer-events-none">
+      <header className="fixed top-5 left-0 right-0 z-50 hidden lg:flex justify-center px-8 pointer-events-none">
         <nav
           className="pointer-events-auto flex items-center justify-between w-full max-w-5xl px-5 py-1.5 rounded-full border border-off-white/[0.07]"
           style={{
@@ -139,8 +139,8 @@ const Navbar = () => {
         </nav>
       </header>
 
-      {/* ─── Mobile Top Bar ─── */}
-      <header className="fixed top-3 left-3 right-3 z-50 md:hidden flex items-center justify-between px-3 py-3 rounded-full border border-off-white/[0.07]"
+      {/* ─── Mobile / Tablet Top Bar ─── */}
+      <header className="fixed top-3 left-3 right-3 z-50 lg:hidden flex items-center justify-between px-3 py-3 rounded-full border border-off-white/[0.07]"
         style={{
           background: 'linear-gradient(135deg, rgba(8,47,58,0.88) 0%, rgba(5,34,44,0.92) 100%)',
           backdropFilter: 'blur(18px)',
@@ -160,9 +160,9 @@ const Navbar = () => {
         </button>
       </header>
 
-      {/* ─── Mobile Full-Screen Overlay ─── */}
+      {/* ─── Mobile / Tablet Full-Screen Overlay ─── */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-[90] md:hidden">
+        <div className="fixed inset-0 z-[90] lg:hidden">
           <div
             className="absolute inset-0 animate-fade-in"
             style={{ background: 'rgba(1,27,34,0.6)', backdropFilter: 'blur(4px)' }}
