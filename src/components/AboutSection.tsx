@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
+import StarIcon from './StarIcon';
 import monika from '@/assets/monika.jpg';
 import nicole from '@/assets/nicole.jpg';
 import linkedinIcon from '@/assets/linkedin.svg';
@@ -49,8 +50,9 @@ const AboutSection = () => {
                   <p className="text-base text-off-white font-body leading-relaxed">{item.text}</p>
                   {item.title === 'Giving Back' && (
                     <div className="mt-6 flex items-center gap-6">
-                      <Link to="/apply" className="btn-outline-gold text-sm">
+                      <Link to="/apply" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                         Apply here
+                        <StarIcon size={14} />
                       </Link>
                     </div>
                   )}

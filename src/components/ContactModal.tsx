@@ -2,6 +2,7 @@ import { FC, useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import StarIcon from "./StarIcon";
 
 interface ContactModalProps {
   open: boolean;
@@ -216,7 +217,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             <div className="text-gold text-5xl mb-4">✓</div>
             <h3 className="font-body text-xl text-off-white mb-2">Thank you!</h3>
             <p className="text-off-white/60 text-sm font-body mb-8">We'll get back to you shortly.</p>
-            <button onClick={handleClose} className="btn-outline-gold text-sm">Close</button>
+            <button onClick={handleClose} className="btn-outline-gold text-sm inline-flex items-center gap-2">Close <StarIcon size={14} /></button>
           </div>
         ) : (
           <form
@@ -311,8 +312,9 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             </label>
 
             {/* Submit */}
-            <button type="submit" className="btn-gold text-sm">
+            <button type="submit" className="btn-gold text-sm inline-flex items-center gap-2">
               {t("contact.send")}
+              <StarIcon size={14} />
             </button>
           </form>
         )}

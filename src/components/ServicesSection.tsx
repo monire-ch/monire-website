@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
+import StarIcon from "./StarIcon";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -59,8 +60,9 @@ const ServicesSection = () => {
                 </p>
                 {active.badge === "Automation" && (
                   <div>
-                    <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm">
+                    <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                       {t("services.cta", "Latest case study")}
+                      <StarIcon size={14} />
                     </Link>
                   </div>
                 )}
@@ -91,8 +93,9 @@ const ServicesSection = () => {
                       </p>
                       {item.badge === "Automation" && (
                         <div className="pb-5">
-                          <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm">
+                          <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                             {t("services.cta", "Latest case study")}
+                            <StarIcon size={14} />
                           </Link>
                         </div>
                       )}

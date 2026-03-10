@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import ContactModal from './ContactModal';
+import StarIcon from './StarIcon';
 
 
 const tabKeys = ['webDesign', 'automation'] as const;
@@ -66,11 +67,13 @@ const PricingSection = () => {
                 {t('pricing.automationBlock.desc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-gold text-sm" onClick={() => setContactOpen(true)}>
+                <button className="btn-gold text-sm inline-flex items-center gap-2" onClick={() => setContactOpen(true)}>
                   {t('pricing.automationBlock.cta')}
+                  <StarIcon size={14} />
                 </button>
-                <button className="btn-outline-gold text-sm" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
+                <button className="btn-outline-gold text-sm inline-flex items-center gap-2" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
                   {t('pricing.automationBlock.caseStudy')}
+                  <StarIcon size={14} />
                 </button>
               </div>
             </div>
@@ -126,12 +129,13 @@ const PricingSection = () => {
                           </li>
                         ))}
                       </ul>
-                      <button onClick={() => setContactOpen(true)} className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 ${
+                      <button onClick={() => setContactOpen(true)} className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 inline-flex items-center justify-center gap-2 ${
                         plan.featured
                           ? 'bg-main-teal text-off-white hover:bg-soft-teal'
                           : 'btn-outline-gold'
                       }`}>
                         {t('pricing.getStarted')}
+                        <StarIcon size={14} />
                       </button>
                     </div>
                   </div>

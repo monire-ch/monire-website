@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import linkedinIcon from "@/assets/linkedin.svg";
+import StarIcon from "@/components/StarIcon";
 
 const SERVICE_OPTIONS = [
   "Web Design",
@@ -294,8 +295,9 @@ const Contact = () => {
                       <div className="text-gold text-5xl mb-4">✓</div>
                       <h3 className="font-body text-xl text-off-white mb-2">Thank you!</h3>
                       <p className="text-off-white/60 text-sm font-body mb-8">We'll get back to you shortly.</p>
-                      <Link to="/" className="btn-outline-gold text-sm">
+                      <Link to="/" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                         Back to Home
+                        <StarIcon size={14} />
                       </Link>
                     </div>
                   ) : (
@@ -430,8 +432,9 @@ const Contact = () => {
                         </span>
                       </label>
 
-                      <button type="submit" className="btn-gold text-sm w-full md:w-auto">
+                      <button type="submit" className="btn-gold text-sm w-full md:w-auto inline-flex items-center justify-center gap-2">
                         {t("contact.send")}
+                        <StarIcon size={14} />
                       </button>
                     </form>
                   )}
