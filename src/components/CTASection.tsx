@@ -10,7 +10,7 @@ const CTASection = () => {
         <ScrollReveal>
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('cta.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-main-teal mb-6">{t('cta.title')}</h2>
-          <a href="#" className="btn-teal inline-block text-sm">
+          <a href="/contact" className="btn-teal inline-block text-sm">
             {t('cta.button')}
           </a>
         </ScrollReveal>
