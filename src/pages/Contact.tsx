@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import linkedinIcon from "@/assets/linkedin.svg";
+import StarIcon from "@/components/StarIcon";
 
 const SERVICE_OPTIONS = [
   "Web Design",
