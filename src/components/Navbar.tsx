@@ -135,7 +135,7 @@ const Navbar = () => {
               className="btn-gold flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold uppercase tracking-widest flex items-center gap-2"
             >
               {t('nav.contactUs')}
-              <StarIcon size={14} />
+              <StarIcon size={15} />
             </button>
           </div>
         </nav>

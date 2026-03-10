@@ -95,7 +95,7 @@ const Apply = () => {
             <div className="flex items-center gap-4">
               <button onClick={() => setContactOpen(true)} className="btn-outline-gold text-sm inline-flex items-center gap-2">
                 Apply now
-                <StarIcon size={14} />
+                <StarIcon />
               </button>
             </div>
           </ScrollReveal>

@@ -78,7 +78,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         >
           <button onClick={() => navigate('/contact')} className="btn-gold inline-flex items-center gap-2 text-sm">
             {t('hero.cta')}
-            <StarIcon size={14} />
+            <StarIcon />
           </button>
         </div>
       </div>

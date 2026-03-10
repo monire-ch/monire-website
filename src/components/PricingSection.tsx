@@ -135,7 +135,7 @@ const PricingSection = () => {
                           : 'btn-outline-gold'
                       }`}>
                         {t('pricing.getStarted')}
-                        <StarIcon size={14} />
+                        <StarIcon />
                       </button>
                     </div>
                   </div>

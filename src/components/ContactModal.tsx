@@ -314,7 +314,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             {/* Submit */}
             <button type="submit" className="btn-gold text-sm inline-flex items-center gap-2">
               {t("contact.send")}
-              <StarIcon size={14} />
+              <StarIcon />
             </button>
           </form>
         )}
