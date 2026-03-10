@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import ContactModal from '@/components/ContactModal';
+import StarIcon from '@/components/StarIcon';
 
 const steps = [
   {
