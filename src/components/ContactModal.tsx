@@ -2,6 +2,7 @@ import { FC, useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import StarIcon from "./StarIcon";
 
 interface ContactModalProps {
   open: boolean;
