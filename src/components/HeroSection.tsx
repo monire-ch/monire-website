@@ -39,7 +39,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           <span className="hidden sm:block w-12 h-px bg-off-white/30" />
         </div>
 
-        <h1 className="font-serif text-[36px] sm:text-[48px] md:text-[67px] leading-[1.2] tracking-[-0.01em] mb-8">
+        <h1 className="font-serif text-[30px] sm:text-[48px] md:text-[67px] leading-[1.2] tracking-[-0.01em] mb-8">
           {words.map((word, i) => (
             <span
               key={i}
