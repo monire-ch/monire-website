@@ -248,16 +248,6 @@ const Contact = () => {
                 </div>
               </ScrollReveal>
 
-              <ScrollReveal delay={200}>
-                <div>
-                  <h2 className="text-gold-text text-sm tracking-widest uppercase font-body mb-6">Company</h2>
-                  <div className="space-y-2 text-off-white/70 font-body text-sm">
-                    <p className="text-off-white text-base">Moniré</p>
-                    <p>Web Design, Development & AI Automations</p>
-                    <p>Zürich, Switzerland</p>
-                  </div>
-                </div>
-              </ScrollReveal>
 
               <ScrollReveal delay={300}>
                 <div>
