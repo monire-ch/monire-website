@@ -217,7 +217,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
             <div className="text-gold text-5xl mb-4">✓</div>
             <h3 className="font-body text-xl text-off-white mb-2">Thank you!</h3>
             <p className="text-off-white/60 text-sm font-body mb-8">We'll get back to you shortly.</p>
-            <button onClick={handleClose} className="btn-outline-gold text-sm inline-flex items-center gap-2">Close <StarIcon size={14} /></button>
+            <button onClick={handleClose} className="btn-outline-gold text-sm inline-flex items-center gap-2">Close <StarIcon /></button>
           </div>
         ) : (
           <form
