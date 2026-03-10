@@ -200,7 +200,8 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <main className="dark-teal-surface min-h-screen pt-36 md:pt-44 pb-0">
+      <main className="dark-teal-surface min-h-screen pt-36 md:pt-44 pb-0 relative overflow-hidden">
+        <div className="about-orb about-orb-2" style={{ bottom: '120px', left: '-40px', width: '320px', height: '320px', background: 'rgba(120, 200, 255, 0.25)' }} />
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
           <ScrollReveal>
