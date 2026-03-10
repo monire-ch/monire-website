@@ -297,7 +297,7 @@ const Contact = () => {
                       <p className="text-off-white/60 text-sm font-body mb-8">We'll get back to you shortly.</p>
                       <Link to="/" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                         Back to Home
-                        <StarIcon size={14} />
+                        <StarIcon />
                       </Link>
                     </div>
                   ) : (
