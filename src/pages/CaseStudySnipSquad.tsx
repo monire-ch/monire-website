@@ -3,7 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import snipSquad from '@/assets/snip-squad_full-hq.png';
+import snipSquad from '@/assets/portfolio/snip-squad_full.webp';
 
 const CaseStudySnipSquad = () => {
   const { t } = useTranslation();
