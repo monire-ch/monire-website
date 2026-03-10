@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import ContactModal from './ContactModal';
+import StarIcon from './StarIcon';
 
 
 const tabKeys = ['webDesign', 'automation'] as const;
