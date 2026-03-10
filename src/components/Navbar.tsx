@@ -74,7 +74,13 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={getHref(link.href)}
-                onClick={() => setActiveLink(link.href)}
+                onClick={(e) => {
+                  setActiveLink(link.href);
+                  if (isHome && link.href === '#') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
                 className={`relative px-4 py-1.5 rounded-full text-[15px] font-body tracking-wide transition-all duration-200 ${
                   activeLink === link.href
                     ? 'text-off-white'
