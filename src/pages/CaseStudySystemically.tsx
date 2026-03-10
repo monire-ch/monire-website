@@ -3,7 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import systemically from '@/assets/portfolio/systemically_full.png';
+import systemically from '@/assets/portfolio/systemically_full.webp';
 
 const CaseStudySystemically = () => {
   const { t } = useTranslation();

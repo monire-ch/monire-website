@@ -1,24 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Globe, ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import ContactModal from './ContactModal';
 import StarIcon from './StarIcon';
 
-const languages = [
-  { code: 'en', label: 'English', display: 'EN' },
-  { code: 'de', label: 'Deutsch', display: 'DE' },
-  { code: 'pl', label: 'Polski', display: 'PL' },
-];
-
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const location = useLocation();
   const isHome = location.pathname === '/';
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('#');
 
   const getHref = (hash: string) => isHome ? hash : `/${hash}`;
@@ -30,9 +23,6 @@ const Navbar = () => {
     { label: t('nav.pricing'), href: '#pricing' },
     { label: t('nav.ourWork'), href: '#portfolio' },
   ];
-
-  const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
-
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY < 100) setActiveLink('#');
@@ -45,11 +35,6 @@ const Navbar = () => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
-
-  const switchLang = (code: string) => {
-    i18n.changeLanguage(code);
-    setLangOpen(false);
-  };
 
   return (
     <>
@@ -94,47 +79,6 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* Language switcher */}
-            <div className="relative">
-              <button
-                onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px] text-off-white/70 font-body transition-colors duration-200 hover:text-off-white/90"
-                style={{ background: 'rgba(248,245,241,0.06)' }}
-              >
-                <Globe size={13} strokeWidth={1.5} />
-                <span>{currentLang.display}</span>
-                <ChevronDown size={12} strokeWidth={1.5} className={`transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {langOpen && (
-                <>
-                  <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
-                  <div
-                    className="absolute top-full right-0 mt-2 rounded-xl py-1.5 min-w-[130px] z-50 border border-off-white/[0.07]"
-                    style={{
-                      background: 'linear-gradient(145deg, rgba(8,47,58,0.95) 0%, rgba(5,34,44,0.98) 100%)',
-                      backdropFilter: 'blur(20px)',
-                      boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-                    }}
-                  >
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => switchLang(lang.code)}
-                        className={`w-full text-left px-4 py-2 text-[13px] font-body transition-colors duration-150 ${
-                          i18n.language === lang.code
-                            ? 'text-gold-text'
-                            : 'text-off-white/70 hover:text-off-white hover:bg-off-white/[0.05]'
-                        }`}
-                      >
-                        {lang.label}
-                      </button>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-
             {/* CTA */}
             <button
               onClick={() => setContactOpen(true)}
@@ -208,25 +152,6 @@ const Navbar = () => {
                   </span>
                 </a>
               ))}
-
-              <div className="py-5 border-b border-off-white/[0.07]">
-                <div className="flex items-center gap-3">
-                  <Globe size={16} className="text-off-white/50" strokeWidth={1.5} />
-                  <div className="flex gap-3">
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => switchLang(lang.code)}
-                        className={`text-sm font-body transition-colors duration-200 ${
-                          i18n.language === lang.code ? 'text-gold-text' : 'text-off-white/50 hover:text-off-white/80'
-                        }`}
-                      >
-                        {lang.display}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
             </nav>
 
             <div className="px-6 pb-10 pt-4">
