@@ -75,7 +75,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''}`}
           style={{ transitionDelay: '420ms' }}
         >
-          <button onClick={onCtaClick} className="btn-gold inline-block text-sm">
+          <button onClick={() => navigate('/contact')} className="btn-gold inline-block text-sm">
             {t('hero.cta')}
           </button>
         </div>
