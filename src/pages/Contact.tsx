@@ -119,7 +119,7 @@ const PageMultiSelect: FC<MultiSelectProps> = ({ name, label, placeholder, optio
         />
       </button>
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg">
+        <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg [&::-webkit-scrollbar]:hidden">
           {options.map((opt) => (
             <button
               key={opt}
