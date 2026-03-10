@@ -83,8 +83,8 @@ const PricingSection = () => {
                 <ScrollReveal key={plan.name} delay={i * 100}>
                   <div className="relative">
                     {plan.featured && (
-                      <div className="flex justify-center">
-                        <span className="inline-block bg-gold text-main-teal text-sm font-body font-semibold tracking-wide px-8 py-2.5 rounded-full shadow-md">
+                      <div className="flex justify-center relative z-10 -mb-4">
+                        <span className="inline-block bg-gold text-main-teal text-xs font-body font-semibold tracking-wide px-5 py-1.5 rounded-full shadow-md">
                           {t('pricing.mostPopular')}
                         </span>
                       </div>
