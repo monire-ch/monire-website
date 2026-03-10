@@ -200,16 +200,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <main className="dark-teal-surface min-h-screen pt-36 md:pt-44 pb-0 relative overflow-hidden">
-        {/* Orbit decoration */}
-        <div className="absolute -left-32 top-1/4 w-[500px] h-[500px] pointer-events-none opacity-[0.07]">
-          <div className="absolute inset-0 rounded-full border border-gold" style={{ animation: 'spin 45s linear infinite' }} />
-          <div className="absolute inset-8 rounded-full border border-gold/70" style={{ animation: 'spin 60s linear infinite reverse' }} />
-          <div className="absolute inset-20 rounded-full border border-gold/50" style={{ animation: 'spin 35s linear infinite' }} />
-          <div className="absolute top-1/2 left-1/2 w-2 h-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold" />
-          <div className="absolute top-0 left-1/2 w-1.5 h-1.5 -translate-x-1/2 rounded-full bg-gold/80" style={{ animation: 'spin 45s linear infinite', transformOrigin: '0 250px' }} />
-          <div className="absolute top-8 left-1/2 w-1 h-1 -translate-x-1/2 rounded-full bg-gold/60" style={{ animation: 'spin 60s linear infinite reverse', transformOrigin: '0 242px' }} />
-        </div>
+      <main className="dark-teal-surface min-h-screen pt-36 md:pt-44 pb-0">
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
           <ScrollReveal>
