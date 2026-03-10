@@ -50,8 +50,9 @@ const AboutSection = () => {
                   <p className="text-base text-off-white font-body leading-relaxed">{item.text}</p>
                   {item.title === 'Giving Back' && (
                     <div className="mt-6 flex items-center gap-6">
-                      <Link to="/apply" className="btn-outline-gold text-sm">
+                      <Link to="/apply" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                         Apply here
+                        <StarIcon size={14} />
                       </Link>
                     </div>
                   )}

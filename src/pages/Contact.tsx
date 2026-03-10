@@ -432,8 +432,9 @@ const Contact = () => {
                         </span>
                       </label>
 
-                      <button type="submit" className="btn-gold text-sm w-full md:w-auto">
+                      <button type="submit" className="btn-gold text-sm w-full md:w-auto inline-flex items-center justify-center gap-2">
                         {t("contact.send")}
+                        <StarIcon size={14} />
                       </button>
                     </form>
                   )}
