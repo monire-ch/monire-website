@@ -17,22 +17,24 @@ const ROUTES = [
   "/case-studies/towarowa",
 ];
 
-export async function prerender() {
-  const pages = ROUTES.map((url) => {
-    const queryClient = new QueryClient();
-    const html = renderToString(
-      <I18nextProvider i18n={i18n}>
-        <QueryClientProvider client={queryClient}>
-          <TooltipProvider>
-            <StaticRouter location={url}>
-              <AppRoutes />
-            </StaticRouter>
-          </TooltipProvider>
-        </QueryClientProvider>
-      </I18nextProvider>
-    );
-    return { url, html };
-  });
+export async function prerender(data: { url?: string } = {}) {
+  const url = data.url || "/";
+  const queryClient = new QueryClient();
 
-  return { links: ROUTES, pages };
+  const html = renderToString(
+    <I18nextProvider i18n={i18n}>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <StaticRouter location={url}>
+            <AppRoutes />
+          </StaticRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </I18nextProvider>
+  );
+
+  return {
+    html,
+    links: ROUTES,
+  };
 }
