@@ -10,6 +10,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const fontsLoaded = useFontsLoaded();
   const [animate, setAnimate] = useState(false);
 
