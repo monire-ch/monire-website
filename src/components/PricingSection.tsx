@@ -69,7 +69,7 @@ const PricingSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="btn-gold text-sm inline-flex items-center gap-2" onClick={() => setContactOpen(true)}>
                   {t('pricing.automationBlock.cta')}
-                  <StarIcon size={14} />
+                  <StarIcon />
                 </button>
                 <button className="btn-outline-gold text-sm inline-flex items-center gap-2" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
                   {t('pricing.automationBlock.caseStudy')}
