@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { useFontsLoaded } from '@/hooks/useFontsLoaded';
 import goldFill from '@/assets/gold-fill.webp';
 
