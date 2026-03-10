@@ -3,7 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import towarowa from '@/assets/towarowa_full.png';
+import towarowa from '@/assets/portfolio/towarowa_full.png';
 
 const CaseStudyTowarowa = () => {
   const { t } = useTranslation();

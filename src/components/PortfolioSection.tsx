@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 import useEmblaCarousel from 'embla-carousel-react';
 import ScrollReveal from './ScrollReveal';
-import snipSquad from '@/assets/snip-squad_full-hq.png';
-import systemically from '@/assets/systemically_full.png';
-import towarowa from '@/assets/towarowa_full.png';
-import n8nPreview from '@/assets/n8n_preview.png';
+import snipSquad from '@/assets/portfolio/snip-squad_full.png';
+import systemically from '@/assets/portfolio/systemically_full.png';
+import towarowa from '@/assets/portfolio/towarowa_full.png';
+import n8nPreview from '@/assets/portfolio/n8n.png';
 
 const projectImages = [snipSquad, systemically, towarowa, n8nPreview];
 
