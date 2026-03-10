@@ -295,7 +295,7 @@ const Contact = () => {
             </div>
 
             {/* Right: Form */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 lg:order-1">
               <ScrollReveal>
                 <div className="dark-surface-card rounded-2xl p-8 md:p-10 border border-off-white/[0.07] overflow-visible">
                   {submitted ? (
