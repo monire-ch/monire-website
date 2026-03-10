@@ -119,7 +119,7 @@ const PageMultiSelect: FC<MultiSelectProps> = ({ name, label, placeholder, optio
         />
       </button>
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg">
+        <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg [&::-webkit-scrollbar]:hidden">
           {options.map((opt) => (
             <button
               key={opt}
@@ -297,7 +297,7 @@ const Contact = () => {
             {/* Right: Form */}
             <div className="lg:col-span-3">
               <ScrollReveal>
-                <div className="dark-surface-card rounded-2xl p-8 md:p-10 border border-off-white/[0.07]">
+                <div className="dark-surface-card rounded-2xl p-8 md:p-10 border border-off-white/[0.07] overflow-visible">
                   {submitted ? (
                     <div className="flex flex-col items-center justify-center py-16 text-center">
                       <div className="text-gold text-5xl mb-4">✓</div>
