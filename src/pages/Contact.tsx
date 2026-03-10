@@ -217,7 +217,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 pb-24">
             {/* Left: Info */}
-            <div className="lg:col-span-2 space-y-10">
+            <div className="lg:col-span-2 space-y-10 lg:order-2">
               <ScrollReveal>
                 <div>
                   <h2 className="text-gold-text text-sm tracking-widest uppercase font-body mb-6">Get in Touch</h2>
