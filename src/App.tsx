@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Apply from "./pages/Apply";
+import Contact from "./pages/Contact";
 import CaseStudyExpenseReceipt from "./pages/CaseStudyExpenseReceipt";
 import CaseStudySnipSquad from "./pages/CaseStudySnipSquad";
 import CaseStudySystemically from "./pages/CaseStudySystemically";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/case-studies/expense-receipt-automation" element={<CaseStudyExpenseReceipt />} />
           <Route path="/case-studies/snip-squad" element={<CaseStudySnipSquad />} />
           <Route path="/case-studies/systemically" element={<CaseStudySystemically />} />
