@@ -134,10 +134,8 @@ const Navbar = () => {
               onClick={() => setContactOpen(true)}
               className="btn-gold flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold uppercase tracking-widest flex items-center gap-2"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 25 25" fill="none" className="flex-shrink-0">
-                <path d="M12.5 0C11.9427 11.4844 11.4844 11.9427 0 12.5C11.4844 13.0573 11.9427 13.5156 12.5 25C13.0573 13.5156 13.5156 13.0573 25 12.5C13.5156 11.9427 13.0573 11.4844 12.5 0Z" fill="currentColor"/>
-              </svg>
               {t('nav.contactUs')}
+              <StarIcon size={14} />
             </button>
           </div>
         </nav>
