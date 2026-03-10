@@ -52,7 +52,7 @@ const AboutSection = () => {
                     <div className="mt-6 flex items-center gap-6">
                       <Link to="/apply" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                         Apply here
-                        <StarIcon size={14} />
+                        <StarIcon />
                       </Link>
                     </div>
                   )}
