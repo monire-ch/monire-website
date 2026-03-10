@@ -1,11 +1,11 @@
-import { useState, useRef, useEffect, FC } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
-import { Mail, MapPin, Instagram, ChevronDown } from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import ScrollReveal from '@/components/ScrollReveal';
-import linkedinIcon from '@/assets/linkedin.svg';
+import { useState, useRef, useEffect, FC } from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { Mail, MapPin, Instagram, ChevronDown } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
+import linkedinIcon from "@/assets/linkedin.svg";
 
 const SERVICE_OPTIONS = [
   "Web Design",
@@ -17,12 +17,7 @@ const SERVICE_OPTIONS = [
   "Other",
 ];
 
-const BUDGET_OPTIONS = [
-  "<CHF 5'000",
-  "CHF 5'000 – 10'000",
-  "CHF 10'000 – 20'000",
-  "CHF 20'000+",
-];
+const BUDGET_OPTIONS = ["<CHF 5'000", "CHF 5'000 – 10'000", "CHF 10'000 – 20'000", "CHF 20'000+"];
 
 interface SelectProps {
   name: string;
@@ -60,8 +55,15 @@ const PageSelect: FC<SelectProps> = ({ name, label, placeholder, options, value,
       {isOpen && (
         <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg">
           {options.map((opt) => (
-            <button key={opt} type="button" onClick={() => { onChange(opt); setIsOpen(false); }}
-              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 transition-colors">
+            <button
+              key={opt}
+              type="button"
+              onClick={() => {
+                onChange(opt);
+                setIsOpen(false);
+              }}
+              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 transition-colors"
+            >
               {opt}
             </button>
           ))}
@@ -94,28 +96,50 @@ const PageMultiSelect: FC<MultiSelectProps> = ({ name, label, placeholder, optio
   }, []);
 
   const toggle = (opt: string) => {
-    onChange(value.includes(opt) ? value.filter(v => v !== opt) : [...value, opt]);
+    onChange(value.includes(opt) ? value.filter((v) => v !== opt) : [...value, opt]);
   };
 
   return (
     <div ref={ref} className="relative">
-      <label className="text-off-white/70 text-sm font-body block mb-1.5">{label}{required && "*"}</label>
+      <label className="text-off-white/70 text-sm font-body block mb-1.5">
+        {label}
+        {required && "*"}
+      </label>
       <input type="hidden" name={name} value={value.join(", ")} />
-      <button type="button" onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-off-white/10 border border-off-white/20 rounded-xl px-4 py-3.5 text-left text-sm font-body focus:outline-none focus:border-gold transition-colors flex items-center justify-between min-h-[3rem]">
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full bg-off-white/10 border border-off-white/20 rounded-xl px-4 py-3.5 text-left text-sm font-body focus:outline-none focus:border-gold transition-colors flex items-center justify-between min-h-[3rem]"
+      >
         <span className={value.length ? "text-off-white" : "text-off-white/40"}>
           {value.length ? value.join(", ") : placeholder}
         </span>
-        <ChevronDown className={`w-4 h-4 text-off-white/50 transition-transform shrink-0 ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`w-4 h-4 text-off-white/50 transition-transform shrink-0 ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
       {isOpen && (
         <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg">
           {options.map((opt) => (
-            <button key={opt} type="button" onClick={() => toggle(opt)}
-              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 transition-colors flex items-center gap-3">
-              <span className={`w-4 h-4 rounded border shrink-0 flex items-center justify-center ${value.includes(opt) ? "bg-gold border-gold" : "border-off-white/30"}`}>
+            <button
+              key={opt}
+              type="button"
+              onClick={() => toggle(opt)}
+              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 transition-colors flex items-center gap-3"
+            >
+              <span
+                className={`w-4 h-4 rounded border shrink-0 flex items-center justify-center ${value.includes(opt) ? "bg-gold border-gold" : "border-off-white/30"}`}
+              >
                 {value.includes(opt) && (
-                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 3L9 1" stroke="#1a1a1a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path
+                      d="M1 4l2.5 3L9 1"
+                      stroke="#1a1a1a"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 )}
               </span>
               {opt}
@@ -141,7 +165,8 @@ const Contact = () => {
 
   const errors = {
     fullName: attempted && !fieldValues.fullName.trim(),
-    email: attempted && (!fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim())),
+    email:
+      attempted && (!fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim())),
     service: attempted && services.length === 0,
     message: attempted && !fieldValues.message.trim(),
     agreed: attempted && !agreed,
@@ -150,7 +175,15 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setAttempted(true);
-    if (!fieldValues.fullName.trim() || !fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim()) || services.length === 0 || !fieldValues.message.trim() || !agreed) return;
+    if (
+      !fieldValues.fullName.trim() ||
+      !fieldValues.email.trim() ||
+      !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim()) ||
+      services.length === 0 ||
+      !fieldValues.message.trim() ||
+      !agreed
+    )
+      return;
     const formData = new FormData(e.currentTarget);
     try {
       await fetch("/", {
@@ -174,7 +207,7 @@ const Contact = () => {
             <div className="text-center mb-16">
               <span className="eyebrow-pill eyebrow-pill-dark">Contact</span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-off-white leading-tight mb-4">
-                Let's Build Something Together
+                Let's Work Together
               </h1>
               <p className="text-off-white/60 text-lg font-body max-w-2xl mx-auto">
                 Whether you have a project in mind or just want to explore possibilities, we'd love to hear from you.
@@ -188,8 +221,10 @@ const Contact = () => {
               <ScrollReveal>
                 <div>
                   <h2 className="text-gold-text text-sm tracking-widest uppercase font-body mb-6">Get in Touch</h2>
-                  <a href="mailto:hello@monire.ch"
-                    className="flex items-center gap-3 text-off-white font-body text-lg hover:text-gold-hover transition-colors group">
+                  <a
+                    href="mailto:hello@monire.ch"
+                    className="flex items-center gap-3 text-off-white font-body text-lg hover:text-gold-hover transition-colors group"
+                  >
                     <span className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-text/30 group-hover:border-gold-text/60 transition-colors">
                       <Mail size={18} className="text-gold-text" />
                     </span>
@@ -244,7 +279,15 @@ const Contact = () => {
                       aria-label="LinkedIn"
                       className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-text/30 transition-all duration-200 hover:border-gold-text/60 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
                     >
-                      <img src={linkedinIcon} alt="" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
+                      <img
+                        src={linkedinIcon}
+                        alt=""
+                        className="w-4 h-4"
+                        style={{
+                          filter:
+                            "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)",
+                        }}
+                      />
                     </a>
                   </div>
                 </div>
@@ -260,7 +303,9 @@ const Contact = () => {
                       <div className="text-gold text-5xl mb-4">✓</div>
                       <h3 className="font-body text-xl text-off-white mb-2">Thank you!</h3>
                       <p className="text-off-white/60 text-sm font-body mb-8">We'll get back to you shortly.</p>
-                      <Link to="/" className="btn-outline-gold text-sm">Back to Home</Link>
+                      <Link to="/" className="btn-outline-gold text-sm">
+                        Back to Home
+                      </Link>
                     </div>
                   ) : (
                     <form
@@ -276,57 +321,121 @@ const Contact = () => {
 
                       <div className="grid md:grid-cols-2 gap-5">
                         <div>
-                          <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.fullName")}*</label>
-                          <input type="text" name="fullName" className={`${inputClasses} ${errors.fullName ? "!border-red-400" : ""}`}
-                            placeholder={t("contact.fullNamePlaceholder")} value={fieldValues.fullName}
-                            onChange={e => setFieldValues(v => ({ ...v, fullName: e.target.value }))} />
-                          {errors.fullName && <p className="text-red-400 text-xs font-body mt-1">Please enter your full name.</p>}
+                          <label className="text-off-white/70 text-sm font-body block mb-1.5">
+                            {t("contact.fullName")}*
+                          </label>
+                          <input
+                            type="text"
+                            name="fullName"
+                            className={`${inputClasses} ${errors.fullName ? "!border-red-400" : ""}`}
+                            placeholder={t("contact.fullNamePlaceholder")}
+                            value={fieldValues.fullName}
+                            onChange={(e) => setFieldValues((v) => ({ ...v, fullName: e.target.value }))}
+                          />
+                          {errors.fullName && (
+                            <p className="text-red-400 text-xs font-body mt-1">Please enter your full name.</p>
+                          )}
                         </div>
                         <div>
-                          <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.company")}</label>
-                          <input type="text" name="company" className={inputClasses} placeholder={t("contact.companyPlaceholder")} />
+                          <label className="text-off-white/70 text-sm font-body block mb-1.5">
+                            {t("contact.company")}
+                          </label>
+                          <input
+                            type="text"
+                            name="company"
+                            className={inputClasses}
+                            placeholder={t("contact.companyPlaceholder")}
+                          />
                         </div>
                       </div>
 
                       <div className="grid md:grid-cols-2 gap-5">
                         <div>
-                          <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.email")}*</label>
-                          <input type="email" name="email" className={`${inputClasses} ${errors.email ? "!border-red-400" : ""}`}
-                            placeholder={t("contact.emailPlaceholder")} value={fieldValues.email}
-                            onChange={e => setFieldValues(v => ({ ...v, email: e.target.value }))} />
-                          {errors.email && <p className="text-red-400 text-xs font-body mt-1">{!fieldValues.email.trim() ? "Please enter your email." : "Please enter a valid email address."}</p>}
+                          <label className="text-off-white/70 text-sm font-body block mb-1.5">
+                            {t("contact.email")}*
+                          </label>
+                          <input
+                            type="email"
+                            name="email"
+                            className={`${inputClasses} ${errors.email ? "!border-red-400" : ""}`}
+                            placeholder={t("contact.emailPlaceholder")}
+                            value={fieldValues.email}
+                            onChange={(e) => setFieldValues((v) => ({ ...v, email: e.target.value }))}
+                          />
+                          {errors.email && (
+                            <p className="text-red-400 text-xs font-body mt-1">
+                              {!fieldValues.email.trim()
+                                ? "Please enter your email."
+                                : "Please enter a valid email address."}
+                            </p>
+                          )}
                         </div>
                         <div>
-                          <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.website")}</label>
-                          <input type="url" name="website" className={inputClasses} placeholder={t("contact.websitePlaceholder")} />
+                          <label className="text-off-white/70 text-sm font-body block mb-1.5">
+                            {t("contact.website")}
+                          </label>
+                          <input
+                            type="url"
+                            name="website"
+                            className={inputClasses}
+                            placeholder={t("contact.websitePlaceholder")}
+                          />
                         </div>
                       </div>
 
                       <div className="grid md:grid-cols-2 gap-5">
-                        <PageMultiSelect name="service" label={t("contact.service")} placeholder={t("contact.servicePlaceholder")}
-                          options={SERVICE_OPTIONS} value={services} onChange={setServices} required />
-                        <PageSelect name="budget" label={t("contact.budget")} placeholder={t("contact.budgetPlaceholder")}
-                          options={BUDGET_OPTIONS} value={budget} onChange={setBudget} />
+                        <PageMultiSelect
+                          name="service"
+                          label={t("contact.service")}
+                          placeholder={t("contact.servicePlaceholder")}
+                          options={SERVICE_OPTIONS}
+                          value={services}
+                          onChange={setServices}
+                          required
+                        />
+                        <PageSelect
+                          name="budget"
+                          label={t("contact.budget")}
+                          placeholder={t("contact.budgetPlaceholder")}
+                          options={BUDGET_OPTIONS}
+                          value={budget}
+                          onChange={setBudget}
+                        />
                       </div>
-                      {errors.service && <p className="text-red-400 text-xs font-body -mt-3">Please select at least one service.</p>}
+                      {errors.service && (
+                        <p className="text-red-400 text-xs font-body -mt-3">Please select at least one service.</p>
+                      )}
 
                       <div>
-                        <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.message")}*</label>
-                        <textarea name="message" rows={5}
+                        <label className="text-off-white/70 text-sm font-body block mb-1.5">
+                          {t("contact.message")}*
+                        </label>
+                        <textarea
+                          name="message"
+                          rows={5}
                           className={`${inputClasses} resize-vertical ${errors.message ? "!border-red-400" : ""}`}
-                          placeholder={t("contact.messagePlaceholder")} value={fieldValues.message}
-                          onChange={e => setFieldValues(v => ({ ...v, message: e.target.value }))} />
-                        {errors.message && <p className="text-red-400 text-xs font-body mt-1">Please enter a message.</p>}
+                          placeholder={t("contact.messagePlaceholder")}
+                          value={fieldValues.message}
+                          onChange={(e) => setFieldValues((v) => ({ ...v, message: e.target.value }))}
+                        />
+                        {errors.message && (
+                          <p className="text-red-400 text-xs font-body mt-1">Please enter a message.</p>
+                        )}
                       </div>
 
                       <label className="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)}
-                          className="mt-0.5 w-4 h-4 rounded border-off-white/30 bg-transparent accent-gold" />
+                        <input
+                          type="checkbox"
+                          checked={agreed}
+                          onChange={(e) => setAgreed(e.target.checked)}
+                          className="mt-0.5 w-4 h-4 rounded border-off-white/30 bg-transparent accent-gold"
+                        />
                         <span className={`text-sm font-body ${errors.agreed ? "text-red-400" : "text-off-white/70"}`}>
                           {t("contact.terms")}{" "}
                           <Link to="/privacy" className="text-gold-text underline hover:text-gold transition-colors">
                             {t("contact.privacyPolicy")}
-                          </Link>.
+                          </Link>
+                          .
                         </span>
                       </label>
 
@@ -343,32 +452,28 @@ const Contact = () => {
       </main>
 
       {/* JSON-LD Organization structured data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Moniré",
-        "url": "https://monire.ch",
-        "logo": "https://monire.ch/assets/monire_logo.png",
-        "email": "hello@monire.ch",
-        "description": "Custom website development and AI-powered workflow automation in Switzerland.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Zürich",
-          "addressCountry": "CH"
-        },
-        "areaServed": "Worldwide",
-        "sameAs": [
-          "https://www.instagram.com/hello.monire",
-          "https://www.linkedin.com/company/monire"
-        ],
-        "serviceType": [
-          "Web Design",
-          "Web Development",
-          "AI Automations",
-          "Website Migration",
-          "SEO & Analytics"
-        ]
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Moniré",
+            url: "https://monire.ch",
+            logo: "https://monire.ch/assets/monire_logo.png",
+            email: "hello@monire.ch",
+            description: "Custom website development and AI-powered workflow automation in Switzerland.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Zürich",
+              addressCountry: "CH",
+            },
+            areaServed: "Worldwide",
+            sameAs: ["https://www.instagram.com/hello.monire", "https://www.linkedin.com/company/monire"],
+            serviceType: ["Web Design", "Web Development", "AI Automations", "Website Migration", "SEO & Analytics"],
+          }),
+        }}
+      />
 
       <Footer hideWave />
     </>
