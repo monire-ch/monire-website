@@ -167,6 +167,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
   const [budget, setBudget] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const [attempted, setAttempted] = useState(false);
   const [fieldValues, setFieldValues] = useState({ fullName: "", email: "", message: "" });
 
@@ -184,6 +185,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setAttempted(true);
+    setSubmitError(false);
 
     if (
       !fieldValues.fullName.trim() ||
@@ -199,14 +201,17 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
     const formData = new FormData(e.currentTarget);
 
     try {
-      await fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
       setSubmitted(true);
     } catch {
-      setSubmitted(true);
+      setSubmitError(true);
     }
   };
 
@@ -241,6 +246,18 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="bot-field" />
+
+      {submitError && (
+        <div className="rounded-xl border border-red-400/40 bg-red-950/30 p-4">
+          <p className="text-red-200 text-sm font-body">
+            There was a problem sending your message. Please try again or contact us at{" "}
+            <a href="mailto:hello@monire.ch" className="underline text-red-100 hover:text-white transition-colors">
+              hello@monire.ch
+            </a>
+            .
+          </p>
+        </div>
+      )}
 
       {isModal ? (
         <>
