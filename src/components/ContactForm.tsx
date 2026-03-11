@@ -40,6 +40,7 @@ interface MultiSelectProps {
   value: string[];
   onChange: (v: string[]) => void;
   required?: boolean;
+  className?: string;
 }
 
 const inputClasses =
@@ -93,7 +94,16 @@ const SelectField: FC<SelectProps> = ({ name, label, placeholder, options, value
   );
 };
 
-const MultiSelectField: FC<MultiSelectProps> = ({ name, label, placeholder, options, value, onChange, required }) => {
+const MultiSelectField: FC<MultiSelectProps> = ({
+  name,
+  label,
+  placeholder,
+  options,
+  value,
+  onChange,
+  required,
+  className,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -119,7 +129,7 @@ const MultiSelectField: FC<MultiSelectProps> = ({ name, label, placeholder, opti
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-off-white/10 border border-off-white/20 rounded-xl px-4 py-3.5 text-left text-sm font-body focus:outline-none focus:border-gold transition-colors flex items-center justify-between min-h-[3rem]"
+        className={`${inputClasses} text-left flex items-center justify-between min-h-[3rem] ${className ?? ""}`}
       >
         <span className={value.length ? "text-off-white" : "text-off-white/40"}>
           {value.length ? value.join(", ") : placeholder}
@@ -298,6 +308,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
               value={services}
               onChange={setServices}
               required
+              className={errors.service ? "!border-red-400" : ""}
             />
             {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select at least one service.</p>}
           </div>
@@ -356,15 +367,19 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-5">
-            <MultiSelectField
-              name="service"
-              label={t("contact.service")}
-              placeholder={t("contact.servicePlaceholder")}
-              options={SERVICE_OPTIONS}
-              value={services}
-              onChange={setServices}
-              required
-            />
+            <div>
+              <MultiSelectField
+                name="service"
+                label={t("contact.service")}
+                placeholder={t("contact.servicePlaceholder")}
+                options={SERVICE_OPTIONS}
+                value={services}
+                onChange={setServices}
+                required
+                className={errors.service ? "!border-red-400" : ""}
+              />
+              {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select at least one service.</p>}
+            </div>
             <SelectField
               name="budget"
               label={t("contact.budget")}
@@ -374,7 +389,6 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
               onChange={setBudget}
             />
           </div>
-          {errors.service && <p className="text-red-400 text-xs font-body -mt-3">Please select at least one service.</p>}
         </>
       )}
 
