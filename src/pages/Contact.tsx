@@ -101,7 +101,7 @@ const Contact = () => {
             <div className="lg:col-span-3 lg:order-1">
               <ScrollReveal>
                 <div className="dark-surface-card rounded-2xl p-8 md:p-10 border border-off-white/[0.07] overflow-visible">
-                  <ContactForm variant="page" formName="contact-page" />
+                  <ContactForm variant="page" formName="contact" />
                 </div>
               </ScrollReveal>
             </div>
