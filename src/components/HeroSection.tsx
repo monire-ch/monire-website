@@ -76,7 +76,10 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''}`}
           style={{ transitionDelay: '420ms' }}
         >
-          <button onClick={() => navigate('/contact')} className="btn-gold inline-flex items-center gap-2 text-sm">
+          <button
+            onClick={() => navigate('/contact')}
+            className="btn-teal !bg-dark-teal-surface hover:!bg-soft-teal inline-flex items-center gap-2 text-base"
+          >
             {t('hero.cta')}
             <StarIcon size={16} />
           </button>
