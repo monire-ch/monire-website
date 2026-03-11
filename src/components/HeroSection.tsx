@@ -33,13 +33,13 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           style={{ transitionDelay: '220ms' }}
         >
           <span className="block w-10 md:w-20 h-px bg-off-white/30" />
-          <p className="text-off-white/75 text-[10px] sm:text-xs tracking-[0.23em] uppercase font-body font-medium">
+          <p className="text-off-white/90 text-[10px] sm:text-xs tracking-[0.2em] uppercase font-body font-semibold">
             {t('hero.eyebrow')}
           </p>
           <span className="block w-10 md:w-20 h-px bg-off-white/30" />
         </div>
 
-        <h1 className="font-serif text-[30px] sm:text-[50px] md:text-[74px] leading-[1.16] tracking-[-0.015em] mb-8 md:mb-10">
+        <h1 className="hero-title text-[30px] sm:text-[50px] md:text-[68px] mb-8 md:mb-10">
           {words.map((word, i) => (
             <span
               key={i}
@@ -53,8 +53,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 color: 'transparent',
-              }}
-            >
+          }}
+        >
               {word === highlightWord ? (
                 <em className="italic font-serif">{word}</em>
               ) : (

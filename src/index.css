@@ -277,13 +277,21 @@
 .hero-title {
   font-family: var(--font-hero-title);
   font-weight: 400;
-  font-size: clamp(36.72px, 6.3vw, 88px);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
+  line-height: 1.08;
+  margin-inline: auto;
+  max-width: 12.6ch;
+  font-feature-settings: "lnum", "tnum";
   font-kerning: normal;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "lnum", "tnum";
-  font-variation-settings: normal;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    max-width: 18ch;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+  }
 }
 
 .hero-cta {
