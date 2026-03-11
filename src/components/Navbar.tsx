@@ -158,7 +158,7 @@ const Navbar = () => {
             <div className="px-6 pb-10 pt-4">
               <button
                 onClick={() => { setContactOpen(true); setMobileOpen(false); }}
-                className="w-full py-3.5 rounded-full text-sm font-body font-semibold uppercase tracking-widest text-off-white transition-all duration-200"
+                className="w-full py-3.5 rounded-full text-base font-body font-semibold uppercase tracking-widest text-off-white transition-all duration-200"
                 style={{
                   background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
                   boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3)',
