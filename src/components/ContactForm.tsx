@@ -247,18 +247,6 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="bot-field" />
 
-      {submitError && (
-        <div className="rounded-xl border border-red-400/40 bg-red-950/30 p-4">
-          <p className="text-red-200 text-sm font-body">
-            There was a problem sending your message. Please try again or contact us at{" "}
-            <a href="mailto:hello@monire.ch" className="underline text-red-100 hover:text-white transition-colors">
-              hello@monire.ch
-            </a>
-            .
-          </p>
-        </div>
-      )}
-
       {isModal ? (
         <>
           <div>
@@ -422,6 +410,21 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
           .
         </span>
       </label>
+
+      {submitError && (
+        <div
+          aria-live="polite"
+          className="rounded-xl border border-red-400/40 bg-red-950/30 p-4"
+        >
+          <p className="text-red-200 text-sm font-body">
+            There was a problem sending your message. Please try again or contact us at{" "}
+            <a href="mailto:hello@monire.ch" className="underline text-red-100 hover:text-white transition-colors">
+              hello@monire.ch
+            </a>
+            .
+          </p>
+        </div>
+      )}
 
       <button
         type="submit"
