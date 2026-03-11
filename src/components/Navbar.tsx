@@ -83,7 +83,7 @@ const Navbar = () => {
             {/* CTA */}
             <button
               onClick={() => setContactOpen(true)}
-              className="btn-gold flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold uppercase tracking-widest flex items-center gap-2"
+              className="btn-gold flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold tracking-widest flex items-center gap-2"
             >
               {t('nav.contactUs')}
               <StarIcon size={15} />
