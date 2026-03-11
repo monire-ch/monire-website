@@ -25,7 +25,7 @@ const AccordionItem = ({
   return (
     <div className="border-b border-white/10 last:border-b-0">
       <button onClick={onToggle} className="w-full flex items-center justify-between py-5 text-left">
-        <span className="font-display text-[16px] text-off-white pr-4">{question}</span>
+        <span className="font-display text-[16px] text-off-white/90 pr-4">{question}</span>
         <span className={`accordion-icon text-off-white flex-shrink-0 ${isExpanded ? 'open' : ''}`}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 8l5 5 5-5" />
@@ -67,8 +67,8 @@ const MobileFaqCategory = ({
   return (
     <div className="border-b border-off-white/10 last:border-b-0">
       <button onClick={onToggleCategory} className="w-full flex items-center justify-between py-4 text-left">
-        <span className="font-body text-lg text-off-white">{category.label}</span>
-        <span className="text-off-white/60 text-xl">{isExpanded ? '−' : '+'}</span>
+        <span className="font-body text-lg text-gold-text">{category.label}</span>
+        <span className="text-gold-text/80 text-xl">{isExpanded ? '−' : '+'}</span>
       </button>
       <div className="overflow-hidden transition-[height,opacity] duration-300" style={{ height, opacity: isExpanded ? 1 : 0 }}>
         <div ref={contentRef} className="pb-2">
@@ -161,8 +161,8 @@ const FAQSection = () => {
                     onClick={() => handleCategoryChange(categoryIndex)}
                     className={`text-left px-5 py-3 rounded-full font-body text-[15px] transition-all duration-200 ${
                       activeCategoryIndex === categoryIndex
-                        ? 'border border-gold/40 bg-off-white/10 text-off-white'
-                        : 'text-off-white hover:text-off-white border border-transparent'
+                        ? 'border border-gold/40 bg-off-white/10 text-gold-text'
+                        : 'text-off-white/75 hover:text-gold-text border border-transparent'
                     }`}
                   >
                     {category.label}
