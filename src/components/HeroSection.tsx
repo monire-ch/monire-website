@@ -47,7 +47,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               style={{
                 transitionDelay: `${60 * i}ms`,
                 backgroundImage: `url(${goldFill})`,
-                backgroundSize: '180% auto',
+                backgroundSize: '100% auto',
                 backgroundPosition: 'center',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
