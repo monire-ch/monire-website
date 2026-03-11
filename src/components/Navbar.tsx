@@ -41,7 +41,7 @@ const Navbar = () => {
       {/* ─── Desktop Navbar ─── */}
       <header className="fixed top-5 left-0 right-0 z-50 hidden lg:flex justify-center px-8 pointer-events-none">
         <nav
-          className="pointer-events-auto flex items-center justify-between w-full max-w-5xl px-5 py-1.5 rounded-full border border-off-white/[0.07]"
+          className="pointer-events-auto flex items-center justify-between w-full max-w-5xl px-8 py-1.5 rounded-full border border-off-white/[0.07]"
           style={{
             background: 'linear-gradient(135deg, rgba(8,47,58,0.88) 0%, rgba(5,34,44,0.92) 100%)',
             backdropFilter: 'blur(18px)',
@@ -50,8 +50,8 @@ const Navbar = () => {
             boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
           }}
         >
-          <a href={getHref('#')} className="flex-shrink-0 pl-2">
-            <img src={logo} alt="Moniré" className="h-7" />
+          <a href={getHref('#')} className="flex-shrink-0">
+            <img src={logo} alt="Moniré" className="h-7 mb-0.5" />
           </a>
 
           <div className="flex items-center gap-1">
@@ -92,7 +92,7 @@ const Navbar = () => {
       </header>
 
       {/* ─── Mobile / Tablet Top Bar ─── */}
-      <header className="fixed top-3 left-3 right-3 z-50 lg:hidden flex items-center justify-between px-3 py-3 rounded-full border border-off-white/[0.07]"
+      <header className="fixed top-3 left-3 right-3 z-50 lg:hidden flex items-center justify-between px-6 py-3 rounded-full border border-off-white/[0.07]"
         style={{
           background: 'linear-gradient(135deg, rgba(8,47,58,0.88) 0%, rgba(5,34,44,0.92) 100%)',
           backdropFilter: 'blur(18px)',
@@ -101,7 +101,7 @@ const Navbar = () => {
         }}
       >
         <a href={getHref('#')}>
-          <img src={logo} alt="Moniré" className="h-7" />
+          <img src={logo} alt="Moniré" className="h-6 mb-1" />
         </a>
         <button
           onClick={() => setMobileOpen(true)}
@@ -127,8 +127,8 @@ const Navbar = () => {
               background: 'linear-gradient(180deg, rgba(1,20,28,0.98) 0%, rgba(8,47,58,0.96) 60%, rgba(15,75,90,0.92) 100%)',
             }}
           >
-            <div className="flex items-center justify-between px-6 py-5">
-              <img src={logo} alt="Moniré" className="h-7" />
+            <div className="flex items-center justify-between px-6 pt-6 pb-5">
+              <img src={logo} alt="Moniré" className="h-6 mb-0.5" />
               <button
                 onClick={() => setMobileOpen(false)}
                 className="text-off-white/70 hover:text-off-white transition-colors"
