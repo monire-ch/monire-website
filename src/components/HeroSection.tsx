@@ -78,10 +78,10 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         >
           <button
             onClick={() => navigate('/contact')}
-            className="btn-teal !bg-dark-teal-surface hover:!bg-soft-teal inline-flex items-center gap-2 text-base"
+            className="btn-teal !bg-dark-teal-surface hover:!bg-dark-teal-surface-lighter inline-flex items-center gap-2 text-base"
           >
             {t('hero.cta')}
-            <StarIcon size={16} />
+            <StarIcon />
           </button>
         </div>
       </div>
