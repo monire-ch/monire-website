@@ -280,18 +280,7 @@
   letter-spacing: -0.012em;
   line-height: 1.08;
   margin-inline: auto;
-  max-width: 12.6ch;
-  font-feature-settings: "lnum", "tnum";
-  font-kerning: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@media (min-width: 768px) {
-  .hero-title {
-    max-width: 18ch;
-    line-height: 1.04;
-    letter-spacing: -0.015em;
-  }
+  max-width: 18ch;
 }
 
 .hero-cta {
