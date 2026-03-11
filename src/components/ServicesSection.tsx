@@ -44,8 +44,8 @@ const ServicesSection = () => {
                     onClick={() => setActiveIndex(i)}
                     className={`text-left px-5 py-3 rounded-full font-body text-[15px] transition-all duration-200 ${
                       activeIndex === i
-                        ? "border border-gold/40 bg-off-white/10 text-off-white"
-                        : "text-off-white hover:text-off-white border border-transparent"
+                        ? "border border-gold/40 bg-off-white/10 text-gold-text"
+                        : "text-off-white/75 hover:text-gold-text border border-transparent"
                     }`}
                   >
                     {item.title}
@@ -83,26 +83,29 @@ const ServicesSection = () => {
                       }}
                       className="w-full flex items-center justify-between py-4 text-left"
                     >
-                      <span className="font-body text-lg text-off-white">{item.title}</span>
-                      <span className={`text-off-white/60 text-xl transition-transform duration-200 ${isOpen ? 'rotate-0' : 'rotate-0'}`}>
+                      <span className="font-body text-lg text-gold-text">{item.title}</span>
+                      <span className="text-gold-text/80 text-xl">
                         {isOpen ? '−' : '+'}
                       </span>
                     </button>
                     <div
-                      className="overflow-hidden transition-all duration-300"
-                      style={{ maxHeight: isOpen ? '300px' : '0', opacity: isOpen ? 1 : 0 }}
+                      className={`grid overflow-hidden transition-[grid-template-rows,opacity] duration-300 ${
+                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      }`}
                     >
-                      <p className="text-off-white/80 font-body leading-relaxed text-base pb-5">
-                        {item.desc}
-                      </p>
-                      {item.badge === "Automation" && (
-                        <div className="pb-5">
-                          <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm inline-flex items-center gap-2">
-                            {t("services.cta", "Latest case study")}
-                            <StarIcon />
-                          </Link>
-                        </div>
-                      )}
+                      <div className="min-h-0">
+                        <p className="text-off-white/80 font-body leading-relaxed text-base pb-5">
+                          {item.desc}
+                        </p>
+                        {item.badge === "Automation" && (
+                          <div className="pb-5">
+                            <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm inline-flex items-center gap-2">
+                              {t("services.cta", "Latest case study")}
+                              <StarIcon />
+                            </Link>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 );
