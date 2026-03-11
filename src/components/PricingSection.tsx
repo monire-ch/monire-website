@@ -130,7 +130,7 @@ const PricingSection = () => {
                       </ul>
                       <button onClick={() => setContactOpen(true)} className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 inline-flex items-center justify-center gap-2 ${
                         plan.featured
-                          ? 'bg-main-teal text-off-white hover:bg-soft-teal'
+                          ? 'btn-teal !bg-main-teal hover:!bg-soft-teal'
                           : 'btn-outline-gold'
                       }`}>
                         {t('pricing.getStarted')}
