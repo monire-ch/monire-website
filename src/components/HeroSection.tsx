@@ -27,7 +27,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
   return (
     <section className="hero-bg relative min-h-screen flex items-center justify-center text-center px-6 pt-36 md:pt-48 pb-44 md:pb-56">
-      <div className="relative z-10 max-w-5xl mx-auto px-2 sm:px-6">
+      <div className="relative z-10 max-w-5xl mx-auto px-2 xs:px-8">
         <div
           className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} flex items-center justify-center gap-3 md:gap-4 lg:gap-6 mb-6 md:mb-6 lg:mb-8 max-[465px]:mb-4 max-[465px]:gap-2`}
           style={{ transitionDelay: '220ms' }}

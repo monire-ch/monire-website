@@ -9,10 +9,13 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+                "2xl": "1400px",
       },
     },
     extend: {
+      screens: {
+        xs: "480px",
+      },
       fontFamily: {
         body: ['Gellix', 'sans-serif'],
         display: ['Degular', 'sans-serif'],
