@@ -27,7 +27,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
   return (
     <section className="hero-bg relative min-h-screen flex items-center justify-center text-center px-6 pt-36 md:pt-48 pb-44 md:pb-56">
-      <div className="relative z-10 max-w-5xl mx-auto px-4">
+      <div className="relative z-10 max-w-5xl mx-auto px-6">
         <div
           className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} flex items-center justify-center gap-4 md:gap-6 mb-8`}
           style={{ transitionDelay: '220ms' }}
@@ -39,7 +39,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           <span className="block w-10 md:w-20 h-px bg-off-white/30" />
         </div>
 
-        <h1 className="hero-title text-[30px] sm:text-[50px] md:text-[68px] mb-8 md:mb-10">
+        <h1 className="hero-title max-w-3xl text-[30px] sm:text-[50px] md:text-[68px] mb-8 md:mb-10">
           {words.map((word, i) => (
             <span
               key={i}
@@ -66,7 +66,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         </h1>
 
         <p
-          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white/90 text-lg md:text-xl font-body max-w-3xl mx-auto mb-8 md:mb-10 leading-[1.45]`}
+          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white/90 text-base md:text-xl font-body max-w-xl mx-auto px-6 lg:px-0 mb-8 md:mb-10 leading-[1.45]`}
           style={{ transitionDelay: '320ms' }}
         >
           {t('hero.subtitle')}

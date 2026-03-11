@@ -276,11 +276,8 @@
 
 .hero-title {
   font-family: var(--font-hero-title);
-  font-weight: 400;
   letter-spacing: -0.012em;
   line-height: 1.08;
-  margin-inline: auto;
-  max-width: 18ch;
 }
 
 .hero-cta {
