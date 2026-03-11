@@ -105,11 +105,15 @@ const MultiSelectField: FC<MultiSelectProps> = ({
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setIsOpen(false);
+      const target = e.target as Node;
+      if (triggerRef.current?.contains(target)) return;
+      if (menuRef.current?.contains(target)) return;
+      setIsOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
@@ -120,13 +124,14 @@ const MultiSelectField: FC<MultiSelectProps> = ({
   };
 
   return (
-    <div ref={ref} className="relative">
+    <div className="relative">
       <label className="text-off-white/70 text-sm font-body block mb-1.5">
         {label}
         {required && "*"}
       </label>
       <input type="hidden" name={name} value={value.join(", ")} />
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className={`${inputClasses} text-left flex items-center justify-between min-h-[3rem] ${className ?? ""}`}
@@ -139,7 +144,10 @@ const MultiSelectField: FC<MultiSelectProps> = ({
         />
       </button>
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg [&::-webkit-scrollbar]:hidden">
+        <div
+          ref={menuRef}
+          className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg [&::-webkit-scrollbar]:hidden"
+        >
           {options.map((opt) => (
             <button
               key={opt}
