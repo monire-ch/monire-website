@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import StarIcon from "./StarIcon";
+import { SECTION_WRAPPER_GRADIENT } from "@/lib/theme";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ const ServicesSection = () => {
   const active = items[activeIndex];
 
   return (
-    <section id="services" className="py-20 md:py-28 px-6">
+    <section id="services" className="py-20 md:py-36 pb-40 md:pb-56 px-6">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">
@@ -30,10 +31,7 @@ const ServicesSection = () => {
         <ScrollReveal>
           <div
             className="rounded-xl overflow-hidden"
-            style={{
-              background:
-                "linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)",
-            }}
+            style={{ background: SECTION_WRAPPER_GRADIENT }}
           >
             {/* Desktop layout */}
             <div className="hidden md:flex flex-row min-h-[340px]">
@@ -52,7 +50,7 @@ const ServicesSection = () => {
                   </button>
                 ))}
               </div>
-              <div className="md:w-3/5 p-10 flex flex-col justify-center">
+              <div className="md:w-3/5 p-10">
                 <h3 className="font-body text-3xl md:text-4xl text-off-white mb-5">
                   {active.title}
                 </h3>

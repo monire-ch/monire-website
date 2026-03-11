@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
+import { SECTION_WRAPPER_GRADIENT } from '@/lib/theme';
 
 const AccordionItem = ({
   question,
@@ -144,9 +145,7 @@ const FAQSection = () => {
         <ScrollReveal>
           <div
             className="rounded-xl overflow-hidden"
-            style={{
-              background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)',
-            }}
+            style={{ background: SECTION_WRAPPER_GRADIENT }}
           >
             {/* Desktop layout */}
             <div className="hidden md:flex flex-row min-h-[340px]">
