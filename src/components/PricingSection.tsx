@@ -73,7 +73,6 @@ const PricingSection = () => {
                 </button>
                 <button className="btn-outline-gold text-sm inline-flex items-center justify-center gap-2 w-full sm:w-auto !py-2.5" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
                   {t('pricing.automationBlock.caseStudy')}
-                  <StarIcon />
                 </button>
               </div>
             </div>

@@ -280,41 +280,6 @@
   line-height: 1.08;
 }
 
-.hero-cta {
-  background: linear-gradient(135deg, rgba(77, 130, 147, 0.86) 0%, rgba(61, 114, 130, 0.9) 100%);
-  border: 1px solid rgba(207, 169, 71, 0.72);
-  color: #f4f3ee;
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 1.02rem;
-  padding: 0.9rem 1.55rem;
-  border-radius: 9999px;
-  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-}
-
-.hero-cta:hover {
-  border-color: #d9b45f;
-  box-shadow: 0 0 14px rgba(207, 169, 71, 0.18);
-}
-
-.hero-cta-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 4.1rem;
-  height: 2.15rem;
-  border-radius: 9999px;
-  background: rgba(129, 164, 178, 0.45);
-}
-
-.hero-cta .star-icon {
-  transition: transform 360ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-cta:hover .star-icon {
-  transform: rotate(90deg);
-}
-
 /* Accordion animation */
 .accordion-content {
   overflow: hidden;
