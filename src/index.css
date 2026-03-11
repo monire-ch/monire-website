@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: "SilkSerif";
+  font-family: "Silk Serif";
   src: url("/fonts/SilkSerif.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -21,6 +21,14 @@
 @font-face {
   font-family: "Gellix";
   src: url("/fonts/Gellix.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/PlayfairDisplay.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -67,8 +75,10 @@
 
     --font-body: "Gellix", sans-serif;
     --font-display: "Degular", sans-serif;
-    --font-serif: "SilkSerif", serif;
+    --font-serif: "Silk Serif", serif;
     --font-tertiary: "Instrument Serif", sans-serif;
+    --font-playfair: "Playfair Display";
+    --font-hero-title: "Playfair Display", "Silk Serif", serif;
   }
 }
 
@@ -262,6 +272,18 @@
 .hero-word.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.hero-title {
+  font-family: var(--font-hero-title);
+  font-weight: 400;
+  font-size: clamp(36.72px, 6.3vw, 88px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "lnum", "tnum";
+  font-variation-settings: normal;
 }
 
 .hero-cta {
