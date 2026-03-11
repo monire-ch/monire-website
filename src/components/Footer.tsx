@@ -32,7 +32,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12 items-start">
           {/* Brand column */}
           <div>
-            <img src={logo} alt="Moniré" className="h-7 lg:h-9 mb-4 -translate-x-[1rem] lg:-translate-x-[2.4rem]" />
+            <img src={logo} alt="Moniré" className="h-6 lg:h-7 mb-4" />
             <p className="text-off-white text-base font-body max-w-xs">
               {t('footer.tagline')}
             </p>
