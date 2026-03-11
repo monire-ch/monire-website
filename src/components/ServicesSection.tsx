@@ -12,6 +12,7 @@ const ServicesSection = () => {
     desc: string;
   }>;
   const [activeIndex, setActiveIndex] = useState(0);
+  const [mobileOpenIndex, setMobileOpenIndex] = useState<number | null>(0);
   const active = items[activeIndex];
 
   return (
@@ -72,11 +73,14 @@ const ServicesSection = () => {
             {/* Mobile accordion layout */}
             <div className="md:hidden p-6">
               {items.map((item, i) => {
-                const isOpen = activeIndex === i;
+                const isOpen = mobileOpenIndex === i;
                 return (
                   <div key={item.title} className="border-b border-off-white/10 last:border-b-0">
                     <button
-                      onClick={() => setActiveIndex(i)}
+                      onClick={() => {
+                        setMobileOpenIndex(mobileOpenIndex === i ? null : i);
+                        setActiveIndex(i);
+                      }}
                       className="w-full flex items-center justify-between py-4 text-left"
                     >
                       <span className="font-body text-lg text-off-white">{item.title}</span>
