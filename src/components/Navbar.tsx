@@ -63,6 +63,7 @@ const Navbar = () => {
                   setActiveLink(link.href);
                   if (isHome && link.href === '#') {
                     e.preventDefault();
+                    window.history.pushState(null, '', '/#');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }
                 }}
