@@ -56,22 +56,18 @@ const MobileFaqCategory = ({
   expandedQuestionIndex: number | null;
   setExpandedQuestionIndex: (index: number | null) => void;
 }) => {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (!contentRef.current) return;
-    setHeight(isExpanded ? contentRef.current.scrollHeight : 0);
-  }, [isExpanded, expandedQuestionIndex, category.items.length]);
-
   return (
     <div className="border-b border-off-white/10 last:border-b-0">
       <button onClick={onToggleCategory} className="w-full flex items-center justify-between py-4 text-left">
         <span className="font-body text-lg text-gold-text">{category.label}</span>
         <span className="text-gold-text/80 text-xl">{isExpanded ? '−' : '+'}</span>
       </button>
-      <div className="overflow-hidden transition-[height,opacity] duration-300" style={{ height, opacity: isExpanded ? 1 : 0 }}>
-        <div ref={contentRef} className="pb-2">
+      <div
+        className={`grid overflow-hidden transition-[grid-template-rows,opacity] duration-300 ${
+          isExpanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+        }`}
+      >
+        <div className="min-h-0 pb-2">
           {category.items.map((faqItem, questionIndex) => (
             <AccordionItem
               key={`${categoryIndex}-${questionIndex}`}
