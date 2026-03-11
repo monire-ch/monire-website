@@ -106,7 +106,7 @@ const Navbar = () => {
         </a>
         <button
           onClick={() => setMobileOpen(true)}
-          className="text-gold transition-colors hover:text-gold-hover"
+          className="text-gold-text transition-colors hover:text-gold-hover"
           aria-label="Open menu"
         >
           <Menu size={26} strokeWidth={1.5} />

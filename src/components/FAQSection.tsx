@@ -1,22 +1,33 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
+import { SECTION_WRAPPER_GRADIENT } from '@/lib/theme';
 
-const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen: boolean; toggle: () => void }) => {
+const AccordionItem = ({
+  question,
+  answer,
+  isExpanded,
+  onToggle,
+}: {
+  question: string;
+  answer: string;
+  isExpanded: boolean;
+  onToggle: () => void;
+}) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
     if (contentRef.current) {
-      setHeight(isOpen ? contentRef.current.scrollHeight : 0);
+      setHeight(isExpanded ? contentRef.current.scrollHeight : 0);
     }
-  }, [isOpen]);
+  }, [isExpanded]);
 
   return (
     <div className="border-b border-white/10 last:border-b-0">
-      <button onClick={toggle} className="w-full flex items-center justify-between py-5 text-left">
-        <span className="font-display text-[16px] text-off-white pr-4">{q}</span>
-        <span className={`accordion-icon text-off-white flex-shrink-0 ${isOpen ? 'open' : ''}`}>
+      <button onClick={onToggle} className="w-full flex items-center justify-between py-5 text-left">
+        <span className="font-display text-[16px] text-off-white/90 pr-4">{question}</span>
+        <span className={`accordion-icon text-off-white flex-shrink-0 ${isExpanded ? 'open' : ''}`}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 8l5 5 5-5" />
           </svg>
@@ -24,7 +35,51 @@ const AccordionItem = ({ q, a, isOpen, toggle }: { q: string; a: string; isOpen:
       </button>
       <div className="accordion-content" style={{ height }}>
         <div ref={contentRef} className="pb-5">
-          <p className="text-off-white text-base font-body leading-relaxed" dangerouslySetInnerHTML={{ __html: a }} />
+          <p className="text-off-white text-base font-body leading-relaxed" dangerouslySetInnerHTML={{ __html: answer }} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const MobileFaqCategory = ({
+  category,
+  categoryIndex,
+  isExpanded,
+  onToggleCategory,
+  expandedQuestionIndex,
+  setExpandedQuestionIndex,
+}: {
+  category: FaqCategory;
+  categoryIndex: number;
+  isExpanded: boolean;
+  onToggleCategory: () => void;
+  expandedQuestionIndex: number | null;
+  setExpandedQuestionIndex: (index: number | null) => void;
+}) => {
+  return (
+    <div className="border-b border-off-white/10 last:border-b-0">
+      <button onClick={onToggleCategory} className="w-full flex items-center justify-between py-4 text-left">
+        <span className="font-body text-lg text-gold-text">{category.label}</span>
+        <span className="text-gold-text/80 text-xl">{isExpanded ? '−' : '+'}</span>
+      </button>
+      <div
+        className={`grid overflow-hidden transition-[grid-template-rows,opacity] duration-300 ${
+          isExpanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+        }`}
+      >
+        <div className="min-h-0 pb-2">
+          {category.items.map((faqItem, questionIndex) => (
+            <AccordionItem
+              key={`${categoryIndex}-${questionIndex}`}
+              question={faqItem.q}
+              answer={faqItem.a}
+              isExpanded={expandedQuestionIndex === questionIndex}
+              onToggle={() =>
+                setExpandedQuestionIndex(expandedQuestionIndex === questionIndex ? null : questionIndex)
+              }
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -57,8 +112,9 @@ const isFaqCategoryArray = (value: unknown): value is FaqCategory[] => {
 
 const FAQSection = () => {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState(0);
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
+  const [expandedMobileCategoryIndex, setExpandedMobileCategoryIndex] = useState<number | null>(0);
+  const [expandedQuestionIndex, setExpandedQuestionIndex] = useState<number | null>(null);
 
   const rawCategories = t('faq.categories', { returnObjects: true });
   const rawItems = t('faq.items', { returnObjects: true });
@@ -69,12 +125,13 @@ const FAQSection = () => {
       ? [{ label: t('faq.title'), items: rawItems as FaqItem[] }]
       : [];
 
-  const safeActiveTab = Math.min(activeTab, Math.max(categories.length - 1, 0));
-  const activeCategory = categories[safeActiveTab];
+  const safeActiveCategoryIndex = Math.min(activeCategoryIndex, Math.max(categories.length - 1, 0));
+  const activeCategory = categories[safeActiveCategoryIndex];
 
-  const handleTabChange = (i: number) => {
-    setActiveTab(i);
-    setOpenIndex(null);
+  const handleCategoryChange = (categoryIndex: number) => {
+    setActiveCategoryIndex(categoryIndex);
+    setExpandedMobileCategoryIndex(categoryIndex);
+    setExpandedQuestionIndex(null);
   };
 
   return (
@@ -88,35 +145,35 @@ const FAQSection = () => {
         <ScrollReveal>
           <div
             className="rounded-xl overflow-hidden"
-            style={{
-              background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)',
-            }}
+            style={{ background: SECTION_WRAPPER_GRADIENT }}
           >
             {/* Desktop layout */}
             <div className="hidden md:flex flex-row min-h-[340px]">
               <div className="md:w-2/5 p-10 flex flex-col gap-1 border-r border-off-white/10">
-                {categories.map((cat, i) => (
+                {categories.map((category, categoryIndex) => (
                   <button
-                    key={cat.label}
-                    onClick={() => handleTabChange(i)}
+                    key={category.label}
+                    onClick={() => handleCategoryChange(categoryIndex)}
                     className={`text-left px-5 py-3 rounded-full font-body text-[15px] transition-all duration-200 ${
-                      activeTab === i
-                        ? 'border border-gold/40 bg-off-white/10 text-off-white'
-                        : 'text-off-white hover:text-off-white border border-transparent'
+                      activeCategoryIndex === categoryIndex
+                        ? 'border border-gold/40 bg-off-white/10 text-gold-text'
+                        : 'text-off-white/75 hover:text-gold-text border border-transparent'
                     }`}
                   >
-                    {cat.label}
+                    {category.label}
                   </button>
                 ))}
               </div>
               <div className="md:w-3/5 p-10">
-                {(activeCategory?.items ?? []).map((faq, i) => (
+                {(activeCategory?.items ?? []).map((faqItem, questionIndex) => (
                   <AccordionItem
-                    key={`${safeActiveTab}-${i}`}
-                    q={faq.q}
-                    a={faq.a}
-                    isOpen={openIndex === i}
-                    toggle={() => setOpenIndex(openIndex === i ? null : i)}
+                    key={`${safeActiveCategoryIndex}-${questionIndex}`}
+                    question={faqItem.q}
+                    answer={faqItem.a}
+                    isExpanded={expandedQuestionIndex === questionIndex}
+                    onToggle={() =>
+                      setExpandedQuestionIndex(expandedQuestionIndex === questionIndex ? null : questionIndex)
+                    }
                   />
                 ))}
               </div>
@@ -124,36 +181,26 @@ const FAQSection = () => {
 
             {/* Mobile accordion layout */}
             <div className="md:hidden p-6">
-              {categories.map((cat, catIdx) => {
-                const isCatOpen = activeTab === catIdx;
+              {categories.map((category, categoryIndex) => {
+                const isCategoryExpanded = expandedMobileCategoryIndex === categoryIndex;
                 return (
-                  <div key={cat.label} className="border-b border-off-white/10 last:border-b-0">
-                    <button
-                      onClick={() => handleTabChange(catIdx)}
-                      className="w-full flex items-center justify-between py-4 text-left"
-                    >
-                      <span className="font-body text-lg text-off-white">{cat.label}</span>
-                      <span className="text-off-white/60 text-xl">
-                        {isCatOpen ? '−' : '+'}
-                      </span>
-                    </button>
-                    <div
-                      className="overflow-hidden transition-all duration-300"
-                      style={{ maxHeight: isCatOpen ? '2000px' : '0', opacity: isCatOpen ? 1 : 0 }}
-                    >
-                      <div className="pb-2">
-                        {cat.items.map((faq, i) => (
-                          <AccordionItem
-                            key={`${catIdx}-${i}`}
-                            q={faq.q}
-                            a={faq.a}
-                            isOpen={openIndex === i}
-                            toggle={() => setOpenIndex(openIndex === i ? null : i)}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                  <MobileFaqCategory
+                    key={category.label}
+                    category={category}
+                    categoryIndex={categoryIndex}
+                    isExpanded={isCategoryExpanded}
+                    onToggleCategory={() => {
+                      const nextExpandedCategoryIndex =
+                        expandedMobileCategoryIndex === categoryIndex ? null : categoryIndex;
+                      setExpandedMobileCategoryIndex(nextExpandedCategoryIndex);
+                      if (nextExpandedCategoryIndex !== null) {
+                        setActiveCategoryIndex(categoryIndex);
+                      }
+                      setExpandedQuestionIndex(null);
+                    }}
+                    expandedQuestionIndex={expandedQuestionIndex}
+                    setExpandedQuestionIndex={setExpandedQuestionIndex}
+                  />
                 );
               })}
             </div>
