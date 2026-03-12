@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { useFontsLoaded } from '@/hooks/useFontsLoaded';
 import goldFill from '@/assets/gold-fill.webp';
 import StarIcon from './StarIcon';
@@ -10,6 +11,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const fontsLoaded = useFontsLoaded();
   const [animate, setAnimate] = useState(false);
 
@@ -76,7 +78,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         >
           <button
             type="button"
-            onClick={onCtaClick}
+            onClick={() => navigate('/contact')}
             className="btn-teal !bg-dark-teal-surface hover:!bg-dark-teal-surface-lighter inline-flex items-center gap-2 text-base"
           >
             {t('hero.cta')}
