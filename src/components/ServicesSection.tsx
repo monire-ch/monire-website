@@ -12,6 +12,11 @@ const ServicesSection = () => {
     title: string;
     desc: string;
   }>;
+  const caseStudyLinks: Record<string, string> = {
+    "Web Design": "/case-studies/snip-squad",
+    "Web Development": "/case-studies/systemically",
+    "AI Automations & Workflows": "/case-studies/expense-receipt-automation",
+  };
   const [activeIndex, setActiveIndex] = useState(0);
   const [mobileOpenIndex, setMobileOpenIndex] = useState<number | null>(0);
   const active = items[activeIndex];
@@ -57,10 +62,11 @@ const ServicesSection = () => {
                 <p className="text-off-white font-body leading-relaxed text-base mb-8">
                   {active.desc}
                 </p>
-                {active.badge === "Automation" && (
+                {caseStudyLinks[active.title] && (
                   <div>
-                    <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm inline-flex items-center gap-2">
+                    <Link to={caseStudyLinks[active.title]} className="btn-outline-gold text-sm inline-flex items-center gap-2">
                       {t("services.cta", "Latest case study")}
+                      <StarIcon />
                     </Link>
                   </div>
                 )}
@@ -94,10 +100,11 @@ const ServicesSection = () => {
                         <p className="text-off-white/80 font-body leading-relaxed text-base pb-5">
                           {item.desc}
                         </p>
-                        {item.badge === "Automation" && (
+                        {caseStudyLinks[item.title] && (
                           <div className="pb-5">
-                            <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm inline-flex items-center gap-2">
+                            <Link to={caseStudyLinks[item.title]} className="btn-outline-gold text-sm inline-flex items-center gap-2">
                               {t("services.cta", "Latest case study")}
+                              <StarIcon />
                             </Link>
                           </div>
                         )}

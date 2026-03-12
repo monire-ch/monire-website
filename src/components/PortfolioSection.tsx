@@ -60,6 +60,10 @@ const PortfolioSection = () => {
         <ScrollReveal className="text-center mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('portfolio.title')}</h2>
+          <p className="text-base md:text-lg font-body leading-relaxed text-main-teal/80 max-w-3xl mx-auto mt-4">
+            Selected web design, web development, and AI automation projects created for brands that value clarity,
+            performance, and thoughtful execution.
+          </p>
         </ScrollReveal>
 
         <ScrollReveal>
