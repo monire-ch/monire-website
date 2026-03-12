@@ -85,6 +85,7 @@ const Contact = () => {
                       <img
                         src={linkedinIcon}
                         alt=""
+                        aria-hidden="true"
                         className="w-4 h-4"
                         style={{
                           filter:
@@ -126,7 +127,10 @@ const Contact = () => {
               addressLocality: "Zürich",
               addressCountry: "CH",
             },
-            areaServed: "Worldwide",
+            areaServed: [
+              { "@type": "City", name: "Zürich" },
+              { "@type": "Country", name: "Switzerland" }
+            ],
             sameAs: ["https://www.instagram.com/hello.monire", "https://www.linkedin.com/company/monire"],
             serviceType: ["Web Design", "Web Development", "AI Automations", "Website Migration", "SEO & Analytics"],
           }),

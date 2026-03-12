@@ -79,7 +79,7 @@ const AboutSection = () => {
                     aria-label={`${person.name}'s LinkedIn`}
                     className="absolute bottom-2.5 right-2.5 z-10 flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 bg-[#0a3440cc] backdrop-blur-sm transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
                   >
-                    <img src={linkedinIcon} alt="" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
+                    <img src={linkedinIcon} alt="" aria-hidden="true" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
                   </a>
                 </div>
                 <div>
