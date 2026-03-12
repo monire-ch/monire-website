@@ -63,6 +63,7 @@ const Navbar = () => {
                   setActiveLink(link.href);
                   if (isHome && link.href === '#') {
                     e.preventDefault();
+                    window.history.pushState(null, '', '/#');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }
                 }}
@@ -82,10 +83,10 @@ const Navbar = () => {
             {/* CTA */}
             <button
               onClick={() => setContactOpen(true)}
-              className="btn-gold flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold uppercase tracking-widest flex items-center gap-2"
+              className="btn-gold flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold tracking-widest flex items-center gap-2"
             >
               {t('nav.contactUs')}
-              <StarIcon size={15} />
+              <StarIcon />
             </button>
           </div>
         </nav>
@@ -157,7 +158,7 @@ const Navbar = () => {
             <div className="px-6 pb-10 pt-4">
               <button
                 onClick={() => { setContactOpen(true); setMobileOpen(false); }}
-                className="w-full py-3.5 rounded-full text-sm font-body font-semibold uppercase tracking-widest text-off-white transition-all duration-200"
+                className="w-full py-3.5 rounded-full text-base font-body font-semibold uppercase tracking-widest text-off-white transition-all duration-200"
                 style={{
                   background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
                   boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3)',

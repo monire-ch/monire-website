@@ -61,7 +61,6 @@ const ServicesSection = () => {
                   <div>
                     <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                       {t("services.cta", "Latest case study")}
-                      <StarIcon />
                     </Link>
                   </div>
                 )}
@@ -99,7 +98,6 @@ const ServicesSection = () => {
                           <div className="pb-5">
                             <Link to="/case-studies/expense-receipt-automation" className="btn-outline-gold text-sm inline-flex items-center gap-2">
                               {t("services.cta", "Latest case study")}
-                              <StarIcon />
                             </Link>
                           </div>
                         )}
