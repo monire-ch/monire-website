@@ -25,20 +25,20 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   const words = headline.split(' ');
 
   return (
-    <section className="hero-bg relative min-h-screen flex items-center justify-center text-center px-6 pt-24 pb-32">
-      <div className="relative z-10 max-w-5xl mx-auto">
+    <section className="hero-bg relative min-h-screen flex items-center justify-center text-center px-6 pt-36 md:pt-48 pb-44 md:pb-56">
+      <div className="relative z-10 max-w-5xl mx-auto px-2 xs:px-8">
         <div
-          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} flex items-center justify-center gap-4 mb-6`}
+          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} flex items-center justify-center gap-3 md:gap-4 lg:gap-6 mb-6 md:mb-6 lg:mb-8 max-[465px]:mb-4 max-[465px]:gap-2`}
           style={{ transitionDelay: '220ms' }}
         >
-          <span className="hidden sm:block w-12 h-px bg-off-white/30" />
-          <p className="text-off-white/70 text-[10px] sm:text-xs tracking-[0.25em] uppercase font-body">
+          <span className="block w-10 md:w-20 h-px bg-off-white/30" />
+          <p className="text-off-white/90 text-[10px] sm:text-xs tracking-[0.2em] uppercase font-body font-semibold">
             {t('hero.eyebrow')}
           </p>
-          <span className="hidden sm:block w-12 h-px bg-off-white/30" />
+          <span className="block w-10 md:w-20 h-px bg-off-white/30" />
         </div>
 
-        <h1 className="font-serif text-[30px] sm:text-[48px] md:text-[67px] leading-[1.2] tracking-[-0.01em] mb-8">
+        <h1 className="hero-title max-w-3xl text-[36px] sm:text-[50px] md:text-[68px] mb-6 md:mb-7 lg:mb-10 max-[465px]:mb-4">
           {words.map((word, i) => (
             <span
               key={i}
@@ -46,14 +46,14 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               style={{
                 transitionDelay: `${60 * i}ms`,
                 backgroundImage: `url(${goldFill})`,
-                backgroundSize: 'cover',
+                backgroundSize: '100% auto',
                 backgroundPosition: 'center',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 color: 'transparent',
-              }}
-            >
+          }}
+        >
               {word === highlightWord ? (
                 <em className="italic font-serif">{word}</em>
               ) : (
@@ -65,7 +65,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         </h1>
 
         <p
-          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white text-lg md:text-xl font-body max-w-xl mx-auto mb-8`}
+          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white/90 text-base md:text-xl font-body max-w-xl mx-auto px-6 lg:px-0 mb-6 md:mb-7 lg:mb-10 leading-[1.45] max-[465px]:mb-4`}
           style={{ transitionDelay: '320ms' }}
         >
           {t('hero.subtitle')}
@@ -75,10 +75,12 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''}`}
           style={{ transitionDelay: '420ms' }}
         >
-          <Link to="/contact" className="btn-gold inline-flex items-center gap-2 text-sm">
+          <button
+            onClick={() => navigate('/contact')}
+            className="btn-teal !bg-dark-teal-surface hover:!bg-dark-teal-surface-lighter inline-flex items-center gap-2 text-base"
+          >
             {t('hero.cta')}
             <StarIcon />
-          </Link>
         </div>
       </div>
 

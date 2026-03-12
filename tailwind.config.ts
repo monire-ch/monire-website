@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      screens: {
+        xs: "480px",
+      },
       fontFamily: {
         body: ['Gellix', 'sans-serif'],
         display: ['Degular', 'sans-serif'],
@@ -58,6 +61,7 @@ export default {
         'soft-teal': '#136175',
         'focus-teal': '#2A7E94',
         'dark-teal-surface': '#082F3A',
+        'dark-teal-surface-lighter': '#0D3C49',
         'off-white': '#EEEBE7',
         'warm-start': '#EEEBE7',
         'warm-end': '#EEEBE7',
