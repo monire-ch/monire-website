@@ -60,6 +60,10 @@ const PortfolioSection = () => {
         <ScrollReveal className="text-center mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('portfolio.title')}</h2>
+          <p className="text-base md:text-lg font-body leading-relaxed text-main-teal/80 max-w-3xl mx-auto mt-4">
+            Selected web design, web development, and AI automation projects created for brands that value clarity,
+            performance, and thoughtful execution.
+          </p>
         </ScrollReveal>
 
         <ScrollReveal>
@@ -97,7 +101,7 @@ const PortfolioSection = () => {
                         <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${i === 3 ? 'bg-[#0a0a0a]' : 'bg-neutral-card'}`}>
                           <img
                             src={projectImages[i]}
-                            alt={project.title}
+                            alt={`${project.title} website preview`}
                             className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${i === 3 ? 'object-contain object-center' : 'object-cover object-top'}`}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />

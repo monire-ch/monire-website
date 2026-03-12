@@ -5,17 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import AppRoutes from "./AppRoutes";
-
-const ROUTES = [
-  "/",
-  "/privacy",
-  "/apply",
-  "/contact",
-  "/case-studies/expense-receipt-automation",
-  "/case-studies/snip-squad",
-  "/case-studies/systemically",
-  "/case-studies/towarowa",
-];
+import { PRERENDER_ROUTES } from "./lib/seo";
 
 export async function prerender(data: { url?: string } = {}) {
   const url = data.url || "/";
@@ -35,6 +25,6 @@ export async function prerender(data: { url?: string } = {}) {
 
   return {
     html,
-    links: ROUTES,
+    links: PRERENDER_ROUTES,
   };
 }

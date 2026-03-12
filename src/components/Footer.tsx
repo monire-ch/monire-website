@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
@@ -53,7 +54,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                 aria-label="LinkedIn"
                 className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
               >
-                <img src={linkedinIcon} alt="" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
+                <img src={linkedinIcon} alt="" aria-hidden="true" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
               </a>
             </div>
           </div>
@@ -65,9 +66,9 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               {navItems.map((item) => (
                 <li key={item.href}>
                   {item.href.startsWith('/') ? (
-                    <button onClick={() => navigate(item.href)} className="text-off-white text-base font-body hover:text-gold-text transition-colors text-left">
+                    <Link to={item.href} className="text-off-white text-base font-body hover:text-gold-text transition-colors text-left">
                       {item.label}
-                    </button>
+                    </Link>
                   ) : (
                     <a
                       href={item.href}

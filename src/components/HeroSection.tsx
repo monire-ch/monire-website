@@ -77,6 +77,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           style={{ transitionDelay: '420ms' }}
         >
           <button
+            type="button"
             onClick={() => navigate('/contact')}
             className="btn-teal !bg-dark-teal-surface hover:!bg-dark-teal-surface-lighter inline-flex items-center gap-2 text-base"
           >
