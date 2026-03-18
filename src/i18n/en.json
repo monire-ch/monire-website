@@ -120,41 +120,37 @@
         {
           "name": "Starter",
           "price": "from CHF3'500",
-          "desc": "Ideal for: New businesses, coaches, freelancers, small consultancies.",
+          "desc": "A clean, professional website you can manage yourself",
           "features": [
             "Up to 5 pages",
-            "Clean, professional visual style",
-            "Mobile-ready + fast loading",
-            "Contact form",
-            "Basic CMS for easy text/image updates",
-            "Essential on-page SEO (meta tags, sitemap, search-friendly structure)"
+            "Edit text & images yourself (no developer needed)",
+            "Mobile-optimised & fast loading",
+            "Basic SEO setup",
+            "Training on how to manage your site"
           ]
         },
         {
           "name": "Advanced",
           "price": "from CHF6'000",
-          "desc": "Best for SMEs, agencies, boutique firms, B2B services.",
+          "desc": "A flexible website that grows with your business",
           "features": [
-            "Up to 10 pages",
-            "Custom visual design + subtle animations",
-            "More flexible CMS structures (blogs, case studies, product/service lists)",
-            "SEO optimization focused on ranking (not just set-up)",
-            "Google Analytics with event tracking",
-            "Integration of 1-2 third-party tools (booking system, CRM form, etc.)",
+            "Up to 10 pages, fully custom-designed",
+            "Smooth animations & refined interactions",
+            "Content management for blogs, case studies, and services",
+            "SEO optimization focused on ranking + analytics with event tracking",
+            "1-2 third-party integrations (ex. booking system, CRM, etc.)",
             "Support for 2 languages"
           ]
         },
         {
           "name": "Premium",
           "price": "from CHF9'000",
-          "desc": "Best for: growing firms, established brands, companies needing workflows & integrations.",
+          "desc": "A digital platform for your workflows and operations",
           "features": [
             "Unlimited pages",
-            "Full custom UX + UI layout planning",
-            "Advanced CMS",
-            "Integrations with tools like: Newsletter, booking, calendar, live chat, client portal",
-            "Comprehensive SEO strategy",
-            "Multi-language support"
+            "Multiple third-party integrations (e.g. booking, live chat, client portal, newsletter automations)",
+            "Content that connects across your site (e.g. services linked to case studies)",
+            "Multilingual support (2+ languages)"
           ]
         }
       ],

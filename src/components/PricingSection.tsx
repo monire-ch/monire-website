@@ -57,6 +57,14 @@ const PricingSection = () => {
           </div>
         </ScrollReveal>
 
+        {activeTab === 'webDesign' && (
+          <ScrollReveal className="text-center mb-12">
+            <p className="text-off-white/85 text-xs sm:text-sm font-body tracking-[0.04em]">
+              Each plan includes everything from the previous tier.
+            </p>
+          </ScrollReveal>
+        )}
+
         {activeTab === 'automation' ? (
           <ScrollReveal>
             <div className="rounded-xl dark-surface-card border border-off-white/10 p-10 md:p-14 text-center">
@@ -83,7 +91,7 @@ const PricingSection = () => {
               const { prefix, amount } = splitPrice(plan.price);
               return (
                 <ScrollReveal key={plan.name} delay={i * 100}>
-                  <div className="relative">
+                  <div className={`relative ${plan.featured ? 'md:-translate-y-[8px]' : ''}`}>
                     {plan.featured && (
                       <div className="flex justify-center relative z-10 -mb-4">
                         <span className="inline-block bg-gold text-main-teal text-xs font-body font-semibold tracking-wide px-5 py-1.5 rounded-full shadow-md">
@@ -94,8 +102,8 @@ const PricingSection = () => {
                     <div
                       className={`rounded-xl p-8 flex flex-col ${
                         plan.featured
-                          ? 'bg-off-white text-deep-ink md:py-12'
-                          : 'dark-surface-card border border-off-white/10'
+                          ? 'bg-off-white text-deep-ink md:py-10 md:min-h-[632px]'
+                          : 'dark-surface-card border border-off-white/10 md:min-h-[612px]'
                       }`}
                     >
                       <p className={`font-display text-2xl md:text-3xl mb-4 ${
