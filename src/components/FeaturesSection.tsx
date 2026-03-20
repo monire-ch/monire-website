@@ -22,7 +22,7 @@ const FeaturesSection = () => {
             return (
               <ScrollReveal key={f.title} delay={i * 150}>
                 <div
-                  className={`rounded-lg p-6 h-full hover:shadow-lg transition-shadow duration-300 ${
+                  className={`rounded-lg p-8 h-full hover:shadow-lg transition-shadow duration-300 ${
                     isDark
                       ? 'border border-white/10 text-off-white'
                       : 'bg-neutral-card border border-neutral-border'

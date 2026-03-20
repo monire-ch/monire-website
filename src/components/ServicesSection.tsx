@@ -40,7 +40,7 @@ const ServicesSection = () => {
           >
             {/* Desktop layout */}
             <div className="hidden md:flex flex-row min-h-[340px]">
-              <div className="md:w-2/5 p-10 flex flex-col gap-1 border-r border-off-white/10">
+              <div className="md:w-2/5 p-12 flex flex-col gap-1 border-r border-off-white/10">
                 {items.map((item, i) => (
                   <button
                     key={item.title}
@@ -55,7 +55,7 @@ const ServicesSection = () => {
                   </button>
                 ))}
               </div>
-              <div className="md:w-3/5 p-10">
+              <div className="md:w-3/5 p-12">
                 <h3 className="font-body text-3xl md:text-4xl text-off-white mb-5">
                   {active.title}
                 </h3>
@@ -74,7 +74,7 @@ const ServicesSection = () => {
             </div>
 
             {/* Mobile accordion layout */}
-            <div className="md:hidden p-6">
+            <div className="md:hidden p-8">
               {items.map((item, i) => {
                 const isOpen = mobileOpenIndex === i;
                 return (
