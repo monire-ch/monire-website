@@ -45,7 +45,7 @@ const PricingSection = () => {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`whitespace-nowrap px-6 md:px-8 py-3 rounded-full text-xs md:text-sm font-body transition-all duration-200 ${
+                className={`whitespace-nowrap px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full text-[10px] xs:text-xs md:text-sm font-body transition-all duration-200 ${
                   activeTab === key
                     ? 'bg-main-teal text-off-white border border-gold/50'
                     : 'text-off-white/60 hover:text-off-white/80 border border-transparent'
