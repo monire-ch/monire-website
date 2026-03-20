@@ -102,8 +102,8 @@ const PricingSection = () => {
                     <div
                       className={`rounded-xl p-8 flex flex-col ${
                         plan.featured
-                          ? 'bg-off-white text-deep-ink md:py-10 md:min-h-[632px]'
-                          : 'dark-surface-card border border-off-white/10 md:min-h-[612px]'
+                          ? 'bg-off-white text-deep-ink md:py-10'
+                          : 'dark-surface-card border border-off-white/10'
                       }`}
                     >
                       <p className={`font-display text-2xl md:text-3xl mb-4 ${
