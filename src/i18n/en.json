@@ -120,39 +120,42 @@
         {
           "name": "Starter",
           "price": "from CHF3'500",
-          "desc": "A clean, professional website that establishes your credibility online",
+          "desc": "A clean, professional website to establish your presence online",
           "features": [
             "Up to 5 pages",
-            "Edit text & images yourself (no developer needed)",
+            "Custom website designed for your brand",
             "Mobile-optimised & fast loading",
             "Contact form with email notifications",
-            "Basic SEO setup: meta tags, sitemap",
+            "Easy content editing (no developer needed)",
+            "Essential SEO setup: meta tags, sitemap",
             "Training on how to manage your site"
           ]
         },
         {
           "name": "Advanced",
           "price": "from CHF6'000",
-          "desc": "A flexible website that grows with your business",
+          "desc": "A strategic website built for growth",
           "features": [
             "Up to 10 pages, fully custom-designed",
-            "Smooth animations & refined interactions",
+            "Strategic structure and user flows designed to drive action",
             "Content management for blogs, case studies, and services",
             "1-2 third-party integrations (ex. booking system, CRM, etc.)",
             "Analytics with event tracking",
             "SEO optimization focused on ranking",
+            "Smooth animations & refined interactions",
             "Support for 2 languages"
           ]
         },
         {
           "name": "Premium",
           "price": "from CHF9'000",
-          "desc": "A digital platform for your workflows and operations",
+          "desc": "A digital platform for complex, large-scale, or evolving businesses",
           "features": [
             "Unlimited pages",
+            "UX, design, and architecture adapted to complex structures and requirements",
             "Multiple third-party integrations (e.g. booking, live chat, client portal, newsletter automations)",
-            "Content that connects across your site (e.g. services linked to case studies)",
-            "Phased delivery for larger builds",
+            "Connected content across your site (e.g. services linked to case studies, blog posts, or related pages)",
+            "Phased delivery for larger or evolving projects",
             "Multilingual support (2+ languages)"
           ]
         }
