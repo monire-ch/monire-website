@@ -91,7 +91,7 @@ const PricingSection = () => {
               const { prefix, amount } = splitPrice(plan.price);
               return (
                 <ScrollReveal key={plan.name} delay={i * 100}>
-                  <div className={`relative ${plan.featured ? 'md:-translate-y-[8px]' : ''}`}>
+                  <div className={`relative ${plan.featured ? 'md:-translate-y-[7px]' : ''}`}>
                     {plan.featured && (
                       <div className="flex justify-center relative z-10 -mb-4">
                         <span className="inline-block bg-gold text-main-teal text-xs font-body font-semibold tracking-wide px-5 py-1.5 rounded-full shadow-md">
@@ -100,9 +100,9 @@ const PricingSection = () => {
                       </div>
                     )}
                     <div
-                      className={`rounded-xl p-8 flex flex-col ${
+                      className={`rounded-xl p-8 md:min-h-[935px] lg:min-h-[650px] flex flex-col ${
                         plan.featured
-                          ? 'bg-off-white text-deep-ink md:py-10'
+                          ? 'bg-off-white text-deep-ink'
                           : 'dark-surface-card border border-off-white/10'
                       }`}
                     >
