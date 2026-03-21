@@ -20,7 +20,7 @@ const Contact = () => {
             left: "-60px",
             width: "320px",
             height: "320px",
-            background: "rgba(120, 200, 255, 0.25)",
+            background: "rgba(120, 200, 255, 0.15)",
           }}
         />
         <div className="max-w-6xl mx-auto px-6">

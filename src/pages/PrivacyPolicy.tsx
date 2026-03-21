@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-off-white">
       <Navbar />
-      <main className="pt-32 pb-20 px-6">
+      <main className="pt-36 md:pt-44 pb-20 px-6">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <h1 className="font-body text-4xl md:text-5xl text-main-teal mb-3">Privacy Policy</h1>

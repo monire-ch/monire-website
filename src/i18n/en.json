@@ -120,41 +120,43 @@
         {
           "name": "Starter",
           "price": "from CHF3'500",
-          "desc": "Ideal for: New businesses, coaches, freelancers, small consultancies.",
+          "desc": "A clean, professional website to establish your presence online",
           "features": [
             "Up to 5 pages",
-            "Clean, professional visual style",
-            "Mobile-ready + fast loading",
-            "Contact form",
-            "Basic CMS for easy text/image updates",
-            "Essential on-page SEO (meta tags, sitemap, search-friendly structure)"
+            "Custom website designed for your brand",
+            "Mobile-optimised & fast loading",
+            "Contact form with email notifications",
+            "Easy content editing (no developer needed)",
+            "Essential SEO setup: meta tags, sitemap",
+            "Training on how to manage your site"
           ]
         },
         {
           "name": "Advanced",
           "price": "from CHF6'000",
-          "desc": "Best for SMEs, agencies, boutique firms, B2B services.",
+          "desc": "A strategic website designed to support your business growth",
           "features": [
             "Up to 10 pages",
-            "Custom visual design + subtle animations",
-            "More flexible CMS structures (blogs, case studies, product/service lists)",
-            "SEO optimization focused on ranking (not just set-up)",
-            "Google Analytics with event tracking",
-            "Integration of 1-2 third-party tools (booking system, CRM form, etc.)",
+            "Strategic structure and user flows designed to drive action",
+            "Content management for blogs, case studies, and services",
+            "1-2 third-party integrations (ex. booking system, CRM, etc.)",
+            "Analytics with event tracking",
+            "SEO optimization focused on ranking",
+            "Smooth animations & refined interactions",
             "Support for 2 languages"
           ]
         },
         {
           "name": "Premium",
           "price": "from CHF9'000",
-          "desc": "Best for: growing firms, established brands, companies needing workflows & integrations.",
+          "desc": "A digital platform for complex, large-scale, or evolving businesses",
           "features": [
             "Unlimited pages",
-            "Full custom UX + UI layout planning",
-            "Advanced CMS",
-            "Integrations with tools like: Newsletter, booking, calendar, live chat, client portal",
-            "Comprehensive SEO strategy",
-            "Multi-language support"
+            "UX, design, and architecture adapted to complex structures and requirements",
+            "Multiple third-party integrations (e.g. booking, live chat, client portal, newsletter automations)",
+            "Connected content across your site (e.g. services linked to case studies, blog posts, or related pages)",
+            "Phased delivery for larger or evolving projects",
+            "Multilingual support (2+ languages)"
           ]
         }
       ],

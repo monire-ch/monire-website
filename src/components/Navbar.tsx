@@ -125,7 +125,7 @@ const Navbar = () => {
           <div
             className="absolute inset-0 flex flex-col animate-fade-in"
             style={{
-              background: 'linear-gradient(180deg, rgba(1,20,28,0.98) 0%, rgba(8,47,58,0.96) 60%, rgba(15,75,90,0.92) 100%)',
+              background: 'linear-gradient(180deg, rgb(1 20 28) 0%, rgb(8 47 58) 60%, rgb(15 75 90) 100%)',
             }}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-5">
@@ -139,33 +139,37 @@ const Navbar = () => {
               </button>
             </div>
 
-            <nav className="flex-1 flex flex-col px-6 pt-8">
-              {navLinks.map((link, i) => (
-                <a
-                  key={link.href}
-                  href={getHref(link.href)}
-                  onClick={() => { setActiveLink(link.href); setMobileOpen(false); }}
-                  className="group block py-5 border-b border-off-white/[0.07] transition-colors duration-200"
-                  style={{ animationDelay: `${i * 40}ms` }}
-                >
-                  <span className="text-off-white text-lg font-body tracking-wide group-hover:text-gold-hover transition-colors duration-200">
-                    {link.label}
-                  </span>
-                </a>
-              ))}
-            </nav>
+            <div className="flex-1 min-h-0 overflow-y-auto">
+              <div className="min-h-full flex flex-col">
+                <nav className="px-6 pt-8">
+                  {navLinks.map((link, i) => (
+                    <a
+                      key={link.href}
+                      href={getHref(link.href)}
+                      onClick={() => { setActiveLink(link.href); setMobileOpen(false); }}
+                      className="group block py-5 border-b border-off-white/[0.07] transition-colors duration-200"
+                      style={{ animationDelay: `${i * 40}ms` }}
+                    >
+                      <span className="text-off-white text-lg font-body tracking-wide group-hover:text-gold-hover transition-colors duration-200">
+                        {link.label}
+                      </span>
+                    </a>
+                  ))}
+                </nav>
 
-            <div className="px-6 pb-10 pt-4">
-              <button
-                onClick={() => { setContactOpen(true); setMobileOpen(false); }}
-                className="w-full py-3.5 rounded-full text-base font-body font-semibold uppercase tracking-widest text-off-white transition-all duration-200"
-                style={{
-                  background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
-                  boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3)',
-                }}
-              >
-                {t('nav.contactUs')}
-              </button>
+                <div className="px-6 pb-10 pt-4 mt-auto">
+                  <button
+                    onClick={() => { setContactOpen(true); setMobileOpen(false); }}
+                    className="w-full py-3.5 rounded-full text-base font-body font-semibold uppercase tracking-widest text-off-white transition-all duration-200"
+                    style={{
+                      background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
+                      boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.3)',
+                    }}
+                  >
+                    {t('nav.contactUs')}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

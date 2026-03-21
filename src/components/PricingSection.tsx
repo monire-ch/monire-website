@@ -45,7 +45,7 @@ const PricingSection = () => {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`whitespace-nowrap px-6 md:px-8 py-3 rounded-full text-xs md:text-sm font-body transition-all duration-200 ${
+                className={`whitespace-nowrap px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full text-[10px] xs:text-xs md:text-sm font-body transition-all duration-200 ${
                   activeTab === key
                     ? 'bg-main-teal text-off-white border border-gold/50'
                     : 'text-off-white/60 hover:text-off-white/80 border border-transparent'
@@ -56,6 +56,14 @@ const PricingSection = () => {
             ))}
           </div>
         </ScrollReveal>
+
+        {activeTab === 'webDesign' && (
+          <ScrollReveal className="text-center mb-12">
+            <p className="text-off-white/85 text-xs sm:text-sm font-body tracking-[0.04em]">
+              Each plan includes everything from the previous tier.
+            </p>
+          </ScrollReveal>
+        )}
 
         {activeTab === 'automation' ? (
           <ScrollReveal>
@@ -83,7 +91,7 @@ const PricingSection = () => {
               const { prefix, amount } = splitPrice(plan.price);
               return (
                 <ScrollReveal key={plan.name} delay={i * 100}>
-                  <div className="relative">
+                  <div className={`relative ${plan.featured ? 'md:-translate-y-[7px]' : ''}`}>
                     {plan.featured && (
                       <div className="flex justify-center relative z-10 -mb-4">
                         <span className="inline-block bg-gold text-main-teal text-xs font-body font-semibold tracking-wide px-5 py-1.5 rounded-full shadow-md">
@@ -92,9 +100,9 @@ const PricingSection = () => {
                       </div>
                     )}
                     <div
-                      className={`rounded-xl p-8 flex flex-col ${
+                      className={`rounded-xl p-8 md:min-h-[935px] lg:min-h-[650px] flex flex-col ${
                         plan.featured
-                          ? 'bg-off-white text-deep-ink md:py-12'
+                          ? 'bg-off-white text-deep-ink'
                           : 'dark-surface-card border border-off-white/10'
                       }`}
                     >
