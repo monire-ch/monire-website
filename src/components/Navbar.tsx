@@ -125,7 +125,7 @@ const Navbar = () => {
           <div
             className="absolute inset-0 flex flex-col animate-fade-in"
             style={{
-              background: 'linear-gradient(180deg, rgba(1,20,28,0.98) 0%, rgba(8,47,58,0.96) 60%, rgba(15,75,90,0.92) 100%)',
+              background: 'linear-gradient(180deg, rgb(1 20 28) 0%, rgb(8 47 58) 60%, rgb(15 75 90) 100%)',
             }}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-5">
