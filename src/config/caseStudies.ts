@@ -48,23 +48,23 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
       {
         title: 'Overview:',
         intro:
-          'Snip Squad is a nonprofit veterinary clinic in Norfolk, Virginia providing affordable veterinary care for pets in underserved communities. They needed a website that clearly communicates their mission, encourages donations, and helps pet owners quickly find the information they need.',
+          'Snip Squad is a nonprofit veterinary clinic in Norfolk, Virginia providing affordable care for pets in underserved communities.\n\nThey needed a website that clearly communicates their mission, supports donations, and helps visitors quickly find key information.',
       },
       {
         title: 'Approach:',
+        intro:
+          'Snip Squad wanted to move away from the typical clinical look and create something more modern, friendly, and community-focused.\n\nWe focused on:',
         items: [
-          'Designed a warm visual direction with clear service pathways.',
-          'Built a fast, mobile-first Webflow experience with intuitive navigation.',
-          'Structured content for clarity, trust, and conversion.',
+          'A warm, approachable visual style',
+          'Clear, structured, easy-to-scan content',
+          'A fully responsive experience across mobile, tablet, and desktop',
+          'An easy-to-manage CMS for the team',
         ],
       },
       {
-        title: 'Impact:',
-        items: [
-          'Clearer user journeys from first visit to action.',
-          'Stronger brand presence with an approachable digital experience.',
-          'Easy ongoing content updates without developer dependency.',
-        ],
+        title: 'Outcome:',
+        intro:
+          'The result is a clean, welcoming digital presence that reflects Snip Squad’s mission and supports both service discovery and donations.',
       },
     ],
   },
