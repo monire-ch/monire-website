@@ -36,6 +36,7 @@ const Navbar = () => {
   useEffect(() => {
     if (!isHome) return;
     const sectionLinks = navLinks.filter((link) => link.href.startsWith('#') && link.href !== '#');
+    const activationLine = 120;
 
     const updateActiveLinkFromScroll = () => {
       const currentHash = window.location.hash;
@@ -49,17 +50,15 @@ const Navbar = () => {
         return;
       }
 
-      const probeLine = window.scrollY + 180;
-      let visibleSectionHash = '#';
+      const activeSectionHash =
+        sectionLinks.find((link) => {
+          const section = document.querySelector(link.href) as HTMLElement | null;
+          if (!section) return false;
+          const rect = section.getBoundingClientRect();
+          return rect.top <= activationLine && rect.bottom > activationLine;
+        })?.href ?? '#';
 
-      for (const link of sectionLinks) {
-        const section = document.querySelector(link.href) as HTMLElement | null;
-        if (section && section.offsetTop <= probeLine) {
-          visibleSectionHash = link.href;
-        }
-      }
-
-      setActiveLink(visibleSectionHash);
+      setActiveLink(activeSectionHash);
     };
 
     const onScroll = () => {
