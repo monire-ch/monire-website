@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
-import AiCaseStudyTemplate from '@/components/case-studies/AiCaseStudyTemplate';
-import WebCaseStudyTemplate from '@/components/case-studies/WebCaseStudyTemplate';
+import CaseStudyTemplate from '@/components/case-studies/CaseStudyTemplate';
 import { caseStudiesBySlug } from '@/config/caseStudies';
 import NotFound from './NotFound';
 
@@ -10,11 +9,7 @@ const CaseStudyPage = () => {
 
   if (!project) return <NotFound />;
 
-  if (project.kind === 'ai') {
-    return <AiCaseStudyTemplate project={project} />;
-  }
-
-  return <WebCaseStudyTemplate project={project} />;
+  return <CaseStudyTemplate project={project} />;
 };
 
 export default CaseStudyPage;
