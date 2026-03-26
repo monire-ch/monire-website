@@ -123,3 +123,12 @@ export const aiCaseStudies = {
     ],
   },
 } satisfies Record<string, AiCaseStudyConfig>;
+
+export type CaseStudyConfig = WebCaseStudyConfig | AiCaseStudyConfig;
+
+export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
+  'snip-squad': webCaseStudies.snipSquad,
+  systemically: webCaseStudies.systemically,
+  towarowa: webCaseStudies.towarowa,
+  'expense-receipt-automation': aiCaseStudies.expenseReceiptAutomation,
+};
