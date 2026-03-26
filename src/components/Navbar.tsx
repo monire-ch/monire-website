@@ -35,15 +35,46 @@ const Navbar = () => {
 
   useEffect(() => {
     if (!isHome) return;
-    const onScroll = () => {
+    const sectionLinks = navLinks.filter((link) => link.href.startsWith('#') && link.href !== '#');
+
+    const updateActiveLinkFromScroll = () => {
       const currentHash = window.location.hash;
-      if (window.scrollY < 100 && (!currentHash || currentHash === '#')) {
+
+      if (window.scrollY < 100) {
+        if (currentHash && currentHash !== '#') {
+          setActiveLink(currentHash);
+          return;
+        }
         setActiveLink('#');
+        return;
       }
+
+      const probeLine = window.scrollY + 180;
+      let visibleSectionHash = '#';
+
+      for (const link of sectionLinks) {
+        const section = document.querySelector(link.href) as HTMLElement | null;
+        if (section && section.offsetTop <= probeLine) {
+          visibleSectionHash = link.href;
+        }
+      }
+
+      setActiveLink(visibleSectionHash);
     };
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [isHome]);
+
+    const onScroll = () => {
+      requestAnimationFrame(updateActiveLinkFromScroll);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', updateActiveLinkFromScroll);
+    requestAnimationFrame(updateActiveLinkFromScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', updateActiveLinkFromScroll);
+    };
+  }, [isHome, navLinks]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
