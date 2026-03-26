@@ -16,8 +16,8 @@ export type CaseStudyTestimonial = {
 };
 
 export type CaseStudyConfig = {
-  eyebrow: string;
   title: string;
+  subtitle?: string;
   client: string;
   date: string;
   category: string;
@@ -33,8 +33,8 @@ export type CaseStudyConfig = {
 
 export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
   'snip-squad': {
-    eyebrow: 'Web Design & Web Development',
     title: 'Snip Squad',
+    subtitle: 'A modern, approachable website for a nonprofit veterinary clinic',
     client: 'Snip Squad',
     date: 'January 2026',
     category: 'Web Design & Web Development',
@@ -69,7 +69,6 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     ],
   },
   systemically: {
-    eyebrow: 'Web Development',
     title: 'SystemicAlly',
     client: 'SystemicAlly',
     date: 'May 2025',
@@ -82,7 +81,6 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     websiteLabel: 'Visit Website',
   },
   towarowa: {
-    eyebrow: 'Web Design & Web Development',
     title: 'Towarowa',
     client: 'Towarowa',
     date: 'October 2025',
@@ -95,7 +93,6 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     websiteLabel: 'Visit Website',
   },
   'expense-receipt-automation': {
-    eyebrow: 'AI Automation',
     title: 'Expense Receipt Automation',
     client: 'Brooksmiller & Partners AG',
     date: 'August 2025',
