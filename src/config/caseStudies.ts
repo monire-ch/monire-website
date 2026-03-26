@@ -67,6 +67,11 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
           'The result is a clean, welcoming digital presence that reflects Snip Squad’s mission and supports both service discovery and donations.',
       },
     ],
+    testimonial: {
+      quote:
+        "What an incredible website designer!! From start to finish they made it easy to make my dreams come true. Sometimes it can be overwhelming to even start and figure out what your vision would be for your website but Monire was able to speak with me and help me create the vision that I wanted for my website/business. In this day and age website design is so important and I would choose Monire 10/10 times to work with. Great team with excellent deadline times and easy to work with during modification process. Can't recommend them enough!",
+      author: 'Dr. Alex Phan, Snip Squad',
+    },
   },
   systemically: {
     title: 'SystemicAlly',
