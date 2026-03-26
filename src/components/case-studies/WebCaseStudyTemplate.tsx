@@ -34,7 +34,7 @@ const WebCaseStudyTemplate = ({ project }: WebCaseStudyTemplateProps) => {
             </h1>
           </ScrollReveal>
 
-          <div className={project.gridClassName}>
+          <div className="case-study-web-grid">
             <div>
               <ScrollReveal>
                 <div>
@@ -81,8 +81,8 @@ const WebCaseStudyTemplate = ({ project }: WebCaseStudyTemplateProps) => {
             </div>
 
             <ScrollReveal>
-              <div className={project.previewClassName}>
-                <img src={project.image} alt={project.imageAlt} className={project.previewImageClassName} />
+              <div className="case-study-web-preview">
+                <img src={project.image} alt={project.imageAlt} className="case-study-web-image" />
               </div>
             </ScrollReveal>
           </div>
