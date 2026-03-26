@@ -24,9 +24,22 @@ const Navbar = () => {
     { label: t('nav.ourWork'), href: '#portfolio' },
   ];
   useEffect(() => {
+    if (!isHome) {
+      setActiveLink('');
+      return;
+    }
+
+    const hash = location.hash || '#';
+    setActiveLink(hash);
+  }, [isHome, location.hash]);
+
+  useEffect(() => {
     if (!isHome) return;
     const onScroll = () => {
-      if (window.scrollY < 100) setActiveLink('#');
+      const currentHash = window.location.hash;
+      if (window.scrollY < 100 && (!currentHash || currentHash === '#')) {
+        setActiveLink('#');
+      }
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
