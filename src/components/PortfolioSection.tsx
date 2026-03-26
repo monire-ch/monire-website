@@ -24,7 +24,7 @@ const PortfolioSection = () => {
   const [canScrollNext, setCanScrollNext] = useState(false);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: false,
+    loop: true,
     dragFree: false,
     align: 'center',
   });

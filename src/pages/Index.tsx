@@ -45,14 +45,16 @@ const Index = () => {
     <>
       <div className="min-h-screen">
         <Navbar />
-        <HeroSection onCtaClick={() => setContactOpen(true)} />
-        <FeaturesSection />
-        <AboutSection />
-        <ServicesSection />
-        <PricingSection />
-        <PortfolioSection />
-        <FAQSection />
-        <CTASection />
+        <main>
+          <HeroSection onCtaClick={() => setContactOpen(true)} />
+          <FeaturesSection />
+          <AboutSection />
+          <ServicesSection />
+          <PricingSection />
+          <PortfolioSection />
+          <FAQSection />
+          <CTASection />
+        </main>
         <Footer hideWave />
         <ContactModal
           open={contactOpen}

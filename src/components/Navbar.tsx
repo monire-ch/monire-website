@@ -12,7 +12,7 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('#');
+  const [activeLink, setActiveLink] = useState(isHome ? '#' : '');
 
   const getHref = (hash: string) => isHome ? hash : `/${hash}`;
 
@@ -24,12 +24,56 @@ const Navbar = () => {
     { label: t('nav.ourWork'), href: '#portfolio' },
   ];
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY < 100) setActiveLink('#');
+    if (!isHome) {
+      setActiveLink('');
+      return;
+    }
+
+    const hash = location.hash || '#';
+    setActiveLink(hash);
+  }, [isHome, location.hash]);
+
+  useEffect(() => {
+    if (!isHome) return;
+    const sectionLinks = navLinks.filter((link) => link.href.startsWith('#') && link.href !== '#');
+    const activationLine = 120;
+
+    const updateActiveLinkFromScroll = () => {
+      const currentHash = window.location.hash;
+
+      if (window.scrollY < 100) {
+        if (currentHash && currentHash !== '#') {
+          setActiveLink(currentHash);
+          return;
+        }
+        setActiveLink('#');
+        return;
+      }
+
+      const activeSectionHash =
+        sectionLinks.find((link) => {
+          const section = document.querySelector(link.href) as HTMLElement | null;
+          if (!section) return false;
+          const rect = section.getBoundingClientRect();
+          return rect.top <= activationLine && rect.bottom > activationLine;
+        })?.href ?? '#';
+
+      setActiveLink(activeSectionHash);
     };
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+
+    const onScroll = () => {
+      requestAnimationFrame(updateActiveLinkFromScroll);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', updateActiveLinkFromScroll);
+    requestAnimationFrame(updateActiveLinkFromScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', updateActiveLinkFromScroll);
+    };
+  }, [isHome, navLinks]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -68,11 +112,11 @@ const Navbar = () => {
                   }
                 }}
                 className={`relative px-4 py-1.5 rounded-full text-[15px] font-body tracking-wide transition-all duration-200 ${
-                  activeLink === link.href
+                  isHome && activeLink === link.href
                     ? 'text-off-white'
                     : 'text-off-white/80 hover:text-gold-hover'
                 }`}
-                style={activeLink === link.href ? { boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.15)' } : {}}
+                style={isHome && activeLink === link.href ? { boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.15)' } : {}}
               >
                 {link.label}
               </a>

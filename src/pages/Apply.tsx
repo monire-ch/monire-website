@@ -32,6 +32,7 @@ const Apply = () => {
       <div className="about-orb about-orb-2" style={{ bottom: '120px', left: '-40px', width: '320px', height: '320px', background: 'rgba(120, 200, 255, 0.25)' }} />
       <Navbar />
 
+      <main>
       <section className="pt-32 pb-32 md:pt-40 md:pb-28 px-6">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="mb-6">
@@ -97,6 +98,7 @@ const Apply = () => {
           </ScrollReveal>
         </div>
       </section>
+      </main>
 
       <div className="border-t border-off-white/10 mx-6" />
       <Footer hideWave />

@@ -354,6 +354,43 @@
   color: #011b22;
 }
 
+.case-study-web-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.case-study-web-preview {
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: hsl(var(--card));
+  height: 560px;
+  overflow-y: auto;
+}
+
+.case-study-web-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .case-study-web-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .case-study-web-preview {
+    height: 720px;
+  }
+}
+
 /* Eyebrow pill */
 .eyebrow-pill {
   display: inline-flex;
