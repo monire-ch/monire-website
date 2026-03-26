@@ -20,6 +20,7 @@ export type CaseStudyConfig = {
   subtitle?: string;
   client: string;
   date: string;
+  industry: string;
   category: string;
   tools: string[];
   image: string;
@@ -37,6 +38,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     subtitle: 'A modern, approachable website for a nonprofit veterinary clinic',
     client: 'Snip Squad',
     date: 'January 2026',
+    industry: 'Veterinary & Nonprofit',
     category: 'Web Design & Web Development',
     tools: ['WEBFLOW', 'FIGMA', 'RELUME'],
     image: snipSquad,
@@ -77,6 +79,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     title: 'SystemicAlly',
     client: 'SystemicAlly',
     date: 'May 2025',
+    industry: 'Consulting',
     category: 'Web Development',
     tools: ['WEBFLOW', 'GOOGLE ANALYTICS'],
     image: systemically,
@@ -89,6 +92,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     title: 'Towarowa',
     client: 'Towarowa',
     date: 'October 2025',
+    industry: 'Real Estate',
     category: 'Web Design & Web Development',
     tools: ['TYPESCRIPT', 'TAILWIND', 'FIGMA', 'NETLIFY'],
     image: towarowa,
@@ -101,6 +105,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     title: 'Expense Receipt Automation',
     client: 'Brooksmiller & Partners AG',
     date: 'August 2025',
+    industry: 'Executive Search',
     category: 'AI Automation',
     tools: ['OUTLOOK', 'N8N', 'ONEDRIVE', 'EXCEL', 'OCR + AI EXTRACTION'],
     image: n8nPreview,

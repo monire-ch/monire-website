@@ -29,6 +29,10 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         <span className="text-sm font-body text-foreground">{project.date}</span>
       </div>
       <div className="flex justify-between items-center py-4 border-b border-border">
+        <span className="text-sm font-body text-main-teal">Industry</span>
+        <span className="text-sm font-body text-foreground">{project.industry}</span>
+      </div>
+      <div className="flex justify-between items-center py-4 border-b border-border">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.category')}</span>
         <span className="text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground">
           {project.category}
@@ -88,7 +92,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               {project.title}
             </h1>
             {project.subtitle ? (
-              <p className="text-lg md:text-xl font-body text-foreground/80 mb-12">{project.subtitle}</p>
+              <p className="text-lg md:text-xl font-body text-foreground/80 mb-10">{project.subtitle}</p>
             ) : null}
           </ScrollReveal>
 
