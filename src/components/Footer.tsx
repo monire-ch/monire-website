@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import linkedinIcon from '@/assets/linkedin.svg';
+import xIcon from '@/assets/x.svg';
 
 const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const { t } = useTranslation();
@@ -57,6 +58,15 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                 className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
               >
                 <img src={linkedinIcon} alt="" aria-hidden="true" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
+              </a>
+              <a
+                href="https://x.com/hellomonire"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                className="flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+              >
+                <img src={xIcon} alt="" aria-hidden="true" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />
               </a>
             </div>
           </div>

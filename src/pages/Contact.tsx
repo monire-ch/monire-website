@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import linkedinIcon from "@/assets/linkedin.svg";
+import xIcon from "@/assets/x.svg";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
@@ -112,6 +113,24 @@ const Contact = () => {
                         }}
                       />
                     </a>
+                    <a
+                      href="https://x.com/hellomonire"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="X"
+                      className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-text/30 transition-all duration-200 hover:border-gold-text/60 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+                    >
+                      <img
+                        src={xIcon}
+                        alt=""
+                        aria-hidden="true"
+                        className="w-4 h-4"
+                        style={{
+                          filter:
+                            "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)",
+                        }}
+                      />
+                    </a>
                   </div>
                 </div>
               </ScrollReveal>
@@ -155,6 +174,7 @@ const Contact = () => {
             sameAs: [
               "https://www.instagram.com/hello.monire",
               "https://www.linkedin.com/company/monire",
+              "https://x.com/hellomonire",
             ],
             serviceType: [
               "Web Design",
