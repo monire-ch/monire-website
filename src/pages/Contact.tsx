@@ -5,14 +5,10 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
 import SocialMediaIcon from "@/components/SocialMediaIcon";
+import { SOCIAL_LINKS } from "@/config/socialLinks";
 
 const Contact = () => {
   const { t } = useTranslation();
-  const socialLinks = [
-    { platform: "instagram" as const, href: "https://www.instagram.com/hello.monire" },
-    { platform: "linkedin" as const, href: "https://www.linkedin.com/company/monire" },
-    { platform: "x" as const, href: "https://x.com/hellomonire" },
-  ];
 
   return (
     <>
@@ -90,7 +86,7 @@ const Contact = () => {
                     Follow Us
                   </h2>
                   <div className="flex items-center gap-3">
-                    {socialLinks.map((socialLink) => (
+                    {SOCIAL_LINKS.map((socialLink) => (
                       <SocialMediaIcon key={socialLink.platform} href={socialLink.href} platform={socialLink.platform} size="contact" />
                     ))}
                   </div>
@@ -133,11 +129,7 @@ const Contact = () => {
               { "@type": "City", name: "Zürich" },
               { "@type": "Country", name: "Switzerland" },
             ],
-            sameAs: [
-              "https://www.instagram.com/hello.monire",
-              "https://www.linkedin.com/company/monire",
-              "https://x.com/hellomonire",
-            ],
+            sameAs: SOCIAL_LINKS.map((socialLink) => socialLink.href),
             serviceType: [
               "Web Design",
               "Web Development",

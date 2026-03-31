@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import logo from '@/assets/monire_logo.png';
 import SocialMediaIcon from '@/components/SocialMediaIcon';
+import { SOCIAL_LINKS } from '@/config/socialLinks';
 
 const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const { t } = useTranslation();
@@ -16,12 +17,6 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
     { label: t('nav.faq'), href: '#faq' },
     { label: t('nav.contactUs'), href: '/contact' },
     { label: t('footer.privacyPolicy'), href: '/privacy' },
-  ];
-
-  const socialLinks = [
-    { platform: 'instagram' as const, href: 'https://www.instagram.com/hello.monire' },
-    { platform: 'linkedin' as const, href: 'https://www.linkedin.com/company/monire' },
-    { platform: 'x' as const, href: 'https://x.com/hellomonire' },
   ];
 
   return (
@@ -45,7 +40,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               {t('footer.tagline')}
             </p>
             <div className="flex items-center gap-3 mt-4">
-              {socialLinks.map((socialLink) => (
+              {SOCIAL_LINKS.map((socialLink) => (
                 <SocialMediaIcon key={socialLink.platform} href={socialLink.href} platform={socialLink.platform} size="footer" />
               ))}
             </div>
