@@ -1,14 +1,18 @@
 import { useTranslation } from "react-i18next";
-import { Mail, MapPin, Instagram } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import linkedinIcon from "@/assets/linkedin.svg";
-import xIcon from "@/assets/x.svg";
 import ContactForm from "@/components/ContactForm";
+import SocialMediaIcon from "@/components/SocialMediaIcon";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const socialLinks = [
+    { platform: "instagram" as const, href: "https://www.instagram.com/hello.monire" },
+    { platform: "linkedin" as const, href: "https://www.linkedin.com/company/monire" },
+    { platform: "x" as const, href: "https://x.com/hellomonire" },
+  ];
 
   return (
     <>
@@ -86,51 +90,9 @@ const Contact = () => {
                     Follow Us
                   </h2>
                   <div className="flex items-center gap-3">
-                    <a
-                      href="https://www.instagram.com/hello.monire"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Instagram"
-                      className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-text/30 text-gold-text transition-all duration-200 hover:border-gold-text/60 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
-                    >
-                      <Instagram size={18} />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/company/monire"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="LinkedIn"
-                      className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-text/30 transition-all duration-200 hover:border-gold-text/60 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
-                    >
-                      <img
-                        src={linkedinIcon}
-                        alt=""
-                        aria-hidden="true"
-                        className="w-4 h-4"
-                        style={{
-                          filter:
-                            "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)",
-                        }}
-                      />
-                    </a>
-                    <a
-                      href="https://x.com/hellomonire"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="X"
-                      className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-text/30 transition-all duration-200 hover:border-gold-text/60 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
-                    >
-                      <img
-                        src={xIcon}
-                        alt=""
-                        aria-hidden="true"
-                        className="w-4 h-4"
-                        style={{
-                          filter:
-                            "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)",
-                        }}
-                      />
-                    </a>
+                    {socialLinks.map((socialLink) => (
+                      <SocialMediaIcon key={socialLink.platform} href={socialLink.href} platform={socialLink.platform} size="contact" />
+                    ))}
                   </div>
                 </div>
               </ScrollReveal>
