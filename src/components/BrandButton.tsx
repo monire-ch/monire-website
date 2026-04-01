@@ -46,7 +46,6 @@ const BrandButton = ({
   className,
   variant,
   type = 'button',
-  to,
   showStar = false,
   starClassName,
   children,
@@ -61,8 +60,9 @@ const BrandButton = ({
   );
 
   if (type === 'link') {
+    const { to, ...linkProps } = props as Omit<BrandButtonLinkProps, 'type' | 'children' | 'className' | 'showStar' | 'starClassName' | 'variant'> & { to: string };
     return (
-      <Link to={to} className={buttonClassName} {...(props as Omit<React.ComponentProps<typeof Link>, 'to' | 'className' | 'children'>)}>
+      <Link to={to} className={buttonClassName} {...(linkProps as Omit<React.ComponentProps<typeof Link>, 'to' | 'className' | 'children'>)}>
         {content}
       </Link>
     );
