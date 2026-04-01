@@ -78,8 +78,8 @@ const PortfolioSection = () => {
                     onClick={() => scrollToProject(cat)}
                     className={`text-center md:text-left px-4 py-3 font-body text-sm transition-all duration-200 ${
                       isActive
-                        ? 'rounded-full border border-gold/60 bg-white/5 text-off-white'
-                        : 'rounded-lg border border-transparent text-off-white hover:text-off-white/80'
+                        ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
+                        : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'
                     }`}
                   >
                     {cat}
