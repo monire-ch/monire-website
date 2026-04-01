@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import ContactModal from './ContactModal';
-import StarIcon from './StarIcon';
+import BrandButton from './BrandButton';
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -125,13 +125,14 @@ const Navbar = () => {
 
           <div className="flex items-center gap-3">
             {/* CTA */}
-            <button
+            <BrandButton
               onClick={() => setContactOpen(true)}
-              className="btn-gold flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold tracking-widest flex items-center gap-2"
+              variant="primary"
+              showStar
+              className="flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold tracking-widest"
             >
               {t('nav.contactUs')}
-              <StarIcon />
-            </button>
+            </BrandButton>
           </div>
         </nav>
       </header>

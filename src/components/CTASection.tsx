@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
-import StarIcon from './StarIcon';
+import BrandButton from './BrandButton';
 
 const CTASection = () => {
   const { t } = useTranslation();
@@ -11,10 +11,9 @@ const CTASection = () => {
         <ScrollReveal>
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('cta.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-main-teal mb-6">{t('cta.title')}</h2>
-          <a href="/contact" className="btn-teal inline-flex items-center gap-2 text-sm">
+          <BrandButton type="link" to="/contact" variant="primary" showStar className="text-sm">
             {t('cta.button')}
-            <StarIcon />
-          </a>
+          </BrandButton>
         </ScrollReveal>
       </div>
     </section>

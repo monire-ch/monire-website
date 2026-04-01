@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import ContactModal from './ContactModal';
-import StarIcon from './StarIcon';
 import {
   CURRENCY_STORAGE_KEY,
   getWebDesignDisplayPrice,
@@ -12,6 +11,8 @@ import {
   type DisplayCurrency,
   WEB_DESIGN_PLAN_ORDER,
 } from '@/config/pricing';
+import BrandButton from './BrandButton';
+
 
 const tabKeys = ['webDesign', 'automation'] as const;
 
@@ -113,13 +114,12 @@ const PricingSection = () => {
                 {t('pricing.automationBlock.desc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                <button className="btn-gold text-sm inline-flex items-center justify-center gap-2 w-full sm:w-auto !py-2.5" onClick={() => setContactOpen(true)}>
+                <BrandButton variant="primary" showStar className="text-sm w-full sm:w-auto !py-2.5" onClick={() => setContactOpen(true)}>
                   {t('pricing.automationBlock.cta')}
-                  <StarIcon />
-                </button>
-                <button className="btn-outline-gold text-sm inline-flex items-center justify-center gap-2 w-full sm:w-auto !py-2.5" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
+                </BrandButton>
+                <BrandButton variant="secondary" className="text-sm w-full sm:w-auto !py-2.5" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
                   {t('pricing.automationBlock.caseStudy')}
-                </button>
+                </BrandButton>
               </div>
             </div>
           </ScrollReveal>
@@ -181,14 +181,14 @@ const PricingSection = () => {
                           </li>
                         ))}
                       </ul>
-                      <button onClick={() => setContactOpen(true)} className={`text-sm w-full rounded-full px-6 py-3.5 font-body font-medium transition-all duration-200 inline-flex items-center justify-center gap-2 ${
-                        plan.featured
-                          ? 'btn-teal !bg-main-teal hover:!bg-soft-teal'
-                          : 'btn-outline-gold'
-                      }`}>
+                      <BrandButton
+                        onClick={() => setContactOpen(true)}
+                        variant={plan.featured ? 'primary' : 'secondary'}
+                        showStar
+                        className={`text-sm w-full ${plan.featured ? '!bg-main-teal hover:!bg-soft-teal' : ''}`}
+                      >
                         {t('pricing.getStarted')}
-                        <StarIcon />
-                      </button>
+                      </BrandButton>
                     </div>
                   </div>
                 </ScrollReveal>

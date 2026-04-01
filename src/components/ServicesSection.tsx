@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
-import StarIcon from "./StarIcon";
+import BrandButton from "./BrandButton";
 import { SECTION_WRAPPER_GRADIENT } from "@/lib/theme";
 
 const ServicesSection = () => {
@@ -64,10 +63,9 @@ const ServicesSection = () => {
                 </p>
                 {caseStudyLinks[active.title] && (
                   <div>
-                    <Link to={caseStudyLinks[active.title]} className="btn-outline-gold text-sm inline-flex items-center gap-2">
+                    <BrandButton type="link" to={caseStudyLinks[active.title]} variant="secondary" showStar className="text-sm">
                       {t("services.cta", "Latest case study")}
-                      <StarIcon />
-                    </Link>
+                    </BrandButton>
                   </div>
                 )}
               </div>
@@ -102,10 +100,9 @@ const ServicesSection = () => {
                         </p>
                         {caseStudyLinks[item.title] && (
                           <div className="pb-5">
-                            <Link to={caseStudyLinks[item.title]} className="btn-outline-gold text-sm inline-flex items-center gap-2">
+                            <BrandButton type="link" to={caseStudyLinks[item.title]} variant="secondary" showStar className="text-sm">
                               {t("services.cta", "Latest case study")}
-                              <StarIcon />
-                            </Link>
+                            </BrandButton>
                           </div>
                         )}
                       </div>

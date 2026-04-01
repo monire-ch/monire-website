@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import ContactModal from '@/components/ContactModal';
-import StarIcon from '@/components/StarIcon';
+import BrandButton from '@/components/BrandButton';
 
 const steps = [
   {
@@ -91,9 +91,9 @@ const Apply = () => {
 
           <ScrollReveal>
             <div className="flex items-center gap-4">
-              <button onClick={() => setContactOpen(true)} className="btn-outline-gold text-sm inline-flex items-center gap-2">
+              <BrandButton variant="secondary" className="text-sm" onClick={() => setContactOpen(true)}>
                 Apply now
-              </button>
+              </BrandButton>
             </div>
           </ScrollReveal>
         </div>
