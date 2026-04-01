@@ -2,7 +2,7 @@ import { FC, FormEvent, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import StarIcon from "./StarIcon";
+import BrandButton from "./BrandButton";
 
 const SERVICE_OPTIONS = [
   "Web Design",
@@ -240,14 +240,13 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
         <h3 className="font-body text-xl text-off-white mb-2">Thank you!</h3>
         <p className="text-off-white/60 text-sm font-body mb-8">We'll get back to you shortly.</p>
         {isModal ? (
-          <button onClick={onClose} className="btn-outline-gold text-sm inline-flex items-center gap-2">
-            Close <StarIcon />
-          </button>
+          <BrandButton variant="secondary" showStar className="text-sm" onClick={onClose}>
+            Close
+          </BrandButton>
         ) : (
-          <Link to="/" className="btn-outline-gold text-sm inline-flex items-center gap-2">
+          <BrandButton type="link" to="/" variant="secondary" showStar className="text-sm">
             Back to Home
-            <StarIcon />
-          </Link>
+          </BrandButton>
         )}
       </div>
     );
@@ -448,13 +447,14 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
         </div>
       )}
 
-      <button
+      <BrandButton
         type="submit"
-        className={`btn-gold text-sm inline-flex items-center justify-center gap-2 ${isModal ? "" : "w-full md:w-auto"}`}
+        variant="primary"
+        showStar
+        className={`text-sm ${isModal ? "" : "w-full md:w-auto"}`}
       >
         {t("contact.send")}
-        <StarIcon />
-      </button>
+      </BrandButton>
     </form>
   );
 };

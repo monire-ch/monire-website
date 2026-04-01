@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useFontsLoaded } from '@/hooks/useFontsLoaded';
 import goldFill from '@/assets/gold-fill.webp';
-import StarIcon from './StarIcon';
+import BrandButton from './BrandButton';
 
 interface HeroSectionProps {
   onCtaClick?: () => void;
@@ -76,14 +76,15 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''}`}
           style={{ transitionDelay: '420ms' }}
         >
-          <button
+          <BrandButton
             type="button"
             onClick={() => navigate('/contact')}
-            className="btn-teal !bg-dark-teal-surface hover:!bg-dark-teal-surface-lighter inline-flex items-center gap-2 text-base"
+            variant="hero"
+            showStar
+            className="text-base"
           >
             {t('hero.cta')}
-            <StarIcon />
-          </button>
+          </BrandButton>
         </div>
       </div>
 
