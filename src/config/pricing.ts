@@ -76,3 +76,10 @@ export const detectCurrencyFromCountry = (countryCodeRaw: string | undefined): D
   if (countryCode && EUROZONE_COUNTRY_CODES.has(countryCode)) return 'EUR';
   return 'USD';
 };
+
+export const detectCurrencyFromTimezone = (timezoneRaw: string | undefined): DisplayCurrency => {
+  const timezone = timezoneRaw ?? '';
+  if (timezone === 'Europe/Zurich') return 'CHF';
+  if (timezone.startsWith('Europe/')) return 'EUR';
+  return 'USD';
+};

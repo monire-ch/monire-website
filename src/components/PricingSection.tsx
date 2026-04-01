@@ -7,6 +7,7 @@ import StarIcon from './StarIcon';
 import {
   CURRENCY_STORAGE_KEY,
   detectCurrencyFromCountry,
+  detectCurrencyFromTimezone,
   getWebDesignDisplayPrice,
   isDisplayCurrency,
   SUPPORTED_CURRENCIES,
@@ -23,7 +24,7 @@ const detectCurrencyFromLocation = async (): Promise<DisplayCurrency> => {
     const data = (await response.json()) as { country_code?: string };
     return detectCurrencyFromCountry(data.country_code);
   } catch {
-    return 'USD';
+    return detectCurrencyFromTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone);
   }
 };
 
