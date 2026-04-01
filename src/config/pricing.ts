@@ -13,7 +13,6 @@ type WebDesignPriceMap = Record<WebDesignPlanKey, Record<DisplayCurrency, PriceV
 
 export const WEB_DESIGN_PLAN_ORDER: WebDesignPlanKey[] = ['starter', 'advanced', 'premium'];
 
-// Manually curated, rounded values by currency (not live exchange-rate conversion).
 export const WEB_DESIGN_PRICES: WebDesignPriceMap = {
   starter: {
     CHF: { type: 'from', amount: 3500 },
@@ -31,11 +30,6 @@ export const WEB_DESIGN_PRICES: WebDesignPriceMap = {
     USD: { type: 'from', amount: 11000 },
   },
 };
-
-const EUROZONE_COUNTRY_CODES = new Set([
-  'AT', 'BE', 'HR', 'CY', 'EE', 'FI', 'FR', 'DE', 'GR', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PT', 'SK', 'SI',
-  'ES', 'AD', 'MC', 'SM', 'VA', 'XK',
-]);
 
 export const isDisplayCurrency = (value: string | null): value is DisplayCurrency =>
   value !== null && SUPPORTED_CURRENCIES.includes(value as DisplayCurrency);
@@ -68,18 +62,4 @@ export const getWebDesignDisplayPrice = (
   }
 
   return { prefix: '', amount: `${formatAmount(price.min, currency)} - ${formatAmount(price.max, currency)}` };
-};
-
-export const detectCurrencyFromCountry = (countryCodeRaw: string | undefined): DisplayCurrency => {
-  const countryCode = countryCodeRaw?.toUpperCase();
-  if (countryCode === 'CH') return 'CHF';
-  if (countryCode && EUROZONE_COUNTRY_CODES.has(countryCode)) return 'EUR';
-  return 'USD';
-};
-
-export const detectCurrencyFromTimezone = (timezoneRaw: string | undefined): DisplayCurrency => {
-  const timezone = timezoneRaw ?? '';
-  if (timezone === 'Europe/Zurich') return 'CHF';
-  if (timezone.startsWith('Europe/')) return 'EUR';
-  return 'USD';
 };

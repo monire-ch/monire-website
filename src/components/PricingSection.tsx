@@ -6,8 +6,6 @@ import ContactModal from './ContactModal';
 import StarIcon from './StarIcon';
 import {
   CURRENCY_STORAGE_KEY,
-  detectCurrencyFromCountry,
-  detectCurrencyFromTimezone,
   getWebDesignDisplayPrice,
   isDisplayCurrency,
   SUPPORTED_CURRENCIES,
@@ -16,17 +14,6 @@ import {
 } from '@/config/pricing';
 
 const tabKeys = ['webDesign', 'automation'] as const;
-const detectCurrencyFromLocation = async (): Promise<DisplayCurrency> => {
-  try {
-    const response = await fetch('https://ipapi.co/json/');
-    if (!response.ok) throw new Error('Geo lookup failed');
-
-    const data = (await response.json()) as { country_code?: string };
-    return detectCurrencyFromCountry(data.country_code);
-  } catch {
-    return detectCurrencyFromTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone);
-  }
-};
 
 const PricingSection = () => {
   const { t } = useTranslation();
@@ -42,26 +29,10 @@ const PricingSection = () => {
   const plansWithFeatured = plans.map((p, i) => ({ ...p, featured: i === 1 }));
 
   useEffect(() => {
-    let isCancelled = false;
-
     const savedCurrency = window.localStorage.getItem(CURRENCY_STORAGE_KEY);
     if (isDisplayCurrency(savedCurrency)) {
       setCurrency(savedCurrency);
-      return () => {
-        isCancelled = true;
-      };
     }
-
-    const setAutoCurrency = async () => {
-      const detectedCurrency = await detectCurrencyFromLocation();
-      if (!isCancelled) setCurrency(detectedCurrency);
-    };
-
-    void setAutoCurrency();
-
-    return () => {
-      isCancelled = true;
-    };
   }, []);
 
   const handleCurrencyChange = (nextCurrency: DisplayCurrency) => {
@@ -99,35 +70,37 @@ const PricingSection = () => {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal className="flex justify-center mb-8">
-          <div
-            className="inline-flex items-center rounded-full border border-off-white/10 p-1 gap-0.5"
-            aria-label={t('pricing.currencyLabel', { defaultValue: 'Currency' })}
-            role="group"
-          >
-            {SUPPORTED_CURRENCIES.map((currencyKey) => (
-              <button
-                key={currencyKey}
-                onClick={() => handleCurrencyChange(currencyKey)}
-                className={`px-2.5 sm:px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-body transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/50 ${
-                  currency === currencyKey
-                    ? 'bg-off-white/10 text-off-white'
-                    : 'text-off-white/45 hover:text-off-white/70'
-                }`}
-                aria-pressed={currency === currencyKey}
-              >
-                {currencyKey}
-              </button>
-            ))}
-          </div>
-        </ScrollReveal>
-
         {activeTab === 'webDesign' && (
-          <ScrollReveal className="text-center mb-12">
-            <p className="text-off-white/85 text-xs sm:text-sm font-body tracking-[0.04em]">
-              Each plan includes everything from the previous tier.
-            </p>
-          </ScrollReveal>
+          <>
+            <ScrollReveal className="text-center mb-6">
+              <p className="text-off-white/85 text-xs sm:text-sm font-body tracking-[0.04em]">
+                Each plan includes everything from the previous tier.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal className="flex justify-center mb-10">
+              <div
+                className="inline-flex items-center rounded-full border border-off-white/10 p-1 gap-0.5"
+                aria-label={t('pricing.currencyLabel', { defaultValue: 'Currency' })}
+                role="group"
+              >
+                {SUPPORTED_CURRENCIES.map((currencyKey) => (
+                  <button
+                    key={currencyKey}
+                    onClick={() => handleCurrencyChange(currencyKey)}
+                    className={`px-2.5 sm:px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-body transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/50 ${
+                      currency === currencyKey
+                        ? 'bg-off-white/10 text-off-white'
+                        : 'text-off-white/45 hover:text-off-white/70'
+                    }`}
+                    aria-pressed={currency === currencyKey}
+                  >
+                    {currencyKey}
+                  </button>
+                ))}
+              </div>
+            </ScrollReveal>
+          </>
         )}
 
         {activeTab === 'automation' ? (
