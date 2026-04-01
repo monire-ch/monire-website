@@ -1,18 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import ContactModal from './ContactModal';
 import StarIcon from './StarIcon';
-
+import {
+  CURRENCY_STORAGE_KEY,
+  detectCurrencyFromCountry,
+  getWebDesignDisplayPrice,
+  isDisplayCurrency,
+  SUPPORTED_CURRENCIES,
+  type DisplayCurrency,
+  WEB_DESIGN_PLAN_ORDER,
+} from '@/config/pricing';
 
 const tabKeys = ['webDesign', 'automation'] as const;
+const detectCurrencyFromLocation = async (): Promise<DisplayCurrency> => {
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    if (!response.ok) throw new Error('Geo lookup failed');
+
+    const data = (await response.json()) as { country_code?: string };
+    return detectCurrencyFromCountry(data.country_code);
+  } catch {
+    return 'USD';
+  }
+};
 
 const PricingSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<typeof tabKeys[number]>('webDesign');
   const [contactOpen, setContactOpen] = useState(false);
+  const [currency, setCurrency] = useState<DisplayCurrency>('CHF');
 
   const plans = t(`pricing.plans.${activeTab}`, { returnObjects: true }) as Array<{
     name: string; price: string; desc: string; features: string[];
@@ -20,11 +40,32 @@ const PricingSection = () => {
 
   const plansWithFeatured = plans.map((p, i) => ({ ...p, featured: i === 1 }));
 
-  // Split price into "from" prefix and amount
-  const splitPrice = (price: string) => {
-    const match = price.match(/^(from\s*)(.*)/i);
-    if (match) return { prefix: match[1], amount: match[2] };
-    return { prefix: '', amount: price };
+  useEffect(() => {
+    let isCancelled = false;
+
+    const savedCurrency = window.localStorage.getItem(CURRENCY_STORAGE_KEY);
+    if (isDisplayCurrency(savedCurrency)) {
+      setCurrency(savedCurrency);
+      return () => {
+        isCancelled = true;
+      };
+    }
+
+    const setAutoCurrency = async () => {
+      const detectedCurrency = await detectCurrencyFromLocation();
+      if (!isCancelled) setCurrency(detectedCurrency);
+    };
+
+    void setAutoCurrency();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
+
+  const handleCurrencyChange = (nextCurrency: DisplayCurrency) => {
+    setCurrency(nextCurrency);
+    window.localStorage.setItem(CURRENCY_STORAGE_KEY, nextCurrency);
   };
 
   return (
@@ -40,7 +81,7 @@ const PricingSection = () => {
         </ScrollReveal>
 
         <ScrollReveal className="flex justify-center mb-10">
-          <div className="inline-flex rounded-full border border-off-white/20 p-1.5 gap-1">
+          <div className="inline-flex rounded-full border border-off-white/20 p-1.5 gap-1 max-w-full overflow-x-auto">
             {tabKeys.map((key) => (
               <button
                 key={key}
@@ -52,6 +93,29 @@ const PricingSection = () => {
                 }`}
               >
                 {t(`pricing.tabs.${key}`)}
+              </button>
+            ))}
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal className="flex justify-center mb-8">
+          <div
+            className="inline-flex items-center rounded-full border border-off-white/10 p-1 gap-0.5"
+            aria-label={t('pricing.currencyLabel', { defaultValue: 'Currency' })}
+            role="group"
+          >
+            {SUPPORTED_CURRENCIES.map((currencyKey) => (
+              <button
+                key={currencyKey}
+                onClick={() => handleCurrencyChange(currencyKey)}
+                className={`px-2.5 sm:px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-body transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/50 ${
+                  currency === currencyKey
+                    ? 'bg-off-white/10 text-off-white'
+                    : 'text-off-white/45 hover:text-off-white/70'
+                }`}
+                aria-pressed={currency === currencyKey}
+              >
+                {currencyKey}
               </button>
             ))}
           </div>
@@ -88,7 +152,10 @@ const PricingSection = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
             {plansWithFeatured.map((plan, i) => {
-              const { prefix, amount } = splitPrice(plan.price);
+              const planKey = WEB_DESIGN_PLAN_ORDER[i];
+              const { prefix, amount: displayAmount } = planKey
+                ? getWebDesignDisplayPrice(planKey, currency)
+                : { prefix: '', amount: plan.price };
               return (
                 <ScrollReveal key={plan.name} delay={i * 100}>
                   <div className={`relative ${plan.featured ? 'md:-translate-y-[7px]' : ''}`}>
@@ -111,14 +178,18 @@ const PricingSection = () => {
                       }`}>
                         {plan.name}
                       </p>
-                      <div className="mb-3">
-                        <span className={`text-sm font-body ${plan.featured ? 'text-deep-ink/60' : 'text-off-white'}`}>
+                      <div className="mb-3 whitespace-nowrap md:whitespace-normal lg:whitespace-nowrap">
+                        <span
+                          className={`text-sm font-body inline mr-1 md:block md:mr-0 md:mb-0.5 lg:inline lg:mr-1 lg:mb-0 ${
+                            plan.featured ? 'text-deep-ink/60' : 'text-off-white'
+                          }`}
+                        >
                           {prefix}
                         </span>
                         <span className={`font-display text-3xl md:text-4xl ${
                           plan.featured ? 'text-gold' : 'text-gold-text'
                         }`}>
-                          {amount}
+                          {displayAmount}
                         </span>
                       </div>
                       <p className={`text-base font-body mb-6 leading-relaxed ${
