@@ -52,16 +52,21 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         </div>
       </div>
       {project.websiteUrl ? (
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-start py-4 gap-4">
           <span className="text-sm font-body text-main-teal">Website</span>
-          <a
-            href={project.websiteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline"
-          >
-            {project.websiteLabel ?? 'Visit Website'}
-          </a>
+          <div className="text-right max-w-[200px] md:max-w-[280px]">
+            <a
+              href={project.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
+            >
+              {project.websiteLabel ?? 'Visit Website'}
+            </a>
+            <p className="text-xs font-body text-foreground/60 mt-1">
+              Live website may differ from the original version as the site is managed by the client.
+            </p>
+          </div>
         </div>
       ) : null}
     </div>
@@ -75,7 +80,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           <ScrollReveal>
             <a
               href="/#portfolio"
-              className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline mb-8"
             >
               <ArrowLeft size={16} />
               {t('caseStudy.back')}
