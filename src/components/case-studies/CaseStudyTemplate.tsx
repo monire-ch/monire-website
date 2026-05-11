@@ -59,7 +59,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               href={project.websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline"
+              className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
             >
               {project.websiteLabel ?? 'Visit Website'}
             </a>
@@ -80,7 +80,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           <ScrollReveal>
             <a
               href="/#portfolio"
-              className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline mb-8"
             >
               <ArrowLeft size={16} />
               {t('caseStudy.back')}
