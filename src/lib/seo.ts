@@ -13,7 +13,7 @@ const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
     title: 'Moniré | Web Design, Web Development & AI Automations in Zurich, Switzerland',
     description:
       'Moniré is a digital studio offering web design, web development, and AI automations in Zurich and across Switzerland.',
-    keywords: ['Moniré', 'web design Zurich', 'web development Zurich', 'AI automations Switzerland'],
+    keywords: ['Moniré', 'web design Zurich', 'web development Zurich', 'website design Switzerland', 'AI automation Switzerland', 'workflow automation Zurich', 'Webflow development Zurich', 'small business web design Switzerland'],
   },
   '/contact': {
     title: 'Contact Moniré | Web Design, Web Development & AI Automations',
@@ -24,7 +24,7 @@ const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
     title: 'Insights on Web Design, Automation & Digital Strategy | Moniré',
     description:
       'Practical articles from Moniré on web design, web development, SEO, AI automation, and digital decisions for small and mid-sized businesses.',
-    keywords: ['Moniré insights', 'business website advice', 'AI automation insights'],
+    keywords: ['web design advice', 'website strategy', 'small business website advice', 'AI automation for small businesses', 'web design Switzerland', 'workflow automation Switzerland', 'Webflow Switzerland'],
   },
   '/privacy': {
     title: 'Privacy Policy | Moniré',
