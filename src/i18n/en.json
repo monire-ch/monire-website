@@ -295,8 +295,9 @@
   },
   "cta": {
     "eyebrow": "BOOKING NEW PROJECTS",
-    "title": "Interested In Working With Us?",
-    "button": "Get in touch"
+    "title": "Ready to improve your website or automate the work behind it?",
+    "subtext": "We work with a limited number of clients at a time, so each project gets the attention it deserves.",
+    "button": "Book a free consultation"
   },
   "contact": {
     "title": "Get In Touch",
