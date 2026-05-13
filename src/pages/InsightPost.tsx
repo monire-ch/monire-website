@@ -129,9 +129,9 @@ const InsightPost = () => {
           <div className="mt-12 pt-6 border-t border-border">
             <Link
               to={INSIGHTS_ROUTE_BASE}
-              className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
+              className="text-sm font-body font-medium text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
             >
-              Back to all articles
+              ← Back to all articles
             </Link>
           </div>
         </article>
