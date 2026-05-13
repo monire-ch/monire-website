@@ -156,12 +156,12 @@ const content = (
         <li>Can new clients find you through search or AI tools?</li>
         <li>Does your contact form actually deliver enquiries?</li>
       </ul>
-      <p>If you answered no to some of these, your website is likely costing you clients.</p>
+      <p>If you answered no to several of these, your website may be quietly costing you enquiries.</p>
     </section>
 
     <section aria-labelledby="where-next">
       <h2 id="where-next">Where to go from here</h2>
-      <p>You don&apos;t have to fix everything at once. Start with whichever one is most likely to be costing you enquiries right now.</p>
+      <p>You don&apos;t have to fix everything at once. Start with the issue most likely to be costing you clients right now.</p>
       <p>
         <a href="/" className="text-main-teal underline hover:no-underline">At Moniré</a>, we help small and mid-sized businesses identify what is working, what is not, and what would make
         the biggest difference first.
@@ -175,10 +175,10 @@ export const whyYourWebsiteMightBeLosingYouClientsPost: InsightPost = {
   locale: "en",
   title: "Why your website might be losing you clients",
   description:
-    "Seven practical signs your website may be costing you enquiries, plus a quick self-check to prioritize what to fix first.",
+    "Seven practical signs your website may be costing you clients, plus a quick self-check to prioritise what to fix first.",
   seoTitle: "Why your website might be losing you clients | Moniré Insights",
   seoDescription:
-    "Seven practical signs your website may be costing you enquiries, plus a self-check to prioritize what to fix first.",
+    "Seven practical signs your website may be costing you clients, plus a self-check to prioritise what to fix first.",
   keywords: ["website losing clients", "improve website conversion", "small business website mistakes"],
   quickAnswer:
     "If visitors cannot quickly understand what you do, trust your offer, and take a clear next step, your website is likely costing you leads.",
@@ -189,7 +189,7 @@ export const whyYourWebsiteMightBeLosingYouClientsPost: InsightPost = {
     href: "/contact",
   },
   publishedAt: "2026-05-13",
-  readTimeMinutes: 8,
+  readTimeMinutes: 5,
   relatedSlugs: ["website-builders-vs-custom-development", "what-ai-automation-actually-means-for-a-small-business"],
   content,
 };

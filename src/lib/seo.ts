@@ -21,9 +21,9 @@ const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
       'Contact Moniré about web design, web development, and AI automations in Zurich and across Switzerland.',
   },
   '/insights': {
-    title: 'Insights | Moniré',
+    title: 'Insights on Web Design, Automation & Digital Strategy | Moniré',
     description:
-      'Moniré insights with practical guidance on web design, web development, SEO, and AI-enabled growth.',
+      'Practical articles from Moniré on web design, web development, SEO, AI automation, and digital decisions for small and mid-sized businesses.',
     keywords: ['Moniré insights', 'business website advice', 'AI automation insights'],
   },
   '/privacy': {

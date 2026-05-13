@@ -21,7 +21,7 @@ const Insights = () => {
             Insights for better websites and smarter workflows
           </h1>
           <p className="font-body text-base md:text-lg text-foreground/75 mb-12">
-            Practical guidance on web design, automation, and digital decisions that help your business grow.
+            Practical guidance on web design, automation, and digital decisions that help your business work better online.
           </p>
 
           <ul className="grid grid-cols-1 gap-5">

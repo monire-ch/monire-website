@@ -101,8 +101,7 @@ const content = (
       </h2>
       <p>It doesn&apos;t have to be.</p>
       <p>
-        We build workflows using tools that connect to the systems businesses already use, including email,
-        spreadsheets, cloud storage, CRMs, and membership platforms.
+        We mainly build workflows with n8n, which connects to the tools your business already uses, including email, spreadsheets, cloud storage, and CRMs.
       </p>
       <p>There&apos;s no need to replace your existing setup or learn an entirely new way of working.</p>
       <p>The right automation fits around how you already work, not the other way around.</p>
@@ -146,7 +145,7 @@ export const whatAiAutomationActuallyMeansForASmallBusinessPost: InsightPost = {
     href: "/contact",
   },
   publishedAt: "2026-05-13",
-  readTimeMinutes: 7,
+  readTimeMinutes: 4,
   relatedSlugs: ["website-builders-vs-custom-development", "why-your-website-might-be-losing-you-clients"],
   content,
 };

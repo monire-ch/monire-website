@@ -98,6 +98,10 @@ const content = (
         development often becomes the better option.
       </p>
       <p>
+        For those more complex projects, we typically build with modern frameworks like React or Next.js to support
+        custom logic, performance, and long-term scalability.
+      </p>
+      <p>
         The tradeoff is time, cost, and ongoing maintenance responsibility. Not every business needs a fully custom
         build, even if it sounds impressive. In fact, many businesses are better served by a simpler system their team
         can realistically manage long-term.
@@ -158,7 +162,7 @@ export const websiteBuildersVsCustomDevelopmentPost: InsightPost = {
     href: "/contact",
   },
   publishedAt: "2026-05-13",
-  readTimeMinutes: 8,
+  readTimeMinutes: 4,
   relatedSlugs: ["why-your-website-might-be-losing-you-clients", "what-ai-automation-actually-means-for-a-small-business"],
   content,
 };
