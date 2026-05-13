@@ -55,12 +55,12 @@
       {
         "badge": "Design",
         "title": "Web Design",
-        "desc": "We design websites that feel intuitive and simple to navigate. Everything has a purpose, nothing gets added just because it \"looks cool.\" We want your visitors to feel at ease — and to find what they need quickly."
+        "desc": "We design websites that feel intuitive and simple to navigate. Everything has a purpose, nothing gets added just because it looks cool. The goal is a site that helps visitors understand what you offer and take the next step with confidence."
       },
       {
         "badge": "Development",
         "title": "Web Development",
-        "desc": "Most of the websites we build are made in Webflow, so you can easily update and maintain them yourself. For more custom projects, we choose the right stack together—React, Next.js, or Astro—along with reliable infrastructure for hosting and deployment. The goal is always the same: it should just work."
+        "desc": "Every website we build is reliable, fast, and easy to manage after launch. Most of our sites are built in Webflow, so you can easily update and maintain them yourself. For more custom projects, we work together to choose the right stack, including React, Next.js, or Astro, based on what fits the project best. The goal is always the same: it should just work."
       },
       {
         "badge": "Migration",
@@ -70,12 +70,12 @@
       {
         "badge": "SEO",
         "title": "SEO & Analytics (Essentials)",
-        "desc": "We make your site easy to understand — for both search engines and AI search tools. Clear structure, meaningful content, and simple analytics so you always know what's working."
+        "desc": "We make your site easy to understand for both search engines and AI search tools. Clear structure, meaningful content, and simple analytics so you always know what's working."
       },
       {
         "badge": "Automation",
         "title": "AI Automations & Workflows",
-        "desc": "Simple, practical automations that handle repetitive tasks and free up your time. We build small, reliable workflows using tools like n8n to sort documents, process information, and organize data, so you can focus on what matters."
+        "desc": "We automate repetitive admin tasks and connect the tools your business already uses, from receipts and onboarding to file organisation and CRM updates. The goal is simple: fewer manual steps, fewer errors, and more time for the work that needs human judgement."
       }
     ]
   },
@@ -275,6 +275,10 @@
           {
             "q": "What is AI automation and how can it help my business?",
             "a": "AI automation uses artificial intelligence to handle repetitive tasks, analyze data, and streamline operations. Examples include customer support flows, data entry, email handling, and content workflows — helping you save time and reduce errors.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Read what this looks like in practice →</a>"
+          },
+          {
+            "q": "What tools do you use to build automations?",
+            "a": "We mainly build with n8n, which connects to the tools most businesses already use, including email, spreadsheets, cloud storage, and CRMs. For some projects we use other tools depending on what fits best."
           },
           {
             "q": "Do I need technical knowledge to use AI automation tools?",

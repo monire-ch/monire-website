@@ -174,6 +174,11 @@ export const whatAiAutomationActuallyMeansForASmallBusinessPost: InsightPost = {
       answer:
         "Moniré is based in Zurich, Switzerland, and helps small and mid-sized businesses design practical AI automation workflows. We work with clients across Switzerland and internationally.",
     },
+    {
+      question: "What tools do you use to build automations?",
+      answer:
+        "We mainly build with n8n, which connects to the tools most businesses already use, including email, spreadsheets, cloud storage, and CRMs. For some projects we use other tools depending on what fits best.",
+    },
   ],
   content,
 };
