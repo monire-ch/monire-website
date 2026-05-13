@@ -179,8 +179,8 @@ export const whyYourWebsiteMightBeLosingYouClientsPost: InsightPost = {
     "Seven practical signs your website may be costing you clients, plus a quick self-check to prioritise what to fix first.",
   seoTitle: "Why your website might be losing you clients | Moniré Insights",
   seoDescription:
-    "Seven practical signs your website may be costing you clients, plus a self-check to prioritise what to fix first.",
-  keywords: ["website losing clients", "improve website conversion", "small business website mistakes"],
+    "Seven practical signs your website may be costing you clients, plus a quick self-check to prioritise what to fix first.",
+  keywords: ["website losing clients", "improve website conversion", "small business website mistakes", "website not generating leads"],
   quickAnswer:
     "If visitors cannot quickly understand what you do, trust your offer, and take a clear next step, your website is likely costing you leads.",
   primaryCta: {

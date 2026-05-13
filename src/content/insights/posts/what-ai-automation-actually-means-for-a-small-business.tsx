@@ -136,7 +136,7 @@ export const whatAiAutomationActuallyMeansForASmallBusinessPost: InsightPost = {
   seoTitle: "What AI automation actually means for a small business | Moniré Insights",
   seoDescription:
     "A practical guide to AI automation for small businesses: where it helps most, real examples, and where to start.",
-  keywords: ["AI automation for small business", "small business workflow automation", "automate admin tasks"],
+  keywords: ["AI automation for small businesses", "small business workflow automation", "automate admin tasks"],
   quickAnswer:
     "For small businesses, AI automation usually means removing repetitive admin steps while keeping people in control of decisions.",
   primaryCta: {

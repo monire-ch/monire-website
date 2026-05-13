@@ -99,12 +99,10 @@
     "teamTitle": "The Faces Behind The Work",
     "team": [
       {
-        "name": "Monika Märki",
-        "role": "Co-Founder & Web Designer"
+        "name": "Monika Märki"
       },
       {
-        "name": "Nikky Pyra",
-        "role": "Co-Founder & Automation Specialist"
+        "name": "Nikky Pyra"
       }
     ]
   },
