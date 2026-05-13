@@ -50,6 +50,20 @@ const InsightPost = () => {
       url: SITE_URL,
     },
   };
+  const faqSchema = post.faqItems?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
 
   return (
     <>
@@ -124,6 +138,7 @@ const InsightPost = () => {
       </main>
       <Footer hideWave />
       <JsonLd data={articleSchema} />
+      {faqSchema ? <JsonLd data={faqSchema} /> : null}
     </>
   );
 };

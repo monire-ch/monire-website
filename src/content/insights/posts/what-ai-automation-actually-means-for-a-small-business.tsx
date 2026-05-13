@@ -123,6 +123,7 @@ const content = (
         Often, the best automation opportunities are not huge systems. They are small workflows that remove a few repetitive steps from your week.
       </p>
     </section>
+
   </>
 );
 
@@ -147,5 +148,32 @@ export const whatAiAutomationActuallyMeansForASmallBusinessPost: InsightPost = {
   publishedAt: "2026-05-13",
   readTimeMinutes: 4,
   relatedSlugs: ["website-builders-vs-custom-development", "why-your-website-might-be-losing-you-clients"],
+  faqItems: [
+    {
+      question: "What is AI automation for small businesses?",
+      answer:
+        "It is the use of practical workflows to automate repetitive tasks while keeping people in control of decisions and approvals.",
+    },
+    {
+      question: "What tasks can small businesses automate first?",
+      answer:
+        "Common first wins include onboarding emails, document routing, CRM updates, recurring follow-ups, and admin handovers between tools.",
+    },
+    {
+      question: "Do businesses need to replace their existing tools to automate workflows?",
+      answer:
+        "Usually not. We connect automation to the systems you already use so improvements fit your current workflow.",
+    },
+    {
+      question: "How much does small business workflow automation usually cost?",
+      answer:
+        "Most small business automations start with one focused workflow rather than a full system. Costs vary by complexity, and we scope each project around practical impact rather than selling more than you need.",
+    },
+    {
+      question: "Where can I get AI automation help in Switzerland?",
+      answer:
+        "Moniré is based in Zurich, Switzerland, and helps small and mid-sized businesses design practical AI automation workflows. We work with clients across Switzerland and internationally.",
+    },
+  ],
   content,
 };

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE } from "@/config/insightsPosts";
+import { SITE_URL } from "@/lib/seo";
 
 const formatDate = (value: string) =>
   new Intl.DateTimeFormat("en-CH", {
@@ -11,6 +13,23 @@ const formatDate = (value: string) =>
   }).format(new Date(`${value}T00:00:00`));
 
 const Insights = () => {
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Moniré Insights",
+    url: `${SITE_URL}${INSIGHTS_ROUTE_BASE}`,
+    about: "Practical guidance on web design, automation, and digital decisions that help your business grow.",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: INSIGHTS_POSTS.map((post, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${SITE_URL}${INSIGHTS_ROUTE_BASE}/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  };
+
   return (
     <>
       <Navbar />
@@ -21,7 +40,7 @@ const Insights = () => {
             Insights for better websites and smarter workflows
           </h1>
           <p className="font-body text-base md:text-lg text-foreground/75 mb-12">
-            Practical guidance on web design, automation, and digital decisions that help your business work better online.
+            Practical guidance on web design, automation, and digital decisions that help your business grow.
           </p>
 
           <ul className="grid grid-cols-1 gap-5">
@@ -47,6 +66,7 @@ const Insights = () => {
         </section>
       </main>
       <Footer hideWave />
+      <JsonLd data={collectionSchema} />
     </>
   );
 };

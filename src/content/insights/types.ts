@@ -19,5 +19,9 @@ export type InsightPost = {
   updatedAt?: string;
   readTimeMinutes: number;
   relatedSlugs: string[];
+  faqItems?: Array<{
+    question: string;
+    answer: string;
+  }>;
   content: ReactNode;
 };
