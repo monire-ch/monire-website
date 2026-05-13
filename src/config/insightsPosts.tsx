@@ -89,6 +89,9 @@ const articleOneContent = (
         Not sure whether your site gives visitors a clear next step? It&apos;s one of the first things we look at when
         we work with a new client.
       </p>
+      <aside className="insight-pullquote" aria-label="Key takeaway">
+        <p>One clear next step on every page beats five competing choices.</p>
+      </aside>
     </section>
 
     <section aria-labelledby="mobile-breaks">
@@ -117,7 +120,15 @@ const articleOneContent = (
       </p>
       <p>
         If your site feels slow, or if visitors seem to drop off before engaging, it is worth looking into. Small
-        technical improvements can often make a significant difference.
+        technical improvements can often make a significant difference. But if your site is slow because of heavy
+        templates, unnecessary plugins, or a setup that is difficult to maintain, it may be worth{" "}
+        <a
+          href="/insights/website-builders-vs-custom-development"
+          className="text-main-teal underline hover:no-underline"
+        >
+          reconsidering the platform behind it
+        </a>
+        .
       </p>
     </section>
 
@@ -147,10 +158,10 @@ const articleOneContent = (
         messages that go straight to spam. A potential client fills in the form, waits for a response, hears nothing,
         and moves on.
       </p>
-      <p>
-        If your contact form is your main way of getting enquiries, test it. Fill it in yourself and make sure the
-        message actually arrives where it&apos;s supposed to.
-      </p>
+      <div className="insight-stat-break" role="note" aria-label="Practical check">
+        <strong>Simple test: submit your own form today.</strong>
+        <span>If you don&apos;t receive the enquiry, your visitors probably don&apos;t either.</span>
+      </div>
     </section>
 
     <section aria-labelledby="quick-self-check">
@@ -158,7 +169,7 @@ const articleOneContent = (
       <p>
         If you are not sure whether your website is helping or hurting your business, start with these questions:
       </p>
-      <ul>
+      <ul className="insight-checklist">
         <li>Can a stranger understand what you do within five seconds?</li>
         <li>Is your main call to action easy to find?</li>
         <li>Does your homepage speak more about your client&apos;s needs than your company?</li>
@@ -174,7 +185,7 @@ const articleOneContent = (
       <h2 id="where-next">Where to go from here</h2>
       <p>You don&apos;t have to fix everything at once. Start with whichever one is most likely to be costing you enquiries right now.</p>
       <p>
-        At Moniré, we help small and mid-sized businesses identify what is working, what is not, and what would make
+        <a href="/" className="text-main-teal underline hover:no-underline">At Moniré</a>, we help small and mid-sized businesses identify what is working, what is not, and what would make
         the biggest difference first.
       </p>
     </section>
@@ -213,7 +224,7 @@ const articleTwoContent = (
       <h2 id="in-practice">What it looks like in practice</h2>
       <p>Here are three examples from work we&apos;ve done with real clients.</p>
 
-      <h3>Expense receipts</h3>
+      <h3>1. Expense receipts</h3>
       <p>
         One client was spending part of every month filing expense receipts by hand, chasing emails, renaming files,
         entering numbers into spreadsheets. It was slow, error-prone, and nobody enjoyed doing it.
@@ -223,18 +234,20 @@ const articleTwoContent = (
         pulled out. The team reviews and confirms. That&apos;s it.
       </p>
       <p>
-        The result was around 70% less time spent on that task every month, with fewer errors and a consistent archive
+        The result was a faster, more reliable process with fewer errors and a consistent archive
         that&apos;s always ready for review.
       </p>
+      <div className="insight-stat-break" role="note" aria-label="Result highlight">
+        <strong>~70% less time on receipt admin</strong>
+        <span>A small workflow change with measurable operational impact.</span>
+      </div>
       <p>
-        You can read the full case study{" "}
         <a href="/case-studies/expense-receipt-automation" className="text-main-teal underline hover:no-underline">
-          here
+          Read the Expense Receipts case study
         </a>
-        .
       </p>
 
-      <h3>Client onboarding</h3>
+      <h3>2. Client onboarding</h3>
       <p>
         When a client says yes to a project, there&apos;s a predictable set of things that need to happen. A contract
         needs to go out, an onboarding email needs to be sent, folders need to be created, tasks need to be set up
@@ -246,7 +259,7 @@ const articleTwoContent = (
         time, without anyone having to remember.
       </p>
 
-      <h3>Community membership</h3>
+      <h3>3. Community membership</h3>
       <p>
         When someone applies to join a private community and gets accepted, their account needs to be created across
         multiple platforms, and those platforms don&apos;t naturally talk to each other.
@@ -268,6 +281,9 @@ const articleTwoContent = (
       <p>
         Not creative decisions. Not judgment calls. Just the repetitive, predictable tasks that quietly eat up time.
       </p>
+      <aside className="insight-pullquote" aria-label="Automation principle">
+        <p>Automate the repetition, keep human judgment where it matters.</p>
+      </aside>
     </section>
 
     <section aria-labelledby="setup-complexity">
@@ -340,7 +356,11 @@ const articleThreeContent = (
     <section aria-labelledby="why-webflow">
       <h2 id="why-webflow">Why we often choose Webflow</h2>
       <p>
-        A lot of the websites we build are marketing sites, service-based business sites, or CMS-driven sites that
+        A lot of the{" "}
+        <a href="/#portfolio" className="text-main-teal underline hover:no-underline">
+          websites we build
+        </a>{" "}
+        are marketing sites, service-based business sites, or CMS-driven sites that
         need to look great, perform well, and stay that way without ongoing technical work. That&apos;s where Webflow
         tends to stand out.
       </p>
@@ -366,6 +386,9 @@ const articleThreeContent = (
         We&apos;d suggest Webflow when design quality matters, performance and SEO are priorities, and the business
         wants a site that runs reliably without needing constant attention.
       </p>
+      <aside className="insight-pullquote" aria-label="Platform fit summary">
+        <p>For most small businesses, the right platform is one that looks great, runs reliably, and does not need constant technical maintenance.</p>
+      </aside>
     </section>
 
     <section aria-labelledby="wordpress-note">
@@ -423,9 +446,11 @@ const articleThreeContent = (
         A lot of platform decisions get framed as technical debates, but for most businesses the real question is much
         simpler:
       </p>
-      <p>Will this still work well for the team two to three years from now?</p>
-      <p>Will people feel comfortable updating it?</p>
-      <p>Will it become harder or more expensive to manage over time?</p>
+      <ul>
+        <li>Will this still work well for the team two to three years from now?</li>
+        <li>Will people feel comfortable updating it?</li>
+        <li>Will it become harder or more expensive to manage over time?</li>
+      </ul>
       <p>
         Those questions usually matter more than which platform happens to be popular right now.
       </p>
