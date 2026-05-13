@@ -1,3 +1,5 @@
+import { INSIGHTS_META } from '../config/insightsMeta';
+
 export const SITE_URL = 'https://monire.ch';
 
 export type RouteSeo = {
@@ -6,7 +8,7 @@ export type RouteSeo = {
   keywords?: string[];
 };
 
-export const ROUTE_SEO: Record<string, RouteSeo> = {
+const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
   '/': {
     title: 'Moniré | Web Design, Web Development & AI Automations in Zurich, Switzerland',
     description:
@@ -17,6 +19,12 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     title: 'Contact Moniré | Web Design, Web Development & AI Automations',
     description:
       'Contact Moniré about web design, web development, and AI automations in Zurich and across Switzerland.',
+  },
+  '/insights': {
+    title: 'Insights | Moniré',
+    description:
+      'Moniré insights with practical guidance on web design, web development, SEO, and AI-enabled growth.',
+    keywords: ['Moniré insights', 'business website advice', 'AI automation insights'],
   },
   '/privacy': {
     title: 'Privacy Policy | Moniré',
@@ -46,11 +54,30 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   },
 };
 
+const INSIGHTS_ROUTE_SEO: Record<string, RouteSeo> = INSIGHTS_META.reduce((acc, post) => {
+  acc[`/insights/${post.slug}`] = {
+    title: post.seoTitle,
+    description: post.seoDescription,
+    keywords: post.keywords,
+  };
+
+  return acc;
+}, {} as Record<string, RouteSeo>);
+
+export const ROUTE_SEO: Record<string, RouteSeo> = {
+  ...STATIC_ROUTE_SEO,
+  ...INSIGHTS_ROUTE_SEO,
+};
+
+const INSIGHTS_ROUTES = INSIGHTS_META.map((post) => `/insights/${post.slug}`);
+
 export const PRERENDER_ROUTES = [
   '/',
   '/privacy',
   '/apply',
   '/contact',
+  '/insights',
+  ...INSIGHTS_ROUTES,
   '/case-studies/expense-receipt-automation',
   '/case-studies/snip-squad',
   '/case-studies/systemically',

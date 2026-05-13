@@ -6,7 +6,8 @@
     "pricing": "Pricing",
     "ourWork": "Portfolio",
     "faq": "FAQ",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "insights": "Insights"
   },
   "hero": {
     "eyebrow": "Switzerland-Based • Serving Clients Worldwide",
@@ -97,8 +98,14 @@
     ],
     "teamTitle": "The Faces Behind The Work",
     "team": [
-      { "name": "Monika Märki", "role": "Co-Founder & Web Designer" },
-      { "name": "Nikky Pyra", "role": "Co-Founder & Automation Specialist" }
+      {
+        "name": "Monika Märki",
+        "role": "Co-Founder & Web Designer"
+      },
+      {
+        "name": "Nikky Pyra",
+        "role": "Co-Founder & Automation Specialist"
+      }
     ]
   },
   "pricing": {
@@ -172,7 +179,12 @@
   "portfolio": {
     "eyebrow": "Portfolio",
     "title": "Our Work",
-    "categories": ["Veterinary", "Consulting", "Real Estate", "AI Automation"],
+    "categories": [
+      "Veterinary",
+      "Consulting",
+      "Real Estate",
+      "AI Automation"
+    ],
     "projects": [
       {
         "title": "Snip Squad",
