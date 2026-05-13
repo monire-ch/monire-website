@@ -224,7 +224,7 @@
           },
           {
             "q": "Can you help with SEO?",
-            "a": "Our core focus is development and AI automations, but we build every website with SEO best practices in mind. We can also recommend trusted partners for ongoing SEO services."
+            "a": "Our core focus is development and AI automations, but we build every website with SEO best practices in mind. We can also recommend trusted partners for ongoing SEO services.<br /><a href='/insights/why-your-website-might-be-losing-you-clients' style='color:#F1D69A;text-decoration:underline;'>Read more about why this matters →</a>"
           },
           {
             "q": "Do you work with international clients?",
@@ -245,7 +245,7 @@
           },
           {
             "q": "What platforms do you build on?",
-            "a": "We work with Webflow, Astro, React, Next.js, n8n, and custom solutions. We recommend the best option based on your needs, budget, and long-term plans."
+            "a": "We work with Webflow, Astro, React, Next.js, n8n, and custom solutions. We recommend the best option based on your needs, budget, and long-term plans.<br /><a href='/insights/website-builders-vs-custom-development' style='color:#F1D69A;text-decoration:underline;'>Read how we choose the right platform →</a>"
           },
           {
             "q": "Can I edit the website myself?",
@@ -265,7 +265,7 @@
           },
           {
             "q": "What is Webflow?",
-            "a": "Webflow is a modern website platform that lets us build fully custom, high-quality sites quickly, with easy content editing, strong performance, and reliable hosting."
+            "a": "Webflow is a modern website platform that lets us build fully custom, high-quality sites quickly, with easy content editing, strong performance, and reliable hosting.<br /><a href='/insights/website-builders-vs-custom-development' style='color:#F1D69A;text-decoration:underline;'>Read how we choose the right platform →</a>"
           }
         ]
       },
@@ -274,7 +274,7 @@
         "items": [
           {
             "q": "What is AI automation and how can it help my business?",
-            "a": "AI automation uses artificial intelligence to handle repetitive tasks, analyze data, and streamline operations. Examples include customer support flows, data entry, email handling, and content workflows — helping you save time and reduce errors."
+            "a": "AI automation uses artificial intelligence to handle repetitive tasks, analyze data, and streamline operations. Examples include customer support flows, data entry, email handling, and content workflows — helping you save time and reduce errors.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Read what this looks like in practice →</a>"
           },
           {
             "q": "Do I need technical knowledge to use AI automation tools?",

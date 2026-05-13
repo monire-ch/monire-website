@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import BrandButton from "./BrandButton";
 import { SECTION_WRAPPER_GRADIENT } from "@/lib/theme";
@@ -15,6 +16,28 @@ const ServicesSection = () => {
     "Web Design": "/case-studies/snip-squad",
     "Web Development": "/case-studies/systemically",
     "AI Automations & Workflows": "/case-studies/expense-receipt-automation",
+  };
+  const insightLinks: Record<string, { href: string; label: string }> = {
+    "Web Design": {
+      href: "/insights/why-your-website-might-be-losing-you-clients",
+      label: "Why your website might be losing you clients →",
+    },
+    "Web Development": {
+      href: "/insights/website-builders-vs-custom-development",
+      label: "How we choose the right website platform →",
+    },
+    "Website Migrations": {
+      href: "/insights/website-builders-vs-custom-development",
+      label: "How we choose the right website platform →",
+    },
+    "SEO & Analytics (Essentials)": {
+      href: "/insights/why-your-website-might-be-losing-you-clients",
+      label: "Why your website might be losing you clients →",
+    },
+    "AI Automations & Workflows": {
+      href: "/insights/what-ai-automation-actually-means-for-a-small-business",
+      label: "What AI automation means for a small business →",
+    },
   };
   const [activeIndex, setActiveIndex] = useState(0);
   const [mobileOpenIndex, setMobileOpenIndex] = useState<number | null>(0);
@@ -61,11 +84,23 @@ const ServicesSection = () => {
                 <p className="text-off-white font-body leading-relaxed text-base mb-8">
                   {active.desc}
                 </p>
-                {caseStudyLinks[active.title] && (
-                  <div>
-                    <BrandButton type="link" to={caseStudyLinks[active.title]} variant="secondary" showStar className="text-sm">
-                      {t("services.cta", "Latest case study")}
-                    </BrandButton>
+                {(caseStudyLinks[active.title] || insightLinks[active.title]) && (
+                  <div className="space-y-3">
+                    {caseStudyLinks[active.title] ? (
+                      <BrandButton type="link" to={caseStudyLinks[active.title]} variant="secondary" showStar className="text-sm">
+                        {t("services.cta", "Latest case study")}
+                      </BrandButton>
+                    ) : null}
+                    {insightLinks[active.title] ? (
+                      <div>
+                        <Link
+                          to={insightLinks[active.title].href}
+                          className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
+                        >
+                          {insightLinks[active.title].label}
+                        </Link>
+                      </div>
+                    ) : null}
                   </div>
                 )}
               </div>
@@ -98,11 +133,23 @@ const ServicesSection = () => {
                         <p className="text-off-white/80 font-body leading-relaxed text-base pb-5">
                           {item.desc}
                         </p>
-                        {caseStudyLinks[item.title] && (
-                          <div className="pb-5">
-                            <BrandButton type="link" to={caseStudyLinks[item.title]} variant="secondary" showStar className="text-sm">
-                              {t("services.cta", "Latest case study")}
-                            </BrandButton>
+                        {(caseStudyLinks[item.title] || insightLinks[item.title]) && (
+                          <div className="pb-5 space-y-3">
+                            {caseStudyLinks[item.title] ? (
+                              <BrandButton type="link" to={caseStudyLinks[item.title]} variant="secondary" showStar className="text-sm">
+                                {t("services.cta", "Latest case study")}
+                              </BrandButton>
+                            ) : null}
+                            {insightLinks[item.title] ? (
+                              <div>
+                                <Link
+                                  to={insightLinks[item.title].href}
+                                  className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
+                                >
+                                  {insightLinks[item.title].label}
+                                </Link>
+                              </div>
+                            ) : null}
                           </div>
                         )}
                       </div>
