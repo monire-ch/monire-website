@@ -87,7 +87,7 @@ const InsightPost = () => {
             <p className="font-body text-base text-foreground/80 leading-relaxed">{post.quickAnswer}</p>
           </section>
 
-          <div className="insight-article">
+          <div className="insight-prose">
             {post.content}
           </div>
 

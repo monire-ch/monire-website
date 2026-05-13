@@ -246,206 +246,84 @@
   transform: translateY(0);
 }
 
-/* Insights article typography */
-.insight-article {
-  color: hsl(var(--foreground) / 0.82);
-  max-width: 44rem;
-  margin-inline: auto;
-}
+@layer components {
+  .insight-prose {
+    @apply mx-auto max-w-[44rem] text-foreground/80;
+  }
 
-.insight-article > p {
-  font-family: var(--font-body);
-  font-size: 1.075rem;
-  line-height: 1.85;
-  margin: 0 0 1.25rem;
-}
+  .insight-prose section {
+    @apply mt-11 border-t border-border/75 pt-7;
+  }
 
-.insight-article > p:first-child {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: hsl(var(--foreground) / 0.9);
-}
+  .insight-prose h2 {
+    @apply mb-3 font-display text-[clamp(1.6rem,1.5rem+0.7vw,2.1rem)] leading-[1.32] text-foreground;
+  }
 
-.insight-article section {
-  margin-top: 2.75rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid hsl(var(--border) / 0.75);
-}
+  .insight-prose h3 {
+    @apply mt-7 mb-3 font-display text-[clamp(1.35rem,1.25rem+0.45vw,1.7rem)] leading-[1.4] text-main-teal;
+  }
 
-.insight-article h2 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.6rem, 1.5rem + 0.7vw, 2.1rem);
-  line-height: 1.32;
-  color: hsl(var(--foreground));
-  letter-spacing: normal;
-  font-kerning: auto;
-  font-feature-settings: normal;
-  font-synthesis: none;
-  font-variation-settings: "wght" 400;
-  margin: 0 0 0.8rem;
-}
+  .insight-prose p {
+    @apply mb-4 font-body text-[1.075rem] leading-[1.85];
+  }
 
-.insight-article h3 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.35rem, 1.25rem + 0.45vw, 1.7rem);
-  line-height: 1.4;
-  color: hsl(var(--main-teal));
-  font-synthesis: none;
-  font-variation-settings: "wght" 400;
-  margin: 1.8rem 0 0.75rem;
-}
+  .insight-prose ul {
+    @apply my-4 list-disc pl-5;
+  }
 
-.insight-article section > p {
-  font-family: var(--font-body);
-  font-size: 1.075rem;
-  line-height: 1.85;
-  margin: 0 0 1.05rem;
-}
+  .insight-prose li {
+    @apply mb-2 font-body text-[1.03rem] leading-[1.7] text-foreground/85;
+  }
 
-.insight-article ul {
-  margin: 0.9rem 0 1.2rem;
-  padding-left: 1.25rem;
-  list-style: disc;
-}
+  .insight-prose a {
+    @apply text-main-teal underline underline-offset-2 hover:no-underline;
+  }
 
-.insight-article li {
-  font-family: var(--font-body);
-  font-size: 1.03rem;
-  line-height: 1.7;
-  margin: 0 0 0.45rem;
-  color: hsl(var(--foreground) / 0.84);
-}
+  .insight-prose .insight-checklist {
+    @apply list-none pl-0;
+  }
 
-.insight-article ul.insight-checklist {
-  padding-left: 0;
-  list-style: none;
-}
+  .insight-prose .insight-checklist li {
+    @apply relative mb-3 pl-7;
+  }
 
-.insight-article ul.insight-checklist li {
-  position: relative;
-  padding-left: 1.85rem;
-}
+  .insight-prose .insight-checklist li::before {
+    content: "";
+    @apply absolute left-0 top-[0.5em] h-4 w-4 rounded-[0.2rem] border border-main-teal/45 bg-card;
+  }
 
-.insight-article ul.insight-checklist li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.5em;
-  width: 1rem;
-  height: 1rem;
-  border: 1px solid hsl(var(--main-teal) / 0.45);
-  border-radius: 0.2rem;
-  background: hsl(var(--card));
-}
+  .insight-heading-punctuation {
+    @apply font-body text-[0.96em] font-normal leading-none;
+  }
 
-.insight-article a {
-  color: hsl(var(--main-teal));
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
+  .insight-pullquote {
+    @apply my-7 rounded-[0.55rem] border-l-2 border-main-teal/35 bg-card px-4 py-4;
+  }
 
-.insight-article a:hover {
-  text-decoration: none;
-}
+  .insight-pullquote p {
+    @apply mb-0 font-tertiary text-[1.3rem] italic leading-[1.5] text-main-teal;
+  }
 
-.insight-article table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0 1.35rem;
-  border: 1px solid hsl(var(--border));
-  border-radius: 0.55rem;
-  overflow: hidden;
-}
+  .insight-stat-break {
+    @apply my-7 rounded-xl border border-border bg-card px-5 py-4;
+  }
 
-.insight-article th,
-.insight-article td {
-  text-align: left;
-  vertical-align: top;
-  padding: 0.7rem 0.85rem;
-  border-bottom: 1px solid hsl(var(--border) / 0.75);
-  border-right: 1px solid hsl(var(--border) / 0.75);
-}
+  .insight-stat-break strong {
+    @apply mb-1.5 block font-display text-[1.55rem] text-foreground;
+  }
 
-.insight-article tr:last-child td {
-  border-bottom: none;
-}
-
-.insight-article th:last-child,
-.insight-article td:last-child {
-  border-right: none;
-}
-
-.insight-article th {
-  font-family: var(--font-display);
-  font-weight: 400;
-  color: hsl(var(--foreground));
-  background: hsl(var(--card));
-}
-
-.insight-article td {
-  font-family: var(--font-body);
-  color: hsl(var(--foreground) / 0.84);
-}
-
-.insight-heading-punctuation {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 0.96em;
-  line-height: 1;
-  display: inline-block;
-  transform: translateY(-0.01em);
-}
-
-.insight-pullquote {
-  margin: 1.8rem 0 1.6rem;
-  padding: 1rem 1.1rem;
-  border-left: 2px solid hsl(var(--main-teal) / 0.35);
-  background: hsl(var(--card));
-  border-radius: 0.55rem;
-}
-
-.insight-pullquote p {
-  margin: 0;
-  font-family: var(--font-tertiary);
-  font-style: italic;
-  font-size: 1.3rem;
-  line-height: 1.5;
-  color: hsl(var(--main-teal));
-}
-
-.insight-stat-break {
-  margin: 1.8rem 0 1.6rem;
-  padding: 1rem 1.15rem;
-  border: 1px solid hsl(var(--border));
-  border-radius: 0.7rem;
-  background: hsl(var(--card));
-}
-
-.insight-stat-break strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.55rem;
-  color: hsl(var(--foreground));
-  margin-bottom: 0.35rem;
-}
-
-.insight-stat-break span {
-  font-family: var(--font-body);
-  color: hsl(var(--foreground) / 0.75);
-  font-size: 0.98rem;
+  .insight-stat-break span {
+    @apply font-body text-[0.98rem] text-foreground/75;
+  }
 }
 
 @media (max-width: 767px) {
-  .insight-article > p,
-  .insight-article section > p {
-    font-size: 1rem;
-    line-height: 1.78;
+  .insight-prose p {
+    @apply text-base leading-[1.78];
   }
 
-  .insight-article section {
-    margin-top: 2.3rem;
+  .insight-prose section {
+    @apply mt-9;
   }
 }
 
