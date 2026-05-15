@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import ContactModal from './ContactModal';
 import {
@@ -120,6 +120,14 @@ const PricingSection = () => {
                 <BrandButton variant="secondary" className="text-sm w-full sm:w-auto !py-2.5" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
                   {t('pricing.automationBlock.caseStudy')}
                 </BrandButton>
+              </div>
+              <div className="mt-4">
+                <Link
+                  to="/insights/what-ai-automation-actually-means-for-a-small-business"
+                  className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
+                >
+                  What AI automation means for a small business →
+                </Link>
               </div>
             </div>
           </ScrollReveal>

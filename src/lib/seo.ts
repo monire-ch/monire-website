@@ -1,3 +1,5 @@
+import { INSIGHTS_META } from '../config/insightsMeta';
+
 export const SITE_URL = 'https://monire.ch';
 
 export type RouteSeo = {
@@ -6,17 +8,23 @@ export type RouteSeo = {
   keywords?: string[];
 };
 
-export const ROUTE_SEO: Record<string, RouteSeo> = {
+const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
   '/': {
     title: 'Moniré | Web Design, Web Development & AI Automations in Zurich, Switzerland',
     description:
       'Moniré is a digital studio offering web design, web development, and AI automations in Zurich and across Switzerland.',
-    keywords: ['Moniré', 'web design Zurich', 'web development Zurich', 'AI automations Switzerland'],
+    keywords: ['Moniré', 'web design Zurich', 'web development Zurich', 'website design Switzerland', 'AI automation Switzerland', 'workflow automation Zurich', 'Webflow development Zurich', 'small business web design Switzerland'],
   },
   '/contact': {
     title: 'Contact Moniré | Web Design, Web Development & AI Automations',
     description:
       'Contact Moniré about web design, web development, and AI automations in Zurich and across Switzerland.',
+  },
+  '/insights': {
+    title: 'Insights on Web Design, Automation & Digital Strategy | Moniré',
+    description:
+      'Practical articles from Moniré on web design, web development, SEO, AI automation, and digital decisions for small and mid-sized businesses.',
+    keywords: ['web design advice', 'website strategy', 'small business website advice', 'AI automation for small businesses', 'web design Switzerland', 'workflow automation Switzerland', 'Webflow Switzerland'],
   },
   '/privacy': {
     title: 'Privacy Policy | Moniré',
@@ -46,11 +54,30 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   },
 };
 
+const INSIGHTS_ROUTE_SEO: Record<string, RouteSeo> = INSIGHTS_META.reduce((acc, post) => {
+  acc[`/insights/${post.slug}`] = {
+    title: post.seoTitle,
+    description: post.seoDescription,
+    keywords: post.keywords,
+  };
+
+  return acc;
+}, {} as Record<string, RouteSeo>);
+
+export const ROUTE_SEO: Record<string, RouteSeo> = {
+  ...STATIC_ROUTE_SEO,
+  ...INSIGHTS_ROUTE_SEO,
+};
+
+const INSIGHTS_ROUTES = INSIGHTS_META.map((post) => `/insights/${post.slug}`);
+
 export const PRERENDER_ROUTES = [
   '/',
   '/privacy',
   '/apply',
   '/contact',
+  '/insights',
+  ...INSIGHTS_ROUTES,
   '/case-studies/expense-receipt-automation',
   '/case-studies/snip-squad',
   '/case-studies/systemically',

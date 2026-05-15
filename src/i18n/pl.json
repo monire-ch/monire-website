@@ -6,7 +6,8 @@
     "pricing": "Cennik",
     "ourWork": "Portfolio",
     "faq": "FAQ",
-    "contactUs": "Kontakt"
+    "contactUs": "Kontakt",
+    "insights": "Insights"
   },
   "hero": {
     "eyebrow": "Siedziba w Szwajcarii • Obsługujemy klientów na całym świecie",
@@ -20,12 +21,30 @@
     "title": "Wszystko, czego potrzebuje Twój biznes.",
     "titleAccent": "Strona & więcej.",
     "items": [
-      { "title": "10+ lat doświadczenia", "desc": "Dekada doświadczenia w tworzeniu stron internetowych, które przynoszą rezultaty firmom każdej wielkości." },
-      { "title": "Optymalizacja AI, Google & szybkości", "desc": "Każda strona jest budowana z najnowocześniejszą optymalizacją pod kątem wyszukiwarek AI, rankingów Google i błyskawicznego ładowania." },
-      { "title": "5 godzin utrzymania", "desc": "Miesięczne godziny utrzymania w cenie, aby Twoja strona była bezpieczna, aktualna i wydajna." },
-      { "title": "Bezpośrednia współpraca", "desc": "Bez pośredników. Pracujesz bezpośrednio z założycielkami, które projektują i budują Twoją stronę." },
-      { "title": "Oszczędność czasu 24/7", "desc": "Rozwiązania automatyzacji, które działają przez całą dobę, oszczędzając niezliczone godziny pracy ręcznej." },
-      { "title": "Łatwe aktualizacje", "desc": "Zarządzaj treścią bez wysiłku dzięki przyjaznemu CMS wbudowanemu w każdy projekt." }
+      {
+        "title": "10+ lat doświadczenia",
+        "desc": "Dekada doświadczenia w tworzeniu stron internetowych, które przynoszą rezultaty firmom każdej wielkości."
+      },
+      {
+        "title": "Optymalizacja AI, Google & szybkości",
+        "desc": "Każda strona jest budowana z najnowocześniejszą optymalizacją pod kątem wyszukiwarek AI, rankingów Google i błyskawicznego ładowania."
+      },
+      {
+        "title": "5 godzin utrzymania",
+        "desc": "Miesięczne godziny utrzymania w cenie, aby Twoja strona była bezpieczna, aktualna i wydajna."
+      },
+      {
+        "title": "Bezpośrednia współpraca",
+        "desc": "Bez pośredników. Pracujesz bezpośrednio z założycielkami, które projektują i budują Twoją stronę."
+      },
+      {
+        "title": "Oszczędność czasu 24/7",
+        "desc": "Rozwiązania automatyzacji, które działają przez całą dobę, oszczędzając niezliczone godziny pracy ręcznej."
+      },
+      {
+        "title": "Łatwe aktualizacje",
+        "desc": "Zarządzaj treścią bez wysiłku dzięki przyjaznemu CMS wbudowanemu w każdy projekt."
+      }
     ]
   },
   "services": {
@@ -33,25 +52,60 @@
     "title": "Praktyczne rozwiązania, które rozwijają Twój biznes",
     "cta": "Najnowsze case study",
     "items": [
-      { "badge": "Design", "title": "Projektowanie stron", "desc": "Projektujemy strony, które są intuicyjne i proste w nawigacji. Wszystko ma swój cel — nic nie jest dodawane tylko dlatego, że \"fajnie wygląda\". Chcemy, aby Twoi odwiedzający czuli się swobodnie i szybko znajdowali to, czego potrzebują." },
-      { "badge": "Rozwój", "title": "Tworzenie stron", "desc": "Budujemy szybkie, niezawodne strony z użyciem nowoczesnych frameworków. Czysty kod, responsywne layouty i architektura nastawiona na wydajność zapewniają bezproblemowe działanie na wszystkich urządzeniach." },
-      { "badge": "Migracja", "title": "Migracje stron", "desc": "Zmiana platformy nie musi być stresująca. Zajmujemy się całym procesem migracji — od przeniesienia treści po zachowanie SEO — abyś mógł dokonać aktualizacji bez utraty tego, co zbudowałeś." },
-      { "badge": "SEO", "title": "SEO i analityka (podstawy)", "desc": "Konfigurujemy niezbędne elementy, aby Twoja strona była widoczna. Od technicznego SEO i meta tagów po Google Analytics i Search Console — tworzymy fundament do organicznego wzrostu." },
-      { "badge": "Automatyzacja", "title": "Automatyzacje AI i workflow", "desc": "Proste, praktyczne automatyzacje obsługujące powtarzalne zadania i uwalniające Twój czas. Budujemy małe, niezawodne workflow z użyciem narzędzi jak n8n do sortowania dokumentów, przetwarzania informacji i organizacji danych." }
+      {
+        "badge": "Design",
+        "title": "Projektowanie stron",
+        "desc": "Projektujemy strony, które są intuicyjne i proste w nawigacji. Wszystko ma swój cel — nic nie jest dodawane tylko dlatego, że \"fajnie wygląda\". Chcemy, aby Twoi odwiedzający czuli się swobodnie i szybko znajdowali to, czego potrzebują."
+      },
+      {
+        "badge": "Rozwój",
+        "title": "Tworzenie stron",
+        "desc": "Budujemy szybkie, niezawodne strony z użyciem nowoczesnych frameworków. Czysty kod, responsywne layouty i architektura nastawiona na wydajność zapewniają bezproblemowe działanie na wszystkich urządzeniach."
+      },
+      {
+        "badge": "Migracja",
+        "title": "Migracje stron",
+        "desc": "Zmiana platformy nie musi być stresująca. Zajmujemy się całym procesem migracji — od przeniesienia treści po zachowanie SEO — abyś mógł dokonać aktualizacji bez utraty tego, co zbudowałeś."
+      },
+      {
+        "badge": "SEO",
+        "title": "SEO i analityka (podstawy)",
+        "desc": "Konfigurujemy niezbędne elementy, aby Twoja strona była widoczna. Od technicznego SEO i meta tagów po Google Analytics i Search Console — tworzymy fundament do organicznego wzrostu."
+      },
+      {
+        "badge": "Automatyzacja",
+        "title": "Automatyzacje AI i workflow",
+        "desc": "Proste, praktyczne automatyzacje obsługujące powtarzalne zadania i uwalniające Twój czas. Budujemy małe, niezawodne workflow z użyciem narzędzi jak n8n do sortowania dokumentów, przetwarzania informacji i organizacji danych."
+      }
     ]
   },
   "about": {
     "eyebrow": "O nas",
     "title": "2 Założycielki, 1 Wizja",
     "stories": [
-      { "title": "Nasza historia", "text": "Poznałyśmy się dzięki wspólnej pasji do tworzenia znaczących doświadczeń cyfrowych. Po latach niezależnej pracy w webdesignie i automatyzacji połączyłyśmy siły, aby oferować kompleksowe rozwiązania dla małych firm chcących rozwijać się online." },
-      { "title": "Dlaczego duo?", "text": "Pracując z nami, otrzymujesz uwagę i troskę butikowej agencji z doświadczeniem profesjonalistek. Żadnych warstw zarządzania, żadnego outsourcingu — tylko dwie zaangażowane założycielki, którym zależy na Twoim sukcesie." },
-      { "title": "Działalność społeczna", "text": "Za każdy płatny projekt tworzymy darmową lub mocno przecenioną stronę dla organizacji charytatywnej, non-profit lub inicjatywy społecznej." }
+      {
+        "title": "Nasza historia",
+        "text": "Poznałyśmy się dzięki wspólnej pasji do tworzenia znaczących doświadczeń cyfrowych. Po latach niezależnej pracy w webdesignie i automatyzacji połączyłyśmy siły, aby oferować kompleksowe rozwiązania dla małych firm chcących rozwijać się online."
+      },
+      {
+        "title": "Dlaczego duo?",
+        "text": "Pracując z nami, otrzymujesz uwagę i troskę butikowej agencji z doświadczeniem profesjonalistek. Żadnych warstw zarządzania, żadnego outsourcingu — tylko dwie zaangażowane założycielki, którym zależy na Twoim sukcesie."
+      },
+      {
+        "title": "Działalność społeczna",
+        "text": "Za każdy płatny projekt tworzymy darmową lub mocno przecenioną stronę dla organizacji charytatywnej, non-profit lub inicjatywy społecznej."
+      }
     ],
     "teamTitle": "Twarze za naszą pracą",
     "team": [
-      { "name": "Monika Märki", "role": "Współzałożycielka & Web Designerka" },
-      { "name": "Nikky Pyra", "role": "Współzałożycielka & Specjalistka ds. Automatyzacji" }
+      {
+        "name": "Monika Märki",
+        "role": "Współzałożycielka & Web Designerka"
+      },
+      {
+        "name": "Nikky Pyra",
+        "role": "Współzałożycielka & Specjalistka ds. Automatyzacji"
+      }
     ]
   },
   "pricing": {
@@ -74,19 +128,41 @@
           "name": "Starter",
           "price": "from CHF3'500",
           "desc": "Idealne dla: nowych firm, coachów, freelancerów, małych konsultingów.",
-          "features": ["Do 5 stron", "Czysty, profesjonalny styl wizualny", "Responsywność + szybkie ładowanie", "Formularz kontaktowy", "Podstawowy CMS do łatwej edycji tekstu/obrazów", "Podstawowe SEO on-page (meta tagi, mapa strony, przyjazna struktura)"]
+          "features": [
+            "Do 5 stron",
+            "Czysty, profesjonalny styl wizualny",
+            "Responsywność + szybkie ładowanie",
+            "Formularz kontaktowy",
+            "Podstawowy CMS do łatwej edycji tekstu/obrazów",
+            "Podstawowe SEO on-page (meta tagi, mapa strony, przyjazna struktura)"
+          ]
         },
         {
           "name": "Advanced",
           "price": "from CHF6'000",
           "desc": "Idealne dla MŚP, agencji, firm butikowych, usług B2B.",
-          "features": ["Do 10 stron", "Indywidualny design** + subtelne animacje", "Elastyczne struktury CMS (blogi, case studies, listy produktów/usług)", "Optymalizacja SEO pod ranking (nie tylko konfiguracja)", "Google Analytics z śledzeniem zdarzeń", "Integracja 1-2 narzędzi zewnętrznych (system rezerwacji, formularz CRM itp.)", "Obsługa 2 języków"]
+          "features": [
+            "Do 10 stron",
+            "Indywidualny design** + subtelne animacje",
+            "Elastyczne struktury CMS (blogi, case studies, listy produktów/usług)",
+            "Optymalizacja SEO pod ranking (nie tylko konfiguracja)",
+            "Google Analytics z śledzeniem zdarzeń",
+            "Integracja 1-2 narzędzi zewnętrznych (system rezerwacji, formularz CRM itp.)",
+            "Obsługa 2 języków"
+          ]
         },
         {
           "name": "Premium",
           "price": "from CHF9'000",
           "desc": "Idealne dla: rozwijających się firm, uznanych marek, firm potrzebujących workflow i integracji.",
-          "features": ["Nielimitowane strony", "Pełne planowanie UX + UI", "Zaawansowany CMS", "Integracje z narzędziami: Newsletter, rezerwacje, kalendarz, live chat, portal klienta", "Kompleksowa strategia SEO", "Obsługa wielu języków"]
+          "features": [
+            "Nielimitowane strony",
+            "Pełne planowanie UX + UI",
+            "Zaawansowany CMS",
+            "Integracje z narzędziami: Newsletter, rezerwacje, kalendarz, live chat, portal klienta",
+            "Kompleksowa strategia SEO",
+            "Obsługa wielu języków"
+          ]
         }
       ],
       "automation": []
@@ -101,12 +177,37 @@
   "portfolio": {
     "eyebrow": "Portfolio",
     "title": "Nasze prace",
-    "categories": ["Weterynaria", "Doradztwo", "Nieruchomości", "Automatyzacja AI"],
+    "categories": [
+      "Weterynaria",
+      "Doradztwo",
+      "Nieruchomości",
+      "Automatyzacja AI"
+    ],
     "projects": [
-      { "title": "Snip Squad", "category": "Weterynaria", "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt.", "link": "/case-studies/snip-squad" },
-      { "title": "SystemicAlly", "category": "Doradztwo", "desc": "Platforma rozwoju przywództwa korporacyjnego z czystym, profesjonalnym designem podkreślającym zaufanie i ekspertyzę.", "link": "/case-studies/systemically" },
-      { "title": "Towarowa 41", "category": "Nieruchomości", "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią.", "link": "/case-studies/towarowa" },
-      { "title": "Automatyzacja paragonów", "category": "Automatyzacja AI", "desc": "Zautomatyzowany przepływ pracy do przetwarzania paragonów za pomocą n8n, eliminujący ręczne wprowadzanie danych.", "link": "/case-studies/expense-receipt-automation" }
+      {
+        "title": "Snip Squad",
+        "category": "Weterynaria",
+        "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt.",
+        "link": "/case-studies/snip-squad"
+      },
+      {
+        "title": "SystemicAlly",
+        "category": "Doradztwo",
+        "desc": "Platforma rozwoju przywództwa korporacyjnego z czystym, profesjonalnym designem podkreślającym zaufanie i ekspertyzę.",
+        "link": "/case-studies/systemically"
+      },
+      {
+        "title": "Towarowa 41",
+        "category": "Nieruchomości",
+        "desc": "Elegancka prezentacja luksusowych apartamentów z fotografią redakcyjną i wyrafinowaną typografią.",
+        "link": "/case-studies/towarowa"
+      },
+      {
+        "title": "Automatyzacja paragonów",
+        "category": "Automatyzacja AI",
+        "desc": "Zautomatyzowany przepływ pracy do przetwarzania paragonów za pomocą n8n, eliminujący ręczne wprowadzanie danych.",
+        "link": "/case-studies/expense-receipt-automation"
+      }
     ]
   },
   "faq": {
@@ -115,35 +216,77 @@
       {
         "label": "Informacje ogólne",
         "items": [
-          { "q": "Jakie informacje potrzebujecie, żeby zacząć?", "a": "Musimy zrozumieć Twoje cele biznesowe, grupę docelową, potrzebne funkcje, preferencje designu, harmonogram i budżet. Jeśli masz istniejące materiały marki, treści lub strony, to również pomoże. Wypełnij nasz <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>formularz briefu klienta</a>, abyśmy mogli lepiej zrozumieć Twoje potrzeby." },
-          { "q": "Czy możecie pomóc z SEO?", "a": "Nasz główny focus to rozwój i automatyzacja AI, ale budujemy strony z uwzględnieniem najlepszych praktyk SEO. Możemy też polecić zaufanych partnerów do bieżących usług SEO." },
-          { "q": "Czy pracujecie z klientami międzynarodowymi?", "a": "Tak! Mamy siedzibę w Szwajcarii i pracujemy zdalnie z klientami na całym świecie. Komunikacja jest przyjazna asynchronicznie, a spotkania dostosowujemy do różnych stref czasowych." }
+          {
+            "q": "Jakie informacje potrzebujecie, żeby zacząć?",
+            "a": "Musimy zrozumieć Twoje cele biznesowe, grupę docelową, potrzebne funkcje, preferencje designu, harmonogram i budżet. Jeśli masz istniejące materiały marki, treści lub strony, to również pomoże. Wypełnij nasz <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>formularz briefu klienta</a>, abyśmy mogli lepiej zrozumieć Twoje potrzeby."
+          },
+          {
+            "q": "Czy możecie pomóc z SEO?",
+            "a": "Nasz główny focus to rozwój i automatyzacja AI, ale budujemy strony z uwzględnieniem najlepszych praktyk SEO. Możemy też polecić zaufanych partnerów do bieżących usług SEO."
+          },
+          {
+            "q": "Czy pracujecie z klientami międzynarodowymi?",
+            "a": "Tak! Mamy siedzibę w Szwajcarii i pracujemy zdalnie z klientami na całym świecie. Komunikacja jest przyjazna asynchronicznie, a spotkania dostosowujemy do różnych stref czasowych."
+          }
         ]
       },
       {
         "label": "Design i rozwój",
         "items": [
-          { "q": "Czy budujecie indywidualne strony czy korzystacie z szablonów?", "a": "Budujemy głównie indywidualne strony dostosowane do Twoich potrzeb. Możemy jednak również dostosować premium szablony, jeśli pracujesz z mniejszym budżetem lub krótszym terminem." },
-          { "q": "Czy możecie przeprojektować moją istniejącą stronę?", "a": "Tak! Oferujemy kompletne redesigny stron, w tym modernizację przestarzałych projektów, poprawę doświadczenia użytkownika i migrację na nowe platformy." },
-          { "q": "Na jakich platformach rozwijacie?", "a": "Pracujemy z różnymi technologiami, w tym Webflow, Astro, React, Next.js, n8n i rozwiązaniami na zamówienie. Rekomendujemy najlepszą platformę na podstawie Twoich wymagań, budżetu i celów długoterminowych." },
-          { "q": "Czy mogę sam edytować stronę?", "a": "Używamy przyjaznych systemów zarządzania treścią (CMS), dzięki czemu możesz aktualizować teksty, obrazy i posty na blogu bez umiejętności technicznych. Zapewniamy szkolenie i dokumentację." },
-          { "q": "Kto jest właścicielem strony?", "a": "Po opłaceniu wszystkich faktur, pełne prawa własności do strony i wszystkich stworzonych przez nas projektów są przenoszone na Ciebie." },
-          { "q": "Mam projekt graficzny – czy możecie zająć się tylko programowaniem?", "a": "Jeśli masz już projekt graficzny, możemy zająć się tylko programowaniem. Omówimy Twój projekt wspólnie i dostosujemy wycenę do potrzebnych prac." },
-          { "q": "Jak szybko może być gotowa moja strona?", "a": "Terminy różnią się w zależności od wielkości i złożoności strony. Po wstępnej rozmowie podamy jasne szacunki dla faz projektowania i programowania." },
-          { "q": "Czym jest Webflow?", "a": "Webflow to nowoczesna platforma do budowy stron, która pozwala nam tworzyć w pełni indywidualne, wysokiej jakości strony szybko – z łatwą edycją, świetną wydajnością i bezproblemowym hostingiem." }
+          {
+            "q": "Czy budujecie indywidualne strony czy korzystacie z szablonów?",
+            "a": "Budujemy głównie indywidualne strony dostosowane do Twoich potrzeb. Możemy jednak również dostosować premium szablony, jeśli pracujesz z mniejszym budżetem lub krótszym terminem."
+          },
+          {
+            "q": "Czy możecie przeprojektować moją istniejącą stronę?",
+            "a": "Tak! Oferujemy kompletne redesigny stron, w tym modernizację przestarzałych projektów, poprawę doświadczenia użytkownika i migrację na nowe platformy."
+          },
+          {
+            "q": "Na jakich platformach rozwijacie?",
+            "a": "Pracujemy z różnymi technologiami, w tym Webflow, Astro, React, Next.js, n8n i rozwiązaniami na zamówienie. Rekomendujemy najlepszą platformę na podstawie Twoich wymagań, budżetu i celów długoterminowych."
+          },
+          {
+            "q": "Czy mogę sam edytować stronę?",
+            "a": "Używamy przyjaznych systemów zarządzania treścią (CMS), dzięki czemu możesz aktualizować teksty, obrazy i posty na blogu bez umiejętności technicznych. Zapewniamy szkolenie i dokumentację."
+          },
+          {
+            "q": "Kto jest właścicielem strony?",
+            "a": "Po opłaceniu wszystkich faktur, pełne prawa własności do strony i wszystkich stworzonych przez nas projektów są przenoszone na Ciebie."
+          },
+          {
+            "q": "Mam projekt graficzny – czy możecie zająć się tylko programowaniem?",
+            "a": "Jeśli masz już projekt graficzny, możemy zająć się tylko programowaniem. Omówimy Twój projekt wspólnie i dostosujemy wycenę do potrzebnych prac."
+          },
+          {
+            "q": "Jak szybko może być gotowa moja strona?",
+            "a": "Terminy różnią się w zależności od wielkości i złożoności strony. Po wstępnej rozmowie podamy jasne szacunki dla faz projektowania i programowania."
+          },
+          {
+            "q": "Czym jest Webflow?",
+            "a": "Webflow to nowoczesna platforma do budowy stron, która pozwala nam tworzyć w pełni indywidualne, wysokiej jakości strony szybko – z łatwą edycją, świetną wydajnością i bezproblemowym hostingiem."
+          }
         ]
       },
       {
         "label": "Automatyzacje AI",
         "items": [
-          { "q": "Czym jest automatyzacja AI i jak może pomóc mojej firmie?", "a": "Automatyzacja AI wykorzystuje sztuczną inteligencję do obsługi powtarzalnych zadań, analizy danych lub usprawniania procesów. Przykłady to chatboty obsługi klienta, wprowadzanie danych, tworzenie odpowiedzi e-mail, generowanie treści i więcej. Celem jest umożliwienie Ci skupienia się na wartościowej pracy i redukcja błędów." },
-          { "q": "Czy potrzebuję wiedzy technicznej, żeby korzystać z narzędzi AI?", "a": "Nie! Projektujemy przyjazne rozwiązania, które płynnie integrują się z Twoimi istniejącymi procesami. Zapewniamy szkolenie i dokumentację, abyś mógł pewnie korzystać z narzędzi." }
+          {
+            "q": "Czym jest automatyzacja AI i jak może pomóc mojej firmie?",
+            "a": "Automatyzacja AI wykorzystuje sztuczną inteligencję do obsługi powtarzalnych zadań, analizy danych lub usprawniania procesów. Przykłady to chatboty obsługi klienta, wprowadzanie danych, tworzenie odpowiedzi e-mail, generowanie treści i więcej. Celem jest umożliwienie Ci skupienia się na wartościowej pracy i redukcja błędów."
+          },
+          {
+            "q": "Czy potrzebuję wiedzy technicznej, żeby korzystać z narzędzi AI?",
+            "a": "Nie! Projektujemy przyjazne rozwiązania, które płynnie integrują się z Twoimi istniejącymi procesami. Zapewniamy szkolenie i dokumentację, abyś mógł pewnie korzystać z narzędzi."
+          }
         ]
       },
       {
         "label": "Utrzymanie",
         "items": [
-          { "q": "Czy oferujecie długoterminowe wsparcie?", "a": "Oferujemy pakiety utrzymania obejmujące poprawki błędów, aktualizacje treści i wsparcie techniczne. Oferujemy również jednorazowe wsparcie dla konkretnych potrzeb." }
+          {
+            "q": "Czy oferujecie długoterminowe wsparcie?",
+            "a": "Oferujemy pakiety utrzymania obejmujące poprawki błędów, aktualizacje treści i wsparcie techniczne. Oferujemy również jednorazowe wsparcie dla konkretnych potrzeb."
+          }
         ]
       }
     ]

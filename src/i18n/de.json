@@ -6,7 +6,8 @@
     "pricing": "Preise",
     "ourWork": "Portfolio",
     "faq": "FAQ",
-    "contactUs": "Kontakt"
+    "contactUs": "Kontakt",
+    "insights": "Insights"
   },
   "hero": {
     "eyebrow": "Sitz in der Schweiz • Kunden weltweit",
@@ -20,12 +21,30 @@
     "title": "Alles, was Ihr Unternehmen braucht.",
     "titleAccent": "Website & mehr.",
     "items": [
-      { "title": "10+ Jahre Erfahrung", "desc": "Ein Jahrzehnt Erfahrung in der Erstellung von Websites, die für Unternehmen jeder Grösse Ergebnisse liefern." },
-      { "title": "KI, Google & Speed-optimiert", "desc": "Jede Website wird mit modernster Optimierung für KI-Suche, Google-Rankings und blitzschnelle Ladezeiten erstellt." },
-      { "title": "5 Stunden Wartung", "desc": "Monatliche Wartungsstunden inklusive, um Ihre Website sicher, aktuell und leistungsstark zu halten." },
-      { "title": "Direkte Zusammenarbeit", "desc": "Keine Zwischenhändler. Arbeiten Sie direkt mit den Gründerinnen, die Ihre Website gestalten und entwickeln." },
-      { "title": "24/7 Zeitersparnis", "desc": "Automatisierungslösungen, die rund um die Uhr arbeiten und Ihnen unzählige Stunden manueller Arbeit ersparen." },
-      { "title": "Einfache Aktualisierungen", "desc": "Verwalten Sie Ihre Inhalte mühelos mit benutzerfreundlichen CMS-Lösungen, die in jedes Projekt integriert sind." }
+      {
+        "title": "10+ Jahre Erfahrung",
+        "desc": "Ein Jahrzehnt Erfahrung in der Erstellung von Websites, die für Unternehmen jeder Grösse Ergebnisse liefern."
+      },
+      {
+        "title": "KI, Google & Speed-optimiert",
+        "desc": "Jede Website wird mit modernster Optimierung für KI-Suche, Google-Rankings und blitzschnelle Ladezeiten erstellt."
+      },
+      {
+        "title": "5 Stunden Wartung",
+        "desc": "Monatliche Wartungsstunden inklusive, um Ihre Website sicher, aktuell und leistungsstark zu halten."
+      },
+      {
+        "title": "Direkte Zusammenarbeit",
+        "desc": "Keine Zwischenhändler. Arbeiten Sie direkt mit den Gründerinnen, die Ihre Website gestalten und entwickeln."
+      },
+      {
+        "title": "24/7 Zeitersparnis",
+        "desc": "Automatisierungslösungen, die rund um die Uhr arbeiten und Ihnen unzählige Stunden manueller Arbeit ersparen."
+      },
+      {
+        "title": "Einfache Aktualisierungen",
+        "desc": "Verwalten Sie Ihre Inhalte mühelos mit benutzerfreundlichen CMS-Lösungen, die in jedes Projekt integriert sind."
+      }
     ]
   },
   "services": {
@@ -33,25 +52,60 @@
     "title": "Praktische Lösungen, die Ihr Unternehmen voranbringen",
     "cta": "Neueste Fallstudie",
     "items": [
-      { "badge": "Design", "title": "Webdesign", "desc": "Wir gestalten Websites, die sich intuitiv und einfach navigieren lassen. Alles hat einen Zweck — nichts wird hinzugefügt, nur weil es \"cool aussieht\". Ihre Besucher sollen sich wohlfühlen und schnell finden, was sie brauchen." },
-      { "badge": "Entwicklung", "title": "Webentwicklung", "desc": "Wir entwickeln schnelle, zuverlässige Websites mit modernen Frameworks. Sauberer Code, responsive Layouts und Performance-Architektur sorgen dafür, dass Ihre Seite auf allen Geräten einwandfrei funktioniert." },
-      { "badge": "Migration", "title": "Website-Migrationen", "desc": "Ein Plattformwechsel muss nicht stressig sein. Wir übernehmen den gesamten Migrationsprozess — von der Inhaltsübertragung bis zur SEO-Erhaltung — damit Sie upgraden können, ohne das Aufgebaute zu verlieren." },
-      { "badge": "SEO", "title": "SEO & Analytics (Grundlagen)", "desc": "Wir richten die Grundlagen ein, damit Ihre Website gefunden wird. Von technischem SEO und Meta-Tags bis zu Google Analytics und Search Console — wir schaffen die Basis für organisches Wachstum." },
-      { "badge": "Automatisierung", "title": "KI-Automatisierungen & Workflows", "desc": "Einfache, praktische Automatisierungen, die repetitive Aufgaben erledigen und Ihre Zeit freisetzen. Wir bauen kleine, zuverlässige Workflows mit Tools wie n8n, um Dokumente zu sortieren, Informationen zu verarbeiten und Daten zu organisieren." }
+      {
+        "badge": "Design",
+        "title": "Webdesign",
+        "desc": "Wir gestalten Websites, die sich intuitiv und einfach navigieren lassen. Alles hat einen Zweck — nichts wird hinzugefügt, nur weil es \"cool aussieht\". Ihre Besucher sollen sich wohlfühlen und schnell finden, was sie brauchen."
+      },
+      {
+        "badge": "Entwicklung",
+        "title": "Webentwicklung",
+        "desc": "Wir entwickeln schnelle, zuverlässige Websites mit modernen Frameworks. Sauberer Code, responsive Layouts und Performance-Architektur sorgen dafür, dass Ihre Seite auf allen Geräten einwandfrei funktioniert."
+      },
+      {
+        "badge": "Migration",
+        "title": "Website-Migrationen",
+        "desc": "Ein Plattformwechsel muss nicht stressig sein. Wir übernehmen den gesamten Migrationsprozess — von der Inhaltsübertragung bis zur SEO-Erhaltung — damit Sie upgraden können, ohne das Aufgebaute zu verlieren."
+      },
+      {
+        "badge": "SEO",
+        "title": "SEO & Analytics (Grundlagen)",
+        "desc": "Wir richten die Grundlagen ein, damit Ihre Website gefunden wird. Von technischem SEO und Meta-Tags bis zu Google Analytics und Search Console — wir schaffen die Basis für organisches Wachstum."
+      },
+      {
+        "badge": "Automatisierung",
+        "title": "KI-Automatisierungen & Workflows",
+        "desc": "Einfache, praktische Automatisierungen, die repetitive Aufgaben erledigen und Ihre Zeit freisetzen. Wir bauen kleine, zuverlässige Workflows mit Tools wie n8n, um Dokumente zu sortieren, Informationen zu verarbeiten und Daten zu organisieren."
+      }
     ]
   },
   "about": {
     "eyebrow": "Über uns",
     "title": "2 Gründerinnen, 1 Vision",
     "stories": [
-      { "title": "Unsere Geschichte", "text": "Wir haben uns durch unsere gemeinsame Leidenschaft für die Schaffung bedeutungsvoller digitaler Erlebnisse kennengelernt. Nach Jahren unabhängiger Arbeit in Webdesign und Automatisierung haben wir unsere Kräfte gebündelt, um kleinen Unternehmen eine Komplettlösung für ihr Online-Wachstum anzubieten." },
-      { "title": "Warum ein Duo wählen?", "text": "Wenn Sie mit uns arbeiten, erhalten Sie die Aufmerksamkeit und Sorgfalt einer Boutique-Agentur mit der Expertise erfahrener Profis. Keine Management-Ebenen, kein Outsourcing — nur zwei engagierte Gründerinnen, die in Ihren Erfolg investiert sind." },
-      { "title": "Soziales Engagement", "text": "Für jedes bezahlte Projekt erstellen wir eine kostenlose oder stark vergünstigte Website für eine Wohltätigkeitsorganisation, gemeinnützige Organisation oder Gemeinschaftsinitiative." }
+      {
+        "title": "Unsere Geschichte",
+        "text": "Wir haben uns durch unsere gemeinsame Leidenschaft für die Schaffung bedeutungsvoller digitaler Erlebnisse kennengelernt. Nach Jahren unabhängiger Arbeit in Webdesign und Automatisierung haben wir unsere Kräfte gebündelt, um kleinen Unternehmen eine Komplettlösung für ihr Online-Wachstum anzubieten."
+      },
+      {
+        "title": "Warum ein Duo wählen?",
+        "text": "Wenn Sie mit uns arbeiten, erhalten Sie die Aufmerksamkeit und Sorgfalt einer Boutique-Agentur mit der Expertise erfahrener Profis. Keine Management-Ebenen, kein Outsourcing — nur zwei engagierte Gründerinnen, die in Ihren Erfolg investiert sind."
+      },
+      {
+        "title": "Soziales Engagement",
+        "text": "Für jedes bezahlte Projekt erstellen wir eine kostenlose oder stark vergünstigte Website für eine Wohltätigkeitsorganisation, gemeinnützige Organisation oder Gemeinschaftsinitiative."
+      }
     ],
     "teamTitle": "Die Gesichter hinter der Arbeit",
     "team": [
-      { "name": "Monika Märki", "role": "Mitgründerin & Webdesignerin" },
-      { "name": "Nikky Pyra", "role": "Mitgründerin & Automatisierungsspezialistin" }
+      {
+        "name": "Monika Märki",
+        "role": "Mitgründerin & Webdesignerin"
+      },
+      {
+        "name": "Nikky Pyra",
+        "role": "Mitgründerin & Automatisierungsspezialistin"
+      }
     ]
   },
   "pricing": {
@@ -74,19 +128,41 @@
           "name": "Starter",
           "price": "from CHF3'500",
           "desc": "Ideal für: Neue Unternehmen, Coaches, Freiberufler, kleine Beratungen.",
-          "features": ["Bis zu 5 Seiten", "Sauberer, professioneller visueller Stil", "Mobiloptimiert + schnelles Laden", "Kontaktformular", "Basis-CMS für einfache Text-/Bildaktualisierungen", "Grundlegendes On-Page-SEO (Meta-Tags, Sitemap, suchfreundliche Struktur)"]
+          "features": [
+            "Bis zu 5 Seiten",
+            "Sauberer, professioneller visueller Stil",
+            "Mobiloptimiert + schnelles Laden",
+            "Kontaktformular",
+            "Basis-CMS für einfache Text-/Bildaktualisierungen",
+            "Grundlegendes On-Page-SEO (Meta-Tags, Sitemap, suchfreundliche Struktur)"
+          ]
         },
         {
           "name": "Advanced",
           "price": "from CHF6'000",
           "desc": "Ideal für KMUs, Agenturen, Boutique-Firmen, B2B-Dienstleistungen.",
-          "features": ["Bis zu 10 Seiten", "Individuelles visuelles Design** + dezente Animationen", "Flexiblere CMS-Strukturen (Blogs, Fallstudien, Produkt-/Dienstleistungslisten)", "SEO-Optimierung mit Fokus auf Ranking (nicht nur Einrichtung)", "Google Analytics mit Event-Tracking", "Integration von 1-2 Drittanbieter-Tools (Buchungssystem, CRM-Formular usw.)", "Unterstützung für 2 Sprachen"]
+          "features": [
+            "Bis zu 10 Seiten",
+            "Individuelles visuelles Design** + dezente Animationen",
+            "Flexiblere CMS-Strukturen (Blogs, Fallstudien, Produkt-/Dienstleistungslisten)",
+            "SEO-Optimierung mit Fokus auf Ranking (nicht nur Einrichtung)",
+            "Google Analytics mit Event-Tracking",
+            "Integration von 1-2 Drittanbieter-Tools (Buchungssystem, CRM-Formular usw.)",
+            "Unterstützung für 2 Sprachen"
+          ]
         },
         {
           "name": "Premium",
           "price": "from CHF9'000",
           "desc": "Ideal für: wachsende Firmen, etablierte Marken, Unternehmen mit Workflow- & Integrationsbedarf.",
-          "features": ["Unbegrenzte Seiten", "Vollständige UX + UI-Layoutplanung", "Erweitertes CMS", "Integrationen mit Tools wie: Newsletter, Buchung, Kalender, Live-Chat, Kundenportal", "Umfassende SEO-Strategie", "Mehrsprachige Unterstützung"]
+          "features": [
+            "Unbegrenzte Seiten",
+            "Vollständige UX + UI-Layoutplanung",
+            "Erweitertes CMS",
+            "Integrationen mit Tools wie: Newsletter, Buchung, Kalender, Live-Chat, Kundenportal",
+            "Umfassende SEO-Strategie",
+            "Mehrsprachige Unterstützung"
+          ]
         }
       ],
       "automation": []
@@ -101,12 +177,37 @@
   "portfolio": {
     "eyebrow": "Portfolio",
     "title": "Unsere Arbeiten",
-    "categories": ["Veterinär", "Beratung", "Immobilien", "KI-Automatisierung"],
+    "categories": [
+      "Veterinär",
+      "Beratung",
+      "Immobilien",
+      "KI-Automatisierung"
+    ],
     "projects": [
-      { "title": "Snip Squad", "category": "Veterinär", "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde.", "link": "/case-studies/snip-squad" },
-      { "title": "SystemicAlly", "category": "Beratung", "desc": "Plattform für Führungskräfteentwicklung mit einem sauberen, professionellen Design, das Vertrauen und Expertise betont.", "link": "/case-studies/systemically" },
-      { "title": "Towarowa 41", "category": "Immobilien", "desc": "Ein elegantes Luxus-Apartment-Listing mit redaktioneller Fotografie und edler Typografie.", "link": "/case-studies/towarowa" },
-      { "title": "Spesenbeleg-Automatisierung", "category": "KI-Automatisierung", "desc": "Automatisierter Workflow zur Verarbeitung von Spesenbelegen mit n8n, der manuelle Dateneingabe eliminiert.", "link": "/case-studies/expense-receipt-automation" }
+      {
+        "title": "Snip Squad",
+        "category": "Veterinär",
+        "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde.",
+        "link": "/case-studies/snip-squad"
+      },
+      {
+        "title": "SystemicAlly",
+        "category": "Beratung",
+        "desc": "Plattform für Führungskräfteentwicklung mit einem sauberen, professionellen Design, das Vertrauen und Expertise betont.",
+        "link": "/case-studies/systemically"
+      },
+      {
+        "title": "Towarowa 41",
+        "category": "Immobilien",
+        "desc": "Ein elegantes Luxus-Apartment-Listing mit redaktioneller Fotografie und edler Typografie.",
+        "link": "/case-studies/towarowa"
+      },
+      {
+        "title": "Spesenbeleg-Automatisierung",
+        "category": "KI-Automatisierung",
+        "desc": "Automatisierter Workflow zur Verarbeitung von Spesenbelegen mit n8n, der manuelle Dateneingabe eliminiert.",
+        "link": "/case-studies/expense-receipt-automation"
+      }
     ]
   },
   "faq": {
@@ -115,35 +216,77 @@
       {
         "label": "Allgemeine Informationen",
         "items": [
-          { "q": "Welche Informationen brauchen Sie von mir, um zu starten?", "a": "Wir müssen Ihre Geschäftsziele, Zielgruppe, gewünschte Funktionen, Designpräferenzen, Zeitplan und Budget verstehen. Vorhandene Markenassets, Inhalte oder Websites sind ebenfalls hilfreich. Füllen Sie gerne unser <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>Kundenbriefing-Formular</a> aus, damit wir Ihre Bedürfnisse besser verstehen können." },
-          { "q": "Können Sie bei SEO helfen?", "a": "Unser Hauptfokus liegt auf Entwicklung und KI-Automatisierung, aber wir bauen Websites mit SEO-Best-Practices. Wir können auch vertrauenswürdige Partner für laufende SEO-Dienstleistungen empfehlen." },
-          { "q": "Arbeiten Sie mit internationalen Kunden?", "a": "Ja! Wir sind in der Schweiz ansässig und arbeiten remote mit Kunden weltweit. Die Kommunikation ist asynchron-freundlich, und wir stimmen Meetingzeiten über Zeitzonen hinweg ab." }
+          {
+            "q": "Welche Informationen brauchen Sie von mir, um zu starten?",
+            "a": "Wir müssen Ihre Geschäftsziele, Zielgruppe, gewünschte Funktionen, Designpräferenzen, Zeitplan und Budget verstehen. Vorhandene Markenassets, Inhalte oder Websites sind ebenfalls hilfreich. Füllen Sie gerne unser <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>Kundenbriefing-Formular</a> aus, damit wir Ihre Bedürfnisse besser verstehen können."
+          },
+          {
+            "q": "Können Sie bei SEO helfen?",
+            "a": "Unser Hauptfokus liegt auf Entwicklung und KI-Automatisierung, aber wir bauen Websites mit SEO-Best-Practices. Wir können auch vertrauenswürdige Partner für laufende SEO-Dienstleistungen empfehlen."
+          },
+          {
+            "q": "Arbeiten Sie mit internationalen Kunden?",
+            "a": "Ja! Wir sind in der Schweiz ansässig und arbeiten remote mit Kunden weltweit. Die Kommunikation ist asynchron-freundlich, und wir stimmen Meetingzeiten über Zeitzonen hinweg ab."
+          }
         ]
       },
       {
         "label": "Design & Entwicklung",
         "items": [
-          { "q": "Erstellen Sie individuelle Websites oder verwenden Sie Templates?", "a": "Wir erstellen hauptsächlich individuelle Websites, die auf Ihre spezifischen Bedürfnisse zugeschnitten sind. Wir können auch Premium-Templates anpassen, wenn Sie mit einem kleineren Budget oder schnelleren Zeitrahmen arbeiten." },
-          { "q": "Können Sie meine bestehende Website neu gestalten?", "a": "Ja! Wir bieten komplette Website-Redesigns an, einschliesslich Modernisierung veralteter Designs, Verbesserung der Benutzererfahrung und Migration auf neue Plattformen bei Bedarf." },
-          { "q": "Auf welchen Plattformen entwickeln Sie?", "a": "Wir arbeiten mit verschiedenen Technologien wie Webflow, Astro, React, Next.js, n8n und individuellen Lösungen. Wir empfehlen die beste Plattform basierend auf Ihren Anforderungen, Budget und langfristigen Zielen." },
-          { "q": "Kann ich die Website selbst bearbeiten?", "a": "Wir verwenden benutzerfreundliche Content-Management-Systeme (CMS), damit Sie Texte, Bilder und Blogbeiträge ohne technische Kenntnisse aktualisieren können. Wir bieten Schulungen und Dokumentation an." },
-          { "q": "Wem gehört die Website?", "a": "Sobald alle Rechnungen bezahlt sind, wird das vollständige Eigentum an der Website und allen von uns erstellten Designs an Sie übertragen." },
-          { "q": "Ich habe das Design – können Sie nur die Entwicklung übernehmen?", "a": "Wenn Sie bereits das Design haben, können wir nur die Entwicklung übernehmen. Wir besprechen Ihr Design gemeinsam und passen die Preisgestaltung entsprechend an." },
-          { "q": "Wie schnell kann meine Website fertig sein?", "a": "Die Zeitrahmen variieren je nach Grösse und Komplexität Ihrer Website. Nach unserem Erstgespräch geben wir Ihnen eine klare Schätzung für Design- und Entwicklungsphasen." },
-          { "q": "Was ist Webflow?", "a": "Webflow ist eine moderne Website-Plattform, mit der wir schnell vollständig individuelle, hochwertige Websites erstellen können – mit einfacher Bearbeitung, grossartiger Leistung und problemlosem Hosting." }
+          {
+            "q": "Erstellen Sie individuelle Websites oder verwenden Sie Templates?",
+            "a": "Wir erstellen hauptsächlich individuelle Websites, die auf Ihre spezifischen Bedürfnisse zugeschnitten sind. Wir können auch Premium-Templates anpassen, wenn Sie mit einem kleineren Budget oder schnelleren Zeitrahmen arbeiten."
+          },
+          {
+            "q": "Können Sie meine bestehende Website neu gestalten?",
+            "a": "Ja! Wir bieten komplette Website-Redesigns an, einschliesslich Modernisierung veralteter Designs, Verbesserung der Benutzererfahrung und Migration auf neue Plattformen bei Bedarf."
+          },
+          {
+            "q": "Auf welchen Plattformen entwickeln Sie?",
+            "a": "Wir arbeiten mit verschiedenen Technologien wie Webflow, Astro, React, Next.js, n8n und individuellen Lösungen. Wir empfehlen die beste Plattform basierend auf Ihren Anforderungen, Budget und langfristigen Zielen."
+          },
+          {
+            "q": "Kann ich die Website selbst bearbeiten?",
+            "a": "Wir verwenden benutzerfreundliche Content-Management-Systeme (CMS), damit Sie Texte, Bilder und Blogbeiträge ohne technische Kenntnisse aktualisieren können. Wir bieten Schulungen und Dokumentation an."
+          },
+          {
+            "q": "Wem gehört die Website?",
+            "a": "Sobald alle Rechnungen bezahlt sind, wird das vollständige Eigentum an der Website und allen von uns erstellten Designs an Sie übertragen."
+          },
+          {
+            "q": "Ich habe das Design – können Sie nur die Entwicklung übernehmen?",
+            "a": "Wenn Sie bereits das Design haben, können wir nur die Entwicklung übernehmen. Wir besprechen Ihr Design gemeinsam und passen die Preisgestaltung entsprechend an."
+          },
+          {
+            "q": "Wie schnell kann meine Website fertig sein?",
+            "a": "Die Zeitrahmen variieren je nach Grösse und Komplexität Ihrer Website. Nach unserem Erstgespräch geben wir Ihnen eine klare Schätzung für Design- und Entwicklungsphasen."
+          },
+          {
+            "q": "Was ist Webflow?",
+            "a": "Webflow ist eine moderne Website-Plattform, mit der wir schnell vollständig individuelle, hochwertige Websites erstellen können – mit einfacher Bearbeitung, grossartiger Leistung und problemlosem Hosting."
+          }
         ]
       },
       {
         "label": "KI-Automatisierungen",
         "items": [
-          { "q": "Was ist KI-Automatisierung und wie kann sie meinem Unternehmen helfen?", "a": "KI-Automatisierung nutzt künstliche Intelligenz, um repetitive Aufgaben zu erledigen, Daten zu analysieren oder Prozesse zu optimieren. Beispiele sind Kundensupport-Chatbots, Dateneingabe, E-Mail-Antworten, Inhaltserstellung und mehr. Ziel ist es, dass Sie sich auf wertvolle Arbeit konzentrieren und Fehler reduzieren können." },
-          { "q": "Brauche ich technisches Wissen, um KI-Automatisierungstools zu nutzen?", "a": "Nein! Wir entwickeln benutzerfreundliche Lösungen, die sich nahtlos in Ihre bestehenden Arbeitsabläufe integrieren. Wir bieten Schulungen und Dokumentation an, damit Sie die Tools sicher nutzen können." }
+          {
+            "q": "Was ist KI-Automatisierung und wie kann sie meinem Unternehmen helfen?",
+            "a": "KI-Automatisierung nutzt künstliche Intelligenz, um repetitive Aufgaben zu erledigen, Daten zu analysieren oder Prozesse zu optimieren. Beispiele sind Kundensupport-Chatbots, Dateneingabe, E-Mail-Antworten, Inhaltserstellung und mehr. Ziel ist es, dass Sie sich auf wertvolle Arbeit konzentrieren und Fehler reduzieren können."
+          },
+          {
+            "q": "Brauche ich technisches Wissen, um KI-Automatisierungstools zu nutzen?",
+            "a": "Nein! Wir entwickeln benutzerfreundliche Lösungen, die sich nahtlos in Ihre bestehenden Arbeitsabläufe integrieren. Wir bieten Schulungen und Dokumentation an, damit Sie die Tools sicher nutzen können."
+          }
         ]
       },
       {
         "label": "Wartung",
         "items": [
-          { "q": "Bieten Sie langfristigen Support an?", "a": "Wir bieten Wartungspakete an, die Fehlerbehebungen, Inhaltsaktualisierungen und technischen Support umfassen. Wir bieten auch einmaligen Support für spezifische Bedürfnisse an." }
+          {
+            "q": "Bieten Sie langfristigen Support an?",
+            "a": "Wir bieten Wartungspakete an, die Fehlerbehebungen, Inhaltsaktualisierungen und technischen Support umfassen. Wir bieten auch einmaligen Support für spezifische Bedürfnisse an."
+          }
         ]
       }
     ]

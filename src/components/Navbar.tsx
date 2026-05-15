@@ -14,7 +14,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(isHome ? '#' : '');
 
-  const getHref = (hash: string) => isHome ? hash : `/${hash}`;
+  const getHref = (href: string) => (href.startsWith("#") ? (isHome ? href : `/${href}`) : href);
 
   const navLinks = [
     { label: t('nav.home'), href: '#' },
@@ -22,6 +22,7 @@ const Navbar = () => {
     { label: t('nav.services'), href: '#services' },
     { label: t('nav.pricing'), href: '#pricing' },
     { label: t('nav.ourWork'), href: '#portfolio' },
+    { label: t('nav.insights'), href: '/insights' },
   ];
   useEffect(() => {
     if (!isHome) {
@@ -112,11 +113,15 @@ const Navbar = () => {
                   }
                 }}
                 className={`relative px-4 py-1.5 rounded-full text-[15px] font-body tracking-wide transition-all duration-200 ${
-                  isHome && activeLink === link.href
+                  (isHome && activeLink === link.href) || (!isHome && location.pathname === link.href)
                     ? 'text-off-white'
                     : 'text-off-white/80 hover:text-gold-hover'
                 }`}
-                style={isHome && activeLink === link.href ? { boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.15)' } : {}}
+                style={
+                  (isHome && activeLink === link.href) || (!isHome && location.pathname === link.href)
+                    ? { boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.15)' }
+                    : {}
+                }
               >
                 {link.label}
               </a>

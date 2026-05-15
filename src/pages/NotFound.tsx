@@ -41,6 +41,14 @@ const NotFound = () => {
             >
               View Portfolio Projects
             </Link>
+            <div>
+              <Link
+                to="/insights"
+                className="inline-block mt-3 text-sm font-body text-off-white/85 hover:text-gold-text transition-colors underline underline-offset-2"
+              >
+                Read Insights
+              </Link>
+            </div>
           </div>
         </div>
       </main>

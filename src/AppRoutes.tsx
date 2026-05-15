@@ -5,6 +5,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Apply from "./pages/Apply";
 import Contact from "./pages/Contact";
 import CaseStudyPage from "./pages/CaseStudyPage";
+import Insights from "./pages/Insights";
+import InsightPost from "./pages/InsightPost";
 import NotFound from "./pages/NotFound";
 
 const AppRoutes = () => (
@@ -15,6 +17,8 @@ const AppRoutes = () => (
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/apply" element={<Apply />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/insights" element={<Insights />} />
+      <Route path="/insights/:slug" element={<InsightPost />} />
       <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
