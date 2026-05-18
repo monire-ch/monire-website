@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import ContactModal from '@/components/ContactModal';
 import BrandButton from '@/components/BrandButton';
+import { trackEvent } from '@/lib/analytics';
 
 const steps = [
   {
@@ -91,7 +92,15 @@ const Apply = () => {
 
           <ScrollReveal>
             <div className="flex items-center gap-4">
-              <BrandButton variant="secondary" className="text-sm" onClick={() => setContactOpen(true)}>
+              <BrandButton
+                variant="secondary"
+                className="text-sm"
+                onClick={() => {
+                  // Configure this as a conversion event in the GA4 property UI.
+                  trackEvent('contact_click', { location: 'apply', label: 'apply', page_path: window.location.pathname });
+                  setContactOpen(true);
+                }}
+              >
                 Apply now
               </BrandButton>
             </div>
@@ -102,7 +111,7 @@ const Apply = () => {
 
       <div className="border-t border-off-white/10 mx-6" />
       <Footer hideWave />
-      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} source="apply" />
     </div>
   );
 };

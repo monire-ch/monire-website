@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-const COOKIE_CONSENT_KEY = "cookie-consent-v1";
-
-type ConsentChoice = "accepted" | "rejected";
+import { ANALYTICS_CONSENT_EVENT, COOKIE_CONSENT_KEY, type ConsentChoice } from "@/lib/consent";
 
 const CookieBanner = () => {
   const [visible, setVisible] = useState(false);
@@ -15,6 +12,7 @@ const CookieBanner = () => {
 
   const setConsent = (choice: ConsentChoice) => {
     window.localStorage.setItem(COOKIE_CONSENT_KEY, choice);
+    window.dispatchEvent(new CustomEvent(ANALYTICS_CONSENT_EVENT, { detail: { choice } }));
     setVisible(false);
   };
 

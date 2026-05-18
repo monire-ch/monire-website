@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE } from "@/config/insightsPosts";
 import { SITE_URL } from "@/lib/seo";
+import { trackEvent } from "@/lib/analytics";
 
 const formatDate = (value: string) =>
   new Intl.DateTimeFormat("en-CH", {
@@ -46,7 +47,18 @@ const Insights = () => {
           <ul className="grid grid-cols-1 gap-5">
             {INSIGHTS_POSTS.map((post) => (
               <li key={post.slug}>
-                <Link to={`${INSIGHTS_ROUTE_BASE}/${post.slug}`} className="block group">
+                <Link
+                  to={`${INSIGHTS_ROUTE_BASE}/${post.slug}`}
+                  onClick={() =>
+                    trackEvent("blog_cta_click", {
+                      location: "insights_listing",
+                      label: post.slug,
+                      destination: `${INSIGHTS_ROUTE_BASE}/${post.slug}`,
+                      page_path: window.location.pathname,
+                    })
+                  }
+                  className="block group"
+                >
                   <article className="rounded-xl border border-border bg-card/80 p-6 md:p-8 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-main-teal/40 group-hover:bg-card group-hover:shadow-[0_12px_30px_rgba(5,32,38,0.12)]">
                     <p className="text-sm font-body text-main-teal mb-2">
                       <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>

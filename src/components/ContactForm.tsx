@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import BrandButton from "./BrandButton";
+import { getFormAttributionFields, trackEvent } from "@/lib/analytics";
 
 const SERVICE_OPTIONS = [
   "Web Design",
@@ -20,6 +21,7 @@ interface ContactFormProps {
   variant: "modal" | "page";
   formName: string;
   onClose?: () => void;
+  formLocation?: string;
 }
 
 interface SelectProps {
@@ -179,7 +181,7 @@ const MultiSelectField: FC<MultiSelectProps> = ({
   );
 };
 
-const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
+const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLocation }) => {
   const { t } = useTranslation();
   const [services, setServices] = useState<string[]>([]);
   const [budget, setBudget] = useState("");
@@ -188,13 +190,15 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
   const [submitError, setSubmitError] = useState(false);
   const [attempted, setAttempted] = useState(false);
   const [fieldValues, setFieldValues] = useState({ fullName: "", email: "", message: "" });
+  const attributionFields = getFormAttributionFields();
 
   const isModal = variant === "modal";
+  const locationLabel = formLocation ?? (isModal ? "modal" : "contact_page");
+  const emailValid = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim());
 
   const errors = {
     fullName: attempted && !fieldValues.fullName.trim(),
-    email:
-      attempted && (!fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim())),
+    email: attempted && (!fieldValues.email.trim() || !emailValid),
     service: attempted && services.length === 0,
     message: attempted && !fieldValues.message.trim(),
     agreed: attempted && !agreed,
@@ -204,31 +208,58 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
     e.preventDefault();
     setAttempted(true);
     setSubmitError(false);
+    trackEvent("form_submit_attempt", {
+      form_location: locationLabel,
+      service: services.join(","),
+      page_path: window.location.pathname,
+    });
 
-    if (
-      !fieldValues.fullName.trim() ||
-      !fieldValues.email.trim() ||
-      !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim()) ||
-      services.length === 0 ||
-      !fieldValues.message.trim() ||
-      !agreed
-    ) {
+    const validationFailures: string[] = [];
+    if (!fieldValues.fullName.trim()) validationFailures.push("full_name_required");
+    if (!fieldValues.email.trim()) validationFailures.push("email_required");
+    if (fieldValues.email.trim() && !emailValid) validationFailures.push("email_invalid");
+    if (services.length === 0) validationFailures.push("service_required");
+    if (!fieldValues.message.trim()) validationFailures.push("message_required");
+    if (!agreed) validationFailures.push("terms_required");
+
+    if (validationFailures.length > 0) {
+      trackEvent("form_submit_error", {
+        form_location: locationLabel,
+        error_type: "validation",
+        error_message: validationFailures.join("|"),
+        error_fields: validationFailures.join(","),
+        page_path: window.location.pathname,
+      });
       return;
     }
 
     const formData = new FormData(e.currentTarget);
+    const payload = new URLSearchParams();
+    formData.forEach((value, key) => {
+      if (typeof value === "string") payload.append(key, value);
+    });
 
     try {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
+        body: payload.toString(),
       });
       if (!response.ok) {
-        throw new Error("Form submission failed");
+        throw new Error("server_error");
       }
+      // Configure this as a conversion event in the GA4 property UI.
+      trackEvent("form_submit_success", {
+        form_location: locationLabel,
+        page_path: window.location.pathname,
+      });
       setSubmitted(true);
-    } catch {
+    } catch (error) {
+      trackEvent("form_submit_error", {
+        form_location: locationLabel,
+        error_type: error instanceof Error && error.message === "server_error" ? "server" : "network",
+        page_path: window.location.pathname,
+      });
       setSubmitError(true);
     }
   };
@@ -263,6 +294,9 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="bot-field" />
+      {Object.entries(attributionFields).map(([key, value]) => (
+        <input key={key} type="hidden" name={key} value={value} />
+      ))}
 
       {isModal ? (
         <>
@@ -439,7 +473,18 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
         >
           <p className="text-red-200 text-sm font-body">
             There was a problem sending your message. Please try again or contact us at{" "}
-            <a href="mailto:hello@monire.ch" className="underline text-red-100 hover:text-white transition-colors">
+            <a
+              href="mailto:hello@monire.ch"
+              onClick={() => {
+                // Configure this as a conversion event in the GA4 property UI.
+                trackEvent("email_click", {
+                  location: `${locationLabel}_error_panel`,
+                  destination: "mailto:hello@monire.ch",
+                  page_path: window.location.pathname,
+                });
+              }}
+              className="underline text-red-100 hover:text-white transition-colors"
+            >
               hello@monire.ch
             </a>
             .

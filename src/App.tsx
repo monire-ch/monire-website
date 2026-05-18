@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./AppRoutes";
 import CookieBanner from "./components/CookieBanner";
+import AnalyticsManager from "./components/AnalyticsManager";
 
 const queryClient = new QueryClient();
 
@@ -14,6 +15,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AnalyticsManager />
         <AppRoutes />
         <CookieBanner />
       </BrowserRouter>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import logo from '@/assets/monire_logo.png';
 import SocialMediaIcon from '@/components/SocialMediaIcon';
 import { SOCIAL_LINKS } from '@/config/socialLinks';
+import { trackEvent } from '@/lib/analytics';
 
 const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const { t } = useTranslation();
@@ -54,13 +55,26 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               {navItems.map((item) => (
                 <li key={item.href}>
                   {item.href.startsWith('/') ? (
-                    <Link to={item.href} className="text-off-white text-base font-body hover:text-gold-text transition-colors text-left">
+                    <Link
+                      to={item.href}
+                      onClick={() => {
+                        if (item.href === '/contact') {
+                          trackEvent('footer_contact_click', { location: 'footer', destination: item.href, page_path: window.location.pathname });
+                          // Configure this as a conversion event in the GA4 property UI.
+                          trackEvent('contact_click', { location: 'footer', label: 'footer', destination: item.href, page_path: window.location.pathname });
+                        }
+                      }}
+                      className="text-off-white text-base font-body hover:text-gold-text transition-colors text-left"
+                    >
                       {item.label}
                     </Link>
                   ) : (
                     <a
                       href={item.href}
                       onClick={(e) => {
+                        if (item.href === '#pricing') {
+                          trackEvent('pricing_nav_click', { location: 'footer', page_path: window.location.pathname });
+                        }
                         if (window.location.pathname !== '/') {
                           e.preventDefault();
                           navigate('/' + item.href);
@@ -81,7 +95,15 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
             <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.contact')}</p>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:hello@monire.ch" className="text-gold-text text-base font-body hover:text-gold-hover transition-colors">
+                <a
+                  href="mailto:hello@monire.ch"
+                  onClick={() => {
+                    trackEvent('footer_contact_click', { location: 'footer', page_path: window.location.pathname });
+                    // Configure this as a conversion event in the GA4 property UI.
+                    trackEvent('email_click', { location: 'footer', destination: 'mailto:hello@monire.ch', page_path: window.location.pathname });
+                  }}
+                  className="text-gold-text text-base font-body hover:text-gold-hover transition-colors"
+                >
                   hello@monire.ch
                 </a>
               </li>

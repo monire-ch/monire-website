@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE, getInsightPostBySlug } from "@/config/insightsPosts";
 import NotFound from "@/pages/NotFound";
 import { SITE_URL } from "@/lib/seo";
+import { trackEvent } from "@/lib/analytics";
 
 const formatDate = (value: string) =>
   new Intl.DateTimeFormat("en-CH", {
@@ -65,11 +66,25 @@ const InsightPost = () => {
       }
     : null;
 
+  const handleInsightLinkClick = (event: React.MouseEvent<HTMLElement>) => {
+    const target = event.target as HTMLElement | null;
+    const anchor = target?.closest("a");
+    if (!anchor) return;
+    const href = anchor.getAttribute("href");
+    if (!href) return;
+
+    trackEvent("blog_cta_click", {
+      location: "insight_post",
+      destination: href,
+      page_path: window.location.pathname,
+    });
+  };
+
   return (
     <>
       <Navbar />
       <main className="bg-background min-h-screen pt-36 md:pt-44 pb-20 px-6">
-        <article className="max-w-3xl mx-auto">
+        <article className="max-w-3xl mx-auto" onClickCapture={handleInsightLinkClick}>
           <p className="eyebrow-pill eyebrow-pill-light mb-5 inline-block">Insights</p>
           <p className="text-sm font-body text-main-teal mb-4">
             <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
