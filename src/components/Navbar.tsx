@@ -15,6 +15,11 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState(isHome ? '#' : '');
 
   const getHref = (href: string) => (href.startsWith("#") ? (isHome ? href : `/${href}`) : href);
+  const isPathLinkActive = (href: string) =>
+    !href.startsWith('#') &&
+    (location.pathname === href || location.pathname.startsWith(`${href}/`));
+  const isLinkActive = (href: string) =>
+    (isHome && activeLink === href) || (!isHome && isPathLinkActive(href));
 
   const navLinks = [
     { label: t('nav.home'), href: '#' },
@@ -113,12 +118,12 @@ const Navbar = () => {
                   }
                 }}
                 className={`relative px-4 py-1.5 rounded-full text-[15px] font-body tracking-wide transition-all duration-200 ${
-                  (isHome && activeLink === link.href) || (!isHome && location.pathname === link.href)
+                  isLinkActive(link.href)
                     ? 'text-off-white'
                     : 'text-off-white/80 hover:text-gold-hover'
                 }`}
                 style={
-                  (isHome && activeLink === link.href) || (!isHome && location.pathname === link.href)
+                  isLinkActive(link.href)
                     ? { boxShadow: 'inset 0 0 0 1px rgba(207,169,71,0.15)' }
                     : {}
                 }
@@ -197,10 +202,15 @@ const Navbar = () => {
                       key={link.href}
                       href={getHref(link.href)}
                       onClick={() => { setActiveLink(link.href); setMobileOpen(false); }}
+                      aria-current={isLinkActive(link.href) ? 'page' : undefined}
                       className="group block py-5 border-b border-off-white/[0.07] transition-colors duration-200"
                       style={{ animationDelay: `${i * 40}ms` }}
                     >
-                      <span className="text-off-white text-lg font-body tracking-wide group-hover:text-gold-hover transition-colors duration-200">
+                      <span className={`text-lg font-body tracking-wide transition-colors duration-200 ${
+                        isLinkActive(link.href)
+                          ? 'text-gold-text'
+                          : 'text-off-white group-hover:text-gold-hover'
+                      }`}>
                         {link.label}
                       </span>
                     </a>
