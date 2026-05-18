@@ -186,15 +186,6 @@ const setSessionFlag = (key: string) => {
   safeStorageSet(window.sessionStorage, key, "1");
 };
 
-const isSocialReferrer = (referrer: string): string | null => {
-  if (!referrer) return null;
-  const normalized = referrer.toLowerCase();
-  if (normalized.includes("linkedin.com")) return "linkedin";
-  if (normalized.includes("instagram.com")) return "instagram";
-  if (normalized.includes("x.com") || normalized.includes("twitter.com") || normalized.includes("t.co")) return "x";
-  return null;
-};
-
 export const captureAttributionFromLanding = (pathWithSearch: string) => {
   if (typeof window === "undefined") return;
   if (!hasAnalyticsConsent()) return;
@@ -243,18 +234,6 @@ export const captureAttributionFromLanding = (pathWithSearch: string) => {
     }
   }
 
-  const socialSource = isSocialReferrer(currentReferrer);
-  if (socialSource) {
-    const socialEventKey = `monire:social_landing:${pathOnly}:${socialSource}`;
-    if (!hasSessionFlag(socialEventKey)) {
-      trackEvent("social_referral_landing", {
-        source: socialSource,
-        landing_page: pathOnly,
-        page_path: pathOnly,
-      });
-      setSessionFlag(socialEventKey);
-    }
-  }
 };
 
 export const getFormAttributionFields = (): Record<string, string> => {

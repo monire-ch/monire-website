@@ -40,7 +40,6 @@ npm run dev
 - `footer_contact_click`
 - `client_brief_download`
 - `utm_landing`
-- `social_referral_landing`
 
 ## GA4 admin setup (exact)
 
