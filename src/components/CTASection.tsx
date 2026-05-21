@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
 import BrandButton from './BrandButton';
+import { trackEvent } from '@/lib/analytics';
 
 const CTASection = () => {
   const { t } = useTranslation();
@@ -14,7 +15,16 @@ const CTASection = () => {
             <p className="text-main-teal/80 text-base md:text-lg font-body max-w-2xl mx-auto mb-8">
               {t('cta.subtext')}
             </p>
-            <BrandButton type="link" to="/contact" variant="primary" showStar className="text-sm">
+            <BrandButton
+              type="link"
+              to="/contact"
+              onClick={() => {
+                trackEvent('contact_click', { location: 'bottom_cta', label: 'bottom_cta', destination: '/contact', page_path: window.location.pathname });
+              }}
+              variant="primary"
+              showStar
+              className="text-sm"
+            >
               {t('cta.button')}
             </BrandButton>
           </div>

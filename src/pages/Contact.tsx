@@ -6,6 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
 import SocialMediaIcon from "@/components/SocialMediaIcon";
 import { SOCIAL_LINKS } from "@/config/socialLinks";
+import { trackEvent } from "@/lib/analytics";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -49,6 +50,13 @@ const Contact = () => {
                   </h2>
                   <a
                     href="mailto:hello@monire.ch"
+                    onClick={() => {
+                      trackEvent("email_click", {
+                        location: "contact_page",
+                        destination: "mailto:hello@monire.ch",
+                        page_path: window.location.pathname,
+                      });
+                    }}
                     className="flex items-center gap-3 text-off-white font-body text-lg hover:text-gold-hover transition-colors group"
                   >
                     <span className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-text/30 group-hover:border-gold-text/60 transition-colors">
@@ -98,7 +106,7 @@ const Contact = () => {
             <div className="lg:col-span-3 lg:order-1">
               <ScrollReveal>
                 <div className="dark-surface-card rounded-2xl p-8 md:p-10 border border-off-white/[0.07] overflow-visible">
-                  <ContactForm variant="page" formName="contact" />
+                  <ContactForm variant="page" formName="contact" formLocation="contact_page" />
                 </div>
               </ScrollReveal>
             </div>

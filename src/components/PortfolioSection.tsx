@@ -8,6 +8,7 @@ import snipSquad from '@/assets/portfolio/snip-squad_full.webp';
 import systemically from '@/assets/portfolio/systemically_full.webp';
 import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
+import { trackEvent } from '@/lib/analytics';
 
 const projectImages = [snipSquad, systemically, towarowa, n8nPreview];
 
@@ -97,7 +98,18 @@ const PortfolioSection = () => {
                       key={project.title}
                       className="min-w-0 shrink-0 grow-0 basis-full px-2"
                     >
-                      <Link to={project.link} className="block group">
+                      <Link
+                        to={project.link}
+                        onClick={() =>
+                          trackEvent('case_study_click', {
+                            location: 'portfolio',
+                            case_study: project.link.replace('/case-studies/', ''),
+                            destination: project.link,
+                            page_path: window.location.pathname,
+                          })
+                        }
+                        className="block group"
+                      >
                         <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${i === 3 ? 'bg-[#0a0a0a]' : 'bg-neutral-card'}`}>
                           <img
                             src={projectImages[i]}

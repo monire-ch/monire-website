@@ -12,7 +12,7 @@ const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
   '/': {
     title: 'Moniré | Web Design, Web Development & AI Automations in Zurich, Switzerland',
     description:
-      'Moniré is a digital studio offering web design, web development, and AI automations in Zurich and across Switzerland.',
+      'Moniré is a digital studio offering web design, web development, and AI automations. Based in Zurich, serving clients worldwide.',
     keywords: ['Moniré', 'web design Zurich', 'web development Zurich', 'website design Switzerland', 'AI automation Switzerland', 'workflow automation Zurich', 'Webflow development Zurich', 'small business web design Switzerland'],
   },
   '/contact': {

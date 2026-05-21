@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useFontsLoaded } from '@/hooks/useFontsLoaded';
 import goldFill from '@/assets/gold-fill.webp';
 import BrandButton from './BrandButton';
+import { trackEvent } from '@/lib/analytics';
 
 interface HeroSectionProps {
   onCtaClick?: () => void;
@@ -78,7 +79,10 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         >
           <BrandButton
             type="button"
-            onClick={() => navigate('/contact')}
+            onClick={() => {
+              trackEvent('contact_click', { location: 'hero', label: 'hero', destination: '/contact', page_path: window.location.pathname });
+              navigate('/contact');
+            }}
             variant="hero"
             showStar
             className="text-base"

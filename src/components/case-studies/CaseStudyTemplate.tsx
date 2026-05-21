@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import type { CaseStudyConfig } from '@/config/caseStudies';
+import { trackEvent } from '@/lib/analytics';
 
 type CaseStudyTemplateProps = {
   project: CaseStudyConfig;
@@ -59,6 +60,14 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               href={project.websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackEvent('case_study_external_site_click', {
+                  location: 'case_study',
+                  case_study: project.title.toLowerCase().replace(/\s+/g, '-'),
+                  destination: project.websiteUrl,
+                  page_path: window.location.pathname,
+                })
+              }
               className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
             >
               {project.websiteLabel ?? 'Visit Website'}

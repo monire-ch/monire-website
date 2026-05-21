@@ -1,17 +1,20 @@
 import { FC, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ContactForm from "./ContactForm";
+import { trackEvent } from "@/lib/analytics";
 
 interface ContactModalProps {
   open: boolean;
   onClose: () => void;
+  source?: string;
 }
 
-const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
+const ContactModal: FC<ContactModalProps> = ({ open, onClose, source = "unknown" }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
     if (!open) return;
+    trackEvent("contact_modal_open", { location: source, label: source, page_path: window.location.pathname });
 
     const scrollY = window.scrollY;
     const originalHtmlOverflow = document.documentElement.style.overflow;
@@ -34,7 +37,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
       document.body.style.width = originalBodyWidth;
       window.scrollTo(0, scrollY);
     };
-  }, [open]);
+  }, [open, source]);
 
   if (!open) return null;
 
@@ -54,7 +57,7 @@ const ContactModal: FC<ContactModalProps> = ({ open, onClose }) => {
           </button>
         </div>
 
-        <ContactForm variant="modal" formName="contact" onClose={onClose} />
+        <ContactForm variant="modal" formName="contact" onClose={onClose} formLocation={source} />
       </div>
     </div>
   );

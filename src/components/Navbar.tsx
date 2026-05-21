@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import ContactModal from './ContactModal';
 import BrandButton from './BrandButton';
+import { trackEvent } from '@/lib/analytics';
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -20,6 +21,10 @@ const Navbar = () => {
     (location.pathname === href || location.pathname.startsWith(`${href}/`));
   const isLinkActive = (href: string) =>
     (isHome && activeLink === href) || (!isHome && isPathLinkActive(href));
+  const openContactModal = (source: string) => {
+    trackEvent('contact_click', { location: 'navbar', label: source, page_path: location.pathname });
+    setContactOpen(true);
+  };
 
   const navLinks = [
     { label: t('nav.home'), href: '#' },
@@ -111,6 +116,9 @@ const Navbar = () => {
                 href={getHref(link.href)}
                 onClick={(e) => {
                   setActiveLink(link.href);
+                  if (link.href === '#pricing') {
+                    trackEvent('pricing_nav_click', { location: 'navbar', page_path: location.pathname });
+                  }
                   if (isHome && link.href === '#') {
                     e.preventDefault();
                     window.history.pushState(null, '', '/#');
@@ -136,7 +144,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             {/* CTA */}
             <BrandButton
-              onClick={() => setContactOpen(true)}
+              onClick={() => openContactModal('nav')}
               variant="primary"
               showStar
               className="flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold tracking-widest"
@@ -201,7 +209,13 @@ const Navbar = () => {
                     <a
                       key={link.href}
                       href={getHref(link.href)}
-                      onClick={() => { setActiveLink(link.href); setMobileOpen(false); }}
+                      onClick={() => {
+                        if (link.href === '#pricing') {
+                          trackEvent('pricing_nav_click', { location: 'mobile_nav', page_path: location.pathname });
+                        }
+                        setActiveLink(link.href);
+                        setMobileOpen(false);
+                      }}
                       aria-current={isLinkActive(link.href) ? 'page' : undefined}
                       className="group block py-5 border-b border-off-white/[0.07] transition-colors duration-200"
                       style={{ animationDelay: `${i * 40}ms` }}
@@ -219,7 +233,10 @@ const Navbar = () => {
 
                 <div className="px-6 pb-10 pt-4 mt-auto">
                   <button
-                    onClick={() => { setContactOpen(true); setMobileOpen(false); }}
+                    onClick={() => {
+                      openContactModal('nav');
+                      setMobileOpen(false);
+                    }}
                     className="w-full py-3.5 rounded-full text-base font-body font-semibold uppercase tracking-widest text-off-white transition-all duration-200"
                     style={{
                       background: 'linear-gradient(135deg, #0F4B5A 0%, #136175 100%)',
@@ -235,7 +252,7 @@ const Navbar = () => {
         </div>
       )}
 
-      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} source="nav" />
     </>
   );
 };

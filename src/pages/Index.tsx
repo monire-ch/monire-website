@@ -59,6 +59,7 @@ const Index = () => {
         <ContactModal
           open={contactOpen}
           onClose={() => setContactOpen(false)}
+          source="hero"
         />
       </div>
       <JsonLd data={businessSchema} />

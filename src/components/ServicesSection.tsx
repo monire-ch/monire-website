@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import BrandButton from "./BrandButton";
 import { SECTION_WRAPPER_GRADIENT } from "@/lib/theme";
+import { trackEvent } from "@/lib/analytics";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -87,7 +88,21 @@ const ServicesSection = () => {
                 {(caseStudyLinks[active.title] || insightLinks[active.title]) && (
                   <div className="space-y-3">
                     {caseStudyLinks[active.title] ? (
-                      <BrandButton type="link" to={caseStudyLinks[active.title]} variant="secondary" showStar className="text-sm">
+                      <BrandButton
+                        type="link"
+                        to={caseStudyLinks[active.title]}
+                        onClick={() =>
+                          trackEvent("case_study_click", {
+                            location: "services_section",
+                            service: active.title,
+                            destination: caseStudyLinks[active.title],
+                            page_path: window.location.pathname,
+                          })
+                        }
+                        variant="secondary"
+                        showStar
+                        className="text-sm"
+                      >
                         {t("services.cta", "Latest case study")}
                       </BrandButton>
                     ) : null}
@@ -95,6 +110,14 @@ const ServicesSection = () => {
                       <div>
                         <Link
                           to={insightLinks[active.title].href}
+                          onClick={() =>
+                            trackEvent("blog_cta_click", {
+                              location: "services_section",
+                              service: active.title,
+                              destination: insightLinks[active.title].href,
+                              page_path: window.location.pathname,
+                            })
+                          }
                           className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
                         >
                           {insightLinks[active.title].label}
@@ -136,7 +159,21 @@ const ServicesSection = () => {
                         {(caseStudyLinks[item.title] || insightLinks[item.title]) && (
                           <div className="pb-5 space-y-3">
                             {caseStudyLinks[item.title] ? (
-                              <BrandButton type="link" to={caseStudyLinks[item.title]} variant="secondary" showStar className="text-sm">
+                              <BrandButton
+                                type="link"
+                                to={caseStudyLinks[item.title]}
+                                onClick={() =>
+                                  trackEvent("case_study_click", {
+                                    location: "services_section_mobile",
+                                    service: item.title,
+                                    destination: caseStudyLinks[item.title],
+                                    page_path: window.location.pathname,
+                                  })
+                                }
+                                variant="secondary"
+                                showStar
+                                className="text-sm"
+                              >
                                 {t("services.cta", "Latest case study")}
                               </BrandButton>
                             ) : null}
@@ -144,6 +181,14 @@ const ServicesSection = () => {
                               <div>
                                 <Link
                                   to={insightLinks[item.title].href}
+                                  onClick={() =>
+                                    trackEvent("blog_cta_click", {
+                                      location: "services_section_mobile",
+                                      service: item.title,
+                                      destination: insightLinks[item.title].href,
+                                      page_path: window.location.pathname,
+                                    })
+                                  }
                                   className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
                                 >
                                   {insightLinks[item.title].label}

@@ -12,6 +12,7 @@ import {
   WEB_DESIGN_PLAN_ORDER,
 } from '@/config/pricing';
 import BrandButton from './BrandButton';
+import { trackEvent } from '@/lib/analytics';
 
 
 const tabKeys = ['webDesign', 'automation'] as const;
@@ -39,6 +40,10 @@ const PricingSection = () => {
   const handleCurrencyChange = (nextCurrency: DisplayCurrency) => {
     setCurrency(nextCurrency);
     window.localStorage.setItem(CURRENCY_STORAGE_KEY, nextCurrency);
+  };
+  const openContactModal = (label: string) => {
+    trackEvent('contact_click', { location: 'pricing', label, page_path: window.location.pathname });
+    setContactOpen(true);
   };
 
   return (
@@ -114,16 +119,40 @@ const PricingSection = () => {
                 {t('pricing.automationBlock.desc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                <BrandButton variant="primary" showStar className="text-sm w-full sm:w-auto !py-2.5" onClick={() => setContactOpen(true)}>
+                <BrandButton
+                  variant="primary"
+                  showStar
+                  className="text-sm w-full sm:w-auto !py-2.5"
+                  onClick={() => openContactModal('ai_automation_get_started')}
+                >
                   {t('pricing.automationBlock.cta')}
                 </BrandButton>
-                <BrandButton variant="secondary" className="text-sm w-full sm:w-auto !py-2.5" onClick={() => navigate('/case-studies/expense-receipt-automation')}>
+                <BrandButton
+                  variant="secondary"
+                  className="text-sm w-full sm:w-auto !py-2.5"
+                  onClick={() => {
+                    trackEvent('case_study_click', {
+                      location: 'pricing',
+                      case_study: 'expense-receipt-automation',
+                      destination: '/case-studies/expense-receipt-automation',
+                      page_path: window.location.pathname,
+                    });
+                    navigate('/case-studies/expense-receipt-automation');
+                  }}
+                >
                   {t('pricing.automationBlock.caseStudy')}
                 </BrandButton>
               </div>
               <div className="mt-4">
                 <Link
                   to="/insights/what-ai-automation-actually-means-for-a-small-business"
+                  onClick={() =>
+                    trackEvent('blog_cta_click', {
+                      location: 'pricing',
+                      destination: '/insights/what-ai-automation-actually-means-for-a-small-business',
+                      page_path: window.location.pathname,
+                    })
+                  }
                   className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
                 >
                   What AI automation means for a small business →
@@ -190,7 +219,7 @@ const PricingSection = () => {
                         ))}
                       </ul>
                       <BrandButton
-                        onClick={() => setContactOpen(true)}
+                        onClick={() => openContactModal(plan.name.toLowerCase().replace(/\s+/g, '_'))}
                         variant={plan.featured ? 'primary' : 'secondary'}
                         showStar
                         className={`text-sm w-full ${plan.featured ? '!bg-main-teal hover:!bg-soft-teal' : ''}`}
@@ -215,7 +244,7 @@ const PricingSection = () => {
         )}
       </div>
     </section>
-    <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
+    <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} source="pricing" />
     </>
   );
 };

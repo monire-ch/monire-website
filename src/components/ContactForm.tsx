@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import BrandButton from "./BrandButton";
+import { getFormAttributionFields, trackEvent } from "@/lib/analytics";
 
 const SERVICE_OPTIONS = [
   "Web Design",
@@ -20,6 +21,7 @@ interface ContactFormProps {
   variant: "modal" | "page";
   formName: string;
   onClose?: () => void;
+  formLocation?: string;
 }
 
 interface SelectProps {
@@ -179,7 +181,7 @@ const MultiSelectField: FC<MultiSelectProps> = ({
   );
 };
 
-const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
+const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLocation }) => {
   const { t } = useTranslation();
   const [services, setServices] = useState<string[]>([]);
   const [budget, setBudget] = useState("");
@@ -188,13 +190,15 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
   const [submitError, setSubmitError] = useState(false);
   const [attempted, setAttempted] = useState(false);
   const [fieldValues, setFieldValues] = useState({ fullName: "", email: "", message: "" });
+  const attributionFields = getFormAttributionFields();
 
   const isModal = variant === "modal";
+  const locationLabel = formLocation ?? (isModal ? "modal" : "contact_page");
+  const emailValid = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim());
 
   const errors = {
     fullName: attempted && !fieldValues.fullName.trim(),
-    email:
-      attempted && (!fieldValues.email.trim() || !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim())),
+    email: attempted && (!fieldValues.email.trim() || !emailValid),
     service: attempted && services.length === 0,
     message: attempted && !fieldValues.message.trim(),
     agreed: attempted && !agreed,
@@ -204,20 +208,31 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
     e.preventDefault();
     setAttempted(true);
     setSubmitError(false);
+    trackEvent("form_submit_attempt", {
+      form_location: locationLabel,
+      service: services.join(","),
+      page_path: window.location.pathname,
+    });
 
     if (
       !fieldValues.fullName.trim() ||
       !fieldValues.email.trim() ||
-      !/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim()) ||
+      !emailValid ||
       services.length === 0 ||
       !fieldValues.message.trim() ||
       !agreed
     ) {
+      trackEvent("form_submit_error", {
+        form_location: locationLabel,
+        error_type: "validation",
+        page_path: window.location.pathname,
+      });
       return;
     }
 
     const formData = new FormData(e.currentTarget);
 
+    let serverError = false;
     try {
       const response = await fetch("/", {
         method: "POST",
@@ -225,10 +240,27 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
         body: new URLSearchParams(formData as any).toString(),
       });
       if (!response.ok) {
+        serverError = true;
+        trackEvent("form_submit_error", {
+          form_location: locationLabel,
+          error_type: "server",
+          page_path: window.location.pathname,
+        });
         throw new Error("Form submission failed");
       }
+      trackEvent("form_submit_success", {
+        form_location: locationLabel,
+        page_path: window.location.pathname,
+      });
       setSubmitted(true);
     } catch {
+      if (!serverError) {
+        trackEvent("form_submit_error", {
+          form_location: locationLabel,
+          error_type: "network",
+          page_path: window.location.pathname,
+        });
+      }
       setSubmitError(true);
     }
   };
@@ -263,6 +295,9 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="bot-field" />
+      {Object.entries(attributionFields).map(([key, value]) => (
+        <input key={key} type="hidden" name={key} value={value} />
+      ))}
 
       {isModal ? (
         <>
@@ -439,7 +474,17 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose }) => {
         >
           <p className="text-red-200 text-sm font-body">
             There was a problem sending your message. Please try again or contact us at{" "}
-            <a href="mailto:hello@monire.ch" className="underline text-red-100 hover:text-white transition-colors">
+            <a
+              href="mailto:hello@monire.ch"
+              onClick={() => {
+                trackEvent("email_click", {
+                  location: `${locationLabel}_error_panel`,
+                  destination: "mailto:hello@monire.ch",
+                  page_path: window.location.pathname,
+                });
+              }}
+              className="underline text-red-100 hover:text-white transition-colors"
+            >
               hello@monire.ch
             </a>
             .
