@@ -26,6 +26,7 @@ const LAST_TOUCH_KEY = "monire:last_touch:v1";
 const FIRST_TOUCH_TTL_MS = 90 * 24 * 60 * 60 * 1000;
 let consentDefaultsSet = false;
 let gtagScriptRequested = false;
+let gtagConfigured = false;
 
 const safeStorageGet = (storage: Storage, key: string): string | null => {
   try {
@@ -47,10 +48,22 @@ const ensureDataLayerAndGtag = () => {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer || [];
   if (!window.gtag) {
-    window.gtag = function gtagProxy(...args: unknown[]) {
-      window.dataLayer?.push(args);
+    window.gtag = function gtagProxy() {
+      window.dataLayer?.push(arguments as unknown as object);
     };
   }
+};
+
+const configureGoogleTag = () => {
+  if (!GA_MEASUREMENT_ID || gtagConfigured) return;
+  window.gtag?.("js", new Date());
+  window.gtag?.("config", GA_MEASUREMENT_ID, {
+    send_page_view: false,
+    anonymize_ip: true,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
+  gtagConfigured = true;
 };
 
 export const bootstrapConsentMode = () => {
@@ -70,18 +83,15 @@ const loadGtagScript = () => {
   ensureDataLayerAndGtag();
 
   // Queue init/config immediately so early events after consent are not lost.
-  window.gtag?.("js", new Date());
-  window.gtag?.("config", GA_MEASUREMENT_ID, {
-    send_page_view: false,
-    anonymize_ip: true,
-    allow_google_signals: false,
-    allow_ad_personalization_signals: false,
-  });
+  configureGoogleTag();
 
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  script.onload = () => {};
+  script.onload = () => {
+    // Safe no-op if already configured.
+    configureGoogleTag();
+  };
   script.onerror = () => {};
   document.head.appendChild(script);
   gtagScriptRequested = true;
@@ -256,10 +266,17 @@ export const getFormAttributionFields = (): Record<string, string> => {
   };
 };
 
-export const onConsentEvent = () => {
-  if (typeof window === "undefined") return;
-  window.addEventListener(ANALYTICS_CONSENT_EVENT, (event: Event) => {
+export const onConsentEvent = (): (() => void) | undefined => {
+  if (typeof window === "undefined") return undefined;
+  const handler = (event: Event) => {
     const customEvent = event as CustomEvent<{ choice?: "accepted" | "rejected" }>;
-    updateAnalyticsConsent(customEvent.detail?.choice === "accepted");
-  });
+    const granted = customEvent.detail?.choice === "accepted";
+    updateAnalyticsConsent(granted);
+    if (granted) {
+      // Send first page_view immediately after consent is accepted.
+      trackPageView(`${window.location.pathname}${window.location.hash}`);
+    }
+  };
+  window.addEventListener(ANALYTICS_CONSENT_EVENT, handler);
+  return () => window.removeEventListener(ANALYTICS_CONSENT_EVENT, handler);
 };

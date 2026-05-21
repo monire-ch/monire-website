@@ -13,7 +13,7 @@ const AnalyticsManager = () => {
 
   useEffect(() => {
     initAnalyticsFromConsent();
-    onConsentEvent();
+    const unsubscribeConsent = onConsentEvent();
 
     const onDocumentClick = (event: MouseEvent) => {
       const anchor = (event.target as HTMLElement | null)?.closest("a");
@@ -40,7 +40,10 @@ const AnalyticsManager = () => {
     };
 
     document.addEventListener("click", onDocumentClick);
-    return () => document.removeEventListener("click", onDocumentClick);
+    return () => {
+      document.removeEventListener("click", onDocumentClick);
+      unsubscribeConsent?.();
+    };
   }, []);
 
   useEffect(() => {
