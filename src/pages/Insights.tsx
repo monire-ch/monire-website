@@ -44,9 +44,9 @@ const Insights = () => {
             Practical guidance on web design, automation, and digital decisions that help your business grow.
           </p>
 
-          <ul className="grid grid-cols-1 gap-5">
+          <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {INSIGHTS_POSTS.map((post) => (
-              <li key={post.slug}>
+              <li key={post.slug} className="h-full">
                 <Link
                   to={`${INSIGHTS_ROUTE_BASE}/${post.slug}`}
                   onClick={() =>
@@ -57,17 +57,24 @@ const Insights = () => {
                       page_path: window.location.pathname,
                     })
                   }
-                  className="block group"
+                  className="block h-full group"
                 >
-                  <article className="rounded-xl border border-border bg-card/80 p-6 md:p-8 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-main-teal/40 group-hover:bg-card group-hover:shadow-[0_12px_30px_rgba(5,32,38,0.12)]">
-                    <p className="text-sm font-body text-main-teal mb-2">
+                  <article
+                    className="h-full rounded-xl border p-6 md:p-8 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-[0_16px_30px_rgba(2,28,36,0.34)] flex flex-col"
+                    style={{
+                      background:
+                        "linear-gradient(145deg, rgba(8, 79, 97, 0.98) 0%, rgba(5, 67, 83, 0.98) 55%, rgba(4, 58, 73, 0.98) 100%)",
+                      borderColor: "rgba(183, 152, 78, 0.34)",
+                    }}
+                  >
+                    <p className="text-[13px] font-body tracking-[0.04em] uppercase text-[#BFD0D6] mb-3">
                       <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
                       {" · "}
                       {post.readTimeMinutes} min read
                     </p>
-                    <h2 className="font-display text-2xl md:text-3xl text-foreground mb-3">{post.title}</h2>
-                    <p className="text-base font-body text-foreground/75 mb-5">{post.description}</p>
-                    <span className="text-sm font-body text-main-teal group-hover:text-soft-teal transition-colors underline group-hover:no-underline">
+                    <h2 className="font-display text-2xl md:text-[2rem] leading-[1.1] text-[#F2F4F5] mb-4">{post.title}</h2>
+                    <p className="text-[1.03rem] font-body leading-relaxed text-[#D5E2E7] mb-6">{post.description}</p>
+                    <span className="mt-auto text-[0.96rem] font-body text-[#F1D69A] group-hover:text-[#F6DEAB] transition-colors underline group-hover:no-underline">
                       Read article
                     </span>
                   </article>
