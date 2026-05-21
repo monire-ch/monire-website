@@ -237,7 +237,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as never).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       });
       if (!response.ok) {
         serverError = true;
