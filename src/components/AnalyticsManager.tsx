@@ -23,7 +23,6 @@ const AnalyticsManager = () => {
       const isClientBriefDownload =
         anchor.hasAttribute("download") && href.includes("/documents/client-brief.docx");
       if (inFaqSection && isClientBriefDownload) {
-        // Configure this as a conversion event in the GA4 property UI.
         trackEvent("client_brief_download", {
           location: "faq",
           destination: href,

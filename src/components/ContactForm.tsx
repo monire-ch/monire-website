@@ -248,7 +248,6 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       if (!response.ok) {
         throw new Error("server_error");
       }
-      // Configure this as a conversion event in the GA4 property UI.
       trackEvent("form_submit_success", {
         form_location: locationLabel,
         page_path: window.location.pathname,
@@ -476,7 +475,6 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
             <a
               href="mailto:hello@monire.ch"
               onClick={() => {
-                // Configure this as a conversion event in the GA4 property UI.
                 trackEvent("email_click", {
                   location: `${locationLabel}_error_panel`,
                   destination: "mailto:hello@monire.ch",

@@ -96,7 +96,6 @@ const Apply = () => {
                 variant="secondary"
                 className="text-sm"
                 onClick={() => {
-                  // Configure this as a conversion event in the GA4 property UI.
                   trackEvent('contact_click', { location: 'apply', label: 'apply', page_path: window.location.pathname });
                   setContactOpen(true);
                 }}

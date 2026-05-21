@@ -42,7 +42,6 @@ const PricingSection = () => {
     window.localStorage.setItem(CURRENCY_STORAGE_KEY, nextCurrency);
   };
   const openContactModal = (label: string) => {
-    // Configure this as a conversion event in the GA4 property UI.
     trackEvent('contact_click', { location: 'pricing', label, page_path: window.location.pathname });
     setContactOpen(true);
   };

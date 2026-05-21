@@ -22,7 +22,6 @@ const Navbar = () => {
   const isLinkActive = (href: string) =>
     (isHome && activeLink === href) || (!isHome && isPathLinkActive(href));
   const openContactModal = (source: string) => {
-    // Configure this as a conversion event in the GA4 property UI.
     trackEvent('contact_click', { location: 'navbar', label: source, page_path: location.pathname });
     setContactOpen(true);
   };

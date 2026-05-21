@@ -80,7 +80,6 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           <BrandButton
             type="button"
             onClick={() => {
-              // Configure this as a conversion event in the GA4 property UI.
               trackEvent('contact_click', { location: 'hero', label: 'hero', destination: '/contact', page_path: window.location.pathname });
               navigate('/contact');
             }}

@@ -51,7 +51,6 @@ const Contact = () => {
                   <a
                     href="mailto:hello@monire.ch"
                     onClick={() => {
-                      // Configure this as a conversion event in the GA4 property UI.
                       trackEvent("email_click", {
                         location: "contact_page",
                         destination: "mailto:hello@monire.ch",

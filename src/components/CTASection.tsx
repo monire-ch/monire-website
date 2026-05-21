@@ -19,7 +19,6 @@ const CTASection = () => {
               type="link"
               to="/contact"
               onClick={() => {
-                // Configure this as a conversion event in the GA4 property UI.
                 trackEvent('contact_click', { location: 'bottom_cta', label: 'bottom_cta', destination: '/contact', page_path: window.location.pathname });
               }}
               variant="primary"

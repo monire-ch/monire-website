@@ -263,6 +263,3 @@ export const onConsentEvent = () => {
     updateAnalyticsConsent(customEvent.detail?.choice === "accepted");
   });
 };
-
-export const conversionEventComment =
-  "Configure this as a conversion event in the GA4 property UI.";

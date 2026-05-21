@@ -60,7 +60,6 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                       onClick={() => {
                         if (item.href === '/contact') {
                           trackEvent('footer_contact_click', { location: 'footer', destination: item.href, page_path: window.location.pathname });
-                          // Configure this as a conversion event in the GA4 property UI.
                           trackEvent('contact_click', { location: 'footer', label: 'footer', destination: item.href, page_path: window.location.pathname });
                         }
                       }}
@@ -99,7 +98,6 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                   href="mailto:hello@monire.ch"
                   onClick={() => {
                     trackEvent('footer_contact_click', { location: 'footer', page_path: window.location.pathname });
-                    // Configure this as a conversion event in the GA4 property UI.
                     trackEvent('email_click', { location: 'footer', destination: 'mailto:hello@monire.ch', page_path: window.location.pathname });
                   }}
                   className="text-gold-text text-base font-body hover:text-gold-hover transition-colors"
