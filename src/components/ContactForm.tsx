@@ -214,51 +214,53 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       page_path: window.location.pathname,
     });
 
-    const validationFailures: string[] = [];
-    if (!fieldValues.fullName.trim()) validationFailures.push("full_name_required");
-    if (!fieldValues.email.trim()) validationFailures.push("email_required");
-    if (fieldValues.email.trim() && !emailValid) validationFailures.push("email_invalid");
-    if (services.length === 0) validationFailures.push("service_required");
-    if (!fieldValues.message.trim()) validationFailures.push("message_required");
-    if (!agreed) validationFailures.push("terms_required");
-
-    if (validationFailures.length > 0) {
+    if (
+      !fieldValues.fullName.trim() ||
+      !fieldValues.email.trim() ||
+      !emailValid ||
+      services.length === 0 ||
+      !fieldValues.message.trim() ||
+      !agreed
+    ) {
       trackEvent("form_submit_error", {
         form_location: locationLabel,
         error_type: "validation",
-        error_message: validationFailures.join("|"),
-        error_fields: validationFailures.join(","),
         page_path: window.location.pathname,
       });
       return;
     }
 
     const formData = new FormData(e.currentTarget);
-    const payload = new URLSearchParams();
-    formData.forEach((value, key) => {
-      if (typeof value === "string") payload.append(key, value);
-    });
 
+    let serverError = false;
     try {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: payload.toString(),
+        body: new URLSearchParams(formData as never).toString(),
       });
       if (!response.ok) {
-        throw new Error("server_error");
+        serverError = true;
+        trackEvent("form_submit_error", {
+          form_location: locationLabel,
+          error_type: "server",
+          page_path: window.location.pathname,
+        });
+        throw new Error("Form submission failed");
       }
       trackEvent("form_submit_success", {
         form_location: locationLabel,
         page_path: window.location.pathname,
       });
       setSubmitted(true);
-    } catch (error) {
-      trackEvent("form_submit_error", {
-        form_location: locationLabel,
-        error_type: error instanceof Error && error.message === "server_error" ? "server" : "network",
-        page_path: window.location.pathname,
-      });
+    } catch {
+      if (!serverError) {
+        trackEvent("form_submit_error", {
+          form_location: locationLabel,
+          error_type: "network",
+          page_path: window.location.pathname,
+        });
+      }
       setSubmitError(true);
     }
   };
