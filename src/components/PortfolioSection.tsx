@@ -5,19 +5,11 @@ import { Link } from 'react-router-dom';
 import useEmblaCarousel from 'embla-carousel-react';
 import ScrollReveal from './ScrollReveal';
 import snipSquad from '@/assets/portfolio/snip-squad_full.webp';
+import portcoPreview from '@/assets/portfolio/portco_full.webp';
 import systemically from '@/assets/portfolio/systemically_full.webp';
 import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
 import { trackEvent } from '@/lib/analytics';
-
-const portcoPreview = `data:image/svg+xml;utf8,${encodeURIComponent(`
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
-    <rect width="1200" height="800" fill="#f5f0ea"/>
-    <rect x="150" y="120" width="900" height="560" rx="32" fill="#15424d" opacity="0.95"/>
-    <text x="600" y="365" text-anchor="middle" fill="#f1d28c" font-family="serif" font-size="58">PortCo HR Collective</text>
-    <text x="600" y="430" text-anchor="middle" fill="#f5f0ea" font-family="Arial, sans-serif" font-size="28">Community platform preview</text>
-  </svg>
-`)}`;
 
 const projectImagesByLink: Record<string, string> = {
   '/case-studies/snip-squad': snipSquad,
@@ -32,7 +24,7 @@ const portfolioNavGroups = [
     title: 'Web design & development',
     items: [
       { id: 'web-veterinary', label: 'Veterinary', targetLink: '/case-studies/snip-squad' },
-      { id: 'web-community-platform', label: 'Community Platform', targetLink: '/case-studies/portco-hr-collective' },
+      { id: 'web-community-platform', label: 'Community platform', targetLink: '/case-studies/portco-hr-collective' },
       { id: 'web-consulting', label: 'Consulting', targetLink: '/case-studies/systemically' },
       { id: 'web-real-estate', label: 'Real estate', targetLink: '/case-studies/towarowa' },
     ],
@@ -117,7 +109,7 @@ const PortfolioSection = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-6 items-start">
             {/* Category sidebar — dark teal card like reference */}
             <div className="rounded-2xl p-5" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
               {portfolioNavGroups.map((group, groupIndex) => (
@@ -133,7 +125,7 @@ const PortfolioSection = () => {
                         <button
                           key={item.id}
                           onClick={() => scrollToProject(item.targetLink, item.id)}
-                          className={`w-fit justify-self-center self-center px-3 py-2 text-center font-body text-sm transition-all duration-200 md:w-full md:justify-self-stretch md:self-auto md:px-4 md:py-3 md:text-left ${
+                          className={`w-fit justify-self-center self-center px-3 py-2 text-center font-body text-sm transition-all duration-200 md:justify-self-start md:self-auto md:px-4 md:py-2.5 md:text-left ${
                             isActive
                               ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
                               : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'

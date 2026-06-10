@@ -1,4 +1,6 @@
 import snipSquad from "@/assets/portfolio/snip-squad_full.webp";
+import portco from "@/assets/portfolio/portco_full.webp";
+import portcoLogin from "@/assets/portfolio/portco_login.webp";
 import systemically from "@/assets/portfolio/systemically_full.webp";
 import towarowa from "@/assets/portfolio/towarowa_full.webp";
 import n8nPreview from "@/assets/portfolio/n8n.webp";
@@ -7,6 +9,7 @@ export type CaseStudySection = {
   title: string;
   intro?: string;
   items?: string[];
+  visualImage?: CaseStudyVisualImage;
   visualPlaceholder?: CaseStudyVisualPlaceholder;
 };
 
@@ -18,6 +21,12 @@ export type CaseStudyTestimonial = {
 
 export type CaseStudyVisualPlaceholder = {
   label: string;
+  scrollable?: boolean;
+};
+
+export type CaseStudyVisualImage = {
+  src: string;
+  alt: string;
   scrollable?: boolean;
 };
 
@@ -92,18 +101,17 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     industry: "Private Equity / Professional Networks",
     category: "Branding, Web Design & Development, AI Automation",
     tools: ["WEBFLOW", "MEMBERSTACK", "N8N", "FIGMA"],
-    imagePlaceholder: {
-      label: "Homepage screenshot",
-      scrollable: true,
-    },
+    image: portco,
+    imageAlt: "PortCo HR Collective homepage preview",
     imageScrollable: true,
     sections: [
       {
         title: "Overview:",
         intro:
           "PortCo HR Collective is a peer network for Chief HR Officers working in PE-backed companies across Europe.\n\nThey came with a clear vision: build something that felt as considered and distinctive as the community itself. Not a generic platform, but a real identity with a real presence.",
-        visualPlaceholder: {
-          label: "Login page screenshot",
+        visualImage: {
+          src: portcoLogin,
+          alt: "PortCo HR Collective login page preview",
         },
       },
       {
@@ -115,9 +123,6 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
           "A self-managed Webflow CMS the client controls independently",
           "Two n8n automations: new members appear on the platform the moment they are approved, and new LinkedIn posts sync to the insights page automatically",
         ],
-        visualPlaceholder: {
-          label: "n8n workflow screenshot",
-        },
       },
       {
         title: "Outcome:",
@@ -125,10 +130,6 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
           "A complete community platform that looks like nothing else and runs itself.",
       },
     ],
-    testimonial: {
-      quote: "Client quote placeholder.",
-      author: "PortCo HR Collective",
-    },
   },
   systemically: {
     title: "SystemicAlly",

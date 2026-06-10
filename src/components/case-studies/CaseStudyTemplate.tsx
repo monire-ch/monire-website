@@ -164,7 +164,19 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                           ))}
                         </ul>
                       ) : null}
-                      {section.visualPlaceholder ? (
+                      {section.visualImage ? (
+                        <div
+                          className={`mt-6 overflow-hidden rounded-xl border border-border bg-card ${
+                            section.visualImage.scrollable ? 'h-[360px] overflow-y-auto' : ''
+                          }`}
+                        >
+                          <img
+                            src={section.visualImage.src}
+                            alt={section.visualImage.alt}
+                            className={section.visualImage.scrollable ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
+                          />
+                        </div>
+                      ) : section.visualPlaceholder ? (
                         <div className="mt-6">
                           <VisualPlaceholder
                             label={section.visualPlaceholder.label}
