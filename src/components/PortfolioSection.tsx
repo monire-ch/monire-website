@@ -12,11 +12,29 @@ import { trackEvent } from '@/lib/analytics';
 
 const projectImages = [snipSquad, systemically, towarowa, n8nPreview];
 
+const portfolioNavGroups = [
+  {
+    title: 'Web design & development',
+    items: [
+      { label: 'Veterinary', targetCategory: 'Veterinary' },
+      { label: 'Community Platform', targetCategory: 'Community platform' },
+      { label: 'Consulting', targetCategory: 'Consulting' },
+      { label: 'Real estate', targetCategory: 'Real Estate' },
+    ],
+  },
+  {
+    title: 'AI automation',
+    items: [
+      { label: 'Expense receipts', targetCategory: 'AI automation' },
+      { label: 'Community membership', targetCategory: 'Community platform' },
+    ],
+  },
+];
+
 const PortfolioSection = () => {
   const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const categories = t('portfolio.categories', { returnObjects: true }) as string[];
   const projects = t('portfolio.projects', { returnObjects: true }) as Array<{
     title: string; category: string; desc: string; link: string;
   }>;
@@ -49,7 +67,7 @@ const PortfolioSection = () => {
 
   const scrollToProject = useCallback((categoryName: string) => {
     if (!emblaApi) return;
-    const idx = projects.findIndex((p) => p.category === categoryName);
+    const idx = projects.findIndex((p) => p.category.toLowerCase() === categoryName.toLowerCase());
     if (idx !== -1) emblaApi.scrollTo(idx);
   }, [emblaApi, projects]);
 
@@ -70,23 +88,33 @@ const PortfolioSection = () => {
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 items-start">
             {/* Category sidebar — dark teal card like reference */}
-            <div className="rounded-2xl p-5 grid grid-cols-2 md:grid-cols-1 gap-1" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
-              {categories.map((cat) => {
-                const isActive = currentProject?.category === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => scrollToProject(cat)}
-                    className={`text-center md:text-left px-4 py-3 font-body text-sm transition-all duration-200 ${
-                      isActive
-                        ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
-                        : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                );
-              })}
+            <div className="rounded-2xl p-5" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
+              {portfolioNavGroups.map((group, groupIndex) => (
+                <div key={group.title}>
+                  {groupIndex > 0 && <div className="my-5 h-px bg-off-white/15" />}
+                  <p className="px-4 pb-2 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-text">
+                    {group.title}
+                  </p>
+                  <div className="mt-2 grid grid-cols-2 gap-1 md:mt-3 md:grid-cols-1">
+                    {group.items.map((item) => {
+                      const isActive = currentProject?.category.toLowerCase() === item.targetCategory.toLowerCase();
+                      return (
+                        <button
+                          key={`${group.title}-${item.label}`}
+                          onClick={() => scrollToProject(item.targetCategory)}
+                          className={`w-fit justify-self-center self-center px-3 py-2 text-center font-body text-sm transition-all duration-200 md:w-full md:justify-self-stretch md:self-auto md:px-4 md:py-3 md:text-left ${
+                            isActive
+                              ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
+                              : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'
+                          }`}
+                        >
+                          {item.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Carousel */}
