@@ -10,30 +10,48 @@ import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
 import { trackEvent } from '@/lib/analytics';
 
-const projectImages = [snipSquad, systemically, towarowa, n8nPreview];
+const portcoPreview = `data:image/svg+xml;utf8,${encodeURIComponent(`
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+    <rect width="1200" height="800" fill="#f5f0ea"/>
+    <rect x="150" y="120" width="900" height="560" rx="32" fill="#15424d" opacity="0.95"/>
+    <text x="600" y="365" text-anchor="middle" fill="#f1d28c" font-family="serif" font-size="58">PortCo HR Collective</text>
+    <text x="600" y="430" text-anchor="middle" fill="#f5f0ea" font-family="Arial, sans-serif" font-size="28">Community platform preview</text>
+  </svg>
+`)}`;
+
+const projectImagesByLink: Record<string, string> = {
+  '/case-studies/snip-squad': snipSquad,
+  '/case-studies/portco-hr-collective': portcoPreview,
+  '/case-studies/systemically': systemically,
+  '/case-studies/towarowa': towarowa,
+  '/case-studies/expense-receipt-automation': n8nPreview,
+};
 
 const portfolioNavGroups = [
   {
     title: 'Web design & development',
     items: [
-      { label: 'Veterinary', targetCategory: 'Veterinary' },
-      { label: 'Community Platform', targetCategory: 'Community platform' },
-      { label: 'Consulting', targetCategory: 'Consulting' },
-      { label: 'Real estate', targetCategory: 'Real Estate' },
+      { id: 'web-veterinary', label: 'Veterinary', targetLink: '/case-studies/snip-squad' },
+      { id: 'web-community-platform', label: 'Community Platform', targetLink: '/case-studies/portco-hr-collective' },
+      { id: 'web-consulting', label: 'Consulting', targetLink: '/case-studies/systemically' },
+      { id: 'web-real-estate', label: 'Real estate', targetLink: '/case-studies/towarowa' },
     ],
   },
   {
     title: 'AI automation',
     items: [
-      { label: 'Expense receipts', targetCategory: 'AI automation' },
-      { label: 'Community membership', targetCategory: 'Community platform' },
+      { id: 'ai-expense-receipts', label: 'Expense receipts', targetLink: '/case-studies/expense-receipt-automation' },
+      { id: 'ai-community-membership', label: 'Community membership', targetLink: '/case-studies/portco-hr-collective' },
     ],
   },
 ];
 
+const portfolioNavItems = portfolioNavGroups.flatMap((group) => group.items);
+
 const PortfolioSection = () => {
   const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [activeNavItemId, setActiveNavItemId] = useState(portfolioNavItems[0].id);
 
   const projects = t('portfolio.projects', { returnObjects: true }) as Array<{
     title: string; category: string; desc: string; link: string;
@@ -50,10 +68,22 @@ const PortfolioSection = () => {
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
+    const nextSelectedIndex = emblaApi.selectedScrollSnap();
+    const nextProject = projects[nextSelectedIndex];
+
+    setSelectedIndex(nextSelectedIndex);
+    setActiveNavItemId((currentActiveNavItemId) => {
+      const currentActiveNavItem = portfolioNavItems.find((item) => item.id === currentActiveNavItemId);
+
+      if (currentActiveNavItem?.targetLink === nextProject?.link) {
+        return currentActiveNavItemId;
+      }
+
+      return portfolioNavItems.find((item) => item.targetLink === nextProject?.link)?.id ?? currentActiveNavItemId;
+    });
     setCanScrollPrev(emblaApi.canScrollPrev());
     setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
+  }, [emblaApi, projects]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -65,9 +95,10 @@ const PortfolioSection = () => {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  const scrollToProject = useCallback((categoryName: string) => {
+  const scrollToProject = useCallback((projectLink: string, navItemId: string) => {
     if (!emblaApi) return;
-    const idx = projects.findIndex((p) => p.category.toLowerCase() === categoryName.toLowerCase());
+    setActiveNavItemId(navItemId);
+    const idx = projects.findIndex((p) => p.link === projectLink);
     if (idx !== -1) emblaApi.scrollTo(idx);
   }, [emblaApi, projects]);
 
@@ -97,11 +128,11 @@ const PortfolioSection = () => {
                   </p>
                   <div className="mt-2 grid grid-cols-2 gap-1 md:mt-3 md:grid-cols-1">
                     {group.items.map((item) => {
-                      const isActive = currentProject?.category.toLowerCase() === item.targetCategory.toLowerCase();
+                      const isActive = activeNavItemId === item.id;
                       return (
                         <button
-                          key={`${group.title}-${item.label}`}
-                          onClick={() => scrollToProject(item.targetCategory)}
+                          key={item.id}
+                          onClick={() => scrollToProject(item.targetLink, item.id)}
                           className={`w-fit justify-self-center self-center px-3 py-2 text-center font-body text-sm transition-all duration-200 md:w-full md:justify-self-stretch md:self-auto md:px-4 md:py-3 md:text-left ${
                             isActive
                               ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
@@ -121,7 +152,7 @@ const PortfolioSection = () => {
             <div>
               <div className="overflow-hidden rounded-xl" ref={emblaRef}>
                 <div className="flex">
-                  {projects.map((project, i) => (
+                  {projects.map((project) => (
                     <div
                       key={project.title}
                       className="min-w-0 shrink-0 grow-0 basis-full px-2"
@@ -138,11 +169,11 @@ const PortfolioSection = () => {
                         }
                         className="block group"
                       >
-                        <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${i === 3 ? 'bg-[#0a0a0a]' : 'bg-neutral-card'}`}>
+                        <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${project.link === '/case-studies/expense-receipt-automation' ? 'bg-[#0a0a0a]' : 'bg-neutral-card'}`}>
                           <img
-                            src={projectImages[i]}
+                            src={projectImagesByLink[project.link]}
                             alt={`${project.title} website preview`}
-                            className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${i === 3 ? 'object-contain object-center' : 'object-cover object-top'}`}
+                            className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${project.link === '/case-studies/expense-receipt-automation' ? 'object-contain object-center' : 'object-cover object-top'}`}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                         </div>

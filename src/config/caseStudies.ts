@@ -7,12 +7,18 @@ export type CaseStudySection = {
   title: string;
   intro?: string;
   items?: string[];
+  visualPlaceholder?: CaseStudyVisualPlaceholder;
 };
 
 export type CaseStudyTestimonial = {
   quote: string;
   author: string;
   role?: string;
+};
+
+export type CaseStudyVisualPlaceholder = {
+  label: string;
+  scrollable?: boolean;
 };
 
 export type CaseStudyConfig = {
@@ -23,8 +29,9 @@ export type CaseStudyConfig = {
   industry: string;
   category: string;
   tools: string[];
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
+  imagePlaceholder?: CaseStudyVisualPlaceholder;
   imageScrollable?: boolean;
   websiteUrl?: string;
   websiteLabel?: string;
@@ -74,6 +81,53 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
       quote:
         "What an incredible website designer!! From start to finish they made it easy to make my dreams come true. Sometimes it can be overwhelming to even start and figure out what your vision would be for your website but Monire was able to speak with me and help me create the vision that I wanted for my website/business. In this day and age website design is so important and I would choose Monire 10/10 times to work with. Great team with excellent deadline times and easy to work with during modification process. Can't recommend them enough!",
       author: "Dr. Alex Phan, Snip Squad",
+    },
+  },
+  "portco-hr-collective": {
+    title: "PortCo HR Collective",
+    subtitle:
+      "An exclusive membership platform for HR leaders in private equity",
+    client: "PortCo HR Collective",
+    date: "2026",
+    industry: "Private Equity / Professional Networks",
+    category: "Branding, Web Design & Development, AI Automation",
+    tools: ["WEBFLOW", "MEMBERSTACK", "N8N", "FIGMA"],
+    imagePlaceholder: {
+      label: "Homepage screenshot",
+      scrollable: true,
+    },
+    imageScrollable: true,
+    sections: [
+      {
+        title: "Overview:",
+        intro:
+          "PortCo HR Collective is a peer network for Chief HR Officers working in PE-backed companies across Europe.\n\nThey came with a clear vision: build something that felt as considered and distinctive as the community itself. Not a generic platform, but a real identity with a real presence.",
+        visualPlaceholder: {
+          label: "Login page screenshot",
+        },
+      },
+      {
+        title: "Approach:",
+        intro:
+          "The design starts with a painting. The client brought a single piece of original artwork and asked for it to live throughout the site, not as decoration, but as the soul of it. Every hero, every full-bleed section, every background draws from it.\n\nOn top of that foundation:",
+        items: [
+          "A gated member directory with passwordless magic link login",
+          "A self-managed Webflow CMS the client controls independently",
+          "Two n8n automations: new members appear on the platform the moment they are approved, and new LinkedIn posts sync to the insights page automatically",
+        ],
+        visualPlaceholder: {
+          label: "n8n workflow screenshot",
+        },
+      },
+      {
+        title: "Outcome:",
+        intro:
+          "A complete community platform that looks like nothing else and runs itself.",
+      },
+    ],
+    testimonial: {
+      quote: "Client quote placeholder.",
+      author: "PortCo HR Collective",
     },
   },
   systemically: {
