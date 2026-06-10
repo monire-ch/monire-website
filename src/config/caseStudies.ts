@@ -199,5 +199,11 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
         ],
       },
     ],
+    testimonial: {
+      quote:
+        "We were spending a significant amount of time processing receipts and expenses manually. The automation now extracts the information, files the documents, and updates our records automatically, saving us hours of work every month. It has taken away one of the most repetitive administrative tasks in our firm and we are incredibly grateful to the Moniré team for delivering such a practical and effective solution.",
+      author: "Margaret Rikhof",
+      role: "Brooksmiller & Partners",
+    },
   },
 };

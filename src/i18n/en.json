@@ -276,7 +276,7 @@
           },
           {
             "q": "What tools do you use to build automations?",
-            "a": "We mainly build with n8n, which connects to the tools most businesses already use, including email, spreadsheets, cloud storage, and CRMs. For some projects we use other tools depending on what fits best."
+            "a": "We mainly build automations with n8n, which connects to the tools most businesses already use, including email, spreadsheets, cloud storage, and CRMs. We also use AI tools such as Claude and OpenAI Codex to support development and create more tailored solutions. For some projects, we use other tools depending on what fits best."
           },
           {
             "q": "Do I need technical knowledge to use AI automation tools?",
