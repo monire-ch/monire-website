@@ -135,7 +135,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="pt-20 md:pt-32 pb-40 md:pb-56 px-6 relative">
+    <section id="faq" className="pt-16 md:pt-24 pb-40 md:pb-56 px-6 relative">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-16">
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">FAQ</span>

@@ -45,7 +45,7 @@ const ServicesSection = () => {
   const active = items[activeIndex];
 
   return (
-    <section id="services" className="pt-20 md:pt-32 pb-40 md:pb-56 px-6">
+    <section id="services" className="pt-16 md:pt-24 pb-40 md:pb-56 px-6">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal className="text-center mb-12 md:mb-16">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">
