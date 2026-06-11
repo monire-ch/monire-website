@@ -214,7 +214,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
           "estimated increase in direct booking enquiries following the website launch",
       },
       {
-        value: "~5 hrs",
+        value: "~10 hrs",
         description:
           "saved each month by reducing manual booking coordination and repetitive guest enquiries",
       },

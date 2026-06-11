@@ -207,11 +207,17 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                   {project.metrics.map((metric, index) => (
                     <div
                       key={`${metric.value}-${metric.description}`}
-                      className={`grid grid-cols-[156px_minmax(0,1fr)] items-center gap-5 py-7 first:pt-0 last:pb-0 md:grid-cols-[180px_minmax(0,1fr)] md:gap-8 ${
+                      className={`grid grid-cols-[120px_minmax(0,1fr)] items-center gap-5 py-7 first:pt-0 last:pb-0 sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[240px_minmax(0,1fr)] md:gap-8 ${
                         index > 0 ? 'border-t border-border' : ''
                       }`}
                     >
-                      <p className="w-full whitespace-nowrap text-center font-display text-5xl md:text-6xl text-main-teal leading-none">
+                      <p
+                        className={`w-full whitespace-nowrap text-center font-display text-main-teal leading-none ${
+                          metric.value.length > 6
+                            ? 'text-4xl sm:text-5xl md:text-6xl'
+                            : 'text-5xl md:text-6xl'
+                        }`}
+                      >
                         {metric.value}
                       </p>
                       <p className="max-w-lg text-base md:text-lg font-body leading-relaxed text-foreground/75">
