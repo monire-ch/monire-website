@@ -119,11 +119,13 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                       isScrollablePreview ? 'h-[560px] md:h-[720px] overflow-y-auto' : ''
                     }`}
                   >
-                    <img
-                      src={project.image}
-                      alt={project.imageAlt}
-                      className={isScrollablePreview ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
-                    />
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt}
+                        className={isScrollablePreview ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
+                      />
+                    ) : null}
                   </div>
                 </ScrollReveal>
 
@@ -144,6 +146,19 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                           ))}
                         </ul>
                       ) : null}
+                      {section.visualImage ? (
+                        <div
+                          className={`mt-6 overflow-hidden rounded-xl border border-border bg-card ${
+                            section.visualImage.scrollable ? 'h-[360px] overflow-y-auto' : ''
+                          }`}
+                        >
+                          <img
+                            src={section.visualImage.src}
+                            alt={section.visualImage.alt}
+                            className={section.visualImage.scrollable ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
+                          />
+                        </div>
+                      ) : null}
                     </ScrollReveal>
                   ))}
                 </div>
@@ -157,11 +172,13 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                       isScrollablePreview ? 'h-[560px] md:h-[720px] overflow-y-auto' : ''
                     }`}
                   >
-                    <img
-                      src={project.image}
-                      alt={project.imageAlt}
-                      className={isScrollablePreview ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
-                    />
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt}
+                        className={isScrollablePreview ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
+                      />
+                    ) : null}
                   </div>
                 </ScrollReveal>
               </>
