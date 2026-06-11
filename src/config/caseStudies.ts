@@ -101,7 +101,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
       {
         title: "Overview:",
         intro:
-          "PortCo HR Collective is a peer network for Chief HR Officers working in PE-backed companies across Europe.\n\nThey came with a clear vision: build something that felt as considered and distinctive as the community itself. Not a generic platform, but a real identity with a real presence.",
+          "PortCo HR Collective is a peer network for Chief HR Officers working in PE-backed companies across Europe. The founders wanted a platform that felt professional, welcoming, and distinctly their own. Not a generic platform, but a professional digital home that could establish credibility, support growth, and be managed without a technical team.",
         visualImage: {
           src: portcoLogin,
           alt: "PortCo HR Collective login page preview",
@@ -110,17 +110,17 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
       {
         title: "Approach:",
         intro:
-          "The design starts with a painting. The client brought a single piece of original artwork and asked for it to live throughout the site, not as decoration, but as the soul of it. Every hero, every full-bleed section, every background draws from it.\n\nOn top of that foundation:",
+          "The design starts with a painting. The client brought a single piece of original artwork and asked for it to become the soul of the brand. Not decoration, but the visual foundation everything else draws from. The artwork informed the entire visual system, shaping the logo, typography, color palette, and interface design across the platform.\n\nBuilt on top of that identity:",
         items: [
-          "A gated member directory with passwordless magic link login",
-          "A self-managed Webflow CMS the client controls independently",
-          "Two n8n automations: new members appear on the platform the moment they are approved, and new LinkedIn posts sync to the insights page automatically",
+          "A gated member directory, insights hub, and events platform with passwordless magic-link login",
+          "A self-managed Webflow CMS that allows the client to publish content, manage members, and update events without any technical support",
+          "Automated workflows that reduce manual administration by keeping member data and content synchronized across platforms",
         ],
       },
       {
         title: "Outcome:",
         intro:
-          "A complete community platform that looks like nothing else and runs itself.",
+          "A distinctive membership platform that gives the community a credible digital presence while keeping administration lightweight. Members get a seamless experience across content, events, and peer discovery, while automation keeps content and member information consistently up to date.",
       },
     ],
   },
