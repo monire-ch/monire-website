@@ -1,4 +1,6 @@
 import snipSquad from "@/assets/portfolio/snip-squad_full.webp";
+import portco from "@/assets/portfolio/portco_full.webp";
+import portcoLogin from "@/assets/portfolio/portco_login.webp";
 import systemically from "@/assets/portfolio/systemically_full.webp";
 import towarowa from "@/assets/portfolio/towarowa_full.webp";
 import n8nPreview from "@/assets/portfolio/n8n.webp";
@@ -7,6 +9,7 @@ export type CaseStudySection = {
   title: string;
   intro?: string;
   items?: string[];
+  visualImage?: CaseStudyVisualImage;
 };
 
 export type CaseStudyTestimonial = {
@@ -20,6 +23,12 @@ export type CaseStudyMetric = {
   description: string;
 };
 
+export type CaseStudyVisualImage = {
+  src: string;
+  alt: string;
+  scrollable?: boolean;
+};
+
 export type CaseStudyConfig = {
   title: string;
   subtitle?: string;
@@ -28,8 +37,8 @@ export type CaseStudyConfig = {
   industry: string;
   category: string;
   tools: string[];
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   imageScrollable?: boolean;
   websiteUrl?: string;
   websiteLabel?: string;
@@ -81,6 +90,45 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
         "What an incredible website designer!! From start to finish they made it easy to make my dreams come true. Sometimes it can be overwhelming to even start and figure out what your vision would be for your website but Monire was able to speak with me and help me create the vision that I wanted for my website/business. In this day and age website design is so important and I would choose Monire 10/10 times to work with. Great team with excellent deadline times and easy to work with during modification process. Can't recommend them enough!",
       author: "Dr. Alex Phan, Snip Squad",
     },
+  },
+  "portco-hr-collective": {
+    title: "PortCo HR Collective",
+    subtitle:
+      "An exclusive membership platform for HR leaders in private equity",
+    client: "PortCo HR Collective",
+    date: "2026",
+    industry: "Private Equity / Professional Networks",
+    category: "Branding, Web Design & Development, AI Automation",
+    tools: ["WEBFLOW", "MEMBERSTACK", "N8N", "FIGMA"],
+    image: portco,
+    imageAlt: "PortCo HR Collective homepage preview",
+    imageScrollable: true,
+    sections: [
+      {
+        title: "Overview:",
+        intro:
+          "PortCo HR Collective is a peer network for Chief HR Officers working in PE-backed companies across Europe. The founders wanted a platform that felt professional, welcoming, and distinctly their own. Not a generic platform, but a professional digital home that could establish credibility, support growth, and be managed without a technical team.",
+        visualImage: {
+          src: portcoLogin,
+          alt: "PortCo HR Collective login page preview",
+        },
+      },
+      {
+        title: "Approach:",
+        intro:
+          "The design starts with a painting. The client brought a single piece of original artwork and asked for it to become the soul of the brand. Not decoration, but the visual foundation everything else draws from. The artwork informed the entire visual system, shaping the logo, typography, color palette, and interface design across the platform.\n\nBuilt on top of that identity:",
+        items: [
+          "A gated member directory, insights hub, and events platform with passwordless magic-link login",
+          "A self-managed Webflow CMS that allows the client to publish content, manage members, and update events without any technical support",
+          "Automated workflows that reduce manual administration by keeping member data and content synchronized across platforms",
+        ],
+      },
+      {
+        title: "Outcome:",
+        intro:
+          "A distinctive membership platform that gives the community a credible digital presence while keeping administration lightweight. Members get a seamless experience across content, events, and peer discovery, while automation keeps content and member information consistently up to date.",
+      },
+    ],
   },
   systemically: {
     title: "SystemicAlly",

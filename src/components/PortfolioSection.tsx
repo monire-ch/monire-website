@@ -5,18 +5,46 @@ import { Link } from 'react-router-dom';
 import useEmblaCarousel from 'embla-carousel-react';
 import ScrollReveal from './ScrollReveal';
 import snipSquad from '@/assets/portfolio/snip-squad_full.webp';
+import portcoPreview from '@/assets/portfolio/portco_full.webp';
 import systemically from '@/assets/portfolio/systemically_full.webp';
 import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
 import { trackEvent } from '@/lib/analytics';
 
-const projectImages = [snipSquad, systemically, towarowa, n8nPreview];
+const projectImagesByLink: Record<string, string> = {
+  '/case-studies/snip-squad': snipSquad,
+  '/case-studies/portco-hr-collective': portcoPreview,
+  '/case-studies/systemically': systemically,
+  '/case-studies/towarowa': towarowa,
+  '/case-studies/expense-receipt-automation': n8nPreview,
+};
+
+const portfolioNavGroups = [
+  {
+    title: 'Web design & development',
+    items: [
+      { id: 'web-veterinary', label: 'Veterinary', targetLink: '/case-studies/snip-squad' },
+      { id: 'web-community-platform', label: 'Community platform', targetLink: '/case-studies/portco-hr-collective' },
+      { id: 'web-consulting', label: 'Consulting', targetLink: '/case-studies/systemically' },
+      { id: 'web-real-estate', label: 'Real estate', targetLink: '/case-studies/towarowa' },
+    ],
+  },
+  {
+    title: 'AI automation',
+    items: [
+      { id: 'ai-expense-receipts', label: 'Expense receipts', targetLink: '/case-studies/expense-receipt-automation' },
+      { id: 'ai-community-membership', label: 'Community membership', targetLink: '/case-studies/portco-hr-collective' },
+    ],
+  },
+];
+
+const portfolioNavItems = portfolioNavGroups.flatMap((group) => group.items);
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [activeNavItemId, setActiveNavItemId] = useState(portfolioNavItems[0].id);
 
-  const categories = t('portfolio.categories', { returnObjects: true }) as string[];
   const projects = t('portfolio.projects', { returnObjects: true }) as Array<{
     title: string; category: string; desc: string; link: string;
   }>;
@@ -32,10 +60,22 @@ const PortfolioSection = () => {
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
+    const nextSelectedIndex = emblaApi.selectedScrollSnap();
+    const nextProject = projects[nextSelectedIndex];
+
+    setSelectedIndex(nextSelectedIndex);
+    setActiveNavItemId((currentActiveNavItemId) => {
+      const currentActiveNavItem = portfolioNavItems.find((item) => item.id === currentActiveNavItemId);
+
+      if (currentActiveNavItem?.targetLink === nextProject?.link) {
+        return currentActiveNavItemId;
+      }
+
+      return portfolioNavItems.find((item) => item.targetLink === nextProject?.link)?.id ?? currentActiveNavItemId;
+    });
     setCanScrollPrev(emblaApi.canScrollPrev());
     setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
+  }, [emblaApi, projects]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -44,19 +84,28 @@ const PortfolioSection = () => {
     return () => { emblaApi.off('select', onSelect); };
   }, [emblaApi, onSelect]);
 
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
-
-  const scrollToProject = useCallback((categoryName: string) => {
+  const scrollToProject = useCallback((projectLink: string, navItemId: string) => {
     if (!emblaApi) return;
-    const idx = projects.findIndex((p) => p.category === categoryName);
+    setActiveNavItemId(navItemId);
+    const idx = projects.findIndex((p) => p.link === projectLink);
     if (idx !== -1) emblaApi.scrollTo(idx);
   }, [emblaApi, projects]);
+
+  const scrollToNavItem = useCallback((direction: 1 | -1) => {
+    const currentNavIndex = portfolioNavItems.findIndex((item) => item.id === activeNavItemId);
+    const nextNavIndex = (currentNavIndex + direction + portfolioNavItems.length) % portfolioNavItems.length;
+    const nextNavItem = portfolioNavItems[nextNavIndex];
+
+    scrollToProject(nextNavItem.targetLink, nextNavItem.id);
+  }, [activeNavItemId, scrollToProject]);
+
+  const scrollPrev = useCallback(() => scrollToNavItem(-1), [scrollToNavItem]);
+  const scrollNext = useCallback(() => scrollToNavItem(1), [scrollToNavItem]);
 
   const currentProject = projects[selectedIndex];
 
   return (
-    <section id="portfolio" className="py-20 md:py-28 px-6">
+    <section id="portfolio" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
@@ -68,32 +117,42 @@ const PortfolioSection = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-6 items-start">
             {/* Category sidebar — dark teal card like reference */}
-            <div className="rounded-2xl p-5 grid grid-cols-2 md:grid-cols-1 gap-1" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
-              {categories.map((cat) => {
-                const isActive = currentProject?.category === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => scrollToProject(cat)}
-                    className={`text-center md:text-left px-4 py-3 font-body text-sm transition-all duration-200 ${
-                      isActive
-                        ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
-                        : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                );
-              })}
+            <div className="rounded-2xl p-4 md:p-5" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
+              {portfolioNavGroups.map((group, groupIndex) => (
+                <div key={group.title}>
+                  {groupIndex > 0 && <div className="my-3 h-px bg-off-white/15 md:my-5" />}
+                  <p className="px-2 pb-1 text-center font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-text md:px-4 md:pb-2 md:text-left">
+                    {group.title}
+                  </p>
+                  <div className="mt-1 grid grid-cols-2 gap-x-3 gap-y-1 md:mt-3 md:grid-cols-1 md:gap-x-1">
+                    {group.items.map((item) => {
+                      const isActive = activeNavItemId === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          onClick={() => scrollToProject(item.targetLink, item.id)}
+                          className={`w-fit justify-self-center self-center px-2 py-1.5 text-center font-body text-sm transition-all duration-200 md:justify-self-start md:self-auto md:px-4 md:py-2.5 md:text-left ${
+                            isActive
+                              ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
+                              : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'
+                          }`}
+                        >
+                          {item.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Carousel */}
             <div>
               <div className="overflow-hidden rounded-xl" ref={emblaRef}>
                 <div className="flex">
-                  {projects.map((project, i) => (
+                  {projects.map((project) => (
                     <div
                       key={project.title}
                       className="min-w-0 shrink-0 grow-0 basis-full px-2"
@@ -110,11 +169,11 @@ const PortfolioSection = () => {
                         }
                         className="block group"
                       >
-                        <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${i === 3 ? 'bg-[#0a0a0a]' : 'bg-neutral-card'}`}>
+                        <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${project.link === '/case-studies/expense-receipt-automation' ? 'bg-[#0a0a0a]' : 'bg-neutral-card'}`}>
                           <img
-                            src={projectImages[i]}
+                            src={projectImagesByLink[project.link]}
                             alt={`${project.title} website preview`}
-                            className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${i === 3 ? 'object-contain object-center' : 'object-cover object-top'}`}
+                            className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${project.link === '/case-studies/expense-receipt-automation' ? 'object-contain object-center' : 'object-cover object-top'}`}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                         </div>

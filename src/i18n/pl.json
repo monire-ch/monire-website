@@ -14,7 +14,8 @@
     "headline": "Strony internetowe stworzone by przyciągać klientów i rozwijać Twój biznes",
     "highlightWord": "przyciągać",
     "subtitle": "Tworzymy piękne, wydajne strony internetowe i automatyzujemy Twoje procesy, abyś mógł skupić się na tym, co najważniejsze.",
-    "cta": "Umów darmową konsultację"
+    "cta": "Umów darmową konsultację",
+    "workCta": "Zobacz nasze prace"
   },
   "features": {
     "eyebrow": "Co oferujemy",
@@ -189,6 +190,12 @@
         "category": "Weterynaria",
         "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt.",
         "link": "/case-studies/snip-squad"
+      },
+      {
+        "title": "PortCo HR Collective",
+        "category": "Community platform",
+        "desc": "Ekskluzywna platforma członkowska dla liderów HR w private equity, łącząca branding, projektowanie stron i automatyzację.",
+        "link": "/case-studies/portco-hr-collective"
       },
       {
         "title": "SystemicAlly",

@@ -44,6 +44,11 @@ const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
     title: 'Snip Squad Case Study | Moniré',
     description: 'Case study: web design and development work delivered by Moniré for Snip Squad.',
   },
+  '/case-studies/portco-hr-collective': {
+    title: 'PortCo HR Collective Case Study | Moniré',
+    description:
+      'Case study: branding, web design, development, and AI automation work delivered by Moniré for PortCo HR Collective.',
+  },
   '/case-studies/systemically': {
     title: 'SystemicAlly Consulting Website Case Study | Moniré',
     description:
@@ -82,6 +87,7 @@ export const PRERENDER_ROUTES = [
   ...INSIGHTS_ROUTES,
   '/case-studies/expense-receipt-automation',
   '/case-studies/snip-squad',
+  '/case-studies/portco-hr-collective',
   '/case-studies/systemically',
   '/case-studies/towarowa',
 ];

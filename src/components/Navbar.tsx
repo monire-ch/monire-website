@@ -29,9 +29,9 @@ const Navbar = () => {
   const navLinks = [
     { label: t('nav.home'), href: '#' },
     { label: t('nav.about'), href: '#about' },
+    { label: t('nav.ourWork'), href: '#portfolio' },
     { label: t('nav.services'), href: '#services' },
     { label: t('nav.pricing'), href: '#pricing' },
-    { label: t('nav.ourWork'), href: '#portfolio' },
     { label: t('nav.insights'), href: '/insights' },
   ];
   useEffect(() => {

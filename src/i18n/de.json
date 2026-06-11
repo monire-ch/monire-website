@@ -14,7 +14,8 @@
     "headline": "Websites die Kunden anziehen und mit Ihrem Unternehmen wachsen",
     "highlightWord": "anziehen",
     "subtitle": "Wir erstellen schöne, leistungsstarke Websites und automatisieren Ihre Arbeitsabläufe, damit Sie sich auf das Wesentliche konzentrieren können.",
-    "cta": "Kostenloses Erstgespräch buchen"
+    "cta": "Kostenloses Erstgespräch buchen",
+    "workCta": "Unsere Arbeiten ansehen"
   },
   "features": {
     "eyebrow": "Unser Angebot",
@@ -189,6 +190,12 @@
         "category": "Veterinär",
         "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde.",
         "link": "/case-studies/snip-squad"
+      },
+      {
+        "title": "PortCo HR Collective",
+        "category": "Community platform",
+        "desc": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Umfeld, die Branding, Webdesign und Automatisierung verbindet.",
+        "link": "/case-studies/portco-hr-collective"
       },
       {
         "title": "SystemicAlly",
