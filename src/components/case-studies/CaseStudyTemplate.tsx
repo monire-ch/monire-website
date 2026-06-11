@@ -168,6 +168,45 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
             )}
           </div>
 
+          {project.metrics?.length ? (
+            <ScrollReveal>
+              <section
+                aria-labelledby="case-study-results-title"
+                className="grid grid-cols-1 gap-8 border-y border-border py-10 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] md:gap-16 md:py-14 mb-14"
+              >
+                <div>
+                  <h2
+                    id="case-study-results-title"
+                    className="font-tertiary italic text-3xl md:text-4xl text-main-teal mb-4"
+                  >
+                    Key results
+                  </h2>
+                  <p className="max-w-sm text-base font-body leading-relaxed text-foreground/70">
+                    A focused digital experience designed to make discovering and booking the apartment simple.
+                  </p>
+                </div>
+
+                <div>
+                  {project.metrics.map((metric, index) => (
+                    <div
+                      key={`${metric.value}-${metric.description}`}
+                      className={`grid grid-cols-[156px_minmax(0,1fr)] items-center gap-5 py-7 first:pt-0 last:pb-0 md:grid-cols-[180px_minmax(0,1fr)] md:gap-8 ${
+                        index > 0 ? 'border-t border-border' : ''
+                      }`}
+                    >
+                      <p className="w-full whitespace-nowrap text-center font-display text-5xl md:text-6xl text-main-teal leading-none">
+                        {metric.value}
+                      </p>
+                      <p className="max-w-lg text-base md:text-lg font-body leading-relaxed text-foreground/75">
+                        {metric.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </ScrollReveal>
+          ) : null}
+
           {project.testimonial ? (
             <ScrollReveal>
               <div className="rounded-xl border border-border bg-card p-6 md:p-8 mb-14">
