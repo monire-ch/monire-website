@@ -11,7 +11,18 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
 import JsonLd from "@/components/JsonLd";
+import StarIcon from "@/components/StarIcon";
 import { SITE_URL } from "@/lib/seo";
+
+const SparkleDivider = ({ dark = false }: { dark?: boolean }) => (
+  <div aria-hidden="true" className="px-6">
+    <div className="mx-auto flex max-w-sm items-center justify-center gap-4 text-gold">
+      <span className={`h-px flex-1 ${dark ? "bg-off-white/15" : "bg-main-teal/15"}`} />
+      <StarIcon size={16} />
+      <span className={`h-px flex-1 ${dark ? "bg-off-white/15" : "bg-main-teal/15"}`} />
+    </div>
+  </div>
+);
 
 const Index = () => {
   const [contactOpen, setContactOpen] = useState(false);
@@ -49,10 +60,14 @@ const Index = () => {
           <HeroSection onCtaClick={() => setContactOpen(true)} />
           <FeaturesSection />
           <AboutSection />
-          <ServicesSection />
-          <PricingSection />
           <PortfolioSection />
-          <FAQSection />
+          <SparkleDivider />
+          <ServicesSection />
+          <div className="dark-teal-surface">
+            <PricingSection />
+            <SparkleDivider dark />
+            <FAQSection />
+          </div>
           <CTASection />
         </main>
         <Footer hideWave />
