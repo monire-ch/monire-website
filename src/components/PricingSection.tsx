@@ -48,7 +48,7 @@ const PricingSection = () => {
 
   return (
     <>
-    <section id="pricing" className="dark-teal-surface py-20 md:py-28 px-6 relative">
+    <section id="pricing" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6 relative">
 
       <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal className="text-center mb-12">

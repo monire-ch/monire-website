@@ -26,6 +26,17 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   const highlightWord = t('hero.highlightWord');
   const words = headline.split(' ');
 
+  const scrollToPortfolio = () => {
+    trackEvent('portfolio_click', {
+      location: 'hero',
+      label: 'view_our_work',
+      destination: '#portfolio',
+      page_path: window.location.pathname,
+    });
+    window.history.pushState(null, '', '#portfolio');
+    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="hero-bg relative min-h-screen flex items-center justify-center text-center px-6 pt-36 md:pt-48 pb-44 md:pb-56">
       <div className="relative z-10 max-w-5xl mx-auto px-2 xs:px-8">
@@ -74,7 +85,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         </p>
 
         <div
-          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''}`}
+          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} flex flex-col items-center justify-center gap-3 sm:flex-row`}
           style={{ transitionDelay: '420ms' }}
         >
           <BrandButton
@@ -88,6 +99,14 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             className="text-base"
           >
             {t('hero.cta')}
+          </BrandButton>
+          <BrandButton
+            type="button"
+            onClick={scrollToPortfolio}
+            variant="secondary"
+            className="text-base"
+          >
+            {t('hero.workCta')}
           </BrandButton>
         </div>
       </div>

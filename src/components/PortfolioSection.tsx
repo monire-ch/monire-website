@@ -105,7 +105,7 @@ const PortfolioSection = () => {
   const currentProject = projects[selectedIndex];
 
   return (
-    <section id="portfolio" className="py-20 md:py-28 px-6">
+    <section id="portfolio" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
