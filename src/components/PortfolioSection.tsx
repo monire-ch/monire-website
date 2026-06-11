@@ -84,15 +84,23 @@ const PortfolioSection = () => {
     return () => { emblaApi.off('select', onSelect); };
   }, [emblaApi, onSelect]);
 
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
-
   const scrollToProject = useCallback((projectLink: string, navItemId: string) => {
     if (!emblaApi) return;
     setActiveNavItemId(navItemId);
     const idx = projects.findIndex((p) => p.link === projectLink);
     if (idx !== -1) emblaApi.scrollTo(idx);
   }, [emblaApi, projects]);
+
+  const scrollToNavItem = useCallback((direction: 1 | -1) => {
+    const currentNavIndex = portfolioNavItems.findIndex((item) => item.id === activeNavItemId);
+    const nextNavIndex = (currentNavIndex + direction + portfolioNavItems.length) % portfolioNavItems.length;
+    const nextNavItem = portfolioNavItems[nextNavIndex];
+
+    scrollToProject(nextNavItem.targetLink, nextNavItem.id);
+  }, [activeNavItemId, scrollToProject]);
+
+  const scrollPrev = useCallback(() => scrollToNavItem(-1), [scrollToNavItem]);
+  const scrollNext = useCallback(() => scrollToNavItem(1), [scrollToNavItem]);
 
   const currentProject = projects[selectedIndex];
 
@@ -111,21 +119,21 @@ const PortfolioSection = () => {
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-6 items-start">
             {/* Category sidebar — dark teal card like reference */}
-            <div className="rounded-2xl p-5" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
+            <div className="rounded-2xl p-4 md:p-5" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
               {portfolioNavGroups.map((group, groupIndex) => (
                 <div key={group.title}>
-                  {groupIndex > 0 && <div className="my-5 h-px bg-off-white/15" />}
-                  <p className="px-4 pb-2 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-text">
+                  {groupIndex > 0 && <div className="my-3 h-px bg-off-white/15 md:my-5" />}
+                  <p className="px-2 pb-1 text-center font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-text md:px-4 md:pb-2 md:text-left">
                     {group.title}
                   </p>
-                  <div className="mt-2 grid grid-cols-2 gap-1 md:mt-3 md:grid-cols-1">
+                  <div className="mt-1 grid grid-cols-2 gap-x-3 gap-y-1 md:mt-3 md:grid-cols-1 md:gap-x-1">
                     {group.items.map((item) => {
                       const isActive = activeNavItemId === item.id;
                       return (
                         <button
                           key={item.id}
                           onClick={() => scrollToProject(item.targetLink, item.id)}
-                          className={`w-fit justify-self-center self-center px-3 py-2 text-center font-body text-sm transition-all duration-200 md:justify-self-start md:self-auto md:px-4 md:py-2.5 md:text-left ${
+                          className={`w-fit justify-self-center self-center px-2 py-1.5 text-center font-body text-sm transition-all duration-200 md:justify-self-start md:self-auto md:px-4 md:py-2.5 md:text-left ${
                             isActive
                               ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
                               : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'
