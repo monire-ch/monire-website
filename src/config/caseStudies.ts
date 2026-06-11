@@ -126,6 +126,8 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
   },
   systemically: {
     title: "SystemicAlly",
+    subtitle:
+      "A clear, professional website for a leadership and transformation consultancy",
     client: "SystemicAlly",
     date: "May 2025",
     industry: "Consulting",
@@ -136,12 +138,38 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     imageScrollable: true,
     websiteUrl: "https://www.systemically.ch",
     websiteLabel: "Visit Website",
+    sections: [
+      {
+        title: "Overview:",
+        intro:
+          "SystemicAlly is a consulting company supporting leaders, teams, and organizations through leadership development and meaningful transformation.\n\nThe website needed to communicate the company’s expertise clearly, present its services in an approachable way, and build trust with prospective clients.",
+      },
+      {
+        title: "Approach:",
+        intro:
+          "The goal was to translate SystemicAlly’s existing visual direction into a polished, responsive website with a clear and intuitive structure.\n\nWe focused on:",
+        items: [
+          "A professional visual experience aligned with the company’s brand",
+          "Clear content hierarchy for services, programs, and areas of expertise",
+          "Flexible page layouts for detailed consulting content",
+          "Responsive development across desktop, tablet, and mobile devices",
+          "Google Analytics integration to support ongoing performance insights",
+        ],
+      },
+      {
+        title: "Outcome:",
+        intro:
+          "The result is a polished and credible digital presence that reflects SystemicAlly’s expertise while keeping the experience accessible and easy to navigate.\n\nVisitors can quickly understand the company’s approach, explore its consulting solutions, and find the right path to begin a conversation.",
+      },
+    ],
   },
   towarowa: {
-    title: "Towarowa",
+    title: "Towarowa 41",
+    subtitle:
+      "A refined digital experience for a premium city apartment",
     client: "Towarowa",
     date: "October 2025",
-    industry: "Real Estate",
+    industry: "Hospitality & Real Estate",
     category: "Web Design & Web Development",
     tools: ["TYPESCRIPT", "TAILWIND", "FIGMA", "NETLIFY"],
     image: towarowa,
@@ -149,6 +177,30 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     imageScrollable: true,
     websiteUrl: "https://towarowa.netlify.app/",
     websiteLabel: "Visit Website",
+    sections: [
+      {
+        title: "Overview:",
+        intro:
+          "Towarowa 41 is a premium apartment rental property designed for visitors seeking a comfortable and stylish stay in the heart of the city.\n\nThe website needed to showcase the property’s unique character, highlight key amenities, and provide visitors with a seamless browsing experience across all devices.",
+      },
+      {
+        title: "Approach:",
+        intro:
+          "The goal was to create a digital experience that reflects the quality and atmosphere of the property while making information easy to find.\n\nWe focused on:",
+        items: [
+          "A clean, elegant visual design inspired by boutique hospitality brands",
+          "Large, high-quality imagery to showcase the apartment and its surroundings",
+          "Clear presentation of amenities, accessibility information, and local attractions",
+          "An integrated booking system for a straightforward reservation experience",
+          "Responsive layouts optimized for desktop, tablet, and mobile devices",
+        ],
+      },
+      {
+        title: "Outcome:",
+        intro:
+          "The result is a modern and sophisticated website that effectively presents the property while maintaining a simple and intuitive user experience.\n\nVisitors can quickly explore the accommodation, discover nearby points of interest, access the information they need, and complete their booking through a clear reservation flow.",
+      },
+    ],
   },
   "expense-receipt-automation": {
     title: "Expense Receipt Automation",
@@ -195,5 +247,11 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
         ],
       },
     ],
+    testimonial: {
+      quote:
+        "We were spending a significant amount of time processing receipts and expenses manually. The automation now extracts the information, files the documents, and updates our records automatically, saving us hours of work every month. It has taken away one of the most repetitive administrative tasks in our firm and we are incredibly grateful to the Moniré team for delivering such a practical and effective solution.",
+      author: "Margaret Rikhof",
+      role: "Brooksmiller & Partners",
+    },
   },
 };

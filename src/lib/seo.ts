@@ -50,12 +50,14 @@ const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
       'Case study: branding, web design, development, and AI automation work delivered by Moniré for PortCo HR Collective.',
   },
   '/case-studies/systemically': {
-    title: 'SystemicAlly Case Study | Moniré',
-    description: 'Case study: web development work delivered by Moniré for SystemicAlly.',
+    title: 'SystemicAlly Consulting Website Case Study | Moniré',
+    description:
+      'See how Moniré developed a polished, responsive website for SystemicAlly, a leadership and transformation consultancy.',
   },
   '/case-studies/towarowa': {
-    title: 'Towarowa Case Study | Moniré',
-    description: 'Case study: web design and development work delivered by Moniré for Towarowa.',
+    title: 'Towarowa 41 Apartment Website Case Study | Moniré',
+    description:
+      'See how Moniré designed and developed a refined, responsive website for the Towarowa 41 premium apartment rental.',
   },
 };
 
