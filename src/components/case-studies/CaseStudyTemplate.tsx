@@ -10,19 +10,6 @@ type CaseStudyTemplateProps = {
   project: CaseStudyConfig;
 };
 
-const VisualPlaceholder = ({ label, scrollable = false }: { label: string; scrollable?: boolean }) => (
-  <div
-    className={`flex min-h-[260px] items-center justify-center rounded-xl border border-dashed border-main-teal/30 bg-card text-center ${
-      scrollable ? 'h-[560px] md:h-[720px]' : ''
-    }`}
-  >
-    <div>
-      <p className="font-body text-sm uppercase tracking-[0.18em] text-main-teal/70">Image placeholder</p>
-      <p className="mt-3 font-tertiary italic text-2xl text-main-teal">{label}</p>
-    </div>
-  </div>
-);
-
 const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   const { t } = useTranslation();
   const isScrollablePreview = project.imageScrollable ?? true;
@@ -138,11 +125,6 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                         alt={project.imageAlt}
                         className={isScrollablePreview ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
                       />
-                    ) : project.imagePlaceholder ? (
-                      <VisualPlaceholder
-                        label={project.imagePlaceholder.label}
-                        scrollable={project.imagePlaceholder.scrollable ?? isScrollablePreview}
-                      />
                     ) : null}
                   </div>
                 </ScrollReveal>
@@ -176,13 +158,6 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                             className={section.visualImage.scrollable ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
                           />
                         </div>
-                      ) : section.visualPlaceholder ? (
-                        <div className="mt-6">
-                          <VisualPlaceholder
-                            label={section.visualPlaceholder.label}
-                            scrollable={section.visualPlaceholder.scrollable}
-                          />
-                        </div>
                       ) : null}
                     </ScrollReveal>
                   ))}
@@ -202,11 +177,6 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                         src={project.image}
                         alt={project.imageAlt}
                         className={isScrollablePreview ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
-                      />
-                    ) : project.imagePlaceholder ? (
-                      <VisualPlaceholder
-                        label={project.imagePlaceholder.label}
-                        scrollable={project.imagePlaceholder.scrollable ?? isScrollablePreview}
                       />
                     ) : null}
                   </div>

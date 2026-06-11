@@ -10,18 +10,12 @@ export type CaseStudySection = {
   intro?: string;
   items?: string[];
   visualImage?: CaseStudyVisualImage;
-  visualPlaceholder?: CaseStudyVisualPlaceholder;
 };
 
 export type CaseStudyTestimonial = {
   quote: string;
   author: string;
   role?: string;
-};
-
-export type CaseStudyVisualPlaceholder = {
-  label: string;
-  scrollable?: boolean;
 };
 
 export type CaseStudyVisualImage = {
@@ -40,7 +34,6 @@ export type CaseStudyConfig = {
   tools: string[];
   image?: string;
   imageAlt?: string;
-  imagePlaceholder?: CaseStudyVisualPlaceholder;
   imageScrollable?: boolean;
   websiteUrl?: string;
   websiteLabel?: string;
