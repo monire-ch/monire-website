@@ -18,6 +18,11 @@ export type CaseStudyTestimonial = {
   role?: string;
 };
 
+export type CaseStudyMetric = {
+  value: string;
+  description: string;
+};
+
 export type CaseStudyVisualImage = {
   src: string;
   alt: string;
@@ -38,6 +43,7 @@ export type CaseStudyConfig = {
   websiteUrl?: string;
   websiteLabel?: string;
   sections?: CaseStudySection[];
+  metrics?: CaseStudyMetric[];
   testimonial?: CaseStudyTestimonial;
 };
 
@@ -199,6 +205,18 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
         title: "Outcome:",
         intro:
           "The result is a modern and sophisticated website that effectively presents the property while maintaining a simple and intuitive user experience.\n\nVisitors can quickly explore the accommodation, discover nearby points of interest, access the information they need, and complete their booking through a clear reservation flow.",
+      },
+    ],
+    metrics: [
+      {
+        value: "~20%",
+        description:
+          "estimated increase in direct booking enquiries following the website launch",
+      },
+      {
+        value: "~10 hrs",
+        description:
+          "saved each month by reducing manual booking coordination and repetitive guest enquiries",
       },
     ],
   },
