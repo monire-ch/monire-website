@@ -13,7 +13,7 @@ const teamLinkedIn = [
 
 const AboutSection = () => {
   const { t } = useTranslation();
-  const stories = t('about.stories', { returnObjects: true }) as Array<{ title: string; text: string }>;
+  const stories = t('about.stories', { returnObjects: true }) as Array<{ title: string; text: string; cta?: 'apply' }>;
   const team = t('about.team', { returnObjects: true }) as Array<{ name: string; role: string }>;
   const teamDetails = t('about.teamDetails', { returnObjects: true }) as Array<{
     name: string;
@@ -41,7 +41,7 @@ const AboutSection = () => {
                 <h3 className="font-body text-xl md:text-2xl text-off-white">{item.title}</h3>
                 <div>
                   <p className="text-base text-off-white font-body leading-relaxed">{item.text}</p>
-                  {i === 2 && (
+                  {item.cta === 'apply' && (
                     <div className="mt-6 flex items-center gap-6">
                       <BrandButton type="link" to="/apply" variant="secondary" className="text-sm">
                         {t('about.applyHere')}
