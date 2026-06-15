@@ -189,7 +189,7 @@ const PortfolioSection = () => {
                   onClick={scrollPrev}
                   disabled={!canScrollPrev}
                   className="disabled:cursor-not-allowed"
-                  aria-label="Previous project"
+                  aria-label={t('portfolio.previousProject')}
                 >
                   <svg width="44" height="44" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="44" cy="44" r="44" fill={canScrollPrev ? '#004A5B' : '#8EA3AA'} />
@@ -200,7 +200,7 @@ const PortfolioSection = () => {
                   onClick={scrollNext}
                   disabled={!canScrollNext}
                   className="disabled:cursor-not-allowed"
-                  aria-label="Next project"
+                  aria-label={t('portfolio.nextProject')}
                 >
                   <svg width="44" height="44" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="44" cy="44" r="44" fill={canScrollNext ? '#004A5B' : '#8EA3AA'} />

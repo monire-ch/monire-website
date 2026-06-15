@@ -106,7 +106,7 @@ const Navbar = () => {
           }}
         >
           <a href={getHref('#')} className="flex-shrink-0">
-            <img src={logo} alt="Moniré" className="h-7 mb-0.5" />
+            <img src={logo} alt={t('common.logoAlt')} className="h-7 mb-0.5" />
           </a>
 
           <div className="flex items-center gap-1">
@@ -165,12 +165,12 @@ const Navbar = () => {
         }}
       >
         <a href={getHref('#')}>
-          <img src={logo} alt="Moniré" className="h-6 mb-1" />
+          <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-1" />
         </a>
         <button
           onClick={() => setMobileOpen(true)}
           className="text-gold-text transition-colors hover:text-gold-hover"
-          aria-label="Open menu"
+          aria-label={t('nav.openMenu')}
         >
           <Menu size={26} strokeWidth={1.5} />
         </button>
@@ -192,11 +192,11 @@ const Navbar = () => {
             }}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-5">
-              <img src={logo} alt="Moniré" className="h-6 mb-0.5" />
+              <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-0.5" />
               <button
                 onClick={() => setMobileOpen(false)}
                 className="text-off-white/70 hover:text-off-white transition-colors"
-                aria-label="Close menu"
+                aria-label={t('nav.closeMenu')}
               >
                 <X size={24} strokeWidth={1.5} />
               </button>

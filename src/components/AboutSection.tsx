@@ -10,23 +10,17 @@ const teamLinkedIn = [
   'https://www.linkedin.com/in/monika-malecka/',
   'https://www.linkedin.com/in/nicole-pyra/',
 ];
-const teamDetails = [
-  {
-    name: 'Monika Märki',
-    origin: 'Polish-born, based in Switzerland',
-    languages: 'Languages: Polish, English, German',
-  },
-  {
-    name: 'Nikky Pyra',
-    origin: 'Canadian-born, based in Switzerland',
-    languages: 'Languages: English, German',
-  },
-];
 
 const AboutSection = () => {
   const { t } = useTranslation();
   const stories = t('about.stories', { returnObjects: true }) as Array<{ title: string; text: string }>;
   const team = t('about.team', { returnObjects: true }) as Array<{ name: string; role: string }>;
+  const teamDetails = t('about.teamDetails', { returnObjects: true }) as Array<{
+    name: string;
+    origin: string;
+    languages: string;
+    linkedinLabel: string;
+  }>;
 
   return (
     <div className="about-flow relative overflow-hidden">
@@ -47,10 +41,10 @@ const AboutSection = () => {
                 <h3 className="font-body text-xl md:text-2xl text-off-white">{item.title}</h3>
                 <div>
                   <p className="text-base text-off-white font-body leading-relaxed">{item.text}</p>
-                  {item.title === 'Giving Back' && (
+                  {i === 2 && (
                     <div className="mt-6 flex items-center gap-6">
                       <BrandButton type="link" to="/apply" variant="secondary" className="text-sm">
-                        Apply here
+                        {t('about.applyHere')}
                       </BrandButton>
                     </div>
                   )}
@@ -63,7 +57,7 @@ const AboutSection = () => {
         <div className="border-t border-white/10 mb-6 md:hidden" />
 
         <ScrollReveal>
-          <span className="eyebrow-pill eyebrow-pill-dark mb-3">Meet the Duo</span>
+          <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('about.teamEyebrow')}</span>
           <h3 className="font-body text-2xl text-off-white mb-8">{t('about.teamTitle')}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {teamDetails.map((person, i) => (
@@ -74,7 +68,7 @@ const AboutSection = () => {
                     href={teamLinkedIn[i]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${person.name}'s LinkedIn`}
+                    aria-label={person.linkedinLabel}
                     className="absolute bottom-2.5 right-2.5 z-10 flex items-center justify-center w-[2.4rem] h-[2.4rem] rounded-full border border-gold-text/40 bg-[#0a3440cc] backdrop-blur-sm transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
                   >
                     <img src={linkedinIcon} alt="" aria-hidden="true" className="w-4 h-4" style={{ filter: 'brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)' }} />

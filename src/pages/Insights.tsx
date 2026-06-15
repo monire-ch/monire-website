@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE } from "@/config/insightsPosts";
+import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE, type InsightPost } from "@/config/insightsPosts";
 import { SITE_URL } from "@/lib/seo";
 import { trackEvent } from "@/lib/analytics";
 
@@ -14,15 +15,20 @@ const formatDate = (value: string) =>
   }).format(new Date(`${value}T00:00:00`));
 
 const Insights = () => {
+  const { t } = useTranslation();
+  const posts = INSIGHTS_POSTS.map((post) => ({
+    ...post,
+    ...(t(`insightsPosts.${post.slug}`, { returnObjects: true }) as Partial<InsightPost>),
+  }));
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Moniré Insights",
+    name: t('insightsPage.schemaName'),
     url: `${SITE_URL}${INSIGHTS_ROUTE_BASE}`,
-    about: "Practical guidance on web design, automation, and digital decisions that help your business grow.",
+    about: t('insightsPage.intro'),
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: INSIGHTS_POSTS.map((post, index) => ({
+      itemListElement: posts.map((post, index) => ({
         "@type": "ListItem",
         position: index + 1,
         url: `${SITE_URL}${INSIGHTS_ROUTE_BASE}/${post.slug}`,
@@ -36,16 +42,16 @@ const Insights = () => {
       <Navbar />
       <main className="bg-background min-h-screen pt-36 md:pt-44 pb-20 px-6">
         <section className="max-w-5xl mx-auto">
-          <p className="eyebrow-pill eyebrow-pill-light mb-5 inline-block">Insights</p>
+          <p className="eyebrow-pill eyebrow-pill-light mb-5 inline-block">{t('insightsPage.eyebrow')}</p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-5">
-            Insights for better websites and smarter workflows
+            {t('insightsPage.title')}
           </h1>
           <p className="font-body text-base md:text-lg text-foreground/75 mb-12">
-            Practical guidance on web design, automation, and digital decisions that help your business grow.
+            {t('insightsPage.intro')}
           </p>
 
           <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-            {INSIGHTS_POSTS.map((post) => (
+            {posts.map((post) => (
               <li key={post.slug} className="h-full">
                 <Link
                   to={`${INSIGHTS_ROUTE_BASE}/${post.slug}`}
@@ -70,12 +76,12 @@ const Insights = () => {
                     <p className="text-[13px] font-body tracking-[0.04em] uppercase text-[#BFD0D6] mb-3">
                       <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
                       {" · "}
-                      {post.readTimeMinutes} min read
+                      {post.readTimeMinutes} {t('common.minRead')}
                     </p>
                     <h2 className="font-display text-2xl md:text-[2rem] leading-[1.1] text-[#F2F4F5] mb-4">{post.title}</h2>
                     <p className="text-[1.03rem] font-body leading-relaxed text-[#D5E2E7] mb-6">{post.description}</p>
                     <span className="mt-auto text-[0.96rem] font-body text-[#F1D69A] group-hover:text-[#F6DEAB] transition-colors underline group-hover:no-underline">
-                      Read article
+                      {t('common.readArticle')}
                     </span>
                   </article>
                 </Link>

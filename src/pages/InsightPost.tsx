@@ -1,8 +1,9 @@
 import { Link, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE, getInsightPostBySlug } from "@/config/insightsPosts";
+import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE, getInsightPostBySlug, type InsightPost } from "@/config/insightsPosts";
 import NotFound from "@/pages/NotFound";
 import { SITE_URL } from "@/lib/seo";
 import { trackEvent } from "@/lib/analytics";
@@ -25,8 +26,18 @@ const renderHeadingWithPunctuation = (text: string) => {
 };
 
 const InsightPost = () => {
+  const { t } = useTranslation();
   const { slug } = useParams();
-  const post = slug ? getInsightPostBySlug(slug) : undefined;
+  const basePost = slug ? getInsightPostBySlug(slug) : undefined;
+  const translatedPost = slug
+    ? (t(`insightsPosts.${slug}`, { returnObjects: true }) as Partial<InsightPost> | string)
+    : undefined;
+  const post = basePost
+    ? {
+        ...basePost,
+        ...(translatedPost && typeof translatedPost !== 'string' ? translatedPost : {}),
+      }
+    : undefined;
 
   if (!post) {
     return <NotFound />;
@@ -34,7 +45,10 @@ const InsightPost = () => {
 
   const canonicalPath = `${INSIGHTS_ROUTE_BASE}/${post.slug}`;
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
-  const relatedPosts = INSIGHTS_POSTS.filter((candidate) => post.relatedSlugs.includes(candidate.slug));
+  const relatedPosts = INSIGHTS_POSTS.filter((candidate) => post.relatedSlugs.includes(candidate.slug)).map((relatedPost) => ({
+    ...relatedPost,
+    ...(t(`insightsPosts.${relatedPost.slug}`, { returnObjects: true }) as Partial<InsightPost>),
+  }));
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -85,11 +99,11 @@ const InsightPost = () => {
       <Navbar />
       <main className="bg-background min-h-screen pt-36 md:pt-44 pb-20 px-6">
         <article className="max-w-3xl mx-auto" onClickCapture={handleInsightLinkClick}>
-          <p className="eyebrow-pill eyebrow-pill-light mb-5 inline-block">Insights</p>
+          <p className="eyebrow-pill eyebrow-pill-light mb-5 inline-block">{t('insightsPage.eyebrow')}</p>
           <p className="text-sm font-body text-main-teal mb-4">
             <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             {" · "}
-            {post.readTimeMinutes} min read
+            {post.readTimeMinutes} {t('common.minRead')}
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
             {post.title}
@@ -97,13 +111,16 @@ const InsightPost = () => {
           <p className="font-tertiary italic text-2xl md:text-3xl text-main-teal/90 mb-10">{post.description}</p>
           <section className="rounded-xl border border-border bg-card p-5 md:p-6 mb-10" aria-labelledby="quick-answer">
             <h2 id="quick-answer" className="font-display text-xl md:text-2xl text-foreground mb-2">
-              Quick answer
+              {t('insightsPage.quickAnswer')}
             </h2>
             <p className="font-body text-base text-foreground/80 leading-relaxed">{post.quickAnswer}</p>
           </section>
 
-          <div className="insight-prose">
-            {post.content}
+          <div
+            className="insight-prose"
+            dangerouslySetInnerHTML={post.contentHtml ? { __html: post.contentHtml } : undefined}
+          >
+            {post.contentHtml ? null : post.content}
           </div>
 
           <section className="rounded-xl border border-border bg-card p-5 md:p-6 mt-10" aria-labelledby="post-cta">
@@ -124,7 +141,7 @@ const InsightPost = () => {
           {relatedPosts.length > 0 ? (
             <section className="mt-12 pt-6 border-t border-border" aria-labelledby="related-insights">
               <h2 id="related-insights" className="font-display text-2xl md:text-3xl text-foreground mb-4">
-                Related insights
+                {t('insightsPage.related')}
               </h2>
               <ul className="space-y-2">
                 {relatedPosts.map((relatedPost) => (

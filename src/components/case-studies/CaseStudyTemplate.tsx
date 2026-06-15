@@ -30,7 +30,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         <span className="text-sm font-body text-foreground">{project.date}</span>
       </div>
       <div className="flex justify-between items-center py-4 border-b border-border">
-        <span className="text-sm font-body text-main-teal">Industry</span>
+        <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.industry')}</span>
         <span className="text-sm font-body text-foreground">{project.industry}</span>
       </div>
       <div className="flex justify-between items-center py-4 border-b border-border">
@@ -54,7 +54,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
       </div>
       {project.websiteUrl ? (
         <div className="flex justify-between items-start py-4 gap-4">
-          <span className="text-sm font-body text-main-teal">Website</span>
+          <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.website')}</span>
           <div className="text-right max-w-[200px] md:max-w-[280px]">
             <a
               href={project.websiteUrl}
@@ -70,10 +70,10 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               }
               className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
             >
-              {project.websiteLabel ?? 'Visit Website'}
+              {project.websiteLabel ?? t('caseStudy.visitWebsite')}
             </a>
             <p className="text-xs font-body text-foreground/60 mt-1">
-              Live website may differ from the original version as the site is managed by the client.
+              {t('caseStudy.liveNote')}
             </p>
           </div>
         </div>
@@ -196,10 +196,10 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                     id="case-study-results-title"
                     className="font-tertiary italic text-3xl md:text-4xl text-main-teal mb-4"
                   >
-                    Key results
+                    {t('caseStudy.keyResults')}
                   </h2>
                   <p className="max-w-sm text-base font-body leading-relaxed text-foreground/70">
-                    A focused digital experience designed to make discovering and booking the apartment simple.
+                    {t('caseStudy.keyResultsIntro')}
                   </p>
                 </div>
 

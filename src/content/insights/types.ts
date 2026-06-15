@@ -23,5 +23,6 @@ export type InsightPost = {
     question: string;
     answer: string;
   }>;
-  content: ReactNode;
+  content: ReactNode | null;
+  contentHtml?: string;
 };

@@ -36,7 +36,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
           {/* Brand column */}
           <div>
             <Link to="/#">
-              <img src={logo} alt="Moniré" className="h-6 lg:h-7 mb-4" />
+              <img src={logo} alt={t('common.logoAlt')} className="h-6 lg:h-7 mb-4" />
             </Link>
             <p className="text-off-white text-base font-body max-w-xs">
               {t('footer.tagline')}
@@ -106,10 +106,10 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                 </a>
               </li>
               <li>
-                <span className="text-off-white text-base font-body">Zürich, Switzerland</span>
+                <span className="text-off-white text-base font-body">{t('footer.locationCity')}</span>
               </li>
               <li>
-                <span className="text-off-white text-base font-body">Serving clients worldwide</span>
+                <span className="text-off-white text-base font-body">{t('footer.locationService')}</span>
               </li>
             </ul>
           </div>

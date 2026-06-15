@@ -80,14 +80,14 @@ const PricingSection = () => {
           <>
             <ScrollReveal className="text-center mb-6">
               <p className="text-off-white/85 text-xs sm:text-sm font-body tracking-[0.04em]">
-                Each plan includes everything from the previous tier.
+                {t('pricing.includedNote')}
               </p>
             </ScrollReveal>
 
             <ScrollReveal className="flex justify-center mb-10">
               <div
                 className="inline-flex items-center rounded-full border border-off-white/10 p-1 gap-0.5"
-                aria-label={t('pricing.currencyLabel', { defaultValue: 'Currency' })}
+                aria-label={t('pricing.currencyLabel')}
                 role="group"
               >
                 {SUPPORTED_CURRENCIES.map((currencyKey) => (
@@ -155,7 +155,7 @@ const PricingSection = () => {
                   }
                   className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
                 >
-                  What AI automation means for a small business →
+                  {t('pricing.automationArticleLink')}
                 </Link>
               </div>
             </div>

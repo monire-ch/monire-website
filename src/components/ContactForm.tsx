@@ -5,18 +5,6 @@ import { Link } from "react-router-dom";
 import BrandButton from "./BrandButton";
 import { getFormAttributionFields, trackEvent } from "@/lib/analytics";
 
-const SERVICE_OPTIONS = [
-  "Web Design",
-  "Web Development",
-  "AI Automations",
-  "Website Migration",
-  "SEO & Analytics",
-  "Non-profit project application",
-  "Other",
-];
-
-const BUDGET_OPTIONS = ["<CHF 5'000", "CHF 5'000 – 10'000", "CHF 10'000 – 20'000", "CHF 20'000+"];
-
 interface ContactFormProps {
   variant: "modal" | "page";
   formName: string;
@@ -195,6 +183,8 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
   const isModal = variant === "modal";
   const locationLabel = formLocation ?? (isModal ? "modal" : "contact_page");
   const emailValid = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim());
+  const serviceOptions = t('contact.serviceOptions', { returnObjects: true }) as string[];
+  const budgetOptions = t('contact.budgetOptions', { returnObjects: true }) as string[];
 
   const errors = {
     fullName: attempted && !fieldValues.fullName.trim(),
@@ -269,15 +259,15 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
     return (
       <div className="flex flex-col items-center justify-center py-16 text-center">
         <div className="text-gold text-5xl mb-4">✓</div>
-        <h3 className="font-body text-xl text-off-white mb-2">Thank you!</h3>
-        <p className="text-off-white/60 text-sm font-body mb-8">We'll get back to you shortly.</p>
+        <h3 className="font-body text-xl text-off-white mb-2">{t('contact.successTitle')}</h3>
+        <p className="text-off-white/60 text-sm font-body mb-8">{t('contact.successMessage')}</p>
         {isModal ? (
           <BrandButton variant="secondary" showStar className="text-sm" onClick={onClose}>
-            Close
+            {t('contact.close')}
           </BrandButton>
         ) : (
           <BrandButton type="link" to="/" variant="secondary" showStar className="text-sm">
-            Back to Home
+            {t('common.backToHome')}
           </BrandButton>
         )}
       </div>
@@ -311,7 +301,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
               value={fieldValues.fullName}
               onChange={(e) => setFieldValues((v) => ({ ...v, fullName: e.target.value }))}
             />
-            {errors.fullName && <p className="text-red-400 text-xs font-body mt-1">Please enter your full name.</p>}
+            {errors.fullName && <p className="text-red-400 text-xs font-body mt-1">{t('contact.errors.fullName')}</p>}
           </div>
 
           <div>
@@ -331,7 +321,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
             />
             {errors.email && (
               <p className="text-red-400 text-xs font-body mt-1">
-                {!fieldValues.email.trim() ? "Please enter your email." : "Please enter a valid email address."}
+                {!fieldValues.email.trim() ? t('contact.errors.emailRequired') : t('contact.errors.emailInvalid')}
               </p>
             )}
           </div>
@@ -346,20 +336,20 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
               name="service"
               label={t("contact.service")}
               placeholder={t("contact.servicePlaceholder")}
-              options={SERVICE_OPTIONS}
+              options={serviceOptions}
               value={services}
               onChange={setServices}
               required
               className={errors.service ? "!border-red-400" : ""}
             />
-            {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select at least one service.</p>}
+            {errors.service && <p className="text-red-400 text-xs font-body mt-1">{t('contact.errors.service')}</p>}
           </div>
 
           <SelectField
             name="budget"
             label={t("contact.budget")}
             placeholder={t("contact.budgetPlaceholder")}
-            options={BUDGET_OPTIONS}
+            options={budgetOptions}
             value={budget}
             onChange={setBudget}
           />
@@ -377,7 +367,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
                 value={fieldValues.fullName}
                 onChange={(e) => setFieldValues((v) => ({ ...v, fullName: e.target.value }))}
               />
-              {errors.fullName && <p className="text-red-400 text-xs font-body mt-1">Please enter your full name.</p>}
+              {errors.fullName && <p className="text-red-400 text-xs font-body mt-1">{t('contact.errors.fullName')}</p>}
             </div>
             <div>
               <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.company")}</label>
@@ -398,7 +388,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
               />
               {errors.email && (
                 <p className="text-red-400 text-xs font-body mt-1">
-                  {!fieldValues.email.trim() ? "Please enter your email." : "Please enter a valid email address."}
+                  {!fieldValues.email.trim() ? t('contact.errors.emailRequired') : t('contact.errors.emailInvalid')}
                 </p>
               )}
             </div>
@@ -414,19 +404,19 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
                 name="service"
                 label={t("contact.service")}
                 placeholder={t("contact.servicePlaceholder")}
-                options={SERVICE_OPTIONS}
+                options={serviceOptions}
                 value={services}
                 onChange={setServices}
                 required
                 className={errors.service ? "!border-red-400" : ""}
               />
-              {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please select at least one service.</p>}
+              {errors.service && <p className="text-red-400 text-xs font-body mt-1">{t('contact.errors.service')}</p>}
             </div>
             <SelectField
               name="budget"
               label={t("contact.budget")}
               placeholder={t("contact.budgetPlaceholder")}
-              options={BUDGET_OPTIONS}
+              options={budgetOptions}
               value={budget}
               onChange={setBudget}
             />
@@ -444,7 +434,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
           value={fieldValues.message}
           onChange={(e) => setFieldValues((v) => ({ ...v, message: e.target.value }))}
         />
-        {errors.message && <p className="text-red-400 text-xs font-body mt-1">Please enter a message.</p>}
+        {errors.message && <p className="text-red-400 text-xs font-body mt-1">{t('contact.errors.message')}</p>}
       </div>
 
       <label className="flex items-start gap-3 cursor-pointer">
@@ -473,7 +463,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
           className="rounded-xl border border-red-400/40 bg-red-950/30 p-4"
         >
           <p className="text-red-200 text-sm font-body">
-            There was a problem sending your message. Please try again or contact us at{" "}
+            {t('contact.errors.submit')}{" "}
             <a
               href="mailto:hello@monire.ch"
               onClick={() => {
