@@ -15,7 +15,7 @@
     "eyebrow": "Aus der Schweiz • Für Kundinnen und Kunden weltweit",
     "headline": "Websites, die Kunden gewinnen und mit Ihrem Unternehmen wachsen",
     "highlightWord": "Kunden gewinnen",
-    "subtitle": "Hochwertige Websites, die überzeugen. KI-gestützte Automatisierungen, wenn Sie bereit sind zu skalieren.",
+    "subtitle": "Hochwertige Websites, die überzeugen. KI-gestützte Automatisierungen, wenn Ihr Unternehmen bereit ist zu skalieren.",
     "cta": "Kostenloses Erstgespräch buchen",
     "workCta": "Unsere Arbeiten ansehen"
   },
@@ -26,7 +26,7 @@
     "items": [
       {
         "title": "Über 10 Jahre Erfahrung",
-        "desc": "Gemeinsam bringen wir über zehn Jahre praktische Erfahrung als Softwareentwicklerinnen bei führenden Schweizer Unternehmen mit — technische Stärke kombiniert mit klarem Design."
+        "desc": "Gemeinsam bringen wir über zehn Jahre praktische Erfahrung als Softwareentwicklerinnen bei führenden Schweizer Unternehmen mit und verbinden technische Expertise mit einem klaren Blick für Design."
       },
       {
         "title": "Optimiert für KI, Google & Geschwindigkeit",
@@ -93,7 +93,7 @@
     "stories": [
       {
         "title": "Unsere Geschichte",
-        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren nicht klassisch — Consulting, HR und Veterinärmedizin — und genau diese unterschiedlichen Hintergründe wurden zu unserer gemeinsamen Stärke. Wir schreiben nicht einfach Code. Wir verstehen geschäftliche Herausforderungen aus verschiedenen Blickwinkeln. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Sorgfalt und Partnerinnen, die mitdenken."
+        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren nicht klassisch — Consulting, HR und Veterinärmedizin — und genau diese unterschiedlichen Hintergründe wurden zu unserer gemeinsamen Stärke. Wir entwickeln nicht einfach Websites und Software. Wir verstehen geschäftliche Herausforderungen aus verschiedenen Blickwinkeln. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Zusammenarbeit und Partnerinnen, die mitdenken."
       },
       {
         "title": "Warum ein Duo?",
@@ -144,8 +144,8 @@
     "getStarted": "Loslegen",
     "mostPopular": "Am beliebtesten",
     "custom": {
-      "title": "Brauchen Sie etwas Spezifischeres?",
-      "desc": "Jedes Projekt ist anders. Wenn Sie Unterstützung ausserhalb der Pakete brauchen, stellen wir gerne einen individuellen Umfang zusammen. Wir arbeiten auch mit vertrauten Partnern für Fotografie, Social Media und Copywriting zusammen, damit alles an einem Ort koordiniert werden kann."
+      "title": "Sie benötigen etwas Individuelles?",
+      "desc": "Jedes Projekt ist anders. Wenn Sie Unterstützung ausserhalb der Pakete brauchen, erstellen wir gerne ein individuelles Angebot. Wir arbeiten auch mit vertrauten Partnern für Fotografie, Social Media und Copywriting zusammen, damit alles an einem Ort koordiniert werden kann."
     },
     "plans": {
       "webDesign": [
@@ -217,7 +217,7 @@
       {
         "title": "Snip Squad",
         "category": "Veterinärmedizin",
-        "desc": "Eine lebendige Website für eine Tierklinik, die warm, zugänglich und für Tierhalter einfach zu nutzen ist.",
+        "desc": "Eine freundliche, moderne Website für eine Tierklinik, die warm, zugänglich und für Tierhalter einfach zu nutzen ist.",
         "link": "/case-studies/snip-squad"
       },
       {
@@ -349,7 +349,7 @@
   },
   "cta": {
     "eyebrow": "Kontakt",
-    "title": "Interesse an einer Zusammenarbeit?",
+    "title": "Bereit, Ihre Website zu verbessern oder wiederkehrende Abläufe zu automatisieren?",
     "button": "Erstgespräch buchen",
     "subtext": "Wir arbeiten nur mit einer begrenzten Anzahl Kundinnen und Kunden gleichzeitig, damit jedes Projekt die Aufmerksamkeit bekommt, die es verdient."
   },
@@ -469,7 +469,7 @@
   },
   "contactPage": {
     "eyebrow": "Kontakt",
-    "title": "Lassen Sie uns zusammenarbeiten",
+    "title": "Sprechen wir über Ihr Projekt",
     "intro": "Ob Sie ein konkretes Projekt im Kopf haben oder erst Möglichkeiten ausloten möchten – wir freuen uns, von Ihnen zu hören.",
     "structuredDescription": "Individuelle Website-Entwicklung und KI-gestützte Workflow-Automatisierung in der Schweiz."
   },
@@ -510,7 +510,7 @@
   "insightsPage": {
     "eyebrow": "Insights",
     "title": "Insights für bessere Websites und clevere Workflows",
-    "intro": "Praktische Gedanken zu Webdesign, Automatisierung und digitalen Entscheidungen, die Ihr Unternehmen voranbringen.",
+  "intro": "Praktische Einblicke zu Webdesign, Automatisierung und digitalen Entscheidungen, die Ihr Unternehmen voranbringen.",
     "schemaName": "Moniré Insights",
     "quickAnswer": "Kurz gesagt",
     "related": "Ähnliche Insights"
@@ -579,7 +579,7 @@
         },
         {
           "title": "Ansatz:",
-          "intro": "Das Design beginnt mit einem Gemälde. Die Kundin brachte ein einzelnes Originalkunstwerk mit und wollte, dass es zur Seele der Marke wird. Nicht als Dekoration, sondern als visuelle Grundlage für alles Weitere. Das Kunstwerk prägte das gesamte visuelle System — Logo, Typografie, Farbpalette und Interface-Design der Plattform.\n\nDarauf aufgebaut wurden:",
+          "intro": "Das Design beginnt mit einem Gemälde. Die Kundin brachte ein einzelnes Gemälde mit und wollte, dass es zur Seele der Marke wird. Nicht als Dekoration, sondern als visuelle Grundlage für alles Weitere. Das Kunstwerk prägte das gesamte visuelle System — Logo, Typografie, Farbpalette und Interface-Design der Plattform.\n\nDarauf aufgebaut wurden:",
           "items": [
             "Ein geschütztes Mitgliederverzeichnis, ein Insights-Bereich und eine Event-Plattform mit passwortlosem Magic-Link-Login",
             "Ein selbst verwaltbares Webflow CMS, mit dem die Kundin Inhalte veröffentlichen, Mitglieder verwalten und Events aktualisieren kann — ganz ohne technischen Support",
@@ -588,7 +588,7 @@
         },
         {
           "title": "Ergebnis:",
-          "intro": "Entstanden ist eine eigenständige Mitgliederplattform, die der Community einen glaubwürdigen digitalen Auftritt gibt und die Administration schlank hält. Mitglieder finden Inhalte, Events und andere Mitglieder über eine nahtlose Erfahrung, während Automatisierungen Inhalte und Mitgliederdaten zuverlässig aktuell halten."
+          "intro": "Entstanden ist eine eigenständige Mitgliederplattform, die der Community einen professionellen digitalen Auftritt gibt und die Administration schlank hält. Mitglieder finden Inhalte, Events und andere Mitglieder über eine nahtlose Erfahrung, während Automatisierungen Inhalte und Mitgliederdaten zuverlässig aktuell halten."
         }
       ]
     },
