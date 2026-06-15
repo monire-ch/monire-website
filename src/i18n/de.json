@@ -12,8 +12,8 @@
     "closeMenu": "Menü schliessen"
   },
   "hero": {
-    "eyebrow": "Aus der Schweiz • Für Kundinnen und Kunden weltweit",
-    "headline": "Websites, die Kunden gewinnen und mit Ihrem Unternehmen wachsen",
+    "eyebrow": "Aus der Schweiz • Für Kunden weltweit",
+    "headline": "Websites, die Kunden gewinnen und mit Ihrem Unternehmen mitwachsen",
     "highlightWord": "Kunden gewinnen",
     "subtitle": "Hochwertige Websites, die überzeugen. KI-gestützte Automatisierungen, wenn Ihr Unternehmen bereit ist zu skalieren.",
     "cta": "Kostenloses Erstgespräch buchen",
@@ -30,11 +30,11 @@
       },
       {
         "title": "Optimiert für KI, Google & Geschwindigkeit",
-        "desc": "Gebaut für Zugänglichkeit, Zuverlässigkeit und Sichtbarkeit in Suchmaschinen und KI-Plattformen, damit Ihr Unternehmen dort gefunden wird, wo Kundinnen und Kunden suchen."
+        "desc": "Entwickelt für Barrierefreiheit, Zuverlässigkeit und Sichtbarkeit in Suchmaschinen und KI-Plattformen, damit Ihr Unternehmen dort gefunden wird, wo Ihre Kunden suchen."
       },
       {
         "title": "0 Stunden Wartungsaufwand",
-        "desc": "Ihre Webflow-Website läuft stabil mit automatischen Updates und ohne Plugins, die Sie pflegen müssen. So können Sie sich auf Ihr Geschäft konzentrieren."
+        "desc": "Ihre Webflow-Website läuft stabil mit automatischen Updates und ohne Plugins, die Sie pflegen müssen. So können Sie sich auf Ihr Unternehmen konzentrieren."
       },
       {
         "title": "Direkte Zusammenarbeit",
@@ -42,7 +42,7 @@
       },
       {
         "title": "Zeitersparnis rund um die Uhr",
-        "desc": "Intelligente Automatisierungen übernehmen wiederkehrende Aufgaben im Hintergrund, damit mehr Zeit für die Arbeit bleibt, die wirklich zählt."
+        "desc": "Intelligente Automatisierungen übernehmen wiederkehrende Aufgaben automatisch, damit mehr Zeit für die Arbeit bleibt, die wirklich zählt."
       },
       {
         "title": "Einfache Aktualisierungen",
@@ -58,7 +58,7 @@
       {
         "badge": "Design",
         "title": "Webdesign",
-        "desc": "Wir gestalten Websites, die sich klar, intuitiv und einfach bedienen lassen. Alles hat einen Zweck. Nichts wird nur eingebaut, weil es hübsch aussieht. Ziel ist eine Website, auf der Besucher schnell verstehen, was Sie anbieten, und mit Vertrauen den nächsten Schritt machen."
+        "desc": "Wir gestalten Websites, die intuitiv, klar strukturiert und einfach zu navigieren sind. Alles hat einen Zweck. Nichts wird nur eingebaut, weil es gut aussieht. Ziel ist eine Website, auf der Besucher schnell verstehen, was Sie anbieten, und den nächsten Schritt mit einem guten Gefühl gehen."
       },
       {
         "badge": "Entwicklung",
@@ -68,17 +68,17 @@
       {
         "badge": "Migration",
         "title": "Website-Migrationen",
-        "desc": "Wenn Ihre aktuelle Website — ob WordPress, Wix oder etwas Eigenes — schwerfällig, veraltet oder mühsam zu pflegen ist, helfen wir beim Wechsel auf ein einfacheres System. Ohne dabei wichtige Inhalte, Struktur oder Sichtbarkeit zu verlieren."
+        "desc": "Wenn Ihre aktuelle Website, ob WordPress, Wix oder eine individuelle Lösung, schwerfällig, veraltet oder mühsam zu pflegen ist, helfen wir beim Wechsel auf ein einfacheres System. Ohne dabei wichtige Inhalte, Struktur oder Sichtbarkeit zu verlieren."
       },
       {
         "badge": "SEO",
         "title": "SEO & Analytics (Basics)",
-        "desc": "Wir sorgen dafür, dass Ihre Website für Suchmaschinen und KI-Suchtools verständlich ist. Mit klarer Struktur, sinnvoll aufgebauten Inhalten und einfacher Analyse, damit Sie wissen, was funktioniert."
+        "desc": "Wir sorgen dafür, dass Ihre Website sowohl für Suchmaschinen als auch für KI-gestützte Suchtools verständlich ist. Mit klarer Struktur, relevanten Inhalten und einfacher Analyse, damit Sie jederzeit wissen, was funktioniert."
       },
       {
         "badge": "Automatisierung",
         "title": "KI-Automatisierungen & Workflows",
-        "desc": "Wir automatisieren wiederkehrende Admin-Aufgaben und verbinden die Tools, die Ihr Unternehmen bereits nutzt — von Spesenbelegen und Onboarding bis zu Dateiablage und CRM-Updates. Das Ziel ist einfach: weniger manuelle Schritte, weniger Fehler und mehr Zeit für Arbeit, die menschliches Urteilsvermögen braucht."
+        "desc": "Wir automatisieren wiederkehrende Admin-Aufgaben und verbinden die Tools, die Ihr Unternehmen bereits nutzt, von Spesenbelegen und Onboarding bis zu Dateiablage und CRM-Updates. Das Ziel ist einfach: weniger manuelle Schritte, weniger Fehler und mehr Zeit für Aufgaben, bei denen menschliches Urteilsvermögen gefragt ist."
       }
     ],
     "insightLinks": {
@@ -93,11 +93,11 @@
     "stories": [
       {
         "title": "Unsere Geschichte",
-        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren nicht klassisch — Consulting, HR und Veterinärmedizin — und genau diese unterschiedlichen Hintergründe wurden zu unserer gemeinsamen Stärke. Wir entwickeln nicht einfach Websites und Software. Wir verstehen geschäftliche Herausforderungen aus verschiedenen Blickwinkeln. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Zusammenarbeit und Partnerinnen, die mitdenken."
+        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren alles andere als klassisch: Consulting, HR und Veterinärmedizin. Genau diese unterschiedlichen Hintergründe wurden zu unserer gemeinsamen Stärke. Wir entwickeln nicht einfach Websites und Software. Wir verstehen unternehmerische Herausforderungen aus ganz unterschiedlichen Perspektiven. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Zusammenarbeit und Partnerinnen, die mitdenken."
       },
       {
         "title": "Warum ein Duo?",
-        "text": "Ein kleines Team bedeutet: Sie sind bei uns nie nur eine Nummer. Sie arbeiten direkt mit zwei erfahrenen Gründerinnen zusammen, die klar kommunizieren und wirklich daran interessiert sind, dass Ihr Projekt gelingt. Als berufstätige Mütter arbeiten wir fokussiert, effizient und mit Blick auf Wirkung — jede Entscheidung soll echten Mehrwert bringen."
+        "text": "Ein kleines Team bedeutet: Sie sind bei uns nie nur eine Nummer. Sie arbeiten direkt mit zwei erfahrenen Gründerinnen zusammen, die klar kommunizieren und wirklich daran interessiert sind, dass Ihr Projekt gelingt. Als berufstätige Mütter arbeiten wir fokussiert, effizient und mit einem klaren Blick für das Wesentliche – jede Entscheidung soll echten Mehrwert bringen."
       },
       {
         "title": "Giving Back",
@@ -145,14 +145,14 @@
     "mostPopular": "Am beliebtesten",
     "custom": {
       "title": "Sie benötigen etwas Individuelles?",
-      "desc": "Jedes Projekt ist anders. Wenn Sie Unterstützung ausserhalb der Pakete brauchen, erstellen wir gerne ein individuelles Angebot. Wir arbeiten auch mit vertrauten Partnern für Fotografie, Social Media und Copywriting zusammen, damit alles an einem Ort koordiniert werden kann."
+      "desc": "Jedes Projekt ist anders. Wenn Sie Unterstützung ausserhalb unserer Pakete benötigen, erstellen wir gerne ein individuelles Angebot. Wir arbeiten zudem mit bewährten Partnern in den Bereichen Fotografie, Social Media und Copywriting zusammen, sodass alles aus einer Hand koordiniert werden kann."
     },
     "plans": {
       "webDesign": [
         {
           "name": "Starter",
           "price": "ab CHF 3'500",
-          "desc": "Eine klare, professionelle Website, mit der Sie online sichtbar werden.",
+          "desc": "Eine klare, professionelle Website, die Ihr Unternehmen online überzeugend präsentiert.",
           "features": [
             "Bis zu 5 Seiten",
             "Individuelles Website-Design passend zu Ihrer Marke",
@@ -278,7 +278,7 @@
           },
           {
             "q": "Arbeiten Sie auch mit internationalen Kunden?",
-            "a": "Ja. Wir sitzen in der Schweiz und arbeiten aus der Ferne mit Kundinnen und Kunden weltweit. Die Zusammenarbeit funktioniert auch zeitversetzt gut, und Termine stimmen wir über Zeitzonen hinweg ab."
+            "a": "Ja. Wir sitzen in der Schweiz und arbeiten aus der Ferne mit Kunden weltweit. Die Zusammenarbeit funktioniert auch zeitversetzt gut, und Termine stimmen wir über Zeitzonen hinweg ab."
           }
         ]
       },
@@ -351,7 +351,7 @@
     "eyebrow": "Kontakt",
     "title": "Bereit, Ihre Website zu verbessern oder wiederkehrende Abläufe zu automatisieren?",
     "button": "Erstgespräch buchen",
-    "subtext": "Wir arbeiten nur mit einer begrenzten Anzahl Kundinnen und Kunden gleichzeitig, damit jedes Projekt die Aufmerksamkeit bekommt, die es verdient."
+    "subtext": "Wir arbeiten nur mit einer begrenzten Anzahl Kunden gleichzeitig, damit jedes Projekt die Aufmerksamkeit bekommt, die es verdient."
   },
   "contact": {
     "title": "Kontakt aufnehmen",
@@ -401,13 +401,13 @@
     ]
   },
   "footer": {
-    "tagline": "Websites und Automatisierungen, die klar, zuverlässig und mit Blick auf Wachstum gebaut sind.",
+  "tagline": "Websites und Automatisierungen, die klar, zuverlässig und zukunftsfähig sind.",
     "quickLinks": "Links",
     "contact": "Kontakt",
     "privacyPolicy": "Datenschutzerklärung",
     "copyright": "© 2025 Moniré. Alle Rechte vorbehalten.",
     "locationCity": "Zürich, Schweiz",
-    "locationService": "Für Kundinnen und Kunden weltweit"
+  "locationService": "Für Kunden weltweit"
   },
   "caseStudy": {
     "back": "Zurück zu den Projekten",
@@ -478,7 +478,7 @@
     "eyebrow": "Giving Back",
     "title": "Kostenlose Projektunterstützung",
     "intro": "Jedes Jahr unterstützen wir eine Non-Profit-Organisation oder eine sinnvolle Initiative mit einem kostenlosen Design- oder Entwicklungsprojekt. Kennen Sie eine Organisation, die davon profitieren könnte?",
-    "status": "Unser Projekt für 2026 wurde bereits ausgewählt. Bewerbungen sind Ende des Jahres wieder möglich.",
+    "status": "Die Organisation, die wir 2026 unterstützen, wurde bereits ausgewählt. Bewerbungen sind Ende des Jahres wieder möglich.",
     "howItWorks": "So funktioniert es",
     "cta": "Jetzt bewerben",
     "steps": [
@@ -582,13 +582,13 @@
           "intro": "Das Design beginnt mit einem Gemälde. Die Kundin brachte ein einzelnes Gemälde mit und wollte, dass es zur Seele der Marke wird. Nicht als Dekoration, sondern als visuelle Grundlage für alles Weitere. Das Kunstwerk prägte das gesamte visuelle System — Logo, Typografie, Farbpalette und Interface-Design der Plattform.\n\nDarauf aufgebaut wurden:",
           "items": [
             "Ein geschütztes Mitgliederverzeichnis, ein Insights-Bereich und eine Event-Plattform mit passwortlosem Magic-Link-Login",
-            "Ein selbst verwaltbares Webflow CMS, mit dem die Kundin Inhalte veröffentlichen, Mitglieder verwalten und Events aktualisieren kann — ganz ohne technischen Support",
+            "Ein Webflow CMS, das die Kundin selbst verwalten kann – Inhalte veröffentlichen, Mitglieder verwalten und Events aktualisieren, ganz ohne technischen Support",
             "Automatisierte Workflows, die manuelle Administration reduzieren, indem Mitglieder- und Inhaltsdaten über Plattformen hinweg synchron bleiben"
           ]
         },
         {
           "title": "Ergebnis:",
-          "intro": "Entstanden ist eine eigenständige Mitgliederplattform, die der Community einen professionellen digitalen Auftritt gibt und die Administration schlank hält. Mitglieder finden Inhalte, Events und andere Mitglieder über eine nahtlose Erfahrung, während Automatisierungen Inhalte und Mitgliederdaten zuverlässig aktuell halten."
+          "intro": "Entstanden ist eine eigenständige Mitgliederplattform, die der Community einen professionellen digitalen Auftritt gibt und die Administration schlank hält. Mitglieder finden Inhalte, Events und andere Mitglieder über eine nahtlose Nutzererfahrung, während Automatisierungen Inhalte und Mitgliederdaten automatisch aktuell halten."
         }
       ]
     },
@@ -854,7 +854,7 @@
           "answer": "Moniré ist ein Webdesign- und Entwicklungsstudio in Zürich. Wir helfen Unternehmen in der Schweiz und international, die passende Plattform für langfristige Performance und einfache Wartung zu wählen."
         }
       ],
-      "contentHtml": "<p>Eine der einfachsten Arten, wie ein Website-Projekt teuer oder frustrierend wird: Man entscheidet sich zu früh für die falsche Plattform.</p><p>Wir haben mit vielen Website-Baukästen gearbeitet und auch vollständig individuell entwickelte Websites und Anwendungen gebaut. So denken wir wirklich über diese Entscheidung nach.</p><p>Es gibt nicht die eine Plattform, die für jedes Unternehmen passt. Die richtige Wahl hängt davon ab, was Ihre Website leisten muss, wer sie später verwaltet und wohin sich das Unternehmen entwickeln soll.</p><section aria-labelledby=\"start-with-needs\"><h2 id=\"start-with-needs\">Wir starten mit der Frage, was die Website leisten muss</h2><p>Bevor wir über Plattformen sprechen, möchten wir verstehen, welche Aufgabe die Website erfüllen soll.</p><p>Eine einfache Fünf-Seiten-Website für eine Beratung hat ganz andere Anforderungen als eine Mitgliederplattform, ein buchungsintensives Dienstleistungsunternehmen oder eine Website, die mit externen Tools verbunden werden muss. Die Plattform folgt den Anforderungen. Nicht umgekehrt.</p><p>Fragen, die wir früh stellen:</p><p>Werden Sie die Website selbst aktualisieren oder übernimmt das jemand anderes? Wie oft ändern sich Inhalte? Muss die Website mit anderen Tools verbunden werden? Wie wichtig ist die Designqualität für die Marke? Ist SEO-Performance ein Schwerpunkt?</p><p>Die Antworten prägen alles, was danach kommt.</p></section><section aria-labelledby=\"why-webflow\"><h2 id=\"why-webflow\">Warum wir oft Webflow wählen</h2><p>Viele der <a href=\"/#portfolio\" class=\"text-main-teal underline hover:no-underline\">Websites, die wir bauen</a>, sind Marketing-Websites, Websites für Dienstleistungsunternehmen oder CMS-basierte Seiten. Sie müssen gut aussehen, schnell laufen und ohne laufende technische Betreuung stabil bleiben. Genau da ist Webflow oft stark.</p><p>Der grösste praktische Vorteil ist: Webflow wartet die Plattform für Sie. Keine Plugins, die aktualisiert werden müssen. Keine Sicherheitsupdates, um die Sie sich kümmern müssen. Kein Risiko, dass zwei Tools plötzlich nicht mehr zusammenspielen. Im Alltag läuft die Website, ohne dass ständig jemand technisch nachsehen muss.</p><p>Auch die Performance ist solide. Webflow-Websites laden schnell, sind sauber aufgebaut und für Suchmaschinen gut lesbar. Das ist bei Plattformen, die stark von Drittanbieter-Plugins abhängen, nicht immer der Fall.</p><p>Beim Design gibt uns Webflow mehr Freiheit als viele Baukästen. Jede Website, die wir bauen, soll sich nach diesem Unternehmen anfühlen — nicht wie eine Vorlage mit ausgetauschtem Logo.</p><p>Für viele Unternehmen ist auch die Kostenstruktur einfacher und besser planbar als bei Systemen, die stark von Plugins und laufender Wartung abhängen.</p><p>Wir empfehlen Webflow, wenn Designqualität wichtig ist, Performance und SEO Priorität haben und die Website zuverlässig laufen soll, ohne ständig technische Aufmerksamkeit zu brauchen.</p><aside class=\"insight-pullquote\" aria-label=\"Zusammenfassung zur Plattformwahl\"><p>Für die meisten kleinen Unternehmen ist die richtige Plattform die, die gut aussieht, zuverlässig läuft und nicht ständig technische Pflege braucht.</p></aside></section><section aria-labelledby=\"wordpress-note\"><h2 id=\"wordpress-note\">Ein Wort zu WordPress</h2><p>WordPress betreibt einen grossen Teil des Internets, und wir haben auch damit gebaut. Für Websites mit sehr vielen Inhalten oder Unternehmen, die bereits stark im WordPress-Ökosystem arbeiten, kann es weiterhin eine sinnvolle Option sein.</p><p>Trotzdem ist es nicht unsere erste Empfehlung. Der Hauptgrund ist Wartung. Plugins müssen aktualisiert werden, Sicherheitslücken können entstehen, und ohne regelmässige Pflege kann etwas kaputtgehen oder langsam werden, ohne dass es sofort auffällt. Für kleine Teams, die sich nicht um Technik kümmern möchten, summiert sich dieser Aufwand schnell — und die laufenden Kosten werden am Anfang oft unterschätzt.</p><p>Eine gut gebaute WordPress-Website kann sehr gut funktionieren. Für die meisten kleinen Unternehmen gibt es heute aus unserer Sicht aber oft einfachere Optionen.</p></section><section aria-labelledby=\"custom-dev\"><h2 id=\"custom-dev\">Wann individuelle Entwicklung sinnvoll ist</h2><p>Manchmal geht ein Projekt über das hinaus, wofür Website-Baukästen gemacht sind. Wenn ein Unternehmen sehr individuelle Backend-Logik, komplexe Integrationen, appähnliche Funktionen oder anspruchsvolle Nutzersysteme braucht, ist individuelle Entwicklung oft die bessere Wahl.</p><p>Für solche komplexeren Projekte arbeiten wir meist mit modernen Frameworks wie React oder Next.js, damit individuelle Logik, Performance und langfristige Skalierbarkeit möglich sind.</p><p>Der Kompromiss sind Zeit, Kosten und laufende technische Verantwortung. Nicht jedes Unternehmen braucht eine komplett individuelle Lösung, auch wenn das beeindruckend klingt. Viele Unternehmen sind langfristig besser bedient mit einem einfacheren System, das ihr Team realistisch verwalten kann.</p></section><section aria-labelledby=\"what-we-balance\"><h2 id=\"what-we-balance\">Was wir wirklich abwägen</h2><p>Uns ist weniger wichtig, welche Plattform gerade am beliebtesten ist. Wichtiger ist, was wirklich zum Unternehmen passt.</p><p>Eine schöne Website bringt wenig, wenn jede Aktualisierung Stress macht. Eine hochindividuelle Lösung ist nicht automatisch besser, wenn sie unnötige Komplexität erzeugt. Und die günstigste Option am Anfang ist nicht immer die günstigste über die Zeit.</p><p>Meist suchen wir die richtige Balance zwischen Flexibilität, einfacher Nutzung, Performance, Wartbarkeit, Kosten und der Art, wie das Unternehmen im Alltag arbeitet.</p></section><section aria-labelledby=\"question-most\"><h2 id=\"question-most\">Die wichtigste Frage</h2><p>Plattformentscheidungen werden oft als technische Debatten geführt. Für die meisten Unternehmen ist die eigentliche Frage viel einfacher:</p><ul><li>Funktioniert das für das Team auch noch in zwei bis drei Jahren?</li><li>Fühlen sich die Menschen wohl dabei, Inhalte selbst zu aktualisieren?</li><li>Wird es mit der Zeit schwieriger oder teurer, die Website zu verwalten?</li></ul><p>Diese Fragen sind meistens wichtiger als die Plattform, die gerade im Trend ist.</p></section>"
+      "contentHtml": "<p>Eine der einfachsten Arten, wie ein Website-Projekt teuer oder frustrierend wird: Man entscheidet sich zu früh für die falsche Plattform.</p><p>Wir haben mit vielen Website-Baukästen gearbeitet und auch vollständig individuell entwickelte Websites und Anwendungen gebaut. So denken wir wirklich über diese Entscheidung nach.</p><p>Es gibt nicht die eine Plattform, die für jedes Unternehmen passt. Die richtige Wahl hängt davon ab, was Ihre Website leisten muss, wer sie später verwaltet und wohin sich das Unternehmen entwickeln soll.</p><section aria-labelledby=\"start-with-needs\"><h2 id=\"start-with-needs\">Wir starten mit der Frage, was die Website leisten muss</h2><p>Bevor wir über Plattformen sprechen, möchten wir verstehen, welche Aufgabe die Website erfüllen soll.</p><p>Eine einfache Fünf-Seiten-Website für eine Beratung hat ganz andere Anforderungen als eine Mitgliederplattform, ein buchungsintensives Dienstleistungsunternehmen oder eine Website, die mit externen Tools verbunden werden muss. Die Plattform folgt den Anforderungen. Nicht umgekehrt.</p><p>Fragen, die wir früh stellen:</p><p>Werden Sie die Website selbst aktualisieren oder übernimmt das jemand anderes? Wie oft ändern sich Inhalte? Muss die Website mit anderen Tools verbunden werden? Wie wichtig ist die Designqualität für die Marke? Ist SEO-Performance ein Schwerpunkt?</p><p>Die Antworten prägen alles, was danach kommt.</p></section><section aria-labelledby=\"why-webflow\"><h2 id=\"why-webflow\">Warum wir oft Webflow wählen</h2><p>Viele der <a href=\"/#portfolio\" class=\"text-main-teal underline hover:no-underline\">Websites, die wir bauen</a>, sind Marketing-Websites, Websites für Dienstleistungsunternehmen oder CMS-basierte Seiten. Sie müssen gut aussehen, schnell laufen und ohne laufende technische Betreuung stabil bleiben. Genau da ist Webflow oft stark.</p><p>Der grösste praktische Vorteil ist: Webflow wartet die Plattform für Sie. Keine Plugins, die aktualisiert werden müssen. Keine Sicherheits-Updates, um die Sie sich kümmern müssen. Kein Risiko, dass zwei Tools plötzlich nicht mehr zusammenspielen. Im Alltag läuft die Website, ohne dass ständig jemand technisch nachsehen muss.</p><p>Auch die Performance ist solide. Webflow-Websites laden schnell, sind sauber aufgebaut und für Suchmaschinen gut lesbar. Das ist bei Plattformen, die stark von Drittanbieter-Plugins abhängen, nicht immer der Fall.</p><p>Beim Design gibt uns Webflow mehr Freiheit als viele Baukästen. Jede Website, die wir bauen, soll sich nach diesem Unternehmen anfühlen — nicht wie eine Vorlage mit ausgetauschtem Logo.</p><p>Für viele Unternehmen ist auch die Kostenstruktur einfacher und besser planbar als bei Systemen, die stark von Plugins und laufender Wartung abhängen.</p><p>Wir empfehlen Webflow, wenn Designqualität wichtig ist, Performance und SEO Priorität haben und die Website zuverlässig laufen soll, ohne ständig technische Aufmerksamkeit zu brauchen.</p><aside class=\"insight-pullquote\" aria-label=\"Zusammenfassung zur Plattformwahl\"><p>Für die meisten kleinen Unternehmen ist die richtige Plattform die, die gut aussieht, zuverlässig läuft und nicht ständig technische Pflege braucht.</p></aside></section><section aria-labelledby=\"wordpress-note\"><h2 id=\"wordpress-note\">Ein Wort zu WordPress</h2><p>WordPress betreibt einen grossen Teil des Internets, und wir haben auch damit gebaut. Für Websites mit sehr vielen Inhalten oder Unternehmen, die bereits stark im WordPress-Ökosystem arbeiten, kann es weiterhin eine sinnvolle Option sein.</p><p>Trotzdem ist es nicht unsere erste Empfehlung. Der Hauptgrund ist Wartung. Plugins müssen aktualisiert werden, Sicherheitslücken können entstehen, und ohne regelmässige Pflege kann etwas kaputtgehen oder langsam werden, ohne dass es sofort auffällt. Für kleine Teams, die sich nicht um Technik kümmern möchten, summiert sich dieser Aufwand schnell — und die laufenden Kosten werden am Anfang oft unterschätzt.</p><p>Eine gut gebaute WordPress-Website kann sehr gut funktionieren. Für die meisten kleinen Unternehmen gibt es heute aus unserer Sicht aber oft einfachere Optionen.</p></section><section aria-labelledby=\"custom-dev\"><h2 id=\"custom-dev\">Wann individuelle Entwicklung sinnvoll ist</h2><p>Manchmal geht ein Projekt über das hinaus, wofür Website-Baukästen gemacht sind. Wenn ein Unternehmen sehr individuelle Backend-Logik, komplexe Integrationen, appähnliche Funktionen oder anspruchsvolle Nutzersysteme braucht, ist individuelle Entwicklung oft die bessere Wahl.</p><p>Für solche komplexeren Projekte arbeiten wir meist mit modernen Frameworks wie React oder Next.js, damit individuelle Logik, Performance und langfristige Skalierbarkeit möglich sind.</p><p>Der Kompromiss sind Zeit, Kosten und laufende technische Verantwortung. Nicht jedes Unternehmen braucht eine komplett individuelle Lösung, auch wenn das beeindruckend klingt. Viele Unternehmen sind langfristig besser bedient mit einem einfacheren System, das ihr Team realistisch verwalten kann.</p></section><section aria-labelledby=\"what-we-balance\"><h2 id=\"what-we-balance\">Was wir wirklich abwägen</h2><p>Uns ist weniger wichtig, welche Plattform gerade am beliebtesten ist. Wichtiger ist, was wirklich zum Unternehmen passt.</p><p>Eine schöne Website bringt wenig, wenn jede Aktualisierung Stress macht. Eine hochindividuelle Lösung ist nicht automatisch besser, wenn sie unnötige Komplexität erzeugt. Und die günstigste Option am Anfang ist nicht immer die günstigste über die Zeit.</p><p>Meist suchen wir die richtige Balance zwischen Flexibilität, einfacher Nutzung, Performance, Wartbarkeit, Kosten und der Art, wie das Unternehmen im Alltag arbeitet.</p></section><section aria-labelledby=\"question-most\"><h2 id=\"question-most\">Die wichtigste Frage</h2><p>Plattformentscheidungen werden oft als technische Debatten geführt. Für die meisten Unternehmen ist die eigentliche Frage viel einfacher:</p><ul><li>Funktioniert das für das Team auch noch in zwei bis drei Jahren?</li><li>Fühlen sich die Menschen wohl dabei, Inhalte selbst zu aktualisieren?</li><li>Wird es mit der Zeit schwieriger oder teurer, die Website zu verwalten?</li></ul><p>Diese Fragen sind meistens wichtiger als die Plattform, die gerade im Trend ist.</p></section>"
     },
     "what-ai-automation-actually-means-for-a-small-business": {
       "slug": "what-ai-automation-actually-means-for-a-small-business",
