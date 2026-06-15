@@ -465,7 +465,8 @@
     "getInTouch": "Kontakt aufnehmen",
     "readArticle": "Artikel lesen",
     "minRead": "Min. Lesezeit",
-    "logoAlt": "Moniré"
+    "logoAlt": "Moniré",
+    "languageSwitcherLabel": "Sprache wählen"
   },
   "contactPage": {
     "eyebrow": "Kontakt",

@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import ContactModal from './ContactModal';
 import BrandButton from './BrandButton';
+import LanguageSwitcher from './LanguageSwitcher';
 import { trackEvent } from '@/lib/analytics';
 
 const Navbar = () => {
@@ -142,6 +143,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             {/* CTA */}
             <BrandButton
               onClick={() => openContactModal('nav')}
@@ -167,13 +169,16 @@ const Navbar = () => {
         <a href={getHref('#')}>
           <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-1" />
         </a>
-        <button
-          onClick={() => setMobileOpen(true)}
-          className="text-gold-text transition-colors hover:text-gold-hover"
-          aria-label={t('nav.openMenu')}
-        >
-          <Menu size={26} strokeWidth={1.5} />
-        </button>
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="text-gold-text transition-colors hover:text-gold-hover"
+            aria-label={t('nav.openMenu')}
+          >
+            <Menu size={26} strokeWidth={1.5} />
+          </button>
+        </div>
       </header>
 
       {/* ─── Mobile / Tablet Full-Screen Overlay ─── */}

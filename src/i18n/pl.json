@@ -465,7 +465,8 @@
     "getInTouch": "Skontaktuj się",
     "readArticle": "Przeczytaj artykuł",
     "minRead": "min czytania",
-    "logoAlt": "Moniré"
+    "logoAlt": "Moniré",
+    "languageSwitcherLabel": "Wybierz język"
   },
   "contactPage": {
     "eyebrow": "Kontakt",
