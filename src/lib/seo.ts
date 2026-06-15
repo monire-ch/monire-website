@@ -1,4 +1,5 @@
 import { INSIGHTS_META } from '../config/insightsMeta';
+import en from '../i18n/en.json';
 
 export const SITE_URL = 'https://monire.ch';
 
@@ -8,58 +9,7 @@ export type RouteSeo = {
   keywords?: string[];
 };
 
-const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
-  '/': {
-    title: 'Moniré | Web Design, Web Development & AI Automations in Zurich, Switzerland',
-    description:
-      'Moniré is a digital studio offering web design, web development, and AI automations. Based in Zurich, serving clients worldwide.',
-    keywords: ['Moniré', 'web design Zurich', 'web development Zurich', 'website design Switzerland', 'AI automation Switzerland', 'workflow automation Zurich', 'Webflow development Zurich', 'small business web design Switzerland'],
-  },
-  '/contact': {
-    title: 'Contact Moniré | Web Design, Web Development & AI Automations',
-    description:
-      'Contact Moniré about web design, web development, and AI automations in Zurich and across Switzerland.',
-  },
-  '/insights': {
-    title: 'Insights on Web Design, Automation & Digital Strategy | Moniré',
-    description:
-      'Practical articles from Moniré on web design, web development, SEO, AI automation, and digital decisions for small and mid-sized businesses.',
-    keywords: ['web design advice', 'website strategy', 'small business website advice', 'AI automation for small businesses', 'web design Switzerland', 'workflow automation Switzerland', 'Webflow Switzerland'],
-  },
-  '/privacy': {
-    title: 'Privacy Policy | Moniré',
-    description:
-      'Privacy policy for Moniré, a digital studio providing web design, web development, and AI automations.',
-  },
-  '/apply': {
-    title: 'Apply | Moniré',
-    description: 'Apply for Moniré complimentary project support for a non-profit or meaningful initiative.',
-  },
-  '/case-studies/expense-receipt-automation': {
-    title: 'Expense Receipt Automation Case Study | Moniré',
-    description:
-      'Case study: an AI automation workflow for expense receipt processing built by Moniré.',
-  },
-  '/case-studies/snip-squad': {
-    title: 'Snip Squad Case Study | Moniré',
-    description: 'Case study: web design and development work delivered by Moniré for Snip Squad.',
-  },
-  '/case-studies/portco-hr-collective': {
-    title: 'PortCo HR Collective Case Study | Moniré',
-    description:
-      'Case study: branding, web design, development, and AI automation work delivered by Moniré for PortCo HR Collective.',
-  },
-  '/case-studies/systemically': {
-    title: 'SystemicAlly Consulting Website Case Study | Moniré',
-    description:
-      'See how Moniré developed a polished, responsive website for SystemicAlly, a leadership and transformation consultancy.',
-  },
-  '/case-studies/towarowa': {
-    title: 'Towarowa 41 Apartment Website Case Study | Moniré',
-    description:
-      'See how Moniré designed and developed a refined, responsive website for the Towarowa 41 premium apartment rental.',
-  },
-};
+const STATIC_ROUTE_SEO: Record<string, RouteSeo> = en.seo.routes;
 
 const INSIGHTS_ROUTE_SEO: Record<string, RouteSeo> = INSIGHTS_META.reduce((acc, post) => {
   acc[`/insights/${post.slug}`] = {

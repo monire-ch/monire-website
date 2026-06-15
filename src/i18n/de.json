@@ -80,7 +80,12 @@
         "title": "KI-Automatisierungen & Workflows",
         "desc": "Einfache, praktische Automatisierungen, die repetitive Aufgaben erledigen und Ihre Zeit freisetzen. Wir bauen kleine, zuverlässige Workflows mit Tools wie n8n, um Dokumente zu sortieren, Informationen zu verarbeiten und Daten zu organisieren."
       }
-    ]
+    ],
+    "insightLinks": {
+      "websiteLosingClients": "Warum Ihre Website möglicherweise Kunden kostet →",
+      "websitePlatform": "Wie wir die richtige Website-Plattform wählen →",
+      "aiAutomation": "Was KI-Automatisierung für ein kleines Unternehmen bedeutet →"
+    }
   },
   "about": {
     "eyebrow": "Über uns",
@@ -153,7 +158,8 @@
             "Mobiloptimiert + schnelles Laden",
             "Kontaktformular",
             "Basis-CMS für einfache Text-/Bildaktualisierungen",
-            "Grundlegendes On-Page-SEO (Meta-Tags, Sitemap, suchfreundliche Struktur)"
+            "Grundlegendes On-Page-SEO (Meta-Tags, Sitemap, suchfreundliche Struktur)",
+            "Schulung zur Verwaltung Ihrer Website"
           ]
         },
         {
@@ -167,6 +173,7 @@
             "SEO-Optimierung mit Fokus auf Ranking (nicht nur Einrichtung)",
             "Google Analytics mit Event-Tracking",
             "Integration von 1-2 Drittanbieter-Tools (Buchungssystem, CRM-Formular usw.)",
+            "Unterstützung für 2 Sprachen",
             "Unterstützung für 2 Sprachen"
           ]
         },
@@ -238,7 +245,21 @@
       }
     ],
     "previousProject": "Vorheriges Projekt",
-    "nextProject": "Nächstes Projekt"
+    "nextProject": "Nächstes Projekt",
+    "navGroups": {
+      "webDesignDevelopment": {
+        "title": "Webdesign & Entwicklung",
+        "veterinary": "Veterinärmedizin",
+        "communityPlatform": "Community-Plattform",
+        "consulting": "Consulting",
+        "realEstate": "Immobilien"
+      },
+      "aiAutomation": {
+        "title": "KI-Automatisierung",
+        "expenseReceipts": "Spesenbelege",
+        "communityMembership": "Community-Mitgliedschaft"
+      }
+    }
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
@@ -307,6 +328,10 @@
           {
             "q": "Brauche ich technisches Wissen, um KI-Automatisierungstools zu nutzen?",
             "a": "Nein! Wir entwickeln benutzerfreundliche Lösungen, die sich nahtlos in Ihre bestehenden Arbeitsabläufe integrieren. Wir bieten Schulungen und Dokumentation an, damit Sie die Tools sicher nutzen können."
+          },
+          {
+            "q": "Brauche ich technisches Wissen, um KI-Automatisierungstools zu nutzen?",
+            "a": "Nein. Wir bauen benutzerfreundliche Lösungen, die in Ihren bestehenden Workflow passen. Außerdem bieten wir Onboarding und Dokumentation, damit Ihr Team alles sicher nutzen kann."
           }
         ]
       },
@@ -324,7 +349,8 @@
   "cta": {
     "eyebrow": "Kontakt",
     "title": "Interesse an einer Zusammenarbeit?",
-    "button": "Erstgespräch buchen"
+    "button": "Erstgespräch buchen",
+    "subtext": "Wir arbeiten gleichzeitig nur mit einer begrenzten Anzahl von Kunden, damit jedes Projekt die Aufmerksamkeit bekommt, die es verdient."
   },
   "contact": {
     "title": "Kontaktieren Sie uns",
@@ -931,6 +957,69 @@
         }
       ],
       "contentHtml": "<p>Most business owners know their website isn&#x27;t perfect. Fewer realise it might be actively costing them clients.</p><p>The problem is that a website can look fine and still be failing. It can be live, reasonably well designed, and totally invisible to the people you&#x27;re trying to reach. Or visible, but doing nothing to convince them to get in touch.</p><p>Here are seven signs to look out for.</p><section aria-labelledby=\"hero-section-problem\"><h2 id=\"hero-section-problem\">1. Your hero section doesn&#x27;t explain what you do</h2><p>The hero is the first thing someone sees when they land on your site. You have a few seconds to answer one question: what does this business actually do?</p><p>Most hero sections fail this test. They lead with a tagline that sounds good but says nothing. &quot;Empowering businesses to grow.&quot; &quot;Your success is our mission.&quot; &quot;Taking things to the next level.&quot;</p><p>None of those tell a visitor what you do, who you do it for, or why they should stay.</p><p>A simple test: cover your logo and show the page to someone who doesn&#x27;t know your business. Can they tell what you do within five seconds? If not, your hero needs work.</p></section><section aria-labelledby=\"client-focused-content\"><h2 id=\"client-focused-content\">2. The content is about you, not your client</h2><p>This is the most common mistake, and the hardest one to self-diagnose.</p><p>&quot;We are a leading provider of...&quot; &quot;We have over 20 years of experience...&quot; &quot;We are passionate about...&quot;</p><p>Your visitors don&#x27;t arrive wondering about you. They arrive with a problem. They want to know whether you can solve it.</p><p>The shift is simple in theory but hard in practice. Instead of &quot;We build websites for small businesses,&quot; try &quot;Get a website that actually brings in clients.&quot; Same information, completely different focus.</p><p>Read through your homepage and count how many sentences start with &quot;we.&quot; Then rewrite them from the client&#x27;s perspective.</p></section><section aria-labelledby=\"clear-cta\"><h2 id=\"clear-cta\">3. There&#x27;s no clear call to action</h2><p>If someone reads your site and wants to take the next step, what do they do?</p><p>If the answer isn&#x27;t immediately obvious, you&#x27;re losing people. Visitors won&#x27;t hunt around for a way to contact you. They&#x27;ll leave.</p><p>Every page should have one clear primary action. Not three. Not a contact button buried in the footer alongside six other links. One clear next step that tells the visitor exactly what to do and what to expect when they do it.</p><p>Not sure whether your site gives visitors a clear next step? It&#x27;s one of the first things we look at when we work with a new client.</p><aside class=\"insight-pullquote\" aria-label=\"Key takeaway\"><p>One clear next step on every page beats five competing choices.</p></aside></section><section aria-labelledby=\"mobile-breaks\"><h2 id=\"mobile-breaks\">4. It breaks on mobile</h2><p>More than 60% of web traffic comes from phones. If your site doesn&#x27;t work properly on mobile, you&#x27;re losing more than half your potential visitors before they&#x27;ve even read a word.</p><p>This isn&#x27;t just about things looking slightly different on a smaller screen. Buttons that are too small to tap, text that runs off the edge, images that don&#x27;t resize, menus that don&#x27;t open. All of these tell a visitor the site wasn&#x27;t built with them in mind.</p><p>Pull out your phone and go through your site properly. Not a quick glance. Actually try to use it the way a new visitor would.</p></section><section aria-labelledby=\"slow-loads\"><h2 id=\"slow-loads\">5. It loads too slowly</h2><p>Most people will leave a page that takes more than three seconds to load. They won&#x27;t wait and they won&#x27;t come back.</p><p>Slow sites lose visitors before the design, copy, or photography have a chance to do their job. This is especially true on mobile, where people are often browsing with less patience and weaker connections.</p><p>If your site feels slow, or if visitors seem to drop off before engaging, it is worth looking into. Small technical improvements can often make a significant difference. But if your site is slow because of heavy templates, unnecessary plugins, or a setup that is difficult to maintain, it may be worth <a href=\"/insights/website-builders-vs-custom-development\" class=\"text-main-teal underline hover:no-underline\">reconsidering the platform behind it</a>.</p></section><section aria-labelledby=\"search-visibility\"><h2 id=\"search-visibility\">6. It doesn&#x27;t show up on Google or AI search</h2><p>A website being live does not mean people can find it.</p><p>Search engines like Google, and increasingly AI tools like ChatGPT, need to be able to read, understand, and index your site before they can show it to anyone. If the technical foundations are not in place, your site may be effectively invisible, even to people who are actively looking for what you offer.</p><p>Most business owners never check this. They assume that because the site is up, people can find it. Often that&#x27;s not the case.</p><p>A simple way to think about it: how would a new client find you if they had never heard of you? If the only way someone can reach your site is by already knowing your name, your website isn&#x27;t doing enough work.</p></section><section aria-labelledby=\"contact-form\"><h2 id=\"contact-form\">7. Your contact form goes nowhere</h2><p>This one sounds unlikely but we have seen it on real client sites more than once.</p><p>Forms that were never properly connected to an email address. Inboxes that nobody checks anymore. Confirmation messages that go straight to spam. A potential client fills in the form, waits for a response, hears nothing, and moves on.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Practical check\"><strong>Simple test: submit your own form today.</strong><span>If you don&#x27;t receive the enquiry, your visitors probably don&#x27;t either.</span></div></section><section aria-labelledby=\"quick-self-check\"><h2 id=\"quick-self-check\">Quick website self-check</h2><p>If you are not sure whether your website is helping or hurting your business, start with these questions:</p><ul class=\"insight-checklist\"><li>Can a stranger understand what you do within five seconds?</li><li>Is your main call to action easy to find?</li><li>Does your homepage speak more about your client&#x27;s needs than your company?</li><li>Does the site work smoothly on mobile?</li><li>Does it load quickly enough to feel easy to use?</li><li>Can new clients find you through search or AI tools?</li><li>Does your contact form actually deliver enquiries?</li></ul><p>If you answered no to several of these, your website may be quietly costing you enquiries.</p></section><section aria-labelledby=\"where-next\"><h2 id=\"where-next\">Where to go from here</h2><p>You don&#x27;t have to fix everything at once. Start with the issue most likely to be costing you clients right now.</p><p><a href=\"/\" class=\"text-main-teal underline hover:no-underline\">At Moniré</a>, we help small and mid-sized businesses identify what is working, what is not, and what would make the biggest difference first.</p></section>"
+    }
+  },
+  "seo": {
+    "routes": {
+      "/": {
+        "title": "Moniré | Webdesign, Webentwicklung & KI-Automatisierungen in Zürich, Schweiz",
+        "description": "Moniré ist ein digitales Studio für Webdesign, Webentwicklung und KI-Automatisierungen. In Zürich ansässig, weltweit tätig.",
+        "keywords": [
+          "Moniré",
+          "Webdesign Zürich",
+          "Webentwicklung Zürich",
+          "Website Design Schweiz",
+          "KI Automatisierung Schweiz",
+          "Workflow Automatisierung Zürich",
+          "Webflow Entwicklung Zürich",
+          "Webdesign für kleine Unternehmen Schweiz"
+        ]
+      },
+      "/contact": {
+        "title": "Kontakt Moniré | Webdesign, Webentwicklung & KI-Automatisierungen",
+        "description": "Kontaktieren Sie Moniré für Webdesign, Webentwicklung und KI-Automatisierungen in Zürich und der ganzen Schweiz."
+      },
+      "/insights": {
+        "title": "Insights zu Webdesign, Automatisierung & digitaler Strategie | Moniré",
+        "description": "Praktische Artikel von Moniré zu Webdesign, Webentwicklung, SEO, KI-Automatisierung und digitalen Entscheidungen für kleine und mittlere Unternehmen.",
+        "keywords": [
+          "Webdesign Beratung",
+          "Website Strategie",
+          "Website Tipps kleine Unternehmen",
+          "KI Automatisierung für kleine Unternehmen",
+          "Webdesign Schweiz",
+          "Workflow Automatisierung Schweiz",
+          "Webflow Schweiz"
+        ]
+      },
+      "/privacy": {
+        "title": "Datenschutzrichtlinie | Moniré",
+        "description": "Datenschutzrichtlinie für Moniré, ein digitales Studio für Webdesign, Webentwicklung und KI-Automatisierungen."
+      },
+      "/apply": {
+        "title": "Bewerben | Moniré",
+        "description": "Bewerben Sie sich für kostenlose Projektunterstützung von Moniré für eine Non-Profit-Organisation oder sinnvolle Initiative."
+      },
+      "/case-studies/expense-receipt-automation": {
+        "title": "Case Study Spesenbeleg-Automatisierung | Moniré",
+        "description": "Case Study: ein von Moniré entwickelter KI-Automatisierungsworkflow für die Verarbeitung von Spesenbelegen."
+      },
+      "/case-studies/snip-squad": {
+        "title": "Snip Squad Case Study | Moniré",
+        "description": "Case Study: Webdesign- und Entwicklungsarbeit von Moniré für Snip Squad."
+      },
+      "/case-studies/portco-hr-collective": {
+        "title": "PortCo HR Collective Case Study | Moniré",
+        "description": "Case Study: Branding, Webdesign, Entwicklung und KI-Automatisierung von Moniré für PortCo HR Collective."
+      },
+      "/case-studies/systemically": {
+        "title": "SystemicAlly Consulting Website Case Study | Moniré",
+        "description": "Sehen Sie, wie Moniré eine polierte, responsive Website für SystemicAlly, eine Leadership- und Transformationsberatung, entwickelt hat."
+      },
+      "/case-studies/towarowa": {
+        "title": "Towarowa 41 Apartment Website Case Study | Moniré",
+        "description": "Sehen Sie, wie Moniré eine raffinierte, responsive Website für das Premium-Apartment Towarowa 41 gestaltet und entwickelt hat."
+      }
     }
   }
 }

@@ -21,19 +21,19 @@ const projectImagesByLink: Record<string, string> = {
 
 const portfolioNavGroups = [
   {
-    title: 'Web design & development',
+    titleKey: 'portfolio.navGroups.webDesignDevelopment.title',
     items: [
-      { id: 'web-veterinary', label: 'Veterinary', targetLink: '/case-studies/snip-squad' },
-      { id: 'web-community-platform', label: 'Community platform', targetLink: '/case-studies/portco-hr-collective' },
-      { id: 'web-consulting', label: 'Consulting', targetLink: '/case-studies/systemically' },
-      { id: 'web-real-estate', label: 'Real estate', targetLink: '/case-studies/towarowa' },
+      { id: 'web-veterinary', labelKey: 'portfolio.navGroups.webDesignDevelopment.veterinary', targetLink: '/case-studies/snip-squad' },
+      { id: 'web-community-platform', labelKey: 'portfolio.navGroups.webDesignDevelopment.communityPlatform', targetLink: '/case-studies/portco-hr-collective' },
+      { id: 'web-consulting', labelKey: 'portfolio.navGroups.webDesignDevelopment.consulting', targetLink: '/case-studies/systemically' },
+      { id: 'web-real-estate', labelKey: 'portfolio.navGroups.webDesignDevelopment.realEstate', targetLink: '/case-studies/towarowa' },
     ],
   },
   {
-    title: 'AI automation',
+    titleKey: 'portfolio.navGroups.aiAutomation.title',
     items: [
-      { id: 'ai-expense-receipts', label: 'Expense receipts', targetLink: '/case-studies/expense-receipt-automation' },
-      { id: 'ai-community-membership', label: 'Community membership', targetLink: '/case-studies/portco-hr-collective' },
+      { id: 'ai-expense-receipts', labelKey: 'portfolio.navGroups.aiAutomation.expenseReceipts', targetLink: '/case-studies/expense-receipt-automation' },
+      { id: 'ai-community-membership', labelKey: 'portfolio.navGroups.aiAutomation.communityMembership', targetLink: '/case-studies/portco-hr-collective' },
     ],
   },
 ];
@@ -121,10 +121,10 @@ const PortfolioSection = () => {
             {/* Category sidebar — dark teal card like reference */}
             <div className="rounded-2xl p-4 md:p-5" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
               {portfolioNavGroups.map((group, groupIndex) => (
-                <div key={group.title}>
+                <div key={group.titleKey}>
                   {groupIndex > 0 && <div className="my-3 h-px bg-off-white/15 md:my-5" />}
                   <p className="px-2 pb-1 text-center font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-text md:px-4 md:pb-2 md:text-left">
-                    {group.title}
+                    {t(group.titleKey)}
                   </p>
                   <div className="mt-1 grid grid-cols-2 gap-x-3 gap-y-1 md:mt-3 md:grid-cols-1 md:gap-x-1">
                     {group.items.map((item) => {
@@ -139,7 +139,7 @@ const PortfolioSection = () => {
                               : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'
                           }`}
                         >
-                          {item.label}
+                          {t(item.labelKey)}
                         </button>
                       );
                     })}

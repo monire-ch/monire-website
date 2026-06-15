@@ -13,36 +13,35 @@ const ServicesSection = () => {
     title: string;
     desc: string;
   }>;
-  const caseStudyLinks: Record<string, string> = {
-    "Web Design": "/case-studies/snip-squad",
-    "Web Development": "/case-studies/systemically",
-    "AI Automations & Workflows": "/case-studies/expense-receipt-automation",
-  };
-  const insightLinks: Record<string, { href: string; label: string }> = {
-    "Web Design": {
+  const serviceLinks = [
+    {
+      caseStudy: "/case-studies/snip-squad",
       href: "/insights/why-your-website-might-be-losing-you-clients",
-      label: "Why your website might be losing you clients →",
+      label: t("services.insightLinks.websiteLosingClients"),
     },
-    "Web Development": {
+    {
+      caseStudy: "/case-studies/systemically",
       href: "/insights/website-builders-vs-custom-development",
-      label: "How we choose the right website platform →",
+      label: t("services.insightLinks.websitePlatform"),
     },
-    "Website Migrations": {
+    {
       href: "/insights/website-builders-vs-custom-development",
-      label: "How we choose the right website platform →",
+      label: t("services.insightLinks.websitePlatform"),
     },
-    "SEO & Analytics (Essentials)": {
+    {
       href: "/insights/why-your-website-might-be-losing-you-clients",
-      label: "Why your website might be losing you clients →",
+      label: t("services.insightLinks.websiteLosingClients"),
     },
-    "AI Automations & Workflows": {
+    {
+      caseStudy: "/case-studies/expense-receipt-automation",
       href: "/insights/what-ai-automation-actually-means-for-a-small-business",
-      label: "What AI automation means for a small business →",
+      label: t("services.insightLinks.aiAutomation"),
     },
-  };
+  ];
   const [activeIndex, setActiveIndex] = useState(0);
   const [mobileOpenIndex, setMobileOpenIndex] = useState<number | null>(0);
   const active = items[activeIndex];
+  const activeLinks = serviceLinks[activeIndex];
 
   return (
     <section id="services" className="pt-16 md:pt-24 pb-40 md:pb-56 px-6">
@@ -85,17 +84,17 @@ const ServicesSection = () => {
                 <p className="text-off-white font-body leading-relaxed text-base mb-8">
                   {active.desc}
                 </p>
-                {(caseStudyLinks[active.title] || insightLinks[active.title]) && (
+                {activeLinks && (
                   <div className="space-y-3">
-                    {caseStudyLinks[active.title] ? (
+                    {activeLinks.caseStudy ? (
                       <BrandButton
                         type="link"
-                        to={caseStudyLinks[active.title]}
+                        to={activeLinks.caseStudy}
                         onClick={() =>
                           trackEvent("case_study_click", {
                             location: "services_section",
                             service: active.title,
-                            destination: caseStudyLinks[active.title],
+                            destination: activeLinks.caseStudy,
                             page_path: window.location.pathname,
                           })
                         }
@@ -103,24 +102,24 @@ const ServicesSection = () => {
                         showStar
                         className="text-sm"
                       >
-                        {t("services.cta", "Latest case study")}
+                        {t("services.cta")}
                       </BrandButton>
                     ) : null}
-                    {insightLinks[active.title] ? (
+                    {activeLinks.href ? (
                       <div>
                         <Link
-                          to={insightLinks[active.title].href}
+                          to={activeLinks.href}
                           onClick={() =>
                             trackEvent("blog_cta_click", {
                               location: "services_section",
                               service: active.title,
-                              destination: insightLinks[active.title].href,
+                              destination: activeLinks.href,
                               page_path: window.location.pathname,
                             })
                           }
                           className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
                         >
-                          {insightLinks[active.title].label}
+                          {activeLinks.label}
                         </Link>
                       </div>
                     ) : null}
@@ -156,17 +155,17 @@ const ServicesSection = () => {
                         <p className="text-off-white/80 font-body leading-relaxed text-base pb-5">
                           {item.desc}
                         </p>
-                        {(caseStudyLinks[item.title] || insightLinks[item.title]) && (
+                        {serviceLinks[i] && (
                           <div className="pb-5 space-y-3">
-                            {caseStudyLinks[item.title] ? (
+                            {serviceLinks[i].caseStudy ? (
                               <BrandButton
                                 type="link"
-                                to={caseStudyLinks[item.title]}
+                                to={serviceLinks[i].caseStudy}
                                 onClick={() =>
                                   trackEvent("case_study_click", {
                                     location: "services_section_mobile",
                                     service: item.title,
-                                    destination: caseStudyLinks[item.title],
+                                    destination: serviceLinks[i].caseStudy,
                                     page_path: window.location.pathname,
                                   })
                                 }
@@ -174,24 +173,24 @@ const ServicesSection = () => {
                                 showStar
                                 className="text-sm"
                               >
-                                {t("services.cta", "Latest case study")}
+                                {t("services.cta")}
                               </BrandButton>
                             ) : null}
-                            {insightLinks[item.title] ? (
+                            {serviceLinks[i].href ? (
                               <div>
                                 <Link
-                                  to={insightLinks[item.title].href}
+                                  to={serviceLinks[i].href}
                                   onClick={() =>
                                     trackEvent("blog_cta_click", {
                                       location: "services_section_mobile",
                                       service: item.title,
-                                      destination: insightLinks[item.title].href,
+                                      destination: serviceLinks[i].href,
                                       page_path: window.location.pathname,
                                     })
                                   }
                                   className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
                                 >
-                                  {insightLinks[item.title].label}
+                                  {serviceLinks[i].label}
                                 </Link>
                               </div>
                             ) : null}
