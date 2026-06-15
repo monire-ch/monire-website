@@ -327,12 +327,12 @@
             "a": "Automatyzacja AI wykorzystuje sztuczną inteligencję do obsługi powtarzalnych zadań, analizy danych lub usprawniania procesów. Przykłady to chatboty obsługi klienta, wprowadzanie danych, tworzenie odpowiedzi e-mail, generowanie treści i więcej. Celem jest umożliwienie Ci skupienia się na wartościowej pracy i redukcja błędów."
           },
           {
-            "q": "Czy potrzebuję wiedzy technicznej, żeby korzystać z narzędzi AI?",
-            "a": "Nie! Projektujemy przyjazne rozwiązania, które płynnie integrują się z Twoimi istniejącymi procesami. Zapewniamy szkolenie i dokumentację, abyś mógł pewnie korzystać z narzędzi."
+            "q": "Jakich narzędzi używacie do tworzenia automatyzacji?",
+            "a": "Najczęściej tworzymy automatyzacje w n8n, które łączy się z narzędziami używanymi już przez wiele firm, takimi jak e-mail, arkusze kalkulacyjne, przechowywanie plików w chmurze i systemy CRM. Korzystamy też z narzędzi AI, takich jak Claude i OpenAI Codex, aby wspierać development i tworzyć bardziej dopasowane rozwiązania. W niektórych projektach dobieramy inne narzędzia, jeśli lepiej pasują do celu."
           },
           {
-            "q": "Czy potrzebuję wiedzy technicznej, aby korzystać z narzędzi automatyzacji AI?",
-            "a": "Nie. Tworzymy przyjazne rozwiązania, które pasują do Twojego obecnego workflow. Zapewniamy też onboarding i dokumentację, aby Twój zespół mógł korzystać ze wszystkiego pewnie."
+            "q": "Czy potrzebuję wiedzy technicznej, żeby korzystać z narzędzi AI?",
+            "a": "Nie! Projektujemy przyjazne rozwiązania, które płynnie integrują się z Twoimi istniejącymi procesami. Zapewniamy szkolenie i dokumentację, abyś mógł pewnie korzystać z narzędzi."
           }
         ]
       },
