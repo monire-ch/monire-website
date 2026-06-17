@@ -764,7 +764,7 @@
       },
       {
         "title": "Cookies and Google Analytics",
-        "body": "Our website uses Google Analytics, which may set cookies in your browser to help us understand how visitors use our site. Google Analytics collects anonymised usage data only. You can opt out of Google Analytics at any time by using the <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-gold underline hover:text-gold-hover transition-colors\">Google Analytics Opt-out Browser Add-on</a>."
+        "body": "Our website uses Google Analytics, which may set cookies in your browser to help us understand how visitors use our site. Google Analytics collects anonymised usage data only. You can opt out of Google Analytics at any time by using the <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">Google Analytics Opt-out Browser Add-on</a>."
       },
       {
         "title": "Data Storage and Security",
@@ -790,7 +790,7 @@
           "Request restriction of processing.",
           "Request data portability."
         ],
-        "after": "To exercise these rights, contact us at: <a href=\"mailto:hello@monire.ch\" class=\"text-gold underline hover:text-gold-hover transition-colors\">hello@monire.ch</a>."
+        "after": "To exercise these rights, contact us at: <a href=\"mailto:hello@monire.ch\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">hello@monire.ch</a>."
       },
       {
         "title": "Links to Other Websites",
@@ -802,7 +802,7 @@
       },
       {
         "title": "Contact Us",
-        "body": "For any questions about this Privacy Policy or your data rights, you can contact us at: <a href=\"mailto:hello@monire.ch\" class=\"text-gold underline hover:text-gold-hover transition-colors\">hello@monire.ch</a>."
+        "body": "For any questions about this Privacy Policy or your data rights, you can contact us at: <a href=\"mailto:hello@monire.ch\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">hello@monire.ch</a>."
       }
     ]
   },

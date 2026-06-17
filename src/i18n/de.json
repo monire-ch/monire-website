@@ -401,7 +401,7 @@
     ]
   },
   "footer": {
-    "tagline": "Websites und Automatisierungen, die klar, zuverlässig und zukunftsfähig sind.",
+    "tagline": "Individuelle Webentwicklung und KI-gestützte Workflow-Automatisierung in der Schweiz.",
     "quickLinks": "Links",
     "contact": "Kontakt",
     "privacyPolicy": "Datenschutzerklärung",
@@ -730,8 +730,8 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "effectiveDate": "Gültig ab: Februar 2026",
-    "intro": "Diese Datenschutzerklärung erklärt, wie Moniré („wir“, „uns“ und „unser“) Informationen erhebt, nutzt und schützt, wenn Sie unsere Website besuchen oder mit unseren Leistungen interagieren.",
+    "effectiveDate": "Stand: Februar 2026",
+    "intro": "Diese Datenschutzerklärung erklärt, wie Moniré („wir“, „uns“ und „unser“) personenbezogene Daten erhebt, nutzt und schützt, wenn Sie unsere Website besuchen oder mit unseren Leistungen interagieren.",
     "sections": [
       {
         "title": "Welche Informationen wir erfassen",
@@ -764,18 +764,18 @@
       },
       {
         "title": "Cookies und Google Analytics",
-        "body": "Unsere Website nutzt Google Analytics. Dabei können Cookies in Ihrem Browser gesetzt werden, damit wir verstehen, wie Besucher unsere Website nutzen. Google Analytics erfasst nur anonymisierte Nutzungsdaten. Sie können Google Analytics jederzeit deaktivieren, indem Sie das <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-gold underline hover:text-gold-hover transition-colors\">Browser-Add-on zur Deaktivierung von Google Analytics</a> nutzen."
+        "body": "Unsere Website nutzt Google Analytics. Dabei können Cookies in Ihrem Browser gesetzt werden, damit wir verstehen, wie Besucher unsere Website nutzen. Google Analytics erfasst Informationen zur Nutzung unserer Website in anonymisierter oder pseudonymisierter Form. Sie können Google Analytics jederzeit deaktivieren, indem Sie das <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">Browser-Add-on zur Deaktivierung von Google Analytics</a> nutzen."
       },
       {
         "title": "Datenspeicherung und Sicherheit",
-        "body": "Wir speichern personenbezogene Daten sicher und beschränken den Zugriff auf autorisierte Personen. Wir bewahren Ihre Daten nur so lange auf, wie es für die in dieser Erklärung genannten Zwecke notwendig ist. Wir verkaufen oder vermieten Ihre persönlichen Informationen nicht."
+        "body": "Wir speichern personenbezogene Daten sicher und beschränken den Zugriff auf autorisierte Personen. Wir bewahren personenbezogene Daten nur so lange auf, wie dies für die in dieser Datenschutzerklärung beschriebenen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Wir verkaufen oder vermieten Ihre persönlichen Informationen nicht."
       },
       {
         "title": "Weitergabe Ihrer Informationen",
         "body": "Wir geben Informationen nur weiter, wenn:",
         "items": [
           "wir gesetzlich dazu verpflichtet sind.",
-          "es nötig ist, um auf Anfragen zu antworten, zum Beispiel über E-Mail-Dienstleister.",
+          "es erforderlich ist, um mit Ihnen zu kommunizieren, beispielsweise über E-Mail-Dienstleister.",
           "es zur Erbringung angefragter Leistungen erforderlich ist, etwa zur Vorbereitung eines Angebots."
         ],
         "after": "Wir geben Ihre Informationen nicht zu Marketingzwecken an Dritte weiter."
@@ -784,13 +784,13 @@
         "title": "Ihre Datenschutzrechte (GDPR-Regionen)",
         "body": "Sie haben das Recht:",
         "items": [
-          "Auskunft über die Daten zu verlangen, die wir über Sie gespeichert haben.",
+          "Auskunft über die von uns verarbeiteten personenbezogenen Daten zu verlangen.",
           "Berichtigung oder Löschung zu verlangen.",
           "Ihre Einwilligung jederzeit zu widerrufen.",
           "die Einschränkung der Verarbeitung zu verlangen.",
           "Datenübertragbarkeit zu verlangen."
         ],
-        "after": "Um diese Rechte auszuüben, kontaktieren Sie uns unter: <a href=\"mailto:hello@monire.ch\" class=\"text-gold underline hover:text-gold-hover transition-colors\">hello@monire.ch</a>."
+        "after": "Um diese Rechte auszuüben, kontaktieren Sie uns unter: <a href=\"mailto:hello@monire.ch\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">hello@monire.ch</a>."
       },
       {
         "title": "Links zu anderen Websites",
@@ -802,7 +802,7 @@
       },
       {
         "title": "Kontakt",
-        "body": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder zu Ihren Datenschutzrechten haben, erreichen Sie uns unter: <a href=\"mailto:hello@monire.ch\" class=\"text-gold underline hover:text-gold-hover transition-colors\">hello@monire.ch</a>."
+        "body": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder zur Verarbeitung Ihrer personenbezogenen Daten haben, kontaktieren Sie uns unter: <a href=\"mailto:hello@monire.ch\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">hello@monire.ch</a>."
       }
     ]
   },
