@@ -558,10 +558,10 @@
     },
     "portco-hr-collective": {
       "title": "PortCo HR Collective",
-      "subtitle": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Umfeld",
+      "subtitle": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Unternehmen",
       "client": "PortCo HR Collective",
       "date": "2026",
-      "industry": "Private Equity / berufliche Netzwerke",
+      "industry": "Private Equity / Professionelle Netzwerke",
       "category": "Branding, Webdesign & Entwicklung, KI-Automatisierung",
       "tools": [
         "WEBFLOW",
@@ -573,23 +573,23 @@
       "sections": [
         {
           "title": "Überblick:",
-          "intro": "PortCo HR Collective ist ein Peer-Netzwerk für Chief HR Officers in PE-finanzierten Unternehmen in Europa. Die Gründerinnen wollten eine Plattform, die professionell, einladend und unverwechselbar wirkt. Keine generische Plattform, sondern ein digitales Zuhause, das Vertrauen schafft, Wachstum unterstützt und ohne technisches Team gepflegt werden kann.",
+          "intro": "PortCo HR Collective ist ein Peer-Netzwerk für Chief HR Officers in PE-finanzierten Unternehmen in Europa. Die Gründerinnen wollten eine Plattform, die professionell, einladend und klar ihre eigene ist. Keine generische Plattform, sondern ein digitales Zuhause, das Vertrauen schafft, Wachstum unterstützt und ohne eigenes technisches Team betrieben werden kann.",
           "visualImage": {
             "alt": "Login-Seite von PortCo HR Collective"
           }
         },
         {
           "title": "Ansatz:",
-          "intro": "Das Design beginnt mit einem Gemälde. Die Kundin brachte ein einzelnes Gemälde mit und wollte, dass es zur Seele der Marke wird. Nicht als Dekoration, sondern als visuelle Grundlage für alles Weitere. Das Kunstwerk prägte das gesamte visuelle System — Logo, Typografie, Farbpalette und Interface-Design der Plattform.\n\nDarauf aufgebaut wurden:",
+          "intro": "Das Design beginnt mit einem Gemälde. Die Kundin brachte ein einziges Gemälde mit und wollte, dass es zur Seele der Marke wird. Nicht als Dekoration, sondern als visuelle Grundlage für alles Weitere. Das Kunstwerk prägte das gesamte visuelle System — Logo, Typografie, Farbpalette und Interface-Design der Plattform.\n\nDarauf aufgebaut wurden:",
           "items": [
             "Ein geschütztes Mitgliederverzeichnis, ein Insights-Bereich und eine Event-Plattform mit passwortlosem Magic-Link-Login",
             "Ein Webflow CMS, das die Kundin selbst verwalten kann – Inhalte veröffentlichen, Mitglieder verwalten und Events aktualisieren, ganz ohne technischen Support",
-            "Automatisierte Workflows, die manuelle Administration reduzieren, indem Mitglieder- und Inhaltsdaten über Plattformen hinweg synchron bleiben"
+            "Automatisierte Workflows, die manuelle Administration reduzieren, indem Mitglieder- und Inhaltsdaten plattformübergreifend synchronisiert werden"
           ]
         },
         {
           "title": "Ergebnis:",
-          "intro": "Entstanden ist eine eigenständige Mitgliederplattform, die der Community einen professionellen digitalen Auftritt gibt und die Administration schlank hält. Mitglieder finden Inhalte, Events und andere Mitglieder über eine nahtlose Nutzererfahrung, während Automatisierungen Inhalte und Mitgliederdaten automatisch aktuell halten."
+          "intro": "Entstanden ist eine unverwechselbare Mitgliederplattform, die der Community einen professionellen digitalen Auftritt gibt und die Administration schlank hält. Mitglieder finden Inhalte, Events und andere Mitglieder über eine nahtlose Nutzererfahrung, während Automatisierungen Inhalte und Mitgliederdaten automatisch aktuell halten."
         }
       ]
     },
