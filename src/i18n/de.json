@@ -258,7 +258,7 @@
       "aiAutomation": {
         "title": "KI-Automatisierung",
         "expenseReceipts": "Spesenbelege",
-        "communityMembership": "Community-Mitgliedschaft"
+        "communityMembership": "Community-Plattform"
       }
     }
   },
@@ -676,7 +676,7 @@
       ]
     },
     "expense-receipt-automation": {
-      "title": "Spesenbeleg-Automatisierung",
+      "title": "Automatisierte Spesenverarbeitung",
       "client": "Brooksmiller & Partners AG",
       "date": "August 2025",
       "industry": "Executive Search",
@@ -704,7 +704,7 @@
           "intro": "Belege werden jetzt per E-Mail oder Telegram gesendet und automatisch verarbeitet.",
           "items": [
             "Bilder und PDFs werden per OCR ausgelesen und bereinigt.",
-            "Datum, Betrag, Währung und Anbieter werden mit KI erkannt.",
+            "Datum, Betrag, Währung und Händler werden mit KI erkannt.",
             "Dateien werden korrekt benannt und im passenden monatlichen OneDrive-Ordner abgelegt.",
             "Daten werden in die richtige Excel-Tabelle eingetragen (EUR oder CHF).",
             "Alles bleibt sauber organisiert und bereit für die Spesenprüfung."
@@ -714,15 +714,15 @@
           "title": "Wirkung:",
           "intro": "Eine mühsame monatliche Aufgabe wurde zu einem sauberen, zuverlässigen Workflow, der im Hintergrund läuft.",
           "items": [
-            "~70% weniger manuelle Admin-Zeit",
+            "~70% weniger manueller Administrationsaufwand",
             "Weniger Fehler und fehlende Belege",
             "Einheitliche Dateinamen und strukturierte Ablage",
-            "Schnellere Abläufe mit weniger Reibung"
+            "Effizientere Abläufe mit weniger Aufwand"
           ]
         }
       ],
       "testimonial": {
-        "quote": "Wir haben sehr viel Zeit damit verbracht, Belege und Spesen manuell zu verarbeiten. Die Automatisierung liest die Informationen nun aus, legt die Dokumente ab und aktualisiert unsere Unterlagen automatisch. Das spart uns jeden Monat Stunden. Eine der repetitivsten administrativen Aufgaben in unserer Firma fällt damit weg, und wir sind dem Moniré-Team sehr dankbar für diese praktische und wirkungsvolle Lösung.",
+        "quote": "We were spending a significant amount of time processing receipts and expenses manually. The automation now extracts the information, files the documents, and updates our records automatically, saving us hours of work every month. It has taken away one of the most repetitive administrative tasks in our firm and we are incredibly grateful to the Moniré team for delivering such a practical and effective solution.",
         "author": "Margaret Rikhof",
         "role": "Brooksmiller & Partners"
       }
