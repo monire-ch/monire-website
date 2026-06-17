@@ -42,7 +42,7 @@ const AboutSection = () => {
                 <div>
                   <p className="text-base text-off-white font-body leading-relaxed">{item.text}</p>
                   {item.cta === 'apply' && (
-                    <div className="mt-6 flex items-center gap-6">
+                    <div className="mt-10 flex items-center gap-6">
                       <BrandButton type="link" to="/apply" variant="secondary" className="text-sm">
                         {t('about.applyHere')}
                       </BrandButton>

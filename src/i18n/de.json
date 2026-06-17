@@ -101,7 +101,7 @@
       },
       {
         "title": "Giving Back",
-        "text": "Jedes Jahr unterstützen wir eine Non-Profit-Organisation oder eine sinnvolle Initiative mit einem kostenlosen Design- oder Entwicklungsprojekt. Kennen Sie eine Organisation, die davon profitieren könnte?",
+        "text": "Gute Arbeit verdient gute Unterstützung. Jedes Jahr stellen wir einer Non-Profit-Organisation oder gemeinnützigen Initiative unsere Zeit und unser Know-how für eine Website oder ein Automatisierungsprojekt zur Verfügung.",
         "cta": "apply"
       }
     ],
@@ -116,7 +116,7 @@
         "role": ""
       }
     ],
-    "applyHere": "Hier bewerben",
+    "applyHere": "Mehr erfahren",
     "teamEyebrow": "Das Duo kennenlernen",
     "teamDetails": [
       {
@@ -477,26 +477,26 @@
   "apply": {
     "back": "← Zurück",
     "eyebrow": "Giving Back",
-    "title": "Kostenlose Projektunterstützung",
-    "intro": "Jedes Jahr unterstützen wir eine Non-Profit-Organisation oder eine sinnvolle Initiative mit einem kostenlosen Design- oder Entwicklungsprojekt. Kennen Sie eine Organisation, die davon profitieren könnte?",
-    "status": "Die Organisation, die wir 2026 unterstützen, wurde bereits ausgewählt. Bewerbungen sind Ende des Jahres wieder möglich.",
+    "title": "Ein Projekt für den guten Zweck",
+    "intro": "Jedes Jahr stellen wir unsere Zeit und unser Know-how einer Non-Profit-Organisation oder einer gemeinnützigen Initiative zur Verfügung – für eine Website, ein digitales Tool oder ein Automationsprojekt. Gute Arbeit verdient gute Unterstützung. Kennen Sie eine Organisation, die einen Unterschied macht? Dann würden wir uns freuen, ihre Geschichte kennenzulernen.",
+    "status": "Unsere Auswahl für 2026 wurde bereits getroffen. Wir freuen uns aber weiterhin über Vorschläge für zukünftige Projekte.",
     "howItWorks": "So funktioniert es",
-    "cta": "Jetzt bewerben",
+    "cta": "Organisation vorschlagen",
     "steps": [
       {
         "step": "Schritt 1",
-        "title": "Organisation vorschlagen",
+        "title": "Erzählen Sie uns von einer Organisation",
         "desc": "Erzählen Sie uns, wer die Organisation ist, was sie macht und warum Unterstützung gerade jetzt helfen würde."
       },
       {
         "step": "Schritt 2",
-        "title": "Wir prüfen die mögliche Wirkung",
-        "desc": "Wir schauen, ob es zeitlich und inhaltlich passt und wo Design oder Entwicklung am meisten helfen kann."
+        "title": "Wir lernen die Organisation kennen",
+        "desc": "Wir schauen, ob es zeitlich und inhaltlich passt und wo wir mit Design, Entwicklung oder Automatisierung am meisten helfen können."
       },
       {
         "step": "Schritt 3",
         "title": "Eine Initiative wird ausgewählt",
-        "desc": "Die ausgewählte Initiative erhält kostenlose Projektunterstützung von Moniré."
+        "desc": "Die ausgewählte Organisation erhält kostenlose Projektunterstützung von Moniré, von der ersten Idee bis zum Launch."
       }
     ]
   },

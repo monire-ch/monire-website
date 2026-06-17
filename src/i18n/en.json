@@ -101,7 +101,7 @@
       },
       {
         "title": "Giving Back",
-        "text": "Every year, we support one non-profit or meaningful initiative with a complimentary design or development project. Know an organization that could benefit?",
+        "text": "We believe good work deserves good support. Each year, we donate a website or automation project to one non-profit or community initiative.",
         "cta": "apply"
       }
     ],
@@ -116,7 +116,7 @@
         "role": ""
       }
     ],
-    "applyHere": "Apply here",
+    "applyHere": "Learn More",
     "teamEyebrow": "Meet the Duo",
     "teamDetails": [
       {
@@ -477,26 +477,26 @@
   "apply": {
     "back": "← Back",
     "eyebrow": "Giving Back",
-    "title": "Complimentary Project Support",
-    "intro": "Every year, we support one non-profit or meaningful initiative with a complimentary design or development project. Know an organization that could benefit?",
-    "status": "Our 2026 recipient has been selected. Applications reopen at year-end.",
+    "title": "One Project, On Us",
+    "intro": "Every year, we dedicate our time and expertise to support one non-profit or community initiative with a website, digital tool, or automation project. Good work deserves good support. If you know an organization making a difference, we'd love to hear their story.",
+    "status": "Our 2026 selection has been made. We'd still be happy to hear about organizations for future consideration.",
     "howItWorks": "How It Works",
     "cta": "Apply now",
     "steps": [
       {
         "step": "Step 1",
-        "title": "Nominate an organization",
-        "desc": "Share who they are, what they do, and why support is needed now."
+        "title": "Tell Us About an Organization",
+        "desc": "Share who they are, what they do, and how better technology could help them create a greater impact."
       },
       {
         "step": "Step 2",
-        "title": "We review for impact fit",
-        "desc": "We assess alignment, timing, and where design or development can help most."
+        "title": "We Learn About Their Goals",
+        "desc": "We review each submission and look for opportunities where our skills in design, development, or automation can make the biggest difference."
       },
       {
         "step": "Step 3",
         "title": "One initiative is selected",
-        "desc": "The selected initiative receives complimentary project support from Moniré."
+        "desc": "The chosen organization receives complimentary project support from Moniré, from first concept to launch."
       }
     ]
   },

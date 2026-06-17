@@ -21,7 +21,7 @@ const Apply = () => {
       <main>
       <section className="pt-32 pb-32 md:pt-40 md:pb-28 px-6">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal className="mb-6">
+          <ScrollReveal className="mb-8">
             <Link to="/#about" className="text-sm text-off-white/50 hover:text-off-white/80 font-body transition-colors">
               {t('apply.back')}
             </Link>
@@ -37,7 +37,7 @@ const Apply = () => {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal className="mb-10">
+          <ScrollReveal className="mb-14">
             <p className="text-sm text-gold-text font-body mb-2">
               {t('apply.status')}
             </p>
@@ -47,7 +47,7 @@ const Apply = () => {
             <h2 className="font-body text-2xl md:text-3xl text-off-white mb-8">{t('apply.howItWorks')}</h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
             {steps.map((s, i) => {
               const isDark = i % 2 === 1;
               return (
