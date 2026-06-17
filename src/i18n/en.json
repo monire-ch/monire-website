@@ -340,8 +340,8 @@
         "label": "Maintenance",
         "items": [
           {
-            "q": "Do you offer long-term support?",
-            "a": "Yes. We offer maintenance packages that include bug fixes, content updates, and technical support. One-off support is also available for specific needs."
+            "q": "Do you offer long-term maintenance and support?",
+            "a": "Yes. We support many clients beyond launch with content updates, bug fixes, technical maintenance, and general website support. Whether you need ongoing assistance or help with a specific issue, we're happy to help."
           }
         ]
       }

@@ -270,11 +270,11 @@
         "items": [
           {
             "q": "Welche Informationen brauchen Sie von mir, um zu starten?",
-            "a": "Wir möchten Ihre Geschäftsziele, Zielgruppe, gewünschten Funktionen, Designvorstellungen, den Zeitplan und das Budget verstehen. Wenn Sie bereits Markenmaterial, Inhalte oder eine bestehende Website haben, hilft uns das ebenfalls. Sie können auch unser <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>Projektbriefing</a> ausfüllen, damit wir Ihre Bedürfnisse besser einschätzen können."
+            "a": "Damit wir Ihr Projekt optimal planen können, möchten wir Ihre Ziele, Zielgruppe, gewünschten Funktionen, Designvorstellungen, den Zeitrahmen und Ihr Budget kennenlernen. Falls bereits Inhalte, Branding-Materialien oder eine bestehende Website vorhanden sind, hilft uns das ebenfalls weiter. Sie können auch unser <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>Projektbriefing</a> ausfüllen, damit wir Ihre Anforderungen besser verstehen."
           },
           {
             "q": "Können Sie bei SEO helfen?",
-            "a": "Unser Fokus liegt auf Entwicklung und KI-Automatisierungen, aber wir bauen jede Website mit wichtigen SEO-Grundlagen. Für laufende SEO-Betreuung können wir Ihnen auch vertraute Partner empfehlen.<br /><a href='/insights/why-your-website-might-be-losing-you-clients' style='color:#F1D69A;text-decoration:underline;'>Mehr dazu, warum das wichtig ist →</a>"
+            "a": "Unser Fokus liegt auf Entwicklung und KI-Automatisierungen. Dennoch berücksichtigen wir bei jeder Website wichtige SEO-Grundlagen. Für laufende SEO-Betreuung können wir Ihnen auch vertraute Partner empfehlen.<br /><a href='/insights/why-your-website-might-be-losing-you-clients' style='color:#F1D69A;text-decoration:underline;'>Mehr dazu, warum das wichtig ist →</a>"
           },
           {
             "q": "Arbeiten Sie auch mit internationalen Kunden?",
@@ -291,7 +291,7 @@
           },
           {
             "q": "Können Sie meine bestehende Website überarbeiten?",
-            "a": "Ja. Wir bieten komplette Redesigns an — inklusive modernerer Gestaltung, besserer Nutzerführung und, falls nötig, Migration auf eine passendere Plattform."
+            "a": "Ja. Wir bieten komplette Redesigns an, inklusive modernem Design, verbesserter Nutzerführung und, falls nötig, einer Migration auf eine passendere Plattform."
           },
           {
             "q": "Mit welchen Plattformen arbeiten Sie?",
@@ -303,11 +303,11 @@
           },
           {
             "q": "Wem gehört die Website?",
-            "a": "Sobald alle Rechnungen bezahlt sind, gehört die Website inklusive der von uns erstellten Designs Ihnen."
+            "a": "Sobald alle Rechnungen bezahlt sind, gehen die Website sowie alle von uns erstellten Projektdateien und Inhalte in Ihren Besitz über."
           },
           {
             "q": "Ich habe schon ein Design. Können Sie nur die Entwicklung übernehmen?",
-            "a": "Ja, wenn das Design bereits steht, können wir nur die Entwicklung übernehmen. Wir schauen uns die Unterlagen gemeinsam an und passen den Umfang entsprechend an."
+            "a": "Ja. Wenn das Design bereits steht, können wir die Entwicklung übernehmen. Wir prüfen das Design gemeinsam und definieren den Umfang der Entwicklung entsprechend."
           },
           {
             "q": "Wie schnell kann meine Website fertig sein?",
@@ -324,7 +324,7 @@
         "items": [
           {
             "q": "Was ist KI-Automatisierung und wie kann sie meinem Unternehmen helfen?",
-            "a": "KI-Automatisierung nutzt künstliche Intelligenz, um wiederkehrende Aufgaben zu übernehmen, Daten zu verarbeiten und Abläufe einfacher zu machen. Beispiele sind Support-Abläufe, Dateneingabe, E-Mail-Prozesse oder Content-Workflows. Ziel ist, Zeit zu sparen und Fehler zu reduzieren.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Lesen Sie, wie das in der Praxis aussieht →</a>"
+            "a": "KI-Automatisierung nutzt künstliche Intelligenz, um wiederkehrende Aufgaben zu übernehmen, Daten zu analysieren und Prozesse effizienter zu gestalten. Beispiele sind Support-Abläufe, Dateneingabe, E-Mail-Verarbeitung oder Content-Workflows. So sparen Sie Zeit, reduzieren Fehler und schaffen Freiraum für wichtigere Aufgaben.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Lesen Sie, wie das in der Praxis aussieht →</a>"
           },
           {
             "q": "Welche Tools nutzen Sie für Automatisierungen?",
@@ -337,11 +337,11 @@
         ]
       },
       {
-        "label": "Support",
+        "label": "Wartung & Support",
         "items": [
           {
-            "q": "Bieten Sie langfristigen Support an?",
-            "a": "Ja. Wir bieten Unterstützung für Fehlerbehebungen, Inhaltsupdates und technische Fragen an. Wenn Sie nur punktuell Hilfe brauchen, ist auch einmaliger Support möglich."
+            "q": "Bieten Sie Wartung und laufende Betreuung an?",
+            "a": "Ja. Wir unterstützen viele unserer Kunden auch nach dem Launch mit Inhaltsupdates, Fehlerbehebungen, technischer Wartung und allgemeinem Website-Support. Ob Sie laufende Unterstützung benötigen oder Hilfe bei einem konkreten Problem suchen, wir helfen gerne weiter."
           }
         ]
       }
