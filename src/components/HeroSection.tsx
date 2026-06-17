@@ -11,10 +11,11 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const navigate = useNavigate();
   const fontsLoaded = useFontsLoaded();
   const [animate, setAnimate] = useState(false);
+  const isGerman = i18n.resolvedLanguage === 'de';
 
   useEffect(() => {
     if (fontsLoaded) {
@@ -51,7 +52,11 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           <span className="block w-10 md:w-20 h-px bg-off-white/30" />
         </div>
 
-        <h1 className="hero-title max-w-3xl text-[36px] sm:text-[50px] md:text-[68px] mb-6 md:mb-7 lg:mb-10 max-[465px]:mb-4">
+        <h1
+          className={`hero-title text-[36px] sm:text-[50px] md:text-[68px] mb-6 md:mb-7 lg:mb-10 max-[465px]:mb-4 ${
+            isGerman ? 'max-w-3xl lg:max-w-4xl' : 'max-w-3xl'
+          }`}
+        >
           {words.map((word, i) => (
             <span
               key={i}
@@ -78,7 +83,9 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         </h1>
 
         <p
-          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white/90 text-base md:text-xl font-body max-w-xl mx-auto px-6 lg:px-0 mb-6 md:mb-7 lg:mb-10 leading-[1.45] max-[465px]:mb-4`}
+          className={`hero-fade-enter ${animate ? 'hero-fade-visible' : ''} text-off-white/90 text-base md:text-xl font-body mx-auto px-6 lg:px-0 mb-6 md:mb-7 lg:mb-10 leading-[1.45] max-[465px]:mb-4 ${
+            isGerman ? 'max-w-xl lg:max-w-2xl' : 'max-w-xl'
+          }`}
           style={{ transitionDelay: '320ms' }}
         >
           {t('hero.subtitle')}

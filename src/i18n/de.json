@@ -17,7 +17,7 @@
     "highlightWord": "Kunden gewinnen",
     "subtitle": "Hochwertige Websites, die überzeugen. KI-gestützte Automatisierungen, wenn Ihr Unternehmen bereit ist zu skalieren.",
     "cta": "Kostenloses Erstgespräch buchen",
-    "workCta": "Unsere Arbeiten ansehen"
+    "workCta": "Projekte ansehen"
   },
   "features": {
     "eyebrow": "Unser Angebot",
@@ -29,7 +29,7 @@
         "desc": "Gemeinsam bringen wir über zehn Jahre praktische Erfahrung als Softwareentwicklerinnen bei führenden Schweizer Unternehmen mit und verbinden technische Expertise mit einem klaren Blick für Design."
       },
       {
-        "title": "Optimiert für KI, Google & Geschwindigkeit",
+        "title": "Optimiert für KI & Google",
         "desc": "Entwickelt für Barrierefreiheit, Zuverlässigkeit und Sichtbarkeit in Suchmaschinen und KI-Plattformen, damit Ihr Unternehmen dort gefunden wird, wo Ihre Kunden suchen."
       },
       {
@@ -38,10 +38,10 @@
       },
       {
         "title": "Direkte Zusammenarbeit",
-        "desc": "Sie arbeiten direkt mit den Gründerinnen zusammen — für klare Kommunikation, kurze Wege und gleichbleibende Qualität."
+        "desc": "Sie arbeiten direkt mit den Gründerinnen zusammen: klare Kommunikation, kurze Wege und gleichbleibende Qualität."
       },
       {
-        "title": "Zeitersparnis rund um die Uhr",
+        "title": "24/7 Zeitersparnis",
         "desc": "Intelligente Automatisierungen übernehmen wiederkehrende Aufgaben automatisch, damit mehr Zeit für die Arbeit bleibt, die wirklich zählt."
       },
       {
@@ -97,7 +97,7 @@
       },
       {
         "title": "Warum ein Duo?",
-        "text": "Ein kleines Team bedeutet: Sie sind bei uns nie nur eine Nummer. Sie arbeiten direkt mit zwei erfahrenen Gründerinnen zusammen, die klar kommunizieren und wirklich daran interessiert sind, dass Ihr Projekt gelingt. Als berufstätige Mütter arbeiten wir fokussiert, effizient und mit einem klaren Blick für das Wesentliche – jede Entscheidung soll echten Mehrwert bringen."
+        "text": "Ein kleines Team bedeutet: Sie sind bei uns nie nur eine Nummer. Bei uns erhalten Sie direkten Zugang zu erfahrener Expertise und ein leidenschaftliches Duo, dem Ihr Erfolg wirklich am Herzen liegt. Als Mütter und Unternehmerinnen wissen wir, wie wichtig es ist, Zeit sinnvoll einzusetzen, damit jede Entscheidung echten Mehrwert schafft."
       },
       {
         "title": "Giving Back",
@@ -105,7 +105,7 @@
         "cta": "apply"
       }
     ],
-    "teamTitle": "Die Gesichter hinter der Arbeit",
+    "teamTitle": "Die Menschen hinter Moniré",
     "team": [
       {
         "name": "Monika Märki",
@@ -121,13 +121,13 @@
     "teamDetails": [
       {
         "name": "Monika Märki",
-        "origin": "In Polen geboren, in der Schweiz zuhause",
+        "origin": "Aus Polen, zuhause in der Schweiz",
         "languages": "Sprachen: Polnisch, Englisch, Deutsch",
         "linkedinLabel": "LinkedIn-Profil von Monika Märki"
       },
       {
         "name": "Nikky Pyra",
-        "origin": "In Kanada geboren, in der Schweiz zuhause",
+        "origin": "Aus Kanada, zuhause in der Schweiz",
         "languages": "Sprachen: Englisch, Deutsch",
         "linkedinLabel": "LinkedIn-Profil von Nikky Pyra"
       }
@@ -206,7 +206,7 @@
   },
   "portfolio": {
     "eyebrow": "Portfolio",
-    "title": "Unsere Arbeiten",
+    "title": "Ausgewählte Projekte",
     "categories": [
       "Veterinärmedizin",
       "Consulting",
@@ -401,13 +401,13 @@
     ]
   },
   "footer": {
-  "tagline": "Websites und Automatisierungen, die klar, zuverlässig und zukunftsfähig sind.",
+    "tagline": "Websites und Automatisierungen, die klar, zuverlässig und zukunftsfähig sind.",
     "quickLinks": "Links",
     "contact": "Kontakt",
     "privacyPolicy": "Datenschutzerklärung",
     "copyright": "© 2025 Moniré. Alle Rechte vorbehalten.",
     "locationCity": "Zürich, Schweiz",
-  "locationService": "Für Kunden weltweit"
+    "locationService": "Für Kunden weltweit"
   },
   "caseStudy": {
     "back": "Zurück zu den Projekten",
@@ -511,7 +511,7 @@
   "insightsPage": {
     "eyebrow": "Insights",
     "title": "Insights für bessere Websites und clevere Workflows",
-  "intro": "Praktische Einblicke zu Webdesign, Automatisierung und digitalen Entscheidungen, die Ihr Unternehmen voranbringen.",
+    "intro": "Praktische Einblicke zu Webdesign, Automatisierung und digitalen Entscheidungen, die Ihr Unternehmen voranbringen.",
     "schemaName": "Moniré Insights",
     "quickAnswer": "Kurz gesagt",
     "related": "Ähnliche Insights"
