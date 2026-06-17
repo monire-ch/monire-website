@@ -49,19 +49,12 @@ const Apply = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
             {steps.map((s, i) => {
-              const isDark = i % 2 === 1;
               return (
                 <ScrollReveal key={s.step} delay={i * 150}>
                   <div
-                    className={`rounded-lg p-6 h-full ${
-                      isDark
-                        ? 'border border-white/10 text-off-white'
-                        : 'border border-white/10'
-                    }`}
+                    className={'rounded-lg p-6 h-full border border-white/10 text-off-white'}
                     style={{
-                      background: isDark
-                        ? 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)'
-                        : 'rgba(255,255,255,0.04)',
+                      background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)'
                     }}
                   >
                     <span className="text-xs uppercase tracking-widest text-gold-text font-body mb-3 block">
