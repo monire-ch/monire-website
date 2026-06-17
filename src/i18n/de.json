@@ -53,7 +53,7 @@
   "services": {
     "eyebrow": "Leistungen",
     "title": "Praktische Lösungen, die Ihr Unternehmen voranbringen",
-    "cta": "Neueste Fallstudie",
+    "cta": "Aktuelle Case Study",
     "items": [
       {
         "badge": "Design",
@@ -63,7 +63,7 @@
       {
         "badge": "Entwicklung",
         "title": "Webentwicklung",
-        "desc": "Jede Website, die wir bauen, ist zuverlässig, schnell und nach der Veröffentlichung einfach zu verwalten. Viele unserer Websites entstehen in Webflow, damit Sie Inhalte selbst pflegen können. Bei individuelleren Projekten wählen wir gemeinsam die passende technische Grundlage, zum Beispiel React, Next.js oder Astro. Wichtig ist am Ende vor allem eins: Es soll einfach funktionieren."
+        "desc": "Jede Website, die wir entwickeln, ist zuverlässig, schnell und auch nach dem Launch einfach zu verwalten. Wir wählen die Technologie, die am besten zu Ihren Zielen, Ihrem Budget und Ihren langfristigen Anforderungen passt. Je nach Projekt kann das Webflow, React, Next.js, Astro oder eine andere moderne Lösung sein. Das Ziel bleibt immer dasselbe: eine Website, die für Ihr Unternehmen funktioniert und mit Ihren Anforderungen mitwächst."
       },
       {
         "badge": "Migration",
@@ -142,7 +142,7 @@
       "automation": "KI-Automatisierungen"
     },
     "getStarted": "Loslegen",
-    "mostPopular": "Am beliebtesten",
+    "mostPopular": "Meistgewählt",
     "custom": {
       "title": "Sie benötigen etwas Individuelles?",
       "desc": "Jedes Projekt ist anders. Wenn Sie Unterstützung ausserhalb unserer Pakete benötigen, erstellen wir gerne ein individuelles Angebot. Wir arbeiten zudem mit bewährten Partnern in den Bereichen Fotografie, Social Media und Copywriting zusammen, sodass alles aus einer Hand koordiniert werden kann."
@@ -152,15 +152,15 @@
         {
           "name": "Starter",
           "price": "ab CHF 3'500",
-          "desc": "Eine klare, professionelle Website, die Ihr Unternehmen online überzeugend präsentiert.",
+          "desc": "Eine professionelle Website, die Ihr Unternehmen online optimal präsentiert.",
           "features": [
             "Bis zu 5 Seiten",
             "Individuelles Website-Design passend zu Ihrer Marke",
-            "Mobiloptimiert und schnell ladend",
+            "Mobiloptimiert mit schnellen Ladezeiten",
             "Kontaktformular mit E-Mail-Benachrichtigungen",
-            "Einfache Inhaltsbearbeitung ohne Entwickler",
+            "Einfache Inhaltsverwaltung ohne Entwickler",
             "Grundlegende SEO-Einrichtung: Meta-Tags und Sitemap",
-            "Einführung, damit Sie Ihre Website selbst verwalten können"
+            "Schulung zur eigenständigen Verwaltung Ihrer Website"
           ]
         },
         {
@@ -169,8 +169,8 @@
           "desc": "Eine strategische Website, die Ihr Wachstum unterstützt.",
           "features": [
             "Bis zu 10 Seiten",
-            "Strategische Struktur und Nutzerführung, die zum Handeln motiviert",
-            "Inhaltsverwaltung für Blog, Fallstudien und Leistungen",
+            "Strategische Struktur und Nutzerführung für mehr Anfragen und Conversions",
+            "Inhaltsverwaltung für Blog, Case Studies und Leistungen",
             "1–2 Integrationen mit Drittanbietern, z. B. Buchungssystem oder CRM",
             "Analytics mit Event-Tracking",
             "SEO-Optimierung mit Fokus auf Ranking",
@@ -181,12 +181,12 @@
         {
           "name": "Premium",
           "price": "ab CHF 9'000",
-          "desc": "Eine digitale Plattform für komplexere, grössere oder wachsende Unternehmen.",
+          "desc": "Eine digitale Plattform für komplexere, wachsende oder skalierende Unternehmen.",
           "features": [
             "Unbegrenzte Seitenanzahl",
             "UX, Design und Struktur angepasst an komplexe Anforderungen",
             "Mehrere Integrationen, z. B. Buchung, Live-Chat, Kundenportal oder Newsletter-Automatisierungen",
-            "Verknüpfte Inhalte auf der Website, z. B. Leistungen mit Fallstudien, Blogartikeln oder verwandten Seiten",
+            "Dynamisch verknüpfte Inhalte auf der Website, z. B. Leistungen mit Case Studies, Blogartikeln oder verwandten Seiten",
             "Phasenweise Umsetzung für grössere oder laufend wachsende Projekte",
             "Mehrsprachigkeit mit 2+ Sprachen"
           ]
@@ -198,7 +198,7 @@
       "title": "KI-Automatisierungen & Workflow-Systeme",
       "desc": "Wir bauen individuelle Automatisierungen, die manuelle, wiederkehrende Arbeit reduzieren und die Tools verbinden, die Sie bereits nutzen. Der Preis wird nach einem kurzen Kennenlerngespräch individuell festgelegt.",
       "cta": "Loslegen",
-      "caseStudy": "Neueste Fallstudie"
+      "caseStudy": "Aktuelle Case Study"
     },
     "includedNote": "Jedes Paket enthält alles aus dem vorherigen Paket.",
     "automationArticleLink": "Was KI-Automatisierung für kleine Unternehmen bedeutet →",
@@ -908,7 +908,7 @@
           "answer": "Wir arbeiten häufig mit n8n, weil es viele Tools verbindet, die Unternehmen bereits nutzen — E-Mail, Tabellen, Cloud-Speicher oder CRMs. Je nach Projekt nutzen wir auch andere passende Lösungen."
         }
       ],
-      "contentHtml": "<p>Wenn Sie in letzter Zeit viel über KI gehört haben und sich fragen, ob das überhaupt etwas mit Ihrem Unternehmen zu tun hat: Damit sind Sie nicht allein.</p><p>Viele Gespräche über KI-Automatisierung richten sich an grosse Unternehmen mit hohen Budgets und eigenen Tech-Teams. Für kleine Unternehmen klingt das schnell teuer und zu technisch.</p><p>In der Praxis sind die wertvollsten Automatisierungen für kleine Unternehmen oft sehr einfach. Es sind die wiederkehrenden Aufgaben, die Teams jeden Tag manuell erledigen und die Woche für Woche Zeit fressen.</p><section aria-labelledby=\"not-replacing-people\"><h2 id=\"not-replacing-people\">Es geht nicht darum, Menschen zu ersetzen</h2><p>Die häufigste Sorge ist, dass Automatisierung bedeutet, Menschen würden ersetzt oder Entscheidungen an Maschinen abgegeben. Das ist nicht das, was wir bauen.</p><p>Jeder Workflow, den wir erstellen, behält Menschen im Prozess. Die KI übernimmt die repetitiven, zeitaufwändigen Teile. Eine Person prüft, bestätigt und behält die Kontrolle. Ziel ist, dass die Zeit und das Urteilsvermögen Ihres Teams dort eingesetzt werden, wo sie wirklich gebraucht werden.</p></section><section aria-labelledby=\"in-practice\"><h2 id=\"in-practice\">Wie das in der Praxis aussieht</h2><p>Hier sind drei Beispiele aus Projekten mit echten Kunden.</p><h3>1. Spesenbelege</h3><p>Ein Kunde verbrachte jeden Monat Zeit damit, Spesenbelege manuell abzulegen, E-Mails zu suchen, Dateien umzubenennen und Zahlen in Tabellen einzutragen. Es war langsam, fehleranfällig und niemand machte es gern.</p><p>Heute kommen Belege per E-Mail an, werden automatisch ausgelesen und landen mit den richtigen Informationen im richtigen Ordner. Das Team prüft und bestätigt. Fertig.</p><p>Das Ergebnis: ein schnellerer, zuverlässigerer Prozess mit weniger Fehlern und einer sauberen Ablage, die jederzeit für die Prüfung bereit ist.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Ergebnis-Highlight\"><strong>~70% weniger Zeit für Beleg-Admin</strong><span>Eine kleine Workflow-Änderung mit messbarem operativem Effekt.</span></div><p><a href=\"/case-studies/expense-receipt-automation\" class=\"text-main-teal underline hover:no-underline\">Zur Fallstudie Spesenbelege</a></p><h3>2. Kunden-Onboarding</h3><p>Wenn ein Kunde ein Projekt bestätigt, passieren oft dieselben Dinge: Vertrag versenden, Onboarding-E-Mail schicken, Ordner erstellen, interne Aufgaben anlegen.</p><p>Das ist nicht kompliziert, braucht aber Zeit und man vergisst leicht einen Schritt.</p><p>Mit der richtigen Automatisierung passiert all das automatisch, sobald ein Projekt bestätigt ist. Jedes Mal, ohne dass jemand daran denken muss.</p><h3>3. Community-Mitgliedschaft</h3><p>Wenn sich jemand für eine private Community bewirbt und angenommen wird, muss ein Account auf mehreren Plattformen erstellt werden. Diese Plattformen sprechen aber nicht automatisch miteinander.</p><p>Ohne Automatisierung bedeutet das: überall einzeln einloggen und dieselben Daten manuell eintragen.</p><p>Mit einem verbundenen Workflow löst die Annahme die Einrichtung auf allen Plattformen automatisch aus. Kein Copy-Paste, kein manuelles Setup und viel weniger Risiko, dass etwas vergessen geht.</p></section><section aria-labelledby=\"common-pattern\"><h2 id=\"common-pattern\">Das gemeinsame Muster</h2><p>Alle drei Beispiele folgen demselben Muster:</p><p>Etwas passiert, danach folgen jedes Mal dieselben Schritte, und früher hat jemand alles von Hand gemacht.</p><p>Genau dort hilft Automatisierung oft am meisten.</p><p>Nicht bei kreativen Entscheidungen. Nicht bei Urteilsfragen. Sondern bei den wiederholbaren, vorhersehbaren Aufgaben, die still und leise Zeit kosten.</p><aside class=\"insight-pullquote\" aria-label=\"Automatisierungsprinzip\"><p>Automatisieren Sie die Wiederholung — behalten Sie menschliches Urteil dort, wo es zählt.</p></aside></section><section aria-labelledby=\"setup-complexity\"><h2 id=\"setup-complexity\">Ist die Einrichtung kompliziert<span class=\"insight-heading-punctuation\">?</span></h2><p>Das muss sie nicht sein.</p><p>Wir bauen viele Workflows mit n8n. Damit lassen sich die Tools verbinden, die Ihr Unternehmen bereits nutzt — zum Beispiel E-Mail, Tabellen, Cloud-Speicher und CRMs.</p><p>Sie müssen dafür nicht Ihr bestehendes Setup ersetzen oder eine völlig neue Arbeitsweise lernen.</p><p>Die richtige Automatisierung passt sich an Ihre Arbeitsweise an, nicht umgekehrt.</p></section><section aria-labelledby=\"where-to-start-ai\"><h2 id=\"where-to-start-ai\">Wo Sie anfangen können</h2><p>Der beste Startpunkt ist meistens die Aufgabe, die Sie am häufigsten machen und am wenigsten gern erledigen.</p><p>Wenn Sie regelmässig:</p><ul><li>Informationen zwischen Tools kopieren</li><li>immer wieder dieselben E-Mails versenden</li><li>dieselben Ordner oder Dokumente erstellen</li><li>Menschen manuell auf mehreren Plattformen einrichten</li><li>jede Woche kleine Admin-Aufgaben nachverfolgen</li></ul><p>dann gibt es wahrscheinlich einen Teil dieses Prozesses, der automatisiert werden kann.</p><p>Oft sind die besten Automatisierungen keine riesigen Systeme. Es sind kleine Workflows, die ein paar repetitive Schritte aus Ihrer Woche entfernen.</p></section>"
+      "contentHtml": "<p>Wenn Sie in letzter Zeit viel über KI gehört haben und sich fragen, ob das überhaupt etwas mit Ihrem Unternehmen zu tun hat: Damit sind Sie nicht allein.</p><p>Viele Gespräche über KI-Automatisierung richten sich an grosse Unternehmen mit hohen Budgets und eigenen Tech-Teams. Für kleine Unternehmen klingt das schnell teuer und zu technisch.</p><p>In der Praxis sind die wertvollsten Automatisierungen für kleine Unternehmen oft sehr einfach. Es sind die wiederkehrenden Aufgaben, die Teams jeden Tag manuell erledigen und die Woche für Woche Zeit fressen.</p><section aria-labelledby=\"not-replacing-people\"><h2 id=\"not-replacing-people\">Es geht nicht darum, Menschen zu ersetzen</h2><p>Die häufigste Sorge ist, dass Automatisierung bedeutet, Menschen würden ersetzt oder Entscheidungen an Maschinen abgegeben. Das ist nicht das, was wir bauen.</p><p>Jeder Workflow, den wir erstellen, behält Menschen im Prozess. Die KI übernimmt die repetitiven, zeitaufwändigen Teile. Eine Person prüft, bestätigt und behält die Kontrolle. Ziel ist, dass die Zeit und das Urteilsvermögen Ihres Teams dort eingesetzt werden, wo sie wirklich gebraucht werden.</p></section><section aria-labelledby=\"in-practice\"><h2 id=\"in-practice\">Wie das in der Praxis aussieht</h2><p>Hier sind drei Beispiele aus Projekten mit echten Kunden.</p><h3>1. Spesenbelege</h3><p>Ein Kunde verbrachte jeden Monat Zeit damit, Spesenbelege manuell abzulegen, E-Mails zu suchen, Dateien umzubenennen und Zahlen in Tabellen einzutragen. Es war langsam, fehleranfällig und niemand machte es gern.</p><p>Heute kommen Belege per E-Mail an, werden automatisch ausgelesen und landen mit den richtigen Informationen im richtigen Ordner. Das Team prüft und bestätigt. Fertig.</p><p>Das Ergebnis: ein schnellerer, zuverlässigerer Prozess mit weniger Fehlern und einer sauberen Ablage, die jederzeit für die Prüfung bereit ist.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Ergebnis-Highlight\"><strong>~70% weniger Zeit für Beleg-Admin</strong><span>Eine kleine Workflow-Änderung mit messbarem operativem Effekt.</span></div><p><a href=\"/case-studies/expense-receipt-automation\" class=\"text-main-teal underline hover:no-underline\">Zur Case Study Spesenbelege</a></p><h3>2. Kunden-Onboarding</h3><p>Wenn ein Kunde ein Projekt bestätigt, passieren oft dieselben Dinge: Vertrag versenden, Onboarding-E-Mail schicken, Ordner erstellen, interne Aufgaben anlegen.</p><p>Das ist nicht kompliziert, braucht aber Zeit und man vergisst leicht einen Schritt.</p><p>Mit der richtigen Automatisierung passiert all das automatisch, sobald ein Projekt bestätigt ist. Jedes Mal, ohne dass jemand daran denken muss.</p><h3>3. Community-Mitgliedschaft</h3><p>Wenn sich jemand für eine private Community bewirbt und angenommen wird, muss ein Account auf mehreren Plattformen erstellt werden. Diese Plattformen sprechen aber nicht automatisch miteinander.</p><p>Ohne Automatisierung bedeutet das: überall einzeln einloggen und dieselben Daten manuell eintragen.</p><p>Mit einem verbundenen Workflow löst die Annahme die Einrichtung auf allen Plattformen automatisch aus. Kein Copy-Paste, kein manuelles Setup und viel weniger Risiko, dass etwas vergessen geht.</p></section><section aria-labelledby=\"common-pattern\"><h2 id=\"common-pattern\">Das gemeinsame Muster</h2><p>Alle drei Beispiele folgen demselben Muster:</p><p>Etwas passiert, danach folgen jedes Mal dieselben Schritte, und früher hat jemand alles von Hand gemacht.</p><p>Genau dort hilft Automatisierung oft am meisten.</p><p>Nicht bei kreativen Entscheidungen. Nicht bei Urteilsfragen. Sondern bei den wiederholbaren, vorhersehbaren Aufgaben, die still und leise Zeit kosten.</p><aside class=\"insight-pullquote\" aria-label=\"Automatisierungsprinzip\"><p>Automatisieren Sie die Wiederholung — behalten Sie menschliches Urteil dort, wo es zählt.</p></aside></section><section aria-labelledby=\"setup-complexity\"><h2 id=\"setup-complexity\">Ist die Einrichtung kompliziert<span class=\"insight-heading-punctuation\">?</span></h2><p>Das muss sie nicht sein.</p><p>Wir bauen viele Workflows mit n8n. Damit lassen sich die Tools verbinden, die Ihr Unternehmen bereits nutzt — zum Beispiel E-Mail, Tabellen, Cloud-Speicher und CRMs.</p><p>Sie müssen dafür nicht Ihr bestehendes Setup ersetzen oder eine völlig neue Arbeitsweise lernen.</p><p>Die richtige Automatisierung passt sich an Ihre Arbeitsweise an, nicht umgekehrt.</p></section><section aria-labelledby=\"where-to-start-ai\"><h2 id=\"where-to-start-ai\">Wo Sie anfangen können</h2><p>Der beste Startpunkt ist meistens die Aufgabe, die Sie am häufigsten machen und am wenigsten gern erledigen.</p><p>Wenn Sie regelmässig:</p><ul><li>Informationen zwischen Tools kopieren</li><li>immer wieder dieselben E-Mails versenden</li><li>dieselben Ordner oder Dokumente erstellen</li><li>Menschen manuell auf mehreren Plattformen einrichten</li><li>jede Woche kleine Admin-Aufgaben nachverfolgen</li></ul><p>dann gibt es wahrscheinlich einen Teil dieses Prozesses, der automatisiert werden kann.</p><p>Oft sind die besten Automatisierungen keine riesigen Systeme. Es sind kleine Workflows, die ein paar repetitive Schritte aus Ihrer Woche entfernen.</p></section>"
     },
     "why-your-website-might-be-losing-you-clients": {
       "slug": "why-your-website-might-be-losing-you-clients",
@@ -1003,24 +1003,24 @@
         "description": "Bewerben Sie sich für kostenlose Projektunterstützung von Moniré für eine Non-Profit-Organisation oder sinnvolle Initiative."
       },
       "/case-studies/expense-receipt-automation": {
-        "title": "Fallstudie Spesenbeleg-Automatisierung | Moniré",
-        "description": "Fallstudie: ein von Moniré entwickelter KI-Automatisierungsworkflow für die Verarbeitung von Spesenbelegen."
+        "title": "Case Study Spesenbeleg-Automatisierung | Moniré",
+        "description": "Case Study: ein von Moniré entwickelter KI-Automatisierungsworkflow für die Verarbeitung von Spesenbelegen."
       },
       "/case-studies/snip-squad": {
-        "title": "Snip Squad Fallstudie | Moniré",
-        "description": "Fallstudie: Webdesign- und Entwicklungsarbeit von Moniré für Snip Squad."
+        "title": "Snip Squad Case Study | Moniré",
+        "description": "Case Study: Webdesign- und Entwicklungsarbeit von Moniré für Snip Squad."
       },
       "/case-studies/portco-hr-collective": {
-        "title": "PortCo HR Collective Fallstudie | Moniré",
-        "description": "Fallstudie: Branding, Webdesign, Entwicklung und KI-Automatisierung von Moniré für PortCo HR Collective."
+        "title": "PortCo HR Collective Case Study | Moniré",
+        "description": "Case Study: Branding, Webdesign, Entwicklung und KI-Automatisierung von Moniré für PortCo HR Collective."
       },
       "/case-studies/systemically": {
-        "title": "SystemicAlly Consulting-Website Fallstudie | Moniré",
-        "description": "Sehen Sie, wie Moniré eine professionelle, responsive Website für SystemicAlly entwickelt hat, eine Beratung für Leadership und Transformation."
+        "title": "SystemicAlly Consulting-Website Case Study | Moniré",
+        "description": "Case Study: Sehen Sie, wie Moniré eine professionelle, responsive Website für SystemicAlly entwickelt hat, eine Beratung für Leadership und Transformation."
       },
       "/case-studies/towarowa": {
-        "title": "Towarowa 41 Apartment-Website Fallstudie | Moniré",
-        "description": "Sehen Sie, wie Moniré eine hochwertige, responsive Website für das Premium-Apartment Towarowa 41 gestaltet und entwickelt hat."
+        "title": "Towarowa 41 Apartment-Website Case Study | Moniré",
+        "description": "Case Study: Sehen Sie, wie Moniré eine hochwertige, responsive Website für das Premium-Apartment Towarowa 41 gestaltet und entwickelt hat."
       }
     }
   }

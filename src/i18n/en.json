@@ -34,7 +34,7 @@
       },
       {
         "title": "Technology That Fits",
-        "desc": "We choose the technology that fits your goals, budget, and long-term needs, rather than forcing every project onto the same platform."
+        "desc": "We choose the technology that fits your goals, budget, and long-term needs, instead of starting with a predefined platform."
       },
       {
         "title": "Direct Collaboration",
@@ -58,12 +58,12 @@
       {
         "badge": "Design",
         "title": "Web Design",
-        "desc": "We design websites that feel intuitive and simple to navigate. Everything has a purpose, nothing gets added just because it looks cool. The goal is a site that helps visitors understand what you offer and take the next step with confidence."
+        "desc": "We design websites that feel intuitive and easy to navigate. Every element serves a purpose, and nothing is added for decoration alone. The goal is a site that helps visitors understand what you offer, take the next step with confidence, and support your business goals."
       },
       {
         "badge": "Development",
         "title": "Web Development",
-        "desc": "Every website we build is reliable, fast, and easy to manage after launch. Most of our sites are built in Webflow, so you can easily update and maintain them yourself. For more custom projects, we work together to choose the right stack, including React, Next.js, or Astro, based on what fits the project best. The goal is always the same: it should just work."
+        "desc": "Every website we build is reliable, fast, and easy to manage after launch. We choose the technology that best fits your goals, budget, and long-term needs. Depending on the project, that might mean Webflow, React, Next.js, Astro, or another modern solution. Whatever the technology, the goal stays the same: a website that works for your business and grows with your needs."
       },
       {
         "badge": "Migration",
