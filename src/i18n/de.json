@@ -633,7 +633,7 @@
       "subtitle": "Ein hochwertiger digitaler Auftritt für ein Premium-City-Apartment",
       "client": "Towarowa",
       "date": "Oktober 2025",
-      "industry": "Hospitality & Immobilien",
+      "industry": "Hotellerie & Immobilien",
       "category": "Webdesign & Webentwicklung",
       "tools": [
         "TYPESCRIPT",
@@ -652,9 +652,9 @@
           "title": "Ansatz:",
           "intro": "Ziel war ein digitaler Auftritt, der Qualität und Atmosphäre der Unterkunft widerspiegelt und Informationen leicht zugänglich macht.\n\nUnser Fokus lag auf:",
           "items": [
-            "Einem klaren, eleganten visuellen Design, inspiriert von Boutique-Hospitality-Marken",
+            "Einem klaren, eleganten visuellen Design, inspiriert von hochwertigen Boutique-Hotels",
             "Grosszügigen, hochwertigen Bildern, die Apartment und Umgebung zeigen",
-            "Klarer Darstellung von Ausstattung, Zugänglichkeit und lokalen Highlights",
+            "Klarer Darstellung von Ausstattung, Anreiseinformationen und lokalen Highlights",
             "Einem integrierten Buchungssystem für eine einfache Reservierung",
             "Responsiven Layouts für Desktop, Tablet und Smartphone"
           ]
@@ -667,11 +667,11 @@
       "metrics": [
         {
           "value": "~20%",
-          "description": "geschätzte Steigerung direkter Buchungsanfragen nach der Veröffentlichung der Website"
+          "description": "geschätzte Steigerung direkter Buchungsanfragen seit dem Website-Launch"
         },
         {
           "value": "~10 Std.",
-          "description": "monatlich gespart durch weniger manuelle Buchungskoordination und wiederkehrende Gästeanfragen"
+          "description": "monatlich eingespart durch weniger manuelle Buchungskoordination und wiederkehrende Gästeanfragen"
         }
       ]
     },
