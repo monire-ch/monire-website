@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import type { CaseStudyConfig } from '@/config/caseStudies';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 type CaseStudyTemplateProps = {
   project: CaseStudyConfig;
@@ -12,6 +13,7 @@ type CaseStudyTemplateProps = {
 
 const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const isScrollablePreview = project.imageScrollable ?? true;
   const hasSections = Boolean(project.sections && project.sections.length > 0);
   const contentGridColumnsClassName = hasSections
@@ -88,7 +90,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <a
-              href="/#portfolio"
+              href={localePath('/#portfolio')}
               className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline mb-8"
             >
               <ArrowLeft size={16} />

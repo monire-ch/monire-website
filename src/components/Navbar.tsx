@@ -7,19 +7,23 @@ import ContactModal from './ContactModal';
 import BrandButton from './BrandButton';
 import LanguageSwitcher from './LanguageSwitcher';
 import { trackEvent } from '@/lib/analytics';
+import { stripLocalePrefix } from '@/lib/localeRouting';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 const Navbar = () => {
   const { t } = useTranslation();
   const location = useLocation();
-  const isHome = location.pathname === '/';
+  const localePath = useLocalePath();
+  const basePathname = stripLocalePrefix(location.pathname);
+  const isHome = basePathname === '/';
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(isHome ? '#' : '');
 
-  const getHref = (href: string) => (href.startsWith("#") ? (isHome ? href : `/${href}`) : href);
+  const getHref = (href: string) => (href.startsWith("#") ? (isHome ? href : localePath(`/${href}`)) : localePath(href));
   const isPathLinkActive = (href: string) =>
     !href.startsWith('#') &&
-    (location.pathname === href || location.pathname.startsWith(`${href}/`));
+    (basePathname === href || basePathname.startsWith(`${href}/`));
   const isLinkActive = (href: string) =>
     (isHome && activeLink === href) || (!isHome && isPathLinkActive(href));
   const openContactModal = (source: string) => {
@@ -122,7 +126,7 @@ const Navbar = () => {
                   }
                   if (isHome && link.href === '#') {
                     e.preventDefault();
-                    window.history.pushState(null, '', '/#');
+                    window.history.pushState(null, '', localePath('/#'));
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }
                 }}

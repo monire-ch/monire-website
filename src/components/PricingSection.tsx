@@ -13,6 +13,7 @@ import {
 } from '@/config/pricing';
 import BrandButton from './BrandButton';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 
 const tabKeys = ['webDesign', 'automation'] as const;
@@ -20,6 +21,7 @@ const tabKeys = ['webDesign', 'automation'] as const;
 const PricingSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const localePath = useLocalePath();
   const [activeTab, setActiveTab] = useState<typeof tabKeys[number]>('webDesign');
   const [contactOpen, setContactOpen] = useState(false);
   const [currency, setCurrency] = useState<DisplayCurrency>('CHF');
@@ -137,7 +139,7 @@ const PricingSection = () => {
                       destination: '/case-studies/expense-receipt-automation',
                       page_path: window.location.pathname,
                     });
-                    navigate('/case-studies/expense-receipt-automation');
+                    navigate(localePath('/case-studies/expense-receipt-automation'));
                   }}
                 >
                   {t('pricing.automationBlock.caseStudy')}
@@ -145,7 +147,7 @@ const PricingSection = () => {
               </div>
               <div className="mt-4">
                 <Link
-                  to="/insights/what-ai-automation-actually-means-for-a-small-business"
+                  to={localePath('/insights/what-ai-automation-actually-means-for-a-small-business')}
                   onClick={() =>
                     trackEvent('blog_cta_click', {
                       location: 'pricing',

@@ -3,19 +3,14 @@ import { initReactI18next } from 'react-i18next';
 import en from './en.json';
 import de from './de.json';
 import pl from './pl.json';
+import { DEFAULT_LOCALE, getLocaleFromPathname, isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from '@/lib/localeRouting';
 
 const LANGUAGE_STORAGE_KEY = 'monire-language';
-const supportedLanguages = ['en', 'de'] as const;
-type SupportedLanguage = (typeof supportedLanguages)[number];
 
-const isSupportedLanguage = (language: string | null): language is SupportedLanguage =>
-  supportedLanguages.includes(language as SupportedLanguage);
+const getInitialLanguage = (): SupportedLocale => {
+  if (typeof window === 'undefined') return DEFAULT_LOCALE;
 
-const getInitialLanguage = (): SupportedLanguage => {
-  if (typeof window === 'undefined') return 'en';
-
-  const savedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-  return isSupportedLanguage(savedLanguage) ? savedLanguage : 'en';
+  return getLocaleFromPathname(window.location.pathname);
 };
 
 i18n.use(initReactI18next).init({
@@ -25,22 +20,23 @@ i18n.use(initReactI18next).init({
     pl: { translation: pl },
   },
   lng: getInitialLanguage(),
-  fallbackLng: 'en',
+  fallbackLng: DEFAULT_LOCALE,
+  supportedLngs: [...SUPPORTED_LOCALES],
   interpolation: { escapeValue: false },
 });
 
 i18n.on('languageChanged', (language) => {
   if (typeof document !== 'undefined') {
-    document.documentElement.lang = isSupportedLanguage(language) ? language : 'en';
+    document.documentElement.lang = isSupportedLocale(language) ? language : DEFAULT_LOCALE;
   }
 
-  if (typeof window !== 'undefined' && isSupportedLanguage(language)) {
+  if (typeof window !== 'undefined' && isSupportedLocale(language)) {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
   }
 });
 
 if (typeof document !== 'undefined') {
-  document.documentElement.lang = isSupportedLanguage(i18n.language) ? i18n.language : 'en';
+  document.documentElement.lang = isSupportedLocale(i18n.language) ? i18n.language : DEFAULT_LOCALE;
 }
 
 export default i18n;

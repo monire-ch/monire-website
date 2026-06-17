@@ -5,6 +5,7 @@ import { useFontsLoaded } from '@/hooks/useFontsLoaded';
 import goldFill from '@/assets/gold-fill.webp';
 import BrandButton from './BrandButton';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 interface HeroSectionProps {
   onCtaClick?: () => void;
@@ -13,6 +14,7 @@ interface HeroSectionProps {
 const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   const { i18n, t } = useTranslation();
   const navigate = useNavigate();
+  const localePath = useLocalePath();
   const fontsLoaded = useFontsLoaded();
   const [animate, setAnimate] = useState(false);
   const isGerman = i18n.resolvedLanguage === 'de';
@@ -99,7 +101,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             type="button"
             onClick={() => {
               trackEvent('contact_click', { location: 'hero', label: 'hero', destination: '/contact', page_path: window.location.pathname });
-              navigate('/contact');
+              navigate(localePath('/contact'));
             }}
             variant="hero"
             showStar

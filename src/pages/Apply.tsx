@@ -7,9 +7,11 @@ import ScrollReveal from '@/components/ScrollReveal';
 import ContactModal from '@/components/ContactModal';
 import BrandButton from '@/components/BrandButton';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 const Apply = () => {
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const [contactOpen, setContactOpen] = useState(false);
   const steps = t('apply.steps', { returnObjects: true }) as Array<{ step: string; title: string; desc: string }>;
 
@@ -22,7 +24,7 @@ const Apply = () => {
       <section className="pt-32 pb-32 md:pt-40 md:pb-28 px-6">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal className="mb-8">
-            <Link to="/#about" className="text-sm text-off-white/50 hover:text-off-white/80 font-body transition-colors">
+            <Link to={localePath('/#about')} className="text-sm text-off-white/50 hover:text-off-white/80 font-body transition-colors">
               {t('apply.back')}
             </Link>
           </ScrollReveal>

@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import BrandButton from "./BrandButton";
 import { getFormAttributionFields, trackEvent } from "@/lib/analytics";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 interface ContactFormProps {
   variant: "modal" | "page";
@@ -171,6 +172,7 @@ const MultiSelectField: FC<MultiSelectProps> = ({
 
 const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLocation }) => {
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const [services, setServices] = useState<string[]>([]);
   const [budget, setBudget] = useState("");
   const [agreed, setAgreed] = useState(false);
@@ -447,7 +449,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
         <span className={`text-sm font-body ${errors.agreed ? "text-red-400" : "text-off-white/70"}`}>
           {t("contact.terms")} {" "}
           <Link
-            to="/privacy"
+            to={localePath('/privacy')}
             className="text-gold-text underline hover:text-gold transition-colors"
             onClick={isModal ? onClose : undefined}
           >

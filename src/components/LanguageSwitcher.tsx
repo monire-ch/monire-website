@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Check, ChevronDown, Globe } from 'lucide-react';
 import {
   DropdownMenu,
@@ -6,11 +7,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { getAlternateLocalePath, type SupportedLocale } from '@/lib/localeRouting';
 
 const languages = [
   { code: 'en', shortLabel: 'EN', label: 'English' },
   { code: 'de', shortLabel: 'DE', label: 'Deutsch' },
-] as const;
+] satisfies Array<{ code: SupportedLocale; shortLabel: string; label: string }>;
 
 type LanguageSwitcherProps = {
   className?: string;
@@ -18,6 +20,8 @@ type LanguageSwitcherProps = {
 
 const LanguageSwitcher = ({ className = '' }: LanguageSwitcherProps) => {
   const { i18n, t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const activeLanguage = i18n.resolvedLanguage === 'de' ? 'de' : 'en';
   const activeLanguageLabel =
     languages.find((language) => language.code === activeLanguage)?.shortLabel ?? 'EN';
@@ -47,9 +51,10 @@ const LanguageSwitcher = ({ className = '' }: LanguageSwitcherProps) => {
             <DropdownMenuItem
               key={language.code}
               onClick={() => {
-                if (!isActive) {
-                  i18n.changeLanguage(language.code);
-                }
+                if (isActive) return;
+
+                i18n.changeLanguage(language.code);
+                navigate(getAlternateLocalePath(location.pathname, language.code, location.search, location.hash));
               }}
               className="flex cursor-pointer items-center justify-between rounded-xl px-3 py-2 font-body text-sm text-off-white/85 outline-none transition-colors focus:bg-off-white/10 focus:text-gold-hover"
             >

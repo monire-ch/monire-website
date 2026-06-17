@@ -1,5 +1,6 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
@@ -7,6 +8,8 @@ import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE, getInsightPostBySlug, type Insight
 import NotFound from "@/pages/NotFound";
 import { SITE_URL } from "@/lib/seo";
 import { trackEvent } from "@/lib/analytics";
+import { useLocalePath } from "@/hooks/useLocalePath";
+import { getLocaleFromPathname, localizeInternalHtmlLinks } from "@/lib/localeRouting";
 
 const formatDate = (value: string) =>
   new Intl.DateTimeFormat("en-CH", {
@@ -27,6 +30,9 @@ const renderHeadingWithPunctuation = (text: string) => {
 
 const InsightPost = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const localePath = useLocalePath();
+  const locale = getLocaleFromPathname(location.pathname);
   const { slug } = useParams();
   const basePost = slug ? getInsightPostBySlug(slug) : undefined;
   const translatedPost = slug
@@ -43,8 +49,9 @@ const InsightPost = () => {
     return <NotFound />;
   }
 
-  const canonicalPath = `${INSIGHTS_ROUTE_BASE}/${post.slug}`;
+  const canonicalPath = localePath(`${INSIGHTS_ROUTE_BASE}/${post.slug}`);
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
+  const localizedContentHtml = post.contentHtml ? localizeInternalHtmlLinks(post.contentHtml, locale) : undefined;
   const relatedPosts = INSIGHTS_POSTS.filter((candidate) => post.relatedSlugs.includes(candidate.slug)).map((relatedPost) => ({
     ...relatedPost,
     ...(t(`insightsPosts.${relatedPost.slug}`, { returnObjects: true }) as Partial<InsightPost>),
@@ -56,7 +63,7 @@ const InsightPost = () => {
     description: post.seoDescription,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
-    inLanguage: "en",
+    inLanguage: locale,
     mainEntityOfPage: canonicalUrl,
     url: canonicalUrl,
     publisher: {
@@ -99,6 +106,15 @@ const InsightPost = () => {
       <Navbar />
       <main className="bg-background min-h-screen pt-36 md:pt-44 pb-20 px-6">
         <article className="max-w-3xl mx-auto" onClickCapture={handleInsightLinkClick}>
+          <div className="mb-8">
+            <Link
+              to={localePath(INSIGHTS_ROUTE_BASE)}
+              className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
+            >
+              <ArrowLeft size={16} />
+              {t('insightsPage.backToAll')}
+            </Link>
+          </div>
           <p className="eyebrow-pill eyebrow-pill-light mb-5 inline-block">{t('insightsPage.eyebrow')}</p>
           <p className="text-sm font-body text-main-teal mb-4">
             <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
@@ -118,9 +134,9 @@ const InsightPost = () => {
 
           <div
             className="insight-prose"
-            dangerouslySetInnerHTML={post.contentHtml ? { __html: post.contentHtml } : undefined}
+            dangerouslySetInnerHTML={localizedContentHtml ? { __html: localizedContentHtml } : undefined}
           >
-            {post.contentHtml ? null : post.content}
+            {localizedContentHtml ? null : post.content}
           </div>
 
           <section className="rounded-xl border border-border bg-card p-5 md:p-6 mt-10" aria-labelledby="post-cta">
@@ -131,7 +147,7 @@ const InsightPost = () => {
               {post.primaryCta.body}
             </p>
             <Link
-              to={post.primaryCta.href}
+              to={localePath(post.primaryCta.href)}
               className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
             >
               {post.primaryCta.label}
@@ -147,7 +163,7 @@ const InsightPost = () => {
                 {relatedPosts.map((relatedPost) => (
                   <li key={relatedPost.slug}>
                     <Link
-                      to={`${INSIGHTS_ROUTE_BASE}/${relatedPost.slug}`}
+                      to={localePath(`${INSIGHTS_ROUTE_BASE}/${relatedPost.slug}`)}
                       className="text-base font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
                     >
                       {relatedPost.title}
@@ -158,14 +174,6 @@ const InsightPost = () => {
             </section>
           ) : null}
 
-          <div className="mt-12 pt-6 border-t border-border">
-            <Link
-              to={INSIGHTS_ROUTE_BASE}
-              className="text-sm font-body font-medium text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
-            >
-              ← Back to all articles
-            </Link>
-          </div>
         </article>
       </main>
       <Footer hideWave />

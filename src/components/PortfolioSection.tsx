@@ -10,6 +10,7 @@ import systemically from '@/assets/portfolio/systemically_full.webp';
 import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 const projectImagesByLink: Record<string, string> = {
   '/case-studies/snip-squad': snipSquad,
@@ -42,6 +43,7 @@ const portfolioNavItems = portfolioNavGroups.flatMap((group) => group.items);
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [activeNavItemId, setActiveNavItemId] = useState(portfolioNavItems[0].id);
 
@@ -154,7 +156,7 @@ const PortfolioSection = () => {
                       className="min-w-0 shrink-0 grow-0 basis-full px-2"
                     >
                       <Link
-                        to={project.link}
+                        to={localePath(project.link)}
                         onClick={() =>
                           trackEvent('case_study_click', {
                             location: 'portfolio',

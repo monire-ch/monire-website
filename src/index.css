@@ -284,7 +284,7 @@
   }
 
   .insight-prose a {
-    @apply text-main-teal underline underline-offset-2 hover:no-underline;
+    @apply text-main-teal underline underline-offset-4 hover:no-underline;
   }
 
   .insight-prose .insight-checklist {
@@ -587,4 +587,12 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--main-teal)) transparent;
+}
+
+a.underline,
+a[style*="text-decoration:underline"],
+a[style*="text-decoration: underline"] {
+  text-underline-offset: 0.16em;
+  text-decoration-thickness: 0.045em;
+  text-decoration-skip-ink: auto;
 }

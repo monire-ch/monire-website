@@ -5,10 +5,13 @@ import logo from '@/assets/monire_logo.png';
 import SocialMediaIcon from '@/components/SocialMediaIcon';
 import { SOCIAL_LINKS } from '@/config/socialLinks';
 import { trackEvent } from '@/lib/analytics';
+import { stripLocalePrefix } from '@/lib/localeRouting';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const localePath = useLocalePath();
 
   const navItems = [
     { label: t('nav.about'), href: '#about' },
@@ -35,7 +38,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12 items-start">
           {/* Brand column */}
           <div>
-            <Link to="/#">
+            <Link to={localePath('/#')}>
               <img src={logo} alt={t('common.logoAlt')} className="h-6 lg:h-7 mb-4" />
             </Link>
             <p className="text-off-white text-base font-body max-w-xs">
@@ -56,7 +59,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                 <li key={item.href}>
                   {item.href.startsWith('/') ? (
                     <Link
-                      to={item.href}
+                      to={localePath(item.href)}
                       onClick={() => {
                         if (item.href === '/contact') {
                           trackEvent('footer_contact_click', { location: 'footer', destination: item.href, page_path: window.location.pathname });
@@ -74,9 +77,9 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                         if (item.href === '#pricing') {
                           trackEvent('pricing_nav_click', { location: 'footer', page_path: window.location.pathname });
                         }
-                        if (window.location.pathname !== '/') {
+                        if (stripLocalePrefix(window.location.pathname) !== '/') {
                           e.preventDefault();
-                          navigate('/' + item.href);
+                          navigate(localePath(`/${item.href}`));
                         }
                       }}
                       className="text-off-white text-base font-body hover:text-gold-text transition-colors"

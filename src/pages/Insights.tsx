@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,6 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import { INSIGHTS_POSTS, INSIGHTS_ROUTE_BASE, type InsightPost } from "@/config/insightsPosts";
 import { SITE_URL } from "@/lib/seo";
 import { trackEvent } from "@/lib/analytics";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const formatDate = (value: string) =>
   new Intl.DateTimeFormat("en-CH", {
@@ -16,6 +17,9 @@ const formatDate = (value: string) =>
 
 const Insights = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const localePath = useLocalePath();
+  const localizedInsightsPath = localePath(INSIGHTS_ROUTE_BASE);
   const posts = INSIGHTS_POSTS.map((post) => ({
     ...post,
     ...(t(`insightsPosts.${post.slug}`, { returnObjects: true }) as Partial<InsightPost>),
@@ -24,14 +28,14 @@ const Insights = () => {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: t('insightsPage.schemaName'),
-    url: `${SITE_URL}${INSIGHTS_ROUTE_BASE}`,
+    url: `${SITE_URL}${localizedInsightsPath}`,
     about: t('insightsPage.intro'),
     mainEntity: {
       "@type": "ItemList",
       itemListElement: posts.map((post, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `${SITE_URL}${INSIGHTS_ROUTE_BASE}/${post.slug}`,
+        url: `${SITE_URL}${localePath(`${INSIGHTS_ROUTE_BASE}/${post.slug}`)}`,
         name: post.title,
       })),
     },
@@ -54,13 +58,14 @@ const Insights = () => {
             {posts.map((post) => (
               <li key={post.slug} className="h-full">
                 <Link
-                  to={`${INSIGHTS_ROUTE_BASE}/${post.slug}`}
+                  to={localePath(`${INSIGHTS_ROUTE_BASE}/${post.slug}`)}
                   onClick={() =>
                     trackEvent("blog_cta_click", {
                       location: "insights_listing",
                       label: post.slug,
                       destination: `${INSIGHTS_ROUTE_BASE}/${post.slug}`,
                       page_path: window.location.pathname,
+                      locale: location.pathname.startsWith('/de') ? 'de' : 'en',
                     })
                   }
                   className="block h-full group"

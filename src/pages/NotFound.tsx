@@ -4,10 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BrandButton from "@/components/BrandButton";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const NotFound = () => {
   const location = useLocation();
   const { t } = useTranslation();
+  const localePath = useLocalePath();
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
@@ -38,14 +40,14 @@ const NotFound = () => {
             </div>
 
             <Link
-              to="/#portfolio"
+              to={localePath('/#portfolio')}
               className="inline-block mt-7 text-sm font-body text-off-white/85 hover:text-gold-text transition-colors underline underline-offset-2"
             >
               {t('notFound.portfolio')}
             </Link>
             <div>
               <Link
-                to="/insights"
+                to={localePath('/insights')}
                 className="inline-block mt-3 text-sm font-body text-off-white/85 hover:text-gold-text transition-colors underline underline-offset-2"
               >
                 {t('notFound.insights')}

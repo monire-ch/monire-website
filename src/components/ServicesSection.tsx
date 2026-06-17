@@ -5,9 +5,11 @@ import ScrollReveal from "./ScrollReveal";
 import BrandButton from "./BrandButton";
 import { SECTION_WRAPPER_GRADIENT } from "@/lib/theme";
 import { trackEvent } from "@/lib/analytics";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const items = t("services.items", { returnObjects: true }) as Array<{
     badge: string;
     title: string;
@@ -108,7 +110,7 @@ const ServicesSection = () => {
                     {activeLinks.href ? (
                       <div>
                         <Link
-                          to={activeLinks.href}
+                          to={localePath(activeLinks.href)}
                           onClick={() =>
                             trackEvent("blog_cta_click", {
                               location: "services_section",
@@ -179,7 +181,7 @@ const ServicesSection = () => {
                             {serviceLinks[i].href ? (
                               <div>
                                 <Link
-                                  to={serviceLinks[i].href}
+                                  to={localePath(serviceLinks[i].href)}
                                   onClick={() =>
                                     trackEvent("blog_cta_click", {
                                       location: "services_section_mobile",
