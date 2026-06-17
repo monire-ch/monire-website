@@ -33,8 +33,8 @@
         "desc": "Entwickelt für Barrierefreiheit, Zuverlässigkeit und Sichtbarkeit in Suchmaschinen und KI-Plattformen, damit Ihr Unternehmen dort gefunden wird, wo Ihre Kunden suchen."
       },
       {
-        "title": "0 Stunden Wartungsaufwand",
-        "desc": "Ihre Webflow-Website läuft stabil mit automatischen Updates und ohne Plugins, die Sie pflegen müssen. So können Sie sich auf Ihr Unternehmen konzentrieren."
+        "title": "Die passende Technologie",
+        "desc": "Wir wählen die Technologie, die zu Ihren Zielen, Ihrem Budget und Ihren langfristigen Anforderungen passt, statt jedes Projekt auf dieselbe Plattform aufzubauen."
       },
       {
         "title": "Direkte Zusammenarbeit",
@@ -72,7 +72,7 @@
       },
       {
         "badge": "SEO",
-        "title": "SEO & Analytics (Basics)",
+        "title": "SEO & Analytics",
         "desc": "Wir sorgen dafür, dass Ihre Website sowohl für Suchmaschinen als auch für KI-gestützte Suchtools verständlich ist. Mit klarer Struktur, relevanten Inhalten und einfacher Analyse, damit Sie jederzeit wissen, was funktioniert."
       },
       {
@@ -93,7 +93,7 @@
     "stories": [
       {
         "title": "Unsere Geschichte",
-        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren alles andere als klassisch: Consulting, HR und Veterinärmedizin. Genau diese unterschiedlichen Hintergründe wurden zu unserer gemeinsamen Stärke. Wir entwickeln nicht einfach Websites und Software. Wir verstehen unternehmerische Herausforderungen aus ganz unterschiedlichen Perspektiven. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Zusammenarbeit und Partnerinnen, die mitdenken."
+        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren alles andere als klassisch. Monika kommt aus HR und Consulting, Nikky hat als Tierärztin gearbeitet. Genau diese unterschiedlichen Erfahrungen wurden zu unserer gemeinsamen Stärke. Wir schreiben nicht einfach Code, sondern verstehen geschäftliche Herausforderungen aus verschiedenen Perspektiven. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Zusammenarbeit und Partnerinnen, die mitdenken."
       },
       {
         "title": "Warum ein Duo?",

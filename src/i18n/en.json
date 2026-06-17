@@ -25,16 +25,16 @@
     "titleAccent": "Nothing it doesn't.",
     "items": [
       {
-        "title": "10+ Years of Excellence",
-        "desc": "Together, we bring over a decade of hands-on experience as software developers at top Swiss companies — combining technical expertise with design clarity."
+        "title": "10+ Years of Experience",
+        "desc": "Together, we bring over a decade of hands-on experience as software developers at top Swiss companies, combining technical expertise with design clarity."
       },
       {
         "title": "AI, Google & Speed Optimized",
         "desc": "Built for accessibility, reliability, and visibility across search engines and AI platforms so your business gets found everywhere clients look."
       },
       {
-        "title": "0 Hours of Maintenance",
-        "desc": "Your Webflow website runs smoothly with automatic updates and no plugins to manage, so you can focus on your business."
+        "title": "Technology That Fits",
+        "desc": "We choose the technology that fits your goals, budget, and long-term needs, rather than forcing every project onto the same platform."
       },
       {
         "title": "Direct Collaboration",
@@ -72,7 +72,7 @@
       },
       {
         "badge": "SEO",
-        "title": "SEO & Analytics (Essentials)",
+        "title": "SEO & Analytics",
         "desc": "We make your site easy to understand for both search engines and AI search tools. Clear structure, meaningful content, and simple analytics so you always know what's working."
       },
       {
@@ -93,7 +93,7 @@
     "stories": [
       {
         "title": "Our Story",
-        "text": "Before founding Moniré, we met as frontend developers at brack.ch, one of Switzerland's largest online retailers. Our paths to tech were unconventional—consulting, HR, and veterinary medicine—and we realized these diverse backgrounds were our shared strength. We don't just write code; we understand business challenges from multiple angles. That's why we founded Moniré: to partner with businesses who need more than technical skills, but genuine care and investment in their growth."
+        "text": "Before founding Moniré, we met as frontend developers at brack.ch, one of Switzerland's largest online retailers. Our paths into tech were unconventional. Monika came from HR and consulting, while Nikky worked as a veterinarian. Those experiences became our shared strength. We don't just write code; we understand business challenges from multiple angles. That's why we founded Moniré: to partner with businesses that need more than technical expertise, but genuine care and investment in their growth."
       },
       {
         "title": "Why Choose A Duo?",
