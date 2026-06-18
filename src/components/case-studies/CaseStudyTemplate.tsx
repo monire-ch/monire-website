@@ -101,7 +101,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           <ScrollReveal>
             <span className="eyebrow-pill eyebrow-pill-light mb-6 md:mb-8">{project.category}</span>
             <h1
-              className={'font-display text-4xl md:text-5xl lg:text-6xl text-main-teal leading-tight mb-4 md:mb-8'}>
+              className={`font-display text-4xl md:text-5xl lg:text-6xl text-main-teal leading-tight ${project.subtitle ? 'mb-4 md:mb-8' : 'mb-8 md:mb-16'}`}>
               {project.title}
             </h1>
             {project.subtitle ? (
