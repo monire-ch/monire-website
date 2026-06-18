@@ -105,7 +105,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               {project.title}
             </h1>
             {project.subtitle ? (
-              <p className="text-lg md:text-xl font-body text-foreground/80 mb-7 md:mb-12">{project.subtitle}</p>
+              <p className="text-lg md:text-xl font-body text-soft-teal mb-7 md:mb-12">{project.subtitle}</p>
             ) : null}
           </ScrollReveal>
 
@@ -133,13 +133,13 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                     <ScrollReveal key={section.title}>
                       <h2 className="font-tertiary italic text-2xl md:text-3xl text-main-teal mb-3">{section.title}</h2>
                       {section.intro ? (
-                        <p className="text-sm font-body text-foreground/80 mb-2 whitespace-pre-line">{section.intro}</p>
+                        <p className="text-sm font-body text-foreground mb-2 whitespace-pre-line">{section.intro}</p>
                       ) : null}
                       {section.items ? (
                         <ul className="space-y-1.5">
                           {section.items.map((item) => (
-                            <li key={item} className="text-sm font-body text-foreground/70 flex items-start gap-2">
-                              <span className="text-foreground/40 mt-0.5">•</span>
+                            <li key={item} className="text-sm font-body text-foreground flex items-start gap-2">
+                              <span className="text-foreground/60 mt-0.5">•</span>
                               {item}
                             </li>
                           ))}
@@ -197,7 +197,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                   >
                     {t('caseStudy.keyResults')}
                   </h2>
-                  <p className="max-w-sm text-base font-body leading-relaxed text-foreground/70">
+                  <p className="max-w-sm text-base font-body leading-relaxed text-foreground">
                     {t('caseStudy.keyResultsIntro')}
                   </p>
                 </div>
@@ -219,7 +219,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                       >
                         {metric.value}
                       </p>
-                      <p className="max-w-lg text-base md:text-lg font-body leading-relaxed text-foreground/75">
+                      <p className="max-w-lg text-base md:text-lg font-body leading-relaxed text-foreground">
                         {metric.description}
                       </p>
                     </div>

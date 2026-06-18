@@ -37,11 +37,11 @@
 @layer base {
   :root {
     --background: 40 23% 95%;
-    --foreground: 192 95% 7%;
+    --foreground: 192 75% 22%;
     --card: 37 18% 95%;
-    --card-foreground: 192 95% 7%;
+    --card-foreground: 192 75% 22%;
     --popover: 40 23% 95%;
-    --popover-foreground: 192 95% 7%;
+    --popover-foreground: 192 75% 22%;
     --primary: 192 71% 21%;
     --primary-foreground: 40 23% 95%;
     --secondary: 192 51% 26%;
@@ -49,7 +49,7 @@
     --muted: 37 14% 92%;
     --muted-foreground: 36 12% 52%;
     --accent: 42 52% 55%;
-    --accent-foreground: 192 95% 7%;
+    --accent-foreground: 192 75% 22%;
     --destructive: 0 100% 71%;
     --destructive-foreground: 0 0% 100%;
     --border: 36 16% 80%;
@@ -256,15 +256,16 @@
   }
 
   .insight-prose section {
-    @apply mt-11 border-t border-border/75 pt-7;
+    @apply mt-11 border-t pt-7;
+    border-color: rgba(8, 79, 97, 0.22);
   }
 
   .insight-prose h2 {
-    @apply mb-3 scroll-mt-36 font-display text-[clamp(1.6rem,1.5rem+0.7vw,2.1rem)] leading-[1.32] text-main-teal md:scroll-mt-44;
+    @apply mb-3 scroll-mt-36 font-display text-[clamp(1.6rem,1.5rem+0.7vw,2.1rem)] leading-[1.32] text-focus-teal md:scroll-mt-44;
   }
 
   .insight-prose h3 {
-    @apply mt-7 mb-3 scroll-mt-36 font-display text-[clamp(1.35rem,1.25rem+0.45vw,1.7rem)] leading-[1.4] text-main-teal md:scroll-mt-44;
+    @apply mt-7 mb-3 scroll-mt-36 font-display text-[clamp(1.35rem,1.25rem+0.45vw,1.7rem)] leading-[1.4] text-focus-teal md:scroll-mt-44;
   }
 
   .insight-prose p {
@@ -575,10 +576,10 @@ a[style*="text-decoration: underline"] {
 
 .insight-pullquote {
   margin: 1.75rem 0;
-  border-left: 2px solid rgb(15 75 90 / 0.35);
-  border-radius: 0.55rem;
-  background: hsl(var(--card));
-  padding: 1rem;
+  border-left: 3px solid rgba(183, 152, 78, 0.5);
+  border-radius: 0 0.55rem 0.55rem 0;
+  background: rgba(8, 79, 97, 0.07);
+  padding: 1rem 1.25rem;
 }
 
 .insight-pullquote p {
@@ -587,14 +588,14 @@ a[style*="text-decoration: underline"] {
   font-size: 1.3rem;
   font-style: italic;
   line-height: 1.5;
-  color: #0f4b5a;
+  color: #0f5a70;
 }
 
 .insight-stat-break {
   margin: 1.75rem 0;
-  border: 1px solid hsl(var(--border));
+  border: 1px solid rgba(183, 152, 78, 0.28);
   border-radius: 0.75rem;
-  background: hsl(var(--card));
+  background: rgba(8, 79, 97, 0.06);
   padding: 1rem 1.25rem;
 }
 

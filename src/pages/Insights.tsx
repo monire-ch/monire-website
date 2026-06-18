@@ -61,7 +61,7 @@ const Insights = () => {
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-main-teal leading-tight mb-5">
             {t('insightsPage.title')}
           </h1>
-          <p className="font-body text-base md:text-lg text-foreground/75 mb-8 md:mb-12">
+          <p className="font-body text-base md:text-lg text-soft-teal mb-8 md:mb-12">
             {t('insightsPage.intro')}
           </p>
 
