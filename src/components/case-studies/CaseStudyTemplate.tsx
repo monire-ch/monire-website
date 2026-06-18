@@ -131,7 +131,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                 <div className="space-y-8">
                   {project.sections?.map((section) => (
                     <ScrollReveal key={section.title}>
-                      <h2 className="font-tertiary italic text-2xl md:text-3xl text-main-teal mb-3">{section.title}</h2>
+                      <h2 className="font-tertiary italic text-2xl md:text-3xl text-focus-teal mb-3">{section.title}</h2>
                       {section.intro ? (
                         <p className="text-sm font-body text-foreground mb-2 whitespace-pre-line">{section.intro}</p>
                       ) : null}
