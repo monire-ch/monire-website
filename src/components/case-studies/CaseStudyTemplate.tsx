@@ -19,7 +19,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   const contentGridColumnsClassName = hasSections
     ? 'md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]'
     : 'md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]';
-  const contentGridClassName = `grid grid-cols-1 ${contentGridColumnsClassName} gap-10 md:gap-14 mb-16`;
+  const contentGridClassName = `grid grid-cols-1 ${contentGridColumnsClassName} gap-10 md:gap-14 mb-10`;
 
   const metadataBlock = (
     <div>
@@ -99,16 +99,13 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <span className="eyebrow-pill eyebrow-pill-light">{project.category}</span>
+            <span className="eyebrow-pill eyebrow-pill-light mb-6 md:mb-8">{project.category}</span>
             <h1
-              className={`font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight ${
-                project.subtitle ? 'mb-4' : 'mb-12'
-              }`}
-            >
+              className={'font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-4 md:mb-8'}>
               {project.title}
             </h1>
             {project.subtitle ? (
-              <p className="text-lg md:text-xl font-body text-foreground/80 mb-10">{project.subtitle}</p>
+              <p className="text-lg md:text-xl font-body text-foreground/80 mb-7 md:mb-12">{project.subtitle}</p>
             ) : null}
           </ScrollReveal>
 

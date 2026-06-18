@@ -28,9 +28,9 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="eyebrow-pill eyebrow-pill-dark">{t('contactPage.eyebrow')}</span>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-off-white leading-tight mb-4">
+            <div className="text-center mb-8 md:mb-12">
+              <span className="eyebrow-pill eyebrow-pill-dark mb-4 md:mb-6">{t('contactPage.eyebrow')}</span>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-off-white leading-tight mb-4 md:mb-8">
                 {t('contactPage.title')}
               </h1>
               <p className="text-off-white/60 text-lg font-body max-w-2xl mx-auto">

@@ -148,7 +148,7 @@ const FAQSection = () => {
   return (
     <section id="faq" className="pt-16 md:pt-24 pb-40 md:pb-56 px-6 relative">
       <div className="max-w-5xl mx-auto">
-        <ScrollReveal className="text-center mb-16">
+        <ScrollReveal className="text-center mb-6 md:mb-16">
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('nav.faq')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-off-white">{t('faq.title')}</h2>
         </ScrollReveal>

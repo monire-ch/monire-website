@@ -53,7 +53,7 @@ const PricingSection = () => {
     <section id="pricing" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6 relative">
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <ScrollReveal className="text-center mb-12">
+        <ScrollReveal className="text-center mb-8 md:mb-12">
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('pricing.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-off-white">
             {t('pricing.title')} <em className="italic font-tertiary text-off-white">{t('pricing.titleAccent')}</em>

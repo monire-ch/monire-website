@@ -109,7 +109,7 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6">
       <div className="max-w-6xl mx-auto">
-        <ScrollReveal className="text-center mb-12">
+        <ScrollReveal className="text-center mb-6 md:mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('portfolio.title')}</h2>
         </ScrollReveal>

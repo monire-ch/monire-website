@@ -46,11 +46,11 @@ const Insights = () => {
       <Navbar />
       <main className="bg-background min-h-screen pt-36 md:pt-44 pb-20 px-6">
         <section className="max-w-5xl mx-auto">
-          <p className="eyebrow-pill eyebrow-pill-light mb-5 inline-block">{t('insightsPage.eyebrow')}</p>
+          <p className="eyebrow-pill eyebrow-pill-light mb-3 md:mb-5 inline-block">{t('insightsPage.eyebrow')}</p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-5">
             {t('insightsPage.title')}
           </h1>
-          <p className="font-body text-base md:text-lg text-foreground/75 mb-12">
+          <p className="font-body text-base md:text-lg text-foreground/75 mb-8 md:mb-12">
             {t('insightsPage.intro')}
           </p>
 

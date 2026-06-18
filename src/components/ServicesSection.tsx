@@ -48,7 +48,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="pt-16 md:pt-24 pb-40 md:pb-56 px-6">
       <div className="max-w-5xl mx-auto">
-        <ScrollReveal className="text-center mb-12 md:mb-16">
+        <ScrollReveal className="text-center mb-6 md:mb-16">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">
             {t("services.eyebrow")}
           </span>
@@ -80,14 +80,14 @@ const ServicesSection = () => {
                 ))}
               </div>
               <div className="md:w-3/5 p-12">
-                <h3 className="font-body text-3xl md:text-4xl text-off-white mb-5">
+                <h3 className="font-body text-3xl md:text-4xl text-off-white mb-6">
                   {active.title}
                 </h3>
                 <p className="text-off-white font-body leading-relaxed text-base mb-8">
                   {active.desc}
                 </p>
                 {activeLinks && (
-                  <div className="space-y-3">
+                  <div className="space-y-6">
                     {activeLinks.caseStudy ? (
                       <BrandButton
                         type="link"

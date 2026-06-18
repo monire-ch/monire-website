@@ -115,16 +115,16 @@ const InsightPost = () => {
               {t('insightsPage.backToAll')}
             </Link>
           </div>
-          <p className="eyebrow-pill eyebrow-pill-light mb-5 inline-block">{t('insightsPage.eyebrow')}</p>
-          <p className="text-sm font-body text-main-teal mb-4">
+          <p className="eyebrow-pill eyebrow-pill-light mb-4 md:mb-6 inline-block">{t('insightsPage.eyebrow')}</p>
+          <p className="text-sm font-body text-main-teal mb-4 md:mb-6">
             <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             {" · "}
             {post.readTimeMinutes} {t('common.minRead')}
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6 md:mb-8">
             {post.title}
           </h1>
-          <p className="font-tertiary italic text-2xl md:text-3xl text-main-teal/90 mb-10">{post.description}</p>
+          <p className="font-tertiary italic text-2xl md:text-3xl text-main-teal/90 mb-6 md:mb-10">{post.description}</p>
           <section className="rounded-xl border border-border bg-card p-5 md:p-6 mb-10" aria-labelledby="quick-answer">
             <h2 id="quick-answer" className="font-display text-xl md:text-2xl text-foreground mb-2">
               {t('insightsPage.quickAnswer')}

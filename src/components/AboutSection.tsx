@@ -28,21 +28,21 @@ const AboutSection = () => {
       <div className="about-orb about-orb-2" />
       <section id="about" className="relative py-20 md:py-28 px-6">
         <div className="max-w-5xl mx-auto">
-        <ScrollReveal className="text-center mb-16">
+        <ScrollReveal className="text-center mb-4 md:mb-16">
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('about.eyebrow')}</span>
           <h2 className="font-body text-4xl md:text-5xl text-off-white">{t('about.title')}</h2>
         </ScrollReveal>
 
-        <div className="space-y-0 mb-10 md:mb-20">
+        <div className="space-y-0 mb-7 md:mb-20">
           {stories.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
               {i > 0 && <div className="border-t border-white/10 my-0" />}
-              <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 items-start py-10">
+              <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 items-start py-7 md:py-10">
                 <h3 className="font-body text-xl md:text-2xl text-off-white">{item.title}</h3>
                 <div>
                   <p className="text-base text-off-white font-body leading-relaxed">{item.text}</p>
                   {item.cta === 'apply' && (
-                    <div className="mt-10 flex items-center gap-6">
+                    <div className="mt-6 md:mt-10 flex items-center gap-6">
                       <BrandButton type="link" to="/apply" variant="secondary" className="text-sm">
                         {t('about.applyHere')}
                       </BrandButton>
@@ -54,11 +54,11 @@ const AboutSection = () => {
           ))}
         </div>
 
-        <div className="border-t border-white/10 mb-6 md:hidden" />
+        <div className="border-t border-white/10 mb-12 md:hidden" />
 
         <ScrollReveal>
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('about.teamEyebrow')}</span>
-          <h3 className="font-body text-2xl text-off-white mb-8">{t('about.teamTitle')}</h3>
+          <h3 className="font-body text-2xl text-off-white mb-5 md:mb-8">{t('about.teamTitle')}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {teamDetails.map((person, i) => (
               <div key={person.name} className="flex items-center gap-5">

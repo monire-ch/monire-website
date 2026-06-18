@@ -120,8 +120,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         </div>
       </div>
 
-      <div className="absolute -bottom-px left-0 right-0 wave-mask">
-        <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" fill="none" className="w-full block">
+      <div className="absolute -bottom-1.5 left-0 right-0 wave-mask">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" fill="none" className="block h-10 w-full md:h-auto">
           <path fill="currentColor" d="M0,48 C190,100 405,102 720,68 C1018,36 1240,32 1440,74 L1440,120 L0,120 Z" />
         </svg>
       </div>

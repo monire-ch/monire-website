@@ -54,7 +54,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
           {/* Quick Links column */}
           <div>
             <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.quickLinks')}</p>
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-2">
+            <ul className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-x-2 gap-y-2">
               {navItems.map((item) => (
                 <li key={item.href}>
                   {item.href.startsWith('/') ? (
@@ -66,7 +66,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                           trackEvent('contact_click', { location: 'footer', label: 'footer', destination: item.href, page_path: window.location.pathname });
                         }
                       }}
-                      className="text-off-white text-base font-body hover:text-gold-text transition-colors text-left"
+                      className="block max-w-full break-words text-left text-base font-body text-off-white transition-colors hover:text-gold-text"
                     >
                       {item.label}
                     </Link>
@@ -82,7 +82,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                           navigate(localePath(`/${item.href}`));
                         }
                       }}
-                      className="text-off-white text-base font-body hover:text-gold-text transition-colors"
+                      className="block max-w-full break-words text-base font-body text-off-white transition-colors hover:text-gold-text"
                     >
                       {item.label}
                     </a>
