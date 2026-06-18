@@ -465,6 +465,7 @@
     "getInTouch": "Skontaktuj się",
     "readArticle": "Przeczytaj artykuł",
     "minRead": "min czytania",
+    "latest": "Najnowszy",
     "logoAlt": "Moniré",
     "languageSwitcherLabel": "Wybierz język"
   },
@@ -514,6 +515,7 @@
     "intro": "Praktyczne wskazówki dotyczące web designu, automatyzacji i decyzji cyfrowych, które pomagają rozwijać biznes.",
     "schemaName": "Moniré Insights",
     "quickAnswer": "Krótka odpowiedź",
+    "contents": "Treść",
     "related": "Powiązane insights",
     "backToAll": "Wróć do wszystkich artykułów"
   },

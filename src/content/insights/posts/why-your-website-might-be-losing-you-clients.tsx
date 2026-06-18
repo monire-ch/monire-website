@@ -2,6 +2,7 @@ import type { InsightPost } from "../types";
 
 export const whyYourWebsiteMightBeLosingYouClientsPost: InsightPost = {
   slug: "why-your-website-might-be-losing-you-clients",
+  category: "Web Design & Development",
   primaryCta: {
     href: "/contact",
   },

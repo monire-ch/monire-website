@@ -2,6 +2,7 @@ import type { InsightPost } from "../types";
 
 export const websiteBuildersVsCustomDevelopmentPost: InsightPost = {
   slug: "website-builders-vs-custom-development",
+  category: "Web Design & Development",
   primaryCta: {
     href: "/contact",
   },

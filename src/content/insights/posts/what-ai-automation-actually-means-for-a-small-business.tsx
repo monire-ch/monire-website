@@ -2,6 +2,7 @@ import type { InsightPost } from "../types";
 
 export const whatAiAutomationActuallyMeansForASmallBusinessPost: InsightPost = {
   slug: "what-ai-automation-actually-means-for-a-small-business",
+  category: "Automation",
   primaryCta: {
     href: "/contact",
   },

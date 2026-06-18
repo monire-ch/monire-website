@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 export type InsightPost = {
   slug: string;
   locale?: "en";
+  category?: string;
   title?: string;
   description?: string;
   seoTitle?: string;
