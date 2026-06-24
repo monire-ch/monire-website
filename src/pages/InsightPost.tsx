@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, ChevronDown } from "lucide-react";
@@ -67,10 +68,12 @@ const extractArticleHeadings = (html?: string): ArticleHeading[] => {
 const ArticleContents = ({
   headings,
   title,
+  activeHeadingId,
   collapsible = false,
 }: {
   headings: ArticleHeading[];
   title: string;
+  activeHeadingId?: string;
   collapsible?: boolean;
 }) => {
   if (!headings.length) return null;
@@ -81,7 +84,13 @@ const ArticleContents = ({
         <li key={heading.id}>
           <a
             href={`#${heading.id}`}
-            className="block text-sm font-body leading-snug text-[#BFD0D6]/80 transition-colors hover:text-[#F1D69A]"
+            aria-current={activeHeadingId === heading.id ? "location" : undefined}
+            className={[
+              "block text-sm font-body leading-snug transition-colors duration-200",
+              activeHeadingId === heading.id
+                ? "text-[#F1D69A]"
+                : "text-[#BFD0D6]/80 hover:text-[#F1D69A]",
+            ].join(" ")}
           >
             {heading.title}
           </a>
@@ -136,14 +145,63 @@ const InsightPost = () => {
       }
     : undefined;
 
+  const localizedContentHtml = post?.contentHtml ? localizeInternalHtmlLinks(post.contentHtml, locale) : undefined;
+  const articleHeadings = useMemo(() => extractArticleHeadings(localizedContentHtml), [localizedContentHtml]);
+  const [activeHeadingId, setActiveHeadingId] = useState(articleHeadings[0]?.id);
+
+  useEffect(() => {
+    setActiveHeadingId(articleHeadings[0]?.id);
+  }, [articleHeadings]);
+
+  useEffect(() => {
+    if (!articleHeadings.length) return;
+
+    const headingElements = articleHeadings
+      .map(({ id }) => document.getElementById(id))
+      .filter((element): element is HTMLElement => Boolean(element));
+
+    if (!headingElements.length) return;
+
+    let activeId = headingElements[0].id;
+    const updateActiveHeading = () => {
+      const candidates = headingElements
+        .map((element) => ({
+          element,
+          top: element.getBoundingClientRect().top,
+        }))
+        .filter(({ top }) => top <= 180);
+
+      const nextActiveHeading = candidates.at(-1)?.element.id ?? headingElements[0].id;
+      if (nextActiveHeading !== activeId) {
+        activeId = nextActiveHeading;
+        setActiveHeadingId(nextActiveHeading);
+      }
+    };
+
+    updateActiveHeading();
+
+    const observer = new IntersectionObserver(updateActiveHeading, {
+      rootMargin: "-20% 0px -65% 0px",
+      threshold: [0, 1],
+    });
+
+    headingElements.forEach((element) => observer.observe(element));
+    window.addEventListener("scroll", updateActiveHeading, { passive: true });
+    window.addEventListener("resize", updateActiveHeading);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", updateActiveHeading);
+      window.removeEventListener("resize", updateActiveHeading);
+    };
+  }, [articleHeadings]);
+
   if (!post) {
     return <NotFound />;
   }
 
   const canonicalPath = localePath(`${INSIGHTS_ROUTE_BASE}/${post.slug}`);
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
-  const localizedContentHtml = post.contentHtml ? localizeInternalHtmlLinks(post.contentHtml, locale) : undefined;
-  const articleHeadings = extractArticleHeadings(localizedContentHtml);
   const relatedPosts = INSIGHTS_POSTS.filter((candidate) => post.relatedSlugs.includes(candidate.slug)).map(
     (relatedPost) => ({
       ...relatedPost,
@@ -207,7 +265,11 @@ const InsightPost = () => {
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[220px_minmax(0,44rem)] lg:gap-14 lg:items-start">
             <aside className="hidden lg:block lg:sticky lg:top-36">
-              <ArticleContents headings={articleHeadings} title={t("insightsPage.contents")} />
+              <ArticleContents
+                headings={articleHeadings}
+                title={t("insightsPage.contents")}
+                activeHeadingId={activeHeadingId}
+              />
             </aside>
 
             <article onClickCapture={handleInsightLinkClick}>
@@ -245,7 +307,12 @@ const InsightPost = () => {
 
               {/* Mobile TOC */}
               <div className="mb-8 lg:hidden">
-                <ArticleContents headings={articleHeadings} title={t("insightsPage.contents")} collapsible />
+                <ArticleContents
+                  headings={articleHeadings}
+                  title={t("insightsPage.contents")}
+                  activeHeadingId={activeHeadingId}
+                  collapsible
+                />
               </div>
 
               {/* Quick answer */}
