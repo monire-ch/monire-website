@@ -1,4 +1,7 @@
 import { INSIGHTS_META } from '../config/insightsMeta';
+import { stripLocalePrefix, SUPPORTED_LOCALES, withLocalePrefix, type SupportedLocale } from './localeRouting';
+import de from '../i18n/de.json';
+import en from '../i18n/en.json';
 
 export const SITE_URL = 'https://monire.ch';
 
@@ -8,77 +11,71 @@ export type RouteSeo = {
   keywords?: string[];
 };
 
-const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
-  '/': {
-    title: 'Moniré | Web Design, Web Development & AI Automations in Zurich, Switzerland',
-    description:
-      'Moniré is a digital studio offering web design, web development, and AI automations. Based in Zurich, serving clients worldwide.',
-    keywords: ['Moniré', 'web design Zurich', 'web development Zurich', 'website design Switzerland', 'AI automation Switzerland', 'workflow automation Zurich', 'Webflow development Zurich', 'small business web design Switzerland'],
-  },
-  '/contact': {
-    title: 'Contact Moniré | Web Design, Web Development & AI Automations',
-    description:
-      'Contact Moniré about web design, web development, and AI automations in Zurich and across Switzerland.',
-  },
-  '/insights': {
-    title: 'Insights on Web Design, Automation & Digital Strategy | Moniré',
-    description:
-      'Practical articles from Moniré on web design, web development, SEO, AI automation, and digital decisions for small and mid-sized businesses.',
-    keywords: ['web design advice', 'website strategy', 'small business website advice', 'AI automation for small businesses', 'web design Switzerland', 'workflow automation Switzerland', 'Webflow Switzerland'],
-  },
-  '/privacy': {
-    title: 'Privacy Policy | Moniré',
-    description:
-      'Privacy policy for Moniré, a digital studio providing web design, web development, and AI automations.',
-  },
-  '/apply': {
-    title: 'Apply | Moniré',
-    description: 'Apply for Moniré complimentary project support for a non-profit or meaningful initiative.',
-  },
-  '/case-studies/expense-receipt-automation': {
-    title: 'Expense Receipt Automation Case Study | Moniré',
-    description:
-      'Case study: an AI automation workflow for expense receipt processing built by Moniré.',
-  },
-  '/case-studies/snip-squad': {
-    title: 'Snip Squad Case Study | Moniré',
-    description: 'Case study: web design and development work delivered by Moniré for Snip Squad.',
-  },
-  '/case-studies/portco-hr-collective': {
-    title: 'PortCo HR Collective Case Study | Moniré',
-    description:
-      'Case study: branding, web design, development, and AI automation work delivered by Moniré for PortCo HR Collective.',
-  },
-  '/case-studies/systemically': {
-    title: 'SystemicAlly Consulting Website Case Study | Moniré',
-    description:
-      'See how Moniré developed a polished, responsive website for SystemicAlly, a leadership and transformation consultancy.',
-  },
-  '/case-studies/towarowa': {
-    title: 'Towarowa 41 Apartment Website Case Study | Moniré',
-    description:
-      'See how Moniré designed and developed a refined, responsive website for the Towarowa 41 premium apartment rental.',
-  },
-};
+const LOCALE_RESOURCES = {
+  en,
+  de,
+} as const;
 
-const INSIGHTS_ROUTE_SEO: Record<string, RouteSeo> = INSIGHTS_META.reduce((acc, post) => {
-  acc[`/insights/${post.slug}`] = {
-    title: post.seoTitle,
-    description: post.seoDescription,
-    keywords: post.keywords,
+const getLocaleRouteSeo = (locale: SupportedLocale) => {
+  const translations = LOCALE_RESOURCES[locale];
+  const staticRouteSeo = translations.seo.routes as Record<string, RouteSeo>;
+  const insightsRouteSeo = Object.entries(translations.insightsPosts).reduce((acc, [slug, post]) => {
+    acc[`/insights/${slug}`] = {
+      title: post.seoTitle,
+      description: post.seoDescription,
+      keywords: post.keywords,
+    };
+
+    return acc;
+  }, {} as Record<string, RouteSeo>);
+
+  return {
+    ...staticRouteSeo,
+    ...insightsRouteSeo,
   };
-
-  return acc;
-}, {} as Record<string, RouteSeo>);
-
-export const ROUTE_SEO: Record<string, RouteSeo> = {
-  ...STATIC_ROUTE_SEO,
-  ...INSIGHTS_ROUTE_SEO,
 };
+
+export type RouteAlternateUrls = Record<SupportedLocale | 'x-default', string>;
+
+export type LocalizedRouteSeo = RouteSeo & {
+  locale: SupportedLocale;
+  canonicalPath: string;
+  canonicalUrl: string;
+  alternateUrls: RouteAlternateUrls;
+};
+
+const baseRouteSeo = getLocaleRouteSeo('en');
+
+const localizedRouteEntries = SUPPORTED_LOCALES.flatMap((locale) => {
+  const localizedSeo = getLocaleRouteSeo(locale);
+
+  return Object.keys(baseRouteSeo).map((baseRoute) => {
+    const route = withLocalePrefix(baseRoute, locale);
+    const canonicalUrl = route === '/' ? `${SITE_URL}/` : `${SITE_URL}${route}`;
+    const alternateUrls = {
+      en: baseRoute === '/' ? `${SITE_URL}/` : `${SITE_URL}${withLocalePrefix(baseRoute, 'en')}`,
+      de: `${SITE_URL}${withLocalePrefix(baseRoute, 'de')}`,
+      'x-default': baseRoute === '/' ? `${SITE_URL}/` : `${SITE_URL}${withLocalePrefix(baseRoute, 'en')}`,
+    };
+
+    return [
+      route,
+      {
+        ...(localizedSeo[baseRoute] ?? baseRouteSeo[baseRoute]),
+        locale,
+        canonicalPath: route,
+        canonicalUrl,
+        alternateUrls,
+      },
+    ] as const;
+  });
+});
+
+export const ROUTE_SEO: Record<string, LocalizedRouteSeo> = Object.fromEntries(localizedRouteEntries);
 
 const INSIGHTS_ROUTES = INSIGHTS_META.map((post) => `/insights/${post.slug}`);
 
-export const PRERENDER_ROUTES = [
+const BASE_PRERENDER_ROUTES = [
   '/',
   '/privacy',
   '/apply',
@@ -92,9 +89,23 @@ export const PRERENDER_ROUTES = [
   '/case-studies/towarowa',
 ];
 
+export const PRERENDER_ROUTES = SUPPORTED_LOCALES.flatMap((locale) =>
+  BASE_PRERENDER_ROUTES.map((route) => withLocalePrefix(route, locale))
+);
+
+const getRoutePriority = (route: string) => {
+  const baseRoute = stripLocalePrefix(route);
+  if (baseRoute === '/') return '1.0';
+  if (baseRoute.startsWith('/case-studies/')) return '0.7';
+  return '0.8';
+};
+
+const getRouteChangefreq = (route: string) => (stripLocalePrefix(route) === '/' ? 'weekly' : 'monthly');
+
 export const SITEMAP_ROUTES = PRERENDER_ROUTES.map((route) => ({
   route,
   url: route === '/' ? `${SITE_URL}/` : `${SITE_URL}${route}`,
-  priority: route === '/' ? '1.0' : route.startsWith('/case-studies/') ? '0.7' : '0.8',
-  changefreq: route === '/' ? 'weekly' : 'monthly',
+  alternates: ROUTE_SEO[route]?.alternateUrls,
+  priority: getRoutePriority(route),
+  changefreq: getRouteChangefreq(route),
 }));

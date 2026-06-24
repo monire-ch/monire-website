@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import fs from "fs";
 import { vitePrerenderPlugin } from "vite-prerender-plugin";
-import { ROUTE_SEO, SITEMAP_ROUTES, SITE_URL } from "./src/lib/seo";
+import { ROUTE_SEO, SITEMAP_ROUTES } from "./src/lib/seo";
 
 const escapeHtml = (value: string) =>
   value
@@ -14,6 +14,8 @@ const escapeHtml = (value: string) =>
 
 const upsertTag = (html: string, matcher: RegExp, tag: string) =>
   matcher.test(html) ? html.replace(matcher, tag) : html.replace("</head>", `    ${tag}\n  </head>`);
+
+const removeTags = (html: string, matcher: RegExp) => html.replace(matcher, "");
 
 const routeToHtmlPath = (outDir: string, route: string) =>
   route === "/" ? path.join(outDir, "index.html") : path.join(outDir, route.slice(1), "index.html");
@@ -27,9 +29,12 @@ const seoBuildPlugin = () => ({
       const htmlPath = routeToHtmlPath(outDir, route);
       if (!fs.existsSync(htmlPath)) return;
 
-      const canonicalUrl = route === "/" ? `${SITE_URL}/` : `${SITE_URL}${route}`;
       let html = fs.readFileSync(htmlPath, "utf8");
+      const alternateTags = Object.entries(seo.alternateUrls)
+        .map(([locale, url]) => `<link rel="alternate" hreflang="${locale}" href="${url}">`)
+        .join("\n    ");
 
+      html = html.replace(/<html([^>]*)>/, `<html lang="${seo.locale}">`);
       html = html.replace(/<title>.*?<\/title>/s, `<title>${escapeHtml(seo.title)}</title>`);
       html = upsertTag(
         html,
@@ -51,8 +56,10 @@ const seoBuildPlugin = () => ({
       html = upsertTag(
         html,
         /<link rel="canonical" href="[^"]*"\s*\/?>/,
-        `<link rel="canonical" href="${canonicalUrl}">`
+        `<link rel="canonical" href="${seo.canonicalUrl}">`
       );
+      html = removeTags(html, /\s*<link rel="alternate" hreflang="[^"]+" href="[^"]*"\s*\/?>/g);
+      html = html.replace("</head>", `    ${alternateTags}\n  </head>`);
       html = upsertTag(
         html,
         /<meta property="og:title" content="[^"]*"\s*\/?>/,
@@ -66,7 +73,7 @@ const seoBuildPlugin = () => ({
       html = upsertTag(
         html,
         /<meta property="og:url" content="[^"]*"\s*\/?>/,
-        `<meta property="og:url" content="${canonicalUrl}">`
+        `<meta property="og:url" content="${seo.canonicalUrl}">`
       );
       html = upsertTag(
         html,
@@ -82,9 +89,11 @@ const seoBuildPlugin = () => ({
       fs.writeFileSync(htmlPath, html);
     });
 
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${SITEMAP_ROUTES.map(
-      ({ url, changefreq, priority }) =>
-        `  <url>\n    <loc>${url}</loc>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${SITEMAP_ROUTES.map(
+      ({ url, alternates, changefreq, priority }) =>
+        `  <url>\n    <loc>${url}</loc>${alternates ? `\n${Object.entries(alternates)
+          .map(([locale, alternateUrl]) => `    <xhtml:link rel="alternate" hreflang="${locale}" href="${alternateUrl}" />`)
+          .join("\n")}` : ""}\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
     ).join("\n")}\n</urlset>\n`;
 
     fs.writeFileSync(path.join(outDir, "sitemap.xml"), sitemap);

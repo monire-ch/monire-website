@@ -10,6 +10,7 @@ import systemically from '@/assets/portfolio/systemically_full.webp';
 import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 const projectImagesByLink: Record<string, string> = {
   '/case-studies/snip-squad': snipSquad,
@@ -21,19 +22,19 @@ const projectImagesByLink: Record<string, string> = {
 
 const portfolioNavGroups = [
   {
-    title: 'Web design & development',
+    titleKey: 'portfolio.navGroups.webDesignDevelopment.title',
     items: [
-      { id: 'web-veterinary', label: 'Veterinary', targetLink: '/case-studies/snip-squad' },
-      { id: 'web-community-platform', label: 'Community platform', targetLink: '/case-studies/portco-hr-collective' },
-      { id: 'web-consulting', label: 'Consulting', targetLink: '/case-studies/systemically' },
-      { id: 'web-real-estate', label: 'Real estate', targetLink: '/case-studies/towarowa' },
+      { id: 'web-veterinary', labelKey: 'portfolio.navGroups.webDesignDevelopment.veterinary', targetLink: '/case-studies/snip-squad' },
+      { id: 'web-community-platform', labelKey: 'portfolio.navGroups.webDesignDevelopment.communityPlatform', targetLink: '/case-studies/portco-hr-collective' },
+      { id: 'web-consulting', labelKey: 'portfolio.navGroups.webDesignDevelopment.consulting', targetLink: '/case-studies/systemically' },
+      { id: 'web-real-estate', labelKey: 'portfolio.navGroups.webDesignDevelopment.realEstate', targetLink: '/case-studies/towarowa' },
     ],
   },
   {
-    title: 'AI automation',
+    titleKey: 'portfolio.navGroups.aiAutomation.title',
     items: [
-      { id: 'ai-expense-receipts', label: 'Expense receipts', targetLink: '/case-studies/expense-receipt-automation' },
-      { id: 'ai-community-membership', label: 'Community membership', targetLink: '/case-studies/portco-hr-collective' },
+      { id: 'ai-expense-receipts', labelKey: 'portfolio.navGroups.aiAutomation.expenseReceipts', targetLink: '/case-studies/expense-receipt-automation' },
+      { id: 'ai-community-membership', labelKey: 'portfolio.navGroups.aiAutomation.communityMembership', targetLink: '/case-studies/portco-hr-collective' },
     ],
   },
 ];
@@ -42,6 +43,7 @@ const portfolioNavItems = portfolioNavGroups.flatMap((group) => group.items);
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [activeNavItemId, setActiveNavItemId] = useState(portfolioNavItems[0].id);
 
@@ -107,13 +109,9 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6">
       <div className="max-w-6xl mx-auto">
-        <ScrollReveal className="text-center mb-12">
+        <ScrollReveal className="text-center mb-6 md:mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-main-teal">{t('portfolio.title')}</h2>
-          <p className="text-base md:text-lg font-body leading-relaxed text-main-teal/80 max-w-3xl mx-auto mt-4">
-            Selected web design, web development, and AI automation projects created for brands that value clarity,
-            performance, and thoughtful execution.
-          </p>
         </ScrollReveal>
 
         <ScrollReveal>
@@ -121,10 +119,10 @@ const PortfolioSection = () => {
             {/* Category sidebar — dark teal card like reference */}
             <div className="rounded-2xl p-4 md:p-5" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
               {portfolioNavGroups.map((group, groupIndex) => (
-                <div key={group.title}>
+                <div key={group.titleKey}>
                   {groupIndex > 0 && <div className="my-3 h-px bg-off-white/15 md:my-5" />}
                   <p className="px-2 pb-1 text-center font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-text md:px-4 md:pb-2 md:text-left">
-                    {group.title}
+                    {t(group.titleKey)}
                   </p>
                   <div className="mt-1 grid grid-cols-2 gap-x-3 gap-y-1 md:mt-3 md:grid-cols-1 md:gap-x-1">
                     {group.items.map((item) => {
@@ -139,7 +137,7 @@ const PortfolioSection = () => {
                               : 'rounded-lg border border-transparent text-off-white/75 hover:text-gold-text'
                           }`}
                         >
-                          {item.label}
+                          {t(item.labelKey)}
                         </button>
                       );
                     })}
@@ -158,7 +156,7 @@ const PortfolioSection = () => {
                       className="min-w-0 shrink-0 grow-0 basis-full px-2"
                     >
                       <Link
-                        to={project.link}
+                        to={localePath(project.link)}
                         onClick={() =>
                           trackEvent('case_study_click', {
                             location: 'portfolio',
@@ -189,7 +187,7 @@ const PortfolioSection = () => {
                   onClick={scrollPrev}
                   disabled={!canScrollPrev}
                   className="disabled:cursor-not-allowed"
-                  aria-label="Previous project"
+                  aria-label={t('portfolio.previousProject')}
                 >
                   <svg width="44" height="44" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="44" cy="44" r="44" fill={canScrollPrev ? '#004A5B' : '#8EA3AA'} />
@@ -200,7 +198,7 @@ const PortfolioSection = () => {
                   onClick={scrollNext}
                   disabled={!canScrollNext}
                   className="disabled:cursor-not-allowed"
-                  aria-label="Next project"
+                  aria-label={t('portfolio.nextProject')}
                 >
                   <svg width="44" height="44" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="44" cy="44" r="44" fill={canScrollNext ? '#004A5B' : '#8EA3AA'} />

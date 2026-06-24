@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
 import type { CaseStudyConfig } from '@/config/caseStudies';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 type CaseStudyTemplateProps = {
   project: CaseStudyConfig;
@@ -12,12 +13,13 @@ type CaseStudyTemplateProps = {
 
 const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const isScrollablePreview = project.imageScrollable ?? true;
   const hasSections = Boolean(project.sections && project.sections.length > 0);
   const contentGridColumnsClassName = hasSections
     ? 'md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]'
     : 'md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]';
-  const contentGridClassName = `grid grid-cols-1 ${contentGridColumnsClassName} gap-10 md:gap-14 mb-16`;
+  const contentGridClassName = `grid grid-cols-1 ${contentGridColumnsClassName} gap-10 md:gap-14 mb-10`;
 
   const metadataBlock = (
     <div>
@@ -30,7 +32,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         <span className="text-sm font-body text-foreground">{project.date}</span>
       </div>
       <div className="flex justify-between items-center py-4 border-b border-border">
-        <span className="text-sm font-body text-main-teal">Industry</span>
+        <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.industry')}</span>
         <span className="text-sm font-body text-foreground">{project.industry}</span>
       </div>
       <div className="flex justify-between items-center py-4 border-b border-border">
@@ -54,7 +56,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
       </div>
       {project.websiteUrl ? (
         <div className="flex justify-between items-start py-4 gap-4">
-          <span className="text-sm font-body text-main-teal">Website</span>
+          <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.website')}</span>
           <div className="text-right max-w-[200px] md:max-w-[280px]">
             <a
               href={project.websiteUrl}
@@ -70,10 +72,10 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               }
               className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
             >
-              {project.websiteLabel ?? 'Visit Website'}
+              {project.websiteLabel ?? t('caseStudy.visitWebsite')}
             </a>
             <p className="text-xs font-body text-foreground/60 mt-1">
-              Live website may differ from the original version as the site is managed by the client.
+              {t('caseStudy.liveNote')}
             </p>
           </div>
         </div>
@@ -88,7 +90,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <a
-              href="/#portfolio"
+              href={localePath('/#portfolio')}
               className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline mb-8"
             >
               <ArrowLeft size={16} />
@@ -97,16 +99,13 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <span className="eyebrow-pill eyebrow-pill-light">{project.category}</span>
+            <span className="eyebrow-pill eyebrow-pill-light mb-6 md:mb-8">{project.category}</span>
             <h1
-              className={`font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight ${
-                project.subtitle ? 'mb-4' : 'mb-12'
-              }`}
-            >
+              className={`font-display text-4xl md:text-5xl lg:text-6xl text-main-teal leading-tight ${project.subtitle ? 'mb-4 md:mb-8' : 'mb-8 md:mb-16'}`}>
               {project.title}
             </h1>
             {project.subtitle ? (
-              <p className="text-lg md:text-xl font-body text-foreground/80 mb-10">{project.subtitle}</p>
+              <p className="text-lg md:text-xl font-body text-soft-teal mb-7 md:mb-12">{project.subtitle}</p>
             ) : null}
           </ScrollReveal>
 
@@ -132,15 +131,15 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                 <div className="space-y-8">
                   {project.sections?.map((section) => (
                     <ScrollReveal key={section.title}>
-                      <h2 className="font-tertiary italic text-2xl md:text-3xl text-main-teal mb-3">{section.title}</h2>
+                      <h2 className="font-tertiary italic text-2xl md:text-3xl text-focus-teal mb-3">{section.title}</h2>
                       {section.intro ? (
-                        <p className="text-sm font-body text-foreground/80 mb-2 whitespace-pre-line">{section.intro}</p>
+                        <p className="text-sm font-body text-foreground mb-2 whitespace-pre-line">{section.intro}</p>
                       ) : null}
                       {section.items ? (
                         <ul className="space-y-1.5">
                           {section.items.map((item) => (
-                            <li key={item} className="text-sm font-body text-foreground/70 flex items-start gap-2">
-                              <span className="text-foreground/40 mt-0.5">•</span>
+                            <li key={item} className="text-sm font-body text-foreground flex items-start gap-2">
+                              <span className="text-foreground/60 mt-0.5">•</span>
                               {item}
                             </li>
                           ))}
@@ -196,10 +195,10 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                     id="case-study-results-title"
                     className="font-tertiary italic text-3xl md:text-4xl text-main-teal mb-4"
                   >
-                    Key results
+                    {t('caseStudy.keyResults')}
                   </h2>
-                  <p className="max-w-sm text-base font-body leading-relaxed text-foreground/70">
-                    A focused digital experience designed to make discovering and booking the apartment simple.
+                  <p className="max-w-sm text-base font-body leading-relaxed text-foreground">
+                    {t('caseStudy.keyResultsIntro')}
                   </p>
                 </div>
 
@@ -220,7 +219,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                       >
                         {metric.value}
                       </p>
-                      <p className="max-w-lg text-base md:text-lg font-body leading-relaxed text-foreground/75">
+                      <p className="max-w-lg text-base md:text-lg font-body leading-relaxed text-foreground">
                         {metric.description}
                       </p>
                     </div>

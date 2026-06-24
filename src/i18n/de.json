@@ -1,84 +1,91 @@
 {
   "nav": {
-    "home": "Startseite",
+    "home": "Start",
     "about": "Über uns",
     "services": "Leistungen",
     "pricing": "Preise",
     "ourWork": "Portfolio",
     "faq": "FAQ",
     "contactUs": "Kontakt",
-    "insights": "Insights"
+    "insights": "Insights",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schliessen"
   },
   "hero": {
-    "eyebrow": "Sitz in der Schweiz • Kunden weltweit",
-    "headline": "Websites die Kunden anziehen und mit Ihrem Unternehmen wachsen",
-    "highlightWord": "anziehen",
-    "subtitle": "Wir erstellen schöne, leistungsstarke Websites und automatisieren Ihre Arbeitsabläufe, damit Sie sich auf das Wesentliche konzentrieren können.",
-    "cta": "Kostenloses Erstgespräch buchen",
-    "workCta": "Unsere Arbeiten ansehen"
+    "eyebrow": "Aus der Schweiz • Für Kunden weltweit",
+    "headline": "Websites, die Kunden gewinnen und mit Ihrem Unternehmen mitwachsen",
+    "highlightWord": "Kunden gewinnen",
+    "subtitle": "Hochwertige Websites, die überzeugen. KI-gestützte Automatisierungen, wenn Ihr Unternehmen bereit ist zu skalieren.",
+    "cta": "Erstgespräch buchen",
+    "workCta": "Projekte ansehen"
   },
   "features": {
     "eyebrow": "Unser Angebot",
     "title": "Alles, was Ihr Unternehmen braucht.",
-    "titleAccent": "Website & mehr.",
+    "titleAccent": "Nichts, was es nicht braucht.",
     "items": [
       {
-        "title": "10+ Jahre Erfahrung",
-        "desc": "Ein Jahrzehnt Erfahrung in der Erstellung von Websites, die für Unternehmen jeder Grösse Ergebnisse liefern."
+        "title": "Über 10 Jahre Erfahrung",
+        "desc": "Gemeinsam bringen wir über zehn Jahre praktische Erfahrung als Softwareentwicklerinnen bei führenden Schweizer Unternehmen mit und verbinden technische Expertise mit einem klaren Blick für Design."
       },
       {
-        "title": "KI, Google & Speed-optimiert",
-        "desc": "Jede Website wird mit modernster Optimierung für KI-Suche, Google-Rankings und blitzschnelle Ladezeiten erstellt."
+        "title": "Optimiert für KI & Google",
+        "desc": "Entwickelt für Barrierefreiheit, Zuverlässigkeit und Sichtbarkeit in Suchmaschinen und KI-Plattformen, damit Ihr Unternehmen dort gefunden wird, wo Ihre Kunden suchen."
       },
       {
-        "title": "5 Stunden Wartung",
-        "desc": "Monatliche Wartungsstunden inklusive, um Ihre Website sicher, aktuell und leistungsstark zu halten."
+        "title": "Die passende Technologie",
+        "desc": "Wir wählen die Technologie, die zu Ihren Zielen, Ihrem Budget und Ihren langfristigen Anforderungen passt, statt jedes Projekt auf dieselbe Plattform aufzubauen."
       },
       {
         "title": "Direkte Zusammenarbeit",
-        "desc": "Keine Zwischenhändler. Arbeiten Sie direkt mit den Gründerinnen, die Ihre Website gestalten und entwickeln."
+        "desc": "Sie arbeiten direkt mit den Gründerinnen zusammen: klare Kommunikation, kurze Wege und gleichbleibende Qualität."
       },
       {
         "title": "24/7 Zeitersparnis",
-        "desc": "Automatisierungslösungen, die rund um die Uhr arbeiten und Ihnen unzählige Stunden manueller Arbeit ersparen."
+        "desc": "Intelligente Automatisierungen übernehmen wiederkehrende Aufgaben automatisch, damit mehr Zeit für die Arbeit bleibt, die wirklich zählt."
       },
       {
         "title": "Einfache Aktualisierungen",
-        "desc": "Verwalten Sie Ihre Inhalte mühelos mit benutzerfreundlichen CMS-Lösungen, die in jedes Projekt integriert sind."
+        "desc": "Nach der Veröffentlichung haben Sie die volle Kontrolle. Inhalte zu ändern ist einfach und intuitiv."
       }
     ]
   },
   "services": {
     "eyebrow": "Leistungen",
     "title": "Praktische Lösungen, die Ihr Unternehmen voranbringen",
-    "cta": "Neueste Fallstudie",
+    "cta": "Aktuelle Case Study",
     "items": [
       {
         "badge": "Design",
         "title": "Webdesign",
-        "desc": "Wir gestalten Websites, die sich intuitiv und einfach navigieren lassen. Alles hat einen Zweck — nichts wird hinzugefügt, nur weil es \"cool aussieht\". Ihre Besucher sollen sich wohlfühlen und schnell finden, was sie brauchen."
+        "desc": "Wir gestalten Websites, die intuitiv, klar strukturiert und einfach zu navigieren sind. Alles hat einen Zweck. Nichts wird nur eingebaut, weil es gut aussieht. Ziel ist eine Website, auf der Besucher schnell verstehen, was Sie anbieten, und den nächsten Schritt mit einem guten Gefühl gehen."
       },
       {
         "badge": "Entwicklung",
         "title": "Webentwicklung",
-        "desc": "Wir entwickeln schnelle, zuverlässige Websites mit modernen Frameworks. Sauberer Code, responsive Layouts und Performance-Architektur sorgen dafür, dass Ihre Seite auf allen Geräten einwandfrei funktioniert."
+        "desc": "Jede Website, die wir entwickeln, ist zuverlässig, schnell und auch nach dem Launch einfach zu verwalten. Wir wählen die Technologie, die am besten zu Ihren Zielen, Ihrem Budget und Ihren langfristigen Anforderungen passt. Je nach Projekt kann das Webflow, React, Next.js, Astro oder eine andere moderne Lösung sein. Das Ziel bleibt immer dasselbe: eine Website, die für Ihr Unternehmen funktioniert und mit Ihren Anforderungen mitwächst."
       },
       {
         "badge": "Migration",
         "title": "Website-Migrationen",
-        "desc": "Ein Plattformwechsel muss nicht stressig sein. Wir übernehmen den gesamten Migrationsprozess — von der Inhaltsübertragung bis zur SEO-Erhaltung — damit Sie upgraden können, ohne das Aufgebaute zu verlieren."
+        "desc": "Wenn Ihre aktuelle Website, ob WordPress, Wix oder eine individuelle Lösung, schwerfällig, veraltet oder mühsam zu pflegen ist, helfen wir beim Wechsel auf ein einfacheres System. Ohne dabei wichtige Inhalte, Struktur oder Sichtbarkeit zu verlieren."
       },
       {
         "badge": "SEO",
-        "title": "SEO & Analytics (Grundlagen)",
-        "desc": "Wir richten die Grundlagen ein, damit Ihre Website gefunden wird. Von technischem SEO und Meta-Tags bis zu Google Analytics und Search Console — wir schaffen die Basis für organisches Wachstum."
+        "title": "SEO & Analytics",
+        "desc": "Wir sorgen dafür, dass Ihre Website sowohl für Suchmaschinen als auch für KI-gestützte Suchtools verständlich ist. Mit klarer Struktur, relevanten Inhalten und einfacher Analyse, damit Sie jederzeit wissen, was funktioniert."
       },
       {
         "badge": "Automatisierung",
         "title": "KI-Automatisierungen & Workflows",
-        "desc": "Einfache, praktische Automatisierungen, die repetitive Aufgaben erledigen und Ihre Zeit freisetzen. Wir bauen kleine, zuverlässige Workflows mit Tools wie n8n, um Dokumente zu sortieren, Informationen zu verarbeiten und Daten zu organisieren."
+        "desc": "Wir automatisieren wiederkehrende Admin-Aufgaben und verbinden die Tools, die Ihr Unternehmen bereits nutzt, von Spesenbelegen und Onboarding bis zu Dateiablage und CRM-Updates. Das Ziel ist einfach: weniger manuelle Schritte, weniger Fehler und mehr Zeit für Aufgaben, bei denen menschliches Urteilsvermögen gefragt ist."
       }
-    ]
+    ],
+    "insightLinks": {
+      "websiteLosingClients": "Warum Ihre Website möglicherweise Kunden kostet →",
+      "websitePlatform": "Wie wir die richtige Website-Plattform wählen →",
+      "aiAutomation": "Was KI-Automatisierung für kleine Unternehmen bedeutet →"
+    }
   },
   "about": {
     "eyebrow": "Über uns",
@@ -86,83 +93,102 @@
     "stories": [
       {
         "title": "Unsere Geschichte",
-        "text": "Wir haben uns durch unsere gemeinsame Leidenschaft für die Schaffung bedeutungsvoller digitaler Erlebnisse kennengelernt. Nach Jahren unabhängiger Arbeit in Webdesign und Automatisierung haben wir unsere Kräfte gebündelt, um kleinen Unternehmen eine Komplettlösung für ihr Online-Wachstum anzubieten."
+        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren alles andere als klassisch. Monika kommt aus HR und Consulting, Nikky hat als Tierärztin gearbeitet. Genau diese unterschiedlichen Erfahrungen wurden zu unserer gemeinsamen Stärke. Wir schreiben nicht einfach Code, sondern verstehen geschäftliche Herausforderungen aus verschiedenen Perspektiven. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Zusammenarbeit und Partnerinnen, die mitdenken."
       },
       {
-        "title": "Warum ein Duo wählen?",
-        "text": "Wenn Sie mit uns arbeiten, erhalten Sie die Aufmerksamkeit und Sorgfalt einer Boutique-Agentur mit der Expertise erfahrener Profis. Keine Management-Ebenen, kein Outsourcing — nur zwei engagierte Gründerinnen, die in Ihren Erfolg investiert sind."
+        "title": "Warum ein Duo?",
+        "text": "Ein kleines Team bedeutet: Sie sind bei uns nie nur eine Nummer. Bei uns erhalten Sie direkten Zugang zu erfahrener Expertise und ein leidenschaftliches Duo, dem Ihr Erfolg wirklich am Herzen liegt. Als Mütter und Unternehmerinnen wissen wir, wie wichtig es ist, Zeit sinnvoll einzusetzen, damit jede Entscheidung echten Mehrwert schafft."
       },
       {
-        "title": "Soziales Engagement",
-        "text": "Für jedes bezahlte Projekt erstellen wir eine kostenlose oder stark vergünstigte Website für eine Wohltätigkeitsorganisation, gemeinnützige Organisation oder Gemeinschaftsinitiative."
+        "title": "Giving Back",
+        "text": "Gute Arbeit verdient gute Unterstützung. Jedes Jahr stellen wir einer Non-Profit-Organisation oder gemeinnützigen Initiative unsere Zeit und unser Know-how für eine Website oder ein Automatisierungsprojekt zur Verfügung.",
+        "cta": "apply"
       }
     ],
-    "teamTitle": "Die Gesichter hinter der Arbeit",
+    "teamTitle": "Die Menschen hinter Moniré",
     "team": [
       {
         "name": "Monika Märki",
-        "role": "Mitgründerin & Webdesignerin"
+        "role": ""
       },
       {
         "name": "Nikky Pyra",
-        "role": "Mitgründerin & Automatisierungsspezialistin"
+        "role": ""
+      }
+    ],
+    "applyHere": "Mehr erfahren",
+    "teamEyebrow": "Das Duo kennenlernen",
+    "teamDetails": [
+      {
+        "name": "Monika Märki",
+        "origin": "Aus Polen, zuhause in der Schweiz",
+        "languages": "Sprachen: Polnisch, Englisch, Deutsch",
+        "linkedinLabel": "LinkedIn-Profil von Monika Märki"
+      },
+      {
+        "name": "Nikky Pyra",
+        "origin": "Aus Kanada, zuhause in der Schweiz",
+        "languages": "Sprachen: Englisch, Deutsch",
+        "linkedinLabel": "LinkedIn-Profil von Nikky Pyra"
       }
     ]
   },
   "pricing": {
     "eyebrow": "Preise",
     "title": "Zwei Leistungen, ein Ziel:",
-    "titleAccent": "Ihr Unternehmen wachsen lassen.",
+    "titleAccent": "Ihr Unternehmen soll wachsen.",
     "tabs": {
       "webDesign": "Webdesign & Entwicklung",
       "automation": "KI-Automatisierungen"
     },
     "getStarted": "Loslegen",
-    "mostPopular": "Beliebteste",
+    "mostPopular": "Meistgewählt",
     "custom": {
-      "title": "Brauchen Sie etwas Individuelleres?",
-      "desc": "Jedes Unternehmen ist einzigartig. Wenn unsere Pakete nicht ganz passen, erstellen wir eine massgeschneiderte Lösung für Ihre spezifischen Bedürfnisse und Ihr Budget."
+      "title": "Sie benötigen etwas Individuelles?",
+      "desc": "Jedes Projekt ist anders. Wenn Sie Unterstützung ausserhalb unserer Pakete benötigen, erstellen wir gerne ein individuelles Angebot. Wir arbeiten zudem mit bewährten Partnern in den Bereichen Fotografie, Social Media und Copywriting zusammen, sodass alles aus einer Hand koordiniert werden kann."
     },
     "plans": {
       "webDesign": [
         {
           "name": "Starter",
-          "price": "from CHF3'500",
-          "desc": "Ideal für: Neue Unternehmen, Coaches, Freiberufler, kleine Beratungen.",
+          "price": "ab CHF 3'500",
+          "desc": "Eine professionelle Website, die Ihr Unternehmen online optimal präsentiert.",
           "features": [
             "Bis zu 5 Seiten",
-            "Sauberer, professioneller visueller Stil",
-            "Mobiloptimiert + schnelles Laden",
-            "Kontaktformular",
-            "Basis-CMS für einfache Text-/Bildaktualisierungen",
-            "Grundlegendes On-Page-SEO (Meta-Tags, Sitemap, suchfreundliche Struktur)"
+            "Individuelles Website-Design passend zu Ihrer Marke",
+            "Mobiloptimiert mit schnellen Ladezeiten",
+            "Kontaktformular mit E-Mail-Benachrichtigungen",
+            "Einfache Inhaltsverwaltung ohne Entwickler",
+            "Grundlegende SEO-Einrichtung: Meta-Tags und Sitemap",
+            "Schulung zur eigenständigen Verwaltung Ihrer Website"
           ]
         },
         {
           "name": "Advanced",
-          "price": "from CHF6'000",
-          "desc": "Ideal für KMUs, Agenturen, Boutique-Firmen, B2B-Dienstleistungen.",
+          "price": "ab CHF 6'000",
+          "desc": "Eine strategische Website, die Ihr Wachstum unterstützt.",
           "features": [
             "Bis zu 10 Seiten",
-            "Individuelles visuelles Design** + dezente Animationen",
-            "Flexiblere CMS-Strukturen (Blogs, Fallstudien, Produkt-/Dienstleistungslisten)",
-            "SEO-Optimierung mit Fokus auf Ranking (nicht nur Einrichtung)",
-            "Google Analytics mit Event-Tracking",
-            "Integration von 1-2 Drittanbieter-Tools (Buchungssystem, CRM-Formular usw.)",
+            "Strategische Struktur und Nutzerführung für mehr Anfragen und Conversions",
+            "Inhaltsverwaltung für Blog, Case Studies und Leistungen",
+            "1–2 Integrationen mit Drittanbietern, z. B. Buchungssystem oder CRM",
+            "Analytics mit Event-Tracking",
+            "SEO-Optimierung mit Fokus auf Ranking",
+            "Dezente Animationen und hochwertige Interaktionen",
             "Unterstützung für 2 Sprachen"
           ]
         },
         {
           "name": "Premium",
-          "price": "from CHF9'000",
-          "desc": "Ideal für: wachsende Firmen, etablierte Marken, Unternehmen mit Workflow- & Integrationsbedarf.",
+          "price": "ab CHF 9'000",
+          "desc": "Eine digitale Plattform für komplexere, wachsende oder skalierende Unternehmen.",
           "features": [
-            "Unbegrenzte Seiten",
-            "Vollständige UX + UI-Layoutplanung",
-            "Erweitertes CMS",
-            "Integrationen mit Tools wie: Newsletter, Buchung, Kalender, Live-Chat, Kundenportal",
-            "Umfassende SEO-Strategie",
-            "Mehrsprachige Unterstützung"
+            "Unbegrenzte Seitenanzahl",
+            "UX, Design und Struktur angepasst an komplexe Anforderungen",
+            "Mehrere Integrationen, z. B. Buchung, Live-Chat, Kundenportal oder Newsletter-Automatisierungen",
+            "Dynamisch verknüpfte Inhalte auf der Website, z. B. Leistungen mit Case Studies, Blogartikeln oder verwandten Seiten",
+            "Phasenweise Umsetzung für grössere oder laufend wachsende Projekte",
+            "Mehrsprachigkeit mit 2+ Sprachen"
           ]
         }
       ],
@@ -170,70 +196,89 @@
     },
     "automationBlock": {
       "title": "KI-Automatisierungen & Workflow-Systeme",
-      "desc": "Wir entwickeln massgeschneiderte Automatisierungssysteme, die manuelle, repetitive Arbeit reduzieren und die Tools, die Sie bereits nutzen, nahtlos verbinden. Die Preisgestaltung wird individuell nach einem kurzen Kennenlerngespräch festgelegt.",
+      "desc": "Wir bauen individuelle Automatisierungen, die manuelle, wiederkehrende Arbeit reduzieren und die Tools verbinden, die Sie bereits nutzen. Der Preis wird nach einem kurzen Kennenlerngespräch individuell festgelegt.",
       "cta": "Loslegen",
-      "caseStudy": "Neueste Fallstudie"
-    }
+      "caseStudy": "Aktuelle Case Study"
+    },
+    "includedNote": "Jedes Paket enthält alles aus dem vorherigen Paket.",
+    "automationArticleLink": "Was KI-Automatisierung für kleine Unternehmen bedeutet →",
+    "currencyLabel": "Währung"
   },
   "portfolio": {
     "eyebrow": "Portfolio",
-    "title": "Unsere Arbeiten",
+    "title": "Ausgewählte Projekte",
     "categories": [
-      "Veterinär",
-      "Beratung",
+      "Veterinärmedizin",
+      "Consulting",
       "Immobilien",
       "KI-Automatisierung"
     ],
     "projects": [
       {
         "title": "Snip Squad",
-        "category": "Veterinär",
-        "desc": "Eine lebendige Tierarzt-Website, die warm, einladend und leicht navigierbar für Tierbesitzer gestaltet wurde.",
+        "category": "Veterinärmedizin",
+        "desc": "Eine freundliche, moderne Website für eine Tierklinik, die warm, zugänglich und für Tierhalter einfach zu nutzen ist.",
         "link": "/case-studies/snip-squad"
       },
       {
         "title": "PortCo HR Collective",
-        "category": "Community platform",
+        "category": "Community-Plattform",
         "desc": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Umfeld, die Branding, Webdesign und Automatisierung verbindet.",
         "link": "/case-studies/portco-hr-collective"
       },
       {
         "title": "SystemicAlly",
-        "category": "Beratung",
-        "desc": "Plattform für Führungskräfteentwicklung mit einem sauberen, professionellen Design, das Vertrauen und Expertise betont.",
+        "category": "Consulting",
+        "desc": "Eine Plattform für Leadership- und Organisationsentwicklung mit klarem, professionellem Design und Fokus auf Vertrauen.",
         "link": "/case-studies/systemically"
       },
       {
         "title": "Towarowa 41",
         "category": "Immobilien",
-        "desc": "Ein elegantes Luxus-Apartment-Listing mit redaktioneller Fotografie und edler Typografie.",
+        "desc": "Eine elegante Website für ein hochwertiges Apartment mit stimmungsvollen Bildern und feiner Typografie.",
         "link": "/case-studies/towarowa"
       },
       {
         "title": "Spesenbeleg-Automatisierung",
         "category": "KI-Automatisierung",
-        "desc": "Automatisierter Workflow zur Verarbeitung von Spesenbelegen mit n8n, der manuelle Dateneingabe eliminiert.",
+        "desc": "Ein automatisierter Workflow mit n8n, der Spesenbelege verarbeitet und manuelle Dateneingabe deutlich reduziert.",
         "link": "/case-studies/expense-receipt-automation"
       }
-    ]
+    ],
+    "previousProject": "Vorheriges Projekt",
+    "nextProject": "Nächstes Projekt",
+    "navGroups": {
+      "webDesignDevelopment": {
+        "title": "Webdesign & Entwicklung",
+        "veterinary": "Veterinärmedizin",
+        "communityPlatform": "Community-Plattform",
+        "consulting": "Consulting",
+        "realEstate": "Immobilien"
+      },
+      "aiAutomation": {
+        "title": "KI-Automatisierung",
+        "expenseReceipts": "Spesenbelege",
+        "communityMembership": "Community-Plattform"
+      }
+    }
   },
   "faq": {
-    "title": "Häufig gestellte Fragen",
+    "title": "Häufige Fragen",
     "categories": [
       {
-        "label": "Allgemeine Informationen",
+        "label": "Allgemeines",
         "items": [
           {
             "q": "Welche Informationen brauchen Sie von mir, um zu starten?",
-            "a": "Wir müssen Ihre Geschäftsziele, Zielgruppe, gewünschte Funktionen, Designpräferenzen, Zeitplan und Budget verstehen. Vorhandene Markenassets, Inhalte oder Websites sind ebenfalls hilfreich. Füllen Sie gerne unser <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>Kundenbriefing-Formular</a> aus, damit wir Ihre Bedürfnisse besser verstehen können."
+            "a": "Damit wir Ihr Projekt optimal planen können, möchten wir Ihre Ziele, Zielgruppe, gewünschten Funktionen, Designvorstellungen, den Zeitrahmen und Ihr Budget kennenlernen. Falls bereits Inhalte, Branding-Materialien oder eine bestehende Website vorhanden sind, hilft uns das ebenfalls weiter. Sie können auch unser <a href='/documents/client-brief.docx' download style='color:#F1D69A;text-decoration:underline;'>Projektbriefing</a> ausfüllen, damit wir Ihre Anforderungen besser verstehen."
           },
           {
             "q": "Können Sie bei SEO helfen?",
-            "a": "Unser Hauptfokus liegt auf Entwicklung und KI-Automatisierung, aber wir bauen Websites mit SEO-Best-Practices. Wir können auch vertrauenswürdige Partner für laufende SEO-Dienstleistungen empfehlen."
+            "a": "Unser Fokus liegt auf Entwicklung und KI-Automatisierungen. Dennoch berücksichtigen wir bei jeder Website wichtige SEO-Grundlagen. Für laufende SEO-Betreuung können wir Ihnen auch vertraute Partner empfehlen.<br /><a href='/insights/why-your-website-might-be-losing-you-clients' style='color:#F1D69A;text-decoration:underline;'>Mehr dazu, warum das wichtig ist →</a>"
           },
           {
-            "q": "Arbeiten Sie mit internationalen Kunden?",
-            "a": "Ja! Wir sind in der Schweiz ansässig und arbeiten remote mit Kunden weltweit. Die Kommunikation ist asynchron-freundlich, und wir stimmen Meetingzeiten über Zeitzonen hinweg ab."
+            "q": "Arbeiten Sie auch mit internationalen Kunden?",
+            "a": "Ja. Wir sitzen in der Schweiz und arbeiten aus der Ferne mit Kunden weltweit. Die Zusammenarbeit funktioniert auch zeitversetzt gut, und Termine stimmen wir über Zeitzonen hinweg ab."
           }
         ]
       },
@@ -241,36 +286,36 @@
         "label": "Design & Entwicklung",
         "items": [
           {
-            "q": "Erstellen Sie individuelle Websites oder verwenden Sie Templates?",
-            "a": "Wir erstellen hauptsächlich individuelle Websites, die auf Ihre spezifischen Bedürfnisse zugeschnitten sind. Wir können auch Premium-Templates anpassen, wenn Sie mit einem kleineren Budget oder schnelleren Zeitrahmen arbeiten."
+            "q": "Erstellen Sie individuelle Websites oder arbeiten Sie mit Vorlagen?",
+            "a": "Wir erstellen hauptsächlich individuelle Websites, die auf Ihr Unternehmen und Ihre Ziele zugeschnitten sind. Wenn es für Budget oder Zeitplan sinnvoll ist, können wir auch hochwertige Vorlagen anpassen."
           },
           {
-            "q": "Können Sie meine bestehende Website neu gestalten?",
-            "a": "Ja! Wir bieten komplette Website-Redesigns an, einschliesslich Modernisierung veralteter Designs, Verbesserung der Benutzererfahrung und Migration auf neue Plattformen bei Bedarf."
+            "q": "Können Sie meine bestehende Website überarbeiten?",
+            "a": "Ja. Wir bieten komplette Redesigns an, inklusive modernem Design, verbesserter Nutzerführung und, falls nötig, einer Migration auf eine passendere Plattform."
           },
           {
-            "q": "Auf welchen Plattformen entwickeln Sie?",
-            "a": "Wir arbeiten mit verschiedenen Technologien wie Webflow, Astro, React, Next.js, n8n und individuellen Lösungen. Wir empfehlen die beste Plattform basierend auf Ihren Anforderungen, Budget und langfristigen Zielen."
+            "q": "Mit welchen Plattformen arbeiten Sie?",
+            "a": "Wir arbeiten mit Webflow, Astro, React, Next.js, n8n und individuellen Lösungen. Welche Plattform sinnvoll ist, hängt von Ihren Zielen, Ihrem Budget und Ihren langfristigen Plänen ab.<br /><a href='/insights/website-builders-vs-custom-development' style='color:#F1D69A;text-decoration:underline;'>Lesen Sie, wie wir die richtige Plattform wählen →</a>"
           },
           {
             "q": "Kann ich die Website selbst bearbeiten?",
-            "a": "Wir verwenden benutzerfreundliche Content-Management-Systeme (CMS), damit Sie Texte, Bilder und Blogbeiträge ohne technische Kenntnisse aktualisieren können. Wir bieten Schulungen und Dokumentation an."
+            "a": "Ja. Wir setzen benutzerfreundliche CMS-Strukturen auf, damit Sie Texte, Bilder und Beiträge ohne technische Kenntnisse ändern können. Eine Einführung und Dokumentation gehören dazu."
           },
           {
             "q": "Wem gehört die Website?",
-            "a": "Sobald alle Rechnungen bezahlt sind, wird das vollständige Eigentum an der Website und allen von uns erstellten Designs an Sie übertragen."
+            "a": "Sobald alle Rechnungen bezahlt sind, gehen die Website sowie alle von uns erstellten Projektdateien und Inhalte in Ihren Besitz über."
           },
           {
-            "q": "Ich habe das Design – können Sie nur die Entwicklung übernehmen?",
-            "a": "Wenn Sie bereits das Design haben, können wir nur die Entwicklung übernehmen. Wir besprechen Ihr Design gemeinsam und passen die Preisgestaltung entsprechend an."
+            "q": "Ich habe schon ein Design. Können Sie nur die Entwicklung übernehmen?",
+            "a": "Ja. Wenn das Design bereits steht, können wir die Entwicklung übernehmen. Wir prüfen das Design gemeinsam und definieren den Umfang der Entwicklung entsprechend."
           },
           {
             "q": "Wie schnell kann meine Website fertig sein?",
-            "a": "Die Zeitrahmen variieren je nach Grösse und Komplexität Ihrer Website. Nach unserem Erstgespräch geben wir Ihnen eine klare Schätzung für Design- und Entwicklungsphasen."
+            "a": "Das hängt von Umfang und Komplexität ab. Nach dem Erstgespräch geben wir Ihnen eine klare Einschätzung für Design und Entwicklung."
           },
           {
             "q": "Was ist Webflow?",
-            "a": "Webflow ist eine moderne Website-Plattform, mit der wir schnell vollständig individuelle, hochwertige Websites erstellen können – mit einfacher Bearbeitung, grossartiger Leistung und problemlosem Hosting."
+            "a": "Webflow ist eine moderne Website-Plattform, mit der wir hochwertige, individuelle Websites effizient bauen können — mit einfacher Inhaltsbearbeitung, guter Performance und zuverlässigem Hosting.<br /><a href='/insights/website-builders-vs-custom-development' style='color:#F1D69A;text-decoration:underline;'>Lesen Sie, wie wir die richtige Plattform wählen →</a>"
           }
         ]
       },
@@ -279,20 +324,24 @@
         "items": [
           {
             "q": "Was ist KI-Automatisierung und wie kann sie meinem Unternehmen helfen?",
-            "a": "KI-Automatisierung nutzt künstliche Intelligenz, um repetitive Aufgaben zu erledigen, Daten zu analysieren oder Prozesse zu optimieren. Beispiele sind Kundensupport-Chatbots, Dateneingabe, E-Mail-Antworten, Inhaltserstellung und mehr. Ziel ist es, dass Sie sich auf wertvolle Arbeit konzentrieren und Fehler reduzieren können."
+            "a": "KI-Automatisierung nutzt künstliche Intelligenz, um wiederkehrende Aufgaben zu übernehmen, Daten zu analysieren und Prozesse effizienter zu gestalten. Beispiele sind Support-Abläufe, Dateneingabe, E-Mail-Verarbeitung oder Content-Workflows. So sparen Sie Zeit, reduzieren Fehler und schaffen Freiraum für wichtigere Aufgaben.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Lesen Sie, wie das in der Praxis aussieht →</a>"
           },
           {
-            "q": "Brauche ich technisches Wissen, um KI-Automatisierungstools zu nutzen?",
-            "a": "Nein! Wir entwickeln benutzerfreundliche Lösungen, die sich nahtlos in Ihre bestehenden Arbeitsabläufe integrieren. Wir bieten Schulungen und Dokumentation an, damit Sie die Tools sicher nutzen können."
+            "q": "Welche Tools nutzen Sie für Automatisierungen?",
+            "a": "Wir bauen Automatisierungen hauptsächlich mit n8n, weil es sich mit vielen Tools verbinden lässt, die Unternehmen bereits nutzen — E-Mail, Tabellen, Cloud-Speicher und CRMs. Wir nutzen auch KI-Tools wie Claude und OpenAI Codex, um die Entwicklung zu unterstützen und passendere Lösungen zu erstellen. Je nach Projekt wählen wir die Tools, die am besten passen."
+          },
+          {
+            "q": "Brauche ich technisches Wissen, um KI-Automatisierungen zu nutzen?",
+            "a": "Nein. Wir bauen Lösungen, die zu Ihren bestehenden Abläufen passen und einfach nutzbar sind. Dazu gehören auch Einführung und Dokumentation, damit Ihr Team sicher damit arbeiten kann."
           }
         ]
       },
       {
-        "label": "Wartung",
+        "label": "Wartung & Support",
         "items": [
           {
-            "q": "Bieten Sie langfristigen Support an?",
-            "a": "Wir bieten Wartungspakete an, die Fehlerbehebungen, Inhaltsaktualisierungen und technischen Support umfassen. Wir bieten auch einmaligen Support für spezifische Bedürfnisse an."
+            "q": "Bieten Sie Wartung und laufende Betreuung an?",
+            "a": "Ja. Wir unterstützen viele unserer Kunden auch nach dem Launch mit Inhaltsupdates, Fehlerbehebungen, technischer Wartung und allgemeinem Website-Support. Ob Sie laufende Unterstützung benötigen oder Hilfe bei einem konkreten Problem suchen, wir helfen gerne weiter."
           }
         ]
       }
@@ -300,38 +349,68 @@
   },
   "cta": {
     "eyebrow": "Kontakt",
-    "title": "Interesse an einer Zusammenarbeit?",
-    "button": "Erstgespräch buchen"
+    "title": "Bereit, Ihre Website zu verbessern oder wiederkehrende Abläufe zu automatisieren?",
+    "button": "Unverbindliches Erstgespräch buchen",
+    "subtext": "Wir arbeiten nur mit einer begrenzten Anzahl von Kunden gleichzeitig, damit jedes Projekt die Aufmerksamkeit erhält, die es verdient."
   },
   "contact": {
-    "title": "Kontaktieren Sie uns",
+    "title": "Kontakt aufnehmen",
     "fullName": "Vollständiger Name",
-    "fullNamePlaceholder": "Vollständiger Name",
-    "company": "Firmenname",
+    "fullNamePlaceholder": "Ihr Name",
+    "company": "Firma",
     "companyPlaceholder": "Firmenname",
     "email": "E-Mail-Adresse",
-    "emailPlaceholder": "E-Mail-Adresse",
+    "emailPlaceholder": "Ihre E-Mail-Adresse",
     "website": "Aktuelle Website (falls vorhanden)",
-    "websitePlaceholder": "Aktuelle Website",
-    "service": "Wie können wir Ihnen helfen?",
-    "servicePlaceholder": "Wie können wir Ihnen helfen?",
-    "budget": "Ihr Budget:",
-    "budgetPlaceholder": "Ihr Budget:",
-    "message": "Erzählen Sie uns von Ihrem Projekt:",
-    "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt:",
-    "terms": "Ich stimme den Allgemeinen Geschäftsbedingungen und der",
-    "privacyPolicy": "Datenschutzrichtlinie",
-    "send": "Lassen Sie uns reden"
+    "websitePlaceholder": "Ihre aktuelle Website",
+    "service": "Wobei können wir helfen?",
+    "servicePlaceholder": "Wählen Sie eine oder mehrere Leistungen",
+    "budget": "Budget",
+    "budgetPlaceholder": "Budget auswählen",
+    "message": "Erzählen Sie uns von Ihrem Projekt",
+    "messagePlaceholder": "Worum geht es, und was möchten Sie erreichen?",
+    "terms": "Ich stimme den Bedingungen und der",
+    "privacyPolicy": "Datenschutzerklärung",
+    "send": "Nachricht senden",
+    "successTitle": "Vielen Dank!",
+    "successMessage": "Wir melden uns in Kürze bei Ihnen.",
+    "close": "Schliessen",
+    "closeLabel": "Kontaktformular schliessen",
+    "errors": {
+      "fullName": "Bitte geben Sie Ihren vollständigen Namen ein.",
+      "emailRequired": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "service": "Bitte wählen Sie mindestens eine Leistung aus.",
+      "message": "Bitte geben Sie eine Nachricht ein.",
+      "submit": "Beim Senden Ihrer Nachricht ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an"
+    },
+    "serviceOptions": [
+      "Webdesign",
+      "Webentwicklung",
+      "KI-Automatisierungen",
+      "Website-Migration",
+      "SEO & Analytics",
+      "Bewerbung für ein Non-Profit-Projekt",
+      "Anderes"
+    ],
+    "budgetOptions": [
+      "<CHF 5'000",
+      "CHF 5'000 – 10'000",
+      "CHF 10'000 – 20'000",
+      "CHF 20'000+"
+    ]
   },
   "footer": {
-    "tagline": "Websites, die Kunden anziehen und mit Ihrem Unternehmen wachsen.",
-    "quickLinks": "Schnellzugriff",
+    "tagline": "Individuelle Webentwicklung und KI-gestützte Workflow-Automatisierung in der Schweiz.",
+    "quickLinks": "Links",
     "contact": "Kontakt",
-    "privacyPolicy": "Datenschutzrichtlinie",
-    "copyright": "© 2025 Moniré. Alle Rechte vorbehalten."
+    "privacyPolicy": "Datenschutz",
+    "copyright": "© 2025 Moniré. Alle Rechte vorbehalten.",
+    "locationCity": "Zürich, Schweiz",
+    "locationService": "Für Kunden weltweit"
   },
   "caseStudy": {
-    "back": "Zurück zu Projekten",
+    "back": "Zurück zu den Projekten",
     "eyebrow": "KI-Automatisierung",
     "title": "Spesenbeleg-\nAutomatisierung",
     "before": {
@@ -368,7 +447,584 @@
       "client": "Kunde",
       "date": "Datum",
       "category": "Kategorie",
-      "tools": "Tools"
+      "tools": "Tools",
+      "industry": "Branche",
+      "website": "Website"
+    },
+    "visitWebsite": "Website besuchen",
+    "liveNote": "Die Live-Website kann von der ursprünglichen Version abweichen, weil sie vom Kunden selbst verwaltet wird.",
+    "keyResults": "Wichtigste Ergebnisse",
+    "keyResultsIntro": "Ein fokussiertes digitales Erlebnis, das das Entdecken und Buchen der Wohnung einfacher macht."
+  },
+  "common": {
+    "close": "Schliessen",
+    "backToHome": "Zurück zur Startseite",
+    "back": "Zurück",
+    "location": "Standort",
+    "followUs": "Folgen Sie uns",
+    "getInTouch": "Kontakt aufnehmen",
+    "readArticle": "Artikel lesen",
+    "minRead": "Min. Lesezeit",
+    "latest": "Neuester",
+    "logoAlt": "Moniré",
+    "languageSwitcherLabel": "Sprache wählen"
+  },
+  "contactPage": {
+    "eyebrow": "Kontakt",
+    "title": "Sprechen wir über Ihr Projekt",
+    "intro": "Ob Sie ein konkretes Projekt im Kopf haben oder erst Möglichkeiten ausloten möchten – wir freuen uns, von Ihnen zu hören.",
+    "structuredDescription": "Individuelle Website-Entwicklung und KI-gestützte Workflow-Automatisierung in der Schweiz."
+  },
+  "apply": {
+    "back": "← Zurück",
+    "eyebrow": "Giving Back",
+    "title": "Ein Projekt für den guten Zweck",
+    "intro": "Jedes Jahr stellen wir unsere Zeit und unser Know-how einer Non-Profit-Organisation oder einer gemeinnützigen Initiative zur Verfügung – für eine Website, ein digitales Tool oder ein Automationsprojekt. Gute Arbeit verdient gute Unterstützung. Kennen Sie eine Organisation, die einen Unterschied macht? Dann würden wir uns freuen, ihre Geschichte kennenzulernen.",
+    "status": "Unsere Auswahl für 2026 wurde bereits getroffen. Wir freuen uns aber weiterhin über Vorschläge für zukünftige Projekte.",
+    "howItWorks": "So funktioniert es",
+    "cta": "Organisation vorschlagen",
+    "steps": [
+      {
+        "step": "Schritt 1",
+        "title": "Erzählen Sie uns von einer Organisation",
+        "desc": "Erzählen Sie uns, wer die Organisation ist, was sie macht und warum Unterstützung gerade jetzt helfen würde."
+      },
+      {
+        "step": "Schritt 2",
+        "title": "Wir lernen die Organisation kennen",
+        "desc": "Wir schauen, ob es zeitlich und inhaltlich passt und wo wir mit Design, Entwicklung oder Automatisierung am meisten helfen können."
+      },
+      {
+        "step": "Schritt 3",
+        "title": "Eine Initiative wird ausgewählt",
+        "desc": "Die ausgewählte Organisation erhält kostenlose Projektunterstützung von Moniré, von der ersten Idee bis zum Launch."
+      }
+    ]
+  },
+  "notFound": {
+    "eyebrow": "Seite nicht gefunden",
+    "title": "Diese Seite wurde verschoben, geändert oder hat nie existiert.",
+    "bodyPrefix": "Die URL",
+    "bodySuffix": "gehört zu keiner aktiven Seite auf dieser Website.",
+    "portfolio": "Portfolio-Projekte ansehen",
+    "insights": "Insights lesen"
+  },
+  "insightsPage": {
+    "eyebrow": "Insights",
+    "title": "Insights für bessere Websites und clevere Workflows",
+    "intro": "Praktische Einblicke zu Webdesign, Automatisierung und digitalen Entscheidungen, die Ihr Unternehmen voranbringen.",
+    "schemaName": "Moniré Insights",
+    "quickAnswer": "Kurz gesagt",
+    "contents": "Inhalt",
+    "related": "Ähnliche Insights",
+    "backToAll": "Zurück zu allen Artikeln"
+  },
+  "caseStudiesContent": {
+    "snip-squad": {
+      "title": "Snip Squad",
+      "subtitle": "Eine moderne, zugängliche Website für eine gemeinnützige Tierklinik",
+      "client": "Snip Squad",
+      "date": "Januar 2026",
+      "industry": "Veterinärmedizin & Non-Profit",
+      "category": "Webdesign & Webentwicklung",
+      "tools": [
+        "WEBFLOW",
+        "FIGMA",
+        "RELUME"
+      ],
+      "imageAlt": "Website-Vorschau von Snip Squad",
+      "websiteLabel": "Website besuchen",
+      "sections": [
+        {
+          "title": "Überblick:",
+          "intro": "Snip Squad ist eine gemeinnützige Tierklinik in Norfolk, Virginia, die bezahlbare tiermedizinische Versorgung für Haustiere in unterversorgten Gemeinschaften anbietet.\n\nDie Website sollte ihre Mission klar vermitteln, Spenden unterstützen und Besuchern helfen, wichtige Informationen schnell zu finden."
+        },
+        {
+          "title": "Ansatz:",
+          "intro": "Snip Squad wollte weg vom typischen klinischen Look und hin zu einem Auftritt, der moderner, freundlicher und stärker auf die Gemeinschaft ausgerichtet ist.\n\nUnser Fokus lag auf:",
+          "items": [
+            "Einem warmen, zugänglichen visuellen Stil",
+            "Klaren, gut strukturierten und leicht erfassbaren Inhalten",
+            "Einer vollständig responsiven Nutzung auf Smartphone, Tablet und Desktop",
+            "Einem CMS, das das Team einfach selbst verwalten kann"
+          ]
+        },
+        {
+          "title": "Ergebnis:",
+          "intro": "Entstanden ist ein klarer, einladender digitaler Auftritt, der die Mission von Snip Squad widerspiegelt und gleichzeitig dabei hilft, Leistungen und Spendenmöglichkeiten leicht zu finden."
+        }
+      ],
+      "testimonial": {
+        "quote": "What an incredible website designer!! From start to finish they made it easy to make my dreams come true. Sometimes it can be overwhelming to even start and figure out what your vision would be for your website but Monire was able to speak with me and help me create the vision that I wanted for my website/business. In this day and age website design is so important and I would choose Monire 10/10 times to work with. Great team with excellent deadline times and easy to work with during modification process. Can't recommend them enough!",
+        "author": "Dr. Alex Phan, Snip Squad"
+      }
+    },
+    "portco-hr-collective": {
+      "title": "PortCo HR Collective",
+      "subtitle": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Unternehmen",
+      "client": "PortCo HR Collective",
+      "date": "2026",
+      "industry": "Private Equity / Professionelle Netzwerke",
+      "category": "Branding, Webdesign & Entwicklung, KI-Automatisierung",
+      "tools": [
+        "WEBFLOW",
+        "MEMBERSTACK",
+        "N8N",
+        "FIGMA"
+      ],
+      "imageAlt": "Homepage-Vorschau von PortCo HR Collective",
+      "sections": [
+        {
+          "title": "Überblick:",
+          "intro": "PortCo HR Collective ist ein Peer-Netzwerk für Chief HR Officers in PE-finanzierten Unternehmen in Europa. Die Gründerinnen wollten eine Plattform, die professionell, einladend und klar ihre eigene ist. Keine generische Plattform, sondern ein digitales Zuhause, das Vertrauen schafft, Wachstum unterstützt und ohne eigenes technisches Team betrieben werden kann.",
+          "visualImage": {
+            "alt": "Login-Seite von PortCo HR Collective"
+          }
+        },
+        {
+          "title": "Ansatz:",
+          "intro": "Das Design beginnt mit einem Gemälde. Die Kundin brachte ein einziges Gemälde mit und wollte, dass es zur Seele der Marke wird. Nicht als Dekoration, sondern als visuelle Grundlage für alles Weitere. Das Kunstwerk prägte das gesamte visuelle System — Logo, Typografie, Farbpalette und Interface-Design der Plattform.\n\nDarauf aufgebaut wurden:",
+          "items": [
+            "Ein geschütztes Mitgliederverzeichnis, ein Insights-Bereich und eine Event-Plattform mit passwortlosem Magic-Link-Login",
+            "Ein Webflow CMS, das die Kundin selbst verwalten kann – Inhalte veröffentlichen, Mitglieder verwalten und Events aktualisieren, ganz ohne technischen Support",
+            "Automatisierte Workflows, die manuelle Administration reduzieren, indem Mitglieder- und Inhaltsdaten plattformübergreifend synchronisiert werden"
+          ]
+        },
+        {
+          "title": "Ergebnis:",
+          "intro": "Entstanden ist eine unverwechselbare Mitgliederplattform, die der Community einen professionellen digitalen Auftritt gibt und die Administration schlank hält. Mitglieder finden Inhalte, Events und andere Mitglieder über eine nahtlose Nutzererfahrung, während Automatisierungen Inhalte und Mitgliederdaten automatisch aktuell halten."
+        }
+      ]
+    },
+    "systemically": {
+      "title": "SystemicAlly",
+      "subtitle": "Eine klare, professionelle Website für eine Leadership- und Transformationsberatung",
+      "client": "SystemicAlly",
+      "date": "Mai 2025",
+      "industry": "Consulting",
+      "category": "Webentwicklung",
+      "tools": [
+        "WEBFLOW",
+        "GOOGLE ANALYTICS"
+      ],
+      "imageAlt": "Website-Vorschau von SystemicAlly",
+      "websiteLabel": "Website besuchen",
+      "sections": [
+        {
+          "title": "Überblick:",
+          "intro": "SystemicAlly unterstützt Führungskräfte, Teams und Organisationen bei Leadership-Entwicklung und nachhaltiger Transformation.\n\nDie Website sollte die Expertise des Unternehmens klar vermitteln, die Leistungen verständlich präsentieren und Vertrauen bei potenziellen Kunden aufbauen."
+        },
+        {
+          "title": "Ansatz:",
+          "intro": "Ziel war es, die bestehende visuelle Identität von SystemicAlly in eine durchdachte, responsive Website mit klarer Struktur zu übersetzen.\n\nUnser Fokus lag auf:",
+          "items": [
+            "Einem professionellen visuellen Auftritt, der zur Marke passt",
+            "Klarer Inhaltshierarchie für Leistungen, Programme und Themenbereiche",
+            "Flexiblen Seitenlayouts für ausführlichere Consulting-Inhalte",
+            "Responsiver Entwicklung für Desktop, Tablet und Smartphone",
+            "Google-Analytics-Integration zur Analyse der Website-Performance"
+          ]
+        },
+        {
+          "title": "Ergebnis:",
+          "intro": "Entstanden ist ein professioneller und glaubwürdiger digitaler Auftritt, der die Expertise von SystemicAlly sichtbar macht und gleichzeitig zugänglich und einfach zu navigieren bleibt.\n\nBesucher verstehen schnell den Ansatz des Unternehmens, können die Beratungsangebote erkunden und unkompliziert Kontakt aufnehmen."
+        }
+      ]
+    },
+    "towarowa": {
+      "title": "Towarowa 41",
+      "subtitle": "Ein hochwertiger digitaler Auftritt für ein Premium-City-Apartment",
+      "client": "Towarowa",
+      "date": "Oktober 2025",
+      "industry": "Hotellerie & Immobilien",
+      "category": "Webdesign & Webentwicklung",
+      "tools": [
+        "TYPESCRIPT",
+        "TAILWIND",
+        "FIGMA",
+        "NETLIFY"
+      ],
+      "imageAlt": "Website-Vorschau von Towarowa 41",
+      "websiteLabel": "Website besuchen",
+      "sections": [
+        {
+          "title": "Überblick:",
+          "intro": "Towarowa 41 ist ein Premium-Apartment für Gäste, die einen komfortablen und stilvollen Aufenthalt mitten in der Stadt suchen.\n\nDie Website sollte den besonderen Charakter der Unterkunft zeigen, wichtige Ausstattungsmerkmale hervorheben und auf allen Geräten ein reibungsloses Erlebnis bieten."
+        },
+        {
+          "title": "Ansatz:",
+          "intro": "Ziel war ein digitaler Auftritt, der Qualität und Atmosphäre der Unterkunft widerspiegelt und Informationen leicht zugänglich macht.\n\nUnser Fokus lag auf:",
+          "items": [
+            "Einem klaren, eleganten visuellen Design, inspiriert von hochwertigen Boutique-Hotels",
+            "Grosszügigen, hochwertigen Bildern, die Apartment und Umgebung zeigen",
+            "Klarer Darstellung von Ausstattung, Anreiseinformationen und lokalen Highlights",
+            "Einem integrierten Buchungssystem für eine einfache Reservierung",
+            "Responsiven Layouts für Desktop, Tablet und Smartphone"
+          ]
+        },
+        {
+          "title": "Ergebnis:",
+          "intro": "Entstanden ist eine moderne, hochwertige Website, die das Apartment wirkungsvoll präsentiert und gleichzeitig einfach zu nutzen bleibt.\n\nBesucher können die Unterkunft erkunden, nahegelegene Orte entdecken, wichtige Informationen finden und über einen klaren Buchungsablauf reservieren."
+        }
+      ],
+      "metrics": [
+        {
+          "value": "~20%",
+          "description": "geschätzte Steigerung direkter Buchungsanfragen seit dem Website-Launch"
+        },
+        {
+          "value": "~10 Std.",
+          "description": "monatlich eingespart durch weniger manuelle Buchungskoordination und wiederkehrende Gästeanfragen"
+        }
+      ]
+    },
+    "expense-receipt-automation": {
+      "title": "Automatisierte Spesenverarbeitung",
+      "client": "Brooksmiller & Partners AG",
+      "date": "August 2025",
+      "industry": "Executive Search",
+      "category": "KI-Automatisierung",
+      "tools": [
+        "OUTLOOK",
+        "N8N",
+        "ONEDRIVE",
+        "EXCEL",
+        "OCR + KI-EXTRAKTION"
+      ],
+      "imageAlt": "Workflow für Spesenbeleg-Automatisierung",
+      "sections": [
+        {
+          "title": "Vorher:",
+          "intro": "Spesen wurden manuell erfasst. Belege kamen per E-Mail und Post. Das führte dazu, dass:",
+          "items": [
+            "Belege manuell verarbeitet wurden, mit hohem Fehlerrisiko.",
+            "Dateien uneinheitlich in verschiedenen Ordnern lagen.",
+            "manuelle Eingaben in Excel zu fehlenden Belegen und Verzögerungen führten."
+          ]
+        },
+        {
+          "title": "Nachher:",
+          "intro": "Belege werden jetzt per E-Mail oder Telegram gesendet und automatisch verarbeitet.",
+          "items": [
+            "Bilder und PDFs werden per OCR ausgelesen und bereinigt.",
+            "Datum, Betrag, Währung und Händler werden mit KI erkannt.",
+            "Dateien werden korrekt benannt und im passenden monatlichen OneDrive-Ordner abgelegt.",
+            "Daten werden in die richtige Excel-Tabelle eingetragen (EUR oder CHF).",
+            "Alles bleibt sauber organisiert und bereit für die Spesenprüfung."
+          ]
+        },
+        {
+          "title": "Wirkung:",
+          "intro": "Eine mühsame monatliche Aufgabe wurde zu einem sauberen, zuverlässigen Workflow, der im Hintergrund läuft.",
+          "items": [
+            "~70% weniger manueller Administrationsaufwand",
+            "Weniger Fehler und fehlende Belege",
+            "Einheitliche Dateinamen und strukturierte Ablage",
+            "Effizientere Abläufe mit weniger Aufwand"
+          ]
+        }
+      ],
+      "testimonial": {
+        "quote": "We were spending a significant amount of time processing receipts and expenses manually. The automation now extracts the information, files the documents, and updates our records automatically, saving us hours of work every month. It has taken away one of the most repetitive administrative tasks in our firm and we are incredibly grateful to the Moniré team for delivering such a practical and effective solution.",
+        "author": "Margaret Rikhof",
+        "role": "Brooksmiller & Partners"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "effectiveDate": "Stand: Februar 2026",
+    "intro": "Diese Datenschutzerklärung erklärt, wie Moniré („wir“, „uns“ und „unser“) personenbezogene Daten erhebt, nutzt und schützt, wenn Sie unsere Website besuchen oder mit unseren Leistungen interagieren.",
+    "sections": [
+      {
+        "title": "Welche Informationen wir erfassen",
+        "body": "Wir erfassen folgende Arten von Informationen:",
+        "items": [
+          "<strong>Nutzungsdaten:</strong> Über Google Analytics erfassen wir anonymisierte Informationen zur Website-Nutzung, zum Beispiel Gerätetyp, Browser, besuchte Seiten, Verweildauer und ungefähren Standort (Stadt oder Region). Diese Daten identifizieren Sie nicht persönlich.",
+          "<strong>Daten aus dem Kontaktformular:</strong> Wenn Sie unser Kontaktformular senden, erfassen wir Ihren Namen, Ihre E-Mail-Adresse und alle weiteren Informationen, die Sie freiwillig angeben.",
+          "<strong>Downloads des Projektbriefings:</strong> Wenn Sie unser Projektbriefing herunterladen, können wir anonyme Analysedaten erfassen, zum Beispiel die Anzahl der Downloads. Persönliche Informationen erfassen wir dabei nicht, ausser Sie senden uns das ausgefüllte Briefing später zurück."
+        ]
+      },
+      {
+        "title": "Wie wir Ihre Informationen nutzen",
+        "body": "Wir nutzen Ihre Informationen, um:",
+        "items": [
+          "unsere Website und die Nutzererfahrung zu verbessern.",
+          "auf Ihre Anfrage zu antworten und mit Ihnen zu kommunizieren.",
+          "freiwillig bereitgestellte Informationen aus einem Projektbriefing zu prüfen, um Angebote oder Leistungen vorzubereiten.",
+          "Website-Performance, Analytics und Sicherheit zu gewährleisten."
+        ]
+      },
+      {
+        "title": "Rechtsgrundlage der Verarbeitung",
+        "body": "Wenn Sie sich in der EU/EWR, im Vereinigten Königreich oder in einer anderen GDPR-relevanten Region befinden, verarbeiten wir Ihre Daten auf Grundlage von:",
+        "items": [
+          "<strong>Ihrer Einwilligung</strong>, wenn Sie ein Kontaktformular senden oder Informationen für Projektgespräche bereitstellen.",
+          "<strong>berechtigten Interessen</strong> für Analytics, Website-Optimierung und Sicherheit.",
+          "<strong>vertraglicher Notwendigkeit</strong>, wenn wir mit Ihnen über potenzielle oder laufende Projekte kommunizieren."
+        ],
+        "after": "Sie können Cookies über die Einstellungen Ihres Browsers kontrollieren."
+      },
+      {
+        "title": "Cookies und Google Analytics",
+        "body": "Unsere Website nutzt Google Analytics. Dabei können Cookies in Ihrem Browser gesetzt werden, damit wir verstehen, wie Besucher unsere Website nutzen. Google Analytics erfasst Informationen zur Nutzung unserer Website in anonymisierter oder pseudonymisierter Form. Sie können Google Analytics jederzeit deaktivieren, indem Sie das <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">Browser-Add-on zur Deaktivierung von Google Analytics</a> nutzen."
+      },
+      {
+        "title": "Datenspeicherung und Sicherheit",
+        "body": "Wir speichern personenbezogene Daten sicher und beschränken den Zugriff auf autorisierte Personen. Wir bewahren personenbezogene Daten nur so lange auf, wie dies für die in dieser Datenschutzerklärung beschriebenen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Wir verkaufen oder vermieten Ihre persönlichen Informationen nicht."
+      },
+      {
+        "title": "Weitergabe Ihrer Informationen",
+        "body": "Wir geben Informationen nur weiter, wenn:",
+        "items": [
+          "wir gesetzlich dazu verpflichtet sind.",
+          "es erforderlich ist, um mit Ihnen zu kommunizieren, beispielsweise über E-Mail-Dienstleister.",
+          "es zur Erbringung angefragter Leistungen erforderlich ist, etwa zur Vorbereitung eines Angebots."
+        ],
+        "after": "Wir geben Ihre Informationen nicht zu Marketingzwecken an Dritte weiter."
+      },
+      {
+        "title": "Ihre Datenschutzrechte (GDPR-Regionen)",
+        "body": "Sie haben das Recht:",
+        "items": [
+          "Auskunft über die von uns verarbeiteten personenbezogenen Daten zu verlangen.",
+          "Berichtigung oder Löschung zu verlangen.",
+          "Ihre Einwilligung jederzeit zu widerrufen.",
+          "die Einschränkung der Verarbeitung zu verlangen.",
+          "Datenübertragbarkeit zu verlangen."
+        ],
+        "after": "Um diese Rechte auszuüben, kontaktieren Sie uns unter: <a href=\"mailto:hello@monire.ch\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">hello@monire.ch</a>."
+      },
+      {
+        "title": "Links zu anderen Websites",
+        "body": "Unsere Website kann externe Links enthalten. Für deren Inhalte oder Datenschutzpraktiken sind wir nicht verantwortlich."
+      },
+      {
+        "title": "Änderungen dieser Datenschutzerklärung",
+        "body": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Die aktuelle Version ist immer auf dieser Seite verfügbar."
+      },
+      {
+        "title": "Kontakt",
+        "body": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder zur Verarbeitung Ihrer personenbezogenen Daten haben, kontaktieren Sie uns unter: <a href=\"mailto:hello@monire.ch\" class=\"text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline\">hello@monire.ch</a>."
+      }
+    ]
+  },
+  "insightsPosts": {
+    "website-builders-vs-custom-development": {
+      "slug": "website-builders-vs-custom-development",
+      "locale": "de",
+      "title": "Wie wir die richtige Website-Plattform für Ihr Unternehmen wählen",
+      "description": "Wie wir zwischen Website-Baukästen und individueller Entwicklung entscheiden — je nach Ziel, Wartung, SEO und langfristiger Passung.",
+      "seoTitle": "Website-Baukasten oder individuelle Entwicklung: die richtige Plattform wählen | Moniré Insights",
+      "seoDescription": "Wie wir zwischen Website-Baukasten und individueller Entwicklung wählen — basierend auf Geschäftszielen, SEO, Wartbarkeit und langfristigen Kosten.",
+      "keywords": [
+        "Website-Baukasten vs individuelle Entwicklung",
+        "Website-Plattform wählen",
+        "Website-Plattform für kleine Unternehmen",
+        "Webflow Website Entwicklung"
+      ],
+      "quickAnswer": "Wir wählen Plattformen danach aus, was langfristig zu Ihrem Unternehmen passt — nicht nach Trends oder technischem Hype.",
+      "primaryCta": {
+        "title": "Unsicher, welche Plattform zu Ihrem Unternehmen passt?",
+        "body": "Wir helfen Ihnen, eine Lösung zu wählen, die zu Ihren Zielen, Ihrem Team und Ihren Wachstumsplänen passt.",
+        "label": "Kostenlose Plattform-Beratung anfragen",
+        "href": "/contact"
+      },
+      "publishedAt": "2026-05-06",
+      "readTimeMinutes": 4,
+      "relatedSlugs": [
+        "why-your-website-might-be-losing-you-clients",
+        "what-ai-automation-actually-means-for-a-small-business"
+      ],
+      "faqItems": [
+        {
+          "question": "Ist Webflow gut für kleine Unternehmen?",
+          "answer": "Ja. Webflow eignet sich für viele kleine Unternehmen, weil es professionelle, schnelle Websites ermöglicht, die ohne grossen technischen Wartungsaufwand laufen."
+        },
+        {
+          "question": "Wann lohnt sich individuelle Entwicklung?",
+          "answer": "Wenn Ihr Unternehmen komplexe Logik, tiefe Integrationen oder produktähnliche Funktionen braucht, die ein Baukasten nicht zuverlässig abbilden kann."
+        },
+        {
+          "question": "Wie wählt ein Unternehmen die richtige Website-Plattform?",
+          "answer": "Wir richten die Plattform an Ihren Zielen, internen Abläufen und langfristigen Wartungsrealitäten aus — nicht an Trends."
+        },
+        {
+          "question": "Wann ist Webflow nicht die richtige Wahl?",
+          "answer": "Webflow ist weniger geeignet für komplexe Web-Apps, sehr individuelle Backend-Abläufe oder anspruchsvolle Nutzerkonten. In solchen Fällen ist individuelle Entwicklung meist sinnvoller."
+        },
+        {
+          "question": "Wo bekomme ich Beratung zur Website-Plattform in der Schweiz?",
+          "answer": "Moniré ist ein Webdesign- und Entwicklungsstudio in Zürich. Wir helfen Unternehmen in der Schweiz und international, die passende Plattform für langfristige Performance und einfache Wartung zu wählen."
+        }
+      ],
+      "contentHtml": "<p>Eine der einfachsten Arten, wie ein Website-Projekt teuer oder frustrierend wird: Man entscheidet sich zu früh für die falsche Plattform.</p><p>Wir haben mit vielen Website-Baukästen gearbeitet und auch vollständig individuell entwickelte Websites und Anwendungen gebaut. So denken wir wirklich über diese Entscheidung nach.</p><p>Es gibt nicht die eine Plattform, die für jedes Unternehmen passt. Die richtige Wahl hängt davon ab, was Ihre Website leisten muss, wer sie später verwaltet und wohin sich das Unternehmen entwickeln soll.</p><section aria-labelledby=\"start-with-needs\"><h2 id=\"start-with-needs\">Wir starten mit der Frage, was die Website leisten muss</h2><p>Bevor wir über Plattformen sprechen, möchten wir verstehen, welche Aufgabe die Website erfüllen soll.</p><p>Eine einfache Fünf-Seiten-Website für eine Beratung hat ganz andere Anforderungen als eine Mitgliederplattform, ein buchungsintensives Dienstleistungsunternehmen oder eine Website, die mit externen Tools verbunden werden muss. Die Plattform folgt den Anforderungen. Nicht umgekehrt.</p><p>Fragen, die wir früh stellen:</p><p>Werden Sie die Website selbst aktualisieren oder übernimmt das jemand anderes? Wie oft ändern sich Inhalte? Muss die Website mit anderen Tools verbunden werden? Wie wichtig ist die Designqualität für die Marke? Ist SEO ein wichtiger Schwerpunkt?</p><p>Die Antworten prägen alles, was danach kommt.</p></section><section aria-labelledby=\"why-webflow\"><h2 id=\"why-webflow\">Wann Webflow die richtige Wahl ist</h2><p>Viele der <a href=\"/#portfolio\" class=\"text-main-teal underline hover:no-underline\">Websites, die wir bauen</a>, sind Marketing-Websites, Websites für Dienstleistungsunternehmen oder CMS-basierte Seiten. Sie müssen gut aussehen, schnell laufen und ohne laufende technische Betreuung stabil bleiben. Genau da ist Webflow oft stark.</p><p>Der grösste praktische Vorteil ist: Webflow wartet die Plattform für Sie. Keine Plugins, die aktualisiert werden müssen. Keine Sicherheits-Updates, um die Sie sich kümmern müssen. Kein Risiko, dass zwei Tools plötzlich nicht mehr zusammenspielen. Im Alltag läuft die Website, ohne dass ständig jemand technisch nachsehen muss.</p><p>Auch die Performance ist sehr stark. Webflow-Websites laden schnell, sind sauber aufgebaut und für Suchmaschinen gut lesbar. Das ist bei Plattformen, die stark von Drittanbieter-Plugins abhängen, nicht immer der Fall.</p><p>Beim Design gibt uns Webflow mehr Freiheit als viele Baukästen. Jede Website, die wir bauen, soll die Identität des jeweiligen Unternehmens widerspiegeln und nicht wie eine Vorlage mit ausgetauschtem Logo wirken.</p><p>Wir empfehlen Webflow, wenn Designqualität wichtig ist, Performance und SEO Priorität haben und die Website zuverlässig laufen soll, ohne ständig technische Aufmerksamkeit zu brauchen.</p><aside class=\"insight-pullquote\" aria-label=\"Zusammenfassung zur Plattformwahl\"><p>Für die meisten kleinen Unternehmen ist die richtige Plattform die, die gut aussieht, zuverlässig läuft und nicht ständig technische Pflege braucht.</p></aside></section><section aria-labelledby=\"wordpress-note\"><h2 id=\"wordpress-note\">Ein Wort zu WordPress</h2><p>WordPress betreibt einen grossen Teil des Internets, und wir haben auch damit gebaut. Für Websites mit sehr vielen Inhalten oder Unternehmen, die bereits stark im WordPress-Ökosystem arbeiten, kann es weiterhin eine sinnvolle Option sein.</p><p>Trotzdem ist es nicht unsere erste Empfehlung. Der Hauptgrund ist Wartung. Plugins müssen aktualisiert werden, Sicherheitslücken können entstehen, und ohne regelmässige Pflege können Probleme entstehen oder die Website langsamer werden, ohne dass es sofort auffällt. Für kleine Teams, die sich nicht um Technik kümmern möchten, summiert sich dieser Aufwand schnell — und die laufenden Kosten werden am Anfang oft unterschätzt.</p><p>Eine gut gebaute WordPress-Website kann sehr gut funktionieren. Für die meisten kleinen Unternehmen gibt es heute aus unserer Sicht aber oft einfachere Optionen.</p></section><section aria-labelledby=\"custom-dev\"><h2 id=\"custom-dev\">Wann individuelle Entwicklung sinnvoll ist</h2><p>Manchmal geht ein Projekt über das hinaus, wofür Website-Baukästen gemacht sind. Wenn ein Unternehmen sehr individuelle Backend-Logik, komplexe Integrationen, appähnliche Funktionen oder anspruchsvolle Nutzersysteme braucht, ist individuelle Entwicklung oft die bessere Wahl.</p><p>Für solche komplexeren Projekte arbeiten wir meist mit modernen Frameworks wie React oder Next.js, damit individuelle Logik, Performance und langfristige Skalierbarkeit möglich sind.</p><p>Der Kompromiss sind Zeit, Kosten und laufende technische Verantwortung. Nicht jedes Unternehmen braucht eine komplett individuelle Lösung, auch wenn das beeindruckend klingt. Viele Unternehmen sind langfristig besser bedient mit einem einfacheren System, das ihr Team realistisch verwalten kann.</p></section><section aria-labelledby=\"what-we-balance\"><h2 id=\"what-we-balance\">Was wir wirklich abwägen</h2><p>Uns ist weniger wichtig, welche Plattform gerade am beliebtesten ist. Wichtiger ist, was wirklich zum Unternehmen passt.</p><p>Eine schöne Website bringt wenig, wenn jede Aktualisierung Stress macht. Eine hochindividuelle Lösung ist nicht automatisch besser, wenn sie unnötige Komplexität erzeugt. Und die günstigste Option am Anfang ist nicht immer die günstigste über die Zeit.</p><p>Meist suchen wir die richtige Balance zwischen Flexibilität, einfacher Nutzung, Performance, Wartbarkeit, Kosten und der Art, wie das Unternehmen im Alltag arbeitet.</p></section><section aria-labelledby=\"question-most\"><h2 id=\"question-most\">Die wichtigste Frage</h2><p>Plattformentscheidungen werden oft als technische Debatten geführt. Für die meisten Unternehmen ist die eigentliche Frage viel einfacher:</p><ul><li>Funktioniert das für das Team auch noch in zwei bis drei Jahren?</li><li>Fühlen sich die Menschen wohl dabei, Inhalte selbst zu aktualisieren?</li><li>Wird es mit der Zeit schwieriger oder teurer, die Website zu verwalten?</li></ul><p>Diese Fragen sind meistens wichtiger als die Plattform, die gerade im Trend ist.</p></section>"
+    },
+    "what-ai-automation-actually-means-for-a-small-business": {
+      "slug": "what-ai-automation-actually-means-for-a-small-business",
+      "locale": "de",
+      "title": "Was KI-Automatisierung für kleine Unternehmen wirklich bedeutet",
+      "description": "Ein praktischer Blick darauf, wie kleine Unternehmen wiederkehrende Abläufe automatisieren können, ohne die Kontrolle aus der Hand zu geben.",
+      "seoTitle": "Was KI-Automatisierung für kleine Unternehmen bedeutet | Moniré Insights",
+      "seoDescription": "Ein praktischer Leitfaden zu KI-Automatisierung für kleine Unternehmen: wo sie hilft, echte Beispiele und wie man startet.",
+      "keywords": [
+        "KI-Automatisierung für kleine Unternehmen",
+        "Workflow-Automatisierung kleine Unternehmen",
+        "Admin-Aufgaben automatisieren"
+      ],
+      "quickAnswer": "Für kleine Unternehmen bedeutet KI-Automatisierung meist, wiederkehrende Admin-Schritte zu reduzieren, während Menschen die Entscheidungen behalten.",
+      "primaryCta": {
+        "title": "Bereit, repetitive Arbeit zu reduzieren?",
+        "body": "Wir schauen uns Ihren aktuellen Workflow an und sagen ehrlich, wo Automatisierung wirklich helfen würde.",
+        "label": "Kostenlosen Workflow-Check buchen",
+        "href": "/contact"
+      },
+      "publishedAt": "2026-05-13",
+      "readTimeMinutes": 4,
+      "relatedSlugs": [
+        "website-builders-vs-custom-development",
+        "why-your-website-might-be-losing-you-clients"
+      ],
+      "faqItems": [
+        {
+          "question": "Was ist KI-Automatisierung für kleine Unternehmen?",
+          "answer": "Es geht um praktische Workflows, die wiederkehrende Aufgaben automatisieren, während Menschen Entscheidungen und Freigaben behalten."
+        },
+        {
+          "question": "Welche Aufgaben können kleine Unternehmen zuerst automatisieren?",
+          "answer": "Gute erste Ansätze sind Onboarding-E-Mails, Dokumentenablage, CRM-Updates, wiederkehrende Follow-ups und Übergaben zwischen Tools."
+        },
+        {
+          "question": "Müssen Unternehmen ihre bestehenden Tools ersetzen?",
+          "answer": "Meistens nicht. Wir verbinden Automatisierungen mit den Systemen, die Sie bereits nutzen, damit Verbesserungen in Ihren bestehenden Ablauf passen."
+        },
+        {
+          "question": "Was kostet Workflow-Automatisierung für kleine Unternehmen?",
+          "answer": "Viele Automatisierungen starten mit einem klar abgegrenzten Workflow statt mit einem grossen System. Die Kosten hängen von der Komplexität ab, und wir planen nach praktischem Nutzen — nicht danach, möglichst viel zu verkaufen."
+        },
+        {
+          "question": "Wo bekomme ich Hilfe für KI-Automatisierung in der Schweiz?",
+          "answer": "Moniré sitzt in Zürich und hilft kleinen und mittleren Unternehmen, praktische KI-Automatisierungen zu entwickeln. Wir arbeiten mit Kunden in der Schweiz und international."
+        },
+        {
+          "question": "Mit welchen Tools bauen Sie Automatisierungen?",
+          "answer": "Wir arbeiten häufig mit n8n, weil es viele Tools verbindet, die Unternehmen bereits nutzen — E-Mail, Tabellen, Cloud-Speicher oder CRMs. Je nach Projekt nutzen wir auch andere passende Lösungen."
+        }
+      ],
+      "contentHtml": "<p>Wenn Sie in letzter Zeit viel über KI gehört haben und sich fragen, ob das überhaupt etwas mit Ihrem Unternehmen zu tun hat: Damit sind Sie nicht allein.</p><p>Viele Gespräche über KI-Automatisierung richten sich an grosse Unternehmen mit hohen Budgets und eigenen Tech-Teams. Für kleine Unternehmen klingt das schnell teuer und zu technisch.</p><p>In der Praxis sind die wertvollsten Automatisierungen für kleine Unternehmen oft sehr einfach. Es sind die wiederkehrenden Aufgaben, die Teams jeden Tag manuell erledigen und die Woche für Woche Zeit fressen.</p><section aria-labelledby=\"not-replacing-people\"><h2 id=\"not-replacing-people\">Wie Automatisierung Menschen in Kontrolle lässt</h2><p>Die häufigste Sorge ist, dass Automatisierung bedeutet, Menschen würden ersetzt oder Entscheidungen an Maschinen abgegeben. Das ist nicht das, was wir bauen.</p><p>Bei jedem Workflow bleibt ein Mensch eingebunden. Die KI übernimmt die repetitiven, zeitaufwändigen Teile. Eine Person prüft, bestätigt und behält die Kontrolle. Ziel ist, dass die Zeit und das Urteilsvermögen Ihres Teams dort eingesetzt werden, wo sie wirklich gebraucht werden.</p></section><section aria-labelledby=\"in-practice\"><h2 id=\"in-practice\">Drei echte Beispiele für KI-Automatisierung in kleinen Unternehmen</h2><p>Hier sind drei Beispiele aus Projekten mit echten Kunden.</p><h3>1. Spesenbelege: weniger Admin, weniger Fehler</h3><p>Ein Kunde verbrachte jeden Monat Zeit damit, Spesenbelege manuell abzulegen, E-Mails zu suchen, Dateien umzubenennen und Zahlen in Tabellen einzutragen. Es war langsam, fehleranfällig und niemand machte es gern.</p><p>Heute kommen Belege per E-Mail an, werden automatisch ausgelesen und landen mit den richtigen Informationen im richtigen Ordner. Das Team prüft und bestätigt. Fertig.</p><p>Das Ergebnis: ein schnellerer, zuverlässigerer Prozess mit weniger Fehlern und einer sauberen Ablage, die jederzeit für die Prüfung bereit ist.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Ergebnis-Highlight\"><strong>~70 % weniger Aufwand für die Spesenverwaltung</strong><span>Eine kleine Workflow-Änderung mit messbarem operativem Effekt.</span></div><p><a href=\"/case-studies/expense-receipt-automation\" class=\"text-main-teal underline hover:no-underline\">Zur Case Study \"Spesenbelege\"</a></p><h3>2. Kunden-Onboarding: jeder nächste Schritt passiert automatisch</h3><p>Wenn ein Kunde ein Projekt bestätigt, passieren oft dieselben Dinge: Vertrag versenden, Onboarding-E-Mail schicken, Ordner erstellen, interne Aufgaben anlegen.</p><p>Das ist nicht kompliziert, braucht aber Zeit und man vergisst leicht einen Schritt.</p><p>Mit der richtigen Automatisierung passiert all das automatisch, sobald ein Projekt bestätigt ist. Jedes Mal, ohne dass jemand daran denken muss.</p><h3>3. Mitgliederverwaltung: eine Zusage aktualisiert alle Plattformen</h3><p>Wenn sich jemand für eine private Community bewirbt und angenommen wird, muss ein Account auf mehreren Plattformen erstellt werden. Diese Plattformen sprechen aber nicht automatisch miteinander.</p><p>Ohne Automatisierung bedeutet das: überall einzeln einloggen und dieselben Daten manuell eintragen.</p><p>Mit einem verbundenen Workflow löst die Annahme die Einrichtung auf allen Plattformen automatisch aus. Kein Copy-Paste, kein manuelles Setup und viel weniger Risiko, dass etwas vergessen geht.</p></section><section aria-labelledby=\"common-pattern\"><h2 id=\"common-pattern\">Die besten Automatisierungen betreffen wiederholbare Arbeit</h2><p>Alle drei Beispiele folgen demselben Muster:</p><p>Etwas passiert, danach folgen jedes Mal dieselben Schritte, und früher musste jemand jeden Schritt manuell erledigen.</p><p>Genau dort hilft Automatisierung oft am meisten.</p><p>Nicht bei kreativen Entscheidungen. Nicht bei Urteilsfragen. Sondern bei den wiederholbaren, vorhersehbaren Aufgaben, die still und leise Zeit kosten.</p><aside class=\"insight-pullquote\" aria-label=\"Automatisierungsprinzip\"><p>Automatisieren Sie die Routine. Behalten Sie menschliches Urteilsvermögen dort, wo es zählt.</p></aside></section><section aria-labelledby=\"setup-complexity\"><h2 id=\"setup-complexity\">Ist die Einrichtung kompliziert<span class=\"insight-heading-punctuation\">?</span></h2><p>Das muss sie nicht sein.</p><p>Wir bauen viele Workflows mit n8n. Damit lassen sich die Tools verbinden, die Ihr Unternehmen bereits nutzt — zum Beispiel E-Mail, Tabellen, Cloud-Speicher und CRMs.</p><p>Sie müssen dafür nicht Ihr bestehendes Setup ersetzen oder eine völlig neue Arbeitsweise lernen.</p><p>Die richtige Automatisierung passt sich an Ihre Arbeitsweise an, nicht umgekehrt.</p></section><section aria-labelledby=\"where-to-start-ai\"><h2 id=\"where-to-start-ai\">So finden Sie den ersten sinnvollen Workflow</h2><p>Der beste Startpunkt ist meistens die Aufgabe, die Sie am häufigsten machen und am wenigsten gern erledigen.</p><p>Wenn Sie regelmässig:</p><ul><li>Informationen zwischen Tools kopieren</li><li>immer wieder dieselben E-Mails versenden</li><li>dieselben Ordner oder Dokumente erstellen</li><li>Menschen manuell auf mehreren Plattformen einrichten</li><li>jede Woche kleine Admin-Aufgaben nachverfolgen</li></ul><p>dann gibt es wahrscheinlich einen Teil dieses Prozesses, der automatisiert werden kann.</p><p>Oft sind die besten Automatisierungen keine riesigen Systeme. Es sind kleine Workflows, die ein paar repetitive Schritte aus Ihrer Woche entfernen.</p></section>"
+    },
+    "why-your-website-might-be-losing-you-clients": {
+      "slug": "why-your-website-might-be-losing-you-clients",
+      "locale": "de",
+      "title": "Warum Ihre Website Ihnen möglicherweise Kunden kostet",
+      "description": "Sieben praktische Anzeichen, dass Ihre Website Kunden kosten könnte — plus ein kurzer Selbstcheck, womit Sie zuerst starten sollten.",
+      "seoTitle": "Warum Ihre Website Ihnen möglicherweise Kunden kostet | Moniré Insights",
+      "seoDescription": "Sieben praktische Anzeichen, dass Ihre Website Kunden kosten könnte — plus ein kurzer Selbstcheck, womit Sie zuerst starten sollten.",
+      "keywords": [
+        "Website verliert Kunden",
+        "Website Conversion verbessern",
+        "Website Fehler kleine Unternehmen",
+        "Website generiert keine Anfragen"
+      ],
+      "quickAnswer": "Wenn Besucher nicht schnell verstehen, was Sie anbieten, Ihnen vertrauen und den nächsten Schritt finden, kostet Ihre Website wahrscheinlich Anfragen.",
+      "primaryCta": {
+        "title": "Unsicher, ob Ihre Website ein Redesign braucht?",
+        "body": "Wir schauen uns Ihre aktuelle Website an und helfen Ihnen einzuschätzen, ob gezielte Verbesserungen reichen oder eine stärkere Grundlage sinnvoll ist.",
+        "label": "Kostenlose Website-Beratung buchen",
+        "href": "/contact"
+      },
+      "publishedAt": "2026-05-01",
+      "readTimeMinutes": 5,
+      "relatedSlugs": [
+        "website-builders-vs-custom-development",
+        "what-ai-automation-actually-means-for-a-small-business"
+      ],
+      "faqItems": [
+        {
+          "question": "Wie merke ich, ob meine Website Kunden kostet?",
+          "answer": "Wenn Besucher Ihr Angebot nicht schnell verstehen, den nächsten Schritt nicht finden oder früh abspringen, verliert Ihre Website wahrscheinlich Anfragen."
+        },
+        {
+          "question": "Wann lohnt sich ein kompletter Website-Neubau?",
+          "answer": "Wenn die bestehende Website strukturelle Probleme, veraltete Botschaften oder technische Grenzen hat, die kleine Korrekturen am Ende teurer machen als ein sauberer Neustart."
+        },
+        {
+          "question": "Kann ich meine Website selbst verbessern oder brauche ich Entwickler?",
+          "answer": "Kleine Inhaltsverbesserungen können Sie oft selbst machen. Wenn es um Conversion-Flows, technisches SEO, Geschwindigkeit oder Plattformgrenzen geht, kann professionelle Unterstützung sinnvoll sein."
+        },
+        {
+          "question": "Was sollte ich zuerst verbessern, um mehr Anfragen zu bekommen?",
+          "answer": "Starten Sie mit Klarheit und Handlung: eine klare Hero-Botschaft, ein primärer Call-to-Action und ein Kontaktweg, der auf dem Smartphone funktioniert. Das bringt oft am schnellsten Wirkung."
+        },
+        {
+          "question": "Wo bekomme ich professionelle Website-Hilfe in der Schweiz?",
+          "answer": "Moniré ist ein Webdesign- und Entwicklungsstudio in Zürich. Wir arbeiten mit kleinen und mittleren Unternehmen in der Schweiz und international, um Websites zu bauen, die überzeugen und performen."
+        }
+      ],
+      "contentHtml": "<p>Die meisten Unternehmer wissen, dass ihre Website nicht perfekt ist. Weniger merken, dass sie ihnen aktiv Kunden kosten könnte.</p><p>Das Problem: Eine Website kann ordentlich aussehen und trotzdem nicht funktionieren. Sie kann live sein, halbwegs gut gestaltet wirken und trotzdem für die Menschen unsichtbar sein, die Sie erreichen möchten. Oder sichtbar sein, aber niemanden überzeugen, Kontakt aufzunehmen.</p><p>Hier sind sieben Anzeichen, auf die Sie achten sollten.</p><section aria-labelledby=\"hero-section-problem\"><h2 id=\"hero-section-problem\">1. Ihr Hero-Bereich erklärt nicht, was Sie tun</h2><p>Der Hero-Bereich ist das Erste, was jemand auf Ihrer Website sieht. Sie haben nur wenige Sekunden, um eine Frage zu beantworten: Was macht dieses Unternehmen eigentlich?</p><p>Viele Hero-Bereiche schaffen das nicht. Sie beginnen mit einem Slogan, der gut klingt, aber nichts sagt. „Wir bringen Unternehmen voran.“ „Ihr Erfolg ist unsere Mission.“ „Wir denken weiter.“</p><p>Das sagt Besuchern nicht, was Sie anbieten, für wen Sie arbeiten oder warum sie bleiben sollten.</p><p>Ein einfacher Test: Decken Sie Ihr Logo ab und zeigen Sie die Seite jemandem, der Ihr Unternehmen nicht kennt. Versteht die Person innerhalb von fünf Sekunden, was Sie tun? Wenn nicht, braucht Ihr Hero-Bereich Arbeit.</p></section><section aria-labelledby=\"client-focused-content\"><h2 id=\"client-focused-content\">2. Der Inhalt spricht über Sie, nicht über Ihre Kunden</h2><p>Das ist einer der häufigsten Fehler — und einer, den man bei der eigenen Website schwer erkennt.</p><p>„Wir sind ein führender Anbieter von...“ „Wir haben über 20 Jahre Erfahrung...“ „Wir brennen für...“</p><p>Ihre Besucher kommen nicht auf die Website, weil sie zuerst alles über Sie wissen möchten. Sie kommen mit einem Problem. Sie möchten wissen, ob Sie es lösen können.</p><p>Der Perspektivwechsel ist einfach, aber wirkungsvoll. Statt „Wir bauen Websites für kleine Unternehmen“ wirkt „Eine Website, die wirklich Kunden bringt“ viel näher am Bedürfnis des Besuchers. Gleiche Information, anderer Fokus.</p><p>Lesen Sie Ihre Startseite durch und zählen Sie, wie viele Sätze mit „wir“ beginnen. Dann formulieren Sie diese Sätze aus Kundensicht.</p></section><section aria-labelledby=\"clear-cta\"><h2 id=\"clear-cta\">3. Es gibt keinen klaren nächsten Schritt</h2><p>Wenn jemand Ihre Website liest und weitermachen möchte: Was soll diese Person tun?</p><p>Wenn die Antwort nicht sofort klar ist, verlieren Sie Menschen. Besucher suchen nicht lange nach einer Kontaktmöglichkeit. Sie gehen.</p><p>Jede Seite sollte eine klare Hauptaktion haben. Nicht drei. Nicht einen Kontaktlink, der irgendwo im Footer zwischen sechs anderen Links steckt. Einen klaren nächsten Schritt, der sagt, was zu tun ist und was danach passiert.</p><p>Unsicher, ob Ihre Website diesen nächsten Schritt klar zeigt? Das ist eines der ersten Dinge, die wir bei neuen Projekten prüfen.</p><aside class=\"insight-pullquote\" aria-label=\"Wichtigste Erkenntnis\"><p>Ein klarer nächster Schritt auf jeder Seite ist besser als fünf konkurrierende Optionen.</p></aside></section><section aria-labelledby=\"smartphone-breaks\"><h2 id=\"smartphone-breaks\">4. Auf dem Smartphone funktioniert sie nicht richtig</h2><p>Mehr als 60% des Website-Traffics kommt von Smartphones. Wenn Ihre Website auf dem Smartphone nicht gut funktioniert, verlieren Sie möglicherweise mehr als die Hälfte Ihrer potenziellen Besucher, bevor sie überhaupt richtig gelesen haben.</p><p>Es geht nicht nur darum, dass Dinge auf kleineren Bildschirmen etwas anders aussehen. Zu kleine Buttons, Text, der aus dem Bildschirm läuft, Bilder, die nicht richtig skalieren, Menüs, die nicht öffnen — all das signalisiert: Diese Website wurde nicht für mich gebaut.</p><p>Nehmen Sie Ihr Smartphone und gehen Sie Ihre Website wirklich durch. Nicht nur kurz anschauen. Nutzen Sie sie so, wie ein neuer Besucher es tun würde.</p></section><section aria-labelledby=\"slow-loads\"><h2 id=\"slow-loads\">5. Sie lädt zu langsam</h2><p>Die meisten Menschen verlassen eine Seite, wenn sie länger als drei Sekunden lädt. Sie warten nicht, und sie kommen meist nicht zurück.</p><p>Langsame Websites verlieren Besucher, bevor Design, Texte oder Bilder überhaupt wirken können. Das gilt besonders auf dem Smartphone, wo Menschen oft weniger Geduld und schwächere Verbindungen haben.</p><p>Wenn Ihre Website langsam wirkt oder Besucher früh abspringen, lohnt sich ein Blick darauf. Kleine technische Verbesserungen können viel bringen. Wenn die Website aber wegen schwerer Vorlagen, unnötiger Plugins oder einer schwer wartbaren Plattform langsam ist, kann es sinnvoll sein, <a href=\"/insights/website-builders-vs-custom-development\" class=\"text-main-teal underline hover:no-underline\">die Plattform dahinter neu zu überdenken</a>.</p></section><section aria-labelledby=\"search-visibility\"><h2 id=\"search-visibility\">6. Sie erscheint nicht bei Google oder in KI-Suchen</h2><p>Nur weil eine Website live ist, heisst das nicht, dass Menschen sie finden.</p><p>Suchmaschinen wie Google und zunehmend auch KI-Tools wie ChatGPT müssen Ihre Website lesen, verstehen und indexieren können, bevor sie sie anzeigen. Wenn die technische Grundlage fehlt, ist Ihre Website praktisch unsichtbar — selbst für Menschen, die aktiv nach Ihrem Angebot suchen.</p><p>Viele Unternehmer prüfen das nie. Sie gehen davon aus, dass eine live geschaltete Website automatisch gefunden wird. Oft stimmt das nicht.</p><p>Eine einfache Frage: Wie würde ein neuer Kunde Sie finden, wenn er Ihren Namen noch nie gehört hat? Wenn der einzige Weg zur Website über Ihren Markennamen führt, arbeitet Ihre Website nicht genug für Sie.</p></section><section aria-labelledby=\"contact-form\"><h2 id=\"contact-form\">7. Anfragen über Ihr Kontaktformular kommen nicht an</h2><p>Das klingt unwahrscheinlich, aber wir haben es bei echten Websites mehr als einmal gesehen.</p><p>Formulare, die nie richtig mit einer E-Mail-Adresse verbunden wurden. Postfächer, die niemand mehr prüft. Bestätigungen, die im Spam landen. Ein potenzieller Kunde füllt das Formular aus, wartet auf Antwort, hört nichts und geht weiter.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Praktischer Check\"><strong>Einfacher Test: Senden Sie heute Ihr eigenes Formular ab.</strong><span>Wenn Sie die Anfrage nicht erhalten, erhalten Ihre Besucher sie wahrscheinlich auch nicht.</span></div></section><section aria-labelledby=\"quick-self-check\"><h2 id=\"quick-self-check\">Schneller Website-Selbstcheck</h2><p>Wenn Sie unsicher sind, ob Ihre Website Ihrem Unternehmen hilft oder schadet, starten Sie mit diesen Fragen:</p><ul class=\"insight-checklist\"><li>Versteht eine fremde Person innerhalb von fünf Sekunden, was Sie tun?</li><li>Ist die wichtigste Handlungsaufforderung leicht zu finden?</li><li>Spricht Ihre Startseite mehr über die Bedürfnisse Ihrer Kunden als über Ihr Unternehmen?</li><li>Funktioniert die Website reibungslos auf dem Smartphone?</li><li>Lädt sie schnell genug, um sich angenehm anzufühlen?</li><li>Können neue Kunden Sie über Suche oder KI-Tools finden?</li><li>Liefern Ihre Kontaktformulare wirklich Anfragen aus?</li></ul><p>Wenn Sie mehrere Fragen mit Nein beantworten, kostet Ihre Website Sie möglicherweise potenzielle Kunden, ohne dass Sie es bemerken.</p></section><section aria-labelledby=\"where-next\"><h2 id=\"where-next\">Wie es weitergehen kann</h2><p>Sie müssen nicht alles auf einmal reparieren. Starten Sie mit dem Punkt, der Sie gerade am wahrscheinlichsten Kunden kostet.</p><p><a href=\"/\" class=\"text-main-teal underline hover:no-underline\">Bei Moniré</a> helfen wir kleinen und mittleren Unternehmen zu erkennen, was funktioniert, was nicht funktioniert und welche Verbesserung zuerst den grössten Unterschied machen würde.</p></section>"
+    }
+  },
+  "seo": {
+    "routes": {
+      "/": {
+        "title": "Moniré | Webdesign, Webentwicklung & KI-Automatisierungen in Zürich, Schweiz",
+        "description": "Moniré ist ein digitales Studio für Webdesign, Webentwicklung und KI-Automatisierungen. In Zürich ansässig, weltweit tätig.",
+        "keywords": [
+          "Moniré",
+          "Webdesign Zürich",
+          "Webentwicklung Zürich",
+          "Website-Design Schweiz",
+          "KI-Automatisierung Schweiz",
+          "Workflow-Automatisierung Zürich",
+          "Webflow-Entwicklung Zürich",
+          "Webdesign für kleine Unternehmen Schweiz"
+        ]
+      },
+      "/contact": {
+        "title": "Kontakt Moniré | Webdesign, Webentwicklung & KI-Automatisierungen",
+        "description": "Kontaktieren Sie Moniré für Webdesign, Webentwicklung und KI-Automatisierungen in Zürich und der ganzen Schweiz."
+      },
+      "/insights": {
+        "title": "Insights zu Webdesign, Automatisierung & digitaler Strategie | Moniré",
+        "description": "Praktische Artikel von Moniré zu Webdesign, Webentwicklung, SEO, KI-Automatisierung und digitalen Entscheidungen für kleine und mittlere Unternehmen.",
+        "keywords": [
+          "Webdesign-Beratung",
+          "Website-Strategie",
+          "Website-Tipps für kleine Unternehmen",
+          "KI-Automatisierung für kleine Unternehmen",
+          "Webdesign Schweiz",
+          "Workflow-Automatisierung Schweiz",
+          "Webflow Schweiz"
+        ]
+      },
+      "/privacy": {
+        "title": "Datenschutzrichtlinie | Moniré",
+        "description": "Datenschutzrichtlinie für Moniré, ein digitales Studio für Webdesign, Webentwicklung und KI-Automatisierungen."
+      },
+      "/apply": {
+        "title": "Bewerben | Moniré",
+        "description": "Bewerben Sie sich für kostenlose Projektunterstützung von Moniré für eine Non-Profit-Organisation oder sinnvolle Initiative."
+      },
+      "/case-studies/expense-receipt-automation": {
+        "title": "Case Study Spesenbeleg-Automatisierung | Moniré",
+        "description": "Case Study: ein von Moniré entwickelter KI-Automatisierungsworkflow für die Verarbeitung von Spesenbelegen."
+      },
+      "/case-studies/snip-squad": {
+        "title": "Snip Squad Case Study | Moniré",
+        "description": "Case Study: Webdesign- und Entwicklungsarbeit von Moniré für Snip Squad."
+      },
+      "/case-studies/portco-hr-collective": {
+        "title": "PortCo HR Collective Case Study | Moniré",
+        "description": "Case Study: Branding, Webdesign, Entwicklung und KI-Automatisierung von Moniré für PortCo HR Collective."
+      },
+      "/case-studies/systemically": {
+        "title": "SystemicAlly Consulting-Website Case Study | Moniré",
+        "description": "Case Study: Sehen Sie, wie Moniré eine professionelle, responsive Website für SystemicAlly entwickelt hat, eine Beratung für Leadership und Transformation."
+      },
+      "/case-studies/towarowa": {
+        "title": "Towarowa 41 Apartment-Website Case Study | Moniré",
+        "description": "Case Study: Sehen Sie, wie Moniré eine hochwertige, responsive Website für das Premium-Apartment Towarowa 41 gestaltet und entwickelt hat."
+      }
     }
   }
 }
