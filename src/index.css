@@ -280,9 +280,11 @@
     @apply mb-2 font-body text-[1.03rem] leading-[1.7] text-foreground/85;
   }
 
-  .insight-prose a {
-    @apply text-main-teal underline underline-offset-4 hover:no-underline;
-  }
+.insight-prose a {
+  @apply text-main-teal underline underline-offset-4;
+  text-underline-offset: 0.24em;
+  text-decoration-thickness: 0.055em;
+}
 
   .insight-prose .insight-checklist {
     @apply list-none pl-0;
@@ -567,10 +569,14 @@
 }
 
 a.underline,
+a.text-gold-text.underline,
+a.text-gold.underline,
+a.text-gold-hover.underline,
+a[class*="text-gold"].underline,
 a[style*="text-decoration:underline"],
 a[style*="text-decoration: underline"] {
-  text-underline-offset: 0.16em;
-  text-decoration-thickness: 0.045em;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.05em;
   text-decoration-skip-ink: auto;
 }
 
