@@ -569,6 +569,10 @@
 }
 
 a.underline,
+a.text-gold-text.underline,
+a.text-gold.underline,
+a.text-gold-hover.underline,
+a[class*="text-gold"].underline,
 a[style*="text-decoration:underline"],
 a[style*="text-decoration: underline"] {
   text-underline-offset: 0.2em;
