@@ -346,7 +346,7 @@ const InsightPost = () => {
                 <p className="font-body text-base text-[#BFD0D6] mb-5">{post.primaryCta.body}</p>
                 <Link
                   to={localePath(post.primaryCta.href)}
-                  className="inline-flex text-[0.875rem] font-body text-[#F1D69A] border rounded-full px-5 py-1.5 transition-colors hover:text-[#F6DEAB]"
+                  className="inline-flex text-[0.875rem] font-body text-[#F1D69A] border rounded-full px-5 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:text-[#F6DEAB] hover:border-[#F1D69A]/75 hover:bg-white/[0.04] hover:shadow-[0_6px_18px_rgba(2,28,36,0.18)]"
                   style={{ borderColor: "rgba(183, 152, 78, 0.5)" }}
                 >
                   {post.primaryCta.label} →
