@@ -451,6 +451,12 @@
       "industry": "Branża",
       "website": "Strona internetowa"
     },
+    "categoryLabels": {
+      "branding": "Branding",
+      "webDesignDevelopment": "Web Design & Development",
+      "webDevelopment": "Tworzenie stron internetowych",
+      "aiAutomations": "Automatyzacje AI"
+    },
     "visitWebsite": "Odwiedź stronę",
     "liveNote": "Aktywna strona może różnić się od pierwotnej wersji, ponieważ jest zarządzana przez klienta.",
     "keyResults": "Kluczowe wyniki",

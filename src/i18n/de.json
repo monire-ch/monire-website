@@ -451,6 +451,12 @@
       "industry": "Branche",
       "website": "Website"
     },
+    "categoryLabels": {
+      "branding": "Branding",
+      "webDesignDevelopment": "Webdesign & Entwicklung",
+      "webDevelopment": "Webentwicklung",
+      "aiAutomations": "KI-Automatisierungen"
+    },
     "visitWebsite": "Website besuchen",
     "liveNote": "Die Live-Website kann von der ursprünglichen Version abweichen, weil sie vom Kunden selbst verwaltet wird.",
     "keyResults": "Wichtigste Ergebnisse",

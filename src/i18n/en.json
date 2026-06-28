@@ -451,6 +451,12 @@
       "industry": "Industry",
       "website": "Website"
     },
+    "categoryLabels": {
+      "branding": "Branding",
+      "webDesignDevelopment": "Web Design & Development",
+      "webDevelopment": "Web Development",
+      "aiAutomations": "AI Automations"
+    },
     "visitWebsite": "Visit Website",
     "liveNote": "Live website may differ from the original version as the site is managed by the client.",
     "keyResults": "Key results",
