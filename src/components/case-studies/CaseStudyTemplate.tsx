@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import type { CaseStudyConfig } from '@/config/caseStudies';
+import type { CaseStudyCategory, CaseStudyConfig } from '@/config/caseStudies';
 import { trackEvent } from '@/lib/analytics';
 import { useLocalePath } from '@/hooks/useLocalePath';
 
@@ -11,11 +11,16 @@ type CaseStudyTemplateProps = {
   project: CaseStudyConfig;
 };
 
+const categoryPillClassName =
+  "text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground";
+
 const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   const { t } = useTranslation();
   const localePath = useLocalePath();
   const isScrollablePreview = project.imageScrollable ?? true;
   const hasSections = Boolean(project.sections && project.sections.length > 0);
+  const categories = project.categories?.length ? project.categories : project.category ? [project.category] : [];
+  const categoryLabels = categories.map((category) => t(`caseStudy.categoryLabels.${category as CaseStudyCategory}`));
   const contentGridColumnsClassName = hasSections
     ? 'md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]'
     : 'md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]';
@@ -35,11 +40,15 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.industry')}</span>
         <span className="text-sm font-body text-foreground">{project.industry}</span>
       </div>
-      <div className="flex justify-between items-center py-4 border-b border-border">
+      <div className="flex justify-between items-start py-4 border-b border-border gap-4">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.category')}</span>
-        <span className="text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground">
-          {project.category}
-        </span>
+        <div className="flex flex-wrap gap-2 justify-end">
+          {categoryLabels.map((categoryLabel) => (
+            <span key={categoryLabel} className={categoryPillClassName}>
+              {categoryLabel}
+            </span>
+          ))}
+        </div>
       </div>
       <div className="flex justify-between items-start py-4 border-b border-border">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.tools')}</span>
@@ -99,7 +108,13 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <span className="eyebrow-pill eyebrow-pill-light mb-6 md:mb-8">{project.category}</span>
+            <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+              {categoryLabels.map((categoryLabel) => (
+                <span key={categoryLabel} className="eyebrow-pill eyebrow-pill-light">
+                  {categoryLabel}
+                </span>
+              ))}
+            </div>
             <h1
               className={`font-display text-4xl md:text-5xl lg:text-6xl text-main-teal leading-tight ${project.subtitle ? 'mb-4 md:mb-8' : 'mb-8 md:mb-16'}`}>
               {project.title}

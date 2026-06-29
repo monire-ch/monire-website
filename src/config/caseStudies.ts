@@ -29,13 +29,16 @@ export type CaseStudyVisualImage = {
   scrollable?: boolean;
 };
 
+export type CaseStudyCategory = "branding" | "webDesignDevelopment" | "webDevelopment" | "aiAutomations";
+
 export type CaseStudyConfig = {
   title?: string;
   subtitle?: string;
   client?: string;
   date?: string;
   industry?: string;
-  category?: string;
+  category?: CaseStudyCategory;
+  categories?: CaseStudyCategory[];
   tools?: string[];
   image?: string;
   imageAlt?: string;
@@ -60,12 +63,15 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     image: snipSquad,
     imageScrollable: true,
     websiteUrl: "https://snipsquad.org",
+    categories: ["webDesignDevelopment"],
     sections: [section(), section(), section()],
     testimonial: testimonial(),
   },
   "portco-hr-collective": {
     image: portco,
     imageScrollable: true,
+    websiteUrl: "https://www.portcohrcollective.com/",
+    categories: ["branding", "webDesignDevelopment", "aiAutomations"],
     sections: [
       section({
         src: portcoLogin,
@@ -78,18 +84,21 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     image: systemically,
     imageScrollable: true,
     websiteUrl: "https://www.systemically.ch",
+    categories: ["webDevelopment"],
     sections: [section(), section(), section()],
   },
   towarowa: {
     image: towarowa,
     imageScrollable: true,
     websiteUrl: "https://towarowa.netlify.app/",
+    categories: ["webDesignDevelopment"],
     sections: [section(), section(), section()],
     metrics: [metric(), metric()],
   },
   "expense-receipt-automation": {
     image: n8nPreview,
     imageScrollable: false,
+    categories: ["aiAutomations"],
     sections: [section(), section(), section()],
     testimonial: testimonial(),
   },
