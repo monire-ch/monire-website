@@ -83,6 +83,7 @@ const BASE_PRERENDER_ROUTES = [
   '/insights',
   ...INSIGHTS_ROUTES,
   '/case-studies/expense-receipt-automation',
+  '/case-studies/labsift',
   '/case-studies/snip-squad',
   '/case-studies/portco-hr-collective',
   '/case-studies/systemically',

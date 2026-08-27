@@ -9,6 +9,7 @@ import portcoPreview from '@/assets/portfolio/portco_full.webp';
 import systemically from '@/assets/portfolio/systemically_full.webp';
 import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
+import labsiftPreview from '@/assets/portfolio/labsift-og-image.webp';
 import { trackEvent } from '@/lib/analytics';
 import { useLocalePath } from '@/hooks/useLocalePath';
 
@@ -18,6 +19,7 @@ const projectImagesByLink: Record<string, string> = {
   '/case-studies/systemically': systemically,
   '/case-studies/towarowa': towarowa,
   '/case-studies/expense-receipt-automation': n8nPreview,
+  '/case-studies/labsift': labsiftPreview,
 };
 
 const portfolioNavGroups = [
@@ -34,6 +36,7 @@ const portfolioNavGroups = [
     titleKey: 'portfolio.navGroups.aiAutomation.title',
     items: [
       { id: 'ai-expense-receipts', labelKey: 'portfolio.navGroups.aiAutomation.expenseReceipts', targetLink: '/case-studies/expense-receipt-automation' },
+      { id: 'automations-labsift', labelKey: 'portfolio.navGroups.aiAutomation.labsift', targetLink: '/case-studies/labsift' },
       { id: 'ai-community-membership', labelKey: 'portfolio.navGroups.aiAutomation.communityMembership', targetLink: '/case-studies/portco-hr-collective' },
     ],
   },
@@ -167,11 +170,11 @@ const PortfolioSection = () => {
                         }
                         className="block group"
                       >
-                        <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${project.link === '/case-studies/expense-receipt-automation' ? 'bg-[#0a0a0a]' : 'bg-neutral-card'}`}>
+                        <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${project.link === '/case-studies/expense-receipt-automation' ? 'bg-[#0a0a0a]' : project.link === '/case-studies/labsift' ? 'bg-white' : 'bg-neutral-card'}`}>
                           <img
                             src={projectImagesByLink[project.link]}
                             alt={`${project.title} website preview`}
-                            className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${project.link === '/case-studies/expense-receipt-automation' ? 'object-contain object-center' : 'object-cover object-top'}`}
+                            className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${project.link === '/case-studies/expense-receipt-automation' || project.link === '/case-studies/labsift' ? 'object-contain object-center' : 'object-cover object-top'}`}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                         </div>

@@ -4,6 +4,7 @@ import portcoLogin from "@/assets/portfolio/portco_login.webp";
 import systemically from "@/assets/portfolio/systemically_full.webp";
 import towarowa from "@/assets/portfolio/towarowa_full.webp";
 import n8nPreview from "@/assets/portfolio/n8n.webp";
+import labsift from "@/assets/portfolio/labsift-og-image.webp";
 
 export type CaseStudySection = {
   title?: string;
@@ -29,7 +30,11 @@ export type CaseStudyVisualImage = {
   scrollable?: boolean;
 };
 
-export type CaseStudyCategory = "branding" | "webDesignDevelopment" | "webDevelopment" | "aiAutomations";
+export type CaseStudyCategory =
+  | "branding"
+  | "webDesignDevelopment"
+  | "webDevelopment"
+  | "automations";
 
 export type CaseStudyConfig = {
   title?: string;
@@ -71,7 +76,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     image: portco,
     imageScrollable: true,
     websiteUrl: "https://www.portcohrcollective.com/",
-    categories: ["branding", "webDesignDevelopment", "aiAutomations"],
+    categories: ["branding", "webDesignDevelopment", "automations"],
     sections: [
       section({
         src: portcoLogin,
@@ -98,8 +103,15 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
   "expense-receipt-automation": {
     image: n8nPreview,
     imageScrollable: false,
-    categories: ["aiAutomations"],
+    categories: ["automations"],
     sections: [section(), section(), section()],
     testimonial: testimonial(),
+  },
+  labsift: {
+    image: labsift,
+    imageScrollable: false,
+    websiteUrl: "https://lab-sift.com",
+    categories: ["automations"],
+    sections: [section(), section(), section()],
   },
 };

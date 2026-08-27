@@ -211,7 +211,7 @@
       "Veterinary",
       "Consulting",
       "Real Estate",
-      "AI Automation"
+      "Automations"
     ],
     "projects": [
       {
@@ -240,9 +240,15 @@
       },
       {
         "title": "Expense Receipt Automation",
-        "category": "AI Automation",
+        "category": "Automations",
         "desc": "Automated expense receipt processing workflow using n8n, eliminating manual data entry and saving hours of repetitive work.",
         "link": "/case-studies/expense-receipt-automation"
+      },
+      {
+        "title": "LabSift",
+        "category": "Automations",
+        "desc": "A browser-based tool for physicians and veterinarians that turns laboratory report PDFs into a clean, copy-ready list of results for patient notes, with all processing kept local to the device.",
+        "link": "/case-studies/labsift"
       }
     ],
     "previousProject": "Previous project",
@@ -256,8 +262,9 @@
         "realEstate": "Real estate"
       },
       "aiAutomation": {
-        "title": "AI automation",
+        "title": "Automations",
         "expenseReceipts": "Expense receipts",
+        "labsift": "Medical lab report extraction",
         "communityMembership": "Community membership"
       }
     }
@@ -455,7 +462,7 @@
       "branding": "Branding",
       "webDesignDevelopment": "Web Design & Development",
       "webDevelopment": "Web Development",
-      "aiAutomations": "AI Automations"
+      "automations": "Automations"
     },
     "visitWebsite": "Visit Website",
     "liveNote": "Live website may differ from the original version as the site is managed by the client.",
@@ -571,7 +578,7 @@
       "client": "PortCo HR Collective",
       "date": "2026",
       "industry": "Private Equity / Professional Networks",
-      "category": "Branding, Web Design & Development, AI Automation",
+      "category": "Branding, Web Design & Development, Automations",
       "tools": [
         "WEBFLOW",
         "MEMBERSTACK",
@@ -689,7 +696,7 @@
       "client": "Brooksmiller & Partners AG",
       "date": "August 2025",
       "industry": "Executive Search",
-      "category": "AI Automation",
+      "category": "Automations",
       "tools": [
         "OUTLOOK",
         "N8N",
@@ -735,6 +742,55 @@
         "author": "Margaret Rikhof",
         "role": "Brooksmiller & Partners"
       }
+    },
+    "labsift": {
+      "title": "LabSift",
+      "subtitle": "Turning lab reports into copy-ready results",
+      "date": "August 2026",
+      "industry": "Healthcare & Clinical Software",
+      "category": "Automations",
+      "tools": [
+        "REACT",
+        "TYPESCRIPT",
+        "CLIENT-SIDE OCR",
+        "PDF PARSING"
+      ],
+      "imageAlt": "LabSift interface turning a laboratory report into a copy-ready list of results",
+      "websiteLabel": "Visit LabSift",
+      "sections": [
+        {
+          "title": "Before:",
+          "intro": "Physicians and veterinarians receive lab results as PDFs or scans and have to get the relevant values into their patient notes. That meant:",
+          "items": [
+            "Opening each report and scanning for the values that matter.",
+            "Copying or retyping values one at a time, with the risk of transcription errors.",
+            "Reconciling results from multiple reports by hand.",
+            "Inconsistent formatting from one note to the next.",
+            "A slow, repetitive task that nobody enjoyed."
+          ]
+        },
+        {
+          "title": "After:",
+          "intro": "Clinicians add their lab reports, select the values they need, and copy a clean, formatted results list.",
+          "items": [
+            "Values are selected across multiple reports at once.",
+            "Each extracted value links to a screenshot of its original location in the report for one-click verification.",
+            "Multiple reports are processed together, with results grouped by report date.",
+            "Output is a consistent, copy-ready list for patient notes.",
+            "All processing runs locally in the browser, so reports are never sent to or stored on a server."
+          ]
+        },
+        {
+          "title": "Impact:",
+          "intro": "A manual, error-prone step became a fast and consistent one. Built by clinicians who face this task themselves.",
+          "items": [
+            "Less time spent on manual transcription",
+            "Fewer transcription errors",
+            "Consistent formatting across patient notes",
+            "Patient data stays confidential by design"
+          ]
+        }
+      ]
     }
   },
   "privacy": {
@@ -1030,6 +1086,10 @@
       "/case-studies/towarowa": {
         "title": "Towarowa 41 Apartment Website Case Study | Moniré",
         "description": "See how Moniré designed and developed a refined, responsive website for the Towarowa 41 premium apartment rental."
+      },
+      "/case-studies/labsift": {
+        "title": "LabSift Case Study | Moniré",
+        "description": "Case study: LabSift, a browser-based tool by Moniré that turns laboratory reports into copy-ready results for clinical notes, with all processing kept on the user's device."
       }
     }
   }

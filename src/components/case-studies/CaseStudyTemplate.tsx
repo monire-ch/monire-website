@@ -28,10 +28,12 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
 
   const metadataBlock = (
     <div>
-      <div className="flex justify-between items-center py-4 border-b border-border">
-        <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.client')}</span>
-        <span className="text-sm font-body text-foreground">{project.client}</span>
-      </div>
+      {project.client ? (
+        <div className="flex justify-between items-center py-4 border-b border-border">
+          <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.client')}</span>
+          <span className="text-sm font-body text-foreground">{project.client}</span>
+        </div>
+      ) : null}
       <div className="flex justify-between items-center py-4 border-b border-border">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.date')}</span>
         <span className="text-sm font-body text-foreground">{project.date}</span>
