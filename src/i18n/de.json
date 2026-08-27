@@ -211,7 +211,7 @@
       "Veterinärmedizin",
       "Consulting",
       "Immobilien",
-      "KI-Automatisierung"
+      "Automatisierungen"
     ],
     "projects": [
       {
@@ -240,9 +240,15 @@
       },
       {
         "title": "Spesenbeleg-Automatisierung",
-        "category": "KI-Automatisierung",
+        "category": "Automatisierungen",
         "desc": "Ein automatisierter Workflow mit n8n, der Spesenbelege verarbeitet und manuelle Dateneingabe deutlich reduziert.",
         "link": "/case-studies/expense-receipt-automation"
+      },
+      {
+        "title": "LabSift",
+        "category": "Automatisierungen",
+        "desc": "Ein browserbasiertes Tool für Ärzt:innen und Tierärzt:innen, das Laborbefund-PDFs in eine saubere, kopierfertige Ergebnisliste für die Patientendokumentation verwandelt.",
+        "link": "/case-studies/labsift"
       }
     ],
     "previousProject": "Vorheriges Projekt",
@@ -256,8 +262,9 @@
         "realEstate": "Immobilien"
       },
       "aiAutomation": {
-        "title": "KI-Automatisierung",
+        "title": "Automatisierungen",
         "expenseReceipts": "Spesenbelege",
+        "labsift": "Extraktion von Laborbefunden",
         "communityMembership": "Community-Plattform"
       }
     }
@@ -455,7 +462,7 @@
       "branding": "Branding",
       "webDesignDevelopment": "Webdesign & Entwicklung",
       "webDevelopment": "Webentwicklung",
-      "aiAutomations": "KI-Automatisierungen"
+      "automations": "Automatisierungen"
     },
     "visitWebsite": "Website besuchen",
     "liveNote": "Die Live-Website kann von der ursprünglichen Version abweichen, weil sie vom Kunden selbst verwaltet wird.",
@@ -571,7 +578,7 @@
       "client": "PortCo HR Collective",
       "date": "2026",
       "industry": "Private Equity / Professionelle Netzwerke",
-      "category": "Branding, Webdesign & Entwicklung, KI-Automatisierung",
+      "category": "Branding, Webdesign & Entwicklung, Automatisierungen",
       "tools": [
         "WEBFLOW",
         "MEMBERSTACK",
@@ -689,7 +696,7 @@
       "client": "Brooksmiller & Partners AG",
       "date": "August 2025",
       "industry": "Executive Search",
-      "category": "KI-Automatisierung",
+      "category": "Automatisierungen",
       "tools": [
         "OUTLOOK",
         "N8N",
@@ -735,6 +742,55 @@
         "author": "Margaret Rikhof",
         "role": "Brooksmiller & Partners"
       }
+    },
+    "labsift": {
+      "title": "LabSift",
+      "subtitle": "Aus Laborbefunden werden kopierfertige Ergebnisse",
+      "date": "August 2026",
+      "industry": "Gesundheitswesen & klinische Software",
+      "category": "Automatisierungen",
+      "tools": [
+        "REACT",
+        "TYPESCRIPT",
+        "OCR IM BROWSER",
+        "PDF-PARSING"
+      ],
+      "imageAlt": "LabSift-Oberfläche, die einen Laborbefund in eine kopierfertige Ergebnisliste verwandelt",
+      "websiteLabel": "LabSift besuchen",
+      "sections": [
+        {
+          "title": "Vorher:",
+          "intro": "Ärzt:innen und Tierärzt:innen erhalten Laborergebnisse als PDF oder Scan und müssen die relevanten Werte in die Patientendokumentation übernehmen. Das bedeutete:",
+          "items": [
+            "Jeden Befund öffnen und nach den relevanten Werten suchen.",
+            "Werte einzeln kopieren oder abtippen, mit dem Risiko von Übertragungsfehlern.",
+            "Ergebnisse aus mehreren Befunden von Hand zusammenführen.",
+            "Uneinheitliche Formatierung von einer Notiz zur nächsten.",
+            "Eine langsame, wiederkehrende Aufgabe, die niemand gern machte."
+          ]
+        },
+        {
+          "title": "Nachher:",
+          "intro": "Klinikerinnen und Kliniker fügen ihre Laborbefunde hinzu, wählen die benötigten Werte aus und kopieren eine saubere, formatierte Ergebnisliste.",
+          "items": [
+            "Werte werden über mehrere Befunde hinweg gleichzeitig ausgewählt.",
+            "Jeder extrahierte Wert ist mit einem Screenshot seiner ursprünglichen Stelle im Befund verknüpft und lässt sich so mit einem Klick prüfen.",
+            "Mehrere Befunde werden gemeinsam verarbeitet, mit nach Befunddatum gruppierten Ergebnissen.",
+            "Die Ausgabe ist eine einheitliche, kopierfertige Liste für die Patientendokumentation.",
+            "Die gesamte Verarbeitung läuft lokal im Browser, sodass Befunde nie an einen Server gesendet oder dort gespeichert werden."
+          ]
+        },
+        {
+          "title": "Wirkung:",
+          "intro": "Aus einem manuellen, fehleranfälligen Schritt wurde ein schneller und einheitlicher. Entwickelt von einer Klinikerin und einem Kliniker, die diese Aufgabe selbst kennen.",
+          "items": [
+            "Weniger Zeit für manuelles Abtippen",
+            "Weniger Übertragungsfehler",
+            "Einheitliche Formatierung über alle Patientennotizen hinweg",
+            "Patientendaten bleiben durch das Konzept vertraulich"
+          ]
+        }
+      ]
     }
   },
   "privacy": {
@@ -1030,6 +1086,10 @@
       "/case-studies/towarowa": {
         "title": "Towarowa 41 Apartment-Website Case Study | Moniré",
         "description": "Case Study: Sehen Sie, wie Moniré eine hochwertige, responsive Website für das Premium-Apartment Towarowa 41 gestaltet und entwickelt hat."
+      },
+      "/case-studies/labsift": {
+        "title": "LabSift Case Study | Moniré",
+        "description": "Case Study: LabSift, ein browserbasiertes Tool von Moniré, das Laborbefunde in kopierfertige Ergebnisse für die klinische Dokumentation verwandelt."
       }
     }
   }
