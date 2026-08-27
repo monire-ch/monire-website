@@ -50,6 +50,7 @@ export type CaseStudyConfig = {
   imageScrollable?: boolean;
   websiteUrl?: string;
   websiteLabel?: string;
+  showLiveNote?: boolean;
   sections?: CaseStudySection[];
   metrics?: CaseStudyMetric[];
   testimonial?: CaseStudyTestimonial;
@@ -111,6 +112,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     image: labsift,
     imageScrollable: false,
     websiteUrl: "https://lab-sift.com",
+    showLiveNote: false,
     categories: ["automations"],
     sections: [section(), section(), section()],
   },

@@ -85,9 +85,11 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
             >
               {project.websiteLabel ?? t('caseStudy.visitWebsite')}
             </a>
-            <p className="text-xs font-body text-foreground/60 mt-1">
-              {t('caseStudy.liveNote')}
-            </p>
+            {project.showLiveNote === false ? null : (
+              <p className="text-xs font-body text-foreground/60 mt-1">
+                {t('caseStudy.liveNote')}
+              </p>
+            )}
           </div>
         </div>
       ) : null}
