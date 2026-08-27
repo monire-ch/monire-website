@@ -247,7 +247,7 @@
       {
         "title": "LabSift",
         "category": "Automations",
-        "desc": "A browser-based tool for physicians and veterinarians that turns laboratory report PDFs into a clean, copy-ready list of results for patient notes, with all processing kept local to the device.",
+        "desc": "A browser-based tool for physicians and veterinarians that turns laboratory report PDFs into a clean, copy-ready list of results for patient notes.",
         "link": "/case-studies/labsift"
       }
     ],
@@ -1089,7 +1089,7 @@
       },
       "/case-studies/labsift": {
         "title": "LabSift Case Study | Moniré",
-        "description": "Case study: LabSift, a browser-based tool by Moniré that turns laboratory reports into copy-ready results for clinical notes, with all processing kept on the user's device."
+        "description": "Case study: LabSift, a browser-based tool by Moniré that turns laboratory reports into copy-ready results for clinical notes."
       }
     }
   }

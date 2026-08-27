@@ -247,7 +247,7 @@
       {
         "title": "LabSift",
         "category": "Automatisierungen",
-        "desc": "Ein browserbasiertes Tool für Ärztinnen, Ärzte und Tierärzte, das Laborbefund-PDFs in eine saubere, kopierfertige Ergebnisliste für die Patientendokumentation verwandelt, wobei die Verarbeitung vollständig auf dem Gerät bleibt.",
+        "desc": "Ein browserbasiertes Tool für Ärzt:innen und Tierärzt:innen, das Laborbefund-PDFs in eine saubere, kopierfertige Ergebnisliste für die Patientendokumentation verwandelt.",
         "link": "/case-studies/labsift"
       }
     ],
@@ -1089,7 +1089,7 @@
       },
       "/case-studies/labsift": {
         "title": "LabSift Case Study | Moniré",
-        "description": "Case Study: LabSift, ein browserbasiertes Tool von Moniré, das Laborbefunde in kopierfertige Ergebnisse für die klinische Dokumentation verwandelt, wobei die Verarbeitung vollständig auf dem Gerät bleibt."
+        "description": "Case Study: LabSift, ein browserbasiertes Tool von Moniré, das Laborbefunde in kopierfertige Ergebnisse für die klinische Dokumentation verwandelt."
       }
     }
   }
