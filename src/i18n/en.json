@@ -215,16 +215,16 @@
     ],
     "projects": [
       {
-        "title": "Horizon Collective",
-        "category": "Future of work",
-        "desc": "A distinctive editorial website and white paper for a collective exploring the future of work in the age of AI.",
-        "link": "/case-studies/horizon-collective"
-      },
-      {
         "title": "Snip Squad",
         "category": "Veterinary",
         "desc": "A vibrant veterinary clinic website designed to be warm, approachable, and easy to navigate for pet owners.",
         "link": "/case-studies/snip-squad"
+      },
+      {
+        "title": "Horizon Collective",
+        "category": "Future of work",
+        "desc": "A distinctive editorial website and white paper for a collective exploring the future of work in the age of AI.",
+        "link": "/case-studies/horizon-collective"
       },
       {
         "title": "PortCo HR Collective",
