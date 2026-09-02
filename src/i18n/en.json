@@ -221,6 +221,12 @@
         "link": "/case-studies/snip-squad"
       },
       {
+        "title": "Horizon Collective",
+        "category": "Future of work",
+        "desc": "A distinctive editorial website and white paper for a collective exploring the future of work in the age of AI.",
+        "link": "/case-studies/horizon-collective"
+      },
+      {
         "title": "PortCo HR Collective",
         "category": "Community platform",
         "desc": "An exclusive membership platform for HR leaders in private equity, combining branding, web design, and automation.",
@@ -256,6 +262,7 @@
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Web design & development",
+        "futureOfWork": "HR & Future of work",
         "veterinary": "Veterinary",
         "communityPlatform": "Community platform",
         "consulting": "Consulting",
@@ -533,6 +540,37 @@
     "backToAll": "Back to all insights"
   },
   "caseStudiesContent": {
+    "horizon-collective": {
+      "title": "Horizon Collective",
+      "subtitle": "A bold digital home for a collective reimagining work in the age of AI",
+      "client": "Horizon Collective",
+      "date": "2026",
+      "industry": "HR & Future of Work",
+      "category": "Web Design & Web Development",
+      "tools": ["ASTRO"],
+      "imageAlt": "Horizon Collective website preview",
+      "websiteLabel": "Visit Website",
+      "sections": [
+        {
+          "title": "Overview:",
+          "intro": "Working with a returning client is always meaningful, especially when the next project explores a subject shaping every organisation: the future of work in the age of AI.\n\nHorizon Collective brings experienced HR leaders, thinkers, and practitioners together to look beyond short-term predictions and ask bigger questions.\n\nWe were invited to turn that ambitious idea into a distinctive digital presence and an engaging white paper."
+        },
+        {
+          "title": "Approach:",
+          "intro": "The project called for something more expressive than a conventional corporate or research website. It needed to feel credible and considered while carrying the energy of a movement still taking shape.\n\nUsing the client’s existing logo and copy, we created a bold editorial direction. We focused on:",
+          "items": [
+            "Giving complex ideas a clear and engaging visual structure",
+            "Creating a fast, accessible, and responsive Astro website",
+            "Connecting the digital experience and publications through one visual language",
+            "Making publications and ways to participate easy to find"
+          ]
+        },
+        {
+          "title": "Outcome:",
+          "intro": "The result is a memorable platform that turns an ambitious research initiative into an accessible invitation to participate. The website establishes the collective's identity online, while the white paper gives its thinking a considered, shareable form."
+        }
+      ]
+    },
     "snip-squad": {
       "title": "Snip Squad",
       "subtitle": "A modern, approachable website for a nonprofit veterinary clinic",
@@ -1070,6 +1108,10 @@
       "/case-studies/expense-receipt-automation": {
         "title": "Expense Receipt Automation Case Study | Moniré",
         "description": "Case study: an AI automation workflow for expense receipt processing built by Moniré."
+      },
+      "/case-studies/horizon-collective": {
+        "title": "Horizon Collective Website & White Paper Case Study | Moniré",
+        "description": "See how Moniré designed and developed the Horizon Collective website in Astro and designed its future-of-work white paper."
       },
       "/case-studies/snip-squad": {
         "title": "Snip Squad Case Study | Moniré",

@@ -221,6 +221,12 @@
         "link": "/case-studies/snip-squad"
       },
       {
+        "title": "Horizon Collective",
+        "category": "Przyszłość pracy",
+        "desc": "Wyrazista strona o redakcyjnym charakterze i white paper dla kolektywu badającego przyszłość pracy w erze AI.",
+        "link": "/case-studies/horizon-collective"
+      },
+      {
         "title": "PortCo HR Collective",
         "category": "Community platform",
         "desc": "Ekskluzywna platforma członkowska dla liderów HR w private equity, łącząca branding, projektowanie stron i automatyzację.",
@@ -256,6 +262,7 @@
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Web design & development",
+        "futureOfWork": "Przyszłość pracy",
         "veterinary": "Weterynaria",
         "communityPlatform": "Platforma społecznościowa",
         "consulting": "Consulting",
@@ -533,6 +540,37 @@
     "backToAll": "Wróć do wszystkich artykułów"
   },
   "caseStudiesContent": {
+    "horizon-collective": {
+      "title": "Horizon Collective",
+      "subtitle": "Odważny cyfrowy dom dla kolektywu, który na nowo wyobraża sobie pracę w erze AI",
+      "client": "Horizon Collective",
+      "date": "2026",
+      "industry": "HR i przyszłość pracy",
+      "category": "Projektowanie i tworzenie stron",
+      "tools": ["ASTRO"],
+      "imageAlt": "Podgląd strony Horizon Collective",
+      "websiteLabel": "Odwiedź stronę",
+      "sections": [
+        {
+          "title": "Opis:",
+          "intro": "Ponowna współpraca z klientem ma zawsze szczególne znaczenie, zwłaszcza gdy kolejny projekt dotyczy tematu kształtującego każdą organizację: przyszłości pracy w erze AI.\n\nHorizon Collective łączy doświadczonych liderów HR, myślicieli i praktyków, aby wyjść poza krótkoterminowe prognozy i zadawać większe pytania.\n\nZostaliśmy zaproszeni, aby przekształcić tę ambitną ideę w wyrazistą obecność cyfrową i angażujący white paper."
+        },
+        {
+          "title": "Podejście:",
+          "intro": "Projekt wymagał czegoś bardziej wyrazistego niż konwencjonalna strona korporacyjna lub badawcza. Musiał budzić zaufanie i sprawiać wrażenie przemyślanego, a jednocześnie oddawać energię ruchu, który wciąż nabiera kształtu.\n\nKorzystając z istniejącego logo i tekstów klienta, stworzyliśmy odważny kierunek redakcyjny spójny dla obu formatów. Skupiliśmy się na:",
+          "items": [
+            "Nadaniu złożonym ideom jasnej i angażującej struktury wizualnej",
+            "Stworzeniu szybkiej, dostępnej i responsywnej strony w Astro",
+            "Połączeniu doświadczenia cyfrowego i publikacji jednym językiem wizualnym",
+            "Ułatwieniu odnalezienia publikacji i sposobów uczestnictwa"
+          ]
+        },
+        {
+          "title": "Rezultat:",
+          "intro": "Rezultatem jest zapadająca w pamięć platforma, która zmienia ambitną inicjatywę badawczą w przystępne zaproszenie do udziału. Strona buduje cyfrową tożsamość kolektywu, a white paper nadaje jego ideom przemyślaną formę, którą łatwo udostępniać.\n\nProjekt logo nie należał do naszego zakresu i został dostarczony przez klienta."
+        }
+      ]
+    },
     "snip-squad": {
       "title": "Snip Squad",
       "subtitle": "A modern, approachable website for a nonprofit veterinary clinic",
@@ -1071,6 +1109,10 @@
       "/case-studies/expense-receipt-automation": {
         "title": "Case study automatyzacji paragonów wydatków | Moniré",
         "description": "Case study: workflow automatyzacji AI do przetwarzania paragonów wydatków zbudowany przez Moniré."
+      },
+      "/case-studies/horizon-collective": {
+        "title": "Horizon Collective — strona i white paper | Moniré",
+        "description": "Zobacz, jak Moniré zaprojektowało i stworzyło w Astro stronę Horizon Collective oraz opracowało white paper o przyszłości pracy."
       },
       "/case-studies/snip-squad": {
         "title": "Snip Squad Case Study | Moniré",

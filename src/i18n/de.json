@@ -221,6 +221,12 @@
         "link": "/case-studies/snip-squad"
       },
       {
+        "title": "Horizon Collective",
+        "category": "Zukunft der Arbeit",
+        "desc": "Eine eigenständige redaktionelle Website und ein Whitepaper für ein Kollektiv, das die Zukunft der Arbeit im KI-Zeitalter erforscht.",
+        "link": "/case-studies/horizon-collective"
+      },
+      {
         "title": "PortCo HR Collective",
         "category": "Community-Plattform",
         "desc": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Umfeld, die Branding, Webdesign und Automatisierung verbindet.",
@@ -256,6 +262,7 @@
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Webdesign & Entwicklung",
+        "futureOfWork": "HR & Zukunft der Arbeit",
         "veterinary": "Veterinärmedizin",
         "communityPlatform": "Community-Plattform",
         "consulting": "Consulting",
@@ -533,6 +540,37 @@
     "backToAll": "Zurück zu allen Artikeln"
   },
   "caseStudiesContent": {
+    "horizon-collective": {
+      "title": "Horizon Collective",
+      "subtitle": "Ein ausdrucksstarker digitaler Auftritt für ein Kollektiv, das Arbeit im Zeitalter der KI neu denkt",
+      "client": "Horizon Collective",
+      "date": "2026",
+      "industry": "HR & Zukunft der Arbeit",
+      "category": "Webdesign & Webentwicklung",
+      "tools": ["ASTRO"],
+      "imageAlt": "Vorschau der Horizon Collective Website",
+      "websiteLabel": "Website besuchen",
+      "sections": [
+        {
+          "title": "Überblick:",
+          "intro": "Erneut mit einem Kunden zusammenzuarbeiten, ist immer etwas Besonderes. Umso mehr, wenn sich das nächste Projekt einem Thema widmet, das jede Organisation prägt: der Zukunft der Arbeit im Zeitalter der KI.\n\nHorizon Collective bringt erfahrene HR-Führungskräfte, Denker:innen und Praktiker:innen zusammen, um über kurzfristige Prognosen hinauszudenken und die grösseren Fragen zu stellen.\n\nWir wurden eingeladen, dieser ambitionierten Idee einen unverwechselbaren digitalen Auftritt zu geben und sie in einem ansprechenden Whitepaper weiterzuführen."
+        },
+        {
+          "title": "Ansatz:",
+          "intro": "Das Projekt verlangte nach einem ausdrucksstärkeren Ansatz als dem einer klassischen Unternehmens- oder Forschungswebsite. Der Auftritt sollte glaubwürdig und durchdacht wirken und gleichzeitig die Energie einer Bewegung vermitteln, die noch Gestalt annimmt.\n\nAuf Grundlage des bestehenden Logos und der Texte des Kunden entwickelten wir eine kraftvolle redaktionelle Designsprache. Dabei konzentrierten wir uns auf:",
+          "items": [
+            "Eine klare und ansprechende visuelle Struktur für komplexe Ideen",
+            "Eine schnelle, barrierefreie und responsive Website auf Basis von Astro",
+            "Eine gemeinsame visuelle Sprache für das digitale Erlebnis und die Publikationen",
+            "Einen einfachen Zugang zu Publikationen und Beteiligungsmöglichkeiten"
+          ]
+        },
+        {
+          "title": "Ergebnis:",
+          "intro": "Entstanden ist eine einprägsame Plattform, die einer ambitionierten Forschungsinitiative ein glaubwürdiges Zuhause gibt und zur Mitwirkung einlädt. Die Website verleiht dem Kollektiv eine klare Online-Identität, während das Whitepaper seine Ideen in eine durchdachte, gut zugängliche Form bringt."
+        }
+      ]
+    },
     "snip-squad": {
       "title": "Snip Squad",
       "subtitle": "Eine moderne, zugängliche Website für eine gemeinnützige Tierklinik",
@@ -1070,6 +1108,10 @@
       "/case-studies/expense-receipt-automation": {
         "title": "Case Study Spesenbeleg-Automatisierung | Moniré",
         "description": "Case Study: ein von Moniré entwickelter KI-Automatisierungsworkflow für die Verarbeitung von Spesenbelegen."
+      },
+      "/case-studies/horizon-collective": {
+        "title": "Horizon Collective Website & Whitepaper Case Study | Moniré",
+        "description": "Erfahren Sie, wie Moniré die Horizon Collective Website mit Astro entwickelt und das Whitepaper zur Zukunft der Arbeit gestaltet hat."
       },
       "/case-studies/snip-squad": {
         "title": "Snip Squad Case Study | Moniré",

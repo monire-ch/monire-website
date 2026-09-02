@@ -10,10 +10,12 @@ import systemically from '@/assets/portfolio/systemically_full.webp';
 import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
 import labsiftPreview from '@/assets/portfolio/labsift-og-image.webp';
+import horizonCollective from '@/assets/portfolio/horizon_full.webp';
 import { trackEvent } from '@/lib/analytics';
 import { useLocalePath } from '@/hooks/useLocalePath';
 
 const projectImagesByLink: Record<string, string> = {
+  '/case-studies/horizon-collective': horizonCollective,
   '/case-studies/snip-squad': snipSquad,
   '/case-studies/portco-hr-collective': portcoPreview,
   '/case-studies/systemically': systemically,
@@ -27,6 +29,7 @@ const portfolioNavGroups = [
     titleKey: 'portfolio.navGroups.webDesignDevelopment.title',
     items: [
       { id: 'web-veterinary', labelKey: 'portfolio.navGroups.webDesignDevelopment.veterinary', targetLink: '/case-studies/snip-squad' },
+      { id: 'web-future-of-work', labelKey: 'portfolio.navGroups.webDesignDevelopment.futureOfWork', targetLink: '/case-studies/horizon-collective' },
       { id: 'web-community-platform', labelKey: 'portfolio.navGroups.webDesignDevelopment.communityPlatform', targetLink: '/case-studies/portco-hr-collective' },
       { id: 'web-consulting', labelKey: 'portfolio.navGroups.webDesignDevelopment.consulting', targetLink: '/case-studies/systemically' },
       { id: 'web-real-estate', labelKey: 'portfolio.navGroups.webDesignDevelopment.realEstate', targetLink: '/case-studies/towarowa' },

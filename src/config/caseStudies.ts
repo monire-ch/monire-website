@@ -5,6 +5,7 @@ import systemically from "@/assets/portfolio/systemically_full.webp";
 import towarowa from "@/assets/portfolio/towarowa_full.webp";
 import n8nPreview from "@/assets/portfolio/n8n.webp";
 import labsift from "@/assets/portfolio/labsift-og-image.webp";
+import horizonCollective from "@/assets/portfolio/horizon_full.webp";
 
 export type CaseStudySection = {
   title?: string;
@@ -72,6 +73,17 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     categories: ["webDesignDevelopment"],
     sections: [section(), section(), section()],
     testimonial: testimonial(),
+  },
+    "horizon-collective": {
+    image: horizonCollective,
+    imageScrollable: true,
+    websiteUrl: "https://thehorizoncollective.co/",
+    categories: ["webDesignDevelopment"],
+    sections: [
+      section(),
+      section(),
+      section(),
+    ],
   },
   "portco-hr-collective": {
     image: portco,
