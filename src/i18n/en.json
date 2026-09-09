@@ -636,9 +636,9 @@
           "title": "Approach:",
           "intro": "The design starts with a painting. The client brought a single piece of original artwork and asked for it to become the soul of the brand. Not decoration, but the visual foundation everything else draws from. The artwork informed the entire visual system, shaping the logo, typography, color palette, and interface design across the platform.\n\nBuilt on top of that identity:",
           "items": [
-            "A gated member directory, insights hub, and events platform with passwordless magic-link login",
-            "A self-managed Webflow CMS that allows the client to publish content, manage members, and update events without any technical support",
-            "Automated workflows that reduce manual administration by keeping member data and content synchronized across platforms"
+            "A gated member directory and insights hub with passwordless magic-link login",
+            "Automated workflows save clients from entering the same information twice by keeping Webflow and Memberstack synchronised. LinkedIn posts are automatically added to their website, eliminating repetitive manual work.",
+            "A self-managed Webflow CMS that allows the client to publish content, manage members, and update events without any technical support"
           ]
         },
         {
