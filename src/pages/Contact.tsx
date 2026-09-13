@@ -28,14 +28,13 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="eyebrow-pill eyebrow-pill-dark">Contact</span>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-off-white leading-tight mb-4">
-                Let's Work Together
+            <div className="text-center mb-8 md:mb-12">
+              <span className="eyebrow-pill eyebrow-pill-dark mb-4 md:mb-6">{t('contactPage.eyebrow')}</span>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-off-white leading-tight mb-4 md:mb-8">
+                {t('contactPage.title')}
               </h1>
               <p className="text-off-white/60 text-lg font-body max-w-2xl mx-auto">
-                Whether you have a project in mind or just want to explore
-                possibilities, we'd love to hear from you.
+                {t('contactPage.intro')}
               </p>
             </div>
           </ScrollReveal>
@@ -46,7 +45,7 @@ const Contact = () => {
               <ScrollReveal>
                 <div>
                   <h2 className="text-gold-text text-sm tracking-widest uppercase font-body mb-6">
-                    Get in Touch
+                    {t('common.getInTouch')}
                   </h2>
                   <a
                     href="mailto:hello@monire.ch"
@@ -70,7 +69,7 @@ const Contact = () => {
               <ScrollReveal delay={100}>
                 <div>
                   <h2 className="text-gold-text text-sm tracking-widest uppercase font-body mb-6">
-                    Location
+                    {t('common.location')}
                   </h2>
                   <div className="flex items-start gap-3">
                     <span className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-text/30 shrink-0">
@@ -78,10 +77,10 @@ const Contact = () => {
                     </span>
                     <div>
                       <p className="text-off-white font-body text-lg">
-                        Zürich, Switzerland
+                        {t('footer.locationCity')}
                       </p>
                       <p className="text-off-white/50 font-body text-sm mt-1">
-                        Serving clients worldwide
+                        {t('footer.locationService')}
                       </p>
                     </div>
                   </div>
@@ -91,7 +90,7 @@ const Contact = () => {
               <ScrollReveal delay={300}>
                 <div>
                   <h2 className="text-gold-text text-sm tracking-widest uppercase font-body mb-6">
-                    Follow Us
+                    {t('common.followUs')}
                   </h2>
                   <div className="flex items-center gap-3">
                     {SOCIAL_LINKS.map((socialLink) => (
@@ -127,7 +126,7 @@ const Contact = () => {
             logo: "https://monire.ch/assets/monire_logo.png",
             email: "hello@monire.ch",
             description:
-              "Custom website development and AI-powered workflow automation in Switzerland.",
+              t('contactPage.structuredDescription'),
             address: {
               "@type": "PostalAddress",
               addressLocality: "Zürich",

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ANALYTICS_CONSENT_EVENT, COOKIE_CONSENT_KEY, type ConsentChoice } from "@/lib/consent";
+import { useLocalePath } from "@/hooks/useLocalePath";
 
 const CookieBanner = () => {
+  const localePath = useLocalePath();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const CookieBanner = () => {
         <p className="text-sm leading-relaxed text-off-white/90">
           We use cookies to improve site performance and understand traffic. You can accept or reject non-essential cookies.
           See our{" "}
-          <Link to="/privacy" className="text-gold-text underline underline-offset-2 hover:text-gold-hover">
+          <Link to={localePath('/privacy')} className="text-gold-text underline underline-offset-2 hover:text-gold-hover">
             Privacy Policy
           </Link>
           .

@@ -5,20 +5,25 @@ import { Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import ContactModal from './ContactModal';
 import BrandButton from './BrandButton';
+import LanguageSwitcher from './LanguageSwitcher';
 import { trackEvent } from '@/lib/analytics';
+import { stripLocalePrefix } from '@/lib/localeRouting';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 const Navbar = () => {
   const { t } = useTranslation();
   const location = useLocation();
-  const isHome = location.pathname === '/';
+  const localePath = useLocalePath();
+  const basePathname = stripLocalePrefix(location.pathname);
+  const isHome = basePathname === '/';
   const [contactOpen, setContactOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(isHome ? '#' : '');
 
-  const getHref = (href: string) => (href.startsWith("#") ? (isHome ? href : `/${href}`) : href);
+  const getHref = (href: string) => (href.startsWith("#") ? (isHome ? href : localePath(`/${href}`)) : localePath(href));
   const isPathLinkActive = (href: string) =>
     !href.startsWith('#') &&
-    (location.pathname === href || location.pathname.startsWith(`${href}/`));
+    (basePathname === href || basePathname.startsWith(`${href}/`));
   const isLinkActive = (href: string) =>
     (isHome && activeLink === href) || (!isHome && isPathLinkActive(href));
   const openContactModal = (source: string) => {
@@ -106,7 +111,7 @@ const Navbar = () => {
           }}
         >
           <a href={getHref('#')} className="flex-shrink-0">
-            <img src={logo} alt="Moniré" className="h-7 mb-0.5" />
+            <img src={logo} alt={t('common.logoAlt')} className="h-7 mb-0.5" />
           </a>
 
           <div className="flex items-center gap-1">
@@ -121,7 +126,7 @@ const Navbar = () => {
                   }
                   if (isHome && link.href === '#') {
                     e.preventDefault();
-                    window.history.pushState(null, '', '/#');
+                    window.history.pushState(null, '', localePath('/#'));
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }
                 }}
@@ -142,6 +147,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             {/* CTA */}
             <BrandButton
               onClick={() => openContactModal('nav')}
@@ -165,15 +171,18 @@ const Navbar = () => {
         }}
       >
         <a href={getHref('#')}>
-          <img src={logo} alt="Moniré" className="h-6 mb-1" />
+          <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-1" />
         </a>
-        <button
-          onClick={() => setMobileOpen(true)}
-          className="text-gold-text transition-colors hover:text-gold-hover"
-          aria-label="Open menu"
-        >
-          <Menu size={26} strokeWidth={1.5} />
-        </button>
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="text-gold-text transition-colors hover:text-gold-hover"
+            aria-label={t('nav.openMenu')}
+          >
+            <Menu size={26} strokeWidth={1.5} />
+          </button>
+        </div>
       </header>
 
       {/* ─── Mobile / Tablet Full-Screen Overlay ─── */}
@@ -192,11 +201,11 @@ const Navbar = () => {
             }}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-5">
-              <img src={logo} alt="Moniré" className="h-6 mb-0.5" />
+              <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-0.5" />
               <button
                 onClick={() => setMobileOpen(false)}
                 className="text-off-white/70 hover:text-off-white transition-colors"
-                aria-label="Close menu"
+                aria-label={t('nav.closeMenu')}
               >
                 <X size={24} strokeWidth={1.5} />
               </button>

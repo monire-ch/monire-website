@@ -13,6 +13,7 @@ import {
 } from '@/config/pricing';
 import BrandButton from './BrandButton';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 
 const tabKeys = ['webDesign', 'automation'] as const;
@@ -20,6 +21,7 @@ const tabKeys = ['webDesign', 'automation'] as const;
 const PricingSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const localePath = useLocalePath();
   const [activeTab, setActiveTab] = useState<typeof tabKeys[number]>('webDesign');
   const [contactOpen, setContactOpen] = useState(false);
   const [currency, setCurrency] = useState<DisplayCurrency>('CHF');
@@ -51,7 +53,7 @@ const PricingSection = () => {
     <section id="pricing" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6 relative">
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <ScrollReveal className="text-center mb-12">
+        <ScrollReveal className="text-center mb-8 md:mb-12">
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('pricing.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-off-white">
             {t('pricing.title')} <em className="italic font-tertiary text-off-white">{t('pricing.titleAccent')}</em>
@@ -80,14 +82,14 @@ const PricingSection = () => {
           <>
             <ScrollReveal className="text-center mb-6">
               <p className="text-off-white/85 text-xs sm:text-sm font-body tracking-[0.04em]">
-                Each plan includes everything from the previous tier.
+                {t('pricing.includedNote')}
               </p>
             </ScrollReveal>
 
             <ScrollReveal className="flex justify-center mb-10">
               <div
                 className="inline-flex items-center rounded-full border border-off-white/10 p-1 gap-0.5"
-                aria-label={t('pricing.currencyLabel', { defaultValue: 'Currency' })}
+                aria-label={t('pricing.currencyLabel')}
                 role="group"
               >
                 {SUPPORTED_CURRENCIES.map((currencyKey) => (
@@ -137,7 +139,7 @@ const PricingSection = () => {
                       destination: '/case-studies/expense-receipt-automation',
                       page_path: window.location.pathname,
                     });
-                    navigate('/case-studies/expense-receipt-automation');
+                    navigate(localePath('/case-studies/expense-receipt-automation'));
                   }}
                 >
                   {t('pricing.automationBlock.caseStudy')}
@@ -145,7 +147,7 @@ const PricingSection = () => {
               </div>
               <div className="mt-4">
                 <Link
-                  to="/insights/what-ai-automation-actually-means-for-a-small-business"
+                  to={localePath('/insights/what-ai-automation-actually-means-for-a-small-business')}
                   onClick={() =>
                     trackEvent('blog_cta_click', {
                       location: 'pricing',
@@ -155,7 +157,7 @@ const PricingSection = () => {
                   }
                   className="text-sm font-body text-off-white/80 hover:text-gold-text transition-colors underline hover:no-underline"
                 >
-                  What AI automation means for a small business →
+                  {t('pricing.automationArticleLink')}
                 </Link>
               </div>
             </div>

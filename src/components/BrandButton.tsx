@@ -3,6 +3,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { Link } from 'react-router-dom';
 import StarIcon from '@/components/StarIcon';
 import { cn } from '@/lib/utils';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 // BrandButton is for Monire marketing/product CTAs (primary/secondary/hero visuals).
 // For shadcn/ui primitives and generic utility controls, use src/components/ui/button.tsx.
@@ -51,6 +52,7 @@ const BrandButton = ({
   children,
   ...props
 }: BrandButtonProps) => {
+  const localePath = useLocalePath();
   const buttonClassName = cn(buttonVariants({ variant }), className);
   const content = (
     <>
@@ -62,7 +64,7 @@ const BrandButton = ({
   if (type === 'link') {
     const { to, ...linkProps } = props as Omit<BrandButtonLinkProps, 'type' | 'children' | 'className' | 'showStar' | 'starClassName' | 'variant'> & { to: string };
     return (
-      <Link to={to} className={buttonClassName} {...(linkProps as Omit<React.ComponentProps<typeof Link>, 'to' | 'className' | 'children'>)}>
+      <Link to={localePath(to)} className={buttonClassName} {...(linkProps as Omit<React.ComponentProps<typeof Link>, 'to' | 'className' | 'children'>)}>
         {content}
       </Link>
     );

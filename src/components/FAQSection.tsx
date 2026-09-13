@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 import { SECTION_WRAPPER_GRADIENT } from '@/lib/theme';
+import { getLocaleFromPathname, localizeInternalHtmlLinks } from '@/lib/localeRouting';
 
 const AccordionItem = ({
   question,
@@ -112,6 +114,8 @@ const isFaqCategoryArray = (value: unknown): value is FaqCategory[] => {
 
 const FAQSection = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const locale = getLocaleFromPathname(location.pathname);
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
   const [expandedMobileCategoryIndex, setExpandedMobileCategoryIndex] = useState<number | null>(0);
   const [expandedQuestionIndex, setExpandedQuestionIndex] = useState<number | null>(null);
@@ -124,9 +128,16 @@ const FAQSection = () => {
     : Array.isArray(rawItems)
       ? [{ label: t('faq.title'), items: rawItems as FaqItem[] }]
       : [];
+  const localizedCategories = categories.map((category) => ({
+    ...category,
+    items: category.items.map((item) => ({
+      ...item,
+      a: localizeInternalHtmlLinks(item.a, locale),
+    })),
+  }));
 
-  const safeActiveCategoryIndex = Math.min(activeCategoryIndex, Math.max(categories.length - 1, 0));
-  const activeCategory = categories[safeActiveCategoryIndex];
+  const safeActiveCategoryIndex = Math.min(activeCategoryIndex, Math.max(localizedCategories.length - 1, 0));
+  const activeCategory = localizedCategories[safeActiveCategoryIndex];
 
   const handleCategoryChange = (categoryIndex: number) => {
     setActiveCategoryIndex(categoryIndex);
@@ -137,8 +148,8 @@ const FAQSection = () => {
   return (
     <section id="faq" className="pt-16 md:pt-24 pb-40 md:pb-56 px-6 relative">
       <div className="max-w-5xl mx-auto">
-        <ScrollReveal className="text-center mb-16">
-          <span className="eyebrow-pill eyebrow-pill-dark mb-3">FAQ</span>
+        <ScrollReveal className="text-center mb-6 md:mb-16">
+          <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('nav.faq')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-off-white">{t('faq.title')}</h2>
         </ScrollReveal>
 
@@ -150,7 +161,7 @@ const FAQSection = () => {
             {/* Desktop layout */}
             <div className="hidden md:flex flex-row min-h-[340px]">
               <div className="md:w-2/5 p-10 flex flex-col gap-1 border-r border-off-white/10">
-                {categories.map((category, categoryIndex) => (
+                {localizedCategories.map((category, categoryIndex) => (
                   <button
                     key={category.label}
                     onClick={() => handleCategoryChange(categoryIndex)}
@@ -181,7 +192,7 @@ const FAQSection = () => {
 
             {/* Mobile accordion layout */}
             <div className="md:hidden p-6">
-              {categories.map((category, categoryIndex) => {
+              {localizedCategories.map((category, categoryIndex) => {
                 const isCategoryExpanded = expandedMobileCategoryIndex === categoryIndex;
                 return (
                   <MobileFaqCategory

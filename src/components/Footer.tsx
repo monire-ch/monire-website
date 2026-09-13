@@ -5,10 +5,13 @@ import logo from '@/assets/monire_logo.png';
 import SocialMediaIcon from '@/components/SocialMediaIcon';
 import { SOCIAL_LINKS } from '@/config/socialLinks';
 import { trackEvent } from '@/lib/analytics';
+import { stripLocalePrefix } from '@/lib/localeRouting';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const localePath = useLocalePath();
 
   const navItems = [
     { label: t('nav.about'), href: '#about' },
@@ -35,8 +38,8 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12 items-start">
           {/* Brand column */}
           <div>
-            <Link to="/#">
-              <img src={logo} alt="Moniré" className="h-6 lg:h-7 mb-4" />
+            <Link to={localePath('/#')}>
+              <img src={logo} alt={t('common.logoAlt')} className="h-6 lg:h-7 mb-4" />
             </Link>
             <p className="text-off-white text-base font-body max-w-xs">
               {t('footer.tagline')}
@@ -51,19 +54,19 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
           {/* Quick Links column */}
           <div>
             <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.quickLinks')}</p>
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-2">
+            <ul className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-x-2 gap-y-2">
               {navItems.map((item) => (
                 <li key={item.href}>
                   {item.href.startsWith('/') ? (
                     <Link
-                      to={item.href}
+                      to={localePath(item.href)}
                       onClick={() => {
                         if (item.href === '/contact') {
                           trackEvent('footer_contact_click', { location: 'footer', destination: item.href, page_path: window.location.pathname });
                           trackEvent('contact_click', { location: 'footer', label: 'footer', destination: item.href, page_path: window.location.pathname });
                         }
                       }}
-                      className="text-off-white text-base font-body hover:text-gold-text transition-colors text-left"
+                      className="block max-w-full break-words text-left text-base font-body text-off-white transition-colors hover:text-gold-text"
                     >
                       {item.label}
                     </Link>
@@ -74,12 +77,12 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                         if (item.href === '#pricing') {
                           trackEvent('pricing_nav_click', { location: 'footer', page_path: window.location.pathname });
                         }
-                        if (window.location.pathname !== '/') {
+                        if (stripLocalePrefix(window.location.pathname) !== '/') {
                           e.preventDefault();
-                          navigate('/' + item.href);
+                          navigate(localePath(`/${item.href}`));
                         }
                       }}
-                      className="text-off-white text-base font-body hover:text-gold-text transition-colors"
+                      className="block max-w-full break-words text-base font-body text-off-white transition-colors hover:text-gold-text"
                     >
                       {item.label}
                     </a>
@@ -106,10 +109,10 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                 </a>
               </li>
               <li>
-                <span className="text-off-white text-base font-body">Zürich, Switzerland</span>
+                <span className="text-off-white text-base font-body">{t('footer.locationCity')}</span>
               </li>
               <li>
-                <span className="text-off-white text-base font-body">Serving clients worldwide</span>
+                <span className="text-off-white text-base font-body">{t('footer.locationService')}</span>
               </li>
             </ul>
           </div>

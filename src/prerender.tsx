@@ -6,10 +6,12 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import AppRoutes from "./AppRoutes";
 import { PRERENDER_ROUTES } from "./lib/seo";
+import { getLocaleFromPathname } from "./lib/localeRouting";
 
 export async function prerender(data: { url?: string } = {}) {
   const url = data.url || "/";
   const queryClient = new QueryClient();
+  await i18n.changeLanguage(getLocaleFromPathname(url));
 
   const html = renderToString(
     <I18nextProvider i18n={i18n}>

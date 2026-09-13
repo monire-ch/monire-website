@@ -3,41 +3,54 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import type { CaseStudyConfig } from '@/config/caseStudies';
+import type { CaseStudyCategory, CaseStudyConfig } from '@/config/caseStudies';
 import { trackEvent } from '@/lib/analytics';
+import { useLocalePath } from '@/hooks/useLocalePath';
 
 type CaseStudyTemplateProps = {
   project: CaseStudyConfig;
 };
 
+const categoryPillClassName =
+  "text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground";
+
 const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const isScrollablePreview = project.imageScrollable ?? true;
   const hasSections = Boolean(project.sections && project.sections.length > 0);
+  const categories = project.categories?.length ? project.categories : project.category ? [project.category] : [];
+  const categoryLabels = categories.map((category) => t(`caseStudy.categoryLabels.${category as CaseStudyCategory}`));
   const contentGridColumnsClassName = hasSections
     ? 'md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]'
     : 'md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]';
-  const contentGridClassName = `grid grid-cols-1 ${contentGridColumnsClassName} gap-10 md:gap-14 mb-16`;
+  const contentGridClassName = `grid grid-cols-1 ${contentGridColumnsClassName} gap-10 md:gap-14 mb-10`;
 
   const metadataBlock = (
     <div>
-      <div className="flex justify-between items-center py-4 border-b border-border">
-        <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.client')}</span>
-        <span className="text-sm font-body text-foreground">{project.client}</span>
-      </div>
+      {project.client ? (
+        <div className="flex justify-between items-center py-4 border-b border-border">
+          <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.client')}</span>
+          <span className="text-sm font-body text-foreground">{project.client}</span>
+        </div>
+      ) : null}
       <div className="flex justify-between items-center py-4 border-b border-border">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.date')}</span>
         <span className="text-sm font-body text-foreground">{project.date}</span>
       </div>
       <div className="flex justify-between items-center py-4 border-b border-border">
-        <span className="text-sm font-body text-main-teal">Industry</span>
+        <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.industry')}</span>
         <span className="text-sm font-body text-foreground">{project.industry}</span>
       </div>
-      <div className="flex justify-between items-center py-4 border-b border-border">
+      <div className="flex justify-between items-start py-4 border-b border-border gap-4">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.category')}</span>
-        <span className="text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground">
-          {project.category}
-        </span>
+        <div className="flex flex-wrap gap-2 justify-end">
+          {categoryLabels.map((categoryLabel) => (
+            <span key={categoryLabel} className={categoryPillClassName}>
+              {categoryLabel}
+            </span>
+          ))}
+        </div>
       </div>
       <div className="flex justify-between items-start py-4 border-b border-border">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.tools')}</span>
@@ -54,7 +67,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
       </div>
       {project.websiteUrl ? (
         <div className="flex justify-between items-start py-4 gap-4">
-          <span className="text-sm font-body text-main-teal">Website</span>
+          <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.website')}</span>
           <div className="text-right max-w-[200px] md:max-w-[280px]">
             <a
               href={project.websiteUrl}
@@ -70,11 +83,13 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               }
               className="text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline"
             >
-              {project.websiteLabel ?? 'Visit Website'}
+              {project.websiteLabel ?? t('caseStudy.visitWebsite')}
             </a>
-            <p className="text-xs font-body text-foreground/60 mt-1">
-              Live website may differ from the original version as the site is managed by the client.
-            </p>
+            {project.showLiveNote === false ? null : (
+              <p className="text-xs font-body text-foreground/60 mt-1">
+                {t('caseStudy.liveNote')}
+              </p>
+            )}
           </div>
         </div>
       ) : null}
@@ -88,7 +103,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <a
-              href="/#portfolio"
+              href={localePath('/#portfolio')}
               className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline mb-8"
             >
               <ArrowLeft size={16} />
@@ -97,16 +112,19 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <span className="eyebrow-pill eyebrow-pill-light">{project.category}</span>
+            <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+              {categoryLabels.map((categoryLabel) => (
+                <span key={categoryLabel} className="eyebrow-pill eyebrow-pill-light">
+                  {categoryLabel}
+                </span>
+              ))}
+            </div>
             <h1
-              className={`font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight ${
-                project.subtitle ? 'mb-4' : 'mb-12'
-              }`}
-            >
+              className={`font-display text-4xl md:text-5xl lg:text-6xl text-main-teal leading-tight ${project.subtitle ? 'mb-4 md:mb-8' : 'mb-8 md:mb-16'}`}>
               {project.title}
             </h1>
             {project.subtitle ? (
-              <p className="text-lg md:text-xl font-body text-foreground/80 mb-10">{project.subtitle}</p>
+              <p className="text-lg md:text-xl font-body text-soft-teal mb-7 md:mb-12">{project.subtitle}</p>
             ) : null}
           </ScrollReveal>
 
@@ -132,15 +150,15 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                 <div className="space-y-8">
                   {project.sections?.map((section) => (
                     <ScrollReveal key={section.title}>
-                      <h2 className="font-tertiary italic text-2xl md:text-3xl text-main-teal mb-3">{section.title}</h2>
+                      <h2 className="font-tertiary italic text-2xl md:text-3xl text-focus-teal mb-3">{section.title}</h2>
                       {section.intro ? (
-                        <p className="text-sm font-body text-foreground/80 mb-2 whitespace-pre-line">{section.intro}</p>
+                        <p className="text-sm font-body text-foreground mb-2 whitespace-pre-line">{section.intro}</p>
                       ) : null}
                       {section.items ? (
                         <ul className="space-y-1.5">
                           {section.items.map((item) => (
-                            <li key={item} className="text-sm font-body text-foreground/70 flex items-start gap-2">
-                              <span className="text-foreground/40 mt-0.5">•</span>
+                            <li key={item} className="text-sm font-body text-foreground flex items-start gap-2">
+                              <span className="text-foreground/60 mt-0.5">•</span>
                               {item}
                             </li>
                           ))}
@@ -184,6 +202,51 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               </>
             )}
           </div>
+
+          {project.metrics?.length ? (
+            <ScrollReveal>
+              <section
+                aria-labelledby="case-study-results-title"
+                className="grid grid-cols-1 gap-8 border-y border-border py-10 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] md:gap-16 md:py-14 mb-14"
+              >
+                <div>
+                  <h2
+                    id="case-study-results-title"
+                    className="font-tertiary italic text-3xl md:text-4xl text-main-teal mb-4"
+                  >
+                    {t('caseStudy.keyResults')}
+                  </h2>
+                  <p className="max-w-sm text-base font-body leading-relaxed text-foreground">
+                    {t('caseStudy.keyResultsIntro')}
+                  </p>
+                </div>
+
+                <div>
+                  {project.metrics.map((metric, index) => (
+                    <div
+                      key={`${metric.value}-${metric.description}`}
+                      className={`grid grid-cols-[120px_minmax(0,1fr)] items-center gap-5 py-7 first:pt-0 last:pb-0 sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[240px_minmax(0,1fr)] md:gap-8 ${
+                        index > 0 ? 'border-t border-border' : ''
+                      }`}
+                    >
+                      <p
+                        className={`w-full whitespace-nowrap text-center font-display text-main-teal leading-none ${
+                          metric.value.length > 6
+                            ? 'text-4xl sm:text-5xl md:text-6xl'
+                            : 'text-5xl md:text-6xl'
+                        }`}
+                      >
+                        {metric.value}
+                      </p>
+                      <p className="max-w-lg text-base md:text-lg font-body leading-relaxed text-foreground">
+                        {metric.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </ScrollReveal>
+          ) : null}
 
           {project.testimonial ? (
             <ScrollReveal>
