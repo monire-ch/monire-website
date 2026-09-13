@@ -254,7 +254,7 @@
           },
           {
             "q": "Kann ich die Website selbst bearbeiten?",
-            "a": "Wir verwenden benutzerfreundliche Content-Management-Systeme (CMS), damit Sie Texte, Bilder und Blogbeiträge ohne technische Kenntnisse aktualisieren können. Wir bieten Schulungen und Dokumentation an."
+            "a": "Wir verwenden benutzerfreundliche Content-Management-Systeme (CMS), damit Sie Texte, Bilder und Blogbeiträge ohne technische Kenntnisse aktualisieren können. Wir bieten Schulungen und Dokumentation an.<br /><a href='https://monire-webflow-guide.netlify.app/' target='_blank' rel='noopener noreferrer' style='color:#F1D69A;text-decoration:underline;'>Unseren Webflow-Bearbeitungsleitfaden ansehen →</a>"
           },
           {
             "q": "Wem gehört die Website?",

@@ -254,7 +254,7 @@
           },
           {
             "q": "Czy mogę sam edytować stronę?",
-            "a": "Używamy przyjaznych systemów zarządzania treścią (CMS), dzięki czemu możesz aktualizować teksty, obrazy i posty na blogu bez umiejętności technicznych. Zapewniamy szkolenie i dokumentację."
+            "a": "Używamy przyjaznych systemów zarządzania treścią (CMS), dzięki czemu możesz aktualizować teksty, obrazy i posty na blogu bez umiejętności technicznych. Zapewniamy szkolenie i dokumentację.<br /><a href='https://monire-webflow-guide.netlify.app/' target='_blank' rel='noopener noreferrer' style='color:#F1D69A;text-decoration:underline;'>Zobacz nasz przewodnik po edycji w Webflow →</a>"
           },
           {
             "q": "Kto jest właścicielem strony?",

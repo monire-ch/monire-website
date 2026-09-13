@@ -254,7 +254,7 @@
           },
           {
             "q": "Can I edit the website myself?",
-            "a": "Absolutely. We use user-friendly CMS setups so you can update text, images, and posts without technical skills. We also provide training and documentation."
+            "a": "Absolutely. We use user-friendly CMS setups so you can update text, images, and posts without technical skills. We also provide training and documentation.<br /><a href='https://monire-webflow-guide.netlify.app/' target='_blank' rel='noopener noreferrer' style='color:#F1D69A;text-decoration:underline;'>Explore our Webflow editing guide →</a>"
           },
           {
             "q": "Who owns the website?",
