@@ -90,7 +90,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     imageScrollable: true,
     websiteUrl: "https://www.portcohrcollective.com/",
     categories: ["branding", "webDesignDevelopment", "automations"],
-    sections: [section({ src: portcoLogin }), section(), section()],
+    sections: [section({ src: portcoLogin }), section(), section(), section()],
   },
   systemically: {
     image: systemically,
