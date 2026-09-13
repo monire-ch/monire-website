@@ -114,7 +114,15 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
         items: [
           "A gated member directory, insights hub, and events platform with passwordless magic-link login",
           "A self-managed Webflow CMS that allows the client to publish content, manage members, and update events without any technical support",
-          "Automated workflows that reduce manual administration by keeping member data and content synchronized across platforms",
+        ],
+      },
+      {
+        title: "Automation:",
+        intro:
+          "Behind the platform, n8n connects the tools the team uses every day, reducing repetitive admin and keeping the website up to date.",
+        items: [
+          "Member data sync: n8n connects Webflow and Memberstack so the team can enter member information once, without manually duplicating it across both platforms.",
+          "LinkedIn content feed: LinkedIn posts feed into the website automatically, keeping the community’s updates visible without the team having to republish the same content by hand.",
         ],
       },
       {
