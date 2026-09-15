@@ -313,7 +313,7 @@
           },
           {
             "q": "Kann ich die Website selbst bearbeiten?",
-            "a": "Ja. Wir setzen benutzerfreundliche CMS-Strukturen auf, damit Sie Texte, Bilder und Beiträge ohne technische Kenntnisse ändern können. Eine Einführung und Dokumentation gehören dazu."
+            "a": "Ja. Wir setzen benutzerfreundliche CMS-Strukturen auf, damit Sie Texte, Bilder und Beiträge ohne technische Kenntnisse ändern können. Eine Einführung und Dokumentation gehören dazu.<br /><a href='https://monire-webflow-guide.netlify.app/' target='_blank' rel='noopener noreferrer' style='color:#F1D69A;text-decoration:underline;'>Unseren Webflow-Bearbeitungsleitfaden ansehen →</a>"
           },
           {
             "q": "Wem gehört die Website?",
@@ -637,8 +637,16 @@
           "intro": "Das Design beginnt mit einem Gemälde. Die Kundin brachte ein einziges Gemälde mit und wollte, dass es zur Seele der Marke wird. Nicht als Dekoration, sondern als visuelle Grundlage für alles Weitere. Das Kunstwerk prägte das gesamte visuelle System — Logo, Typografie, Farbpalette und Interface-Design der Plattform.\n\nDarauf aufgebaut wurden:",
           "items": [
             "Ein geschütztes Mitgliederverzeichnis und ein Insights-Bereich mit passwortlosem Magic-Link-Login",
-            "Automatisierte Workflows verhindern doppelte Dateneingaben, indem sie Webflow und Memberstack miteinander synchronisieren. LinkedIn-Beiträge werden zudem automatisch auf der Website ergänzt, sodass repetitive manuelle Arbeit entfällt.",
             "Ein Webflow CMS, das die Kundin selbst verwalten kann – Inhalte veröffentlichen, Mitglieder verwalten und Events aktualisieren, ganz ohne technischen Support"
+          ]
+        },
+        {
+          "title": "Automatisierung:",
+          "intro": "n8n verbindet die Systeme hinter der Plattform. So verbringt das Team weniger Zeit damit, Informationen zwischen Tools zu übertragen, und mehr Zeit mit der Community.",
+          "items": [
+            "Synchronisierte Mitgliederdaten: Webflow und Memberstack bleiben synchron. Mitgliederdaten werden nur einmal erfasst und sind auf beiden Plattformen konsistent.",
+            "LinkedIn-Feed für die Website: Neue LinkedIn-Beiträge werden automatisch auf die Website übertragen. Dadurch bleibt der Insights-Bereich aktuell, ohne dass Inhalte doppelt veröffentlicht werden müssen.",
+            "Weniger Administration: Das Team arbeitet in den Tools, die es bereits nutzt, während die Automatisierung die Übergabe wiederkehrender Daten und Inhalte übernimmt."
           ]
         },
         {
