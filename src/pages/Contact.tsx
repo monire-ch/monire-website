@@ -140,7 +140,7 @@ const Contact = () => {
             serviceType: [
               "Web Design",
               "Web Development",
-              "AI Automations",
+              "Workflow Automation",
               "Website Migration",
               "SEO & Analytics",
             ],

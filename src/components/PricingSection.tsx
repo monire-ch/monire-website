@@ -72,7 +72,14 @@ const PricingSection = () => {
                     : 'text-off-white/60 hover:text-off-white/80 border border-transparent'
                 }`}
               >
-                {t(`pricing.tabs.${key}`)}
+                {key === 'automation' ? (
+                  <>
+                    <span className="lg:hidden">{t('pricing.tabs.automationShort')}</span>
+                    <span className="hidden lg:inline">{t('pricing.tabs.automation')}</span>
+                  </>
+                ) : (
+                  t(`pricing.tabs.${key}`)
+                )}
               </button>
             ))}
           </div>
