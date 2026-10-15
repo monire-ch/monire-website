@@ -15,7 +15,7 @@
     "eyebrow": "Aus der Schweiz • Für Kunden weltweit",
     "headline": "Websites, die Kunden gewinnen und mit Ihrem Unternehmen mitwachsen",
     "highlightWord": "Kunden gewinnen",
-    "subtitle": "Hochwertige Websites, die überzeugen. KI-gestützte Automatisierungen, wenn Ihr Unternehmen bereit ist zu skalieren.",
+    "subtitle": "Hochwertige Websites, die überzeugen. Individuelle Apps und Workflow-Automatisierung, wenn Ihr Unternehmen bereit ist zu skalieren.",
     "cta": "Erstgespräch buchen",
     "workCta": "Projekte ansehen"
   },
@@ -77,14 +77,14 @@
       },
       {
         "badge": "Automatisierung",
-        "title": "KI-Automatisierungen & Workflows",
+        "title": "Workflow-Automatisierung",
         "desc": "Wir automatisieren wiederkehrende Admin-Aufgaben und verbinden die Tools, die Ihr Unternehmen bereits nutzt, von Spesenbelegen und Onboarding bis zu Dateiablage und CRM-Updates. Das Ziel ist einfach: weniger manuelle Schritte, weniger Fehler und mehr Zeit für Aufgaben, bei denen menschliches Urteilsvermögen gefragt ist."
       }
     ],
     "insightLinks": {
       "websiteLosingClients": "Warum Ihre Website möglicherweise Kunden kostet →",
       "websitePlatform": "Wie wir die richtige Website-Plattform wählen →",
-      "aiAutomation": "Was KI-Automatisierung für kleine Unternehmen bedeutet →"
+      "aiAutomation": "Was Workflow-Automatisierung für kleine Unternehmen bedeutet →"
     }
   },
   "about": {
@@ -93,7 +93,7 @@
     "stories": [
       {
         "title": "Unsere Geschichte",
-        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren alles andere als klassisch. Monika kommt aus HR und Consulting, Nikky hat als Tierärztin gearbeitet. Genau diese unterschiedlichen Erfahrungen wurden zu unserer gemeinsamen Stärke. Wir schreiben nicht einfach Code, sondern verstehen geschäftliche Herausforderungen aus verschiedenen Perspektiven. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Zusammenarbeit und Partnerinnen, die mitdenken."
+        "text": "Bevor wir Moniré gegründet haben, haben wir uns als Frontend-Entwicklerinnen bei brack.ch kennengelernt, einem der grössten Onlinehändler der Schweiz. Unsere Wege in die Tech-Welt waren alles andere als klassisch. Monika kommt aus der Betriebswirtschaft, Nikky hat als Tierärztin gearbeitet. Genau diese unterschiedlichen Erfahrungen wurden zu unserer gemeinsamen Stärke. Wir schreiben nicht einfach Code, sondern verstehen geschäftliche Herausforderungen aus verschiedenen Perspektiven. Darum haben wir Moniré gegründet: für Unternehmen, die nicht nur technische Umsetzung suchen, sondern echte Zusammenarbeit und Partnerinnen, die mitdenken."
       },
       {
         "title": "Warum ein Duo?",
@@ -139,7 +139,7 @@
     "titleAccent": "Ihr Unternehmen soll wachsen.",
     "tabs": {
       "webDesign": "Webdesign & Entwicklung",
-      "automation": "KI-Automatisierungen"
+      "automation": "Workflow-Automatisierung"
     },
     "getStarted": "Loslegen",
     "mostPopular": "Meistgewählt",
@@ -195,13 +195,13 @@
       "automation": []
     },
     "automationBlock": {
-      "title": "KI-Automatisierungen & Workflow-Systeme",
+      "title": "Workflow-Automatisierung & individuelle Systeme",
       "desc": "Wir bauen individuelle Automatisierungen, die manuelle, wiederkehrende Arbeit reduzieren und die Tools verbinden, die Sie bereits nutzen. Der Preis wird nach einem kurzen Kennenlerngespräch individuell festgelegt.",
       "cta": "Loslegen",
       "caseStudy": "Aktuelle Case Study"
     },
     "includedNote": "Jedes Paket enthält alles aus dem vorherigen Paket.",
-    "automationArticleLink": "Was KI-Automatisierung für kleine Unternehmen bedeutet →",
+    "automationArticleLink": "Was Workflow-Automatisierung für kleine Unternehmen bedeutet →",
     "currencyLabel": "Währung"
   },
   "portfolio": {
@@ -322,7 +322,7 @@
           },
           {
             "q": "Können Sie bei SEO helfen?",
-            "a": "Unser Fokus liegt auf Entwicklung und KI-Automatisierungen. Dennoch berücksichtigen wir bei jeder Website wichtige SEO-Grundlagen. Für laufende SEO-Betreuung können wir Ihnen auch vertraute Partner empfehlen.<br /><a href='/insights/why-your-website-might-be-losing-you-clients' style='color:#F1D69A;text-decoration:underline;'>Mehr dazu, warum das wichtig ist →</a>"
+            "a": "Unser Fokus liegt auf Entwicklung und Workflow-Automatisierung. Dennoch berücksichtigen wir bei jeder Website wichtige SEO-Grundlagen. Für laufende SEO-Betreuung können wir Ihnen auch vertraute Partner empfehlen.<br /><a href='/insights/why-your-website-might-be-losing-you-clients' style='color:#F1D69A;text-decoration:underline;'>Mehr dazu, warum das wichtig ist →</a>"
           },
           {
             "q": "Arbeiten Sie auch mit internationalen Kunden?",
@@ -368,18 +368,18 @@
         ]
       },
       {
-        "label": "KI-Automatisierungen",
+        "label": "Workflow-Automatisierung",
         "items": [
           {
-            "q": "Was ist KI-Automatisierung und wie kann sie meinem Unternehmen helfen?",
-            "a": "KI-Automatisierung nutzt künstliche Intelligenz, um wiederkehrende Aufgaben zu übernehmen, Daten zu analysieren und Prozesse effizienter zu gestalten. Beispiele sind Support-Abläufe, Dateneingabe, E-Mail-Verarbeitung oder Content-Workflows. So sparen Sie Zeit, reduzieren Fehler und schaffen Freiraum für wichtigere Aufgaben.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Lesen Sie, wie das in der Praxis aussieht →</a>"
+            "q": "Was ist Workflow-Automatisierung und wie kann sie meinem Unternehmen helfen?",
+            "a": "Workflow-Automatisierung verbindet die Tools, die Sie bereits nutzen, und erledigt wiederkehrende Schritte automatisch. Sie kann Dateneingaben reduzieren, Informationen zwischen Systemen übertragen, Erinnerungen senden, Dateien organisieren und KI dort einsetzen, wo sie wirklich hilfreich ist. So sparen Sie Zeit und reduzieren Fehler.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Lesen Sie, wie das in der Praxis aussieht →</a>"
           },
           {
-            "q": "Welche Tools nutzen Sie für Automatisierungen?",
-            "a": "Wir bauen Automatisierungen hauptsächlich mit n8n, weil es sich mit vielen Tools verbinden lässt, die Unternehmen bereits nutzen — E-Mail, Tabellen, Cloud-Speicher und CRMs. Wir nutzen auch KI-Tools wie Claude und OpenAI Codex, um die Entwicklung zu unterstützen und passendere Lösungen zu erstellen. Je nach Projekt wählen wir die Tools, die am besten passen."
+            "q": "Welche Tools nutzen Sie für Workflow-Automatisierungen und individuelle Apps?",
+            "a": "Wir wählen die Tools danach aus, was das Projekt tatsächlich braucht. Für Workflow-Automatisierungen nutzen wir häufig n8n, um Systeme wie E-Mail, Tabellen, Cloud-Speicher und CRMs zu verbinden. Wenn ein Projekt eine individuelle Oberfläche, komplexere Logik oder Funktionen benötigt, die Automatisierungstools nicht abdecken, entwickeln wir eine massgeschneiderte App mit modernen Webtechnologien. KI setzen wir dort ein, wo sie einen echten Mehrwert bietet, etwa beim Verarbeiten von Dokumenten oder unstrukturierten Informationen."
           },
           {
-            "q": "Brauche ich technisches Wissen, um KI-Automatisierungen zu nutzen?",
+            "q": "Brauche ich technisches Wissen, um Workflow-Automatisierungen zu nutzen?",
             "a": "Nein. Wir bauen Lösungen, die zu Ihren bestehenden Abläufen passen und einfach nutzbar sind. Dazu gehören auch Einführung und Dokumentation, damit Ihr Team sicher damit arbeiten kann."
           }
         ]
@@ -435,7 +435,7 @@
     "serviceOptions": [
       "Webdesign",
       "Webentwicklung",
-      "KI-Automatisierungen",
+      "Workflow-Automatisierung",
       "Website-Migration",
       "SEO & Analytics",
       "Bewerbung für ein Non-Profit-Projekt",
@@ -449,17 +449,17 @@
     ]
   },
   "footer": {
-    "tagline": "Individuelle Webentwicklung und KI-gestützte Workflow-Automatisierung in der Schweiz.",
+    "tagline": "Individuelle Webentwicklung und Workflow-Automatisierung in der Schweiz.",
     "quickLinks": "Links",
     "contact": "Kontakt",
     "privacyPolicy": "Datenschutz",
-    "copyright": "© 2025 Moniré. Alle Rechte vorbehalten.",
+    "copyright": "© 2026 Moniré. Alle Rechte vorbehalten.",
     "locationCity": "Zürich, Schweiz",
     "locationService": "Für Kunden weltweit"
   },
   "caseStudy": {
     "back": "Zurück zu den Projekten",
-    "eyebrow": "KI-Automatisierung",
+    "eyebrow": "Workflow-Automatisierung",
     "title": "Spesenbeleg-\nAutomatisierung",
     "before": {
       "title": "Vorher:",
@@ -527,7 +527,7 @@
     "eyebrow": "Kontakt",
     "title": "Sprechen wir über Ihr Projekt",
     "intro": "Ob Sie ein konkretes Projekt im Kopf haben oder erst Möglichkeiten ausloten möchten – wir freuen uns, von Ihnen zu hören.",
-    "structuredDescription": "Individuelle Website-Entwicklung und KI-gestützte Workflow-Automatisierung in der Schweiz."
+    "structuredDescription": "Individuelle Website-Entwicklung und Workflow-Automatisierung in der Schweiz."
   },
   "apply": {
     "back": "← Zurück",
@@ -1085,16 +1085,16 @@
     "what-ai-automation-actually-means-for-a-small-business": {
       "slug": "what-ai-automation-actually-means-for-a-small-business",
       "locale": "de",
-      "title": "Was KI-Automatisierung für kleine Unternehmen wirklich bedeutet",
+      "title": "Was Workflow-Automatisierung für kleine Unternehmen wirklich bedeutet",
       "description": "Ein praktischer Blick darauf, wie kleine Unternehmen wiederkehrende Abläufe automatisieren können, ohne die Kontrolle aus der Hand zu geben.",
-      "seoTitle": "Was KI-Automatisierung für kleine Unternehmen bedeutet | Moniré Insights",
-      "seoDescription": "Ein praktischer Leitfaden zu KI-Automatisierung für kleine Unternehmen: wo sie hilft, echte Beispiele und wie man startet.",
+      "seoTitle": "Was Workflow-Automatisierung für kleine Unternehmen bedeutet | Moniré Insights",
+      "seoDescription": "Ein praktischer Leitfaden zu Workflow-Automatisierung für kleine Unternehmen: wo sie hilft, echte Beispiele und wie man startet.",
       "keywords": [
         "KI-Automatisierung für kleine Unternehmen",
         "Workflow-Automatisierung kleine Unternehmen",
         "Admin-Aufgaben automatisieren"
       ],
-      "quickAnswer": "Für kleine Unternehmen bedeutet KI-Automatisierung meist, wiederkehrende Admin-Schritte zu reduzieren, während Menschen die Entscheidungen behalten.",
+      "quickAnswer": "Für kleine Unternehmen bedeutet Workflow-Automatisierung, wiederkehrende Admin-Schritte zu reduzieren, während Menschen die Entscheidungen behalten. KI ist nur ein optionaler Bestandteil mancher Workflows.",
       "primaryCta": {
         "title": "Bereit, repetitive Arbeit zu reduzieren?",
         "body": "Wir schauen uns Ihren aktuellen Workflow an und sagen ehrlich, wo Automatisierung wirklich helfen würde.",
@@ -1109,7 +1109,7 @@
       ],
       "faqItems": [
         {
-          "question": "Was ist KI-Automatisierung für kleine Unternehmen?",
+          "question": "Was ist Workflow-Automatisierung für kleine Unternehmen?",
           "answer": "Es geht um praktische Workflows, die wiederkehrende Aufgaben automatisieren, während Menschen Entscheidungen und Freigaben behalten."
         },
         {
@@ -1125,15 +1125,15 @@
           "answer": "Viele Automatisierungen starten mit einem klar abgegrenzten Workflow statt mit einem grossen System. Die Kosten hängen von der Komplexität ab, und wir planen nach praktischem Nutzen — nicht danach, möglichst viel zu verkaufen."
         },
         {
-          "question": "Wo bekomme ich Hilfe für KI-Automatisierung in der Schweiz?",
-          "answer": "Moniré sitzt in Zürich und hilft kleinen und mittleren Unternehmen, praktische KI-Automatisierungen zu entwickeln. Wir arbeiten mit Kunden in der Schweiz und international."
+          "question": "Wo bekomme ich Hilfe für Workflow-Automatisierung in der Schweiz?",
+          "answer": "Moniré sitzt in Zürich und hilft kleinen und mittleren Unternehmen, praktische Workflow-Automatisierungen zu entwickeln. Wir arbeiten mit Kunden in der Schweiz und international."
         },
         {
           "question": "Mit welchen Tools bauen Sie Automatisierungen?",
           "answer": "Wir arbeiten häufig mit n8n, weil es viele Tools verbindet, die Unternehmen bereits nutzen — E-Mail, Tabellen, Cloud-Speicher oder CRMs. Je nach Projekt nutzen wir auch andere passende Lösungen."
         }
       ],
-      "contentHtml": "<p>Wenn Sie in letzter Zeit viel über KI gehört haben und sich fragen, ob das überhaupt etwas mit Ihrem Unternehmen zu tun hat: Damit sind Sie nicht allein.</p><p>Viele Gespräche über KI-Automatisierung richten sich an grosse Unternehmen mit hohen Budgets und eigenen Tech-Teams. Für kleine Unternehmen klingt das schnell teuer und zu technisch.</p><p>In der Praxis sind die wertvollsten Automatisierungen für kleine Unternehmen oft sehr einfach. Es sind die wiederkehrenden Aufgaben, die Teams jeden Tag manuell erledigen und die Woche für Woche Zeit fressen.</p><section aria-labelledby=\"not-replacing-people\"><h2 id=\"not-replacing-people\">Wie Automatisierung Menschen in Kontrolle lässt</h2><p>Die häufigste Sorge ist, dass Automatisierung bedeutet, Menschen würden ersetzt oder Entscheidungen an Maschinen abgegeben. Das ist nicht das, was wir bauen.</p><p>Bei jedem Workflow bleibt ein Mensch eingebunden. Die KI übernimmt die repetitiven, zeitaufwändigen Teile. Eine Person prüft, bestätigt und behält die Kontrolle. Ziel ist, dass die Zeit und das Urteilsvermögen Ihres Teams dort eingesetzt werden, wo sie wirklich gebraucht werden.</p></section><section aria-labelledby=\"in-practice\"><h2 id=\"in-practice\">Drei echte Beispiele für KI-Automatisierung in kleinen Unternehmen</h2><p>Hier sind drei Beispiele aus Projekten mit echten Kunden.</p><h3>1. Spesenbelege: weniger Admin, weniger Fehler</h3><p>Ein Kunde verbrachte jeden Monat Zeit damit, Spesenbelege manuell abzulegen, E-Mails zu suchen, Dateien umzubenennen und Zahlen in Tabellen einzutragen. Es war langsam, fehleranfällig und niemand machte es gern.</p><p>Heute kommen Belege per E-Mail an, werden automatisch ausgelesen und landen mit den richtigen Informationen im richtigen Ordner. Das Team prüft und bestätigt. Fertig.</p><p>Das Ergebnis: ein schnellerer, zuverlässigerer Prozess mit weniger Fehlern und einer sauberen Ablage, die jederzeit für die Prüfung bereit ist.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Ergebnis-Highlight\"><strong>~70 % weniger Aufwand für die Spesenverwaltung</strong><span>Eine kleine Workflow-Änderung mit messbarem operativem Effekt.</span></div><p><a href=\"/case-studies/expense-receipt-automation\" class=\"text-main-teal underline hover:no-underline\">Zur Case Study \"Spesenbelege\"</a></p><h3>2. Kunden-Onboarding: jeder nächste Schritt passiert automatisch</h3><p>Wenn ein Kunde ein Projekt bestätigt, passieren oft dieselben Dinge: Vertrag versenden, Onboarding-E-Mail schicken, Ordner erstellen, interne Aufgaben anlegen.</p><p>Das ist nicht kompliziert, braucht aber Zeit und man vergisst leicht einen Schritt.</p><p>Mit der richtigen Automatisierung passiert all das automatisch, sobald ein Projekt bestätigt ist. Jedes Mal, ohne dass jemand daran denken muss.</p><h3>3. Mitgliederverwaltung: eine Zusage aktualisiert alle Plattformen</h3><p>Wenn sich jemand für eine private Community bewirbt und angenommen wird, muss ein Account auf mehreren Plattformen erstellt werden. Diese Plattformen sprechen aber nicht automatisch miteinander.</p><p>Ohne Automatisierung bedeutet das: überall einzeln einloggen und dieselben Daten manuell eintragen.</p><p>Mit einem verbundenen Workflow löst die Annahme die Einrichtung auf allen Plattformen automatisch aus. Kein Copy-Paste, kein manuelles Setup und viel weniger Risiko, dass etwas vergessen geht.</p></section><section aria-labelledby=\"common-pattern\"><h2 id=\"common-pattern\">Die besten Automatisierungen betreffen wiederholbare Arbeit</h2><p>Alle drei Beispiele folgen demselben Muster:</p><p>Etwas passiert, danach folgen jedes Mal dieselben Schritte, und früher musste jemand jeden Schritt manuell erledigen.</p><p>Genau dort hilft Automatisierung oft am meisten.</p><p>Nicht bei kreativen Entscheidungen. Nicht bei Urteilsfragen. Sondern bei den wiederholbaren, vorhersehbaren Aufgaben, die still und leise Zeit kosten.</p><aside class=\"insight-pullquote\" aria-label=\"Automatisierungsprinzip\"><p>Automatisieren Sie die Routine. Behalten Sie menschliches Urteilsvermögen dort, wo es zählt.</p></aside></section><section aria-labelledby=\"setup-complexity\"><h2 id=\"setup-complexity\">Ist die Einrichtung kompliziert<span class=\"insight-heading-punctuation\">?</span></h2><p>Das muss sie nicht sein.</p><p>Wir bauen viele Workflows mit n8n. Damit lassen sich die Tools verbinden, die Ihr Unternehmen bereits nutzt — zum Beispiel E-Mail, Tabellen, Cloud-Speicher und CRMs.</p><p>Sie müssen dafür nicht Ihr bestehendes Setup ersetzen oder eine völlig neue Arbeitsweise lernen.</p><p>Die richtige Automatisierung passt sich an Ihre Arbeitsweise an, nicht umgekehrt.</p></section><section aria-labelledby=\"where-to-start-ai\"><h2 id=\"where-to-start-ai\">So finden Sie den ersten sinnvollen Workflow</h2><p>Der beste Startpunkt ist meistens die Aufgabe, die Sie am häufigsten machen und am wenigsten gern erledigen.</p><p>Wenn Sie regelmässig:</p><ul><li>Informationen zwischen Tools kopieren</li><li>immer wieder dieselben E-Mails versenden</li><li>dieselben Ordner oder Dokumente erstellen</li><li>Menschen manuell auf mehreren Plattformen einrichten</li><li>jede Woche kleine Admin-Aufgaben nachverfolgen</li></ul><p>dann gibt es wahrscheinlich einen Teil dieses Prozesses, der automatisiert werden kann.</p><p>Oft sind die besten Automatisierungen keine riesigen Systeme. Es sind kleine Workflows, die ein paar repetitive Schritte aus Ihrer Woche entfernen.</p></section>"
+      "contentHtml": "<p>Wenn Sie sich fragen, ob Automatisierung Ihrem Unternehmen helfen könnte, sind Sie nicht allein.</p><p>Workflow-Automatisierung klingt schnell teuer oder zu technisch, besonders wenn sie als KI-Lösung dargestellt wird. In der Praxis geht es vor allem darum, Systeme zu verbinden und wiederkehrende manuelle Schritte zu reduzieren. KI ist bei manchen Workflows hilfreich, aber nicht für jede Automatisierung notwendig.</p><p>In der Praxis sind die wertvollsten Automatisierungen für kleine Unternehmen oft sehr einfach. Es sind die wiederkehrenden Aufgaben, die Teams jeden Tag manuell erledigen und die Woche für Woche Zeit fressen.</p><section aria-labelledby=\"not-replacing-people\"><h2 id=\"not-replacing-people\">Wie Automatisierung Menschen in Kontrolle lässt</h2><p>Die häufigste Sorge ist, dass Automatisierung bedeutet, Menschen würden ersetzt oder Entscheidungen an Maschinen abgegeben. Das ist nicht das, was wir bauen.</p><p>Bei jedem Workflow bleibt ein Mensch eingebunden. Die Automatisierung übernimmt die repetitiven, zeitaufwändigen Teile. KI kommt nur dort zum Einsatz, wo Interpretation oder eine flexiblere Verarbeitung wirklich hilfreich ist. Eine Person prüft, bestätigt und behält die Kontrolle. Ziel ist, dass die Zeit und das Urteilsvermögen Ihres Teams dort eingesetzt werden, wo sie wirklich gebraucht werden.</p></section><section aria-labelledby=\"in-practice\"><h2 id=\"in-practice\">Drei echte Beispiele für Workflow-Automatisierung in kleinen Unternehmen</h2><p>Hier sind drei Beispiele aus Projekten mit echten Kunden.</p><h3>1. Spesenbelege: weniger Admin, weniger Fehler</h3><p>Ein Kunde verbrachte jeden Monat Zeit damit, Spesenbelege manuell abzulegen, E-Mails zu suchen, Dateien umzubenennen und Zahlen in Tabellen einzutragen. Es war langsam, fehleranfällig und niemand machte es gern.</p><p>Heute kommen Belege per E-Mail an, werden automatisch ausgelesen und landen mit den richtigen Informationen im richtigen Ordner. Das Team prüft und bestätigt. Fertig.</p><p>Das Ergebnis: ein schnellerer, zuverlässigerer Prozess mit weniger Fehlern und einer sauberen Ablage, die jederzeit für die Prüfung bereit ist.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Ergebnis-Highlight\"><strong>~70 % weniger Aufwand für die Spesenverwaltung</strong><span>Eine kleine Workflow-Änderung mit messbarem operativem Effekt.</span></div><p><a href=\"/case-studies/expense-receipt-automation\" class=\"text-main-teal underline hover:no-underline\">Zur Case Study \"Spesenbelege\"</a></p><h3>2. Kunden-Onboarding: jeder nächste Schritt passiert automatisch</h3><p>Wenn ein Kunde ein Projekt bestätigt, passieren oft dieselben Dinge: Vertrag versenden, Onboarding-E-Mail schicken, Ordner erstellen, interne Aufgaben anlegen.</p><p>Das ist nicht kompliziert, braucht aber Zeit und man vergisst leicht einen Schritt.</p><p>Mit der richtigen Automatisierung passiert all das automatisch, sobald ein Projekt bestätigt ist. Jedes Mal, ohne dass jemand daran denken muss.</p><h3>3. Mitgliederverwaltung: eine Zusage aktualisiert alle Plattformen</h3><p>Wenn sich jemand für eine private Community bewirbt und angenommen wird, muss ein Account auf mehreren Plattformen erstellt werden. Diese Plattformen sprechen aber nicht automatisch miteinander.</p><p>Ohne Automatisierung bedeutet das: überall einzeln einloggen und dieselben Daten manuell eintragen.</p><p>Mit einem verbundenen Workflow löst die Annahme die Einrichtung auf allen Plattformen automatisch aus. Kein Copy-Paste, kein manuelles Setup und viel weniger Risiko, dass etwas vergessen geht.</p><p><a href=\"/case-studies/portco-hr-collective\" class=\"text-main-teal underline hover:no-underline\">Zur Case Study \"Mitgliederverwaltung\"</a></p></section><section aria-labelledby=\"common-pattern\"><h2 id=\"common-pattern\">Die besten Automatisierungen betreffen wiederholbare Arbeit</h2><p>Alle drei Beispiele folgen demselben Muster:</p><p>Etwas passiert, danach folgen jedes Mal dieselben Schritte, und früher musste jemand jeden Schritt manuell erledigen.</p><p>Genau dort hilft Automatisierung oft am meisten.</p><p>Nicht bei kreativen Entscheidungen. Nicht bei Urteilsfragen. Sondern bei den wiederholbaren, vorhersehbaren Aufgaben, die still und leise Zeit kosten.</p><aside class=\"insight-pullquote\" aria-label=\"Automatisierungsprinzip\"><p>Automatisieren Sie die Routine. Behalten Sie menschliches Urteilsvermögen dort, wo es zählt.</p></aside></section><section aria-labelledby=\"setup-complexity\"><h2 id=\"setup-complexity\">Ist die Einrichtung kompliziert<span class=\"insight-heading-punctuation\">?</span></h2><p>Das muss sie nicht sein.</p><p>Wir wählen die Tools danach aus, was der Workflow tatsächlich braucht. Häufig nutzen wir n8n, um Systeme wie E-Mail, Tabellen, Cloud-Speicher und CRMs zu verbinden. Wenn ein Projekt eine individuelle Oberfläche, komplexe Logik oder Funktionen benötigt, die Automatisierungstools nicht abdecken, entwickeln wir eine massgeschneiderte App mit modernen Webtechnologien. KI ergänzen wir nur dort, wo sie einen echten Mehrwert schafft.</p><p>Sie müssen dafür nicht Ihr bestehendes Setup ersetzen oder eine völlig neue Arbeitsweise lernen.</p><p>Die richtige Automatisierung passt sich an Ihre Arbeitsweise an, nicht umgekehrt.</p></section><section aria-labelledby=\"where-to-start-ai\"><h2 id=\"where-to-start-ai\">So finden Sie den ersten sinnvollen Workflow</h2><p>Der beste Startpunkt ist meistens die Aufgabe, die Sie am häufigsten machen und am wenigsten gern erledigen.</p><p>Wenn Sie regelmässig:</p><ul><li>Informationen zwischen Tools kopieren</li><li>immer wieder dieselben E-Mails versenden</li><li>dieselben Ordner oder Dokumente erstellen</li><li>Menschen manuell auf mehreren Plattformen einrichten</li><li>jede Woche kleine Admin-Aufgaben nachverfolgen</li></ul><p>dann gibt es wahrscheinlich einen Teil dieses Prozesses, der automatisiert werden kann.</p><p>Oft sind die besten Automatisierungen keine riesigen Systeme. Es sind kleine Workflows, die ein paar repetitive Schritte aus Ihrer Woche entfernen.</p></section>"
     },
     "why-your-website-might-be-losing-you-clients": {
       "slug": "why-your-website-might-be-losing-you-clients",
@@ -1189,13 +1189,14 @@
   "seo": {
     "routes": {
       "/": {
-        "title": "Moniré | Webdesign, Webentwicklung & KI-Automatisierungen in Zürich, Schweiz",
-        "description": "Moniré ist ein digitales Studio für Webdesign, Webentwicklung und KI-Automatisierungen. In Zürich ansässig, weltweit tätig.",
+        "title": "Moniré | Webdesign, Webentwicklung & Workflow-Automatisierung in Zürich, Schweiz",
+        "description": "Moniré ist ein digitales Studio für Webdesign, Webentwicklung und Workflow-Automatisierung. In Zürich ansässig, weltweit tätig.",
         "keywords": [
           "Moniré",
           "Webdesign Zürich",
           "Webentwicklung Zürich",
           "Website-Design Schweiz",
+          "Workflow-Automatisierung Schweiz",
           "KI-Automatisierung Schweiz",
           "Workflow-Automatisierung Zürich",
           "Webflow-Entwicklung Zürich",
@@ -1203,12 +1204,12 @@
         ]
       },
       "/contact": {
-        "title": "Kontakt Moniré | Webdesign, Webentwicklung & KI-Automatisierungen",
-        "description": "Kontaktieren Sie Moniré für Webdesign, Webentwicklung und KI-Automatisierungen in Zürich und der ganzen Schweiz."
+        "title": "Kontakt Moniré | Webdesign, Webentwicklung & Workflow-Automatisierung",
+        "description": "Kontaktieren Sie Moniré für Webdesign, Webentwicklung und Workflow-Automatisierung in Zürich und der ganzen Schweiz."
       },
       "/insights": {
         "title": "Insights zu Webdesign, Automatisierung & digitaler Strategie | Moniré",
-        "description": "Praktische Artikel von Moniré zu Webdesign, Webentwicklung, SEO, KI-Automatisierung und digitalen Entscheidungen für kleine und mittlere Unternehmen.",
+        "description": "Praktische Artikel von Moniré zu Webdesign, Webentwicklung, SEO, Workflow-Automatisierung, praktischer KI und digitalen Entscheidungen für kleine und mittlere Unternehmen.",
         "keywords": [
           "Webdesign-Beratung",
           "Website-Strategie",
@@ -1221,7 +1222,7 @@
       },
       "/privacy": {
         "title": "Datenschutzrichtlinie | Moniré",
-        "description": "Datenschutzrichtlinie für Moniré, ein digitales Studio für Webdesign, Webentwicklung und KI-Automatisierungen."
+        "description": "Datenschutzrichtlinie für Moniré, ein digitales Studio für Webdesign, Webentwicklung und Workflow-Automatisierung."
       },
       "/apply": {
         "title": "Bewerben | Moniré",
@@ -1249,7 +1250,7 @@
       },
       "/case-studies/portco-hr-collective": {
         "title": "PortCo HR Collective Case Study | Moniré",
-        "description": "Case Study: Branding, Webdesign, Entwicklung und KI-Automatisierung von Moniré für PortCo HR Collective."
+        "description": "Case Study: Branding, Webdesign, Entwicklung und Workflow-Automatisierung von Moniré für PortCo HR Collective."
       },
       "/case-studies/systemically": {
         "title": "SystemicAlly Consulting-Website Case Study | Moniré",

@@ -15,7 +15,7 @@
     "eyebrow": "Switzerland-Based • Serving Clients Worldwide",
     "headline": "Websites built to attract clients and grow with your business",
     "highlightWord": "attract",
-    "subtitle": "High-end websites built to convert. AI workflow automations when you're ready to scale.",
+    "subtitle": "High-end websites built to convert. Custom apps and workflow automation when you're ready to scale.",
     "cta": "Book a free consultation",
     "workCta": "See our work"
   },
@@ -42,7 +42,7 @@
       },
       {
         "title": "24/7 Time Savings",
-        "desc": "Intelligent AI automations handle repetitive tasks around the clock, freeing you to focus on what really matters."
+        "desc": "Smart workflow automations handle repetitive tasks around the clock, freeing you to focus on what really matters."
       },
       {
         "title": "Easy Updates",
@@ -77,14 +77,14 @@
       },
       {
         "badge": "Automation",
-        "title": "AI Automations & Workflows",
+        "title": "Workflow Automation",
         "desc": "We automate repetitive admin tasks and connect the tools your business already uses, from receipts and onboarding to file organisation and CRM updates. The goal is simple: fewer manual steps, fewer errors, and more time for the work that needs human judgement."
       }
     ],
     "insightLinks": {
       "websiteLosingClients": "Why your website might be losing you clients →",
       "websitePlatform": "How we choose the right website platform →",
-      "aiAutomation": "What AI automation means for a small business →"
+      "aiAutomation": "What workflow automation means for a small business →"
     }
   },
   "about": {
@@ -93,7 +93,7 @@
     "stories": [
       {
         "title": "Our Story",
-        "text": "Before founding Moniré, we met as frontend developers at brack.ch, one of Switzerland's largest online retailers. Our paths into tech were unconventional. Monika came from HR and consulting, while Nikky worked as a veterinarian. Those experiences became our shared strength. We don't just write code; we understand business challenges from multiple angles. That's why we founded Moniré: to partner with businesses that need more than technical expertise, but genuine care and investment in their growth."
+        "text": "Before founding Moniré, we met as frontend developers at brack.ch, one of Switzerland's largest online retailers. Our paths into tech were unconventional. Monika came from business administration, while Nikky worked as a veterinarian. Those experiences became our shared strength. We don't just write code; we understand business challenges from multiple angles. That's why we founded Moniré: to partner with businesses that need more than technical expertise, but genuine care and investment in their growth."
       },
       {
         "title": "Why Choose A Duo?",
@@ -139,7 +139,7 @@
     "titleAccent": "Helping Your Business Grow.",
     "tabs": {
       "webDesign": "Web Design & Development",
-      "automation": "AI Automations"
+      "automation": "Workflow Automation"
     },
     "getStarted": "Get started",
     "mostPopular": "Most Popular",
@@ -195,13 +195,13 @@
       "automation": []
     },
     "automationBlock": {
-      "title": "AI Automations & Workflow Systems",
+      "title": "Workflow Automation & Custom Systems",
       "desc": "We build custom automation systems that reduce manual, repetitive work and seamlessly connect the tools you already use. Pricing is defined individually after a short discovery call.",
       "cta": "Get Started",
       "caseStudy": "Latest case study"
     },
     "includedNote": "Each plan includes everything from the previous tier.",
-    "automationArticleLink": "What AI automation means for a small business →",
+    "automationArticleLink": "What workflow automation means for a small business →",
     "currencyLabel": "Currency"
   },
   "portfolio": {
@@ -322,7 +322,7 @@
           },
           {
             "q": "Can you help with SEO?",
-            "a": "Our core focus is development and AI automations, but we build every website with SEO best practices in mind. We can also recommend trusted partners for ongoing SEO services.<br /><a href='/insights/why-your-website-might-be-losing-you-clients' style='color:#F1D69A;text-decoration:underline;'>Read more about why this matters →</a>"
+            "a": "Our core focus is development and workflow automation, but we build every website with SEO best practices in mind. We can also recommend trusted partners for ongoing SEO services.<br /><a href='/insights/why-your-website-might-be-losing-you-clients' style='color:#F1D69A;text-decoration:underline;'>Read more about why this matters →</a>"
           },
           {
             "q": "Do you work with international clients?",
@@ -368,18 +368,18 @@
         ]
       },
       {
-        "label": "AI Automations",
+        "label": "Workflow Automation",
         "items": [
           {
-            "q": "What is AI automation and how can it help my business?",
-            "a": "AI automation uses artificial intelligence to handle repetitive tasks, analyze data, and streamline operations. Examples include customer support flows, data entry, email handling, and content workflows — helping you save time and reduce errors.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Read what this looks like in practice →</a>"
+            "q": "What is workflow automation and how can it help my business?",
+            "a": "Workflow automation connects the tools you already use and handles repeatable steps automatically. It can reduce data entry, move information between systems, send reminders, organise files, and use AI where interpretation is genuinely useful — helping you save time and reduce errors.<br /><a href='/insights/what-ai-automation-actually-means-for-a-small-business' style='color:#F1D69A;text-decoration:underline;'>Read what this looks like in practice →</a>"
           },
           {
-            "q": "What tools do you use to build automations?",
-            "a": "We mainly build automations with n8n, which connects to the tools most businesses already use, including email, spreadsheets, cloud storage, and CRMs. We also use AI tools such as Claude and OpenAI Codex to support development and create more tailored solutions. For some projects, we use other tools depending on what fits best."
+            "q": "What tools do you use to build workflow automations and custom apps?",
+            "a": "We choose the tools based on what the project needs. For workflow automations, we often use n8n to connect systems such as email, spreadsheets, cloud storage, and CRMs. When a project needs a custom interface, more advanced logic, or functionality that automation tools cannot provide, we build a tailored app using modern web technologies. We may also use AI where it adds genuine value, such as interpreting documents or unstructured information."
           },
           {
-            "q": "Do I need technical knowledge to use AI automation tools?",
+            "q": "Do I need technical knowledge to use workflow automations?",
             "a": "No. We build user-friendly solutions that fit into your existing workflow. We also provide onboarding and documentation so your team can use everything confidently."
           }
         ]
@@ -434,7 +434,7 @@
     "serviceOptions": [
       "Web Design",
       "Web Development",
-      "AI Automations",
+      "Workflow Automation",
       "Website Migration",
       "SEO & Analytics",
       "Non-profit project application",
@@ -449,17 +449,17 @@
     "closeLabel": "Close contact form"
   },
   "footer": {
-    "tagline": "Custom website development and AI-powered workflow automation in Switzerland.",
+    "tagline": "Custom website development and workflow automation in Switzerland.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "privacyPolicy": "Privacy Policy",
-    "copyright": "© 2025 Moniré. All rights reserved.",
+    "copyright": "© 2026 Moniré. All rights reserved.",
     "locationCity": "Zürich, Switzerland",
     "locationService": "Serving clients worldwide"
   },
   "caseStudy": {
     "back": "Back to Projects",
-    "eyebrow": "AI Automation",
+    "eyebrow": "Workflow Automation",
     "title": "Expense\nReceipt\nAutomation",
     "before": {
       "title": "Before:",
@@ -527,7 +527,7 @@
     "eyebrow": "Contact",
     "title": "Let's Work Together",
     "intro": "Whether you have a project in mind or just want to explore possibilities, we'd love to hear from you.",
-    "structuredDescription": "Custom website development and AI-powered workflow automation in Switzerland."
+    "structuredDescription": "Custom website development and workflow automation in Switzerland."
   },
   "apply": {
     "back": "← Back",
@@ -1085,16 +1085,16 @@
     "what-ai-automation-actually-means-for-a-small-business": {
       "slug": "what-ai-automation-actually-means-for-a-small-business",
       "locale": "en",
-      "title": "What AI automation actually means for a small business",
+      "title": "What workflow automation actually means for a small business",
       "description": "A practical look at how small businesses can automate repetitive workflows while keeping people in control.",
-      "seoTitle": "What AI automation actually means for a small business | Moniré Insights",
-      "seoDescription": "A practical guide to AI automation for small businesses: where it helps most, real examples, and where to start.",
+      "seoTitle": "What workflow automation means for a small business | Moniré Insights",
+      "seoDescription": "A practical guide to workflow automation for small businesses: where it helps most, real examples, and where to start.",
       "keywords": [
         "AI automation for small businesses",
         "small business workflow automation",
         "automate admin tasks"
       ],
-      "quickAnswer": "For small businesses, AI automation usually means removing repetitive admin steps while keeping people in control of decisions.",
+      "quickAnswer": "For small businesses, workflow automation means removing repetitive admin steps while keeping people in control of decisions. AI is only one optional part of some workflows.",
       "primaryCta": {
         "title": "Ready to reduce repetitive work?",
         "body": "We can look at your current workflow and tell you honestly where automation would help most.",
@@ -1109,7 +1109,7 @@
       ],
       "faqItems": [
         {
-          "question": "What is AI automation for small businesses?",
+          "question": "What is workflow automation for small businesses?",
           "answer": "It is the use of practical workflows to automate repetitive tasks while keeping people in control of decisions and approvals."
         },
         {
@@ -1125,15 +1125,15 @@
           "answer": "Most small business automations start with one focused workflow rather than a full system. Costs vary by complexity, and we scope each project around practical impact rather than selling more than you need."
         },
         {
-          "question": "Where can I get AI automation help in Switzerland?",
-          "answer": "Moniré is based in Zurich, Switzerland, and helps small and mid-sized businesses design practical AI automation workflows. We work with clients across Switzerland and internationally."
+          "question": "Where can I get workflow automation help in Switzerland?",
+          "answer": "Moniré is based in Zurich, Switzerland, and helps small and mid-sized businesses design practical workflow automations. We work with clients across Switzerland and internationally."
         },
         {
           "question": "What tools do you use to build automations?",
           "answer": "We mainly build with n8n, which connects to the tools most businesses already use, including email, spreadsheets, cloud storage, and CRMs. For some projects we use other tools depending on what fits best."
         }
       ],
-      "contentHtml": "<p>If you&#x27;ve been hearing a lot about AI lately and wondering whether any of it applies to you, you&#x27;re not alone.</p><p>Most of the conversation around AI automation is aimed at enterprise companies with large budgets and dedicated tech teams. For a small business owner, it can feel expensive and overly technical.</p><p>But in practice, the most valuable automations for small businesses are often very simple. They&#x27;re the repetitive tasks teams are doing manually every day that quietly eat up hours each week.</p><section aria-labelledby=\"not-replacing-people\"><h2 id=\"not-replacing-people\">How automation keeps people in control</h2><p>The most common concern we hear is that automation means people will lose their jobs or decisions will get handed over to a machine. That&#x27;s not what we build.</p><p>Every workflow we create keeps a human in the loop. The AI handles the repetitive, time-consuming parts. The person reviews, confirms, and stays in control. The goal is to make sure your team&#x27;s time and judgment goes toward work that actually needs it.</p></section><section aria-labelledby=\"in-practice\"><h2 id=\"in-practice\">Three real examples of AI automation in small businesses</h2><p>Here are three examples from work we&#x27;ve done with real clients.</p><h3>1. Expense receipts: less admin, fewer mistakes</h3><p>One client was spending part of every month filing expense receipts by hand, chasing emails, renaming files, entering numbers into spreadsheets. It was slow, error-prone, and nobody enjoyed doing it.</p><p>Now receipts arrive by email, get read automatically, and land in the right folder with the right information pulled out. The team reviews and confirms. That&#x27;s it.</p><p>The result was a faster, more reliable process with fewer errors and a consistent archive that&#x27;s always ready for review.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Result highlight\"><strong>~70% less time on receipt admin</strong><span>A small workflow change with measurable operational impact.</span></div><p><a href=\"/case-studies/expense-receipt-automation\" class=\"text-main-teal underline hover:no-underline\">Read the Expense Receipts case study</a></p><h3>2. Client onboarding: every next step happens automatically</h3><p>When a client says yes to a project, there&#x27;s a predictable set of things that need to happen. A contract needs to go out, an onboarding email needs to be sent, folders need to be created, tasks need to be set up internally.</p><p>It&#x27;s not complicated, but it takes time and it&#x27;s easy to miss a step.</p><p>With the right automation in place, all of that happens automatically the moment a project is confirmed. Every time, without anyone having to remember.</p><h3>3. Community membership: one approval updates every platform</h3><p>When someone applies to join a private community and gets accepted, their account needs to be created across multiple platforms, and those platforms don&#x27;t naturally talk to each other.</p><p>Without automation, that means logging into each one separately and entering the same details manually.</p><p>With a connected workflow, acceptance triggers the setup across every platform automatically. No copy-pasting, no manual setup, and much less risk of something being missed.</p></section><section aria-labelledby=\"common-pattern\"><h2 id=\"common-pattern\">The best automation targets repeatable work</h2><p>All three examples follow the same pattern:</p><p>Something happens, the same steps follow every time, and someone used to do all of it by hand.</p><p>That&#x27;s where automation tends to help most.</p><p>Not creative decisions. Not judgment calls. Just the repetitive, predictable tasks that quietly eat up time.</p><aside class=\"insight-pullquote\" aria-label=\"Automation principle\"><p>Automate the repetition, keep human judgment where it matters.</p></aside></section><section aria-labelledby=\"setup-complexity\"><h2 id=\"setup-complexity\">Is it complicated to set up<span class=\"insight-heading-punctuation\">?</span></h2><p>It doesn&#x27;t have to be.</p><p>We mainly build workflows with n8n, which connects to the tools your business already uses, including email, spreadsheets, cloud storage, and CRMs.</p><p>There&#x27;s no need to replace your existing setup or learn an entirely new way of working.</p><p>The right automation fits around how you already work, not the other way around.</p></section><section aria-labelledby=\"where-to-start-ai\"><h2 id=\"where-to-start-ai\">How to find your first automation opportunity</h2><p>The best place to start is usually the task you do the most often and enjoy the least.</p><p>If you find yourself:</p><ul><li>copying information between tools</li><li>sending the same emails repeatedly</li><li>creating the same folders or documents</li><li>manually setting people up across platforms</li><li>chasing small administrative tasks every week</li></ul><p>there&#x27;s a good chance part of that process could be automated.</p><p>Often, the best automation opportunities are not huge systems. They are small workflows that remove a few repetitive steps from your week.</p></section>"
+      "contentHtml": "<p>If you&#x27;ve been wondering whether automation could help your business, you&#x27;re not alone.</p><p>Workflow automation can sound expensive or overly technical, especially when it is presented as an AI solution. In practice, it is simply about connecting systems and removing repeatable manual steps. AI is useful in some workflows, but it is not required for every automation.</p><p>But in practice, the most valuable automations for small businesses are often very simple. They&#x27;re the repetitive tasks teams are doing manually every day that quietly eat up hours each week.</p><section aria-labelledby=\"not-replacing-people\"><h2 id=\"not-replacing-people\">How automation keeps people in control</h2><p>The most common concern we hear is that automation means people will lose their jobs or decisions will get handed over to a machine. That&#x27;s not what we build.</p><p>Every workflow we create keeps a human in the loop. The automation handles the repetitive, time-consuming parts. AI is only used where interpretation or more flexible processing is genuinely helpful. The person reviews, confirms, and stays in control. The goal is to make sure your team&#x27;s time and judgment goes toward work that actually needs it.</p></section><section aria-labelledby=\"in-practice\"><h2 id=\"in-practice\">Three real examples of workflow automation in small businesses</h2><p>Here are three examples from work we&#x27;ve done with real clients.</p><h3>1. Expense receipts: less admin, fewer mistakes</h3><p>One client was spending part of every month filing expense receipts by hand, chasing emails, renaming files, entering numbers into spreadsheets. It was slow, error-prone, and nobody enjoyed doing it.</p><p>Now receipts arrive by email, get read automatically, and land in the right folder with the right information pulled out. The team reviews and confirms. That&#x27;s it.</p><p>The result was a faster, more reliable process with fewer errors and a consistent archive that&#x27;s always ready for review.</p><div class=\"insight-stat-break\" role=\"note\" aria-label=\"Result highlight\"><strong>~70% less time on receipt admin</strong><span>A small workflow change with measurable operational impact.</span></div><p><a href=\"/case-studies/expense-receipt-automation\" class=\"text-main-teal underline hover:no-underline\">Read the Expense Receipts case study</a></p><h3>2. Client onboarding: every next step happens automatically</h3><p>When a client says yes to a project, there&#x27;s a predictable set of things that need to happen. A contract needs to go out, an onboarding email needs to be sent, folders need to be created, tasks need to be set up internally.</p><p>It&#x27;s not complicated, but it takes time and it&#x27;s easy to miss a step.</p><p>With the right automation in place, all of that happens automatically the moment a project is confirmed. Every time, without anyone having to remember.</p><h3>3. Community membership: one approval updates every platform</h3><p>When someone applies to join a private community and gets accepted, their account needs to be created across multiple platforms, and those platforms don&#x27;t naturally talk to each other.</p><p>Without automation, that means logging into each one separately and entering the same details manually.</p><p>With a connected workflow, acceptance triggers the setup across every platform automatically. No copy-pasting, no manual setup, and much less risk of something being missed.</p><p><a href=\"/case-studies/portco-hr-collective\" class=\"text-main-teal underline hover:no-underline\">Read the Community Membership case study</a></p></section><section aria-labelledby=\"common-pattern\"><h2 id=\"common-pattern\">The best automation targets repeatable work</h2><p>All three examples follow the same pattern:</p><p>Something happens, the same steps follow every time, and someone used to do all of it by hand.</p><p>That&#x27;s where automation tends to help most.</p><p>Not creative decisions. Not judgment calls. Just the repetitive, predictable tasks that quietly eat up time.</p><aside class=\"insight-pullquote\" aria-label=\"Automation principle\"><p>Automate the repetition, keep human judgment where it matters.</p></aside></section><section aria-labelledby=\"setup-complexity\"><h2 id=\"setup-complexity\">Is it complicated to set up<span class=\"insight-heading-punctuation\">?</span></h2><p>It doesn&#x27;t have to be.</p><p>We choose the tools based on what the workflow needs. We often use n8n to connect systems such as email, spreadsheets, cloud storage, and CRMs. When a project needs a custom interface, advanced logic, or functionality that automation tools cannot provide, we build a tailored app using modern web technologies. AI is added only where it creates genuine value.</p><p>There&#x27;s no need to replace your existing setup or learn an entirely new way of working.</p><p>The right automation fits around how you already work, not the other way around.</p></section><section aria-labelledby=\"where-to-start-ai\"><h2 id=\"where-to-start-ai\">How to find your first automation opportunity</h2><p>The best place to start is usually the task you do the most often and enjoy the least.</p><p>If you find yourself:</p><ul><li>copying information between tools</li><li>sending the same emails repeatedly</li><li>creating the same folders or documents</li><li>manually setting people up across platforms</li><li>chasing small administrative tasks every week</li></ul><p>there&#x27;s a good chance part of that process could be automated.</p><p>Often, the best automation opportunities are not huge systems. They are small workflows that remove a few repetitive steps from your week.</p></section>"
     },
     "why-your-website-might-be-losing-you-clients": {
       "slug": "why-your-website-might-be-losing-you-clients",
@@ -1189,13 +1189,14 @@
   "seo": {
     "routes": {
       "/": {
-        "title": "Moniré | Web Design, Web Development & AI Automations in Zurich, Switzerland",
-        "description": "Moniré is a digital studio offering web design, web development, and AI automations. Based in Zurich, serving clients worldwide.",
+        "title": "Moniré | Web Design, Web Development & Workflow Automation in Zurich, Switzerland",
+        "description": "Moniré is a digital studio offering web design, web development, and workflow automation. Based in Zurich, serving clients worldwide.",
         "keywords": [
           "Moniré",
           "web design Zurich",
           "web development Zurich",
           "website design Switzerland",
+          "workflow automation Switzerland",
           "AI automation Switzerland",
           "workflow automation Zurich",
           "Webflow development Zurich",
@@ -1203,12 +1204,12 @@
         ]
       },
       "/contact": {
-        "title": "Contact Moniré | Web Design, Web Development & AI Automations",
-        "description": "Contact Moniré about web design, web development, and AI automations in Zurich and across Switzerland."
+        "title": "Contact Moniré | Web Design, Web Development & Workflow Automation",
+        "description": "Contact Moniré about web design, web development, and workflow automation in Zurich and across Switzerland."
       },
       "/insights": {
         "title": "Insights on Web Design, Automation & Digital Strategy | Moniré",
-        "description": "Practical articles from Moniré on web design, web development, SEO, AI automation, and digital decisions for small and mid-sized businesses.",
+        "description": "Practical articles from Moniré on web design, web development, SEO, workflow automation, practical AI, and digital decisions for small and mid-sized businesses.",
         "keywords": [
           "web design advice",
           "website strategy",
@@ -1221,7 +1222,7 @@
       },
       "/privacy": {
         "title": "Privacy Policy | Moniré",
-        "description": "Privacy policy for Moniré, a digital studio providing web design, web development, and AI automations."
+        "description": "Privacy policy for Moniré, a digital studio providing web design, web development, and workflow automation."
       },
       "/apply": {
         "title": "Apply | Moniré",
@@ -1249,7 +1250,7 @@
       },
       "/case-studies/portco-hr-collective": {
         "title": "PortCo HR Collective Case Study | Moniré",
-        "description": "Case study: branding, web design, development, and AI automation work delivered by Moniré for PortCo HR Collective."
+        "description": "Case study: branding, web design, development, and workflow automation delivered by Moniré for PortCo HR Collective."
       },
       "/case-studies/systemically": {
         "title": "SystemicAlly Consulting Website Case Study | Moniré",

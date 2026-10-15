@@ -35,7 +35,7 @@ const Index = () => {
     logo: `${SITE_URL}/assets/monire_logo.png`,
     email: "hello@monire.ch",
     description:
-      "Digital studio offering web design, web development, and AI automations in Zurich and across Switzerland.",
+      "Digital studio offering web design, web development, and workflow automation in Zurich and across Switzerland.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Zürich",
@@ -49,7 +49,7 @@ const Index = () => {
       "https://www.instagram.com/hello.monire",
       "https://www.linkedin.com/company/monire",
     ],
-    serviceType: ["Web Design", "Web Development", "AI Automations"],
+    serviceType: ["Web Design", "Web Development", "Workflow Automation"],
   };
 
   return (
