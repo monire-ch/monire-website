@@ -21,7 +21,9 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   const hasSections = Boolean(project.sections && project.sections.length > 0);
   const categories = project.categories?.length ? project.categories : project.category ? [project.category] : [];
   const categoryLabels = categories.map((category) => t(`caseStudy.categoryLabels.${category as CaseStudyCategory}`));
-  const contentGridColumnsClassName = hasSections
+  const contentGridColumnsClassName = hasSections && !project.image
+    ? 'md:grid-cols-1 md:max-w-4xl'
+    : hasSections
     ? 'md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]'
     : 'md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]';
   const contentGridClassName = `grid grid-cols-1 ${contentGridColumnsClassName} gap-10 md:gap-14 mb-10`;
@@ -131,21 +133,19 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           <div className={contentGridClassName}>
             {hasSections ? (
               <>
-                <ScrollReveal>
+                {project.image ? <ScrollReveal>
                   <div
                     className={`rounded-xl overflow-hidden border border-border bg-card ${
                       isScrollablePreview ? 'h-[560px] md:h-[720px] overflow-y-auto' : ''
                     }`}
                   >
-                    {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.imageAlt}
-                        className={isScrollablePreview ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
-                      />
-                    ) : null}
+                    <img
+                      src={project.image}
+                      alt={project.imageAlt}
+                      className={isScrollablePreview ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
+                    />
                   </div>
-                </ScrollReveal>
+                </ScrollReveal> : null}
 
                 <div className="space-y-8">
                   {project.sections?.map((section) => (

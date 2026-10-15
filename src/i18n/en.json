@@ -221,16 +221,16 @@
         "link": "/case-studies/snip-squad"
       },
       {
-        "title": "Horizon Collective",
-        "category": "Future of work",
-        "desc": "A distinctive editorial website and white paper for a collective exploring the future of work in the age of AI.",
-        "link": "/case-studies/horizon-collective"
-      },
-      {
         "title": "PortCo HR Collective",
         "category": "Community platform",
         "desc": "An exclusive membership platform for HR leaders in private equity, combining branding, web design, and automation.",
         "link": "/case-studies/portco-hr-collective"
+      },
+      {
+        "title": "Horizon Collective",
+        "category": "Future of work",
+        "desc": "A distinctive editorial website and white paper for a collective exploring the future of work in the age of AI.",
+        "link": "/case-studies/horizon-collective"
       },
       {
         "title": "SystemicAlly",
@@ -255,10 +255,42 @@
         "category": "Automations",
         "desc": "A browser-based tool for physicians and veterinarians that turns laboratory report PDFs into a clean, copy-ready list of results for patient notes.",
         "link": "/case-studies/labsift"
+      },
+      {
+        "title": "Invoicing Application",
+        "category": "Apps & Automations",
+        "desc": "A custom invoicing application for creating branded invoices, reusing customer details and generating Swiss QR payment codes.",
+        "link": "/case-studies/invoicing-application"
+      },
+      {
+        "title": "GDPR Consent Application",
+        "category": "Apps & Automations",
+        "desc": "A branded application that helps a recruitment team request, track and report on candidate consent.",
+        "link": "/case-studies/gdpr-consent-application"
       }
     ],
     "previousProject": "Previous project",
     "nextProject": "Next project",
+    "viewCaseStudy": "View case study",
+    "selectProject": "Choose a project",
+    "outcomeCards": {
+      "expenseReceipts": {
+        "highlights": ["~70% less admin", "Fewer errors", "Organised records"]
+      },
+      "invoicing": {
+        "highlights": ["Faster invoicing", "Less repeated entry", "Consistent documents"]
+      },
+      "gdprConsent": {
+        "highlights": ["Clear consent status", "Automatic follow-up", "Reporting ready"]
+      },
+      "communityMembership": {
+        "title": "Member Data Synchronisation",
+        "client": "Built for PortCo HR Collective",
+        "category": "Apps & Automations",
+        "desc": "Once a member is accepted, the committee enters their details in one system and the information is automatically shared across the connected platforms.",
+        "highlights": ["Enter details once", "Automatic data sharing", "Fewer inconsistencies"]
+      }
+    },
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Web design & development",
@@ -269,10 +301,12 @@
         "realEstate": "Real estate"
       },
       "aiAutomation": {
-        "title": "Automations",
+        "title": "Apps & Automations",
+        "invoicing": "Invoicing application",
+        "gdprConsent": "GDPR consent",
         "expenseReceipts": "Expense receipts",
         "labsift": "Medical lab report extraction",
-        "communityMembership": "Community membership"
+        "communityMembership": "Member data sync"
       }
     }
   },
@@ -469,7 +503,7 @@
       "branding": "Branding",
       "webDesignDevelopment": "Web Design & Development",
       "webDevelopment": "Web Development",
-      "automations": "Automations"
+      "automations": "Apps & Automations"
     },
     "visitWebsite": "Visit Website",
     "liveNote": "Live website may differ from the original version as the site is managed by the client.",
@@ -734,6 +768,86 @@
         {
           "value": "~10 hrs",
           "description": "saved each month by reducing manual booking coordination and repetitive guest enquiries"
+        }
+      ]
+    },
+    "invoicing-application": {
+      "title": "Invoicing Application",
+      "subtitle": "A custom invoicing workflow built around the client",
+      "date": "2026",
+      "industry": "Professional Services",
+      "category": "Apps & Automations",
+      "tools": ["REACT", "TYPESCRIPT", "VITE", "TAILWIND CSS", "SUPABASE"],
+      "imageAlt": "Custom invoicing application with an invoice editor, client records and invoice list",
+      "sections": [
+        {
+          "title": "Before:",
+          "intro": "Creating invoices was a manual process that required the same customer and invoice information to be entered repeatedly.",
+          "items": [
+            "Customer details had to be found and copied into each new invoice.",
+            "Invoice formatting and payment information required manual attention.",
+            "Past invoices were difficult to reuse as the starting point for new work."
+          ]
+        },
+        {
+          "title": "After:",
+          "intro": "The client can create and manage invoices in one application built around their workflow.",
+          "items": [
+            "Branded invoices are generated with Swiss QR payment codes.",
+            "Saved customer details can be reused across invoices.",
+            "Information from previous invoices can be carried into new drafts.",
+            "Invoices can be searched, filtered and managed in one place."
+          ]
+        },
+        {
+          "title": "Impact:",
+          "intro": "A repetitive administrative process became a focused tool the client can use independently.",
+          "items": [
+            "Less repeated data entry",
+            "More consistent branded invoices",
+            "Faster invoice preparation",
+            "A clear foundation for future email-to-draft automation"
+          ]
+        }
+      ]
+    },
+    "gdpr-consent-application": {
+      "title": "GDPR Consent Application",
+      "subtitle": "Candidate consent tracking without manual spreadsheets",
+      "date": "2026",
+      "industry": "Recruitment",
+      "category": "Apps & Automations",
+      "tools": ["REACT", "VITE", "SUPABASE", "SUPABASE CRON", "EDGE FUNCTIONS"],
+      "imageAlt": "GDPR consent application showing the candidate dashboard, consent email and response page",
+      "sections": [
+        {
+          "title": "Before:",
+          "intro": "Candidate consent was tracked manually, making it difficult to see which requests needed attention and when consent would expire.",
+          "items": [
+            "Consent requests and responses required manual follow-up.",
+            "Timestamps and expiry dates were difficult to track consistently.",
+            "Preparing records for reporting took additional administrative work."
+          ]
+        },
+        {
+          "title": "After:",
+          "intro": "The recruitment team can request, monitor and report on candidate consent from one branded application.",
+          "items": [
+            "Candidates receive branded consent requests by email.",
+            "Responses are recorded with timestamps and clear status labels.",
+            "Automatic reminders and expiry checks support timely follow-up.",
+            "Consent records can be exported to Excel for reporting."
+          ]
+        },
+        {
+          "title": "Impact:",
+          "intro": "The team now has a clear consent record instead of relying on fragmented manual tracking.",
+          "items": [
+            "Consent status is easier to review",
+            "Less repetitive follow-up",
+            "Clearer reporting records",
+            "More consistent handling of consent expiry"
+          ]
         }
       ]
     },
@@ -1116,6 +1230,14 @@
       "/case-studies/expense-receipt-automation": {
         "title": "Expense Receipt Automation Case Study | Moniré",
         "description": "Case study: an AI automation workflow for expense receipt processing built by Moniré."
+      },
+      "/case-studies/invoicing-application": {
+        "title": "Custom Invoicing Application Case Study | Moniré",
+        "description": "See how Moniré built a custom application for branded invoices, reusable customer details and Swiss QR payment codes."
+      },
+      "/case-studies/gdpr-consent-application": {
+        "title": "GDPR Consent Application Case Study | Moniré",
+        "description": "See how Moniré built a custom application for requesting, tracking and reporting candidate consent."
       },
       "/case-studies/horizon-collective": {
         "title": "Horizon Collective Website & White Paper Case Study | Moniré",

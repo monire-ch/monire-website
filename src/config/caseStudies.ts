@@ -114,6 +114,14 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     sections: [section(), section(), section()],
     testimonial: testimonial(),
   },
+  "invoicing-application": {
+    categories: ["automations"],
+    sections: [section(), section(), section()],
+  },
+  "gdpr-consent-application": {
+    categories: ["automations"],
+    sections: [section(), section(), section()],
+  },
   labsift: {
     image: labsift,
     imageScrollable: false,

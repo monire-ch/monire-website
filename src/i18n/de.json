@@ -221,16 +221,16 @@
         "link": "/case-studies/snip-squad"
       },
       {
-        "title": "Horizon Collective",
-        "category": "Zukunft der Arbeit",
-        "desc": "Eine eigenständige redaktionelle Website und ein Whitepaper für ein Kollektiv, das die Zukunft der Arbeit im KI-Zeitalter erforscht.",
-        "link": "/case-studies/horizon-collective"
-      },
-      {
         "title": "PortCo HR Collective",
         "category": "Community-Plattform",
         "desc": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Umfeld, die Branding, Webdesign und Automatisierung verbindet.",
         "link": "/case-studies/portco-hr-collective"
+      },
+      {
+        "title": "Horizon Collective",
+        "category": "Zukunft der Arbeit",
+        "desc": "Eine eigenständige redaktionelle Website und ein Whitepaper für ein Kollektiv, das die Zukunft der Arbeit im KI-Zeitalter erforscht.",
+        "link": "/case-studies/horizon-collective"
       },
       {
         "title": "SystemicAlly",
@@ -255,10 +255,42 @@
         "category": "Automatisierungen",
         "desc": "Ein browserbasiertes Tool für Ärzt:innen und Tierärzt:innen, das Laborbefund-PDFs in eine saubere, kopierfertige Ergebnisliste für die Patientendokumentation verwandelt.",
         "link": "/case-studies/labsift"
+      },
+      {
+        "title": "Rechnungsanwendung",
+        "category": "Apps & Automatisierungen",
+        "desc": "Eine individuelle Anwendung zum Erstellen gebrandeter Rechnungen, Wiederverwenden von Kundendaten und Generieren von Schweizer QR-Zahlteilen.",
+        "link": "/case-studies/invoicing-application"
+      },
+      {
+        "title": "DSGVO-Einwilligungsanwendung",
+        "category": "Apps & Automatisierungen",
+        "desc": "Eine gebrandete Anwendung, mit der ein Recruiting-Team Einwilligungen anfragen, verfolgen und auswerten kann.",
+        "link": "/case-studies/gdpr-consent-application"
       }
     ],
     "previousProject": "Vorheriges Projekt",
     "nextProject": "Nächstes Projekt",
+    "viewCaseStudy": "Case Study ansehen",
+    "selectProject": "Projekt auswählen",
+    "outcomeCards": {
+      "expenseReceipts": {
+        "highlights": ["~70 % weniger Admin", "Weniger Fehler", "Geordnete Unterlagen"]
+      },
+      "invoicing": {
+        "highlights": ["Schnellere Rechnungen", "Weniger Doppeleingaben", "Einheitliche Dokumente"]
+      },
+      "gdprConsent": {
+        "highlights": ["Klarer Einwilligungsstatus", "Automatisches Nachfassen", "Bereit für Berichte"]
+      },
+      "communityMembership": {
+        "title": "Synchronisation von Mitgliederdaten",
+        "client": "Entwickelt für PortCo HR Collective",
+        "category": "Apps & Automatisierungen",
+        "desc": "Sobald ein Mitglied aufgenommen wurde, erfasst das Komitee die Daten in einem System. Die Informationen werden anschliessend automatisch an die verbundenen Plattformen übertragen.",
+        "highlights": ["Daten einmal erfassen", "Automatische Übertragung", "Weniger Abweichungen"]
+      }
+    },
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Webdesign & Entwicklung",
@@ -269,10 +301,12 @@
         "realEstate": "Immobilien"
       },
       "aiAutomation": {
-        "title": "Automatisierungen",
+        "title": "Apps & Automatisierungen",
+        "invoicing": "Rechnungsanwendung",
+        "gdprConsent": "DSGVO-Einwilligung",
         "expenseReceipts": "Spesenbelege",
         "labsift": "Extraktion von Laborbefunden",
-        "communityMembership": "Community-Plattform"
+        "communityMembership": "Mitgliederdaten synchronisieren"
       }
     }
   },
@@ -469,7 +503,7 @@
       "branding": "Branding",
       "webDesignDevelopment": "Webdesign & Entwicklung",
       "webDevelopment": "Webentwicklung",
-      "automations": "Automatisierungen"
+      "automations": "Apps & Automatisierungen"
     },
     "visitWebsite": "Website besuchen",
     "liveNote": "Die Live-Website kann von der ursprünglichen Version abweichen, weil sie vom Kunden selbst verwaltet wird.",
@@ -734,6 +768,86 @@
         {
           "value": "~10 Std.",
           "description": "monatlich eingespart durch weniger manuelle Buchungskoordination und wiederkehrende Gästeanfragen"
+        }
+      ]
+    },
+    "invoicing-application": {
+      "title": "Rechnungsanwendung",
+      "subtitle": "Ein individueller Rechnungsprozess, abgestimmt auf den Kunden",
+      "date": "2026",
+      "industry": "Professionelle Dienstleistungen",
+      "category": "Apps & Automatisierungen",
+      "tools": ["REACT", "TYPESCRIPT", "VITE", "TAILWIND CSS", "SUPABASE"],
+      "imageAlt": "Individuelle Rechnungsanwendung mit Rechnungseditor, Kundendaten und Rechnungsliste",
+      "sections": [
+        {
+          "title": "Vorher:",
+          "intro": "Die Rechnungserstellung war ein manueller Prozess, bei dem dieselben Kunden- und Rechnungsdaten wiederholt eingegeben werden mussten.",
+          "items": [
+            "Kundendaten mussten für jede Rechnung gesucht und erneut eingefügt werden.",
+            "Formatierung und Zahlungsinformationen erforderten manuelle Aufmerksamkeit.",
+            "Frühere Rechnungen liessen sich nur umständlich als Grundlage wiederverwenden."
+          ]
+        },
+        {
+          "title": "Nachher:",
+          "intro": "Der Kunde kann Rechnungen in einer Anwendung erstellen und verwalten, die auf seinen Ablauf zugeschnitten ist.",
+          "items": [
+            "Gebrandete Rechnungen werden mit Schweizer QR-Zahlteilen erstellt.",
+            "Gespeicherte Kundendaten lassen sich wiederverwenden.",
+            "Informationen aus früheren Rechnungen können in neue Entwürfe übernommen werden.",
+            "Rechnungen können zentral gesucht, gefiltert und verwaltet werden."
+          ]
+        },
+        {
+          "title": "Wirkung:",
+          "intro": "Aus einem wiederkehrenden administrativen Prozess wurde ein fokussiertes Werkzeug, das der Kunde selbständig nutzen kann.",
+          "items": [
+            "Weniger wiederholte Dateneingabe",
+            "Einheitliche gebrandete Rechnungen",
+            "Schnellere Rechnungserstellung",
+            "Klare Grundlage für eine spätere E-Mail-zu-Entwurf-Automatisierung"
+          ]
+        }
+      ]
+    },
+    "gdpr-consent-application": {
+      "title": "DSGVO-Einwilligungsanwendung",
+      "subtitle": "Einwilligungen von Kandidat:innen ohne manuelle Tabellen verwalten",
+      "date": "2026",
+      "industry": "Recruiting",
+      "category": "Apps & Automatisierungen",
+      "tools": ["REACT", "VITE", "SUPABASE", "SUPABASE CRON", "EDGE FUNCTIONS"],
+      "imageAlt": "DSGVO-Einwilligungsanwendung mit Kandidatenübersicht, Einladungs-E-Mail und Einwilligungsseite",
+      "sections": [
+        {
+          "title": "Vorher:",
+          "intro": "Einwilligungen wurden manuell verfolgt. Dadurch war schwer erkennbar, welche Anfragen Aufmerksamkeit benötigten und wann eine Einwilligung ablief.",
+          "items": [
+            "Anfragen und Antworten erforderten manuelles Nachfassen.",
+            "Zeitstempel und Ablaufdaten liessen sich nur schwer einheitlich verfolgen.",
+            "Die Vorbereitung von Nachweisen verursachte zusätzlichen administrativen Aufwand."
+          ]
+        },
+        {
+          "title": "Nachher:",
+          "intro": "Das Recruiting-Team kann Einwilligungen in einer gebrandeten Anwendung anfragen, überwachen und auswerten.",
+          "items": [
+            "Kandidat:innen erhalten gebrandete Einwilligungsanfragen per E-Mail.",
+            "Antworten werden mit Zeitstempeln und eindeutigen Statusangaben gespeichert.",
+            "Automatische Erinnerungen und Ablaufprüfungen unterstützen das rechtzeitige Nachfassen.",
+            "Einwilligungsdaten können für Berichte nach Excel exportiert werden."
+          ]
+        },
+        {
+          "title": "Wirkung:",
+          "intro": "Das Team verfügt jetzt über einen klaren Einwilligungsnachweis statt fragmentierter manueller Listen.",
+          "items": [
+            "Einwilligungsstatus ist leichter prüfbar",
+            "Weniger wiederkehrendes Nachfassen",
+            "Klarere Dokumentation für Berichte",
+            "Einheitlicher Umgang mit ablaufenden Einwilligungen"
+          ]
         }
       ]
     },
@@ -1116,6 +1230,14 @@
       "/case-studies/expense-receipt-automation": {
         "title": "Case Study Spesenbeleg-Automatisierung | Moniré",
         "description": "Case Study: ein von Moniré entwickelter KI-Automatisierungsworkflow für die Verarbeitung von Spesenbelegen."
+      },
+      "/case-studies/invoicing-application": {
+        "title": "Individuelle Rechnungsanwendung – Case Study | Moniré",
+        "description": "Wie Moniré eine individuelle Anwendung für gebrandete Rechnungen, wiederverwendbare Kundendaten und Schweizer QR-Zahlteile entwickelte."
+      },
+      "/case-studies/gdpr-consent-application": {
+        "title": "DSGVO-Einwilligungsanwendung – Case Study | Moniré",
+        "description": "Wie Moniré eine Anwendung zum Anfragen, Verfolgen und Auswerten von Einwilligungen entwickelte."
       },
       "/case-studies/horizon-collective": {
         "title": "Horizon Collective Website & Whitepaper Case Study | Moniré",

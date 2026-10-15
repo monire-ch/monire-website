@@ -221,16 +221,16 @@
         "link": "/case-studies/snip-squad"
       },
       {
-        "title": "Horizon Collective",
-        "category": "Przyszłość pracy",
-        "desc": "Wyrazista strona o redakcyjnym charakterze i white paper dla kolektywu badającego przyszłość pracy w erze AI.",
-        "link": "/case-studies/horizon-collective"
-      },
-      {
         "title": "PortCo HR Collective",
         "category": "Community platform",
         "desc": "Ekskluzywna platforma członkowska dla liderów HR w private equity, łącząca branding, projektowanie stron i automatyzację.",
         "link": "/case-studies/portco-hr-collective"
+      },
+      {
+        "title": "Horizon Collective",
+        "category": "Przyszłość pracy",
+        "desc": "Wyrazista strona o redakcyjnym charakterze i white paper dla kolektywu badającego przyszłość pracy w erze AI.",
+        "link": "/case-studies/horizon-collective"
       },
       {
         "title": "SystemicAlly",
@@ -255,10 +255,42 @@
         "category": "Automatyzacje",
         "desc": "Narzędzie przeglądarkowe dla lekarzy i weterynarzy, które zamienia pliki PDF z wynikami badań laboratoryjnych w czytelną, gotową do skopiowania listę wyników do notatek pacjenta, przy czym całe przetwarzanie odbywa się lokalnie na urządzeniu.",
         "link": "/case-studies/labsift"
+      },
+      {
+        "title": "Aplikacja do fakturowania",
+        "category": "Aplikacje i automatyzacje",
+        "desc": "Indywidualna aplikacja do tworzenia markowych faktur, ponownego wykorzystywania danych klientów i generowania szwajcarskich kodów płatności QR.",
+        "link": "/case-studies/invoicing-application"
+      },
+      {
+        "title": "Aplikacja zgód GDPR",
+        "category": "Aplikacje i automatyzacje",
+        "desc": "Markowa aplikacja, która pomaga zespołowi rekrutacyjnemu wysyłać, śledzić i raportować zgody kandydatów.",
+        "link": "/case-studies/gdpr-consent-application"
       }
     ],
     "previousProject": "Poprzedni projekt",
     "nextProject": "Następny projekt",
+    "viewCaseStudy": "Zobacz case study",
+    "selectProject": "Wybierz projekt",
+    "outcomeCards": {
+      "expenseReceipts": {
+        "highlights": ["~70% mniej administracji", "Mniej błędów", "Uporządkowane dokumenty"]
+      },
+      "invoicing": {
+        "highlights": ["Szybsze fakturowanie", "Mniej ponownego wpisywania", "Spójne dokumenty"]
+      },
+      "gdprConsent": {
+        "highlights": ["Jasny status zgody", "Automatyczne działania", "Gotowe raportowanie"]
+      },
+      "communityMembership": {
+        "title": "Synchronizacja danych członków",
+        "client": "Zbudowane dla PortCo HR Collective",
+        "category": "Aplikacje i automatyzacje",
+        "desc": "Po zaakceptowaniu członka komitet wprowadza jego dane w jednym systemie, a informacje są automatycznie udostępniane połączonym platformom.",
+        "highlights": ["Jednorazowe wprowadzanie", "Automatyczne udostępnianie", "Mniej rozbieżności"]
+      }
+    },
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Web design & development",
@@ -269,10 +301,12 @@
         "realEstate": "Nieruchomości"
       },
       "aiAutomation": {
-        "title": "Automatyzacje",
+        "title": "Aplikacje i automatyzacje",
+        "invoicing": "Aplikacja do fakturowania",
+        "gdprConsent": "Zgody GDPR",
         "expenseReceipts": "Paragony wydatków",
         "labsift": "Ekstrakcja wyników badań laboratoryjnych",
-        "communityMembership": "Członkostwo społeczności"
+        "communityMembership": "Synchronizacja danych członków"
       }
     }
   },
@@ -469,7 +503,7 @@
       "branding": "Branding",
       "webDesignDevelopment": "Web Design & Development",
       "webDevelopment": "Tworzenie stron internetowych",
-      "automations": "Automatyzacje"
+      "automations": "Aplikacje i automatyzacje"
     },
     "visitWebsite": "Odwiedź stronę",
     "liveNote": "Aktywna strona może różnić się od pierwotnej wersji, ponieważ jest zarządzana przez klienta.",
