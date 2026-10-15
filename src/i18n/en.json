@@ -139,7 +139,8 @@
     "titleAccent": "Helping Your Business Grow.",
     "tabs": {
       "webDesign": "Web Design & Development",
-      "automation": "Workflow Automation"
+      "automation": "Workflow Automation",
+      "automationShort": "Automations"
     },
     "getStarted": "Get started",
     "mostPopular": "Most Popular",

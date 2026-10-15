@@ -139,7 +139,8 @@
     "titleAccent": "Rozwój Twojego biznesu.",
     "tabs": {
       "webDesign": "Projektowanie i tworzenie stron",
-      "automation": "Automatyzacja workflow"
+      "automation": "Automatyzacja workflow",
+      "automationShort": "Automatyzacje"
     },
     "getStarted": "Rozpocznij",
     "mostPopular": "Najpopularniejszy",

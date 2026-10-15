@@ -139,7 +139,8 @@
     "titleAccent": "Ihr Unternehmen soll wachsen.",
     "tabs": {
       "webDesign": "Webdesign & Entwicklung",
-      "automation": "Workflow-Automatisierung"
+      "automation": "Workflow-Automatisierung",
+      "automationShort": "Automatisierung"
     },
     "getStarted": "Loslegen",
     "mostPopular": "Meistgewählt",

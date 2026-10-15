@@ -141,9 +141,9 @@ const PortfolioSection = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)] gap-6 items-start">
+          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[250px_minmax(0,1fr)]">
             {/* Category sidebar — dark teal card like reference */}
-            <div className="hidden rounded-2xl p-4 md:block md:p-5" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
+            <div className="hidden rounded-2xl p-5 lg:block" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
               {portfolioNavGroups.map((group, groupIndex) => (
                 <div key={group.titleKey}>
                   {groupIndex > 0 && <div className="my-3 h-px bg-off-white/15 md:my-5" />}
@@ -174,7 +174,7 @@ const PortfolioSection = () => {
 
             {/* Carousel */}
             <div ref={carouselSectionRef} className="min-w-0 scroll-mt-24">
-              <div className="mb-4 md:hidden">
+              <div className="mb-4 lg:hidden">
                 <label htmlFor="portfolio-project-select" className="mb-2 block font-body text-sm font-medium text-main-teal">
                   {t('portfolio.selectProject')}
                 </label>
@@ -230,7 +230,7 @@ const PortfolioSection = () => {
                                 : project.category}
                             </span>
                             <div className="relative max-w-xl">
-                              <h3 className="mb-4 font-display text-3xl leading-tight text-off-white sm:text-4xl md:mb-5 md:text-5xl">
+                              <h3 className="mb-4 break-words font-display text-3xl leading-tight text-off-white [overflow-wrap:anywhere] sm:text-4xl md:mb-5 lg:text-5xl">
                                 {project.link === '/case-studies/portco-hr-collective' && isCommunityMembershipView
                                   ? t('portfolio.outcomeCards.communityMembership.title')
                                   : project.title}
