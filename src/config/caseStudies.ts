@@ -41,7 +41,6 @@ export type CaseStudyConfig = {
   title?: string;
   subtitle?: string;
   client?: string;
-  date?: string;
   industry?: string;
   category?: CaseStudyCategory;
   categories?: CaseStudyCategory[];

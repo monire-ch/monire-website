@@ -16,8 +16,6 @@ export type InsightPost = {
     label?: string;
     href: string;
   };
-  publishedAt: string;
-  updatedAt?: string;
   readTimeMinutes: number;
   relatedSlugs: string[];
   faqItems?: Array<{

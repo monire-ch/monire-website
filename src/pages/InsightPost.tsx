@@ -12,13 +12,6 @@ import { trackEvent } from "@/lib/analytics";
 import { useLocalePath } from "@/hooks/useLocalePath";
 import { getLocaleFromPathname, localizeInternalHtmlLinks } from "@/lib/localeRouting";
 
-const formatDate = (value: string) =>
-  new Intl.DateTimeFormat("en-CH", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(new Date(`${value}T00:00:00`));
-
 const renderHeadingWithPunctuation = (text: string) => {
   if (!text.endsWith("?")) return text;
   return (
@@ -215,8 +208,6 @@ const InsightPost = () => {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.seoDescription,
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt ?? post.publishedAt,
     inLanguage: locale,
     mainEntityOfPage: canonicalUrl,
     url: canonicalUrl,
@@ -291,8 +282,6 @@ const InsightPost = () => {
                     )}
                   </div>
                   <p className="text-[12px] font-body tracking-[0.04em] uppercase text-[#7FA8B4]">
-                    <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
-                    {" · "}
                     {post.readTimeMinutes} {t("common.minRead")}
                   </p>
                 </div>

@@ -494,7 +494,6 @@
     },
     "meta": {
       "client": "Klient",
-      "date": "Data",
       "category": "Kategoria",
       "tools": "Narzędzia",
       "industry": "Branża",
@@ -579,7 +578,6 @@
       "title": "Horizon Collective",
       "subtitle": "Odważny cyfrowy dom dla kolektywu, który na nowo wyobraża sobie pracę w erze AI",
       "client": "Horizon Collective",
-      "date": "2026",
       "industry": "HR i przyszłość pracy",
       "category": "Projektowanie i tworzenie stron",
       "tools": ["ASTRO"],
@@ -610,7 +608,6 @@
       "title": "Snip Squad",
       "subtitle": "A modern, approachable website for a nonprofit veterinary clinic",
       "client": "Snip Squad",
-      "date": "January 2026",
       "industry": "Veterinary & Nonprofit",
       "category": "Web Design & Web Development",
       "tools": [
@@ -649,7 +646,6 @@
       "title": "PortCo HR Collective",
       "subtitle": "An exclusive membership platform for HR leaders in private equity",
       "client": "PortCo HR Collective",
-      "date": "2026",
       "industry": "Private Equity / Professional Networks",
       "category": "Branding, Web Design & Development, Automations",
       "tools": [
@@ -694,7 +690,6 @@
       "title": "SystemicAlly",
       "subtitle": "A clear, professional website for a leadership and transformation consultancy",
       "client": "SystemicAlly",
-      "date": "May 2025",
       "industry": "Consulting",
       "category": "Web Development",
       "tools": [
@@ -729,7 +724,6 @@
       "title": "Towarowa 41",
       "subtitle": "A refined digital experience for a premium city apartment",
       "client": "Towarowa",
-      "date": "October 2025",
       "industry": "Hospitality & Real Estate",
       "category": "Web Design & Web Development",
       "tools": [
@@ -775,7 +769,6 @@
     "expense-receipt-automation": {
       "title": "Expense Receipt Automation",
       "client": "Brooksmiller & Partners AG",
-      "date": "August 2025",
       "industry": "Executive Search",
       "category": "Automations",
       "tools": [
@@ -827,7 +820,6 @@
     "labsift": {
       "title": "LabSift",
       "subtitle": "Turning lab reports into copy-ready results",
-      "date": "August 2026",
       "industry": "Healthcare & Clinical Software",
       "category": "Automations",
       "tools": [
@@ -877,7 +869,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "effectiveDate": "Effective Date: February, 2026",
+    "effectiveDate": "Effective Date: October 2026",
     "intro": "This Privacy Policy explains how Moniré (\"we\", \"our\", \"us\") collects, uses, and protects your information when you visit our website or interact with our services.",
     "sections": [
       {
@@ -974,7 +966,6 @@
         "label": "Get platform advice for your website",
         "href": "/contact"
       },
-      "publishedAt": "2026-05-06",
       "readTimeMinutes": 4,
       "relatedSlugs": [
         "why-your-website-might-be-losing-you-clients",
@@ -1023,7 +1014,6 @@
         "label": "Book a free workflow review",
         "href": "/contact"
       },
-      "publishedAt": "2026-05-13",
       "readTimeMinutes": 4,
       "relatedSlugs": [
         "website-builders-vs-custom-development",
@@ -1077,7 +1067,6 @@
         "label": "Book a free website consultation",
         "href": "/contact"
       },
-      "publishedAt": "2026-05-01",
       "readTimeMinutes": 5,
       "relatedSlugs": [
         "website-builders-vs-custom-development",

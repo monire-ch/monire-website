@@ -494,7 +494,6 @@
     },
     "meta": {
       "client": "Kunde",
-      "date": "Datum",
       "category": "Kategorie",
       "tools": "Tools",
       "industry": "Branche",
@@ -579,7 +578,6 @@
       "title": "Horizon Collective",
       "subtitle": "Ein ausdrucksstarker digitaler Auftritt für ein Kollektiv, das Arbeit im Zeitalter der KI neu denkt",
       "client": "Horizon Collective",
-      "date": "2026",
       "industry": "HR & Zukunft der Arbeit",
       "category": "Webdesign & Webentwicklung",
       "tools": ["ASTRO"],
@@ -610,7 +608,6 @@
       "title": "Snip Squad",
       "subtitle": "Eine moderne, zugängliche Website für eine gemeinnützige Tierklinik",
       "client": "Snip Squad",
-      "date": "Januar 2026",
       "industry": "Veterinärmedizin & Non-Profit",
       "category": "Webdesign & Webentwicklung",
       "tools": [
@@ -649,7 +646,6 @@
       "title": "PortCo HR Collective",
       "subtitle": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Unternehmen",
       "client": "PortCo HR Collective",
-      "date": "2026",
       "industry": "Private Equity / Professionelle Netzwerke",
       "category": "Branding, Webdesign & Entwicklung, Automatisierungen",
       "tools": [
@@ -694,7 +690,6 @@
       "title": "SystemicAlly",
       "subtitle": "Eine klare, professionelle Website für eine Leadership- und Transformationsberatung",
       "client": "SystemicAlly",
-      "date": "Mai 2025",
       "industry": "Consulting",
       "category": "Webentwicklung",
       "tools": [
@@ -729,7 +724,6 @@
       "title": "Towarowa 41",
       "subtitle": "Ein hochwertiger digitaler Auftritt für ein Premium-City-Apartment",
       "client": "Towarowa",
-      "date": "Oktober 2025",
       "industry": "Hotellerie & Immobilien",
       "category": "Webdesign & Webentwicklung",
       "tools": [
@@ -775,7 +769,6 @@
     "invoicing-application": {
       "title": "Rechnungsanwendung",
       "subtitle": "Ein individueller Rechnungsprozess, abgestimmt auf den Kunden",
-      "date": "2026",
       "industry": "Professionelle Dienstleistungen",
       "category": "Apps & Automatisierungen",
       "tools": ["REACT", "TYPESCRIPT", "VITE", "TAILWIND CSS", "SUPABASE"],
@@ -815,7 +808,6 @@
     "gdpr-consent-application": {
       "title": "DSGVO-Einwilligungsanwendung",
       "subtitle": "Einwilligungen von Kandidat:innen ohne manuelle Tabellen verwalten",
-      "date": "2026",
       "industry": "Recruiting",
       "category": "Apps & Automatisierungen",
       "tools": ["REACT", "VITE", "SUPABASE", "SUPABASE CRON", "EDGE FUNCTIONS"],
@@ -855,7 +847,6 @@
     "expense-receipt-automation": {
       "title": "Automatisierte Spesenverarbeitung",
       "client": "Brooksmiller & Partners AG",
-      "date": "August 2025",
       "industry": "Executive Search",
       "category": "Automatisierungen",
       "tools": [
@@ -907,7 +898,6 @@
     "labsift": {
       "title": "LabSift",
       "subtitle": "Aus Laborbefunden werden kopierfertige Ergebnisse",
-      "date": "August 2026",
       "industry": "Gesundheitswesen & klinische Software",
       "category": "Automatisierungen",
       "tools": [
@@ -956,7 +946,7 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "effectiveDate": "Stand: Februar 2026",
+    "effectiveDate": "Stand: Oktober 2026",
     "intro": "Diese Datenschutzerklärung erklärt, wie Moniré („wir“, „uns“ und „unser“) personenbezogene Daten erhebt, nutzt und schützt, wenn Sie unsere Website besuchen oder mit unseren Leistungen interagieren.",
     "sections": [
       {
@@ -1053,7 +1043,6 @@
         "label": "Kostenlose Plattform-Beratung anfragen",
         "href": "/contact"
       },
-      "publishedAt": "2026-05-06",
       "readTimeMinutes": 4,
       "relatedSlugs": [
         "why-your-website-might-be-losing-you-clients",
@@ -1102,7 +1091,6 @@
         "label": "Kostenlosen Workflow-Check buchen",
         "href": "/contact"
       },
-      "publishedAt": "2026-05-13",
       "readTimeMinutes": 4,
       "relatedSlugs": [
         "website-builders-vs-custom-development",
@@ -1156,7 +1144,6 @@
         "label": "Kostenlose Website-Beratung buchen",
         "href": "/contact"
       },
-      "publishedAt": "2026-05-01",
       "readTimeMinutes": 5,
       "relatedSlugs": [
         "website-builders-vs-custom-development",
