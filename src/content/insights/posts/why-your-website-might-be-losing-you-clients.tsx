@@ -6,7 +6,6 @@ export const whyYourWebsiteMightBeLosingYouClientsPost: InsightPost = {
   primaryCta: {
     href: "/contact",
   },
-  publishedAt: "2026-05-01",
   readTimeMinutes: 5,
   relatedSlugs: ["website-builders-vs-custom-development", "what-ai-automation-actually-means-for-a-small-business"],
   content: null,

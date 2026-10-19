@@ -8,13 +8,6 @@ import { SITE_URL } from "@/lib/seo";
 import { trackEvent } from "@/lib/analytics";
 import { useLocalePath } from "@/hooks/useLocalePath";
 
-const formatDate = (value: string) =>
-  new Intl.DateTimeFormat("en-CH", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(new Date(`${value}T00:00:00`));
-
 const CATEGORY_STYLES: Record<string, { text: string; bg: string }> = {
   "Automation": {
     text: "#A8D8C2",
@@ -120,8 +113,6 @@ const Insights = () => {
 
                       <div className="flex items-center justify-between mt-1 flex-wrap gap-3">
                         <p className="text-[12px] font-body tracking-[0.04em] uppercase text-[#7FA8B4]">
-                          <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
-                          {" · "}
                           {post.readTimeMinutes} {t('common.minRead')}
                         </p>
                         <span

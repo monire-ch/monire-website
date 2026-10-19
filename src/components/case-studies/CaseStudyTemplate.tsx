@@ -37,10 +37,6 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
         </div>
       ) : null}
       <div className="flex justify-between items-center py-4 border-b border-border">
-        <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.date')}</span>
-        <span className="text-sm font-body text-foreground">{project.date}</span>
-      </div>
-      <div className="flex justify-between items-center py-4 border-b border-border">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.industry')}</span>
         <span className="text-sm font-body text-foreground">{project.industry}</span>
       </div>
