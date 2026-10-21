@@ -209,7 +209,7 @@
     "eyebrow": "Portfolio",
     "title": "Ausgewählte Projekte",
     "categories": [
-      "Veterinärmedizin",
+      "Tiermedizin",
       "Consulting",
       "Immobilien",
       "Automatisierungen"
@@ -217,7 +217,7 @@
     "projects": [
       {
         "title": "Snip Squad",
-        "category": "Veterinärmedizin",
+        "category": "Tiermedizin",
         "desc": "Eine freundliche, moderne Website für eine Tierklinik, die warm, zugänglich und für Tierhalter einfach zu nutzen ist.",
         "link": "/case-studies/snip-squad"
       },
@@ -610,7 +610,7 @@
       "title": "Snip Squad",
       "subtitle": "Eine moderne, zugängliche Website für eine gemeinnützige Tierklinik",
       "client": "Snip Squad",
-      "industry": "Veterinärmedizin & Non-Profit",
+      "industry": "Tiermedizin & Non-Profit",
       "category": "Webdesign & Webentwicklung",
       "tools": [
         "WEBFLOW",
