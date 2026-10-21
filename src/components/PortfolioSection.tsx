@@ -62,9 +62,17 @@ const containedPreviewLinks = new Set([
 const PortfolioSection = () => {
   const { t } = useTranslation();
   const localePath = useLocalePath();
-  const carouselSectionRef = useRef<HTMLDivElement>(null);
-  const [selectedIndex, setSelectedIndex] = useState(0);
   const [activeNavItemId, setActiveNavItemId] = useState(portfolioNavItems[0].id);
+  const chipRowRef = useRef<HTMLDivElement>(null);
+  const activeGroup = portfolioNavGroups.find((group) => group.items.some((item) => item.id === activeNavItemId)) ?? portfolioNavGroups[0];
+
+  useEffect(() => {
+    const row = chipRowRef.current;
+    const chip = row?.querySelector<HTMLElement>('[aria-pressed="true"]');
+    if (row && chip) {
+      row.scrollTo({ left: chip.offsetLeft - row.clientWidth / 2 + chip.offsetWidth / 2, behavior: 'smooth' });
+    }
+  }, [activeNavItemId]);
 
   const projects = t('portfolio.projects', { returnObjects: true }) as Array<{
     title: string; category: string; desc: string; link: string;
@@ -84,7 +92,6 @@ const PortfolioSection = () => {
     const nextSelectedIndex = emblaApi.selectedScrollSnap();
     const nextProject = projects[nextSelectedIndex];
 
-    setSelectedIndex(nextSelectedIndex);
     setActiveNavItemId((currentActiveNavItemId) => {
       const currentActiveNavItem = portfolioNavItems.find((item) => item.id === currentActiveNavItemId);
 
@@ -105,35 +112,30 @@ const PortfolioSection = () => {
     return () => { emblaApi.off('select', onSelect); };
   }, [emblaApi, onSelect]);
 
-  const scrollToProject = useCallback((projectLink: string, navItemId: string, revealOnMobile = false) => {
+  const scrollToProject = useCallback((projectLink: string, navItemId: string) => {
     if (!emblaApi) return;
     setActiveNavItemId(navItemId);
     const idx = projects.findIndex((p) => p.link === projectLink);
     if (idx !== -1) emblaApi.scrollTo(idx);
 
-    if (revealOnMobile && window.matchMedia('(max-width: 767px)').matches) {
-      window.requestAnimationFrame(() => {
-        carouselSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
   }, [emblaApi, projects]);
 
   const scrollToNavItem = useCallback((direction: 1 | -1) => {
-    const currentNavIndex = portfolioNavItems.findIndex((item) => item.id === activeNavItemId);
-    const nextNavIndex = (currentNavIndex + direction + portfolioNavItems.length) % portfolioNavItems.length;
-    const nextNavItem = portfolioNavItems[nextNavIndex];
+    const navItems = window.matchMedia('(max-width: 767px)').matches ? activeGroup.items : portfolioNavItems;
+    const currentNavIndex = navItems.findIndex((item) => item.id === activeNavItemId);
+    const nextNavIndex = (currentNavIndex + direction + navItems.length) % navItems.length;
+    const nextNavItem = navItems[nextNavIndex];
 
     scrollToProject(nextNavItem.targetLink, nextNavItem.id);
-  }, [activeNavItemId, scrollToProject]);
+  }, [activeNavItemId, activeGroup, scrollToProject]);
 
   const scrollPrev = useCallback(() => scrollToNavItem(-1), [scrollToNavItem]);
   const scrollNext = useCallback(() => scrollToNavItem(1), [scrollToNavItem]);
 
-  const currentProject = projects[selectedIndex];
   const isCommunityMembershipView = activeNavItemId === 'ai-community-membership';
 
   return (
-    <section id="portfolio" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6">
+    <section id="portfolio" className="pt-20 md:pt-28 pb-16 md:pb-20 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal className="text-center mb-6 md:mb-12">
           <span className="eyebrow-pill eyebrow-pill-light mb-3">{t('portfolio.eyebrow')}</span>
@@ -141,9 +143,37 @@ const PortfolioSection = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[250px_minmax(0,1fr)]">
+          <div className="grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)] gap-x-6 gap-y-4 items-stretch">
+            <div className="min-w-0 md:hidden">
+              <div className="flex rounded-full border border-neutral-border p-1">
+                {portfolioNavGroups.map((group, index) => (
+                  <button
+                    key={group.titleKey}
+                    type="button"
+                    aria-pressed={activeGroup === group}
+                    onClick={() => scrollToProject(group.items[0].targetLink, group.items[0].id)}
+                    className={`min-h-11 flex-1 rounded-full px-3 text-sm font-medium transition-colors ${activeGroup === group ? 'bg-main-teal text-off-white' : 'text-main-teal hover:bg-main-teal/5'}`}
+                  >
+                    {t(index === 0 ? 'portfolio.mobileWebsites' : 'portfolio.mobileAutomations')}
+                  </button>
+                ))}
+              </div>
+              <div ref={chipRowRef} className="relative mt-3 flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {activeGroup.items.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    aria-pressed={activeNavItemId === item.id}
+                    onClick={() => scrollToProject(item.targetLink, item.id)}
+                    className={`min-h-11 shrink-0 whitespace-nowrap rounded-full border px-4 text-sm transition-colors ${activeNavItemId === item.id ? 'border-main-teal bg-main-teal text-off-white' : 'border-neutral-border text-main-teal hover:border-main-teal/40'}`}
+                  >
+                    {t(item.labelKey)}
+                  </button>
+                ))}
+              </div>
+            </div>
             {/* Category sidebar — dark teal card like reference */}
-            <div className="hidden rounded-2xl p-5 lg:block" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
+            <div className="hidden rounded-2xl p-5 md:block" style={{ background: 'linear-gradient(145deg, #053e50d9 0%, #032c39eb 100%)' }}>
               {portfolioNavGroups.map((group, groupIndex) => (
                 <div key={group.titleKey}>
                   {groupIndex > 0 && <div className="my-3 h-px bg-off-white/15 md:my-5" />}
@@ -156,7 +186,7 @@ const PortfolioSection = () => {
                       return (
                         <button
                           key={item.id}
-                          onClick={() => scrollToProject(item.targetLink, item.id, true)}
+                          onClick={() => scrollToProject(item.targetLink, item.id)}
                           className={`w-fit justify-self-center self-center px-2 py-1.5 text-center font-body text-sm transition-all duration-200 md:justify-self-start md:self-auto md:px-4 md:py-2.5 md:text-left ${
                             isActive
                               ? 'rounded-full border border-gold/40 bg-off-white/10 text-gold-text'
@@ -173,42 +203,13 @@ const PortfolioSection = () => {
             </div>
 
             {/* Carousel */}
-            <div ref={carouselSectionRef} className="min-w-0 scroll-mt-24">
-              <div className="mb-4 lg:hidden">
-                <label htmlFor="portfolio-project-select" className="mb-2 block font-body text-sm font-medium text-main-teal">
-                  {t('portfolio.selectProject')}
-                </label>
-                <div className="relative">
-                  <select
-                    id="portfolio-project-select"
-                    value={activeNavItemId}
-                    onChange={(event) => {
-                      const item = portfolioNavItems.find((navItem) => navItem.id === event.target.value);
-                      if (item) scrollToProject(item.targetLink, item.id);
-                    }}
-                    className="h-12 w-full appearance-none rounded-xl border border-main-teal/20 bg-off-white px-4 pr-12 font-body text-base font-medium text-main-teal shadow-sm outline-none transition-colors focus:border-main-teal focus:ring-2 focus:ring-main-teal/15"
-                  >
-                    {portfolioNavGroups.map((group) => (
-                      <optgroup key={group.titleKey} label={t(group.titleKey)}>
-                        {group.items.map((item) => (
-                          <option key={item.id} value={item.id}>{t(item.labelKey)}</option>
-                        ))}
-                      </optgroup>
-                    ))}
-                  </select>
-                  <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-main-teal" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                      <path d="M4 7L9 12L14 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-              <div className="overflow-hidden rounded-xl" ref={emblaRef}>
-                <div className="flex">
+            <div className="relative min-w-0 md:min-h-[440px]">
+              <div className="overflow-hidden rounded-2xl md:absolute md:inset-0" ref={emblaRef}>
+                <div className="flex md:h-full">
                   {projects.map((project) => (
                     <div
                       key={project.title}
-                      className="min-w-0 shrink-0 grow-0 basis-full px-2"
+                      className="min-w-0 shrink-0 grow-0 basis-full md:h-full"
                     >
                       <Link
                         to={localePath(project.link)}
@@ -220,10 +221,10 @@ const PortfolioSection = () => {
                             page_path: window.location.pathname,
                           })
                         }
-                        className="block group"
+                        className="block group md:h-full"
                       >
                         {projectOutcomeCardKeyByLink[project.link] || (project.link === '/case-studies/portco-hr-collective' && isCommunityMembershipView) ? (
-                          <div className="hero-bg relative flex min-h-[360px] flex-col justify-between overflow-hidden rounded-xl border border-main-teal/15 p-6 transition-transform duration-500 group-hover:scale-[1.01] md:h-[440px] md:min-h-0 md:p-12">
+                          <div className="hero-bg relative flex min-h-[360px] flex-col justify-between overflow-hidden rounded-2xl border border-main-teal/15 p-6 transition-transform duration-500 group-hover:scale-[1.01] md:h-full md:min-h-0 md:p-12">
                             <span className="relative font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold-text">
                               {project.link === '/case-studies/portco-hr-collective' && isCommunityMembershipView
                                 ? t('portfolio.outcomeCards.communityMembership.category')
@@ -265,13 +266,13 @@ const PortfolioSection = () => {
                             </div>
                           </div>
                         ) : (
-                          <div className={`relative overflow-hidden rounded-xl border border-neutral-border h-[380px] md:h-[440px] ${project.link === '/case-studies/labsift' ? 'bg-white' : containedPreviewLinks.has(project.link) ? 'bg-[#00191f]' : 'bg-neutral-card'}`}>
+                          <div className={`relative overflow-hidden rounded-2xl border border-neutral-border h-[380px] md:h-full ${project.link === '/case-studies/labsift' ? 'bg-white' : containedPreviewLinks.has(project.link) ? 'bg-[#00191f]' : 'bg-neutral-card'}`}>
                             <img
                               src={projectImagesByLink[project.link]}
                               alt={`${project.title} website preview`}
                               className={`w-full h-full transition-transform duration-500 group-hover:scale-[1.02] ${containedPreviewLinks.has(project.link) ? 'object-contain object-center' : 'object-cover object-top'}`}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                           </div>
                         )}
                       </Link>
@@ -279,10 +280,14 @@ const PortfolioSection = () => {
                   ))}
                 </div>
               </div>
+            </div>
 
               {/* Arrow buttons */}
-              <div className="mt-6 flex items-center gap-3">
-                  <button
+              <div className="flex items-center justify-end gap-3 md:col-start-2">
+                <span className="mr-auto text-sm tabular-nums text-main-teal/70 md:hidden" aria-live="polite" aria-atomic="true">
+                  {activeGroup.items.findIndex((item) => item.id === activeNavItemId) + 1} / {activeGroup.items.length}
+                </span>
+                <button
                   onClick={scrollPrev}
                   disabled={!canScrollPrev}
                   className="disabled:cursor-not-allowed"
@@ -305,7 +310,6 @@ const PortfolioSection = () => {
                     </svg>
                   </button>
               </div>
-            </div>
           </div>
         </ScrollReveal>
       </div>
