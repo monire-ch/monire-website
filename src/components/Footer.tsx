@@ -8,12 +8,17 @@ import { trackEvent } from '@/lib/analytics';
 import { stripLocalePrefix } from '@/lib/localeRouting';
 import { useLocalePath } from '@/hooks/useLocalePath';
 
-const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
+type FooterProps = {
+  hideWave?: boolean;
+  pageLinks?: Array<{ label: string; href: string }>;
+};
+
+const Footer = ({ hideWave = false, pageLinks }: FooterProps) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const localePath = useLocalePath();
 
-  const navItems = [
+  const defaultNavItems = [
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.ourWork'), href: '#portfolio' },
     { label: t('nav.services'), href: '#services' },
@@ -23,6 +28,9 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
     { label: t('nav.contactUs'), href: '/contact' },
     { label: t('footer.privacyPolicy'), href: '/privacy' },
   ];
+  const navItems = pageLinks
+    ? [...pageLinks, { label: t('footer.privacyPolicy'), href: '/privacy' }]
+    : defaultNavItems;
 
   return (
     <footer className="dark-teal-surface relative pt-16 pb-8 px-6">
@@ -35,7 +43,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
       )}
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12 items-start">
+        <div className={`grid grid-cols-1 gap-10 md:gap-12 mb-12 items-start ${pageLinks ? 'md:grid-cols-3' : 'md:grid-cols-4'}`}>
           {/* Brand column */}
           <div>
             <Link to={localePath('/#')}>
@@ -59,7 +67,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                 <li key={item.href}>
                   {item.href.startsWith('/') ? (
                     <Link
-                      to={localePath(item.href)}
+                      to={item.href === '/vet' ? '/vet' : localePath(item.href)}
                       onClick={() => {
                         if (item.href === '/contact') {
                           trackEvent('footer_contact_click', { location: 'footer', destination: item.href, page_path: window.location.pathname });
@@ -77,7 +85,7 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
                         if (item.href === '#pricing') {
                           trackEvent('pricing_nav_click', { location: 'footer', page_path: window.location.pathname });
                         }
-                        if (stripLocalePrefix(window.location.pathname) !== '/') {
+                        if (!pageLinks && stripLocalePrefix(window.location.pathname) !== '/') {
                           e.preventDefault();
                           navigate(localePath(`/${item.href}`));
                         }
@@ -91,6 +99,22 @@ const Footer = ({ hideWave = false }: { hideWave?: boolean }) => {
               ))}
             </ul>
           </div>
+
+          {!pageLinks && (
+            <div>
+              <p className="text-gold-text text-[1rem] tracking-widest uppercase font-body mb-6">{t('footer.industries')}</p>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    to="/vet"
+                    className="block max-w-full break-words text-base font-body text-off-white transition-colors hover:text-gold-text"
+                  >
+                    {t('footer.veterinaryIndustry')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
 
           {/* Contact column */}
           <div>

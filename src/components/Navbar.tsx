@@ -10,7 +10,12 @@ import { trackEvent } from '@/lib/analytics';
 import { stripLocalePrefix } from '@/lib/localeRouting';
 import { useLocalePath } from '@/hooks/useLocalePath';
 
-const Navbar = () => {
+type NavbarProps = {
+  pageLinks?: Array<{ label: string; href: string }>;
+  contactHref?: string;
+};
+
+const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
   const { t } = useTranslation();
   const location = useLocation();
   const localePath = useLocalePath();
@@ -20,18 +25,25 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(isHome ? '#' : '');
 
-  const getHref = (href: string) => (href.startsWith("#") ? (isHome ? href : localePath(`/${href}`)) : localePath(href));
+  const usesLocalAnchors = Boolean(pageLinks);
+  const getHref = (href: string) => (href.startsWith("#") ? (isHome || usesLocalAnchors ? href : localePath(`/${href}`)) : localePath(href));
+  const logoHref = isHome ? '#' : localePath('/');
   const isPathLinkActive = (href: string) =>
     !href.startsWith('#') &&
     (basePathname === href || basePathname.startsWith(`${href}/`));
   const isLinkActive = (href: string) =>
-    (isHome && activeLink === href) || (!isHome && isPathLinkActive(href));
+    ((isHome || usesLocalAnchors) && activeLink === href) || (!isHome && !usesLocalAnchors && isPathLinkActive(href));
   const openContactModal = (source: string) => {
     trackEvent('contact_click', { location: 'navbar', label: source, page_path: location.pathname });
+    if (contactHref) {
+      window.history.pushState(null, '', contactHref);
+      document.querySelector(contactHref)?.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
     setContactOpen(true);
   };
 
-  const navLinks = [
+  const defaultNavLinks = [
     { label: t('nav.home'), href: '#' },
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.ourWork'), href: '#portfolio' },
@@ -39,18 +51,19 @@ const Navbar = () => {
     { label: t('nav.pricing'), href: '#pricing' },
     { label: t('nav.insights'), href: '/insights' },
   ];
+  const navLinks = pageLinks ?? defaultNavLinks;
   useEffect(() => {
-    if (!isHome) {
+    if (!isHome && !usesLocalAnchors) {
       setActiveLink('');
       return;
     }
 
     const hash = location.hash || '#';
     setActiveLink(hash);
-  }, [isHome, location.hash]);
+  }, [isHome, usesLocalAnchors, location.hash]);
 
   useEffect(() => {
-    if (!isHome) return;
+    if (!isHome && !usesLocalAnchors) return;
     const sectionLinks = navLinks.filter((link) => link.href.startsWith('#') && link.href !== '#');
     const activationLine = 120;
 
@@ -89,7 +102,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', updateActiveLinkFromScroll);
     };
-  }, [isHome, navLinks]);
+  }, [isHome, usesLocalAnchors, navLinks]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -110,7 +123,7 @@ const Navbar = () => {
             boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
           }}
         >
-          <a href={getHref('#')} className="flex-shrink-0">
+          <a href={logoHref} className="flex-shrink-0">
             <img src={logo} alt={t('common.logoAlt')} className="h-7 mb-0.5" />
           </a>
 
@@ -170,7 +183,7 @@ const Navbar = () => {
           boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
         }}
       >
-        <a href={getHref('#')}>
+        <a href={logoHref}>
           <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-1" />
         </a>
         <div className="flex items-center gap-3">

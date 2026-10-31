@@ -11,6 +11,7 @@ import CaseStudyPage from "./pages/CaseStudyPage";
 import Insights from "./pages/Insights";
 import InsightPost from "./pages/InsightPost";
 import NotFound from "./pages/NotFound";
+import Vet from "./pages/Vet";
 import { getLocaleFromPathname } from "@/lib/localeRouting";
 
 const LocaleRouteSync = () => {
@@ -40,6 +41,7 @@ const AppRoutes = () => (
       <Route path="/apply" element={<Apply />} />
       <Route path="/de/apply" element={<Apply />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/vet" element={<Vet />} />
       <Route path="/de/contact" element={<Contact />} />
       <Route path="/insights" element={<Insights />} />
       <Route path="/de/insights" element={<Insights />} />
