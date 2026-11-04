@@ -11,7 +11,14 @@ interface ContactFormProps {
   formName: string;
   onClose?: () => void;
   formLocation?: string;
+  mode?: "default" | "vet";
 }
+
+const VET_AUDIENCE_LABELS: Record<string, string> = {
+  practices: "Practice",
+  "animal-health": "Animal-health company",
+  "software-teams": "Vet software or startup",
+};
 
 interface SelectProps {
   name: string;
@@ -170,11 +177,15 @@ const MultiSelectField: FC<MultiSelectProps> = ({
   );
 };
 
-const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLocation }) => {
+const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLocation, mode = "default" }) => {
   const { t } = useTranslation();
   const localePath = useLocalePath();
   const [services, setServices] = useState<string[]>([]);
   const [budget, setBudget] = useState("");
+  const [vetAudience, setVetAudience] = useState(() => {
+    if (typeof window === "undefined") return "";
+    return VET_AUDIENCE_LABELS[new URLSearchParams(window.location.search).get("for") ?? ""] ?? "";
+  });
   const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
@@ -183,6 +194,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
   const attributionFields = getFormAttributionFields();
 
   const isModal = variant === "modal";
+  const isVet = mode === "vet";
   const locationLabel = formLocation ?? (isModal ? "modal" : "contact_page");
   const emailValid = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim());
   const serviceOptions = t('contact.serviceOptions', { returnObjects: true }) as string[];
@@ -191,10 +203,20 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
   const errors = {
     fullName: attempted && !fieldValues.fullName.trim(),
     email: attempted && (!fieldValues.email.trim() || !emailValid),
-    service: attempted && services.length === 0,
+    service: attempted && (isVet ? !vetAudience : services.length === 0),
     message: attempted && !fieldValues.message.trim(),
     agreed: attempted && !agreed,
   };
+
+  useEffect(() => {
+    if (!isVet) return;
+    const handleAudience = (event: Event) => {
+      const value = (event as CustomEvent<string>).detail;
+      setVetAudience(VET_AUDIENCE_LABELS[value] ?? value);
+    };
+    window.addEventListener("vet-audience", handleAudience);
+    return () => window.removeEventListener("vet-audience", handleAudience);
+  }, [isVet]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -202,7 +224,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
     setSubmitError(false);
     trackEvent("form_submit_attempt", {
       form_location: locationLabel,
-      service: services.join(","),
+      service: isVet ? vetAudience : services.join(","),
       page_path: window.location.pathname,
     });
 
@@ -210,7 +232,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       !fieldValues.fullName.trim() ||
       !fieldValues.email.trim() ||
       !emailValid ||
-      services.length === 0 ||
+      (isVet ? !vetAudience : services.length === 0) ||
       !fieldValues.message.trim() ||
       !agreed
     ) {
@@ -229,7 +251,9 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(
+          Array.from(formData.entries()).map(([key, value]) => [key, String(value)])
+        ).toString(),
       });
       if (!response.ok) {
         serverError = true;
@@ -268,7 +292,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
             {t('contact.close')}
           </BrandButton>
         ) : (
-          <BrandButton type="link" to="/" variant="secondary" showStar className="text-sm">
+          <BrandButton type="link" to={isVet ? "/vet" : "/"} variant="secondary" showStar className="text-sm">
             {t('common.backToHome')}
           </BrandButton>
         )}
@@ -291,7 +315,50 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
         <input key={key} type="hidden" name={key} value={value} />
       ))}
 
-      {isModal ? (
+      {isVet ? (
+        <>
+          <div className="grid md:grid-cols-2 gap-5">
+            <div>
+              <label className="text-off-white/70 text-sm font-body block mb-1.5">Name*</label>
+              <input
+                type="text"
+                name="fullName"
+                className={`${inputClasses} ${errors.fullName ? "!border-red-400" : ""}`}
+                value={fieldValues.fullName}
+                onChange={(e) => setFieldValues((value) => ({ ...value, fullName: e.target.value }))}
+              />
+              {errors.fullName && <p className="text-red-400 text-xs font-body mt-1">Please enter your name.</p>}
+            </div>
+            <div>
+              <label className="text-off-white/70 text-sm font-body block mb-1.5">Email*</label>
+              <input
+                type="email"
+                name="email"
+                className={`${inputClasses} ${errors.email ? "!border-red-400" : ""}`}
+                value={fieldValues.email}
+                onChange={(e) => setFieldValues((value) => ({ ...value, email: e.target.value }))}
+              />
+              {errors.email && <p className="text-red-400 text-xs font-body mt-1">Please enter a valid email address.</p>}
+            </div>
+          </div>
+          <div>
+            <label className="text-off-white/70 text-sm font-body block mb-1.5">Organisation</label>
+            <input type="text" name="organisation" className={inputClasses} />
+          </div>
+          <div>
+            <SelectField
+              name="audience"
+              label="I’m contacting you about"
+              placeholder="Choose one"
+              options={[...Object.values(VET_AUDIENCE_LABELS), "Something else"]}
+              value={vetAudience}
+              onChange={setVetAudience}
+              required
+            />
+            {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please choose an option.</p>}
+          </div>
+        </>
+      ) : isModal ? (
         <>
           <div>
             <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.fullName")}*</label>
