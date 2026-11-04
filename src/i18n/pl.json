@@ -216,16 +216,16 @@
     ],
     "projects": [
       {
-        "title": "PWG Zurich",
-        "category": "Sieć profesjonalna",
-        "desc": "Wyrazista, redakcyjna strona dla najdłużej działającej w Zurychu międzynarodowej sieci kobiet aktywnych zawodowo.",
-        "link": "/case-studies/pwg"
-      },
-      {
         "title": "Snip Squad",
         "category": "Weterynaria",
         "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt.",
         "link": "/case-studies/snip-squad"
+      },
+      {
+        "title": "PWG Zurich",
+        "category": "Sieć profesjonalna",
+        "desc": "Wyrazista, redakcyjna strona dla najdłużej działającej w Zurychu międzynarodowej sieci kobiet aktywnych zawodowo.",
+        "link": "/case-studies/pwg"
       },
       {
         "title": "PortCo HR Collective",

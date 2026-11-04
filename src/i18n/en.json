@@ -216,16 +216,16 @@
     ],
     "projects": [
       {
-        "title": "PWG Zurich",
-        "category": "Professional network",
-        "desc": "A bold, editorial website for Zurich’s longest-established international network for professional women.",
-        "link": "/case-studies/pwg"
-      },
-      {
         "title": "Snip Squad",
         "category": "Veterinary",
         "desc": "A vibrant veterinary clinic website designed to be warm, approachable, and easy to navigate for pet owners.",
         "link": "/case-studies/snip-squad"
+      },
+      {
+        "title": "PWG Zurich",
+        "category": "Professional network",
+        "desc": "A bold, editorial website for Zurich’s longest-established international network for professional women.",
+        "link": "/case-studies/pwg"
       },
       {
         "title": "PortCo HR Collective",

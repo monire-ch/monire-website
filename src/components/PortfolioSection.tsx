@@ -36,8 +36,8 @@ const portfolioNavGroups = [
   {
     titleKey: 'portfolio.navGroups.webDesignDevelopment.title',
     items: [
-      { id: 'web-professional-network', labelKey: 'portfolio.navGroups.webDesignDevelopment.professionalNetwork', targetLink: '/case-studies/pwg' },
       { id: 'web-veterinary', labelKey: 'portfolio.navGroups.webDesignDevelopment.veterinary', targetLink: '/case-studies/snip-squad' },
+      { id: 'web-professional-network', labelKey: 'portfolio.navGroups.webDesignDevelopment.professionalNetwork', targetLink: '/case-studies/pwg' },
       { id: 'web-community-platform', labelKey: 'portfolio.navGroups.webDesignDevelopment.communityPlatform', targetLink: '/case-studies/portco-hr-collective' },
       { id: 'web-future-of-work', labelKey: 'portfolio.navGroups.webDesignDevelopment.futureOfWork', targetLink: '/case-studies/horizon-collective' },
       { id: 'web-consulting', labelKey: 'portfolio.navGroups.webDesignDevelopment.consulting', targetLink: '/case-studies/systemically' },

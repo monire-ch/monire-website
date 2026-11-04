@@ -216,16 +216,16 @@
     ],
     "projects": [
       {
-        "title": "PWG Zurich",
-        "category": "Frauennetzwerk",
-        "desc": "Eine ausdrucksstarke, redaktionelle Website für Zürichs traditionsreichstes berufliches Frauennetzwerk.",
-        "link": "/case-studies/pwg"
-      },
-      {
         "title": "Snip Squad",
         "category": "Tiermedizin",
         "desc": "Eine freundliche, moderne Website für eine Tierklinik, die warm, zugänglich und für Tierhalter einfach zu nutzen ist.",
         "link": "/case-studies/snip-squad"
+      },
+      {
+        "title": "PWG Zurich",
+        "category": "Professionelles Netzwerk",
+        "desc": "Eine ausdrucksstarke, redaktionelle Website für Zürichs traditionsreichstes berufliches Frauennetzwerk.",
+        "link": "/case-studies/pwg"
       },
       {
         "title": "PortCo HR Collective",
@@ -303,7 +303,7 @@
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Webdesign & Entwicklung",
-        "professionalNetwork": "Frauennetzwerk",
+        "professionalNetwork": "Professionelles Netzwerk",
         "futureOfWork": "HR & Zukunft der Arbeit",
         "veterinary": "Tiermedizin",
         "communityPlatform": "Community-Plattform",
