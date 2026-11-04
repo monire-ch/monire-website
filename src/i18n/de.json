@@ -222,6 +222,12 @@
         "link": "/case-studies/snip-squad"
       },
       {
+        "title": "PWG Zurich",
+        "category": "Professionelles Netzwerk",
+        "desc": "Eine ausdrucksstarke, redaktionelle Website für Zürichs traditionsreichstes berufliches Frauennetzwerk.",
+        "link": "/case-studies/pwg"
+      },
+      {
         "title": "PortCo HR Collective",
         "category": "Community-Plattform",
         "desc": "Eine exklusive Mitgliederplattform für HR-Führungskräfte im Private-Equity-Umfeld, die Branding, Webdesign und Automatisierung verbindet.",
@@ -297,6 +303,7 @@
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Webdesign & Entwicklung",
+        "professionalNetwork": "Professionelles Netzwerk",
         "futureOfWork": "HR & Zukunft der Arbeit",
         "veterinary": "Tiermedizin",
         "communityPlatform": "Community-Plattform",
@@ -576,6 +583,41 @@
     "backToAll": "Zurück zu allen Artikeln"
   },
   "caseStudiesContent": {
+    "pwg": {
+      "title": "PWG Zurich",
+      "subtitle": "Eine moderne Website und Mitgliederplattform für Zürichs ältestes berufliches Frauennetzwerk",
+      "client": "PWG Zurich",
+      "industry": "Professionelles Netzwerk & Community",
+      "imageAlt": "Vorschau der neu gestalteten Website von PWG Zurich",
+      "websiteLabel": "Website besuchen",
+      "sections": [
+        {
+          "title": "Überblick:",
+          "intro": "PWG Zurich wurde 1983 gegründet und ist das traditionsreichste berufliche Frauennetzwerk der Stadt. Der gemeinnützige Verein bringt Frauen aus verschiedenen Branchen, Kulturen und Karrierestufen zusammen, um Kontakte zu knüpfen, Laufbahnen aktiv zu gestalten und neue Perspektiven auszutauschen.\n\nIm Rahmen eines umfassenden Rebrandings beauftragte uns PWG mit dem Design und der Entwicklung ihrer neuen Website und Mitgliederplattform."
+        },
+        {
+          "title": "Ansatz:",
+          "intro": "Gemeinsam mit dem Rebranding Project Lead entwickelten wir die neue Markenidentität zu einem stimmigen digitalen Erlebnis weiter. Im Mittelpunkt standen:",
+          "items": [
+            "Ein konsistentes Designsystem, das den neuen Markenauftritt auf jede Seite überträgt",
+            "Eine klare Nutzerführung: vom Entdecken und Buchen von Events über den Kauf einer Mitgliedschaft bis zum persönlichen Mitgliederkonto",
+            "Eine CMS-Struktur, mit der das Komitee Events, Partner, Teammitglieder und Artikel eigenständig pflegt",
+            "Responsives Design für Desktop, Tablet und Smartphone"
+          ]
+        },
+        {
+          "title": "Ergebnis:",
+          "intro": "Entstanden ist eine ausdrucksstarke, redaktionell geprägte Website und Mitgliederplattform, die das Selbstbewusstsein, die Energie und die Verbundenheit des neuen Markenauftritts spürbar macht. Sie gibt der Community ein unverwechselbares digitales Zuhause, in dem Frauen Events entdecken und buchen, Mitgliedschaften erwerben und Teil eines Netzwerks werden können, das seit mehr als vier Jahrzehnten Frauen zusammenbringt und mit klarem Blick in die Zukunft geht."
+        }
+      ],
+      "comparison": {
+        "title": "Vorher & nachher",
+        "beforeLabel": "Vorher",
+        "afterLabel": "Nachher",
+        "beforeImage": { "alt": "Website von PWG Zurich vor dem Redesign" },
+        "afterImage": { "alt": "Website von PWG Zurich nach dem Redesign" }
+      }
+    },
     "horizon-collective": {
       "title": "Horizon Collective",
       "subtitle": "Ein ausdrucksstarker digitaler Auftritt für ein Kollektiv, das Arbeit im Zeitalter der KI neu denkt",
@@ -1217,6 +1259,10 @@
       "/apply": {
         "title": "Bewerben | Moniré",
         "description": "Bewerben Sie sich für kostenlose Projektunterstützung von Moniré für eine Non-Profit-Organisation oder sinnvolle Initiative."
+      },
+      "/case-studies/pwg": {
+        "title": "PWG Zurich Website & Mitgliederplattform | Case Study | Moniré",
+        "description": "Erfahren Sie, wie Moniré gemeinsam mit dem Rebranding Project Lead die neue Website und Mitgliederplattform für PWG Zurich gestaltet und technisch umgesetzt hat."
       },
       "/case-studies/expense-receipt-automation": {
         "title": "Case Study Spesenbeleg-Automatisierung | Moniré",

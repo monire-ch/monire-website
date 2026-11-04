@@ -44,6 +44,22 @@ const mergeCaseStudyTranslation = (
           ...translatedProject.testimonial,
         }
       : translatedProject.testimonial,
+    comparison: project.comparison
+      ? {
+          ...project.comparison,
+          ...translatedProject.comparison,
+          beforeImage: {
+            ...project.comparison.beforeImage,
+            ...translatedProject.comparison?.beforeImage,
+            src: project.comparison.beforeImage.src,
+          },
+          afterImage: {
+            ...project.comparison.afterImage,
+            ...translatedProject.comparison?.afterImage,
+            src: project.comparison.afterImage.src,
+          },
+        }
+      : translatedProject.comparison,
   };
 };
 
