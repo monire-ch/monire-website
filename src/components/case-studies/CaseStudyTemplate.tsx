@@ -31,18 +31,18 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   const metadataBlock = (
     <div>
       {project.client ? (
-        <div className="flex justify-between items-center py-4 border-b border-border">
+        <div className="flex flex-col items-start gap-2 py-4 border-b border-border sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.client')}</span>
-          <span className="text-sm font-body text-foreground">{project.client}</span>
+          <span className="text-sm font-body text-foreground sm:text-right">{project.client}</span>
         </div>
       ) : null}
-      <div className="flex justify-between items-center py-4 border-b border-border">
+      <div className="flex flex-col items-start gap-2 py-4 border-b border-border sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.industry')}</span>
-        <span className="text-sm font-body text-foreground">{project.industry}</span>
+        <span className="text-sm font-body text-foreground sm:text-right">{project.industry}</span>
       </div>
-      <div className="flex justify-between items-start py-4 border-b border-border gap-4">
+      <div className="flex flex-col items-start gap-2 py-4 border-b border-border sm:flex-row sm:justify-between sm:gap-4">
         <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.category')}</span>
-        <div className="flex flex-wrap gap-2 justify-end">
+        <div className="flex max-w-full flex-wrap gap-2 sm:justify-end">
           {categoryLabels.map((categoryLabel) => (
             <span key={categoryLabel} className={categoryPillClassName}>
               {categoryLabel}
@@ -50,23 +50,25 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           ))}
         </div>
       </div>
-      <div className="flex justify-between items-start py-4 border-b border-border">
-        <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.tools')}</span>
-        <div className="flex flex-wrap gap-2 justify-end">
-          {project.tools.map((tool) => (
-            <span
-              key={tool}
-              className="text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground uppercase tracking-wide"
-            >
-              {tool}
-            </span>
-          ))}
+      {project.tools?.length ? (
+        <div className="flex flex-col items-start gap-2 py-4 border-b border-border sm:flex-row sm:justify-between sm:gap-4">
+          <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.tools')}</span>
+          <div className="flex max-w-full flex-wrap gap-2 sm:justify-end">
+            {project.tools.map((tool) => (
+              <span
+                key={tool}
+                className="text-xs font-body font-medium px-3 py-1 rounded-full border border-border text-foreground uppercase tracking-wide"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      ) : null}
       {project.websiteUrl ? (
-        <div className="flex justify-between items-start py-4 gap-4">
+        <div className="flex flex-col items-start gap-2 py-4 sm:flex-row sm:justify-between sm:gap-4">
           <span className="text-sm font-body text-main-teal">{t('caseStudy.meta.website')}</span>
-          <div className="text-right max-w-[200px] md:max-w-[280px]">
+          <div className="max-w-full text-left sm:max-w-[280px] sm:text-right">
             <a
               href={project.websiteUrl}
               target="_blank"
@@ -97,12 +99,12 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
   return (
     <>
       <Navbar />
-      <main className="bg-background min-h-screen pt-36 md:pt-44 pb-0">
+      <main className={`bg-background min-h-screen pb-0 ${project.comparison ? 'pt-28 md:pt-32' : 'pt-36 md:pt-44'}`}>
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <a
               href={localePath('/#portfolio')}
-              className="inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline mb-8"
+              className={`inline-flex items-center gap-2 text-sm font-body text-main-teal hover:text-soft-teal transition-colors underline hover:no-underline ${project.comparison ? 'mb-5' : 'mb-8'}`}
             >
               <ArrowLeft size={16} />
               {t('caseStudy.back')}
@@ -110,7 +112,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+            <div className={`flex flex-wrap gap-2 ${project.comparison ? 'mb-4' : 'mb-6 md:mb-8'}`}>
               {categoryLabels.map((categoryLabel) => (
                 <span key={categoryLabel} className="eyebrow-pill eyebrow-pill-light">
                   {categoryLabel}
@@ -118,13 +120,47 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               ))}
             </div>
             <h1
-              className={`font-display text-4xl md:text-5xl lg:text-6xl text-main-teal leading-tight ${project.subtitle ? 'mb-4 md:mb-8' : 'mb-8 md:mb-16'}`}>
+              className={`font-display text-4xl md:text-5xl lg:text-6xl text-main-teal leading-tight ${project.subtitle ? project.comparison ? 'mb-3' : 'mb-4 md:mb-8' : 'mb-8 md:mb-16'}`}>
               {project.title}
             </h1>
             {project.subtitle ? (
-              <p className="text-lg md:text-xl font-body text-soft-teal mb-7 md:mb-12">{project.subtitle}</p>
+              <p className={`text-lg md:text-xl font-body text-soft-teal ${project.comparison ? 'mb-6 md:mb-8' : 'mb-7 md:mb-12'}`}>{project.subtitle}</p>
             ) : null}
           </ScrollReveal>
+
+          {project.comparison ? (
+            <ScrollReveal>
+              <section aria-labelledby="case-study-comparison-title" className="mb-10 border-y border-border py-7 md:py-9">
+                <div className="mb-6 max-w-3xl">
+                  <h2 id="case-study-comparison-title" className="font-tertiary italic text-3xl text-main-teal md:text-4xl">
+                    {project.comparison.title}
+                  </h2>
+                  {project.comparison.intro ? (
+                    <p className="mt-3 font-body text-base leading-relaxed text-foreground">{project.comparison.intro}</p>
+                  ) : null}
+                </div>
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {[
+                    { label: project.comparison.beforeLabel, image: project.comparison.beforeImage, mobileOrder: 'order-2 md:order-none' },
+                    { label: project.comparison.afterLabel, image: project.comparison.afterImage, mobileOrder: 'order-1 md:order-none' },
+                  ].map(({ label, image, mobileOrder }) => (
+                    <figure key={label} className={mobileOrder}>
+                      <figcaption className="mb-3 font-body text-xs font-semibold uppercase tracking-[0.18em] text-main-teal">
+                        {label}
+                      </figcaption>
+                      <div className={`overflow-hidden rounded-xl border border-border bg-card ${image.scrollable ? 'h-[480px] overflow-y-auto md:h-[600px]' : ''}`}>
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className={image.scrollable ? 'mx-auto block h-auto w-auto max-w-full' : 'block h-auto w-full'}
+                        />
+                      </div>
+                    </figure>
+                  ))}
+                </div>
+              </section>
+            </ScrollReveal>
+          ) : null}
 
           <div className={contentGridClassName}>
             {hasSections ? (

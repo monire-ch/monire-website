@@ -216,6 +216,12 @@
     ],
     "projects": [
       {
+        "title": "PWG Zurich",
+        "category": "Sieć profesjonalna",
+        "desc": "Wyrazista, redakcyjna strona dla najdłużej działającej w Zurychu międzynarodowej sieci kobiet aktywnych zawodowo.",
+        "link": "/case-studies/pwg"
+      },
+      {
         "title": "Snip Squad",
         "category": "Weterynaria",
         "desc": "Energiczna strona kliniki weterynaryjnej zaprojektowana tak, aby była ciepła, przystępna i łatwa w nawigacji dla właścicieli zwierząt.",
@@ -297,6 +303,7 @@
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Web design & development",
+        "professionalNetwork": "Sieć profesjonalna",
         "futureOfWork": "Przyszłość pracy",
         "veterinary": "Weterynaria",
         "communityPlatform": "Platforma społecznościowa",
@@ -576,6 +583,41 @@
     "backToAll": "Wróć do wszystkich artykułów"
   },
   "caseStudiesContent": {
+    "pwg": {
+      "title": "PWG Zurich",
+      "subtitle": "Nowoczesny cyfrowy dom dla najdłużej działającej w Zurychu międzynarodowej sieci kobiet aktywnych zawodowo",
+      "client": "PWG Zurich",
+      "industry": "Sieć profesjonalna i społeczność",
+      "imageAlt": "Podgląd przeprojektowanej strony PWG Zurich",
+      "websiteLabel": "Odwiedź stronę",
+      "sections": [
+        {
+          "title": "Opis:",
+          "intro": "Założona w 1983 roku PWG Zurich jest najdłużej działającą w mieście grupą kobiet aktywnych zawodowo. Organizacja non-profit łączy kobiety z różnych branż, kultur i etapów kariery, pomagając im budować relacje zawodowe, kształtować ścieżki kariery i wymieniać perspektywy.\n\nW ramach szerszego rebrandingu PWG zwróciło się do nas z prośbą o przeprojektowanie i przebudowę strony oraz platformy członkowskiej."
+        },
+        {
+          "title": "Podejście:",
+          "intro": "We współpracy z Rebranding Project Lead ukształtowałyśmy i rozwinęłyśmy kierunek kreatywny w kompletne, spójne doświadczenie strony, a następnie wdrożyłyśmy je technicznie. Skupiłyśmy się na:",
+          "items": [
+            "Rozwinięciu wspólnego kierunku projektowego w elastyczny system dla całej strony",
+            "Jasnych ścieżkach do odkrywania i rezerwowania wydarzeń, zakupu członkostwa oraz kont członkiń",
+            "Elastycznej strukturze treści, dzięki której komitet może nadal samodzielnie aktualizować wydarzenia, partnerów, członkinie zespołu i artykuły",
+            "Responsywnym projekcie i wdrożeniu na komputery, tablety i telefony"
+          ]
+        },
+        {
+          "title": "Rezultat:",
+          "intro": "Rezultatem jest odważna, redakcyjna strona i platforma członkowska, która oddaje pewność siebie, energię i poczucie więzi będące sercem rebrandingu PWG. Daje społeczności wyrazisty cyfrowy dom, w którym kobiety mogą odkrywać i rezerwować wydarzenia, kupować członkostwa oraz czuć się częścią sieci z ponad czterdziestoletnią historią i jasną wizją przyszłości."
+        }
+      ],
+      "comparison": {
+        "title": "Przed i po",
+        "beforeLabel": "Przed",
+        "afterLabel": "Po",
+        "beforeImage": { "alt": "Strona PWG Zurich przed redesignem" },
+        "afterImage": { "alt": "Strona PWG Zurich po redesignie" }
+      }
+    },
     "horizon-collective": {
       "title": "Horizon Collective",
       "subtitle": "Odważny cyfrowy dom dla kolektywu, który na nowo wyobraża sobie pracę w erze AI",

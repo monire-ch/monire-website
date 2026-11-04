@@ -11,10 +11,12 @@ import towarowa from '@/assets/portfolio/towarowa_full.webp';
 import n8nPreview from '@/assets/portfolio/n8n.webp';
 import labsiftPreview from '@/assets/portfolio/labsift-og-image.webp';
 import horizonCollective from '@/assets/portfolio/horizon_full.webp';
+import pwg from '@/assets/portfolio/pwg.webp';
 import { trackEvent } from '@/lib/analytics';
 import { useLocalePath } from '@/hooks/useLocalePath';
 
 const projectImagesByLink: Record<string, string> = {
+  '/case-studies/pwg': pwg,
   '/case-studies/horizon-collective': horizonCollective,
   '/case-studies/snip-squad': snipSquad,
   '/case-studies/portco-hr-collective': portcoPreview,
@@ -34,6 +36,7 @@ const portfolioNavGroups = [
   {
     titleKey: 'portfolio.navGroups.webDesignDevelopment.title',
     items: [
+      { id: 'web-professional-network', labelKey: 'portfolio.navGroups.webDesignDevelopment.professionalNetwork', targetLink: '/case-studies/pwg' },
       { id: 'web-veterinary', labelKey: 'portfolio.navGroups.webDesignDevelopment.veterinary', targetLink: '/case-studies/snip-squad' },
       { id: 'web-community-platform', labelKey: 'portfolio.navGroups.webDesignDevelopment.communityPlatform', targetLink: '/case-studies/portco-hr-collective' },
       { id: 'web-future-of-work', labelKey: 'portfolio.navGroups.webDesignDevelopment.futureOfWork', targetLink: '/case-studies/horizon-collective' },

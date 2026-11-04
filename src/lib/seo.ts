@@ -82,6 +82,7 @@ const BASE_PRERENDER_ROUTES = [
   '/contact',
   '/insights',
   ...INSIGHTS_ROUTES,
+  '/case-studies/pwg',
   '/case-studies/invoicing-application',
   '/case-studies/gdpr-consent-application',
   '/case-studies/expense-receipt-automation',
