@@ -16,7 +16,7 @@ interface ContactFormProps {
 
 const VET_AUDIENCE_LABELS: Record<string, string> = {
   practices: "Practice",
-  "animal-health": "Animal-health company",
+  "animal-health": "Animal health company",
   "software-teams": "Vet software or startup",
 };
 

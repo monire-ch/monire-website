@@ -22,19 +22,18 @@ type AudienceId = "practices" | "animal-health" | "software-teams";
 type Audience = {
   id: AudienceId;
   tab: string;
-  label: string;
   title: string;
   intro: string;
   items: string[];
   cta: string;
   partner?: boolean;
+  note?: string;
 };
 
 const audiences: Audience[] = [
   {
     id: "practices",
     tab: "Veterinary practices",
-    label: "For veterinary practices",
     title: "A clearer website. Less admin for your team.",
     intro: "When your website no longer reflects your practice, or your team spends hours answering the same questions and copying information between systems, we design and build something better.",
     items: [
@@ -48,14 +47,14 @@ const audiences: Audience[] = [
   {
     id: "animal-health",
     tab: "Animal health",
-    label: "For animal-health companies",
     title: "Make complex veterinary information clear and useful.",
-    intro: "We turn your approved scientific and commercial content into websites and software that veterinary professionals can understand, trust and use. We can build the complete experience, not only the campaign around it.",
+    intro: "We turn your approved scientific and commercial content into websites and software that veterinary professionals can understand, trust and use.",
     items: [
-      "Product websites, launch sites and educational content",
-      "Secure areas for veterinary professionals and approved resources",
-      "Calculators, guides and software for veterinary customers and sales teams",
-      "AI assistants and custom platforms with clear boundaries and approved information",
+      "Product websites, launch sites and educational resources",
+      "Automations that connect the systems you already use, so enquiries, sample requests and handovers to sales keep moving without manual work",
+      "Login-only areas where veterinary professionals can access approved resources",
+      "Calculators, product finders and software for veterinary customers and sales teams",
+      "AI assistants that answer only from your approved information",
     ],
     cta: "Talk to us about your project",
     partner: true,
@@ -63,16 +62,16 @@ const audiences: Audience[] = [
   {
     id: "software-teams",
     tab: "Veterinary software",
-    label: "For veterinary software teams",
-    title: "Build software that works beyond the demo.",
-    intro: "Software can look convincing in a demonstration and still be frustrating in a busy practice. We help make it clearer, easier to use and better suited to the people doing the work.",
+    title: "Clinical expertise, UX and development for veterinary software.",
+    intro: "Software can impress in a demo and still frustrate a busy practice, where staff have little time to learn new systems. We advise, design and build with your team to close that gap.",
     items: [
-      "Find where veterinary users get stuck, slowed down or make mistakes",
-      "Redesign and build clearer screens around real practice workflows",
-      "Build new features, AI assistants and custom software from idea to launch",
-      "Improve onboarding, help content and product websites",
+      "A veterinarian’s review of your product: where it doesn’t fit clinic workflows, where staff get stuck and what to change",
+      "Redesigned screens and workflows that busy staff can use with minimal training",
+      "Onboarding flows and help content that get new clinics using your product faster",
+      "Frontend development in React, Vue and TypeScript, inside your existing codebase",
     ],
     cta: "Talk to us about your product",
+    note: "No engineering team yet? We can design and build your product with you.",
   },
 ];
 
@@ -83,8 +82,8 @@ const vetPricingContent: PricingSectionContent = {
   otherServicesTab: "Other services",
   websitePlanDescriptions: [
     "A clear, professional website for an independent veterinary practice or small veterinary business",
-    "A more strategic website for a growing practice, referral centre or animal-health team",
-    "A larger digital platform for multi-location practices, animal-health companies or veterinary products",
+    "A more strategic website for a growing practice, referral centre or animal health team",
+    "A larger digital platform for multi-location practices, animal health companies or veterinary products",
   ],
   customWebsiteTitle: "Not sure which website package fits?",
   customWebsiteDescription: "Tell us what you need the website to do and we will recommend the right scope. If none of the packages fits, we can quote a custom website.",
@@ -100,8 +99,8 @@ const vetPricingContent: PricingSectionContent = {
   },
 };
 
-const SectionHeading = ({ label, title, dark = false }: { label: string; title: string; dark?: boolean }) => (
-  <div className="mx-auto mb-10 max-w-3xl text-center md:mb-16">
+const SectionHeading = ({ label, title, dark = false, className = "mb-10 md:mb-16" }: { label: string; title: string; dark?: boolean; className?: string }) => (
+  <div className={`mx-auto max-w-3xl text-center ${className}`}>
     <span className={`eyebrow-pill mb-4 ${dark ? "eyebrow-pill-dark" : "eyebrow-pill-light"}`}>{label}</span>
     <h2 className={`font-body text-3xl leading-tight md:text-4xl ${dark ? "text-off-white" : "text-main-teal"}`}>{title}</h2>
   </div>
@@ -136,8 +135,8 @@ const Vet = () => {
   const heroWords = "Veterinary work is complicated enough. Your website and software should make it easier.".split(" ");
   const audience = audiences.find((item) => item.id === activeAudience) ?? audiences[0];
   const vetNavLinks = [
-    { label: "Who we help", href: "#services" },
-    { label: "Our work", href: "#vet-work" },
+    { label: "Services", href: "#services" },
+    { label: "Portfolio", href: "#vet-work" },
     { label: "About", href: "#about" },
     { label: "Pricing", href: "#pricing" },
   ];
@@ -193,11 +192,11 @@ const Vet = () => {
           </div>
         </section>
 
-        <section id="services" className="relative scroll-mt-28 overflow-hidden bg-off-white px-6 py-20 md:py-28">
+        <section id="services" className="relative scroll-mt-28 overflow-hidden bg-off-white px-6 pb-20 pt-12 md:pb-28 md:pt-16">
           <div className="relative z-10 mx-auto max-w-6xl">
-            <SectionHeading label="How we can help" title="Support for every part of the veterinary sector." />
-            <div className="overflow-hidden rounded-3xl border border-main-teal/15 bg-neutral-card shadow-xl lg:grid lg:h-[760px] lg:grid-cols-[0.42fr_0.58fr]">
-              <div className="relative h-[300px] lg:h-[760px]">
+            <SectionHeading label="How we can help" title="Support for every part of the veterinary sector." className="mb-8 md:mb-10" />
+            <div className="overflow-hidden rounded-3xl border border-main-teal/15 bg-neutral-card shadow-xl lg:grid lg:min-h-[860px] lg:grid-cols-[0.42fr_0.58fr]">
+              <div className="relative h-[300px] lg:h-auto">
                 <img src={vetServicesConsultation} alt="A dog and cat in a veterinary consultation room" className="absolute inset-0 h-full w-full object-cover object-center" />
               </div>
               <div className="flex flex-col p-5 sm:p-7 md:p-9 lg:p-11">
@@ -209,8 +208,7 @@ const Vet = () => {
                   ))}
                 </div>
                 <div id={`panel-${audience.id}`} role="tabpanel" className="flex flex-1 flex-col pt-9 md:pt-11">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-main-teal/70">{audience.label}</p>
-                  <h3 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-main-teal md:text-5xl">{audience.title}</h3>
+                  <h3 className="max-w-2xl font-display text-4xl leading-tight text-main-teal md:text-5xl">{audience.title}</h3>
                   <p className="mt-5 max-w-2xl leading-relaxed text-main-teal/85 md:text-lg">{audience.intro}</p>
                   <ul className="mt-7 grid gap-4 border-t border-main-teal/10 pt-6">
                     {audience.items.map((item) => (
@@ -220,7 +218,8 @@ const Vet = () => {
                       </li>
                     ))}
                   </ul>
-                  {audience.partner && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">Need commercial strategy or scientific messaging too? <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="text-main-teal underline decoration-gold underline-offset-4">Linley Collaborative</a> can lead that part while we handle the design and build.</p>}
+                  {audience.partner && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">Need commercial strategy or scientific messaging? We partner with <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="text-main-teal underline decoration-gold underline-offset-4">Linley Collaborative</a>, an animal health consultancy.</p>}
+                  {audience.note && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">{audience.note}</p>}
                   <div className="pt-7"><BrandButton type="button" variant="primary" showStar className="text-sm" data-track="vet-cta" data-audience={audience.id} onClick={() => contactFor(audience.id)}>{audience.cta}</BrandButton></div>
                 </div>
               </div>
@@ -281,7 +280,7 @@ const Vet = () => {
             <div className="mt-8 rounded-2xl border border-main-teal/15 bg-main-teal/[0.04] p-8">
               <p className="text-xs uppercase tracking-widest text-main-teal/60">Our strategy partner</p>
               <h3 className="mt-2 font-display text-2xl text-main-teal">Linley Collaborative</h3>
-              <p className="mt-3 max-w-3xl text-main-teal/75">For animal-health projects that also need commercial strategy or scientific messaging, we work with Linley Collaborative. They lead that work; we design and build the website or tool.</p>
+              <p className="mt-3 max-w-3xl text-main-teal/75">For animal health projects that also need commercial strategy or scientific messaging, we work with Linley Collaborative. They lead that work; we design and build the website or tool.</p>
               <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-main-teal underline decoration-gold underline-offset-4">Visit Linley Collaborative →</a>
             </div>
           </div>
