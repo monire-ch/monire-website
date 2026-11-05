@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm";
 import PricingSection, { type PricingSectionContent } from "@/components/PricingSection";
 import { trackEvent } from "@/lib/analytics";
 import snipSquad from "@/assets/portfolio/snip-squad_full.webp";
-import labsift from "@/assets/portfolio/labsift-og-image.webp";
+import labsift from "@/assets/portfolio/labsift-site.webp";
 import nikky from "@/assets/nicole.jpg";
 import monika from "@/assets/monika.jpg";
 import vetEditorialAnimals from "@/assets/vet-editorial-animals.png";
@@ -243,14 +243,14 @@ const Vet = () => {
                   <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4">Read the case study <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
                 </div>
               </Link>
-              <Link to="/case-studies/labsift" className="group overflow-hidden rounded-2xl border border-neutral-border bg-white">
-                <div className="flex h-[360px] items-center justify-center bg-white p-6 md:h-[460px] md:p-10">
-                  <img src={labsift} alt="LabSift lab report results interface" className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.02]" />
+              <Link to="/case-studies/labsift" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card">
+                <div className="h-[360px] overflow-y-auto bg-white md:h-[460px]" aria-label="Scrollable LabSift website preview">
+                  <img src={labsift} alt="LabSift website" className="block h-auto w-full" />
                 </div>
-                <div className="border-t border-neutral-border bg-neutral-card p-7 md:p-8">
+                <div className="p-7 md:p-8">
                   <p className="text-xs uppercase tracking-widest text-main-teal/55">Veterinary software</p>
                   <h3 className="mt-3 font-display text-3xl text-main-teal">LabSift</h3>
-                  <p className="mt-3 leading-relaxed text-main-teal/75">Browser tool for turning PDF lab reports into a consistent, copy-ready list without sending reports to a server.</p>
+                  <p className="mt-3 leading-relaxed text-main-teal/75">A browser-based app that turns PDF lab reports into copy-ready results, processed entirely on the user’s device. We designed and built the app and its website.</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4">Read the case study <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
                 </div>
               </Link>
