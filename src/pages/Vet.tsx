@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BrandButton from "@/components/BrandButton";
@@ -103,6 +104,7 @@ const SectionHeading = ({ label, title, dark = false }: { label: string; title: 
 );
 
 const Vet = () => {
+  const { t } = useTranslation();
   const fontsLoaded = useFontsLoaded();
   const [animateHero, setAnimateHero] = useState(false);
   const [activeAudience, setActiveAudience] = useState<AudienceId>("practices");
@@ -130,9 +132,9 @@ const Vet = () => {
   const heroWords = "Veterinary experience meets software expertise".split(" ");
   const audience = audiences.find((item) => item.id === activeAudience) ?? audiences[0];
   const vetNavLinks = [
-    { label: "About", href: "#about" },
-    { label: "Our work", href: "#vet-work" },
     { label: "Who we help", href: "#services" },
+    { label: "Our work", href: "#vet-work" },
+    { label: "About", href: "#about" },
     { label: "Pricing", href: "#pricing" },
   ];
 
@@ -170,7 +172,7 @@ const Vet = () => {
               Websites, software and workflow automations for veterinary practices, animal health and veterinary software companies. Led by <span className="text-gold-text">Dr. Nikky Pyra</span>, veterinarian and software engineer.
             </p>
             <div className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} flex flex-col items-center justify-center gap-3 sm:flex-row`} style={{ transitionDelay: "400ms" }}>
-              <BrandButton type="button" variant="hero" showStar className="text-base" onClick={() => scrollTo("contact")}>Talk to us</BrandButton>
+              <BrandButton type="button" variant="hero" showStar className="text-base" onClick={() => scrollTo("contact")}>{t("hero.cta")}</BrandButton>
               <BrandButton type="button" variant="secondary" className="text-base" onClick={() => scrollTo("vet-work")}>See our work</BrandButton>
             </div>
           </div>
@@ -179,42 +181,41 @@ const Vet = () => {
           </div>
         </section>
 
-        <section id="about" className="about-flow relative scroll-mt-28 overflow-hidden px-6 py-20 md:py-28">
-          <div className="about-orb about-orb-1" /><div className="about-orb about-orb-2" />
+        <section id="services" className="relative scroll-mt-28 overflow-hidden bg-off-white px-6 py-20 md:py-28">
+          <span id="practices" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
+          <span id="animal-health" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
+          <span id="software-teams" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-6xl">
-            <SectionHeading dark label="About Moniré" title="Software experience, with veterinary context built in." />
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              {[
-                { image: nikky, name: "Dr. Nikky Pyra", role: "Co-founder, Veterinarian & Software Engineer", bio: "Nikky practised small-animal medicine for six years in Canada and Germany before moving into software. She has spent six years as a frontend engineer building with React, TypeScript and Vue. She also created LabSift, a privacy-first tool for pulling lab values out of PDF reports." },
-                { image: monika, name: "Monika Märki", role: "Co-founder, Software Engineer" },
-              ].map((person) => (
-                <article key={person.name} className="grid overflow-hidden rounded-xl border border-neutral-border bg-neutral-card sm:grid-cols-[180px_1fr]">
-                  <img src={person.image} alt={`${person.name} portrait`} className="h-full min-h-64 w-full object-cover" />
-                  <div className="p-7">
-                    <h3 className="font-display text-3xl text-main-teal">{person.name}</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-main-teal/65">{person.role}</p>
-                    {person.bio && <p className="mt-4 text-sm leading-relaxed text-main-teal/80">{person.bio}</p>}
-                  </div>
-                </article>
+            <SectionHeading label="How we can help" title="Start with the kind of team you are." />
+            <div className="mx-auto mb-10 flex max-w-3xl flex-col gap-2 rounded-2xl border border-main-teal/15 bg-main-teal/[0.04] p-2 sm:flex-row" role="tablist" aria-label="Customer type">
+              {audiences.map((item) => (
+                <button key={item.id} type="button" role="tab" aria-selected={activeAudience === item.id} aria-controls={`panel-${item.id}`} onClick={() => { setActiveAudience(item.id); trackEvent("vet_tile_click", { audience: item.id }); }} className={`min-h-12 flex-1 rounded-xl px-4 py-3 text-sm transition-colors ${activeAudience === item.id ? "bg-main-teal text-off-white shadow-md" : "text-main-teal/70 hover:bg-main-teal/[0.06] hover:text-main-teal"}`}>
+                  {item.tab}
+                </button>
               ))}
             </div>
-            <div className="mt-8 rounded-2xl border border-off-white/15 bg-off-white/[0.06] p-8">
-              <p className="text-xs uppercase tracking-widest text-gold-text">Our strategy partner</p>
-              <h3 className="mt-2 font-display text-2xl text-off-white">Linley Collaborative</h3>
-              <p className="mt-3 max-w-3xl text-off-white/75">For animal-health projects that also need commercial strategy or scientific messaging, we work with Linley Collaborative. They lead that work; we design and build the website or tool.</p>
-              <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-gold-text underline decoration-gold underline-offset-4">Visit Linley Collaborative →</a>
+
+            <div id={`panel-${audience.id}`} role="tabpanel" className="rounded-2xl border border-main-teal/15 bg-neutral-card p-7 md:p-12 lg:p-14">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-main-teal/60">{audience.label}</p>
+              <h3 className="mt-5 max-w-4xl font-display text-4xl leading-tight text-main-teal md:text-6xl">{audience.title}</h3>
+              <p className="mt-6 max-w-4xl text-lg leading-relaxed text-main-teal/75 md:text-xl">{audience.intro}</p>
+              <ul className="mt-9 grid gap-5 md:grid-cols-3">
+                {audience.items.map((item) => (
+                  <li key={item} className="flex gap-3 rounded-xl border border-main-teal/10 bg-off-white p-5 text-main-teal/80">
+                    <Check size={18} className="mt-0.5 shrink-0 text-main-teal" /><span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              {audience.partner && <p className="mt-7 text-sm leading-relaxed text-main-teal/70">Need commercial strategy or scientific messaging too? <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="text-main-teal underline decoration-gold underline-offset-4">Linley Collaborative</a> can lead that part of the project while we handle the design and build.</p>}
+              <div className="mt-9"><BrandButton type="button" variant="primary" showStar className="text-sm" data-track="vet-cta" data-audience={audience.id} onClick={() => contactFor(audience.id)}>{audience.cta}</BrandButton></div>
             </div>
           </div>
         </section>
 
-        <figure className="relative h-[280px] overflow-hidden md:h-[420px]">
-          <img src={vetEditorialAnimals} alt="A dog and cat resting in a contemporary veterinary consultation room" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-deep-ink/30 via-transparent to-deep-ink/10" aria-hidden="true" />
-        </figure>
-
-        <section id="vet-work" className="scroll-mt-28 bg-off-white px-6 py-20 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <SectionHeading label="Selected work" title="Veterinary experience is useful. The work still has to be good." />
+        <section id="vet-work" className="about-flow relative scroll-mt-28 overflow-hidden px-6 py-20 md:py-28">
+          <div className="about-orb about-orb-1" /><div className="about-orb about-orb-2" />
+          <div className="relative z-10 mx-auto max-w-6xl">
+            <SectionHeading dark label="Selected work" title="Veterinary experience is useful. The work still has to be good." />
             <div className="grid gap-6 lg:grid-cols-2">
               <Link to="/case-studies/snip-squad" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card">
                 <div className="h-[360px] overflow-y-auto bg-white md:h-[460px]" aria-label="Scrollable Snip Squad website preview">
@@ -242,42 +243,42 @@ const Vet = () => {
           </div>
         </section>
 
-        <section id="services" className="about-flow relative scroll-mt-28 overflow-hidden px-6 py-20 md:py-28">
-          <span id="practices" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
-          <span id="animal-health" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
-          <span id="software-teams" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
-          <div className="about-orb about-orb-1" /><div className="about-orb about-orb-2" />
+        <figure className="relative h-[280px] overflow-hidden md:h-[420px]">
+          <img src={vetEditorialAnimals} alt="A dog and cat resting in a contemporary veterinary consultation room" className="h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-ink/30 via-transparent to-deep-ink/10" aria-hidden="true" />
+        </figure>
+
+        <section id="about" className="relative scroll-mt-28 bg-off-white px-6 py-20 md:py-28">
           <div className="relative z-10 mx-auto max-w-6xl">
-            <SectionHeading dark label="How we can help" title="Start with the kind of team you are." />
-            <div className="mx-auto mb-10 flex max-w-3xl flex-col gap-2 rounded-2xl border border-off-white/15 bg-off-white/[0.06] p-2 sm:flex-row" role="tablist" aria-label="Customer type">
-              {audiences.map((item) => (
-                <button key={item.id} type="button" role="tab" aria-selected={activeAudience === item.id} aria-controls={`panel-${item.id}`} onClick={() => { setActiveAudience(item.id); trackEvent("vet_tile_click", { audience: item.id }); }} className={`min-h-12 flex-1 rounded-xl px-4 py-3 text-sm transition-colors ${activeAudience === item.id ? "bg-off-white text-main-teal shadow-md" : "text-off-white/70 hover:bg-off-white/[0.06] hover:text-off-white"}`}>
-                  {item.tab}
-                </button>
+            <SectionHeading label="About Moniré" title="Software experience, with veterinary context built in." />
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              {[
+                { image: nikky, name: "Dr. Nikky Pyra", role: "Co-founder, Veterinarian & Software Engineer", bio: "Nikky practised small-animal medicine for six years in Canada and Germany before moving into software. She has spent six years as a frontend engineer building with React, TypeScript and Vue. She also created LabSift, a privacy-first tool for pulling lab values out of PDF reports." },
+                { image: monika, name: "Monika Märki", role: "Co-founder, Software Engineer" },
+              ].map((person) => (
+                <article key={person.name} className="grid overflow-hidden rounded-xl border border-neutral-border bg-neutral-card sm:grid-cols-[180px_1fr]">
+                  <img src={person.image} alt={`${person.name} portrait`} className="h-full min-h-64 w-full object-cover" />
+                  <div className="p-7">
+                    <h3 className="font-display text-3xl text-main-teal">{person.name}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-main-teal/65">{person.role}</p>
+                    {person.bio && <p className="mt-4 text-sm leading-relaxed text-main-teal/80">{person.bio}</p>}
+                  </div>
+                </article>
               ))}
             </div>
-
-            <div id={`panel-${audience.id}`} role="tabpanel" className="rounded-2xl border border-off-white/15 bg-off-white/[0.07] p-7 md:p-12 lg:p-14">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-text">{audience.label}</p>
-              <h3 className="mt-5 max-w-4xl font-display text-4xl leading-tight text-off-white md:text-6xl">{audience.title}</h3>
-              <p className="mt-6 max-w-4xl text-lg leading-relaxed text-off-white/80 md:text-xl">{audience.intro}</p>
-              <ul className="mt-9 grid gap-5 md:grid-cols-3">
-                {audience.items.map((item) => (
-                  <li key={item} className="flex gap-3 rounded-xl border border-off-white/10 bg-off-white/[0.05] p-5 text-off-white/85">
-                    <Check size={18} className="mt-0.5 shrink-0 text-gold-text" /><span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              {audience.partner && <p className="mt-7 text-sm leading-relaxed text-off-white/70">Need commercial strategy or scientific messaging too? <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="text-gold-text underline decoration-gold underline-offset-4">Linley Collaborative</a> can lead that part of the project while we handle the design and build.</p>}
-              <div className="mt-9"><BrandButton type="button" variant="primary" showStar className="text-sm" data-track="vet-cta" data-audience={audience.id} onClick={() => contactFor(audience.id)}>{audience.cta}</BrandButton></div>
+            <div className="mt-8 rounded-2xl border border-main-teal/15 bg-main-teal/[0.04] p-8">
+              <p className="text-xs uppercase tracking-widest text-main-teal/60">Our strategy partner</p>
+              <h3 className="mt-2 font-display text-2xl text-main-teal">Linley Collaborative</h3>
+              <p className="mt-3 max-w-3xl text-main-teal/75">For animal-health projects that also need commercial strategy or scientific messaging, we work with Linley Collaborative. They lead that work; we design and build the website or tool.</p>
+              <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-main-teal underline decoration-gold underline-offset-4">Visit Linley Collaborative →</a>
             </div>
           </div>
         </section>
 
         <div className="dark-teal-surface"><PricingSection content={vetPricingContent} onContactClick={() => scrollTo("contact")} /></div>
 
-        <section id="contact" className="scroll-mt-28 dark-teal-surface px-6 pb-24 pt-8 md:pb-32 md:pt-12">
-          <div className="mx-auto grid max-w-6xl gap-12 border-t border-off-white/10 pt-20 lg:grid-cols-2 md:pt-24">
+        <section id="contact" className="scroll-mt-28 bg-off-white px-6 py-20 md:py-28">
+          <div className="dark-teal-surface mx-auto grid max-w-6xl gap-12 rounded-2xl p-8 lg:grid-cols-2 md:p-12 lg:p-16">
             <div>
               <span className="eyebrow-pill eyebrow-pill-dark mb-4">Contact</span>
               <h2 className="font-display text-4xl text-off-white md:text-5xl">Tell us what you need to build.</h2>
