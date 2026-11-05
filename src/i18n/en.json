@@ -222,6 +222,12 @@
         "link": "/case-studies/snip-squad"
       },
       {
+        "title": "PWG Zurich",
+        "category": "Professional network",
+        "desc": "A bold, editorial website for Zurich’s longest-established international network for professional women.",
+        "link": "/case-studies/pwg"
+      },
+      {
         "title": "PortCo HR Collective",
         "category": "Community platform",
         "desc": "An exclusive membership platform for HR leaders in private equity, combining branding, web design, and automation.",
@@ -297,6 +303,7 @@
     "navGroups": {
       "webDesignDevelopment": {
         "title": "Web design & development",
+        "professionalNetwork": "Professional network",
         "futureOfWork": "HR & Future of work",
         "veterinary": "Veterinary",
         "communityPlatform": "Community platform",
@@ -578,6 +585,41 @@
     "backToAll": "Back to all insights"
   },
   "caseStudiesContent": {
+    "pwg": {
+      "title": "PWG Zurich",
+      "subtitle": "A modern digital home for Zurich’s longest-established international network for professional women",
+      "client": "PWG Zurich",
+      "industry": "Professional Network & Community",
+      "imageAlt": "PWG Zurich redesigned website preview",
+      "websiteLabel": "Visit Website",
+      "sections": [
+        {
+          "title": "Overview:",
+          "intro": "Founded in 1983, PWG Zurich is the city's longest-standing professional women’s group. The nonprofit brings together women across industries, cultures, and career stages to build professional connections, shape their careers, and exchange perspectives.\n\nAs part of a wider rebrand, PWG approached us to redesign and rebuild its website and membership platform."
+        },
+        {
+          "title": "Approach:",
+          "intro": "Working in collaboration with the Rebranding Project Lead, we shaped and expanded the creative direction into a complete, consistent website experience and brought it to life in development. Our work focused on:",
+          "items": [
+            "Extending the shared design direction into a flexible system for the full website",
+            "Clear journeys for discovering and booking events, purchasing memberships, and accessing member accounts",
+            "A flexible content structure that allows the committee to continue updating events, partners, team members, and articles themselves",
+            "Responsive design and development across desktop, tablet, and mobile"
+          ]
+        },
+        {
+          "title": "Outcome:",
+          "intro": "The result is a bold, editorial website and membership platform that captures the confidence, energy, and sense of connection at the heart of PWG’s rebrand. It gives the community a distinctive digital home where women can discover and book events, purchase memberships, and feel part of a network with more than four decades of history and a clear vision for its future."
+        }
+      ],
+      "comparison": {
+        "title": "Before & after",
+        "beforeLabel": "Before",
+        "afterLabel": "After",
+        "beforeImage": { "alt": "PWG Zurich website before the redesign" },
+        "afterImage": { "alt": "PWG Zurich website after the redesign" }
+      }
+    },
     "horizon-collective": {
       "title": "Horizon Collective",
       "subtitle": "A bold digital home for a collective reimagining work in the age of AI",
@@ -1223,6 +1265,10 @@
       "/apply": {
         "title": "Apply | Moniré",
         "description": "Apply for Moniré complimentary project support for a non-profit or meaningful initiative."
+      },
+      "/case-studies/pwg": {
+        "title": "PWG Zurich Website Redesign Case Study | Moniré",
+        "description": "See how Moniré expanded and developed PWG Zurich’s new design direction into a bold, modern website for an established professional women’s network."
       },
       "/case-studies/expense-receipt-automation": {
         "title": "Expense Receipt Automation Case Study | Moniré",

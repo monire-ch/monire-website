@@ -6,6 +6,8 @@ import towarowa from "@/assets/portfolio/towarowa_full.webp";
 import n8nPreview from "@/assets/portfolio/n8n.webp";
 import labsift from "@/assets/portfolio/labsift-og-image.webp";
 import horizonCollective from "@/assets/portfolio/horizon_full.webp";
+import pwg from "@/assets/portfolio/pwg.webp";
+import pwgOld from "@/assets/portfolio/pwg-old.webp";
 
 export type CaseStudySection = {
   title?: string;
@@ -31,6 +33,15 @@ export type CaseStudyVisualImage = {
   scrollable?: boolean;
 };
 
+export type CaseStudyComparison = {
+  title?: string;
+  intro?: string;
+  beforeLabel?: string;
+  beforeImage: CaseStudyVisualImage;
+  afterLabel?: string;
+  afterImage: CaseStudyVisualImage;
+};
+
 export type CaseStudyCategory =
   | "branding"
   | "webDesignDevelopment"
@@ -54,6 +65,7 @@ export type CaseStudyConfig = {
   sections?: CaseStudySection[];
   metrics?: CaseStudyMetric[];
   testimonial?: CaseStudyTestimonial;
+  comparison?: CaseStudyComparison;
 };
 
 const section = (visualImage?: CaseStudyVisualImage): CaseStudySection => ({
@@ -65,6 +77,15 @@ const metric = (): CaseStudyMetric => ({});
 const testimonial = (): CaseStudyTestimonial => ({});
 
 export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
+  pwg: {
+    websiteUrl: "https://www.pwg-zh.com/",
+    categories: ["webDesignDevelopment"],
+    sections: [section(), section(), section()],
+    comparison: {
+      beforeImage: { src: pwgOld, scrollable: true },
+      afterImage: { src: pwg, scrollable: true },
+    },
+  },
   "snip-squad": {
     image: snipSquad,
     imageScrollable: true,
