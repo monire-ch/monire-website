@@ -46,13 +46,19 @@ export type LocalizedRouteSeo = RouteSeo & {
 
 const baseRouteSeo = getLocaleRouteSeo('en');
 
+const ENGLISH_ONLY_ROUTES = new Set(['/vet']);
+
 const localizedRouteEntries = SUPPORTED_LOCALES.flatMap((locale) => {
   const localizedSeo = getLocaleRouteSeo(locale);
 
-  return Object.keys(baseRouteSeo).map((baseRoute) => {
+  return Object.keys(baseRouteSeo).filter((baseRoute) => locale === 'en' || !ENGLISH_ONLY_ROUTES.has(baseRoute)).map((baseRoute) => {
     const route = withLocalePrefix(baseRoute, locale);
     const canonicalUrl = route === '/' ? `${SITE_URL}/` : `${SITE_URL}${route}`;
-    const alternateUrls = {
+    const alternateUrls = ENGLISH_ONLY_ROUTES.has(baseRoute) ? {
+      en: baseRoute === '/' ? `${SITE_URL}/` : `${SITE_URL}${withLocalePrefix(baseRoute, 'en')}`,
+      de: baseRoute === '/' ? `${SITE_URL}/` : `${SITE_URL}${withLocalePrefix(baseRoute, 'en')}`,
+      'x-default': baseRoute === '/' ? `${SITE_URL}/` : `${SITE_URL}${withLocalePrefix(baseRoute, 'en')}`,
+    } : {
       en: baseRoute === '/' ? `${SITE_URL}/` : `${SITE_URL}${withLocalePrefix(baseRoute, 'en')}`,
       de: `${SITE_URL}${withLocalePrefix(baseRoute, 'de')}`,
       'x-default': baseRoute === '/' ? `${SITE_URL}/` : `${SITE_URL}${withLocalePrefix(baseRoute, 'en')}`,
@@ -80,6 +86,7 @@ const BASE_PRERENDER_ROUTES = [
   '/privacy',
   '/apply',
   '/contact',
+  '/vet',
   '/insights',
   ...INSIGHTS_ROUTES,
   '/case-studies/pwg',
@@ -95,7 +102,7 @@ const BASE_PRERENDER_ROUTES = [
 ];
 
 export const PRERENDER_ROUTES = SUPPORTED_LOCALES.flatMap((locale) =>
-  BASE_PRERENDER_ROUTES.map((route) => withLocalePrefix(route, locale))
+  BASE_PRERENDER_ROUTES.filter((route) => locale === 'en' || !ENGLISH_ONLY_ROUTES.has(route)).map((route) => withLocalePrefix(route, locale))
 );
 
 const getRoutePriority = (route: string) => {

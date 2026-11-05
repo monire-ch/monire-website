@@ -18,7 +18,30 @@ import { useLocalePath } from '@/hooks/useLocalePath';
 
 const tabKeys = ['webDesign', 'automation'] as const;
 
-const PricingSection = () => {
+interface PricingSectionProps {
+  onContactClick?: (label: string) => void;
+  content?: PricingSectionContent;
+}
+
+export interface PricingSectionContent {
+  eyebrow?: string;
+  title?: string;
+  titleAccent?: string;
+  webDesignTab?: string;
+  otherServicesTab?: string;
+  includedNote?: string;
+  websitePlanDescriptions?: string[];
+  customWebsiteTitle?: string;
+  customWebsiteDescription?: string;
+  otherServices?: {
+    title: string;
+    description: string;
+    items: Array<{ title: string; description: string }>;
+    cta: string;
+  };
+}
+
+const PricingSection = ({ onContactClick, content }: PricingSectionProps = {}) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const localePath = useLocalePath();
@@ -45,6 +68,10 @@ const PricingSection = () => {
   };
   const openContactModal = (label: string) => {
     trackEvent('contact_click', { location: 'pricing', label, page_path: window.location.pathname });
+    if (onContactClick) {
+      onContactClick(label);
+      return;
+    }
     setContactOpen(true);
   };
 
@@ -54,9 +81,9 @@ const PricingSection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal className="text-center mb-8 md:mb-12">
-          <span className="eyebrow-pill eyebrow-pill-dark mb-3">{t('pricing.eyebrow')}</span>
+          <span className="eyebrow-pill eyebrow-pill-dark mb-3">{content?.eyebrow ?? t('pricing.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-off-white">
-            {t('pricing.title')} <em className="italic font-tertiary text-off-white">{t('pricing.titleAccent')}</em>
+            {content?.title ?? t('pricing.title')} <em className="italic font-tertiary text-off-white">{content?.titleAccent ?? t('pricing.titleAccent')}</em>
           </h2>
         </ScrollReveal>
 
@@ -72,13 +99,15 @@ const PricingSection = () => {
                     : 'text-off-white/60 hover:text-off-white/80 border border-transparent'
                 }`}
               >
-                {key === 'automation' ? (
+                {key === 'automation' && !content?.otherServicesTab ? (
                   <>
                     <span className="lg:hidden">{t('pricing.tabs.automationShort')}</span>
                     <span className="hidden lg:inline">{t('pricing.tabs.automation')}</span>
                   </>
                 ) : (
-                  t(`pricing.tabs.${key}`)
+                  key === 'webDesign'
+                    ? content?.webDesignTab ?? t('pricing.tabs.webDesign')
+                    : content?.otherServicesTab ?? t('pricing.tabs.automation')
                 )}
               </button>
             ))}
@@ -89,7 +118,7 @@ const PricingSection = () => {
           <>
             <ScrollReveal className="text-center mb-6">
               <p className="text-off-white/85 text-xs sm:text-sm font-body tracking-[0.04em]">
-                {t('pricing.includedNote')}
+                {content?.includedNote ?? t('pricing.includedNote')}
               </p>
             </ScrollReveal>
 
@@ -118,7 +147,38 @@ const PricingSection = () => {
           </>
         )}
 
-        {activeTab === 'automation' ? (
+        {activeTab === 'automation' && content?.otherServices ? (
+          <ScrollReveal>
+            <div className="rounded-xl dark-surface-card border border-off-white/10 p-8 md:p-12">
+              <div className="mx-auto max-w-3xl text-center">
+                <h3 className="font-display text-3xl md:text-4xl text-off-white mb-4">
+                  {content.otherServices.title}
+                </h3>
+                <p className="text-off-white/80 text-base font-body leading-relaxed">
+                  {content.otherServices.description}
+                </p>
+              </div>
+              <div className="mt-9 grid gap-4 md:grid-cols-3">
+                {content.otherServices.items.map((item) => (
+                  <article key={item.title} className="rounded-xl border border-off-white/10 bg-off-white/[0.05] p-6 text-left">
+                    <h4 className="font-display text-2xl text-off-white">{item.title}</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-off-white/75">{item.description}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="mt-9 text-center">
+                <BrandButton
+                  variant="primary"
+                  showStar
+                  className="text-sm w-full sm:w-auto !py-2.5"
+                  onClick={() => openContactModal('other_services')}
+                >
+                  {content.otherServices.cta}
+                </BrandButton>
+              </div>
+            </div>
+          </ScrollReveal>
+        ) : activeTab === 'automation' ? (
           <ScrollReveal>
             <div className="rounded-xl dark-surface-card border border-off-white/10 p-10 md:p-14 text-center">
               <h3 className="font-display text-3xl md:text-4xl text-off-white mb-4">
@@ -215,7 +275,7 @@ const PricingSection = () => {
                       <p className={`text-base font-body mb-6 leading-relaxed ${
                         plan.featured ? 'text-deep-ink/70' : 'text-off-white'
                       }`}>
-                        {plan.desc}
+                        {content?.websitePlanDescriptions?.[i] ?? plan.desc}
                       </p>
                       <ul className="space-y-2.5 mb-8 flex-1">
                         {plan.features.map((f) => (
@@ -245,9 +305,9 @@ const PricingSection = () => {
 
         {activeTab !== 'automation' && (
           <ScrollReveal className="text-center mt-14">
-            <h3 className="font-body text-2xl md:text-[32px] text-off-white mb-4">{t('pricing.custom.title')}</h3>
+            <h3 className="font-body text-2xl md:text-[32px] text-off-white mb-4">{content?.customWebsiteTitle ?? t('pricing.custom.title')}</h3>
             <p className="text-off-white text-[15px] font-body">
-              {t('pricing.custom.desc')}
+              {content?.customWebsiteDescription ?? t('pricing.custom.desc')}
             </p>
           </ScrollReveal>
         )}

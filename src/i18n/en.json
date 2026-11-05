@@ -461,6 +461,8 @@
   "footer": {
     "tagline": "Custom website development and workflow automation in Switzerland.",
     "quickLinks": "Quick Links",
+    "industries": "Industries",
+    "veterinaryIndustry": "Veterinary & animal health",
     "contact": "Contact",
     "privacyPolicy": "Privacy Policy",
     "copyright": "© 2026 Moniré. All rights reserved.",
@@ -1238,6 +1240,10 @@
       "/contact": {
         "title": "Contact Moniré | Web Design, Web Development & Workflow Automation",
         "description": "Contact Moniré about web design, web development, and workflow automation in Zurich and across Switzerland."
+      },
+      "/vet": {
+        "title": "Moniré | Websites, automation and UX for veterinary and animal health",
+        "description": "A Zürich studio led by a veterinarian-engineer. Websites, workflow automations and product UX for vet practices, animal-health companies and vet software teams."
       },
       "/insights": {
         "title": "Insights on Web Design, Automation & Digital Strategy | Moniré",
