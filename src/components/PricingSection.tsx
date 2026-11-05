@@ -21,6 +21,7 @@ const tabKeys = ['webDesign', 'automation'] as const;
 interface PricingSectionProps {
   onContactClick?: (label: string) => void;
   content?: PricingSectionContent;
+  compact?: boolean;
 }
 
 export interface PricingSectionContent {
@@ -36,12 +37,11 @@ export interface PricingSectionContent {
   otherServices?: {
     title: string;
     description: string;
-    items: Array<{ title: string; description: string }>;
     cta: string;
   };
 }
 
-const PricingSection = ({ onContactClick, content }: PricingSectionProps = {}) => {
+const PricingSection = ({ onContactClick, content, compact = false }: PricingSectionProps = {}) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const localePath = useLocalePath();
@@ -77,17 +77,17 @@ const PricingSection = ({ onContactClick, content }: PricingSectionProps = {}) =
 
   return (
     <>
-    <section id="pricing" className="pt-20 md:pt-28 pb-20 md:pb-32 px-6 relative">
+    <section id="pricing" className={`${compact ? "pt-12 md:pt-16" : "pt-20 md:pt-28"} pb-20 md:pb-32 px-6 relative`}>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <ScrollReveal className="text-center mb-8 md:mb-12">
+        <ScrollReveal className={`text-center ${compact ? "mb-6 md:mb-8" : "mb-8 md:mb-12"}`}>
           <span className="eyebrow-pill eyebrow-pill-dark mb-3">{content?.eyebrow ?? t('pricing.eyebrow')}</span>
           <h2 className="font-body text-3xl md:text-4xl text-off-white">
             {content?.title ?? t('pricing.title')} <em className="italic font-tertiary text-off-white">{content?.titleAccent ?? t('pricing.titleAccent')}</em>
           </h2>
         </ScrollReveal>
 
-        <ScrollReveal className="flex justify-center mb-10">
+        <ScrollReveal className={`flex justify-center ${compact ? "mb-8" : "mb-10"}`}>
           <div className="inline-flex rounded-full border border-off-white/20 p-1.5 gap-1 max-w-full overflow-x-auto">
             {tabKeys.map((key) => (
               <button
@@ -157,14 +157,6 @@ const PricingSection = ({ onContactClick, content }: PricingSectionProps = {}) =
                 <p className="text-off-white/80 text-base font-body leading-relaxed">
                   {content.otherServices.description}
                 </p>
-              </div>
-              <div className="mt-9 grid gap-4 md:grid-cols-3">
-                {content.otherServices.items.map((item) => (
-                  <article key={item.title} className="rounded-xl border border-off-white/10 bg-off-white/[0.05] p-6 text-left">
-                    <h4 className="font-display text-2xl text-off-white">{item.title}</h4>
-                    <p className="mt-3 text-sm leading-relaxed text-off-white/75">{item.description}</p>
-                  </article>
-                ))}
               </div>
               <div className="mt-9 text-center">
                 <BrandButton

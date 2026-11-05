@@ -76,8 +76,8 @@ const audiences: Audience[] = [
 ];
 
 const vetPricingContent: PricingSectionContent = {
-  title: "Clear starting prices for websites.",
-  titleAccent: "Other work is scoped around your needs.",
+  title: "You’ll know the price before we start.",
+  titleAccent: "",
   webDesignTab: "Website packages",
   otherServicesTab: "Other services",
   websitePlanDescriptions: [
@@ -89,12 +89,7 @@ const vetPricingContent: PricingSectionContent = {
   customWebsiteDescription: "Tell us what you need the website to do and we will recommend the right scope. If none of the packages fits, we can quote a custom website.",
   otherServices: {
     title: "A clear quote based on the work involved.",
-    description: "Software, online tools and ways to reduce repetitive admin vary too much for useful package prices. We first understand the problem, the people doing the work and the tools they already use. We then give you a written scope and price before we start.",
-    items: [
-      { title: "Less repetitive admin", description: "For repeated tasks, handovers and information that needs to move between the tools your team already uses." },
-      { title: "Easier veterinary software", description: "For software teams that need clearer screens, practical veterinary input or help building improvements." },
-      { title: "Custom software and tools", description: "For calculators, internal tools and software that cannot be bought ready-made." },
-    ],
+    description: "Every project starts with a short discovery call. We learn what the problem is, who it affects and which systems you already use. Then you get a written scope and price, before we start.",
     cta: "Tell us about your project",
   },
 };
@@ -286,7 +281,7 @@ const Vet = () => {
           </div>
         </section>
 
-        <div className="dark-teal-surface"><PricingSection content={vetPricingContent} onContactClick={() => scrollTo("contact")} /></div>
+        <div className="dark-teal-surface"><PricingSection compact content={vetPricingContent} onContactClick={() => scrollTo("contact")} /></div>
 
         <section id="contact" className="scroll-mt-28 bg-off-white px-6 py-20 md:py-28">
           <div className="dark-teal-surface mx-auto grid max-w-6xl gap-12 rounded-2xl p-8 lg:grid-cols-2 md:p-12 lg:p-16">
