@@ -13,6 +13,7 @@ import labsift from "@/assets/portfolio/labsift-og-image.webp";
 import nikky from "@/assets/nicole.jpg";
 import monika from "@/assets/monika.jpg";
 import vetEditorialAnimals from "@/assets/vet-editorial-animals.png";
+import vetServicesConsultation from "@/assets/vet-services-consultation.png";
 import goldFill from "@/assets/gold-fill.webp";
 import { useFontsLoaded } from "@/hooks/useFontsLoaded";
 
@@ -34,12 +35,13 @@ const audiences: Audience[] = [
     id: "practices",
     tab: "Veterinary practices",
     label: "For veterinary practices",
-    title: "A clearer website and less admin for your team.",
-    intro: "If your website no longer reflects your practice, or your team spends too much time answering the same questions and moving information by hand, we can help.",
+    title: "A clearer website. Less admin for your team.",
+    intro: "When your website no longer reflects your practice, or your team spends hours answering the same questions and copying information between systems, we design and build something better.",
     items: [
       "Practice websites that make services, booking and next steps easy to find",
-      "Intake, enquiry and follow-up workflows that work with your existing software",
-      "Simple internal tools for protocols, onboarding and information your team needs",
+      "Round-the-clock website assistants that reduce routine questions by sharing veterinary-approved information and directing medical concerns to your team",
+      "Automations that connect the tools you already use, so intake, reminders, follow-ups and handovers keep moving without manual work",
+      "Custom software for tasks your practice software does not cover",
     ],
     cta: "Talk to us about your practice",
   },
@@ -47,12 +49,13 @@ const audiences: Audience[] = [
     id: "animal-health",
     tab: "Animal health",
     label: "For animal-health companies",
-    title: "Websites and tools built for veterinary audiences.",
-    intro: "We design and build the digital side of your project, using the positioning, scientific content and approved materials your team provides.",
+    title: "Make complex veterinary information clear and useful.",
+    intro: "We turn your approved scientific and commercial content into websites and software that veterinary professionals can understand, trust and use. We can build the complete experience, not only the campaign around it.",
     items: [
-      "Product websites, launch sites and education pages",
-      "Professional areas for gated veterinary content and resources",
-      "Calculators, guides and practical tools connected to your existing systems",
+      "Product websites, launch sites and educational content",
+      "Secure areas for veterinary professionals and approved resources",
+      "Calculators, guides and software for veterinary customers and sales teams",
+      "AI assistants and custom platforms with clear boundaries and approved information",
     ],
     cta: "Talk to us about your project",
     partner: true,
@@ -61,12 +64,13 @@ const audiences: Audience[] = [
     id: "software-teams",
     tab: "Veterinary software",
     label: "For veterinary software teams",
-    title: "Software that fits the way clinics actually work.",
-    intro: "A workflow can look convincing in a demo and still fall apart at a busy reception desk. We bring veterinary context into the design and build process.",
+    title: "Build software that works beyond the demo.",
+    intro: "Software can look convincing in a demonstration and still be frustrating in a busy practice. We help make it clearer, easier to use and better suited to the people doing the work.",
     items: [
-      "Workflow and usability reviews grounded in real clinic experience",
-      "Product UX, prototypes and frontend development in React, TypeScript and Vue",
-      "Product websites, onboarding and help content that make the software easier to use",
+      "Find where veterinary users get stuck, slowed down or make mistakes",
+      "Redesign and build clearer screens around real practice workflows",
+      "Build new features, AI assistants and custom software from idea to launch",
+      "Improve onboarding, help content and product websites",
     ],
     cta: "Talk to us about your product",
   },
@@ -86,11 +90,11 @@ const vetPricingContent: PricingSectionContent = {
   customWebsiteDescription: "Tell us what you need the website to do and we will recommend the right scope. If none of the packages fits, we can quote a custom website.",
   otherServices: {
     title: "A clear quote based on the work involved.",
-    description: "Software, product work and workflow automations vary too much for useful package prices. We first understand the problem, the people using it and the systems involved, then give you a written scope and price before we start.",
+    description: "Software, online tools and ways to reduce repetitive admin vary too much for useful package prices. We first understand the problem, the people doing the work and the tools they already use. We then give you a written scope and price before we start.",
     items: [
-      { title: "Workflow automations", description: "For repetitive admin, handovers and information that needs to move between the tools your team already uses." },
-      { title: "Product UX and frontend", description: "For veterinary software teams that need workflow input, interface design, prototypes or production frontend development." },
-      { title: "Custom software and tools", description: "For calculators, internal tools and purpose-built software that does not fit into an off-the-shelf system." },
+      { title: "Less repetitive admin", description: "For repeated tasks, handovers and information that needs to move between the tools your team already uses." },
+      { title: "Easier veterinary software", description: "For software teams that need clearer screens, practical veterinary input or help building improvements." },
+      { title: "Custom software and tools", description: "For calculators, internal tools and software that cannot be bought ready-made." },
     ],
     cta: "Tell us about your project",
   },
@@ -129,7 +133,7 @@ const Vet = () => {
     return () => window.removeEventListener("hashchange", selectFromHash);
   }, []);
 
-  const heroWords = "Veterinary experience meets software expertise".split(" ");
+  const heroWords = "Veterinary work is complicated enough. Your website and software should make it easier.".split(" ");
   const audience = audiences.find((item) => item.id === activeAudience) ?? audiences[0];
   const vetNavLinks = [
     { label: "Who we help", href: "#services" },
@@ -159,21 +163,29 @@ const Vet = () => {
     <>
       <Navbar pageLinks={vetNavLinks} contactHref="#contact" />
       <main className="bg-off-white">
-        <section id="top" className="hero-bg relative flex min-h-screen items-center justify-center px-6 pb-44 pt-36 text-center text-off-white md:pb-56 md:pt-48">
-          <div className="relative z-10 mx-auto w-full max-w-5xl px-2 xs:px-8">
-            <h1 className="hero-title mx-auto mb-6 max-w-4xl text-[38px] sm:text-[52px] md:mb-8 md:text-[70px]">
-              {heroWords.map((word, index) => (
-                <span key={`${word}-${index}`} className={`hero-word ${animateHero ? "visible" : ""} inline-block pb-2`} style={{ transitionDelay: `${60 * index}ms`, backgroundImage: `url(${goldFill})`, backgroundSize: "100% auto", backgroundPosition: "center", WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>
-                  {word}{index < heroWords.length - 1 ? "\u00a0" : ""}
-                </span>
-              ))}
-            </h1>
-            <p className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} mx-auto mb-9 max-w-3xl text-base leading-[1.55] text-off-white/90 md:text-xl`} style={{ transitionDelay: "320ms" }}>
-              Websites, software and workflow automations for veterinary practices, animal health and veterinary software companies. Led by <span className="text-gold-text">Dr. Nikky Pyra</span>, veterinarian and software engineer.
-            </p>
-            <div className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} flex flex-col items-center justify-center gap-3 sm:flex-row`} style={{ transitionDelay: "400ms" }}>
-              <BrandButton type="button" variant="hero" showStar className="text-base" onClick={() => scrollTo("contact")}>{t("hero.cta")}</BrandButton>
-              <BrandButton type="button" variant="secondary" className="text-base" onClick={() => scrollTo("vet-work")}>See our work</BrandButton>
+        <section id="top" className="hero-bg relative flex min-h-screen items-center px-6 pb-32 pt-36 text-off-white md:pb-36 md:pt-36">
+          <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
+            <div className="text-center lg:text-left">
+              <div className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} mb-6 flex items-center justify-center lg:justify-start`} style={{ transitionDelay: "180ms" }}>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-off-white/90 sm:text-xs">For vet clinics, animal health companies &amp; vet software teams</p>
+              </div>
+              <h1 className="hero-title mb-6 text-[38px] sm:text-[48px] md:mb-7 lg:text-[54px]">
+                {heroWords.map((word, index) => (
+                  <span key={`${word}-${index}`} className={`hero-word ${animateHero ? "visible" : ""} inline-block pb-2`} style={{ transitionDelay: `${60 * index}ms`, backgroundImage: `url(${goldFill})`, backgroundSize: "100% auto", backgroundPosition: "center", WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>
+                    {word === "easier." ? <em className="font-serif italic">{word}</em> : word}{index < heroWords.length - 1 ? "\u00a0" : ""}
+                  </span>
+                ))}
+              </h1>
+              <p className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} mx-auto mb-8 max-w-2xl text-base leading-[1.55] text-off-white/90 md:text-lg lg:mx-0`} style={{ transitionDelay: "320ms" }}>
+                Co-founded by <span className="text-gold-text">Dr. Nikky Pyra</span>, veterinarian and software engineer, Moniré builds websites, custom software and automations based on firsthand knowledge of how veterinary teams work.
+              </p>
+              <div className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start`} style={{ transitionDelay: "400ms" }}>
+                <BrandButton type="button" variant="hero" showStar className="text-base" onClick={() => scrollTo("contact")}>{t("hero.cta")}</BrandButton>
+                <BrandButton type="button" variant="secondary" className="text-base" onClick={() => scrollTo("vet-work")}>See our work</BrandButton>
+              </div>
+            </div>
+            <div className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-off-white/15 shadow-2xl`} style={{ transitionDelay: "360ms" }}>
+              <img src={vetEditorialAnimals} alt="A dog and cat in a contemporary veterinary consultation room" className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[520px]" />
             </div>
           </div>
           <div className="wave-mask absolute -bottom-1.5 left-0 right-0">
@@ -182,32 +194,36 @@ const Vet = () => {
         </section>
 
         <section id="services" className="relative scroll-mt-28 overflow-hidden bg-off-white px-6 py-20 md:py-28">
-          <span id="practices" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
-          <span id="animal-health" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
-          <span id="software-teams" className="absolute top-0 scroll-mt-28" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-6xl">
-            <SectionHeading label="How we can help" title="Start with the kind of team you are." />
-            <div className="mx-auto mb-10 flex max-w-3xl flex-col gap-2 rounded-2xl border border-main-teal/15 bg-main-teal/[0.04] p-2 sm:flex-row" role="tablist" aria-label="Customer type">
-              {audiences.map((item) => (
-                <button key={item.id} type="button" role="tab" aria-selected={activeAudience === item.id} aria-controls={`panel-${item.id}`} onClick={() => { setActiveAudience(item.id); trackEvent("vet_tile_click", { audience: item.id }); }} className={`min-h-12 flex-1 rounded-xl px-4 py-3 text-sm transition-colors ${activeAudience === item.id ? "bg-main-teal text-off-white shadow-md" : "text-main-teal/70 hover:bg-main-teal/[0.06] hover:text-main-teal"}`}>
-                  {item.tab}
-                </button>
-              ))}
-            </div>
-
-            <div id={`panel-${audience.id}`} role="tabpanel" className="rounded-2xl border border-main-teal/15 bg-neutral-card p-7 md:p-12 lg:p-14">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-main-teal/60">{audience.label}</p>
-              <h3 className="mt-5 max-w-4xl font-display text-4xl leading-tight text-main-teal md:text-6xl">{audience.title}</h3>
-              <p className="mt-6 max-w-4xl text-lg leading-relaxed text-main-teal/75 md:text-xl">{audience.intro}</p>
-              <ul className="mt-9 grid gap-5 md:grid-cols-3">
-                {audience.items.map((item) => (
-                  <li key={item} className="flex gap-3 rounded-xl border border-main-teal/10 bg-off-white p-5 text-main-teal/80">
-                    <Check size={18} className="mt-0.5 shrink-0 text-main-teal" /><span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              {audience.partner && <p className="mt-7 text-sm leading-relaxed text-main-teal/70">Need commercial strategy or scientific messaging too? <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="text-main-teal underline decoration-gold underline-offset-4">Linley Collaborative</a> can lead that part of the project while we handle the design and build.</p>}
-              <div className="mt-9"><BrandButton type="button" variant="primary" showStar className="text-sm" data-track="vet-cta" data-audience={audience.id} onClick={() => contactFor(audience.id)}>{audience.cta}</BrandButton></div>
+            <SectionHeading label="How we can help" title="Support for every part of the veterinary sector." />
+            <div className="overflow-hidden rounded-3xl border border-main-teal/15 bg-neutral-card shadow-xl lg:grid lg:h-[760px] lg:grid-cols-[0.42fr_0.58fr]">
+              <div className="relative h-[300px] lg:h-[760px]">
+                <img src={vetServicesConsultation} alt="A dog and cat in a veterinary consultation room" className="absolute inset-0 h-full w-full object-cover object-center" />
+              </div>
+              <div className="flex flex-col p-5 sm:p-7 md:p-9 lg:p-11">
+                <div className="grid gap-2 rounded-2xl bg-main-teal/[0.05] p-2 sm:grid-cols-3" role="tablist" aria-label="Customer type">
+                  {audiences.map((item) => (
+                    <button id={item.id} key={item.id} type="button" role="tab" aria-selected={activeAudience === item.id} aria-controls={`panel-${item.id}`} onClick={() => { setActiveAudience(item.id); trackEvent("vet_tile_click", { audience: item.id }); }} className={`min-h-12 scroll-mt-28 rounded-xl px-3 py-3 text-sm transition-all ${activeAudience === item.id ? "bg-main-teal text-off-white shadow-md" : "text-main-teal/65 hover:bg-off-white hover:text-main-teal"}`}>
+                      {item.tab}
+                    </button>
+                  ))}
+                </div>
+                <div id={`panel-${audience.id}`} role="tabpanel" className="flex flex-1 flex-col pt-9 md:pt-11">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-main-teal/70">{audience.label}</p>
+                  <h3 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-main-teal md:text-5xl">{audience.title}</h3>
+                  <p className="mt-5 max-w-2xl leading-relaxed text-main-teal/85 md:text-lg">{audience.intro}</p>
+                  <ul className="mt-7 grid gap-4 border-t border-main-teal/10 pt-6">
+                    {audience.items.map((item) => (
+                      <li key={item} className="flex gap-3 text-sm leading-relaxed text-main-teal/85">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-main-teal/10 text-main-teal" aria-hidden="true"><Check size={13} strokeWidth={2.25} /></span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {audience.partner && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">Need commercial strategy or scientific messaging too? <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="text-main-teal underline decoration-gold underline-offset-4">Linley Collaborative</a> can lead that part while we handle the design and build.</p>}
+                  <div className="pt-7"><BrandButton type="button" variant="primary" showStar className="text-sm" data-track="vet-cta" data-audience={audience.id} onClick={() => contactFor(audience.id)}>{audience.cta}</BrandButton></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -243,14 +259,10 @@ const Vet = () => {
           </div>
         </section>
 
-        <figure className="relative h-[280px] overflow-hidden md:h-[420px]">
-          <img src={vetEditorialAnimals} alt="A dog and cat resting in a contemporary veterinary consultation room" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-deep-ink/30 via-transparent to-deep-ink/10" aria-hidden="true" />
-        </figure>
-
         <section id="about" className="relative scroll-mt-28 bg-off-white px-6 py-20 md:py-28">
           <div className="relative z-10 mx-auto max-w-6xl">
             <SectionHeading label="About Moniré" title="Software experience, with veterinary context built in." />
+            <p className="mx-auto mb-10 max-w-3xl text-center font-display text-3xl leading-tight text-main-teal md:mb-14 md:text-4xl">Six years treating patients. <em className="font-tertiary italic">Six years writing software.</em></p>
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
               {[
                 { image: nikky, name: "Dr. Nikky Pyra", role: "Co-founder, Veterinarian & Software Engineer", bio: "Nikky practised small-animal medicine for six years in Canada and Germany before moving into software. She has spent six years as a frontend engineer building with React, TypeScript and Vue. She also created LabSift, a privacy-first tool for pulling lab values out of PDF reports." },
