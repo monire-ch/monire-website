@@ -230,16 +230,16 @@ const Vet = () => {
         <section id="vet-work" className="about-flow relative scroll-mt-28 overflow-hidden px-6 py-20 md:py-28">
           <div className="about-orb about-orb-1" /><div className="about-orb about-orb-2" />
           <div className="relative z-10 mx-auto max-w-6xl">
-            <SectionHeading dark label="Selected work" title="Veterinary experience is useful. The work still has to be good." />
+            <SectionHeading dark label="Selected work" title="From clinic websites to clinical software." />
             <div className="grid gap-6 lg:grid-cols-2">
               <Link to="/case-studies/snip-squad" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card">
                 <div className="h-[360px] overflow-y-auto bg-white md:h-[460px]" aria-label="Scrollable Snip Squad website preview">
                   <img src={snipSquad} alt="Snip Squad veterinary clinic website" className="block h-auto w-full" />
                 </div>
                 <div className="p-7 md:p-8">
-                  <p className="text-xs uppercase tracking-widest text-main-teal/55">Veterinary website · Webflow</p>
+                  <p className="text-xs uppercase tracking-widest text-main-teal/55">Veterinary website</p>
                   <h3 className="mt-3 font-display text-3xl text-main-teal">Snip Squad</h3>
-                  <p className="mt-3 leading-relaxed text-main-teal/75">A clear, approachable website for a nonprofit veterinary clinic providing affordable care in underserved communities.</p>
+                  <p className="mt-3 leading-relaxed text-main-teal/75">A modern, approachable website for a nonprofit veterinary clinic providing affordable care in underserved communities.</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4">Read the case study <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
                 </div>
               </Link>
@@ -248,9 +248,9 @@ const Vet = () => {
                   <img src={labsift} alt="LabSift lab report results interface" className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.02]" />
                 </div>
                 <div className="border-t border-neutral-border bg-neutral-card p-7 md:p-8">
-                  <p className="text-xs uppercase tracking-widest text-main-teal/55">Veterinary software · React and TypeScript</p>
+                  <p className="text-xs uppercase tracking-widest text-main-teal/55">Veterinary software</p>
                   <h3 className="mt-3 font-display text-3xl text-main-teal">LabSift</h3>
-                  <p className="mt-3 leading-relaxed text-main-teal/75">Our own browser tool for turning PDF lab reports into a consistent, copy-ready list without sending reports to a server.</p>
+                  <p className="mt-3 leading-relaxed text-main-teal/75">Browser tool for turning PDF lab reports into a consistent, copy-ready list without sending reports to a server.</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4">Read the case study <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
                 </div>
               </Link>
