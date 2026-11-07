@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
+import StarIcon from '@/components/StarIcon';
 import type { CaseStudyCategory, CaseStudyConfig } from '@/config/caseStudies';
 import { trackEvent } from '@/lib/analytics';
 import { useLocalePath } from '@/hooks/useLocalePath';
@@ -174,7 +175,7 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               {project.title}
             </h1>
             {project.subtitle ? (
-              <p className={`text-lg md:text-xl font-body text-soft-teal ${project.comparison ? 'mb-6 md:mb-8' : 'mb-7 md:mb-12'}`}>{project.subtitle}</p>
+              <p className={`text-lg md:text-xl font-body text-soft-teal ${project.comparison ? 'mb-8' : 'mb-7 md:mb-12'}`}>{project.subtitle}</p>
             ) : null}
           </ScrollReveal>
 
@@ -183,6 +184,11 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
           {project.comparison ? (
             <ScrollReveal>
               <section aria-labelledby="case-study-comparison-title" className="mb-10">
+                <div className="mb-8 flex w-full max-w-sm items-center justify-center gap-4 text-gold" aria-hidden="true">
+                  <span className="h-px flex-1 bg-main-teal/15" />
+                  <StarIcon size={16} />
+                  <span className="h-px flex-1 bg-main-teal/15" />
+                </div>
                 <div className="mb-6 max-w-3xl">
                   <h2 id="case-study-comparison-title" className="font-tertiary italic text-3xl text-main-teal md:text-4xl">
                     {project.comparison.title}
