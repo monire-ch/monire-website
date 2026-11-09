@@ -65,6 +65,7 @@ export type CaseStudyConfig = {
   sections?: CaseStudySection[];
   metrics?: CaseStudyMetric[];
   testimonial?: CaseStudyTestimonial;
+  testimonialPlacement?: "top";
   comparison?: CaseStudyComparison;
 };
 
@@ -81,6 +82,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     websiteUrl: "https://www.pwg-zh.com/",
     categories: ["webDesignDevelopment"],
     sections: [section(), section(), section()],
+    testimonial: testimonial(),
     comparison: {
       beforeImage: { src: pwgOld, scrollable: true },
       afterImage: { src: pwg, scrollable: true },
@@ -133,6 +135,7 @@ export const caseStudiesBySlug: Record<string, CaseStudyConfig> = {
     categories: ["automations"],
     sections: [section(), section(), section()],
     testimonial: testimonial(),
+    testimonialPlacement: "top",
   },
   "invoicing-application": {
     categories: ["automations"],
