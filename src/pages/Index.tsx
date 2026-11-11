@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import PricingSection from "@/components/PricingSection";
 import PortfolioSection from "@/components/PortfolioSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -61,7 +62,7 @@ const Index = () => {
           <FeaturesSection />
           <AboutSection />
           <PortfolioSection />
-          <SparkleDivider />
+          <TestimonialsSection />
           <ServicesSection />
           <div className="dark-teal-surface">
             <PricingSection />

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
+import StarIcon from '@/components/StarIcon';
 import type { CaseStudyCategory, CaseStudyConfig } from '@/config/caseStudies';
 import { trackEvent } from '@/lib/analytics';
 import { useLocalePath } from '@/hooks/useLocalePath';
@@ -96,6 +97,56 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
     </div>
   );
 
+  const testimonialBlock = (marginClassName = 'mb-10') => project.testimonial ? (
+    <ScrollReveal>
+      <div className={`rounded-xl border border-border bg-card p-6 md:p-8 ${marginClassName}`}>
+        <blockquote className="text-lg md:text-xl font-tertiary italic text-main-teal leading-relaxed">
+          "{project.testimonial.quote}"
+        </blockquote>
+        <p className="text-sm font-body text-foreground mt-4">
+          {project.testimonial.author}
+          {project.testimonial.role ? `, ${project.testimonial.role}` : ''}
+        </p>
+      </div>
+    </ScrollReveal>
+  ) : null;
+
+  const sectionsBlock = (
+    <div className="space-y-8">
+      {project.sections?.map((section) => (
+        <ScrollReveal key={section.title}>
+          <h2 className="font-tertiary italic text-2xl md:text-3xl text-focus-teal mb-3">{section.title}</h2>
+          {section.intro ? (
+            <p className="text-sm font-body text-foreground mb-2 whitespace-pre-line">{section.intro}</p>
+          ) : null}
+          {section.items ? (
+            <ul className="space-y-1.5">
+              {section.items.map((item) => (
+                <li key={item} className="text-sm font-body text-foreground flex items-start gap-2">
+                  <span className="text-foreground/60 mt-0.5">•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {section.visualImage ? (
+            <div
+              className={`mt-6 overflow-hidden rounded-xl border border-border bg-card ${
+                section.visualImage.scrollable ? 'h-[360px] overflow-y-auto' : ''
+              }`}
+            >
+              <img
+                src={section.visualImage.src}
+                alt={section.visualImage.alt}
+                className={section.visualImage.scrollable ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
+              />
+            </div>
+          ) : null}
+        </ScrollReveal>
+      ))}
+    </div>
+  );
+
   return (
     <>
       <Navbar />
@@ -124,13 +175,20 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               {project.title}
             </h1>
             {project.subtitle ? (
-              <p className={`text-lg md:text-xl font-body text-soft-teal ${project.comparison ? 'mb-6 md:mb-8' : 'mb-7 md:mb-12'}`}>{project.subtitle}</p>
+              <p className={`text-lg md:text-xl font-body text-soft-teal ${project.comparison ? 'mb-8' : 'mb-7 md:mb-12'}`}>{project.subtitle}</p>
             ) : null}
           </ScrollReveal>
 
+          {project.testimonialPlacement === 'top' ? testimonialBlock() : null}
+
           {project.comparison ? (
             <ScrollReveal>
-              <section aria-labelledby="case-study-comparison-title" className="mb-10 border-y border-border py-7 md:py-9">
+              <section aria-labelledby="case-study-comparison-title" className="mb-10">
+                <div className="mb-8 flex w-full max-w-sm items-center justify-center gap-4 text-gold" aria-hidden="true">
+                  <span className="h-px flex-1 bg-main-teal/15" />
+                  <StarIcon size={16} />
+                  <span className="h-px flex-1 bg-main-teal/15" />
+                </div>
                 <div className="mb-6 max-w-3xl">
                   <h2 id="case-study-comparison-title" className="font-tertiary italic text-3xl text-main-teal md:text-4xl">
                     {project.comparison.title}
@@ -162,6 +220,8 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
             </ScrollReveal>
           ) : null}
 
+          {project.comparison && project.testimonialPlacement !== 'top' ? testimonialBlock() : null}
+
           <div className={contentGridClassName}>
             {hasSections ? (
               <>
@@ -179,39 +239,12 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                   </div>
                 </ScrollReveal> : null}
 
-                <div className="space-y-8">
-                  {project.sections?.map((section) => (
-                    <ScrollReveal key={section.title}>
-                      <h2 className="font-tertiary italic text-2xl md:text-3xl text-focus-teal mb-3">{section.title}</h2>
-                      {section.intro ? (
-                        <p className="text-sm font-body text-foreground mb-2 whitespace-pre-line">{section.intro}</p>
-                      ) : null}
-                      {section.items ? (
-                        <ul className="space-y-1.5">
-                          {section.items.map((item) => (
-                            <li key={item} className="text-sm font-body text-foreground flex items-start gap-2">
-                              <span className="text-foreground/60 mt-0.5">•</span>
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : null}
-                      {section.visualImage ? (
-                        <div
-                          className={`mt-6 overflow-hidden rounded-xl border border-border bg-card ${
-                            section.visualImage.scrollable ? 'h-[360px] overflow-y-auto' : ''
-                          }`}
-                        >
-                          <img
-                            src={section.visualImage.src}
-                            alt={section.visualImage.alt}
-                            className={section.visualImage.scrollable ? 'w-auto max-w-full h-auto block mx-auto' : 'w-full h-auto block'}
-                          />
-                        </div>
-                      ) : null}
-                    </ScrollReveal>
-                  ))}
-                </div>
+                {project.image && project.testimonial && project.testimonialPlacement !== 'top' ? (
+                  <div className="space-y-8">
+                    <div className="md:hidden">{testimonialBlock('')}</div>
+                    {sectionsBlock}
+                  </div>
+                ) : sectionsBlock}
               </>
             ) : (
               <>
@@ -234,6 +267,12 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
               </>
             )}
           </div>
+
+          {!project.comparison && project.testimonialPlacement !== 'top' ? (
+            project.image && project.testimonial ? (
+              <div className="hidden md:block">{testimonialBlock()}</div>
+            ) : testimonialBlock()
+          ) : null}
 
           {project.metrics?.length ? (
             <ScrollReveal>
@@ -277,20 +316,6 @@ const CaseStudyTemplate = ({ project }: CaseStudyTemplateProps) => {
                   ))}
                 </div>
               </section>
-            </ScrollReveal>
-          ) : null}
-
-          {project.testimonial ? (
-            <ScrollReveal>
-              <div className="rounded-xl border border-border bg-card p-6 md:p-8 mb-14">
-                <blockquote className="text-lg md:text-xl font-tertiary italic text-main-teal leading-relaxed">
-                  "{project.testimonial.quote}"
-                </blockquote>
-                <p className="text-sm font-body text-foreground mt-4">
-                  {project.testimonial.author}
-                  {project.testimonial.role ? `, ${project.testimonial.role}` : ''}
-                </p>
-              </div>
             </ScrollReveal>
           ) : null}
 
