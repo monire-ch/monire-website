@@ -43,11 +43,11 @@ const Footer = ({ hideWave = false, pageLinks }: FooterProps) => {
       )}
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className={`grid grid-cols-1 gap-10 md:gap-12 mb-12 items-start ${pageLinks ? 'md:grid-cols-3' : 'md:grid-cols-4'}`}>
+        <div className={`grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 mb-12 items-start ${pageLinks ? 'min-[1025px]:grid-cols-3' : 'min-[1025px]:grid-cols-4'}`}>
           {/* Brand column */}
           <div>
             <Link to={localePath('/#')}>
-              <img src={logo} alt={t('common.logoAlt')} className="h-6 lg:h-7 mb-4" />
+              <img src={logo} alt={t('common.logoAlt')} className="h-6 min-[1025px]:h-7 mb-4" />
             </Link>
             <p className="text-off-white text-base font-body max-w-xs">
               {t('footer.tagline')}

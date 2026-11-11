@@ -15,6 +15,7 @@ import monika from "@/assets/monika.jpg";
 import vetEditorialAnimals from "@/assets/vet-editorial-animals.png";
 import vetServicesConsultation from "@/assets/vet-services-consultation.png";
 import goldFill from "@/assets/gold-fill.webp";
+import linkedinIcon from "@/assets/linkedin.svg";
 import { useFontsLoaded } from "@/hooks/useFontsLoaded";
 
 type AudienceId = "practices" | "animal-health" | "software-teams";
@@ -29,6 +30,34 @@ type Audience = {
   partner?: boolean;
   note?: string;
 };
+
+type TeamMember = {
+  image: string;
+  name: string;
+  role: string;
+  bio: string;
+  languages: string;
+  linkedinUrl: string;
+};
+
+const teamMembers: TeamMember[] = [
+  {
+    image: nikky,
+    name: "Dr. Nikky Pyra",
+    role: "Software Engineer & Veterinarian",
+    bio: "Nikky spent six years working as a veterinarian in small-animal and shelter medicine in Canada and Germany before expanding her career into software engineering. Her clinical experience gives her first-hand insight into the time pressures, practical constraints and safety considerations that shape how veterinary teams use technology and evaluate new products. At Moniré, she combines that clinical perspective with technical expertise to create digital experiences that make sense for the people who use them.",
+    languages: "Languages: English, German",
+    linkedinUrl: "https://www.linkedin.com/in/nicole-pyra/",
+  },
+  {
+    image: monika,
+    name: "Monika Märki",
+    role: "Software Engineer",
+    bio: "Monika is a frontend developer based in Switzerland. She combines a background in business operations with web development and AI automation to help teams simplify their work and bring their ideas to life. As a mum of two, she is also passionate about helping women build confidence with technology and create more flexible working lives.",
+    languages: "Languages: Polish, English, German",
+    linkedinUrl: "https://www.linkedin.com/in/monika-malecka/",
+  },
+];
 
 const audiences: Audience[] = [
   {
@@ -256,27 +285,34 @@ const Vet = () => {
         <section id="about" className="relative scroll-mt-28 bg-off-white px-6 py-20 md:py-28">
           <div className="relative z-10 mx-auto max-w-6xl">
             <SectionHeading label="About Moniré" title="Software experience, with veterinary context built in." />
-            <p className="mx-auto mb-10 max-w-3xl text-center font-display text-3xl leading-tight text-main-teal md:mb-14 md:text-4xl">Six years treating patients. <em className="font-tertiary italic">Six years writing software.</em></p>
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              {[
-                { image: nikky, name: "Dr. Nikky Pyra", role: "Co-founder, Veterinarian & Software Engineer", bio: "Nikky practised small-animal medicine for six years in Canada and Germany before moving into software. She has spent six years as a frontend engineer building with React, TypeScript and Vue. She also created LabSift, a privacy-first tool for pulling lab values out of PDF reports." },
-                { image: monika, name: "Monika Märki", role: "Co-founder, Software Engineer" },
-              ].map((person) => (
-                <article key={person.name} className="grid overflow-hidden rounded-xl border border-neutral-border bg-neutral-card sm:grid-cols-[180px_1fr]">
-                  <img src={person.image} alt={`${person.name} portrait`} className="h-full min-h-64 w-full object-cover" />
+              {teamMembers.map((person) => (
+                <article key={person.name} className="grid overflow-hidden rounded-xl border border-neutral-border bg-neutral-card sm:grid-cols-[180px_1fr] sm:items-start">
+                  <div className="relative aspect-[4/5] overflow-hidden sm:m-5 sm:mr-0 sm:rounded-lg">
+                    <img src={person.image} alt={`${person.name} portrait`} className="absolute inset-0 h-full w-full object-cover object-top" />
+                    <a
+                      href={person.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${person.name}'s LinkedIn profile`}
+                      className="absolute bottom-3 right-3 z-10 flex h-[2.4rem] w-[2.4rem] items-center justify-center rounded-full border border-gold-text/40 bg-[#0a3440cc] backdrop-blur-sm transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+                    >
+                      <img src={linkedinIcon} alt="" aria-hidden="true" className="h-4 w-4" style={{ filter: "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)" }} />
+                    </a>
+                  </div>
                   <div className="p-7">
                     <h3 className="font-display text-3xl text-main-teal">{person.name}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-main-teal/65">{person.role}</p>
-                    {person.bio && <p className="mt-4 text-sm leading-relaxed text-main-teal/80">{person.bio}</p>}
+                    <p className="mt-4 text-sm leading-relaxed text-main-teal/80">{person.bio}</p>
+                    <p className="mt-4 text-xs leading-relaxed text-main-teal/65">{person.languages}</p>
                   </div>
                 </article>
               ))}
             </div>
             <div className="mt-8 rounded-2xl border border-main-teal/15 bg-main-teal/[0.04] p-8">
-              <p className="text-xs uppercase tracking-widest text-main-teal/60">Our strategy partner</p>
-              <h3 className="mt-2 font-display text-2xl text-main-teal">Linley Collaborative</h3>
-              <p className="mt-3 max-w-3xl text-main-teal/75">For animal health projects that also need commercial strategy or scientific messaging, we work with Linley Collaborative. They lead that work; we design and build the website or tool.</p>
-              <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-main-teal underline decoration-gold underline-offset-4">Visit Linley Collaborative →</a>
+              <p className="text-xs uppercase tracking-widest text-main-teal/60">Our founder journey</p>
+              <p className="mt-3 max-w-3xl text-lg leading-relaxed text-main-teal/80">Two different paths into technology, one shared vision. Learn how our backgrounds in veterinary medicine and business operations shaped Moniré and the way we work with clients today.</p>
+              <Link to="/#about" className="mt-4 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4">Read our founder journey <ArrowRight size={16} /></Link>
             </div>
           </div>
         </section>
