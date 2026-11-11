@@ -30,15 +30,36 @@ export interface PricingSectionContent {
   titleAccent?: string;
   webDesignTab?: string;
   otherServicesTab?: string;
+  simpleWebsiteOffer?: {
+    price: string;
+    description: string;
+    note?: string;
+    cta: string;
+  };
   includedNote?: string;
+  includedFeatures?: string[];
   featuredLabel?: string;
+  featuredPlanIndex?: number | null;
+  planCta?: string;
+  compactPlanCards?: boolean;
   websitePlans?: Array<{
     name: string;
     price: string;
     desc: string;
     features: string[];
   }>;
+  websitePlanPrices?: Partial<Record<DisplayCurrency, Array<{
+    prefix: string;
+    amount: string;
+  }>>>;
   websitePlanDescriptions?: string[];
+  scopeNote?: string;
+  corporateBlock?: {
+    title: string;
+    description: string;
+    details: string;
+    cta: string;
+  };
   customWebsiteTitle?: string;
   customWebsiteDescription?: string;
   otherServices?: {
@@ -63,7 +84,10 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
     ? content.websitePlans
     : translatedPlans;
 
-  const plansWithFeatured = plans.map((p, i) => ({ ...p, featured: i === 1 }));
+  const featuredPlanIndex = content && 'featuredPlanIndex' in content
+    ? content.featuredPlanIndex
+    : 1;
+  const plansWithFeatured = plans.map((p, i) => ({ ...p, featured: i === featuredPlanIndex }));
 
   useEffect(() => {
     const savedCurrency = window.localStorage.getItem(CURRENCY_STORAGE_KEY);
@@ -87,7 +111,7 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
 
   return (
     <>
-    <section id="pricing" className={`${compact ? "pt-12 md:pt-16" : "pt-20 md:pt-28"} pb-20 md:pb-32 px-6 relative`}>
+    <section id="pricing" className={`${compact ? "pt-16 pb-24 md:pt-20 md:pb-32" : "pt-20 pb-20 md:pt-28 md:pb-32"} px-6 relative`}>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal className={`text-center ${compact ? "mb-6 md:mb-8" : "mb-8 md:mb-12"}`}>
@@ -97,7 +121,7 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
           </h2>
         </ScrollReveal>
 
-        <ScrollReveal className={`flex justify-center ${compact ? "mb-8" : "mb-10"}`}>
+        {!content?.simpleWebsiteOffer && <ScrollReveal className={`flex justify-center ${compact ? "mb-8" : "mb-10"}`}>
           <div className="inline-flex rounded-full border border-off-white/20 p-1.5 gap-1 max-w-full overflow-x-auto">
             {tabKeys.map((key) => (
               <button
@@ -122,14 +146,24 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
               </button>
             ))}
           </div>
-        </ScrollReveal>
+        </ScrollReveal>}
 
-        {activeTab === 'webDesign' && (
+        {activeTab === 'webDesign' && !content?.simpleWebsiteOffer && (
           <>
             <ScrollReveal className="text-center mb-6">
               <p className="text-off-white/85 text-xs sm:text-sm font-body tracking-[0.04em]">
                 {content?.includedNote ?? t('pricing.includedNote')}
               </p>
+              {content?.includedFeatures && (
+                <div className="mx-auto mt-5 grid max-w-4xl gap-x-8 gap-y-2 text-left sm:grid-cols-2 lg:grid-cols-4">
+                  {content.includedFeatures.map((feature) => (
+                    <div key={feature} className="flex items-start gap-2 text-sm leading-relaxed text-off-white/75">
+                      <span className="mt-0.5 text-gold">✓</span>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </ScrollReveal>
 
             <ScrollReveal className="flex justify-center mb-10">
@@ -231,13 +265,36 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
               </div>
             </div>
           </ScrollReveal>
+        ) : content?.simpleWebsiteOffer ? (
+          <ScrollReveal>
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="font-display text-4xl text-gold-text md:text-5xl">{content.simpleWebsiteOffer.price}</p>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-off-white/80">
+                {content.simpleWebsiteOffer.description}
+              </p>
+              {content.simpleWebsiteOffer.note && (
+                <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-off-white/55">
+                  {content.simpleWebsiteOffer.note}
+                </p>
+              )}
+              <BrandButton
+                variant="primary"
+                showStar
+                className="mt-7 w-full text-sm sm:w-auto"
+                onClick={() => openContactModal('veterinary_website')}
+              >
+                {content.simpleWebsiteOffer.cta}
+              </BrandButton>
+            </div>
+          </ScrollReveal>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
             {plansWithFeatured.map((plan, i) => {
               const planKey = WEB_DESIGN_PLAN_ORDER[i];
-              const { prefix, amount: displayAmount } = planKey
+              const customPrice = content?.websitePlanPrices?.[currency]?.[i];
+              const { prefix, amount: displayAmount } = customPrice ?? (planKey
                 ? getWebDesignDisplayPrice(planKey, currency)
-                : { prefix: '', amount: plan.price };
+                : { prefix: '', amount: plan.price });
               return (
                 <ScrollReveal key={plan.name} delay={i * 100}>
                   <div className={`relative ${plan.featured ? 'md:-translate-y-[7px]' : ''}`}>
@@ -249,7 +306,9 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
                       </div>
                     )}
                     <div
-                      className={`rounded-xl p-8 md:min-h-[935px] lg:min-h-[650px] flex flex-col ${
+                      className={`rounded-xl p-8 flex flex-col ${
+                        content?.compactPlanCards ? 'md:min-h-[720px] lg:min-h-[590px]' : 'md:min-h-[935px] lg:min-h-[650px]'
+                      } ${
                         plan.featured
                           ? 'bg-off-white text-deep-ink'
                           : 'dark-surface-card border border-off-white/10'
@@ -295,7 +354,7 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
                         showStar
                         className={`text-sm w-full ${plan.featured ? '!bg-main-teal hover:!bg-soft-teal' : ''}`}
                       >
-                        {t('pricing.getStarted')}
+                        {content?.planCta ?? t('pricing.getStarted')}
                       </BrandButton>
                     </div>
                   </div>
@@ -305,7 +364,37 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
           </div>
         )}
 
-        {activeTab !== 'automation' && (
+        {activeTab === 'webDesign' && content?.scopeNote && (
+          <ScrollReveal className="mt-8 text-center">
+            <p className="mx-auto max-w-3xl text-sm leading-relaxed text-off-white/70">
+              {content.scopeNote}
+            </p>
+          </ScrollReveal>
+        )}
+
+        {activeTab === 'webDesign' && content?.corporateBlock && (
+          <ScrollReveal className="mt-12">
+            <div className="rounded-xl border border-off-white/10 bg-off-white/[0.035] p-7 md:p-10">
+              <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+                <div>
+                  <h3 className="font-display text-2xl text-off-white md:text-3xl">{content.corporateBlock.title}</h3>
+                  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-off-white/75 md:text-base">{content.corporateBlock.description}</p>
+                  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-off-white/55">{content.corporateBlock.details}</p>
+                </div>
+                <BrandButton
+                  variant="secondary"
+                  showStar
+                  className="w-full text-sm sm:w-auto"
+                  onClick={() => openContactModal('animal_health_software')}
+                >
+                  {content.corporateBlock.cta}
+                </BrandButton>
+              </div>
+            </div>
+          </ScrollReveal>
+        )}
+
+        {activeTab !== 'automation' && !content?.simpleWebsiteOffer && (
           <ScrollReveal className="text-center mt-14">
             <h3 className="font-body text-2xl md:text-[32px] text-off-white mb-4">{content?.customWebsiteTitle ?? t('pricing.custom.title')}</h3>
             <p className="text-off-white text-[15px] font-body">

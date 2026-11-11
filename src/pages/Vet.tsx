@@ -107,67 +107,12 @@ const audiences: Audience[] = [
 const vetPricingContent: PricingSectionContent = {
   title: "You’ll know the price before we start.",
   titleAccent: "",
-  webDesignTab: "Website packages",
+  webDesignTab: "Veterinary websites",
   otherServicesTab: "Other services",
-  includedNote: "Every package includes custom design, mobile optimisation, an editable CMS and launch support.",
-  featuredLabel: "Recommended",
-  websitePlans: [
-    {
-      name: "Starter",
-      price: "",
-      desc: "",
-      features: [
-        "Up to 7 core pages",
-        "Emergency and after-hours information visible across the site",
-        "Online booking link or standard booking embed",
-        "Services and team profiles with qualifications and special interests",
-        "Opening hours, location and new-client information",
-        "Essential technical and local SEO setup",
-        "One language, with Swiss privacy and cookie setup",
-      ],
-    },
-    {
-      name: "Advanced",
-      price: "",
-      desc: "",
-      features: [
-        "Everything in Starter",
-        "Up to 12 pages",
-        "Dedicated service, species or specialist pages",
-        "New-client registration or referring-vet form",
-        "Careers and recruitment page",
-        "Enhanced booking or practice-management integration",
-        "Google Business Profile and local SEO setup",
-        "Two languages",
-      ],
-    },
-    {
-      name: "Premium",
-      price: "",
-      desc: "",
-      features: [
-        "Everything in Advanced",
-        "Page scope planned around your organisation and audiences",
-        "Multi-location or multi-brand website structure",
-        "Advanced booking, CRM or practice-system integrations",
-        "Professional resource areas or gated content",
-        "Product finders, calculators or custom digital tools",
-        "Multilingual content architecture",
-        "Advanced analytics and conversion tracking",
-      ],
-    },
-  ],
-  websitePlanDescriptions: [
-    "For independent practices that need a trustworthy site where clients can book, prepare for a visit and find urgent information quickly.",
-    "For growing, specialist or referral practices that need deeper content, stronger local visibility and smarter client or referral journeys.",
-    "For multi-location groups, animal health companies and veterinary software products with complex audiences, content or integrations.",
-  ],
-  customWebsiteTitle: "Not sure which website package fits?",
-  customWebsiteDescription: "Tell us what the website needs to do and we will recommend the right scope. Client portals and complex integrations are priced after technical discovery. Managed hosting, security, backups, maintenance and content updates are available as an ongoing care plan.",
-  otherServices: {
-    title: "A clear quote based on the work involved.",
-    description: "Every project starts with a short discovery call. We learn what the problem is, who it affects and which systems you already use. Then you get a written scope and price, before we start.",
-    cta: "Tell us about your project",
+  simpleWebsiteOffer: {
+    price: "Websites from CHF 3'500",
+    description: "Software, automation and other custom work are priced individually. After a short discovery call, you’ll receive a clear scope and fixed price before we begin.",
+    cta: "Discuss your project",
   },
 };
 
@@ -300,6 +245,9 @@ const Vet = () => {
         </section>
 
         <section id="vet-work" className="about-flow relative scroll-mt-28 overflow-hidden px-6 py-20 md:py-28">
+          <div className="wave-mask absolute -top-px left-0 right-0 z-[5] rotate-180" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" fill="none" className="block h-12 w-full md:h-20"><path fill="currentColor" d="M0,48 C190,100 405,102 720,68 C1018,36 1240,32 1440,74 L1440,120 L0,120 Z" /></svg>
+          </div>
           <div className="about-orb about-orb-1" /><div className="about-orb about-orb-2" />
           <div className="relative z-10 mx-auto max-w-6xl">
             <SectionHeading dark label="Selected work" title="From clinic websites to clinical software." />
@@ -386,7 +334,12 @@ const Vet = () => {
           </div>
         </section>
 
-        <div className="dark-teal-surface"><PricingSection compact content={vetPricingContent} onContactClick={() => scrollTo("contact")} /></div>
+        <div className="dark-teal-surface relative overflow-hidden">
+          <PricingSection compact content={vetPricingContent} onContactClick={() => scrollTo("contact")} />
+          <div className="wave-mask absolute -bottom-px left-0 right-0" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" fill="none" className="block h-12 w-full md:h-20"><path fill="currentColor" d="M0,48 C190,100 405,102 720,68 C1018,36 1240,32 1440,74 L1440,120 L0,120 Z" /></svg>
+          </div>
+        </div>
 
         <section id="contact" className="scroll-mt-28 bg-off-white px-6 py-14 md:py-20">
           <div className="dark-teal-surface mx-auto max-w-5xl rounded-2xl p-6 md:p-8 lg:p-10">
