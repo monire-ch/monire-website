@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
@@ -43,8 +43,8 @@ type TeamMember = {
 const teamMembers: TeamMember[] = [
   {
     image: nikky,
-    name: "Dr. Nikky Pyra",
-    role: "Software Engineer & Veterinarian",
+    name: "Dr. Nikky Pyra, DVM",
+    role: "Veterinarian & Software Engineer",
     bio: "Nikky spent six years working as a veterinarian in small-animal and shelter medicine in Canada and Germany before expanding her career into software engineering. Her clinical experience gives her first-hand insight into the time pressures, practical constraints and safety considerations that shape how veterinary teams use technology and evaluate new products. At Moniré, she combines that clinical perspective with technical expertise to create digital experiences that make sense for the people who use them.",
     languages: "Languages: English, German",
     linkedinUrl: "https://www.linkedin.com/in/nicole-pyra/",
@@ -109,13 +109,61 @@ const vetPricingContent: PricingSectionContent = {
   titleAccent: "",
   webDesignTab: "Website packages",
   otherServicesTab: "Other services",
+  includedNote: "Every package includes custom design, mobile optimisation, an editable CMS and launch support.",
+  featuredLabel: "Recommended",
+  websitePlans: [
+    {
+      name: "Starter",
+      price: "",
+      desc: "",
+      features: [
+        "Up to 7 core pages",
+        "Emergency and after-hours information visible across the site",
+        "Online booking link or standard booking embed",
+        "Services and team profiles with qualifications and special interests",
+        "Opening hours, location and new-client information",
+        "Essential technical and local SEO setup",
+        "One language, with Swiss privacy and cookie setup",
+      ],
+    },
+    {
+      name: "Advanced",
+      price: "",
+      desc: "",
+      features: [
+        "Everything in Starter",
+        "Up to 12 pages",
+        "Dedicated service, species or specialist pages",
+        "New-client registration or referring-vet form",
+        "Careers and recruitment page",
+        "Enhanced booking or practice-management integration",
+        "Google Business Profile and local SEO setup",
+        "Two languages",
+      ],
+    },
+    {
+      name: "Premium",
+      price: "",
+      desc: "",
+      features: [
+        "Everything in Advanced",
+        "Page scope planned around your organisation and audiences",
+        "Multi-location or multi-brand website structure",
+        "Advanced booking, CRM or practice-system integrations",
+        "Professional resource areas or gated content",
+        "Product finders, calculators or custom digital tools",
+        "Multilingual content architecture",
+        "Advanced analytics and conversion tracking",
+      ],
+    },
+  ],
   websitePlanDescriptions: [
-    "A clear, professional website for an independent veterinary practice or small veterinary business",
-    "A more strategic website for a growing practice, referral centre or animal health team",
-    "A larger digital platform for multi-location practices, animal health companies or veterinary products",
+    "For independent practices that need a trustworthy site where clients can book, prepare for a visit and find urgent information quickly.",
+    "For growing, specialist or referral practices that need deeper content, stronger local visibility and smarter client or referral journeys.",
+    "For multi-location groups, animal health companies and veterinary software products with complex audiences, content or integrations.",
   ],
   customWebsiteTitle: "Not sure which website package fits?",
-  customWebsiteDescription: "Tell us what you need the website to do and we will recommend the right scope. If none of the packages fits, we can quote a custom website.",
+  customWebsiteDescription: "Tell us what the website needs to do and we will recommend the right scope. Client portals and complex integrations are priced after technical discovery. Managed hosting, security, backups, maintenance and content updates are available as an ongoing care plan.",
   otherServices: {
     title: "A clear quote based on the work involved.",
     description: "Every project starts with a short discovery call. We learn what the problem is, who it affects and which systems you already use. Then you get a written scope and price, before we start.",
@@ -221,7 +269,7 @@ const Vet = () => {
             <SectionHeading label="How we can help" title="Support for every part of the veterinary sector." className="mb-8 md:mb-10" />
             <div className="overflow-hidden rounded-3xl border border-main-teal/15 bg-neutral-card shadow-xl lg:grid lg:min-h-[860px] lg:grid-cols-[0.42fr_0.58fr]">
               <div className="relative h-[300px] lg:h-auto">
-                <img src={vetServicesConsultation} alt="A dog and cat in a veterinary consultation room" className="absolute inset-0 h-full w-full object-cover object-center" />
+                <img src={vetServicesConsultation} alt="A dog and cat in a veterinary consultation room" className="absolute inset-0 h-full w-full object-cover object-top lg:object-center" />
               </div>
               <div className="flex flex-col p-5 sm:p-7 md:p-9 lg:p-11">
                 <div className="grid gap-2 rounded-2xl bg-main-teal/[0.05] p-2 sm:grid-cols-3" role="tablist" aria-label="Customer type">
@@ -242,7 +290,7 @@ const Vet = () => {
                       </li>
                     ))}
                   </ul>
-                  {audience.partner && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">Need commercial strategy or scientific messaging? We partner with <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="text-main-teal underline decoration-gold underline-offset-4">Linley Collaborative</a>, an animal health consultancy.</p>}
+                  {audience.partner && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">Need commercial strategy or scientific messaging? We partner with <a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-main-teal underline decoration-gold decoration-1 underline-offset-4 transition-colors duration-200 hover:no-underline focus-visible:no-underline focus-visible:outline-none">Linley Collaborative</a>, an animal health consultancy.</p>}
                   {audience.note && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">{audience.note}</p>}
                   <div className="pt-7"><BrandButton type="button" variant="primary" showStar className="text-sm" data-track="vet-cta" data-audience={audience.id} onClick={() => contactFor(audience.id)}>{audience.cta}</BrandButton></div>
                 </div>
@@ -256,26 +304,26 @@ const Vet = () => {
           <div className="relative z-10 mx-auto max-w-6xl">
             <SectionHeading dark label="Selected work" title="From clinic websites to clinical software." />
             <div className="grid gap-6 lg:grid-cols-2">
-              <Link to="/case-studies/snip-squad" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card">
-                <div className="h-[360px] overflow-y-auto bg-white md:h-[460px]" aria-label="Scrollable Snip Squad website preview">
+              <Link to="/case-studies/snip-squad" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card transition-all duration-200 hover:-translate-y-1 hover:border-main-teal/35 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:border-main-teal/35 focus-visible:shadow-xl focus-visible:outline-none">
+                <div className="h-[240px] overflow-y-auto bg-white sm:h-[320px] md:h-[460px]" aria-label="Scrollable Snip Squad website preview">
                   <img src={snipSquad} alt="Snip Squad veterinary clinic website" className="block h-auto w-full" />
                 </div>
-                <div className="p-7 md:p-8">
+                <div className="p-5 sm:p-7 md:p-8">
                   <p className="text-xs uppercase tracking-widest text-main-teal/55">Veterinary website</p>
-                  <h3 className="mt-3 font-display text-3xl text-main-teal">Snip Squad</h3>
+                  <h3 className="mt-3 font-display text-2xl text-main-teal sm:text-3xl">Snip Squad</h3>
                   <p className="mt-3 leading-relaxed text-main-teal/75">A modern, approachable website for a nonprofit veterinary clinic providing affordable care in underserved communities.</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4">Read the case study <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
+                  <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4 transition-colors duration-200 group-hover:no-underline group-focus-visible:no-underline">Read the case study <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1" /></span>
                 </div>
               </Link>
-              <Link to="/case-studies/labsift" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card">
-                <div className="h-[360px] overflow-y-auto bg-white md:h-[460px]" aria-label="Scrollable LabSift website preview">
+              <Link to="/case-studies/labsift" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card transition-all duration-200 hover:-translate-y-1 hover:border-main-teal/35 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:border-main-teal/35 focus-visible:shadow-xl focus-visible:outline-none">
+                <div className="h-[240px] overflow-y-auto bg-white sm:h-[320px] md:h-[460px]" aria-label="Scrollable LabSift website preview">
                   <img src={labsift} alt="LabSift website" className="block h-auto w-full" />
                 </div>
-                <div className="p-7 md:p-8">
+                <div className="p-5 sm:p-7 md:p-8">
                   <p className="text-xs uppercase tracking-widest text-main-teal/55">Veterinary software</p>
-                  <h3 className="mt-3 font-display text-3xl text-main-teal">LabSift</h3>
+                  <h3 className="mt-3 font-display text-2xl text-main-teal sm:text-3xl">LabSift</h3>
                   <p className="mt-3 leading-relaxed text-main-teal/75">A browser-based app that turns PDF lab reports into copy-ready results, processed entirely on the user’s device. We designed and built the app and its website.</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4">Read the case study <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
+                  <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4 transition-colors duration-200 group-hover:no-underline group-focus-visible:no-underline">Read the case study <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1" /></span>
                 </div>
               </Link>
             </div>
@@ -284,55 +332,106 @@ const Vet = () => {
 
         <section id="about" className="relative scroll-mt-28 bg-off-white px-6 py-20 md:py-28">
           <div className="relative z-10 mx-auto max-w-6xl">
-            <SectionHeading label="About Moniré" title="Software experience, with veterinary context built in." />
+            <SectionHeading label="About Moniré" title="Clinical experience, translated into software." />
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
               {teamMembers.map((person) => (
                 <article key={person.name} className="grid overflow-hidden rounded-xl border border-neutral-border bg-neutral-card sm:grid-cols-[180px_1fr] sm:items-start">
-                  <div className="relative aspect-[4/5] overflow-hidden sm:m-5 sm:mr-0 sm:rounded-lg">
-                    <img src={person.image} alt={`${person.name} portrait`} className="absolute inset-0 h-full w-full object-cover object-top" />
+                  <div className="p-5 sm:contents">
+                    <div className="flex items-center gap-5 sm:hidden">
+                      <div className="relative h-44 w-36 shrink-0 overflow-hidden rounded-lg border border-main-teal/10">
+                        <img src={person.image} alt={`${person.name} portrait`} className="h-full w-full object-cover" />
+                        <a
+                          href={person.linkedinUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${person.name}'s LinkedIn profile`}
+                          className="absolute bottom-2.5 right-2.5 z-10 flex h-[2.4rem] w-[2.4rem] items-center justify-center rounded-full border border-gold-text/40 bg-[#0a3440cc] backdrop-blur-sm transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)] focus-visible:border-gold-text/70 focus-visible:shadow-[0_0_8px_rgba(207,169,71,0.2)] focus-visible:outline-none"
+                        >
+                          <img src={linkedinIcon} alt="" aria-hidden="true" className="h-4 w-4" style={{ filter: "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)" }} />
+                        </a>
+                      </div>
+                      <div>
+                        <h3 className="font-display text-2xl text-main-teal">{person.name}</h3>
+                        <p className="mt-1.5 text-sm leading-relaxed text-main-teal/70">{person.role}</p>
+                        <p className="mt-3 text-sm font-medium leading-relaxed text-main-teal/85">{person.languages}</p>
+                      </div>
+                    </div>
+                    <p className="mt-5 text-sm leading-relaxed text-main-teal/80 sm:hidden">{person.bio}</p>
+                  </div>
+
+                  <div className="relative m-5 mr-0 hidden aspect-[4/5] overflow-hidden rounded-lg sm:block">
+                    <img src={person.image} alt={`${person.name} portrait`} className="absolute inset-0 h-full w-full object-cover" />
                     <a
                       href={person.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${person.name}'s LinkedIn profile`}
-                      className="absolute bottom-3 right-3 z-10 flex h-[2.4rem] w-[2.4rem] items-center justify-center rounded-full border border-gold-text/40 bg-[#0a3440cc] backdrop-blur-sm transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)]"
+                      className="absolute bottom-3 right-3 z-10 flex h-[2.4rem] w-[2.4rem] items-center justify-center rounded-full border border-gold-text/40 bg-[#0a3440cc] backdrop-blur-sm transition-all duration-200 hover:border-gold-text/70 hover:shadow-[0_0_8px_rgba(207,169,71,0.2)] focus-visible:border-gold-text/70 focus-visible:shadow-[0_0_8px_rgba(207,169,71,0.2)] focus-visible:outline-none"
                     >
                       <img src={linkedinIcon} alt="" aria-hidden="true" className="h-4 w-4" style={{ filter: "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)" }} />
                     </a>
                   </div>
-                  <div className="p-7">
+                  <div className="hidden p-7 sm:block">
                     <h3 className="font-display text-3xl text-main-teal">{person.name}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-main-teal/65">{person.role}</p>
                     <p className="mt-4 text-sm leading-relaxed text-main-teal/80">{person.bio}</p>
-                    <p className="mt-4 text-xs leading-relaxed text-main-teal/65">{person.languages}</p>
+                    <p className="mt-4 text-sm font-medium leading-relaxed text-main-teal/85">{person.languages}</p>
                   </div>
                 </article>
               ))}
             </div>
-            <div className="mt-8 rounded-2xl border border-main-teal/15 bg-main-teal/[0.04] p-8">
-              <p className="text-xs uppercase tracking-widest text-main-teal/60">Our founder journey</p>
-              <p className="mt-3 max-w-3xl text-lg leading-relaxed text-main-teal/80">Two different paths into technology, one shared vision. Learn how our backgrounds in veterinary medicine and business operations shaped Moniré and the way we work with clients today.</p>
-              <Link to="/#about" className="mt-4 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4">Read our founder journey <ArrowRight size={16} /></Link>
+            <div className="mt-8 text-center">
+              <Link to="/#about" className="group inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4 transition-colors duration-200 hover:no-underline focus-visible:no-underline focus-visible:outline-none">Read about our founder journey <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1" /></Link>
             </div>
           </div>
         </section>
 
         <div className="dark-teal-surface"><PricingSection compact content={vetPricingContent} onContactClick={() => scrollTo("contact")} /></div>
 
-        <section id="contact" className="scroll-mt-28 bg-off-white px-6 py-20 md:py-28">
-          <div className="dark-teal-surface mx-auto grid max-w-6xl gap-12 rounded-2xl p-8 lg:grid-cols-2 md:p-12 lg:p-16">
-            <div>
-              <span className="eyebrow-pill eyebrow-pill-dark mb-4">Contact</span>
-              <h2 className="font-display text-4xl text-off-white md:text-5xl">Tell us what you need to build.</h2>
-              <p className="mt-5 text-lg leading-relaxed text-off-white/75">Whether it is a new website, a product interface or a workflow that needs improving, tell us what is happening and what you would like to change. You do not need to arrive with the technical solution.</p>
-              <p className="mt-5 text-sm leading-relaxed text-off-white/60">Based in Zürich and working in English and German. We work remotely with clients in Switzerland and abroad, and can visit veterinary practices in Switzerland when seeing the workflow in person would help.</p>
-              <a href="mailto:hello@monire.ch" className="mt-6 inline-block text-gold-text underline decoration-gold underline-offset-4">hello@monire.ch</a>
+        <section id="contact" className="scroll-mt-28 bg-off-white px-6 py-14 md:py-20">
+          <div className="dark-teal-surface mx-auto max-w-5xl rounded-2xl p-6 md:p-8 lg:p-10">
+            <div className="grid items-start gap-10 lg:grid-cols-[minmax(260px,0.85fr)_minmax(0,1.55fr)] lg:gap-10">
+              <div className="order-2 rounded-xl border border-off-white/[0.07] bg-off-white/[0.025] p-5 md:p-6 lg:order-2">
+                <ContactForm variant="page" formName="vet-contact" formLocation="vet_page" mode="vet" />
+              </div>
+
+              <div className="order-1 text-center lg:order-1 lg:text-left">
+                <span className="eyebrow-pill eyebrow-pill-dark mb-4">Contact</span>
+                <h2 className="mx-auto max-w-xs font-display text-3xl leading-tight text-off-white md:text-4xl lg:mx-0">Let’s work together.</h2>
+
+                <div className="mt-9 hidden space-y-8 lg:block">
+                <div>
+                  <h3 className="mb-4 text-sm uppercase tracking-widest text-gold-text">{t("common.getInTouch")}</h3>
+                  <a
+                    href="mailto:hello@monire.ch"
+                    className="group flex items-center gap-3 text-base text-off-white transition-colors hover:text-gold-hover focus-visible:text-gold-hover focus-visible:outline-none"
+                  >
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-text/30 transition-colors group-hover:border-gold-text/60 group-focus-visible:border-gold-text/60">
+                      <Mail size={18} className="text-gold-text" />
+                    </span>
+                    hello@monire.ch
+                  </a>
+                </div>
+
+                <div>
+                  <h3 className="mb-4 text-sm uppercase tracking-widest text-gold-text">{t("common.location")}</h3>
+                  <div className="flex items-start gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold-text/30">
+                      <MapPin size={18} className="text-gold-text" />
+                    </span>
+                    <div>
+                      <p className="text-base text-off-white">{t("footer.locationCity")}</p>
+                      <p className="mt-1 text-sm text-off-white/50">{t("footer.locationService")}</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
             </div>
-            <ContactForm variant="page" formName="vet-contact" formLocation="vet_page" mode="vet" />
           </div>
         </section>
       </main>
-      <Footer hideWave pageLinks={[...vetNavLinks, { label: "Contact", href: "#contact" }]} />
+      <Footer hideWave />
     </>
   );
 };

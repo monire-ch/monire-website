@@ -31,6 +31,13 @@ export interface PricingSectionContent {
   webDesignTab?: string;
   otherServicesTab?: string;
   includedNote?: string;
+  featuredLabel?: string;
+  websitePlans?: Array<{
+    name: string;
+    price: string;
+    desc: string;
+    features: string[];
+  }>;
   websitePlanDescriptions?: string[];
   customWebsiteTitle?: string;
   customWebsiteDescription?: string;
@@ -49,9 +56,12 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
   const [contactOpen, setContactOpen] = useState(false);
   const [currency, setCurrency] = useState<DisplayCurrency>('CHF');
 
-  const plans = t(`pricing.plans.${activeTab}`, { returnObjects: true }) as Array<{
+  const translatedPlans = t(`pricing.plans.${activeTab}`, { returnObjects: true }) as Array<{
     name: string; price: string; desc: string; features: string[];
   }>;
+  const plans = activeTab === 'webDesign' && content?.websitePlans
+    ? content.websitePlans
+    : translatedPlans;
 
   const plansWithFeatured = plans.map((p, i) => ({ ...p, featured: i === 1 }));
 
@@ -234,7 +244,7 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
                     {plan.featured && (
                       <div className="flex justify-center relative z-10 -mb-4">
                         <span className="inline-block bg-gold text-main-teal text-xs font-body font-semibold tracking-wide px-5 py-1.5 rounded-full shadow-md">
-                          {t('pricing.mostPopular')}
+                          {content?.featuredLabel ?? t('pricing.mostPopular')}
                         </span>
                       </div>
                     )}

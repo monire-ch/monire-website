@@ -15,7 +15,7 @@ interface ContactFormProps {
 }
 
 const VET_AUDIENCE_LABELS: Record<string, string> = {
-  practices: "Practice",
+  practices: "Veterinary practice",
   "animal-health": "Animal health company",
   "software-teams": "Vet software or startup",
 };
@@ -307,7 +307,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
-      className="space-y-5"
+      className={isVet ? "space-y-4" : "space-y-5"}
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="bot-field" />
@@ -317,7 +317,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
 
       {isVet ? (
         <>
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid gap-4 md:grid-cols-2">
             <div>
               <label className="text-off-white/70 text-sm font-body block mb-1.5">Name*</label>
               <input
@@ -341,21 +341,23 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
               {errors.email && <p className="text-red-400 text-xs font-body mt-1">Please enter a valid email address.</p>}
             </div>
           </div>
-          <div>
-            <label className="text-off-white/70 text-sm font-body block mb-1.5">Organisation</label>
-            <input type="text" name="organisation" className={inputClasses} />
-          </div>
-          <div>
-            <SelectField
-              name="audience"
-              label="I’m contacting you about"
-              placeholder="Choose one"
-              options={[...Object.values(VET_AUDIENCE_LABELS), "Something else"]}
-              value={vetAudience}
-              onChange={setVetAudience}
-              required
-            />
-            {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please choose an option.</p>}
+          <div className="grid gap-4 md:grid-cols-2">
+            <div>
+              <label className="text-off-white/70 text-sm font-body block mb-1.5">Organisation</label>
+              <input type="text" name="organisation" className={inputClasses} />
+            </div>
+            <div>
+              <SelectField
+                name="audience"
+                label="I’m contacting you about"
+                placeholder="Choose one"
+                options={[...Object.values(VET_AUDIENCE_LABELS), "Something else"]}
+                value={vetAudience}
+                onChange={setVetAudience}
+                required
+              />
+              {errors.service && <p className="text-red-400 text-xs font-body mt-1">Please choose an option.</p>}
+            </div>
           </div>
         </>
       ) : isModal ? (
@@ -497,7 +499,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
         <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.message")}*</label>
         <textarea
           name="message"
-          rows={5}
+          rows={isVet ? 3 : 5}
           className={`${inputClasses} resize-vertical ${errors.message ? "!border-red-400" : ""}`}
           placeholder={t("contact.messagePlaceholder")}
           value={fieldValues.message}
@@ -517,7 +519,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
           {t("contact.terms")} {" "}
           <Link
             to={localePath('/privacy')}
-            className="text-gold-text underline hover:text-gold transition-colors"
+            className="text-gold-text underline decoration-gold underline-offset-2 transition-colors hover:text-off-white hover:no-underline focus-visible:text-off-white focus-visible:no-underline focus-visible:outline-none"
             onClick={isModal ? onClose : undefined}
           >
             {t("contact.privacyPolicy")}
