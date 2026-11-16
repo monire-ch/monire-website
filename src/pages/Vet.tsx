@@ -14,9 +14,9 @@ import snipSquad from "@/assets/portfolio/snip-squad_full.webp";
 import labsift from "@/assets/portfolio/labsift-site.webp";
 import nikky from "@/assets/nicole.jpg";
 import monika from "@/assets/monika.jpg";
-import vetEditorialAnimals from "@/assets/vet-editorial-animals.png";
-import vetEditorialAnimalsDesktop from "@/assets/vet-editorial-animals-desktop-reframed-v2.png";
-import vetServicesConsultation from "@/assets/vet-services-consultation.png";
+import vetEditorialAnimals from "@/assets/vet-editorial-animals.webp";
+import vetEditorialAnimalsDesktop from "@/assets/vet-editorial-animals-desktop-reframed-v2.webp";
+import vetServicesConsultation from "@/assets/vet-services-consultation.webp";
 import goldFill from "@/assets/gold-fill.webp";
 import linkedinIcon from "@/assets/linkedin.svg";
 import { useFontsLoaded } from "@/hooks/useFontsLoaded";
@@ -244,6 +244,7 @@ const Vet = () => {
   const pageDescription = isGerman
     ? "Ein Zürcher Studio unter der Leitung einer Tierärztin und Softwareentwicklerin. Websites, Workflow-Automatisierungen und Produkt-UX für Tierarztpraxen, Tiergesundheitsunternehmen und Veterinärsoftware-Teams."
     : "A Zürich studio led by a veterinarian-engineer. Websites, workflow automations and product UX for vet practices, animal-health companies and vet software teams.";
+  const socialImage = `${SITE_URL}/${isGerman ? "vet-og-image-de.jpg" : "vet-og-image-en.jpg"}`;
   const vetSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -262,6 +263,7 @@ const Vet = () => {
         url: canonicalUrl,
         name: pageTitle,
         description: pageDescription,
+        primaryImageOfPage: { "@type": "ImageObject", url: socialImage },
         inLanguage: isGerman ? "de-CH" : "en",
         isPartOf: { "@id": `${SITE_URL}/#website` },
         about: { "@id": `${canonicalUrl}#service` },
@@ -299,6 +301,7 @@ const Vet = () => {
           ? "Websites, Software und Automatisierungen für die Tiermedizin"
           : "Websites, software and automations for veterinary and animal health",
         description: pageDescription,
+        image: socialImage,
         url: canonicalUrl,
         provider: { "@id": `${SITE_URL}/#organization` },
         areaServed: "Worldwide",
@@ -403,7 +406,7 @@ const Vet = () => {
             >
               <picture>
                 <source media="(min-width: 1024px)" srcSet={vetEditorialAnimalsDesktop} />
-                <img src={vetEditorialAnimals} alt={isGerman ? "Hund und Katze in einem modernen tierärztlichen Behandlungsraum" : "A dog and cat in a contemporary veterinary consultation room"} className="aspect-video h-auto w-full object-cover object-center lg:aspect-[5/4]" />
+                <img src={vetEditorialAnimals} alt={t("vetPage.images.heroAlt")} width="1440" height="687" fetchPriority="high" decoding="async" className="aspect-video h-auto w-full object-cover object-center lg:aspect-[5/4]" />
               </picture>
             </div>
           </div>
@@ -418,7 +421,7 @@ const Vet = () => {
             <ScrollReveal>
               <div className="overflow-hidden rounded-3xl border border-main-teal/15 bg-neutral-card shadow-xl lg:grid lg:grid-cols-[0.42fr_0.58fr]">
               <div className="relative hidden lg:block lg:h-auto">
-                <img src={vetServicesConsultation} alt={isGerman ? "Hund und Katze in einem tierärztlichen Behandlungsraum" : "A dog and cat in a veterinary consultation room"} className="absolute inset-0 h-full w-full object-cover object-center" />
+                <img src={vetServicesConsultation} alt={t("vetPage.images.servicesAlt")} width="900" height="1350" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center" />
               </div>
               <div className="flex flex-col p-5 sm:p-7 md:p-9 lg:p-11">
                 <div className="grid gap-2 rounded-2xl bg-main-teal/[0.05] p-2 sm:grid-cols-3" role="tablist" aria-label={isGerman ? "Zielgruppe auswählen" : "Choose your sector"}>
@@ -511,12 +514,12 @@ const Vet = () => {
                   <div className="p-5 sm:contents">
                     <div className="flex items-center gap-5 sm:hidden">
                       <div className="relative h-44 w-36 shrink-0 overflow-hidden rounded-lg border border-main-teal/10">
-                        <img src={person.image} alt={isGerman ? `Porträt von ${person.name}` : `Portrait of ${person.name}`} className="h-full w-full object-cover" />
+                        <img src={person.image} alt={t("vetPage.images.portraitAlt", { name: person.name })} className="h-full w-full object-cover" />
                         <a
                           href={person.linkedinUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label={isGerman ? `LinkedIn-Profil von ${person.name} (öffnet in neuem Tab)` : `${person.name}'s LinkedIn profile (opens in a new tab)`}
+                          aria-label={t("vetPage.images.linkedinLabel", { name: person.name })}
                           className="absolute bottom-2.5 right-2.5 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-gold-text/60 bg-[#0a3440] transition-all duration-200 hover:border-gold-text focus-visible:border-gold-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-focus focus-visible:ring-offset-2 focus-visible:ring-offset-main-teal"
                         >
                           <img src={linkedinIcon} alt="" aria-hidden="true" className="h-4 w-4" style={{ filter: "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)" }} />
@@ -532,12 +535,12 @@ const Vet = () => {
                   </div>
 
                   <div className="relative m-5 mr-0 hidden aspect-[4/5] overflow-hidden rounded-lg sm:block">
-                    <img src={person.image} alt={isGerman ? `Porträt von ${person.name}` : `Portrait of ${person.name}`} className="absolute inset-0 h-full w-full object-cover" />
+                    <img src={person.image} alt={t("vetPage.images.portraitAlt", { name: person.name })} className="absolute inset-0 h-full w-full object-cover" />
                     <a
                       href={person.linkedinUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={isGerman ? `LinkedIn-Profil von ${person.name} (öffnet in neuem Tab)` : `${person.name}'s LinkedIn profile (opens in a new tab)`}
+                      aria-label={t("vetPage.images.linkedinLabel", { name: person.name })}
                       className="absolute bottom-3 right-3 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-gold-text/60 bg-[#0a3440] transition-all duration-200 hover:border-gold-text focus-visible:border-gold-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-focus focus-visible:ring-offset-2 focus-visible:ring-offset-main-teal"
                     >
                       <img src={linkedinIcon} alt="" aria-hidden="true" className="h-4 w-4" style={{ filter: "brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(600%) hue-rotate(5deg) brightness(95%)" }} />

@@ -9,6 +9,7 @@ export type RouteSeo = {
   title: string;
   description: string;
   keywords?: string[];
+  image?: string;
 };
 
 const LOCALE_RESOURCES = {

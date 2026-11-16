@@ -75,6 +75,23 @@ const seoBuildPlugin = () => ({
         /<meta property="og:url" content="[^"]*"\s*\/?>/,
         `<meta property="og:url" content="${seo.canonicalUrl}">`
       );
+      if (seo.image) {
+        html = upsertTag(
+          html,
+          /<meta property="og:image" content="[^"]*"\s*\/?>/,
+          `<meta property="og:image" content="${seo.image}">`
+        );
+        html = upsertTag(
+          html,
+          /<meta property="og:image:secure_url" content="[^"]*"\s*\/?>/,
+          `<meta property="og:image:secure_url" content="${seo.image}">`
+        );
+        html = upsertTag(
+          html,
+          /<meta name="twitter:image" content="[^"]*"\s*\/?>/,
+          `<meta name="twitter:image" content="${seo.image}">`
+        );
+      }
       html = upsertTag(
         html,
         /<meta name="twitter:title" content="[^"]*"\s*\/?>/,
