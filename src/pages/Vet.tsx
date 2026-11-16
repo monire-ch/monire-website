@@ -304,7 +304,7 @@ const Vet = () => {
                         </a>
                       </div>
                       <div>
-                        <h3 className="font-display text-2xl text-main-teal">{person.name}</h3>
+                        <h3 className="font-body text-2xl font-medium text-main-teal">{person.name}</h3>
                         <p className="mt-1.5 text-sm leading-relaxed text-main-teal/70">{person.role}</p>
                         <p className="mt-3 text-sm font-medium leading-relaxed text-main-teal/85">{person.languages}</p>
                       </div>
@@ -325,7 +325,7 @@ const Vet = () => {
                     </a>
                   </div>
                   <div className="hidden p-7 sm:block">
-                    <h3 className="font-display text-3xl text-main-teal">{person.name}</h3>
+                    <h3 className="font-body text-3xl font-medium text-main-teal">{person.name}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-main-teal/65">{person.role}</p>
                     <p className="mt-4 text-sm leading-relaxed text-main-teal/80">{person.bio}</p>
                     <p className="mt-4 text-sm font-medium leading-relaxed text-main-teal/85">{person.languages}</p>
