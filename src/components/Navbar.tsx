@@ -44,13 +44,18 @@ const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
   };
 
   const defaultNavLinks = [
-    { label: t('nav.home'), href: '#' },
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.ourWork'), href: '#portfolio' },
     { label: t('nav.services'), href: '#services' },
     { label: t('nav.pricing'), href: '#pricing' },
+    { label: t('nav.insights'), href: '/insights' },
+  ];
+  const defaultMobileNavLinks = [
+    { label: t('nav.home'), href: '#' },
+    ...defaultNavLinks,
   ];
   const navLinks = pageLinks ?? defaultNavLinks;
+  const mobileNavLinks = pageLinks ?? defaultMobileNavLinks;
   useEffect(() => {
     if (!isHome && !usesLocalAnchors) {
       setActiveLink('');
@@ -245,8 +250,8 @@ const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
 
             <div className="flex-1 min-h-0 overflow-y-auto">
               <div className="min-h-full flex flex-col">
-                <nav className="px-6 pt-8">
-                  {navLinks.map((link, i) => (
+                <nav className="px-6 pt-4">
+                  {mobileNavLinks.map((link, i) => (
                     <a
                       key={link.href}
                       href={getHref(link.href)}
