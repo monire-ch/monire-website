@@ -111,7 +111,8 @@ const vetPricingContent: PricingSectionContent = {
   webDesignTab: "Veterinary websites",
   otherServicesTab: "Other services",
   simpleWebsiteOffer: {
-    price: "Websites from CHF 3'500",
+    priceLabel: "Websites",
+    planKey: "starter",
     description: "Software, automation and other custom work are priced individually. After a short discovery call, you’ll receive a clear scope and fixed price before we begin.",
     cta: "Discuss your project",
   },
@@ -180,7 +181,7 @@ const Vet = () => {
     <>
       <Navbar pageLinks={vetNavLinks} contactHref="#contact" />
       <main className="bg-off-white">
-        <section id="top" className="hero-bg relative flex min-h-screen items-center px-6 pb-32 pt-36 text-off-white md:pb-36 md:pt-36">
+        <section id="top" className="hero-bg relative flex min-h-screen items-center px-6 pb-32 pt-36 text-off-white md:pb-36 md:pt-36 xl:pt-48">
           <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div className="text-center lg:text-left">
               <div className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} mb-6 flex items-center justify-center lg:justify-start`} style={{ transitionDelay: "180ms" }}>

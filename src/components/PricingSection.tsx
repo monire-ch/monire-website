@@ -9,6 +9,7 @@ import {
   isDisplayCurrency,
   SUPPORTED_CURRENCIES,
   type DisplayCurrency,
+  type WebDesignPlanKey,
   WEB_DESIGN_PLAN_ORDER,
 } from '@/config/pricing';
 import BrandButton from './BrandButton';
@@ -31,7 +32,9 @@ export interface PricingSectionContent {
   webDesignTab?: string;
   otherServicesTab?: string;
   simpleWebsiteOffer?: {
-    price: string;
+    price?: string;
+    priceLabel?: string;
+    planKey?: WebDesignPlanKey;
     description: string;
     note?: string;
     cta: string;
@@ -100,6 +103,9 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
     setCurrency(nextCurrency);
     window.localStorage.setItem(CURRENCY_STORAGE_KEY, nextCurrency);
   };
+  const simpleWebsiteDisplayPrice = content?.simpleWebsiteOffer?.planKey
+    ? getWebDesignDisplayPrice(content.simpleWebsiteOffer.planKey, currency)
+    : null;
   const openContactModal = (label: string) => {
     trackEvent('contact_click', { location: 'pricing', label, page_path: window.location.pathname });
     if (onContactClick) {
@@ -268,7 +274,33 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
         ) : content?.simpleWebsiteOffer ? (
           <ScrollReveal>
             <div className="mx-auto max-w-3xl text-center">
-              <p className="font-display text-4xl text-gold-text md:text-5xl">{content.simpleWebsiteOffer.price}</p>
+              {simpleWebsiteDisplayPrice && (
+                <div
+                  className="mx-auto mb-6 inline-flex items-center rounded-full border border-off-white/10 p-1 gap-0.5"
+                  aria-label={t('pricing.currencyLabel')}
+                  role="group"
+                >
+                  {SUPPORTED_CURRENCIES.map((currencyKey) => (
+                    <button
+                      key={currencyKey}
+                      onClick={() => handleCurrencyChange(currencyKey)}
+                      className={`px-2.5 sm:px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-body transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/50 ${
+                        currency === currencyKey
+                          ? 'bg-off-white/10 text-off-white'
+                          : 'text-off-white/45 hover:text-off-white/70'
+                      }`}
+                      aria-pressed={currency === currencyKey}
+                    >
+                      {currencyKey}
+                    </button>
+                  ))}
+                </div>
+              )}
+              <p className="font-display text-4xl text-gold-text md:text-5xl">
+                {simpleWebsiteDisplayPrice
+                  ? `${content.simpleWebsiteOffer.priceLabel ?? ''} ${simpleWebsiteDisplayPrice.prefix}${simpleWebsiteDisplayPrice.amount}`.trim()
+                  : content.simpleWebsiteOffer.price}
+              </p>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-off-white/80">
                 {content.simpleWebsiteOffer.description}
               </p>
