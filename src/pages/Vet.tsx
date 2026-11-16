@@ -13,6 +13,7 @@ import labsift from "@/assets/portfolio/labsift-site.webp";
 import nikky from "@/assets/nicole.jpg";
 import monika from "@/assets/monika.jpg";
 import vetEditorialAnimals from "@/assets/vet-editorial-animals.png";
+import vetEditorialAnimalsDesktop from "@/assets/vet-editorial-animals-desktop-reframed-v2.png";
 import vetServicesConsultation from "@/assets/vet-services-consultation.png";
 import goldFill from "@/assets/gold-fill.webp";
 import linkedinIcon from "@/assets/linkedin.svg";
@@ -201,7 +202,10 @@ const Vet = () => {
               </div>
             </div>
             <div className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-off-white/15 shadow-2xl`} style={{ transitionDelay: "360ms" }}>
-              <img src={vetEditorialAnimals} alt="A dog and cat in a contemporary veterinary consultation room" className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[520px]" />
+              <picture>
+                <source media="(min-width: 1024px)" srcSet={vetEditorialAnimalsDesktop} />
+                <img src={vetEditorialAnimals} alt="A dog and cat in a contemporary veterinary consultation room" className="aspect-video h-auto w-full object-cover object-center lg:aspect-[5/4]" />
+              </picture>
             </div>
           </div>
           <div className="wave-mask absolute -bottom-1.5 left-0 right-0">
@@ -213,8 +217,8 @@ const Vet = () => {
           <div className="relative z-10 mx-auto max-w-6xl">
             <SectionHeading label="How we can help" title="Support for every part of the veterinary sector." className="mb-8 md:mb-10" />
             <div className="overflow-hidden rounded-3xl border border-main-teal/15 bg-neutral-card shadow-xl lg:grid lg:min-h-[860px] lg:grid-cols-[0.42fr_0.58fr]">
-              <div className="relative h-[300px] lg:h-auto">
-                <img src={vetServicesConsultation} alt="A dog and cat in a veterinary consultation room" className="absolute inset-0 h-full w-full object-cover object-top lg:object-center" />
+              <div className="relative hidden lg:block lg:h-auto">
+                <img src={vetServicesConsultation} alt="A dog and cat in a veterinary consultation room" className="absolute inset-0 h-full w-full object-cover object-center" />
               </div>
               <div className="flex flex-col p-5 sm:p-7 md:p-9 lg:p-11">
                 <div className="grid gap-2 rounded-2xl bg-main-teal/[0.05] p-2 sm:grid-cols-3" role="tablist" aria-label="Customer type">
@@ -225,7 +229,7 @@ const Vet = () => {
                   ))}
                 </div>
                 <div id={`panel-${audience.id}`} role="tabpanel" className="flex flex-1 flex-col pt-9 md:pt-11">
-                  <h3 className="max-w-2xl font-display text-4xl leading-tight text-main-teal md:text-5xl">{audience.title}</h3>
+                  <h3 className="max-w-2xl font-display text-2xl leading-tight text-main-teal sm:text-3xl lg:text-5xl">{audience.title}</h3>
                   <p className="mt-5 max-w-2xl leading-relaxed text-main-teal/85 md:text-lg">{audience.intro}</p>
                   <ul className="mt-7 grid gap-4 border-t border-main-teal/10 pt-6">
                     {audience.items.map((item) => (

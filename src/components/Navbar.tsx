@@ -165,7 +165,7 @@ const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
                 {t('nav.industries')}
                 <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
               </button>
-              <div className="invisible absolute left-1/2 top-full z-20 w-64 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div className="invisible absolute left-0 top-full z-20 w-max min-w-[13rem] pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                 <div className="rounded-2xl border border-off-white/10 bg-[#082f3af7] p-2 shadow-2xl backdrop-blur-xl">
                   <a
                     href="/vet"
