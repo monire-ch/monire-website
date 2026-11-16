@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BrandButton from "@/components/BrandButton";
 import ContactForm from "@/components/ContactForm";
+import JsonLd from "@/components/JsonLd";
 import PricingSection, { type PricingSectionContent } from "@/components/PricingSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import { trackEvent } from "@/lib/analytics";
@@ -20,6 +21,7 @@ import goldFill from "@/assets/gold-fill.webp";
 import linkedinIcon from "@/assets/linkedin.svg";
 import { useFontsLoaded } from "@/hooks/useFontsLoaded";
 import { useLocalePath } from "@/hooks/useLocalePath";
+import { SITE_URL } from "@/lib/seo";
 
 type AudienceId = "practices" | "animal-health" | "software-teams";
 
@@ -234,6 +236,97 @@ const Vet = () => {
 
   const localizedAudiences = isGerman ? audiencesDe : audiences;
   const localizedTeamMembers = isGerman ? teamMembersDe : teamMembers;
+  const canonicalUrl = `${SITE_URL}${isGerman ? "/de/vet" : "/vet"}`;
+  const homeUrl = `${SITE_URL}${isGerman ? "/de" : "/"}`;
+  const pageTitle = isGerman
+    ? "Veterinär-Websites, Software & Automatisierungen | Moniré"
+    : "Veterinary Websites, Software & Automations | Moniré";
+  const pageDescription = isGerman
+    ? "Ein Zürcher Studio unter der Leitung einer Tierärztin und Softwareentwicklerin. Websites, Workflow-Automatisierungen und Produkt-UX für Tierarztpraxen, Tiergesundheitsunternehmen und Veterinärsoftware-Teams."
+    : "A Zürich studio led by a veterinarian-engineer. Websites, workflow automations and product UX for vet practices, animal-health companies and vet software teams.";
+  const vetSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: `${SITE_URL}/`,
+        name: "Moniré",
+        alternateName: "Monire",
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        inLanguage: ["en", "de-CH"],
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: pageTitle,
+        description: pageDescription,
+        inLanguage: isGerman ? "de-CH" : "en",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${canonicalUrl}#service` },
+        breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: isGerman ? "Startseite" : "Home", item: homeUrl },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: isGerman ? "Veterinärmedizin & Tiergesundheit" : "Veterinary & Animal Health",
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${SITE_URL}/#organization`,
+        name: "Moniré",
+        alternateName: "Monire",
+        url: SITE_URL,
+        email: "hello@monire.ch",
+        address: { "@type": "PostalAddress", addressLocality: "Zürich", addressCountry: "CH" },
+        areaServed: "Worldwide",
+        founder: [{ "@id": `${SITE_URL}/#nikky-pyra` }, { "@id": `${SITE_URL}/#monika-rzepka` }],
+        sameAs: ["https://www.instagram.com/hello.monire", "https://www.linkedin.com/company/monire"],
+      },
+      {
+        "@type": "Service",
+        "@id": `${canonicalUrl}#service`,
+        name: isGerman
+          ? "Websites, Software und Automatisierungen für die Tiermedizin"
+          : "Websites, software and automations for veterinary and animal health",
+        description: pageDescription,
+        url: canonicalUrl,
+        provider: { "@id": `${SITE_URL}/#organization` },
+        areaServed: "Worldwide",
+        audience: [
+          { "@type": "Audience", name: isGerman ? "Tierarztpraxen" : "Veterinary practices" },
+          { "@type": "Audience", name: isGerman ? "Tiergesundheitsunternehmen" : "Animal health companies" },
+          { "@type": "Audience", name: isGerman ? "Veterinärsoftware-Anbieter" : "Veterinary software companies" },
+        ],
+        serviceType: isGerman
+          ? ["Praxiswebsites", "Individuelle Software", "Workflow-Automatisierung", "UX für Veterinärsoftware"]
+          : ["Veterinary websites", "Custom software", "Workflow automation", "Veterinary software UX"],
+      },
+      {
+        "@type": "Person",
+        "@id": `${SITE_URL}/#nikky-pyra`,
+        name: "Dr. Nikky Pyra",
+        jobTitle: isGerman ? "Tierärztin und Softwareentwicklerin" : "Veterinarian and Software Engineer",
+        worksFor: { "@id": `${SITE_URL}/#organization` },
+      },
+      {
+        "@type": "Person",
+        "@id": `${SITE_URL}/#monika-rzepka`,
+        name: "Monika Rzepka",
+        jobTitle: isGerman ? "Softwareentwicklerin" : "Software Engineer",
+        worksFor: { "@id": `${SITE_URL}/#organization` },
+      },
+    ],
+  };
   const heroWords = (isGerman
     ? "Veterinärmedizin ist komplex genug. Ihre Website und Ihre Software sollten die Arbeit erleichtern."
     : "Veterinary work is complicated enough. Your website and software should make it easier.").split(" ");
@@ -277,6 +370,7 @@ const Vet = () => {
 
   return (
     <>
+      <JsonLd data={vetSchema} />
       <a href="#main-content" className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-off-white px-5 py-3 font-semibold text-main-teal shadow-lg transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-gold">
         {isGerman ? "Zum Inhalt springen" : "Skip to main content"}
       </a>

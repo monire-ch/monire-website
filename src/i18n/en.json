@@ -1281,7 +1281,15 @@
       },
       "/vet": {
         "title": "Moniré | Websites, automation and UX for veterinary and animal health",
-        "description": "A Zürich studio led by a veterinarian-engineer. Websites, workflow automations and product UX for vet practices, animal-health companies and vet software teams."
+        "description": "A Zürich studio led by a veterinarian-engineer. Websites, workflow automations and product UX for vet practices, animal-health companies and vet software teams.",
+        "keywords": [
+          "veterinary website design",
+          "veterinary software development",
+          "veterinary workflow automation",
+          "animal health website design",
+          "veterinary UX",
+          "vet practice website"
+        ]
       },
       "/insights": {
         "title": "Insights on Web Design, Automation & Digital Strategy | Moniré",
