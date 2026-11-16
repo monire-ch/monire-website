@@ -8,7 +8,7 @@ import { useLocalePath } from '@/hooks/useLocalePath';
 // BrandButton is for Monire marketing/product CTAs (primary/secondary/hero visuals).
 // For shadcn/ui primitives and generic utility controls, use src/components/ui/button.tsx.
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/50 disabled:pointer-events-none disabled:opacity-60',
+  'inline-flex items-center justify-center gap-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-focus focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60',
   {
     variants: {
       variant: {

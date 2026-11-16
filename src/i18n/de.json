@@ -1,24 +1,24 @@
 {
   "nav": {
-    "home": "Start",
+    "home": "Startseite",
     "about": "Über uns",
     "services": "Leistungen",
     "pricing": "Preise",
-    "ourWork": "Portfolio",
+    "ourWork": "Projekte",
     "faq": "FAQ",
     "contactUs": "Kontakt",
     "insights": "Insights",
     "industries": "Branchen",
-    "veterinaryIndustry": "Veterinärwesen & Tiergesundheit",
+    "veterinaryIndustry": "Veterinärmedizin & Tiergesundheit",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schliessen"
   },
   "hero": {
-    "eyebrow": "Aus der Schweiz • Für Kunden weltweit",
-    "headline": "Websites, die Kunden gewinnen und mit Ihrem Unternehmen mitwachsen",
-    "highlightWord": "Kunden gewinnen",
-    "subtitle": "Hochwertige Websites, die überzeugen. Individuelle Apps und Workflow-Automatisierung, wenn Ihr Unternehmen bereit ist zu skalieren.",
-    "cta": "Erstgespräch buchen",
+    "eyebrow": "In der Schweiz zuhause • Weltweit tätig",
+    "headline": "Websites, die neue Kunden überzeugen und mit Ihrem Unternehmen wachsen",
+    "highlightWord": "überzeugen",
+    "subtitle": "Hochwertige Websites, die Ergebnisse bringen. Dazu individuelle Apps und automatisierte Abläufe, wenn Ihr Unternehmen mehr braucht.",
+    "cta": "Kostenloses Erstgespräch buchen",
     "workCta": "Projekte ansehen"
   },
   "features": {
@@ -43,12 +43,12 @@
         "desc": "Sie arbeiten direkt mit den Gründerinnen zusammen: klare Kommunikation, kurze Wege und gleichbleibende Qualität."
       },
       {
-        "title": "24/7 Zeitersparnis",
-        "desc": "Intelligente Automatisierungen übernehmen wiederkehrende Aufgaben automatisch, damit mehr Zeit für die Arbeit bleibt, die wirklich zählt."
+        "title": "Automatisierung rund um die Uhr",
+        "desc": "Intelligente Workflows erledigen wiederkehrende Aufgaben im Hintergrund. So bleibt mehr Zeit für die Arbeit, bei der Ihr Team wirklich gebraucht wird."
       },
       {
-        "title": "Einfache Aktualisierungen",
-        "desc": "Nach der Veröffentlichung haben Sie die volle Kontrolle. Inhalte zu ändern ist einfach und intuitiv."
+        "title": "Inhalte einfach selbst pflegen",
+        "desc": "Nach dem Launch behalten Sie die Kontrolle. Texte, Bilder und weitere Inhalte lassen sich einfach und intuitiv aktualisieren."
       }
     ]
   },
@@ -60,7 +60,7 @@
       {
         "badge": "Design",
         "title": "Webdesign",
-        "desc": "Wir gestalten Websites, die intuitiv, klar strukturiert und einfach zu navigieren sind. Alles hat einen Zweck. Nichts wird nur eingebaut, weil es gut aussieht. Ziel ist eine Website, auf der Besucher schnell verstehen, was Sie anbieten, und den nächsten Schritt mit einem guten Gefühl gehen."
+        "desc": "Wir gestalten klar strukturierte Websites, auf denen sich Besucher intuitiv zurechtfinden. Jedes Element erfüllt einen Zweck: Ihr Angebot verständlich machen, Vertrauen schaffen und den nächsten Schritt erleichtern."
       },
       {
         "badge": "Entwicklung",
@@ -70,7 +70,7 @@
       {
         "badge": "Migration",
         "title": "Website-Migrationen",
-        "desc": "Wenn Ihre aktuelle Website, ob WordPress, Wix oder eine individuelle Lösung, schwerfällig, veraltet oder mühsam zu pflegen ist, helfen wir beim Wechsel auf ein einfacheres System. Ohne dabei wichtige Inhalte, Struktur oder Sichtbarkeit zu verlieren."
+        "desc": "Ist Ihre aktuelle Website – ob mit WordPress, Wix oder individuell entwickelt – langsam, veraltet oder mühsam zu pflegen, begleiten wir Sie beim Wechsel auf ein passenderes System. Wichtige Inhalte, Strukturen und Ihre Sichtbarkeit bleiben dabei erhalten."
       },
       {
         "badge": "SEO",
@@ -99,7 +99,7 @@
       },
       {
         "title": "Warum ein Duo?",
-        "text": "Ein kleines Team bedeutet: Sie sind bei uns nie nur eine Nummer. Bei uns erhalten Sie direkten Zugang zu erfahrener Expertise und ein leidenschaftliches Duo, dem Ihr Erfolg wirklich am Herzen liegt. Als Mütter und Unternehmerinnen wissen wir, wie wichtig es ist, Zeit sinnvoll einzusetzen, damit jede Entscheidung echten Mehrwert schafft."
+        "text": "In einem kleinen Team sind Sie nie nur eine Nummer. Sie arbeiten direkt mit zwei erfahrenen Entwicklerinnen zusammen, die Ihr Projekt persönlich begleiten und sich für Ihren Erfolg einsetzen. Als Mütter und Unternehmerinnen wissen wir, wie wichtig ein sinnvoller Umgang mit Zeit ist – deshalb soll jede Entscheidung einen klaren Mehrwert schaffen."
       },
       {
         "title": "Giving Back",
@@ -136,6 +136,7 @@
     ]
   },
   "pricing": {
+    "from": "ab",
     "eyebrow": "Preise",
     "title": "Zwei Leistungen, ein Ziel:",
     "titleAccent": "Ihr Unternehmen soll wachsen.",
@@ -144,8 +145,8 @@
       "automation": "Workflow-Automatisierung",
       "automationShort": "Automatisierung"
     },
-    "getStarted": "Loslegen",
-    "mostPopular": "Meistgewählt",
+    "getStarted": "Projekt anfragen",
+    "mostPopular": "Beliebteste Wahl",
     "custom": {
       "title": "Sie benötigen etwas Individuelles?",
       "desc": "Jedes Projekt ist anders. Wenn Sie Unterstützung ausserhalb unserer Pakete benötigen, erstellen wir gerne ein individuelles Angebot. Wir arbeiten zudem mit bewährten Partnern in den Bereichen Fotografie, Social Media und Copywriting zusammen, sodass alles aus einer Hand koordiniert werden kann."
@@ -200,7 +201,7 @@
     "automationBlock": {
       "title": "Workflow-Automatisierung & individuelle Systeme",
       "desc": "Wir bauen individuelle Automatisierungen, die manuelle, wiederkehrende Arbeit reduzieren und die Tools verbinden, die Sie bereits nutzen. Der Preis wird nach einem kurzen Kennenlerngespräch individuell festgelegt.",
-      "cta": "Loslegen",
+      "cta": "Projekt anfragen",
       "caseStudy": "Aktuelle Case Study"
     },
     "includedNote": "Jedes Paket enthält alles aus dem vorherigen Paket.",
@@ -278,7 +279,7 @@
         "link": "/case-studies/gdpr-consent-application"
       }
     ],
-    "mobileWebsites": "Webseiten",
+    "mobileWebsites": "Websites",
     "mobileAutomations": "Automatisierungen",
     "previousProject": "Vorheriges Projekt",
     "nextProject": "Nächstes Projekt",
@@ -429,7 +430,8 @@
     "budgetPlaceholder": "Budget auswählen",
     "message": "Erzählen Sie uns von Ihrem Projekt",
     "messagePlaceholder": "Worum geht es, und was möchten Sie erreichen?",
-    "terms": "Ich stimme den Bedingungen und der",
+    "terms": "Ich stimme den AGB und der",
+    "termsSuffix": " zu.",
     "privacyPolicy": "Datenschutzerklärung",
     "send": "Nachricht senden",
     "successTitle": "Vielen Dank!",
@@ -461,7 +463,7 @@
     ]
   },
   "footer": {
-    "tagline": "Individuelle Webentwicklung und Workflow-Automatisierung in der Schweiz.",
+    "tagline": "Individuelle Websites und Workflow-Automatisierung aus der Schweiz.",
     "quickLinks": "Links",
     "industries": "Branchen",
     "veterinaryIndustry": "Veterinärmedizin & Tiergesundheit",
@@ -469,7 +471,7 @@
     "privacyPolicy": "Datenschutz",
     "copyright": "© 2026 Moniré. Alle Rechte vorbehalten.",
     "locationCity": "Zürich, Schweiz",
-    "locationService": "Für Kunden weltweit"
+    "locationService": "Für Kundinnen und Kunden weltweit"
   },
   "caseStudy": {
     "back": "Zurück zu den Projekten",
@@ -588,7 +590,7 @@
   },
   "homeTestimonials": {
     "eyebrow": "Kundenstimmen",
-    "title": "Wertschätzende Worte unserer Kunden",
+    "title": "Was unsere Kunden über uns sagen",
     "readCaseStudy": "Case Study ansehen →",
     "previous": "Vorherige Kundenstimme",
     "next": "Nächste Kundenstimme",
@@ -1276,6 +1278,10 @@
       "/contact": {
         "title": "Kontakt Moniré | Webdesign, Webentwicklung & Workflow-Automatisierung",
         "description": "Kontaktieren Sie Moniré für Webdesign, Webentwicklung und Workflow-Automatisierung in Zürich und der ganzen Schweiz."
+      },
+      "/vet": {
+        "title": "Moniré | Websites, Automatisierung und UX für Veterinärmedizin & Tiergesundheit",
+        "description": "Ein Zürcher Studio unter der Leitung einer Tierärztin und Softwareentwicklerin. Websites, Workflow-Automatisierungen und Produkt-UX für Tierarztpraxen, Tiergesundheitsunternehmen und Veterinärsoftware-Teams."
       },
       "/insights": {
         "title": "Insights zu Webdesign, Automatisierung & digitaler Strategie | Moniré",

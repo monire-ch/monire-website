@@ -46,7 +46,7 @@ export type LocalizedRouteSeo = RouteSeo & {
 
 const baseRouteSeo = getLocaleRouteSeo('en');
 
-const ENGLISH_ONLY_ROUTES = new Set(['/vet']);
+const ENGLISH_ONLY_ROUTES = new Set<string>();
 
 const localizedRouteEntries = SUPPORTED_LOCALES.flatMap((locale) => {
   const localizedSeo = getLocaleRouteSeo(locale);

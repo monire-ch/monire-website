@@ -298,7 +298,7 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
               )}
               <p className="font-display text-4xl text-gold-text md:text-5xl">
                 {simpleWebsiteDisplayPrice
-                  ? `${content.simpleWebsiteOffer.priceLabel ?? ''} ${simpleWebsiteDisplayPrice.prefix}${simpleWebsiteDisplayPrice.amount}`.trim()
+                  ? `${content.simpleWebsiteOffer.priceLabel ?? ''} ${simpleWebsiteDisplayPrice.prefix === 'from ' ? `${t('pricing.from')} ` : simpleWebsiteDisplayPrice.prefix}${simpleWebsiteDisplayPrice.amount}`.trim()
                   : content.simpleWebsiteOffer.price}
               </p>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-off-white/80">
@@ -327,6 +327,7 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
               const { prefix, amount: displayAmount } = customPrice ?? (planKey
                 ? getWebDesignDisplayPrice(planKey, currency)
                 : { prefix: '', amount: plan.price });
+              const localizedPrefix = prefix === 'from ' ? `${t('pricing.from')} ` : prefix;
               return (
                 <ScrollReveal key={plan.name} delay={i * 100}>
                   <div className={`relative ${plan.featured ? 'md:-translate-y-[7px]' : ''}`}>
@@ -357,7 +358,7 @@ const PricingSection = ({ onContactClick, content, compact = false }: PricingSec
                             plan.featured ? 'text-deep-ink/60' : 'text-off-white'
                           }`}
                         >
-                          {prefix}
+                          {localizedPrefix}
                         </span>
                         <span className={`font-display text-3xl md:text-4xl ${
                           plan.featured ? 'text-gold' : 'text-gold-text'

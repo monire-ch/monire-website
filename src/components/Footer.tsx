@@ -67,7 +67,7 @@ const Footer = ({ hideWave = false, pageLinks }: FooterProps) => {
                 <li key={item.href}>
                   {item.href.startsWith('/') ? (
                     <Link
-                      to={item.href === '/vet' ? '/vet' : localePath(item.href)}
+                      to={localePath(item.href)}
                       onClick={() => {
                         if (item.href === '/contact') {
                           trackEvent('footer_contact_click', { location: 'footer', destination: item.href, page_path: window.location.pathname });
@@ -106,7 +106,7 @@ const Footer = ({ hideWave = false, pageLinks }: FooterProps) => {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    to="/vet"
+                    to={localePath('/vet')}
                     className="block max-w-full break-words text-base font-body text-off-white transition-colors hover:text-gold-text"
                   >
                     {t('footer.veterinaryIndustry')}

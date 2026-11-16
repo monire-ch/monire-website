@@ -175,7 +175,7 @@ const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
               <div className="invisible absolute left-0 top-full z-20 w-max min-w-[13rem] pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                 <div className="rounded-2xl border border-off-white/10 bg-[#082f3af7] p-2 shadow-2xl backdrop-blur-xl">
                   <a
-                    href="/vet"
+                    href={localePath('/vet')}
                     className="block rounded-xl px-4 py-3 text-sm text-off-white/85 transition-colors hover:bg-off-white/[0.07] hover:text-gold-hover focus:bg-off-white/[0.07] focus:text-gold-hover focus:outline-none"
                   >
                     {t('nav.veterinaryIndustry')}
@@ -282,7 +282,7 @@ const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
                   {!usesLocalAnchors && <div className="border-b border-off-white/[0.07] py-5">
                     <p className="text-lg font-body tracking-wide text-off-white">{t('nav.industries')}</p>
                     <a
-                      href="/vet"
+                      href={localePath('/vet')}
                       onClick={() => setMobileOpen(false)}
                       className="mt-3 block border-l border-gold-text/40 py-1 pl-4 text-base font-body text-off-white/75 transition-colors hover:text-gold-hover"
                     >

@@ -136,6 +136,7 @@
     ]
   },
   "pricing": {
+    "from": "from",
     "eyebrow": "Pricing",
     "title": "Two Services, One Goal:",
     "titleAccent": "Helping Your Business Grow.",
@@ -430,6 +431,7 @@
     "message": "Tell us about your project",
     "messagePlaceholder": "Tell us about your project...",
     "terms": "I agree to the terms and conditions and the",
+    "termsSuffix": ".",
     "privacyPolicy": "Privacy Policy",
     "send": "Let's Talk",
     "successTitle": "Thank you!",
