@@ -27,7 +27,7 @@ const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
 
   const usesLocalAnchors = Boolean(pageLinks);
   const getHref = (href: string) => (href.startsWith("#") ? (isHome || usesLocalAnchors ? href : localePath(`/${href}`)) : localePath(href));
-  const logoHref = isHome ? '#' : localePath('/');
+  const logoHref = localePath('/');
   const isPathLinkActive = (href: string) =>
     !href.startsWith('#') &&
     (basePathname === href || basePathname.startsWith(`${href}/`));
@@ -55,7 +55,9 @@ const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
     ...defaultNavLinks,
   ];
   const navLinks = pageLinks ?? defaultNavLinks;
-  const mobileNavLinks = pageLinks ?? defaultMobileNavLinks;
+  const mobileNavLinks = pageLinks
+    ? [{ label: t('nav.home'), href: '/' }, ...pageLinks]
+    : defaultMobileNavLinks;
   useEffect(() => {
     if (!isHome && !usesLocalAnchors) {
       setActiveLink('');
@@ -238,7 +240,9 @@ const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
             }}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-5">
-              <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-0.5" />
+              <a href={logoHref} onClick={() => setMobileOpen(false)}>
+                <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-0.5" />
+              </a>
               <button
                 onClick={() => setMobileOpen(false)}
                 className="text-off-white/70 hover:text-off-white transition-colors"

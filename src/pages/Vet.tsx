@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import BrandButton from "@/components/BrandButton";
 import ContactForm from "@/components/ContactForm";
 import PricingSection, { type PricingSectionContent } from "@/components/PricingSection";
+import ScrollReveal from "@/components/ScrollReveal";
 import { trackEvent } from "@/lib/analytics";
 import snipSquad from "@/assets/portfolio/snip-squad_full.webp";
 import labsift from "@/assets/portfolio/labsift-site.webp";
@@ -119,10 +120,12 @@ const vetPricingContent: PricingSectionContent = {
 };
 
 const SectionHeading = ({ label, title, dark = false, className = "mb-10 md:mb-16" }: { label: string; title: string; dark?: boolean; className?: string }) => (
-  <div className={`mx-auto max-w-3xl text-center ${className}`}>
-    <span className={`eyebrow-pill mb-4 ${dark ? "eyebrow-pill-dark" : "eyebrow-pill-light"}`}>{label}</span>
-    <h2 className={`font-body text-3xl leading-tight md:text-4xl ${dark ? "text-off-white" : "text-main-teal"}`}>{title}</h2>
-  </div>
+  <ScrollReveal className={className}>
+    <div className="mx-auto max-w-3xl text-center">
+      <span className={`eyebrow-pill mb-4 ${dark ? "eyebrow-pill-dark" : "eyebrow-pill-light"}`}>{label}</span>
+      <h2 className={`font-body text-3xl leading-tight md:text-4xl ${dark ? "text-off-white" : "text-main-teal"}`}>{title}</h2>
+    </div>
+  </ScrollReveal>
 );
 
 const Vet = () => {
@@ -202,7 +205,10 @@ const Vet = () => {
                 <BrandButton type="button" variant="secondary" className="text-base" onClick={() => scrollTo("vet-work")}>See our work</BrandButton>
               </div>
             </div>
-            <div className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-off-white/15 shadow-2xl`} style={{ transitionDelay: "360ms" }}>
+            <div
+              className={`hero-fade-enter ${animateHero ? "hero-fade-visible" : ""} relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-off-white/15 shadow-2xl`}
+              style={{ transitionDelay: "480ms", transitionDuration: "1200ms" }}
+            >
               <picture>
                 <source media="(min-width: 1024px)" srcSet={vetEditorialAnimalsDesktop} />
                 <img src={vetEditorialAnimals} alt="A dog and cat in a contemporary veterinary consultation room" className="aspect-video h-auto w-full object-cover object-center lg:aspect-[5/4]" />
@@ -217,7 +223,8 @@ const Vet = () => {
         <section id="services" className="relative scroll-mt-28 overflow-hidden bg-off-white px-6 pb-20 pt-12 md:pb-28 md:pt-16">
           <div className="relative z-10 mx-auto max-w-6xl">
             <SectionHeading label="How we can help" title="Support for every part of the veterinary sector." className="mb-8 md:mb-10" />
-            <div className="overflow-hidden rounded-3xl border border-main-teal/15 bg-neutral-card shadow-xl lg:grid lg:min-h-[860px] lg:grid-cols-[0.42fr_0.58fr]">
+            <ScrollReveal>
+              <div className="overflow-hidden rounded-3xl border border-main-teal/15 bg-neutral-card shadow-xl lg:grid lg:min-h-[860px] lg:grid-cols-[0.42fr_0.58fr]">
               <div className="relative hidden lg:block lg:h-auto">
                 <img src={vetServicesConsultation} alt="A dog and cat in a veterinary consultation room" className="absolute inset-0 h-full w-full object-cover object-center" />
               </div>
@@ -245,7 +252,8 @@ const Vet = () => {
                   <div className="pt-7"><BrandButton type="button" variant="primary" showStar className="text-sm" data-track="vet-cta" data-audience={audience.id} onClick={() => contactFor(audience.id)}>{audience.cta}</BrandButton></div>
                 </div>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -257,7 +265,8 @@ const Vet = () => {
           <div className="relative z-10 mx-auto max-w-6xl">
             <SectionHeading dark label="Selected work" title="From clinic websites to clinical software." />
             <div className="grid gap-6 lg:grid-cols-2">
-              <Link to="/case-studies/snip-squad" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card transition-all duration-200 hover:-translate-y-1 hover:border-main-teal/35 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:border-main-teal/35 focus-visible:shadow-xl focus-visible:outline-none">
+              <ScrollReveal>
+                <Link to="/case-studies/snip-squad" className="group block overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card transition-all duration-200 hover:-translate-y-1 hover:border-main-teal/35 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:border-main-teal/35 focus-visible:shadow-xl focus-visible:outline-none">
                 <div className="h-[240px] overflow-y-auto bg-white sm:h-[320px] md:h-[460px]" aria-label="Scrollable Snip Squad website preview">
                   <img src={snipSquad} alt="Snip Squad veterinary clinic website" className="block h-auto w-full" />
                 </div>
@@ -267,8 +276,10 @@ const Vet = () => {
                   <p className="mt-3 leading-relaxed text-main-teal/75">A modern, approachable website for a nonprofit veterinary clinic providing affordable care in underserved communities.</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4 transition-colors duration-200 group-hover:no-underline group-focus-visible:no-underline">Read the case study <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1" /></span>
                 </div>
-              </Link>
-              <Link to="/case-studies/labsift" className="group overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card transition-all duration-200 hover:-translate-y-1 hover:border-main-teal/35 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:border-main-teal/35 focus-visible:shadow-xl focus-visible:outline-none">
+                </Link>
+              </ScrollReveal>
+              <ScrollReveal delay={150}>
+                <Link to="/case-studies/labsift" className="group block overflow-hidden rounded-2xl border border-neutral-border bg-neutral-card transition-all duration-200 hover:-translate-y-1 hover:border-main-teal/35 hover:shadow-xl focus-visible:-translate-y-1 focus-visible:border-main-teal/35 focus-visible:shadow-xl focus-visible:outline-none">
                 <div className="h-[240px] overflow-y-auto bg-white sm:h-[320px] md:h-[460px]" aria-label="Scrollable LabSift website preview">
                   <img src={labsift} alt="LabSift website" className="block h-auto w-full" />
                 </div>
@@ -278,7 +289,8 @@ const Vet = () => {
                   <p className="mt-3 leading-relaxed text-main-teal/75">A browser-based app that turns PDF lab reports into copy-ready results, processed entirely on the user’s device. We designed and built the app and its website.</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4 transition-colors duration-200 group-hover:no-underline group-focus-visible:no-underline">Read the case study <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1" /></span>
                 </div>
-              </Link>
+                </Link>
+              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -287,8 +299,9 @@ const Vet = () => {
           <div className="relative z-10 mx-auto max-w-6xl">
             <SectionHeading label="About Moniré" title="Clinical experience, translated into software." />
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              {teamMembers.map((person) => (
-                <article key={person.name} className="grid overflow-hidden rounded-xl border border-neutral-border bg-neutral-card sm:grid-cols-[180px_1fr] sm:items-start">
+              {teamMembers.map((person, index) => (
+                <ScrollReveal key={person.name} delay={index * 150}>
+                  <article className="grid overflow-hidden rounded-xl border border-neutral-border bg-neutral-card sm:grid-cols-[180px_1fr] sm:items-start">
                   <div className="p-5 sm:contents">
                     <div className="flex items-center gap-5 sm:hidden">
                       <div className="relative h-44 w-36 shrink-0 overflow-hidden rounded-lg border border-main-teal/10">
@@ -330,12 +343,13 @@ const Vet = () => {
                     <p className="mt-4 text-sm leading-relaxed text-main-teal/80">{person.bio}</p>
                     <p className="mt-4 text-sm font-medium leading-relaxed text-main-teal/85">{person.languages}</p>
                   </div>
-                </article>
+                  </article>
+                </ScrollReveal>
               ))}
             </div>
-            <div className="mt-8 text-center">
+            <ScrollReveal className="mt-8 text-center" delay={200}>
               <Link to="/#about" className="group inline-flex items-center gap-2 text-main-teal underline decoration-gold underline-offset-4 transition-colors duration-200 hover:no-underline focus-visible:no-underline focus-visible:outline-none">Read about our founder journey <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1" /></Link>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -347,7 +361,8 @@ const Vet = () => {
         </div>
 
         <section id="contact" className="scroll-mt-28 bg-off-white px-6 py-14 md:py-20">
-          <div className="dark-teal-surface mx-auto max-w-5xl rounded-2xl p-6 md:p-8 lg:p-10">
+          <ScrollReveal className="mx-auto max-w-5xl">
+            <div className="dark-teal-surface rounded-2xl p-6 md:p-8 lg:p-10">
             <div className="grid items-start gap-10 lg:grid-cols-[minmax(260px,0.85fr)_minmax(0,1.55fr)] lg:gap-10">
               <div className="order-2 rounded-xl border border-off-white/[0.07] bg-off-white/[0.025] p-5 md:p-6 lg:order-2">
                 <ContactForm variant="page" formName="vet-contact" formLocation="vet_page" mode="vet" />
@@ -386,7 +401,8 @@ const Vet = () => {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         </section>
       </main>
       <Footer hideWave />
