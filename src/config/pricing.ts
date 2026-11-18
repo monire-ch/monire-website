@@ -1,5 +1,5 @@
 export const CURRENCY_STORAGE_KEY = 'monire-pricing-currency';
-export const SUPPORTED_CURRENCIES = ['CHF', 'EUR', 'USD'] as const;
+export const SUPPORTED_CURRENCIES = ['CHF', 'EUR', 'USD', 'CAD'] as const;
 
 export type DisplayCurrency = typeof SUPPORTED_CURRENCIES[number];
 export type PricingTabKey = 'webDesign' | 'automation';
@@ -18,16 +18,19 @@ export const WEB_DESIGN_PRICES: WebDesignPriceMap = {
     CHF: { type: 'from', amount: 3500 },
     EUR: { type: 'from', amount: 3500 },
     USD: { type: 'from', amount: 4400 },
+    CAD: { type: 'from', amount: 5500 },
   },
   advanced: {
     CHF: { type: 'from', amount: 6000 },
     EUR: { type: 'from', amount: 6000 },
     USD: { type: 'from', amount: 7500 },
+    CAD: { type: 'from', amount: 9500 },
   },
   premium: {
     CHF: { type: 'from', amount: 9000 },
     EUR: { type: 'from', amount: 9000 },
     USD: { type: 'from', amount: 11000 },
+    CAD: { type: 'from', amount: 14000 },
   },
 };
 
@@ -46,6 +49,10 @@ const formatAmount = (amount: number, currency: DisplayCurrency): string => {
 
   if (currency === 'EUR') {
     return `€ ${withSpaceThousands(amount)}`;
+  }
+
+  if (currency === 'CAD') {
+    return `C$ ${withCommaThousands(amount)}`;
   }
 
   return `$ ${withCommaThousands(amount)}`;

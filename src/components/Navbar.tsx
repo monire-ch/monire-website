@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import logo from '@/assets/monire_logo.png';
 import ContactModal from './ContactModal';
 import BrandButton from './BrandButton';
@@ -10,7 +10,12 @@ import { trackEvent } from '@/lib/analytics';
 import { stripLocalePrefix } from '@/lib/localeRouting';
 import { useLocalePath } from '@/hooks/useLocalePath';
 
-const Navbar = () => {
+type NavbarProps = {
+  pageLinks?: Array<{ label: string; href: string }>;
+  contactHref?: string;
+};
+
+const Navbar = ({ pageLinks, contactHref }: NavbarProps) => {
   const { t } = useTranslation();
   const location = useLocation();
   const localePath = useLocalePath();
@@ -20,37 +25,51 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(isHome ? '#' : '');
 
-  const getHref = (href: string) => (href.startsWith("#") ? (isHome ? href : localePath(`/${href}`)) : localePath(href));
+  const usesLocalAnchors = Boolean(pageLinks);
+  const getHref = (href: string) => (href.startsWith("#") ? (isHome || usesLocalAnchors ? href : localePath(`/${href}`)) : localePath(href));
+  const logoHref = localePath('/');
   const isPathLinkActive = (href: string) =>
     !href.startsWith('#') &&
     (basePathname === href || basePathname.startsWith(`${href}/`));
   const isLinkActive = (href: string) =>
-    (isHome && activeLink === href) || (!isHome && isPathLinkActive(href));
+    ((isHome || usesLocalAnchors) && activeLink === href) || (!isHome && !usesLocalAnchors && isPathLinkActive(href));
   const openContactModal = (source: string) => {
     trackEvent('contact_click', { location: 'navbar', label: source, page_path: location.pathname });
+    if (contactHref) {
+      window.history.pushState(null, '', contactHref);
+      document.querySelector(contactHref)?.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
     setContactOpen(true);
   };
 
-  const navLinks = [
-    { label: t('nav.home'), href: '#' },
+  const defaultNavLinks = [
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.ourWork'), href: '#portfolio' },
     { label: t('nav.services'), href: '#services' },
     { label: t('nav.pricing'), href: '#pricing' },
     { label: t('nav.insights'), href: '/insights' },
   ];
+  const defaultMobileNavLinks = [
+    { label: t('nav.home'), href: '#' },
+    ...defaultNavLinks,
+  ];
+  const navLinks = pageLinks ?? defaultNavLinks;
+  const mobileNavLinks = pageLinks
+    ? [{ label: t('nav.home'), href: '/' }, ...pageLinks]
+    : defaultMobileNavLinks;
   useEffect(() => {
-    if (!isHome) {
+    if (!isHome && !usesLocalAnchors) {
       setActiveLink('');
       return;
     }
 
     const hash = location.hash || '#';
     setActiveLink(hash);
-  }, [isHome, location.hash]);
+  }, [isHome, usesLocalAnchors, location.hash]);
 
   useEffect(() => {
-    if (!isHome) return;
+    if (!isHome && !usesLocalAnchors) return;
     const sectionLinks = navLinks.filter((link) => link.href.startsWith('#') && link.href !== '#');
     const activationLine = 120;
 
@@ -89,7 +108,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', updateActiveLinkFromScroll);
     };
-  }, [isHome, navLinks]);
+  }, [isHome, usesLocalAnchors, navLinks]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -101,7 +120,7 @@ const Navbar = () => {
       {/* ─── Desktop Navbar ─── */}
       <header className="fixed top-5 left-0 right-0 z-50 hidden lg:flex justify-center px-8 pointer-events-none">
         <nav
-          className="pointer-events-auto flex items-center justify-between w-full max-w-5xl px-8 py-1.5 rounded-full border border-off-white/[0.07]"
+          className="pointer-events-auto flex items-center justify-between w-full max-w-5xl px-3 xl:px-8 py-1.5 rounded-full border border-off-white/[0.07]"
           style={{
             background: 'linear-gradient(135deg, rgba(8,47,58,0.88) 0%, rgba(5,34,44,0.92) 100%)',
             backdropFilter: 'blur(18px)',
@@ -110,11 +129,11 @@ const Navbar = () => {
             boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
           }}
         >
-          <a href={getHref('#')} className="flex-shrink-0">
-            <img src={logo} alt={t('common.logoAlt')} className="h-7 mb-0.5" />
+          <a href={logoHref} className="flex-shrink-0">
+            <img src={logo} alt={t('common.logoAlt')} className="h-6 xl:h-7 mb-0.5" />
           </a>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1.5 xl:gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -130,7 +149,7 @@ const Navbar = () => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }
                 }}
-                className={`relative px-4 py-1.5 rounded-full text-[15px] font-body tracking-wide transition-all duration-200 ${
+                className={`relative px-3.5 xl:px-4 py-1.5 rounded-full text-[14px] xl:text-[15px] font-body tracking-wide transition-all duration-200 ${
                   isLinkActive(link.href)
                     ? 'text-off-white'
                     : 'text-off-white/80 hover:text-gold-hover'
@@ -144,16 +163,36 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            {!usesLocalAnchors && <div className="group relative">
+              <button
+                type="button"
+                aria-haspopup="true"
+                className="flex items-center gap-1 rounded-full px-3.5 xl:px-4 py-1.5 text-[14px] xl:text-[15px] font-body tracking-wide text-off-white/80 transition-all duration-200 hover:text-gold-hover"
+              >
+                {t('nav.industries')}
+                <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
+              </button>
+              <div className="invisible absolute left-0 top-full z-20 w-max min-w-[13rem] pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div className="rounded-2xl border border-off-white/10 bg-[#082f3af7] p-2 shadow-2xl backdrop-blur-xl">
+                  <a
+                    href={localePath('/vet')}
+                    className="block rounded-xl px-4 py-3 text-sm text-off-white/85 transition-colors hover:bg-off-white/[0.07] hover:text-gold-hover focus:bg-off-white/[0.07] focus:text-gold-hover focus:outline-none"
+                  >
+                    {t('nav.veterinaryIndustry')}
+                  </a>
+                </div>
+              </div>
+            </div>}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 xl:gap-3">
             <LanguageSwitcher />
             {/* CTA */}
             <BrandButton
               onClick={() => openContactModal('nav')}
               variant="primary"
               showStar
-              className="flex-shrink-0 ml-1 !px-5 !py-2 text-[13px] font-semibold tracking-widest"
+              className="flex-shrink-0 ml-1 !px-4 xl:!px-5 !py-2 text-[12px] xl:text-[13px] font-semibold tracking-widest"
             >
               {t('nav.contactUs')}
             </BrandButton>
@@ -170,7 +209,7 @@ const Navbar = () => {
           boxShadow: '0 4px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(248,245,241,0.04)',
         }}
       >
-        <a href={getHref('#')}>
+        <a href={logoHref}>
           <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-1" />
         </a>
         <div className="flex items-center gap-3">
@@ -201,7 +240,9 @@ const Navbar = () => {
             }}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-5">
-              <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-0.5" />
+              <a href={logoHref} onClick={() => setMobileOpen(false)}>
+                <img src={logo} alt={t('common.logoAlt')} className="h-6 mb-0.5" />
+              </a>
               <button
                 onClick={() => setMobileOpen(false)}
                 className="text-off-white/70 hover:text-off-white transition-colors"
@@ -213,8 +254,8 @@ const Navbar = () => {
 
             <div className="flex-1 min-h-0 overflow-y-auto">
               <div className="min-h-full flex flex-col">
-                <nav className="px-6 pt-8">
-                  {navLinks.map((link, i) => (
+                <nav className="px-6 pt-4">
+                  {mobileNavLinks.map((link, i) => (
                     <a
                       key={link.href}
                       href={getHref(link.href)}
@@ -238,6 +279,16 @@ const Navbar = () => {
                       </span>
                     </a>
                   ))}
+                  {!usesLocalAnchors && <div className="border-b border-off-white/[0.07] py-5">
+                    <p className="text-lg font-body tracking-wide text-off-white">{t('nav.industries')}</p>
+                    <a
+                      href={localePath('/vet')}
+                      onClick={() => setMobileOpen(false)}
+                      className="mt-3 block border-l border-gold-text/40 py-1 pl-4 text-base font-body text-off-white/75 transition-colors hover:text-gold-hover"
+                    >
+                      {t('nav.veterinaryIndustry')}
+                    </a>
+                  </div>}
                 </nav>
 
                 <div className="px-6 pb-10 pt-4 mt-auto">

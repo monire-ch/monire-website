@@ -11,7 +11,20 @@ interface ContactFormProps {
   formName: string;
   onClose?: () => void;
   formLocation?: string;
+  mode?: "default" | "vet";
 }
+
+const VET_AUDIENCE_LABELS: Record<string, string> = {
+  practices: "Veterinary practice",
+  "animal-health": "Animal health company",
+  "software-teams": "Vet software or startup",
+};
+
+const VET_AUDIENCE_LABELS_DE: Record<string, string> = {
+  practices: "Eine Tierarztpraxis",
+  "animal-health": "Ein Tiergesundheitsunternehmen",
+  "software-teams": "Veterinärsoftware",
+};
 
 interface SelectProps {
   name: string;
@@ -35,11 +48,13 @@ interface MultiSelectProps {
 }
 
 const inputClasses =
-  "w-full bg-off-white/10 border border-off-white/20 rounded-xl px-4 py-3.5 text-off-white text-sm font-body focus:outline-none focus:border-gold transition-colors placeholder:text-off-white/40";
+  "w-full bg-off-white/10 border border-off-white/30 rounded-xl px-4 py-3.5 text-off-white text-sm font-body focus-visible:outline-none focus-visible:border-gold focus-visible:ring-2 focus-visible:ring-gold/70 transition-colors placeholder:text-off-white/65";
 
 const SelectField: FC<SelectProps> = ({ name, label, placeholder, options, value, onChange, required }) => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const triggerId = `${name}-trigger`;
+  const listboxId = `${name}-listbox`;
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -51,30 +66,37 @@ const SelectField: FC<SelectProps> = ({ name, label, placeholder, options, value
 
   return (
     <div ref={ref} className="relative">
-      <label className="text-off-white/70 text-sm font-body block mb-1.5">
+      <label htmlFor={triggerId} className="text-off-white/80 text-sm font-body block mb-1.5">
         {label}
         {required && "*"}
       </label>
       <input type="hidden" name={name} value={value} />
       <button
+        id={triggerId}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-off-white/10 border border-off-white/20 rounded-xl px-4 py-3.5 text-left text-sm font-body focus:outline-none focus:border-gold transition-colors flex items-center justify-between"
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        aria-controls={listboxId}
+        aria-required={required}
+        className="w-full bg-off-white/10 border border-off-white/30 rounded-xl px-4 py-3.5 text-left text-sm font-body focus-visible:outline-none focus-visible:border-gold focus-visible:ring-2 focus-visible:ring-gold/70 transition-colors flex items-center justify-between"
       >
-        <span className={value ? "text-off-white" : "text-off-white/40"}>{value || placeholder}</span>
+        <span className={value ? "text-off-white" : "text-off-white/65"}>{value || placeholder}</span>
         <ChevronDown className={`w-4 h-4 text-off-white/50 transition-transform ${isOpen ? "rotate-180" : ""}`} />
       </button>
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg">
+        <div id={listboxId} role="listbox" className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/30 rounded-xl overflow-hidden shadow-lg">
           {options.map((opt) => (
             <button
               key={opt}
               type="button"
+              role="option"
+              aria-selected={value === opt}
               onClick={() => {
                 onChange(opt);
                 setIsOpen(false);
               }}
-              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 transition-colors"
+              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 focus-visible:bg-off-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold transition-colors"
             >
               {opt}
             </button>
@@ -98,6 +120,8 @@ const MultiSelectField: FC<MultiSelectProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+  const triggerId = `${name}-trigger`;
+  const listboxId = `${name}-listbox`;
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -116,18 +140,23 @@ const MultiSelectField: FC<MultiSelectProps> = ({
 
   return (
     <div className="relative">
-      <label className="text-off-white/70 text-sm font-body block mb-1.5">
+      <label htmlFor={triggerId} className="text-off-white/80 text-sm font-body block mb-1.5">
         {label}
         {required && "*"}
       </label>
       <input type="hidden" name={name} value={value.join(", ")} />
       <button
+        id={triggerId}
         ref={triggerRef}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        aria-controls={listboxId}
+        aria-required={required}
         className={`${inputClasses} text-left flex items-center justify-between min-h-[3rem] ${className ?? ""}`}
       >
-        <span className={value.length ? "text-off-white" : "text-off-white/40"}>
+        <span className={value.length ? "text-off-white" : "text-off-white/65"}>
           {value.length ? value.join(", ") : placeholder}
         </span>
         <ChevronDown
@@ -136,15 +165,20 @@ const MultiSelectField: FC<MultiSelectProps> = ({
       </button>
       {isOpen && (
         <div
+          id={listboxId}
           ref={menuRef}
-          className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/20 rounded-xl overflow-hidden shadow-lg [&::-webkit-scrollbar]:hidden"
+          role="listbox"
+          aria-multiselectable="true"
+          className="absolute z-10 mt-1 w-full bg-[#0a3a4a] border border-off-white/30 rounded-xl overflow-hidden shadow-lg [&::-webkit-scrollbar]:hidden"
         >
           {options.map((opt) => (
             <button
               key={opt}
               type="button"
+              role="option"
+              aria-selected={value.includes(opt)}
               onClick={() => toggle(opt)}
-              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 transition-colors flex items-center gap-3"
+              className="w-full text-left px-4 py-3 text-sm font-body text-off-white hover:bg-off-white/10 focus-visible:bg-off-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold transition-colors flex items-center gap-3"
             >
               <span
                 className={`w-4 h-4 rounded border shrink-0 flex items-center justify-center ${value.includes(opt) ? "bg-gold border-gold" : "border-off-white/30"}`}
@@ -170,11 +204,16 @@ const MultiSelectField: FC<MultiSelectProps> = ({
   );
 };
 
-const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLocation }) => {
-  const { t } = useTranslation();
+const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLocation, mode = "default" }) => {
+  const { t, i18n } = useTranslation();
+  const isGerman = i18n.language.startsWith("de");
   const localePath = useLocalePath();
   const [services, setServices] = useState<string[]>([]);
   const [budget, setBudget] = useState("");
+  const [vetAudience, setVetAudience] = useState(() => {
+    if (typeof window === "undefined") return "";
+    return VET_AUDIENCE_LABELS[new URLSearchParams(window.location.search).get("for") ?? ""] ?? "";
+  });
   const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
@@ -183,6 +222,9 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
   const attributionFields = getFormAttributionFields();
 
   const isModal = variant === "modal";
+  const isVet = mode === "vet";
+  const vetAudienceLabels = isGerman ? VET_AUDIENCE_LABELS_DE : VET_AUDIENCE_LABELS;
+  const vetAudienceOptions = [...Object.values(vetAudienceLabels), isGerman ? "Etwas anderes" : "Something else"];
   const locationLabel = formLocation ?? (isModal ? "modal" : "contact_page");
   const emailValid = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(fieldValues.email.trim());
   const serviceOptions = t('contact.serviceOptions', { returnObjects: true }) as string[];
@@ -191,10 +233,20 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
   const errors = {
     fullName: attempted && !fieldValues.fullName.trim(),
     email: attempted && (!fieldValues.email.trim() || !emailValid),
-    service: attempted && services.length === 0,
+    service: attempted && (isVet ? !vetAudience : services.length === 0),
     message: attempted && !fieldValues.message.trim(),
     agreed: attempted && !agreed,
   };
+
+  useEffect(() => {
+    if (!isVet) return;
+    const handleAudience = (event: Event) => {
+      const value = (event as CustomEvent<string>).detail;
+      setVetAudience(vetAudienceLabels[value as keyof typeof vetAudienceLabels] ?? value);
+    };
+    window.addEventListener("vet-audience", handleAudience);
+    return () => window.removeEventListener("vet-audience", handleAudience);
+  }, [isVet, vetAudienceLabels]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -202,7 +254,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
     setSubmitError(false);
     trackEvent("form_submit_attempt", {
       form_location: locationLabel,
-      service: services.join(","),
+      service: isVet ? vetAudience : services.join(","),
       page_path: window.location.pathname,
     });
 
@@ -210,7 +262,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       !fieldValues.fullName.trim() ||
       !fieldValues.email.trim() ||
       !emailValid ||
-      services.length === 0 ||
+      (isVet ? !vetAudience : services.length === 0) ||
       !fieldValues.message.trim() ||
       !agreed
     ) {
@@ -229,7 +281,9 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(
+          Array.from(formData.entries()).map(([key, value]) => [key, String(value)])
+        ).toString(),
       });
       if (!response.ok) {
         serverError = true;
@@ -268,7 +322,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
             {t('contact.close')}
           </BrandButton>
         ) : (
-          <BrandButton type="link" to="/" variant="secondary" showStar className="text-sm">
+          <BrandButton type="link" to={localePath(isVet ? "/vet" : "/")} variant="secondary" showStar className="text-sm">
             {t('common.backToHome')}
           </BrandButton>
         )}
@@ -283,7 +337,7 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
-      className="space-y-5"
+      className={isVet ? "space-y-4" : "space-y-5"}
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="bot-field" />
@@ -291,7 +345,62 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
         <input key={key} type="hidden" name={key} value={value} />
       ))}
 
-      {isModal ? (
+      {isVet ? (
+        <>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div>
+              <label htmlFor="vet-full-name" className="text-off-white/80 text-sm font-body block mb-1.5">Name*</label>
+              <input
+                id="vet-full-name"
+                type="text"
+                name="fullName"
+                autoComplete="name"
+                required
+                aria-invalid={errors.fullName}
+                aria-describedby={errors.fullName ? "vet-full-name-error" : undefined}
+                className={`${inputClasses} ${errors.fullName ? "!border-red-400" : ""}`}
+                value={fieldValues.fullName}
+                onChange={(e) => setFieldValues((value) => ({ ...value, fullName: e.target.value }))}
+              />
+              {errors.fullName && <p id="vet-full-name-error" role="alert" className="text-red-300 text-xs font-body mt-1">{isGerman ? "Bitte geben Sie Ihren Namen ein." : "Please enter your name."}</p>}
+            </div>
+            <div>
+              <label htmlFor="vet-email" className="text-off-white/80 text-sm font-body block mb-1.5">{isGerman ? "E-Mail" : "Email"}*</label>
+              <input
+                id="vet-email"
+                type="email"
+                name="email"
+                autoComplete="email"
+                required
+                aria-invalid={errors.email}
+                aria-describedby={errors.email ? "vet-email-error" : undefined}
+                className={`${inputClasses} ${errors.email ? "!border-red-400" : ""}`}
+                value={fieldValues.email}
+                onChange={(e) => setFieldValues((value) => ({ ...value, email: e.target.value }))}
+              />
+              {errors.email && <p id="vet-email-error" role="alert" className="text-red-300 text-xs font-body mt-1">{isGerman ? "Bitte geben Sie eine gültige E-Mail-Adresse ein." : "Please enter a valid email address."}</p>}
+            </div>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div>
+              <label htmlFor="vet-organisation" className="text-off-white/80 text-sm font-body block mb-1.5">Organisation</label>
+              <input id="vet-organisation" type="text" name="organisation" autoComplete="organization" className={inputClasses} />
+            </div>
+            <div>
+              <SelectField
+                name="audience"
+                label={isGerman ? "Ihr Anliegen" : "I’m contacting you about"}
+                placeholder={isGerman ? "Bitte auswählen" : "Choose one"}
+                options={vetAudienceOptions}
+                value={vetAudience}
+                onChange={setVetAudience}
+                required
+              />
+              {errors.service && <p role="alert" className="text-red-300 text-xs font-body mt-1">{isGerman ? "Bitte wählen Sie eine Option." : "Please choose an option."}</p>}
+            </div>
+          </div>
+        </>
+      ) : isModal ? (
         <>
           <div>
             <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.fullName")}*</label>
@@ -427,16 +536,20 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
       )}
 
       <div>
-        <label className="text-off-white/70 text-sm font-body block mb-1.5">{t("contact.message")}*</label>
+        <label htmlFor={`${formName}-message`} className="text-off-white/80 text-sm font-body block mb-1.5">{t("contact.message")}*</label>
         <textarea
+          id={`${formName}-message`}
           name="message"
-          rows={5}
+          required
+          aria-invalid={errors.message}
+          aria-describedby={errors.message ? `${formName}-message-error` : undefined}
+          rows={isVet ? 3 : 5}
           className={`${inputClasses} resize-vertical ${errors.message ? "!border-red-400" : ""}`}
           placeholder={t("contact.messagePlaceholder")}
           value={fieldValues.message}
           onChange={(e) => setFieldValues((v) => ({ ...v, message: e.target.value }))}
         />
-        {errors.message && <p className="text-red-400 text-xs font-body mt-1">{t('contact.errors.message')}</p>}
+        {errors.message && <p id={`${formName}-message-error`} role="alert" className="text-red-300 text-xs font-body mt-1">{t('contact.errors.message')}</p>}
       </div>
 
       <label className="flex items-start gap-3 cursor-pointer">
@@ -450,12 +563,12 @@ const ContactForm: FC<ContactFormProps> = ({ variant, formName, onClose, formLoc
           {t("contact.terms")} {" "}
           <Link
             to={localePath('/privacy')}
-            className="text-gold-text underline hover:text-gold transition-colors"
+            className="text-gold-text underline decoration-gold underline-offset-2 transition-colors hover:text-off-white hover:no-underline focus-visible:text-off-white focus-visible:no-underline focus-visible:outline-none"
             onClick={isModal ? onClose : undefined}
           >
             {t("contact.privacyPolicy")}
           </Link>
-          .
+          {t("contact.termsSuffix")}
         </span>
       </label>
 
