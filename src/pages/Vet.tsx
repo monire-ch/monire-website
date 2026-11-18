@@ -1,5 +1,5 @@
 import { useEffect, useState, type KeyboardEvent } from "react";
-import { ArrowRight, Check, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
@@ -424,9 +424,9 @@ const Vet = () => {
                 <img src={vetServicesConsultation} alt={t("vetPage.images.servicesAlt")} width="900" height="1350" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center" />
               </div>
               <div className="flex flex-col p-5 sm:p-7 md:p-9 lg:p-11">
-                <div className="grid gap-2 rounded-2xl bg-main-teal/[0.05] p-2 sm:grid-cols-3" role="tablist" aria-label={isGerman ? "Zielgruppe auswählen" : "Choose your sector"}>
+                <div className="grid gap-1 rounded-3xl border border-main-teal/20 p-1.5 sm:grid-cols-3 sm:rounded-full" role="tablist" aria-label={isGerman ? "Zielgruppe auswählen" : "Choose your sector"}>
                   {localizedAudiences.map((item, index) => (
-                    <button id={item.id} key={item.id} type="button" role="tab" tabIndex={activeAudience === item.id ? 0 : -1} aria-selected={activeAudience === item.id} aria-controls={`panel-${item.id}`} onKeyDown={(event) => handleAudienceKeyDown(event, index)} onClick={() => { setActiveAudience(item.id); trackEvent("vet_tile_click", { audience: item.id }); }} className={`min-h-12 scroll-mt-28 rounded-xl px-3 py-3 text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-main-teal focus-visible:ring-offset-2 ${activeAudience === item.id ? "bg-main-teal text-off-white shadow-md" : "text-main-teal/80 hover:bg-off-white hover:text-main-teal"}`}>
+                    <button id={item.id} key={item.id} type="button" role="tab" tabIndex={activeAudience === item.id ? 0 : -1} aria-selected={activeAudience === item.id} aria-controls={`panel-${item.id}`} onKeyDown={(event) => handleAudienceKeyDown(event, index)} onClick={() => { setActiveAudience(item.id); trackEvent("vet_tile_click", { audience: item.id }); }} className={`min-h-12 scroll-mt-28 rounded-full border px-3 py-3 text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-main-teal focus-visible:ring-offset-2 ${activeAudience === item.id ? "border-gold/60 bg-main-teal text-off-white" : "border-transparent text-main-teal/70 hover:bg-main-teal/[0.05] hover:text-main-teal"}`}>
                       {item.tab}
                     </button>
                   ))}
@@ -448,14 +448,14 @@ const Vet = () => {
                         <ul className="mt-5 grid gap-3.5 border-t border-main-teal/10 pt-5">
                           {panel.items.map((item) => (
                             <li key={item} className="flex gap-3 text-sm leading-relaxed text-main-teal/85">
-                              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-main-teal/10 text-main-teal" aria-hidden="true"><Check size={13} strokeWidth={2.25} /></span>
+                              <span className="mt-0.5 shrink-0 text-sm text-main-teal" aria-hidden="true">✓</span>
                               <span>{item}</span>
                             </li>
                           ))}
                         </ul>
                         {panel.partner && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">{isGerman ? "Sie brauchen Unterstützung bei der kommerziellen Strategie oder der wissenschaftlichen Kommunikation? Dafür arbeiten wir mit " : "Need commercial strategy or scientific messaging? We partner with "}<a href="https://www.linleycollaborative.com" target="_blank" rel="noopener noreferrer" tabIndex={isActive ? 0 : -1} className="font-semibold text-main-teal underline decoration-gold decoration-1 underline-offset-4 transition-colors duration-200 hover:no-underline focus-visible:no-underline focus-visible:outline-none">Linley Collaborative</a>{isGerman ? " zusammen, einer auf Tiergesundheit spezialisierten Beratung." : ", an animal health consultancy."}</p>}
                         {panel.note && <p className="mt-5 text-sm leading-relaxed text-main-teal/75">{panel.note}</p>}
-                        <div className="pt-7"><BrandButton type="button" variant="primary" showStar className="text-sm" tabIndex={isActive ? 0 : -1} data-track="vet-cta" data-audience={panel.id} onClick={() => contactFor(panel.id)}>{panel.cta}</BrandButton></div>
+                        <div className="pt-7"><BrandButton type="button" variant="primary" showStar className="text-sm !bg-main-teal hover:!bg-soft-teal" tabIndex={isActive ? 0 : -1} data-track="vet-cta" data-audience={panel.id} onClick={() => contactFor(panel.id)}>{panel.cta}</BrandButton></div>
                       </div>
                     );
                   })}
